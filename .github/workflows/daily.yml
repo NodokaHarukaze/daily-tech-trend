@@ -31,6 +31,7 @@ jobs:
       - run: python src/collect.py
       - run: python src/normalize.py
       - run: python src/dedupe.py
+      - run: python src/normalize_categories.py
       - run: python src/thread.py
       - run: python src/translate.py
       - run: python src/render.py
