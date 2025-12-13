@@ -25,13 +25,13 @@ HTML = r"""<!doctype html>
 </head>
 <body>
   <h1>Daily Tech Trend</h1>
-  <div class="meta">カテゴリ別（最新テーマ）＋ 注目TOP5（続報多い順）</div>
+  <div class="meta">カテゴリ別（最新テーマ）＋ 注目TOP5（48h増分）</div>
 
   {% for cat in categories %}
     <h2>{{ cat.name }} <span class="tag">{{ cat.id }}</span></h2>
 
     <div class="topbox">
-      <h3>注目TOP5（続報多い順）</h3>
+      <h3>注目TOP5（48h増分）</h3>
       {% if hot_by_cat.get(cat.id) %}
         <ul>
           {% for item in hot_by_cat[cat.id] %}
@@ -61,16 +61,91 @@ HTML = r"""<!doctype html>
 </html>
 """
 
-def load_categories():
-    with open("src/sources.yaml", encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-    return cfg.get("categories", [])
+def load_categories_from_yaml():
+    # sources.yaml が無い / categories が無い場合でも落とさない
+    try:
+        with open("src/sources.yaml", encoding="utf-8") as f:
+            cfg = yaml.safe_load(f) or {}
+        cats = cfg.get("categories")
+        if isinstance(cats, list) and all(("id" in c and "name" in c) for c in cats):
+            return cats
+    except Exception:
+        pass
+    return []
+
+def build_categories_fallback(cur):
+    """
+    YAMLにカテゴリが無い/不完全な場合:
+    DBの topics.category / articles.category からカテゴリ集合を作り、
+    それでも無ければ 'other' を用意する。
+    """
+    # topicsからカテゴリ収集
+    cur.execute("SELECT DISTINCT category FROM topics WHERE category IS NOT NULL AND category != ''")
+    cats = [r[0] for r in cur.fetchall()]
+
+    # topicsが空なら articlesからも拾う
+    if not cats:
+        cur.execute("SELECT DISTINCT category FROM articles WHERE category IS NOT NULL AND category != ''")
+        cats = [r[0] for r in cur.fetchall()]
+
+    # 何も無ければ other
+    if not cats:
+        cats = ["other"]
+
+    # 表示名は簡易変換（必要なら増やす）
+    name_map = {
+        "system": "システム",
+        "manufacturing": "製造",
+        "security": "セキュリティ",
+        "ai_data": "AI/データ",
+        "dev": "開発",
+        "other": "その他",
+    }
+    return [{"id": c, "name": name_map.get(c, c)} for c in cats]
+
+def ensure_category_coverage(cur, categories):
+    """
+    categories に無いカテゴリがDB側にある場合、末尾に追加して表示対象にする。
+    """
+    ids = {c["id"] for c in categories}
+
+    cur.execute("SELECT DISTINCT category FROM topics WHERE category IS NOT NULL AND category != ''")
+    db_cats = [r[0] for r in cur.fetchall()]
+
+    name_map = {
+        "system": "システム",
+        "manufacturing": "製造",
+        "security": "セキュリティ",
+        "ai_data": "AI/データ",
+        "dev": "開発",
+        "other": "その他",
+    }
+
+    for c in db_cats:
+        if c not in ids:
+            categories.append({"id": c, "name": name_map.get(c, c)})
+            ids.add(c)
+
+    # まだ空なら other
+    if not categories:
+        categories.append({"id": "other", "name": "その他"})
+
+    return categories
 
 def main():
     conn = connect()
     cur = conn.cursor()
 
-    categories = load_categories()
+    # 1) categories を YAML から試す
+    categories = load_categories_from_yaml()
+
+    # 2) YAMLが無い/空ならDBから作る
+    if not categories:
+        categories = build_categories_fallback(cur)
+
+    # 3) YAMLに無いカテゴリもDBから拾って追加（空表示防止）
+    categories = ensure_category_coverage(cur, categories)
+
     topics_by_cat = {}
     hot_by_cat = {}
 
@@ -80,56 +155,91 @@ def main():
     for cat in categories:
         cat_id = cat["id"]
 
-        # 最新テーマ
-        cur.execute(
-            """
-            SELECT COALESCE(title_ja, title)
-            FROM topics
-            WHERE category = ?
-            ORDER BY id DESC
-            LIMIT ?
-            """,
-            (cat_id, LIMIT_PER_CAT)
-        )
+        # 最新テーマ（カテゴリがNULL/空の場合は other に寄せる）
+        if cat_id == "other":
+            cur.execute(
+                """
+                SELECT COALESCE(title_ja, title)
+                FROM topics
+                WHERE category IS NULL OR category = ''
+                ORDER BY id DESC
+                LIMIT ?
+                """,
+                (LIMIT_PER_CAT,)
+            )
+        else:
+            cur.execute(
+                """
+                SELECT COALESCE(title_ja, title)
+                FROM topics
+                WHERE category = ?
+                ORDER BY id DESC
+                LIMIT ?
+                """,
+                (cat_id, LIMIT_PER_CAT)
+            )
         topics_by_cat[cat_id] = [r[0] for r in cur.fetchall()]
 
-        # (2) 注目TOP5：直近48時間に増えた分（recent_count）でスコア化
-        cur.execute(
-            """
-            SELECT
-              t.id,
-              COALESCE(t.title_ja, t.title) AS ttitle,
-              COUNT(ta.article_id) AS total_count,
-              SUM(
-                CASE
-                  WHEN datetime(a.fetched_at) >= datetime('now', '-48 hours') THEN 1
-                  ELSE 0
-                END
-              ) AS recent_count
-            FROM topics t
-            JOIN topic_articles ta ON ta.topic_id = t.id
-            JOIN articles a ON a.id = ta.article_id
-            WHERE t.category = ?
-            GROUP BY t.id
-            HAVING recent_count > 0
-            ORDER BY recent_count DESC, total_count DESC, t.id DESC
-            LIMIT ?
-            """,
-            (cat_id, HOT_TOP_N)
-        )
+        # 注目TOP5：48h増分（fetched_atベース）
+        if cat_id == "other":
+            cur.execute(
+                """
+                SELECT
+                  t.id,
+                  COALESCE(t.title_ja, t.title) AS ttitle,
+                  COUNT(ta.article_id) AS total_count,
+                  SUM(
+                    CASE
+                      WHEN datetime(a.fetched_at) >= datetime('now', '-48 hours') THEN 1
+                      ELSE 0
+                    END
+                  ) AS recent_count
+                FROM topics t
+                JOIN topic_articles ta ON ta.topic_id = t.id
+                JOIN articles a ON a.id = ta.article_id
+                WHERE t.category IS NULL OR t.category = ''
+                GROUP BY t.id
+                HAVING recent_count > 0
+                ORDER BY recent_count DESC, total_count DESC, t.id DESC
+                LIMIT ?
+                """,
+                (HOT_TOP_N,)
+            )
+        else:
+            cur.execute(
+                """
+                SELECT
+                  t.id,
+                  COALESCE(t.title_ja, t.title) AS ttitle,
+                  COUNT(ta.article_id) AS total_count,
+                  SUM(
+                    CASE
+                      WHEN datetime(a.fetched_at) >= datetime('now', '-48 hours') THEN 1
+                      ELSE 0
+                    END
+                  ) AS recent_count
+                FROM topics t
+                JOIN topic_articles ta ON ta.topic_id = t.id
+                JOIN articles a ON a.id = ta.article_id
+                WHERE t.category = ?
+                GROUP BY t.id
+                HAVING recent_count > 0
+                ORDER BY recent_count DESC, total_count DESC, t.id DESC
+                LIMIT ?
+                """,
+                (cat_id, HOT_TOP_N)
+            )
+
         rows = cur.fetchall()
-        
         hot_by_cat[cat_id] = [
             {
                 "id": tid,
                 "title": title,
                 "articles": int(total),
-                "recent": int(recent),                 # ★ 48h増分
-                "followups": max(int(total) - 1, 0),   # 既存表示用（残してOK）
+                "recent": int(recent),
             }
             for (tid, title, total, recent) in rows
         ]
-
 
     conn.close()
 
