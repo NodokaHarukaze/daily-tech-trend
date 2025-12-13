@@ -5,8 +5,8 @@ categories:
     name: 製造
   - id: security
     name: セキュリティ
-  - id: ai_data
-    name: AI/データ
+  - id: ai
+    name: AI
   - id: dev
     name: 開発
 
@@ -53,3 +53,70 @@ sources:
     name: Siemens Digital Industries News
     category: manufacturing
     url: https://www.siemens.com/rss/digital-industries.xml
+  # --- Rockwell Automation (OT/ICS) ---
+  - id: rockwell-sec
+    name: Rockwell Automation Security Advisories
+    category: manufacturing
+    url: https://www.rockwellautomation.com/en-us/products/capabilities/industrial-cybersecurity/security-advisories/_jcr_content/par/section_copy_copy.stream.rss
+
+  - id: rockwell-news
+    name: Rockwell Automation News
+    category: manufacturing
+    url: https://www.rockwellautomation.com/en-us/company/news/_jcr_content/par/section_copy.stream.rss
+  # --- Schneider Electric (OT/ICS) ---
+  - id: schneider-cert
+    name: Schneider Electric Security Advisories
+    category: manufacturing
+    url: https://www.se.com/ww/en/rss/security-advisories.xml
+
+  - id: schneider-news
+    name: Schneider Electric News
+    category: manufacturing
+    url: https://www.se.com/ww/en/rss/press-releases.xml
+    sources:
+  # --- AI (Foundations / Models) ---
+  - id: openai-blog
+    name: OpenAI Blog
+    category: ai
+    url: https://openai.com/blog/rss/
+
+  - id: google-ai-blog
+    name: Google AI Blog
+    category: ai
+    url: https://ai.googleblog.com/feeds/posts/default
+
+  - id: deepmind-blog
+    name: Google DeepMind Blog
+    category: ai
+    url: https://deepmind.google/blog/rss.xml
+
+  - id: meta-ai
+    name: Meta AI Blog
+    category: ai
+    url: https://ai.facebook.com/blog/rss/
+
+  - id: microsoft-ai
+    name: Microsoft AI Blog
+    category: ai
+    url: https://blogs.microsoft.com/ai/feed/
+
+  - id: aws-ml
+    name: AWS Machine Learning Blog
+    category: ai
+    url: https://aws.amazon.com/blogs/machine-learning/feed/
+
+  - id: huggingface-blog
+    name: Hugging Face Blog
+    category: ai
+    url: https://huggingface.co/blog/feed.xml
+
+  # --- AI (Research / OSS) ---
+  - id: arxiv-ai
+    name: arXiv AI (cs.AI)
+    category: ai
+    url: http://export.arxiv.org/rss/cs.AI
+
+  - id: arxiv-ml
+    name: arXiv Machine Learning
+    category: ai
+    url: http://export.arxiv.org/rss/cs.LG
