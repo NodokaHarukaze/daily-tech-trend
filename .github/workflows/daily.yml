@@ -18,6 +18,15 @@ jobs:
           python-version: "3.11"
 
       - run: pip install -r requirements.txt
+            - name: Debug db.py and init function
+        run: |
+          echo "=== Show src/db.py (head) ==="
+          sed -n '1,200p' src/db.py
+          echo "=== Try import src.db and list names ==="
+          python -c "import src.db as d; print([n for n in dir(d) if 'init' in n]);"
+          echo "=== Call init_db() ==="
+          python -c "import src.db as d; d.init_db()"
+
       - run: python -c "from src.db import init_db; init_db()"
       - run: python src/collect.py
       - run: python src/normalize.py
