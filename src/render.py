@@ -3,8 +3,7 @@ from jinja2 import Template
 import yaml
 from db import connect
 
-HTML = """
-<!doctype html>
+HTML = r"""<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -81,7 +80,7 @@ def main():
     for cat in categories:
         cat_id = cat["id"]
 
-        # (1) 最新テーマ一覧（従来通り）
+        # 最新テーマ
         cur.execute(
             """
             SELECT COALESCE(title_ja, title)
@@ -94,8 +93,7 @@ def main():
         )
         topics_by_cat[cat_id] = [r[0] for r in cur.fetchall()]
 
-        # (2) 注目TOP5：続報多い順（= 同一topic内の記事数が多い順）
-        # 記事数 = topic_articles 件数
+        # 注目TOP5（続報多い順 = topic内の記事数）
         cur.execute(
             """
             SELECT
@@ -104,4 +102,37 @@ def main():
               COUNT(ta.article_id) AS article_count,
               MAX(t.created_at) AS created_at
             FROM topics t
-            JOIN topic_articles_
+            JOIN topic_articles ta ON ta.topic_id = t.id
+            WHERE t.category = ?
+            GROUP BY t.id
+            ORDER BY article_count DESC, created_at DESC, t.id DESC
+            LIMIT ?
+            """,
+            (cat_id, HOT_TOP_N)
+        )
+        rows = cur.fetchall()
+        hot_by_cat[cat_id] = [
+            {
+                "id": tid,
+                "title": title,
+                "articles": int(ac),
+                "followups": max(int(ac) - 1, 0),
+            }
+            for (tid, title, ac, _created_at) in rows
+        ]
+
+    conn.close()
+
+    out_dir = Path("docs")
+    out_dir.mkdir(exist_ok=True)
+    (out_dir / "index.html").write_text(
+        Template(HTML).render(
+            categories=categories,
+            topics_by_cat=topics_by_cat,
+            hot_by_cat=hot_by_cat
+        ),
+        encoding="utf-8"
+    )
+
+if __name__ == "__main__":
+    main()
