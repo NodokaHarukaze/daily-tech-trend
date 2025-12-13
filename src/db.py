@@ -53,8 +53,8 @@ def init_db():
     conn = connect()
     conn.executescript(SCHEMA)
 
-    # 既存DBに列を追加（これが無いと title_ja が増えない）
     _add_column_if_missing(conn, "articles", "title_ja", "TEXT")
+    _add_column_if_missing(conn, "topics", "title_ja", "TEXT")   # ← ★これを追加
 
     conn.commit()
     conn.close()
