@@ -17,7 +17,7 @@ def main():
     cur.execute("SELECT title FROM topics ORDER BY id DESC LIMIT 50")
     topics = [r[0] for r in cur.fetchall()]
 
-    site = Path("site")
+    site = Path("docs")
     site.mkdir(exist_ok=True)
     (site / "index.html").write_text(
         Template(HTML).render(topics=topics),
