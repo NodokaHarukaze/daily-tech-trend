@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS articles (
   url TEXT UNIQUE NOT NULL,
   url_norm TEXT NOT NULL,
   title TEXT NOT NULL,
+  title_ja TEXT,
   source TEXT,
   category TEXT,
   published_at TEXT,
