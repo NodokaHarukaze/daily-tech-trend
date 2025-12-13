@@ -14,7 +14,13 @@ HTML = """
 def main():
     conn = connect()
     cur = conn.cursor()
-    cur.execute("SELECT title FROM topics ORDER BY id DESC LIMIT 50")
+    cur.execute("""
+  SELECT COALESCE(title_ja, title)
+  FROM topics
+  ORDER BY id DESC
+  LIMIT 50
+""")
+
     topics = [r[0] for r in cur.fetchall()]
 
     site = Path("docs")
