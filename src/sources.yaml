@@ -33,12 +33,53 @@ sources:
     category: security
     url: https://www.jpcert.or.jp/rss/jpcert-all.rdf
 
-  - name: Siemens ProductCERT
-    category: manufacturing   # ← 製造 ではなく manufacturing
-    url: ...
-  - name: OpenAI News
-    category: ai              # ← AI ではなく ai
-    url: ...
-  - name: GitHub Blog
-    category: dev             # ← 開発 ではなく dev
-    url: ...
+  # --- AI (Foundations / Models) ---
+  - id: openai-blog
+    name: OpenAI Blog
+    category: ai
+    url: https://openai.com/blog/rss/
+    
+  - id: openai-news
+    name: OpenAI News
+    category: ai
+    url: https://openai.com/news/rss.xml
+
+  - id: google-ai-blog
+    name: Google AI Blog
+    category: ai
+    url: https://ai.googleblog.com/feeds/posts/default
+
+  - id: deepmind-blog
+    name: Google DeepMind Blog
+    category: ai
+    url: https://deepmind.google/blog/rss.xml
+
+  - id: meta-ai
+    name: Meta AI Blog
+    category: ai
+    url: https://ai.facebook.com/blog/rss/
+
+  - id: microsoft-ai
+    name: Microsoft AI Blog
+    category: ai
+    url: https://blogs.microsoft.com/ai/feed/
+
+  - id: aws-ml
+    name: AWS Machine Learning Blog
+    category: ai
+    url: https://aws.amazon.com/blogs/machine-learning/feed/
+
+  - id: huggingface-blog
+    name: Hugging Face Blog
+    category: ai
+    url: https://huggingface.co/blog/feed.xml
+      # --- AI (Research / OSS) ---
+  - id: arxiv-ai
+    name: arXiv AI (cs.AI)
+    category: ai
+    url: http://export.arxiv.org/rss/cs.AI
+
+  - id: arxiv-ml
+    name: arXiv Machine Learning
+    category: ai
+    url: http://export.arxiv.org/rss/cs.LG
