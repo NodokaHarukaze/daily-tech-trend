@@ -1,0 +1,32 @@
+name: daily-trend
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+      - run: python src/collect.py
+      - run: python src/normalize.py
+      - run: python src/dedupe.py
+      - run: python src/thread.py
+      - run: python src/render.py
+
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add site data/state.sqlite
+          git commit -m "daily update" || exit 0
+          git push
