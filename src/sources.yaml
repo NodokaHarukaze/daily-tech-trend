@@ -83,3 +83,25 @@ sources:
     name: arXiv Machine Learning
     category: ai
     url: http://export.arxiv.org/rss/cs.LG
+
+  # --- 製造 (OT/ICS) ---
+  - id: mhi
+    name: Mitsubishi Heavy Industries News
+    category: manufacturing
+    url: https://www.mhi.com/rss/mhi_news.xml
+
+  - id: siemens-cert
+    name: Siemens ProductCERT Advisories
+    category: manufacturing
+    url: https://www.siemens.com/cert/rss/advisories.xml
+
+  # --- 開発 ---
+  - id: github-blog
+    name: GitHub Blog
+    category: dev
+    url: https://github.blog/feed/
+
+  - id: microsoft-devblogs
+    name: Microsoft DevBlogs
+    category: dev
+    url: https://devblogs.microsoft.com/feed/
