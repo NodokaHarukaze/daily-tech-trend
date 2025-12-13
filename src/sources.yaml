@@ -1,62 +1,40 @@
+categories:
+  - id: system
+    name: システム
+  - id: manufacturing
+    name: 製造
+  - id: security
+    name: セキュリティ
+  - id: ai_data
+    name: AI/データ
+  - id: dev
+    name: 開発
+
 sources:
-  # --- Security ---
-  - id: cisa-icsa
-    name: CISA ICS Advisories
-    category: セキュリティ
-    url: https://us-cert.cisa.gov/ics/advisories/advisories.xml
+  # --- システム ---
+  - id: aws-blog
+    name: AWS Blog
+    category: system
+    url: https://aws.amazon.com/blogs/aws/feed/
 
-  - id: cisa-alerts
-    name: CISA NCAS Alerts
-    category: セキュリティ
-    url: https://us-cert.cisa.gov/ncas/alerts.xml
+  - id: gcp-blog
+    name: Google Cloud Blog
+    category: system
+    url: https://cloud.google.com/blog/rss
 
-  - id: cisa-analysis
-    name: CISA NCAS Analysis Reports
-    category: セキュリティ
-    url: https://us-cert.cisa.gov/ncas/analysis-reports.xml
-
-  - id: cisa-cyber-all
-    name: CISA Cybersecurity Advisories (all)
-    category: セキュリティ
+  # --- セキュリティ ---
+  - id: cisa-all
+    name: CISA Cybersecurity Advisories
+    category: security
     url: https://www.cisa.gov/cybersecurity-advisories/all.xml
 
-  - id: jpcert-all
-    name: JPCERT/CC RSS (統合)
-    category: セキュリティ
+  - id: jpcert
+    name: JPCERT/CC
+    category: security
     url: https://www.jpcert.or.jp/rss/jpcert-all.rdf
 
-  - id: jvn-rss
-    name: JVN RSS Index
-    category: セキュリティ
-    url: https://jvn.jp/rss/
-
-  - id: jvndb-feed
-    name: JVN iPedia Feed
-    category: セキュリティ
-    url: https://jvndb.jvn.jp/ja/feed/
-
-  - id: nvd-feeds
-    name: NVD Data Feeds
-    category: セキュリティ
-    url: https://nvd.nist.gov/vuln/data-feeds
-
-  # --- Manufacturing ---
-  - id: mhi-news
+  # --- 製造 ---
+  - id: mhi
     name: Mitsubishi Heavy Industries News
-    category: 製造
+    category: manufacturing
     url: https://www.mhi.com/rss/mhi_news.xml
-
-  - id: khi-news
-    name: Kawasaki News
-    category: 製造
-    url: https://www.khi.co.jp/news/rss/news.xml
-
-  - id: khi-press
-    name: Kawasaki Press Releases
-    category: 製造
-    url: https://www.khi.co.jp/pressrelease/rss/pressrelease.xml
-
-  - id: khi-ir
-    name: Kawasaki IR News
-    category: 製造
-    url: https://www.khi.co.jp/news/rss/ir.xml
