@@ -100,3 +100,36 @@ sources:
     name: Microsoft DevBlogs
     category: dev
     url: https://devblogs.microsoft.com/feed/
+
+      # --- AI (stable) ---
+  - id: huggingface-blog
+    name: Hugging Face Blog
+    category: ai
+    url: https://huggingface.co/blog/feed.xml
+
+  - id: arxiv-ai
+    name: arXiv AI (cs.AI)
+    category: ai
+    url: http://export.arxiv.org/rss/cs.AI
+
+  - id: arxiv-ml
+    name: arXiv Machine Learning
+    category: ai
+    url: http://export.arxiv.org/rss/cs.LG
+
+  - id: github-ml
+    name: GitHub Machine Learning
+    category: ai
+    url: https://github.blog/category/machine-learning/feed/
+
+  - id: mhi
+    name: Mitsubishi Heavy Industries News
+    category: manufacturing
+    url: https://www.mhi.com/rss/mhi_news.xml
+    
+  - id: github-blog
+    name: GitHub Blog
+    category: dev
+    url: https://github.blog/feed/
+
+
