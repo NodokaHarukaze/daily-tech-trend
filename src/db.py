@@ -49,5 +49,12 @@ def connect():
 def init_db():
     conn = connect()
     conn.executescript(SCHEMA)
+
+    # 既存DBに列を追加（無ければ）
+    try:
+        conn.execute("ALTER TABLE articles ADD COLUMN title_ja TEXT")
+    except Exception:
+        pass
+
     conn.commit()
     conn.close()
