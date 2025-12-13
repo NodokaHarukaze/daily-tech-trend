@@ -116,3 +116,56 @@ def main():
 
 if __name__ == "__main__":
   main()
+# ===== DB 初期化（これが無かった） =====
+
+def init_db():
+    conn = connect()
+    cur = conn.cursor()
+
+    # articles
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS articles (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        url TEXT UNIQUE,
+        title TEXT,
+        title_ja TEXT,
+        content TEXT,
+        category TEXT,
+        published_at TEXT,
+        fetched_at TEXT
+    )
+    """)
+
+    # topics
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS topics (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        topic_key TEXT UNIQUE,
+        title TEXT,
+        title_ja TEXT,
+        category TEXT,
+        created_at TEXT
+    )
+    """)
+
+    # topic_articles
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS topic_articles (
+        topic_id INTEGER,
+        article_id INTEGER,
+        UNIQUE(topic_id, article_id)
+    )
+    """)
+
+    # edges（続報ツリー）
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS edges (
+        topic_id INTEGER,
+        parent_article_id INTEGER,
+        child_article_id INTEGER,
+        UNIQUE(topic_id, parent_article_id, child_article_id)
+    )
+    """)
+
+    conn.commit()
+    conn.close()
