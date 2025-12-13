@@ -33,12 +33,7 @@ sources:
     category: security
     url: https://www.jpcert.or.jp/rss/jpcert-all.rdf
 
-  # --- AI (Foundations / Models) ---
-  - id: openai-blog
-    name: OpenAI Blog
-    category: ai
-    url: https://openai.com/blog/rss/
-    
+  # --- AI (Foundations / Models) ---    
   - id: openai-news
     name: OpenAI News
     category: ai
