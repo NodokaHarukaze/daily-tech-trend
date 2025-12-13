@@ -11,7 +11,6 @@ CREATE TABLE IF NOT EXISTS articles (
   url TEXT UNIQUE NOT NULL,
   url_norm TEXT NOT NULL,
   title TEXT NOT NULL,
-  title_ja TEXT,
   source TEXT,
   category TEXT,
   published_at TEXT,
@@ -43,18 +42,19 @@ CREATE TABLE IF NOT EXISTS edges (
 
 def connect():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
-    return conn
+    return sqlite3.connect(DB_PATH)
+
+def _add_column_if_missing(conn, table: str, column: str, coldef: str):
+    cols = [r[1] for r in conn.execute(f"PRAGMA table_info({table})")]
+    if column not in cols:
+        conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {coldef}")
 
 def init_db():
     conn = connect()
     conn.executescript(SCHEMA)
 
-    # 既存DBに列を追加（無ければ）
-    try:
-        conn.execute("ALTER TABLE articles ADD COLUMN title_ja TEXT")
-    except Exception:
-        pass
+    # 既存DBへ追加（マイグレーション）
+    _add_column_if_missing(conn, "articles", "title_ja", "TEXT")
 
     conn.commit()
     conn.close()
