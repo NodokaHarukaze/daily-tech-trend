@@ -18,7 +18,7 @@ jobs:
           python-version: "3.11"
 
       - run: pip install -r requirements.txt
-            - name: Debug db.py and init function
+      - name: Debug db.py and init function
         run: |
           echo "=== Show src/db.py (head) ==="
           sed -n '1,200p' src/db.py
