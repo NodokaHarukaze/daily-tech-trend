@@ -1,97 +1,133 @@
 
-<h1>Daily Tech Trend</h1>
-<ul>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Tech Trend</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:24px;line-height:1.5}
+    h1{margin:0 0 12px}
+    h2{margin:28px 0 8px;border-bottom:1px solid #eee;padding-bottom:6px}
+    .meta{color:#666;font-size:12px;margin-bottom:18px}
+    ul{margin:0;padding-left:18px}
+    li{margin:6px 0}
+    .tag{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:2px 8px;font-size:12px;color:#444;margin-left:8px}
+  </style>
+</head>
+<body>
+  <h1>Daily Tech Trend</h1>
+  <div class="meta">カテゴリ別（最新テーマ）</div>
 
-  <li>CISA が 12 件の産業用制御システム勧告を発表</li>
-
-  <li>三菱電機 GX Works2</li>
-
-  <li>BRICKSTORM バックドア</li>
-
-  <li>中国国家支援の攻撃者が公共部門や情報技術システム全体で BRICKSTORM マルウェアを使用</li>
-
-  <li>CISA、悪用された既知の脆弱性 1 つをカタログに追加</li>
-
-  <li>CISA、悪用された既知の脆弱性 2 件をカタログに追加</li>
-
-  <li>日和見的な親ロシア派ハクティビストが米国と世界の重要インフラを攻撃</li>
-
-  <li>インドに拠点を置く複数の監視カメラ</li>
-
-  <li>CISA が 3 つの産業用制御システム勧告を発表</li>
-
-  <li>ユニバーサル ブート ローダー (U-Boot)</li>
-
-  <li>Festo LX アプライアンス</li>
-
-  <li>親ロシア派ハクティビストが米国および世界の重要インフラに対して日和見攻撃を実行</li>
-
-  <li>ジョンソンコントロールズ iSTAR ウルトラ</li>
-
-  <li>Siemens Gridscale X プリペイド</li>
-
-  <li>Siemens Advanced Licensing (SALT) ツールキット</li>
-
-  <li>アゼオテック DAQファクトリー</li>
-
-  <li>OpenPLC_V3</li>
-
-  <li>草の根DICOM (GDCM)</li>
-
-  <li>重要インフラストラクチャのサイバーセキュリティ パフォーマンス目標 2.0</li>
-
-  <li>2025 CWE の最も危険なソフトウェアの弱点トップ 25</li>
-
-  <li>Siemens SINEMA リモート接続サーバー</li>
-
-  <li>Siemens Building X - セキュリティ マネージャー エッジ コントローラー</li>
-
-  <li>Varex Imaging パノラマ歯科用イメージング ソフトウェア</li>
-
-  <li>ジョンソンコントロールズ iSTAR</li>
-
-  <li>シーメンス エネルギー サービス</li>
-
-  <li>シーメンス IAM クライアント</li>
-
-  <li>高速でコスト効率の高い推論モデルである Amazon Nova 2 Lite の紹介</li>
-
-  <li>Amazon FSx for NetApp ONTAP が Amazon S3 と統合され、シームレスなデータ アクセスが可能になりました</li>
-
-  <li>Amazon SageMaker AI とサーバーレス MLflow を使用して AI 開発を加速する</li>
-
-  <li>AWS DevOps Agent は、インシデント対応を加速し、システムの信頼性を向上させるのに役立ちます (プレビュー)</li>
-
-  <li>メモリ集中型のワークロード向けに第 5 世代 AMD EPYC プロセッサを搭載した Amazon EC2 X8aedz インスタンスの紹介</li>
-
-  <li>Amazon Bedrock は、新しい Mistral Large 3 および Ministral 3 モデルを含む 18 のフルマネージド オープン ウェイト モデルを追加します</li>
-
-  <li>スケールとパフォーマンスが向上した Amazon S3 Vector が一般提供開始</li>
-
-  <li>Amazon OpenSearch Service は、GPU アクセラレーションと自動最適化により、ベクトル データベースのパフォーマンスとコストを向上させます</li>
-
-  <li>新しく強化された AWS サポート プランにより、専門家のガイダンスに AI 機能が追加されます</li>
-
-  <li>Amazon CloudWatch は、運用、セキュリティ、コンプライアンスのための統合データ管理と分析を導入します</li>
-
-  <li>AWS データベースのデータベース節約プランの導入</li>
-
-  <li>Amazon RDS for SQL Server および Oracle のコストを最適化し、スケーラビリティを向上させる新機能</li>
-
-  <li>AWS Lambda の耐久性のある関数を使用して、複数ステップのアプリケーションと AI ワークフローを構築する</li>
-
-  <li>Amazon Bedrock AgentCore は、信頼できる AI エージェントをデプロイするための品質評価とポリシー制御を追加します</li>
-
-  <li>Amazon S3 Storage Lens は、パフォーマンスメトリクス、数十億のプレフィックスのサポート、S3 テーブルへのエクスポートを追加します。</li>
-
-  <li>Amazon S3 テーブルのレプリケーション サポートとインテリジェント階層化の発表</li>
-
-  <li>Amazon SageMaker HyperPod でのチェックポイントレスで柔軟なトレーニングの導入</li>
-
-  <li>Amazon SageMaker AI の新しいサーバーレスカスタマイズによりモデルの微調整が高速化</li>
-
-  <li>Amazon Bedrock は強化の微調整を追加し、開発者がよりスマートで正確な AI モデルを構築する方法を簡素化します</li>
-
-  <li>AWS ウィークリーまとめ: AWS re:Invent 基調講演の要約、オンデマンドビデオなど (2025 年 12 月 8 日)</li>
-
-</ul>
+  
+    <h2>システム <span class="tag">system</span></h2>
+    
+      <ul>
+        
+          <li>高速でコスト効率の高い推論モデルである Amazon Nova 2 Lite の紹介</li>
+        
+          <li>Amazon FSx for NetApp ONTAP が Amazon S3 と統合され、シームレスなデータ アクセスが可能になりました</li>
+        
+          <li>Amazon SageMaker AI とサーバーレス MLflow を使用して AI 開発を加速する</li>
+        
+          <li>AWS DevOps Agent は、インシデント対応を加速し、システムの信頼性を向上させるのに役立ちます (プレビュー)</li>
+        
+          <li>メモリ集中型のワークロード向けに第 5 世代 AMD EPYC プロセッサを搭載した Amazon EC2 X8aedz インスタンスの紹介</li>
+        
+          <li>Amazon Bedrock は、新しい Mistral Large 3 および Ministral 3 モデルを含む 18 のフルマネージド オープン ウェイト モデルを追加します</li>
+        
+          <li>スケールとパフォーマンスが向上した Amazon S3 Vector が一般提供開始</li>
+        
+          <li>Amazon OpenSearch Service は、GPU アクセラレーションと自動最適化により、ベクトル データベースのパフォーマンスとコストを向上させます</li>
+        
+          <li>新しく強化された AWS サポート プランにより、専門家のガイダンスに AI 機能が追加されます</li>
+        
+          <li>Amazon CloudWatch は、運用、セキュリティ、コンプライアンスのための統合データ管理と分析を導入します</li>
+        
+          <li>AWS データベースのデータベース節約プランの導入</li>
+        
+          <li>Amazon RDS for SQL Server および Oracle のコストを最適化し、スケーラビリティを向上させる新機能</li>
+        
+          <li>AWS Lambda の耐久性のある関数を使用して、複数ステップのアプリケーションと AI ワークフローを構築する</li>
+        
+          <li>Amazon Bedrock AgentCore は、信頼できる AI エージェントをデプロイするための品質評価とポリシー制御を追加します</li>
+        
+          <li>Amazon S3 Storage Lens は、パフォーマンスメトリクス、数十億のプレフィックスのサポート、S3 テーブルへのエクスポートを追加します。</li>
+        
+          <li>Amazon S3 テーブルのレプリケーション サポートとインテリジェント階層化の発表</li>
+        
+          <li>Amazon SageMaker HyperPod でのチェックポイントレスで柔軟なトレーニングの導入</li>
+        
+          <li>Amazon SageMaker AI の新しいサーバーレスカスタマイズによりモデルの微調整が高速化</li>
+        
+          <li>Amazon Bedrock は強化の微調整を追加し、開発者がよりスマートで正確な AI モデルを構築する方法を簡素化します</li>
+        
+          <li>AWS ウィークリーまとめ: AWS re:Invent 基調講演の要約、オンデマンドビデオなど (2025 年 12 月 8 日)</li>
+        
+      </ul>
+    
+  
+    <h2>製造 <span class="tag">manufacturing</span></h2>
+    
+      <div class="meta">該当なし</div>
+    
+  
+    <h2>セキュリティ <span class="tag">security</span></h2>
+    
+      <ul>
+        
+          <li>CISA が 12 件の産業用制御システム勧告を発表</li>
+        
+          <li>三菱電機 GX Works2</li>
+        
+          <li>BRICKSTORM バックドア</li>
+        
+          <li>中国国家支援の攻撃者が公共部門や情報技術システム全体で BRICKSTORM マルウェアを使用</li>
+        
+          <li>CISA、悪用された既知の脆弱性 1 つをカタログに追加</li>
+        
+          <li>CISA、悪用された既知の脆弱性 2 件をカタログに追加</li>
+        
+          <li>日和見的な親ロシア派ハクティビストが米国と世界の重要インフラを攻撃</li>
+        
+          <li>インドに拠点を置く複数の監視カメラ</li>
+        
+          <li>CISA が 3 つの産業用制御システム勧告を発表</li>
+        
+          <li>ユニバーサル ブート ローダー (U-Boot)</li>
+        
+          <li>Festo LX アプライアンス</li>
+        
+          <li>親ロシア派ハクティビストが米国および世界の重要インフラに対して日和見攻撃を実行</li>
+        
+          <li>ジョンソンコントロールズ iSTAR ウルトラ</li>
+        
+          <li>Siemens Gridscale X プリペイド</li>
+        
+          <li>Siemens Advanced Licensing (SALT) ツールキット</li>
+        
+          <li>アゼオテック DAQファクトリー</li>
+        
+          <li>OpenPLC_V3</li>
+        
+          <li>草の根DICOM (GDCM)</li>
+        
+          <li>重要インフラストラクチャのサイバーセキュリティ パフォーマンス目標 2.0</li>
+        
+          <li>2025 CWE の最も危険なソフトウェアの弱点トップ 25</li>
+        
+      </ul>
+    
+  
+    <h2>AI/データ <span class="tag">ai_data</span></h2>
+    
+      <div class="meta">該当なし</div>
+    
+  
+    <h2>開発 <span class="tag">dev</span></h2>
+    
+      <div class="meta">該当なし</div>
+    
+  
+</body>
+</html>
