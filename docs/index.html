@@ -52,20 +52,69 @@
     .category-header{display:flex;align-items:center;gap:10px}
     .category-body{margin-top:8px}
     .category-section.collapsed .category-body{display:none}
+    
+    /* ===== Mobile-first overrides ===== */
+    body{margin:14px; font-size:15px}
+    h1{font-size:26px}
+    h2{font-size:18px}
+
+    .summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .top-zone{grid-template-columns:1fr}
+    .top-list{padding-left:18px}
+    .top-item, .topic-row{margin:10px 0}
+
+    /* 長いタイトル対策（はみ出し防止） */
+    .topic-link, a{
+      display:inline;
+      overflow-wrap:anywhere;
+      word-break:break-word;
+    }
+
+    /* バッジは小さく・詰める */
+    .badge{font-size:11px; padding:1px 6px; margin-left:4px; border-radius:10px}
+
+    /* 検索・フィルタは縦積み気味に */
+    .quick-controls{gap:8px}
+    #q{min-width:0; width:100%}
+    .quick-controls label{font-size:12px}
+    .btn{padding:8px 12px} /* タップ領域増 */
+
+    /* カテゴリ見出し周り */
+    .category-header{gap:8px}
+    .category-header .btn{margin-left:auto}
+
+    /* スマホで「今日の要点」ゾーンを見やすく */
+    .summary-card{padding:12px}
+    .top-col{padding:10px}
+
+    /* 画面幅が広い時だけPCレイアウトへ */
+    @media (min-width: 820px){
+      body{margin:24px; font-size:16px}
+      .summary-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .top-zone{grid-template-columns:1fr 1fr}
+      #q{width:auto; min-width:260px}
+    }
+
+	.summary-card{
+      position: sticky;
+      top: 8px;
+      z-index: 10;
+      background: #fafafa;
+    }
 
   </style>
 </head>
 <body>
   <h1>Daily Tech Trend</h1>
   <div class="meta">カテゴリ別（最新テーマ）＋ 注目TOP5（48h増分）＋ LLM解説（ローカル）</div>
-  <div class="meta">生成日時：2025-12-14 20:55:11 JST</div>
+  <div class="meta">生成日時：2025-12-14 21:03:14 JST</div>
     <div class="summary-card">
     <div class="summary-title">今日の要点</div>
 
     <div class="summary-grid">
       <div class="summary-item">
         <div class="k">Generated (JST)</div>
-        <div class="v">2025-12-14 20:55:11 JST</div>
+        <div class="v">2025-12-14 21:03:14 JST</div>
       </div>
       <div class="summary-item">
         <div class="k">Runtime</div>
@@ -2105,7 +2154,7 @@
 
             <div>
               
-                <a href="https://www.cisa.gov/news-events/alerts/2025/12/09/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA、悪用された既知の脆弱性 1 つをカタログに追加</a>
+                <a href="https://www.cisa.gov/news-events/alerts/2025/12/05/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank" rel="noopener">CISA、悪用された既知の脆弱性 1 つをカタログに追加</a>
               
 
               
@@ -2162,7 +2211,7 @@
 
             <div>
               
-                <a href="https://www.cisa.gov/news-events/alerts/2025/12/11/cisa-releases-12-industrial-control-systems-advisories" target="_blank" rel="noopener">CISA が 3 つの産業用制御システムに関する勧告を発表</a>
+                <a href="https://www.cisa.gov/news-events/alerts/2025/12/09/cisa-releases-three-industrial-control-systems-advisories" target="_blank" rel="noopener">CISA が 3 つの産業用制御システムに関する勧告を発表</a>
               
 
               
@@ -3616,6 +3665,10 @@ function toggleAllCats() {
     sec.classList.toggle('collapsed', catsCollapsed);
   });
 }
+
+// 初期状態：カテゴリを折りたたむ（スマホ向け）
+toggleAllCats();
+
 </script>
 
 </body>
