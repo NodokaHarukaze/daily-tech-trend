@@ -7,6 +7,7 @@ from typing import Any, Dict, List
 
 import yaml
 from jinja2 import Template
+from datetime import datetime, timedelta, timezone
 
 from db import connect
 
@@ -132,7 +133,6 @@ NAME_MAP = {
     "manufacturing": "製造",
     "security": "セキュリティ",
     "ai": "AI",
-    "ai_data": "AI/データ",
     "dev": "開発",
     "other": "その他",
 }
@@ -151,23 +151,29 @@ def _safe_json_list(s: str | None) -> List[str]:
 
 
 def load_categories_from_yaml() -> List[Dict[str, str]]:
+    """
+    src/sources.yaml の categories を読み取る。
+    categories が無い/壊れている場合は空配列を返す。
+    """
     try:
         with open("src/sources.yaml", encoding="utf-8") as f:
             cfg = yaml.safe_load(f) or {}
         cats = cfg.get("categories")
         if isinstance(cats, list):
-            out = []
+            out: List[Dict[str, str]] = []
             for c in cats:
                 if isinstance(c, dict) and "id" in c and "name" in c:
                     out.append({"id": str(c["id"]), "name": str(c["name"])})
-            if out:
-                return out
+            return out
     except Exception:
-        pass
+        return []
     return []
 
 
 def build_categories_fallback(cur) -> List[Dict[str, str]]:
+    """
+    YAMLが無い場合でも表示が空にならないよう、DBからカテゴリを推定する。
+    """
     cur.execute("SELECT DISTINCT category FROM topics WHERE category IS NOT NULL AND category != ''")
     cats = [r[0] for r in cur.fetchall()]
     if not cats:
@@ -179,6 +185,9 @@ def build_categories_fallback(cur) -> List[Dict[str, str]]:
 
 
 def ensure_category_coverage(cur, categories: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    """
+    YAMLのカテゴリに存在しないカテゴリがDBにある場合でも、表示対象に追加する。
+    """
     ids = {c["id"] for c in categories}
     cur.execute("SELECT DISTINCT category FROM topics WHERE category IS NOT NULL AND category != ''")
     db_cats = [r[0] for r in cur.fetchall()]
@@ -206,11 +215,12 @@ def main():
 
     topics_by_cat: Dict[str, List[Dict[str, Any]]] = {}
     hot_by_cat: Dict[str, List[Dict[str, Any]]] = {}
+    cutoff_48h = (datetime.now(timezone.utc) - timedelta(hours=48)).isoformat(timespec="seconds")
 
     for cat in categories:
         cat_id = cat["id"]
 
-        # (A) 注目TOP5（48h増分、fetched_atベース）
+        # (A) 注目TOP5（48h増分、published_atベース）
         if cat_id == "other":
             cur.execute(
                 """
@@ -220,7 +230,7 @@ def main():
                   COUNT(ta.article_id) AS total_count,
                   SUM(
                     CASE
-                      WHEN datetime(a.fetched_at) >= datetime('now', '-48 hours') THEN 1
+                      WHEN COALESCE(NULLIF(a.published_at,''), a.fetched_at) >= ? THEN 1
                       ELSE 0
                     END
                   ) AS recent_count
@@ -233,8 +243,10 @@ def main():
                 ORDER BY recent_count DESC, total_count DESC, t.id DESC
                 LIMIT ?
                 """,
-                (HOT_TOP_N,),
+                (cutoff_48h, HOT_TOP_N),
             )
+
+
         else:
             cur.execute(
                 """
@@ -244,7 +256,7 @@ def main():
                   COUNT(ta.article_id) AS total_count,
                   SUM(
                     CASE
-                      WHEN datetime(a.fetched_at) >= datetime('now', '-48 hours') THEN 1
+                      WHEN COALESCE(NULLIF(a.published_at,''), a.fetched_at) >= ? THEN 1
                       ELSE 0
                     END
                   ) AS recent_count
@@ -257,8 +269,9 @@ def main():
                 ORDER BY recent_count DESC, total_count DESC, t.id DESC
                 LIMIT ?
                 """,
-                (cat_id, HOT_TOP_N),
+                (cutoff_48h, cat_id, HOT_TOP_N),
             )
+
 
         rows = cur.fetchall()
         hot_by_cat[cat_id] = [
@@ -273,20 +286,18 @@ def main():
                 SELECT
                   t.id,
                   COALESCE(t.title_ja, t.title) AS title,
-                  -- 代表記事URL（最新fetched_at）
                   (
                     SELECT a2.url
                     FROM topic_articles ta2
                     JOIN articles a2 ON a2.id = ta2.article_id
                     WHERE ta2.topic_id = t.id
-                    ORDER BY datetime(a2.fetched_at) DESC, a2.id DESC
+                    ORDER BY COALESCE(NULLIF(a2.published_at,''), a2.fetched_at) DESC, a2.id DESC
                     LIMIT 1
                   ) AS url,
-                  -- 48h増分
                   (
                     SELECT SUM(
                       CASE
-                        WHEN datetime(a3.fetched_at) >= datetime('now', '-48 hours') THEN 1
+                        WHEN COALESCE(NULLIF(a3.published_at,''), a3.fetched_at) >= ? THEN 1
                         ELSE 0
                       END
                     )
@@ -294,7 +305,6 @@ def main():
                     JOIN articles a3 ON a3.id = ta3.article_id
                     WHERE ta3.topic_id = t.id
                   ) AS recent,
-                  -- LLM insights
                   i.importance,
                   i.summary,
                   i.key_points,
@@ -307,7 +317,7 @@ def main():
                 ORDER BY COALESCE(i.importance, 0) DESC, COALESCE(recent, 0) DESC, t.id DESC
                 LIMIT ?
                 """,
-                (LIMIT_PER_CAT,),
+                (cutoff_48h, LIMIT_PER_CAT),
             )
         else:
             cur.execute(
@@ -320,13 +330,13 @@ def main():
                     FROM topic_articles ta2
                     JOIN articles a2 ON a2.id = ta2.article_id
                     WHERE ta2.topic_id = t.id
-                    ORDER BY datetime(a2.fetched_at) DESC, a2.id DESC
+                    ORDER BY COALESCE(NULLIF(a2.published_at,''), a2.fetched_at) DESC, a2.id DESC
                     LIMIT 1
                   ) AS url,
                   (
                     SELECT SUM(
                       CASE
-                        WHEN datetime(a3.fetched_at) >= datetime('now', '-48 hours') THEN 1
+                        WHEN COALESCE(NULLIF(a3.published_at,''), a3.fetched_at) >= ? THEN 1
                         ELSE 0
                       END
                     )
@@ -346,19 +356,18 @@ def main():
                 ORDER BY COALESCE(i.importance, 0) DESC, COALESCE(recent, 0) DESC, t.id DESC
                 LIMIT ?
                 """,
-                (cat_id, LIMIT_PER_CAT),
+                (cutoff_48h, cat_id, LIMIT_PER_CAT),
             )
+
 
         rows = cur.fetchall()
         items: List[Dict[str, Any]] = []
         for r in rows:
-            # sqlite3.Row ではない想定（cursor標準）なので index で読む
-            # columns: id,title,url,recent,importance,summary,key_points,impact_guess,next_actions,evidence_urls
             tid, title, url, recent, importance, summary, key_points, impact_guess, next_actions, evidence_urls = r
             items.append(
                 {
                     "id": tid,
-                    "title": title,
+                    "title": title,  # ← ここはSQLで title_ja 優先済み
                     "url": url or "#",
                     "recent": int(recent) if recent is not None else None,
                     "importance": int(importance) if importance is not None else None,
