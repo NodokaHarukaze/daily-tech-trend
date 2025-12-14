@@ -207,3 +207,8 @@ marimo/_lsp/
 __marimo__/
 
 data/state.sqlite
+
+# local data / state
+data/
+src/data/
+logs/
