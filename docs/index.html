@@ -170,6 +170,8 @@
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
       }
     }
+	/* ジャンプ時に sticky に隠れない */
+	.topic-row { scroll-margin-top: 88px; }
 
   </style>
 </head>
@@ -182,11 +184,11 @@
     <div class="summary-grid">
       <div class="summary-item">
         <div class="k">Generated (JST)</div>
-        <div class="v">2025-12-15 21:59:09 JST</div>
+        <div class="v">2025-12-15 22:50:31 JST</div>
       </div>
       <div class="summary-item">
         <div class="k">Runtime</div>
-        <div class="v">9 sec</div>
+        <div class="v">11 sec</div>
       </div>
       <div class="summary-item">
         <div class="k">Articles</div>
@@ -2786,7 +2788,7 @@
 
             <div>
               
-                <a href="https://www.cisa.gov/news-events/alerts/2025/12/09/cisa-releases-three-industrial-control-systems-advisories" target="_blank" rel="noopener">CISA が 3 つの産業用制御システムに関する勧告を発表</a>
+                <a href="https://www.cisa.gov/news-events/alerts/2025/12/11/cisa-releases-12-industrial-control-systems-advisories" target="_blank" rel="noopener">CISA が 3 つの産業用制御システムに関する勧告を発表</a>
               
 
               
@@ -4955,7 +4957,7 @@ function applyFilter() {
   const impMin = parseInt(document.getElementById('impMin')?.value || '0', 10);
   const recentMin = parseInt(document.getElementById('recentMin')?.value || '-999', 10);
 
-  document.querySelectorAll('.topic-row').forEach(el => {
+  document.querySelectorAll('.category-body .topic-row').forEach(el => {
     const title = (el.dataset.title || '').toLowerCase();
     const summary = (el.dataset.summary || '').toLowerCase();
     const imp = parseInt(el.dataset.imp || '0', 10);
@@ -5000,14 +5002,20 @@ function scrollToTopic(hash){
   const el = document.querySelector(hash);
   if (!el) return false;
 
+  // カテゴリを開く
   openSectionFor(el);
   ensureVisible(el);
+
+  // details を自動で開く（あれば）
+  const det = el.querySelector('details.insight');
+  if (det && !det.open) det.open = true;
 
   requestAnimationFrame(() => {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   return true;
 }
+
 
 document.addEventListener('click', (e) => {
   const a = e.target.closest('a[href^="#topic-"]');
