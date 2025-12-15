@@ -122,6 +122,43 @@
     details.insight[open] > summary::before {
       content:"▼ ";
     }
+    /* details 展開時の視認性向上 */
+    details.insight {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 6px 8px;
+      background: #fff;
+    }
+
+    details.insight[open] {
+      background: #f7faff;           /* 薄い青 */
+      border-color: #dbe7ff;
+    }
+
+    /* summary（トグル）の見た目 */
+    details.insight > summary {
+      cursor: pointer;
+      padding: 4px 0;
+      font-weight: 500;
+    }
+
+    details.insight > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* 開閉アイコン */
+    details.insight > summary::before {
+      content: "▶ ";
+      color: #4c6ef5;
+    }
+    details.insight[open] > summary::before {
+      content: "▼ ";
+    }
+
+    /* 展開後の中身の余白 */
+    details.insight[open] > *:not(summary) {
+      margin-top: 6px;
+    }
 
   </style>
 </head>
@@ -134,11 +171,11 @@
     <div class="summary-grid">
       <div class="summary-item">
         <div class="k">Generated (JST)</div>
-        <div class="v">2025-12-15 21:24:35 JST</div>
+        <div class="v">2025-12-15 21:31:37 JST</div>
       </div>
       <div class="summary-item">
         <div class="k">Runtime</div>
-        <div class="v">10 sec</div>
+        <div class="v">11 sec</div>
       </div>
       <div class="summary-item">
         <div class="k">Articles</div>
@@ -2700,7 +2737,7 @@
 
             <div>
               
-                <a href="https://www.cisa.gov/news-events/alerts/2025/12/11/cisa-releases-12-industrial-control-systems-advisories" target="_blank" rel="noopener">CISA が 3 つの産業用制御システムに関する勧告を発表</a>
+                <a href="https://www.cisa.gov/news-events/alerts/2025/12/09/cisa-releases-three-industrial-control-systems-advisories" target="_blank" rel="noopener">CISA が 3 つの産業用制御システムに関する勧告を発表</a>
               
 
               
