@@ -170,9 +170,10 @@
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
       }
     }
-	/* ジャンプ時に sticky に隠れない */
-	.topic-row { scroll-margin-top: 88px; }
-
+    /* ジャンプ時に sticky に隠れない */
+    .topic-row { scroll-margin-top: 88px; }
+    
+    #filter-count { color:#555; }
   </style>
 </head>
 <body>
@@ -184,7 +185,7 @@
     <div class="summary-grid">
       <div class="summary-item">
         <div class="k">Generated (JST)</div>
-        <div class="v">2025-12-15 22:54:00 JST</div>
+        <div class="v">2025-12-15 22:58:48 JST</div>
       </div>
       <div class="summary-item">
         <div class="k">Runtime</div>
@@ -217,6 +218,7 @@
       </label>
       <button class="btn" type="button" onclick="toggleAllCats()">Toggle categories</button>
     </div>
+    <div id="filter-count" class="small" style="margin-top:6px; display:none;"></div>
   </div>
 
   <section class="top-zone">
@@ -2788,7 +2790,7 @@
 
             <div>
               
-                <a href="https://www.cisa.gov/news-events/alerts/2025/12/09/cisa-releases-three-industrial-control-systems-advisories" target="_blank" rel="noopener">CISA が 3 つの産業用制御システムに関する勧告を発表</a>
+                <a href="https://www.cisa.gov/news-events/alerts/2025/12/11/cisa-releases-12-industrial-control-systems-advisories" target="_blank" rel="noopener">CISA が 3 つの産業用制御システムに関する勧告を発表</a>
               
 
               
@@ -4957,7 +4959,10 @@ function applyFilter() {
   const impMin = parseInt(document.getElementById('impMin')?.value || '0', 10);
   const recentMin = parseInt(document.getElementById('recentMin')?.value || '-999', 10);
 
-  document.querySelectorAll('.category-body .topic-row').forEach(el => {
+  const rows = document.querySelectorAll('.category-body .topic-row');
+  let hit = 0;
+
+  rows.forEach(el => {
     const title = (el.dataset.title || '').toLowerCase();
     const summary = (el.dataset.summary || '').toLowerCase();
     const imp = parseInt(el.dataset.imp || '0', 10);
@@ -4967,9 +4972,24 @@ function applyFilter() {
     const hitImp = imp >= impMin;
     const hitRecent = recent >= recentMin;
 
-    el.style.display = (hitQ && hitImp && hitRecent) ? '' : 'none';
+    const show = hitQ && hitImp && hitRecent;
+    el.style.display = show ? '' : 'none';
+    if (show) hit++;
   });
+
+  // ★ 件数表示
+  const box = document.getElementById('filter-count');
+  if (!box) return;
+
+  const isFiltering = q || impMin > 0 || recentMin > -999;
+  if (isFiltering) {
+    box.textContent = `該当: ${hit}件 / 全${rows.length}件`;
+    box.style.display = '';
+  } else {
+    box.style.display = 'none';
+  }
 }
+
 
 document.getElementById('q')?.addEventListener('input', applyFilter);
 document.getElementById('impMin')?.addEventListener('change', applyFilter);
@@ -5034,21 +5054,6 @@ window.addEventListener('load', () => {
 
 // 初期状態：カテゴリを折りたたむ（スマホ向け）
 toggleAllCats();
-
-// Accordion: details を1つだけ開く（同時に複数開かない）
-document.addEventListener('toggle', (e) => {
-  const det = e.target;
-  if (!(det instanceof HTMLDetailsElement)) return;
-  if (!det.matches('details.insight')) return;
-  if (!det.open) return;
-
-  // 同じカテゴリ内だけで1つにする（全体で1つにしたいなら selector を変える）
-  const scope = document;
-
-  scope.querySelectorAll('details.insight[open]').forEach(other => {
-    if (other !== det) other.open = false;
-  });
-}, true);
 
 </script>
 
