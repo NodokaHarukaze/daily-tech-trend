@@ -207,7 +207,7 @@
     <div class="summary-grid">
       <div class="summary-item">
         <div class="k">Generated (JST)</div>
-        <div class="v">2025-12-18 19:48:47 JST</div>
+        <div class="v">2025-12-18 20:01:42 JST</div>
       </div>
       <div class="summary-item">
         <div class="k">Runtime</div>
@@ -225,76 +225,80 @@
     <div class="small" style="margin-top:10px">
       <span class="badge">Tags</span>
       <button class="btn" type="button" onclick="clearTagFilter()">All</button>
+      <label class="small" style="margin-left:8px">
+        <input type="checkbox" id="tagModeOr"> OR（どれか）
+      </label>
+
       
-        <button class="btn" type="button" onclick="setTagFilter('AI')">
+        <button class="btn" type="button" data-tag-btn="AI" onclick="toggleTag('AI')">
           AI (2)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('Copilot')">
+        <button class="btn" type="button" data-tag-btn="Copilot" onclick="toggleTag('Copilot')">
           Copilot (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('EU')">
+        <button class="btn" type="button" data-tag-btn="EU" onclick="toggleTag('EU')">
           EU (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('GIMP')">
+        <button class="btn" type="button" data-tag-btn="GIMP" onclick="toggleTag('GIMP')">
           GIMP (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('Gemini')">
+        <button class="btn" type="button" data-tag-btn="Gemini" onclick="toggleTag('Gemini')">
           Gemini (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('JFEスチール')">
+        <button class="btn" type="button" data-tag-btn="JFEスチール" onclick="toggleTag('JFEスチール')">
           JFEスチール (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('Microsoft365')">
+        <button class="btn" type="button" data-tag-btn="Microsoft365" onclick="toggleTag('Microsoft365')">
           Microsoft365 (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('コスト削減')">
+        <button class="btn" type="button" data-tag-btn="コスト削減" onclick="toggleTag('コスト削減')">
           コスト削減 (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('低価格')">
+        <button class="btn" type="button" data-tag-btn="低価格" onclick="toggleTag('低価格')">
           低価格 (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('新商品開発')">
+        <button class="btn" type="button" data-tag-btn="新商品開発" onclick="toggleTag('新商品開発')">
           新商品開発 (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('気候')">
+        <button class="btn" type="button" data-tag-btn="気候" onclick="toggleTag('気候')">
           気候 (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('無料ソフト')">
+        <button class="btn" type="button" data-tag-btn="無料ソフト" onclick="toggleTag('無料ソフト')">
           無料ソフト (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('環境')">
+        <button class="btn" type="button" data-tag-btn="環境" onclick="toggleTag('環境')">
           環境 (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('画像編集')">
+        <button class="btn" type="button" data-tag-btn="画像編集" onclick="toggleTag('画像編集')">
           画像編集 (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('賞')">
+        <button class="btn" type="button" data-tag-btn="賞" onclick="toggleTag('賞')">
           賞 (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('開発者向け')">
+        <button class="btn" type="button" data-tag-btn="開発者向け" onclick="toggleTag('開発者向け')">
           開発者向け (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('障害')">
+        <button class="btn" type="button" data-tag-btn="障害" onclick="toggleTag('障害')">
           障害 (1)
         </button>
       
-        <button class="btn" type="button" onclick="setTagFilter('高速化')">
+        <button class="btn" type="button" data-tag-btn="高速化" onclick="toggleTag('高速化')">
           高速化 (1)
         </button>
       
@@ -487,7 +491,8 @@
               data-title="ウィークリーレポート: 複数のマイクロソフト製品に脆弱性"
               data-summary="複数のAdobe製品に脆弱性が報告され、即時パッチ適用と対策検討が求められる。"
               data-imp="45"
-              data-recent="2">
+              data-recent="2"
+              data-tags="">
             <span class="badge imp-45">imp 45</span>
             <span class="badge hot">48h +2</span>
             <a href="#topic-378">ウィークリーレポート: 複数のマイクロソフト製品に脆弱性</a>
@@ -502,7 +507,8 @@
               data-title="行動日"
               data-summary="EUが毎年実施する気候行動デーは国民の環境意識向上を目的とした調査イベントである。"
               data-imp="30"
-              data-recent="2">
+              data-recent="2"
+              data-tags="">
             <span class="badge imp-30">imp 30</span>
             <span class="badge hot">48h +2</span>
             <a href="#topic-334">行動日</a>
@@ -517,7 +523,8 @@
               data-title="JVN: ブラザー製iPrint＆Scanにバンドルされている.NET 8.0に複数の脆弱性"
               data-summary="Brother製iPrint＆Scanにバンドルされた.NET8.0に複数脆弱性が報告され、即時パッチ適用を推奨。"
               data-imp="70"
-              data-recent="1">
+              data-recent="1"
+              data-tags="">
             <span class="badge imp-70">imp 70</span>
             <span class="badge hot">48h +1</span>
             <a href="#topic-209">JVN: ブラザー製iPrint＆Scanにバンドルされている.NET 8.0に複数の脆弱性</a>
@@ -532,7 +539,8 @@
               data-title="ウィークリーレポート: Apache Struts 2にサービス運用妨害（DoS）の脆弱性"
               data-summary="Apache Struts 2にDoS脆弱性が報告され、サービス運用妨害が可能となった。JPCERTが週次レポートで警告し、即時対策が求められる。"
               data-imp="70"
-              data-recent="1">
+              data-recent="1"
+              data-tags="">
             <span class="badge imp-70">imp 70</span>
             <span class="badge hot">48h +1</span>
             <a href="#topic-381">ウィークリーレポート: Apache Struts 2にサービス運用妨害（DoS）の脆弱性</a>
@@ -547,7 +555,8 @@
               data-title="週刊レポート: QNDに権限付与の脆弱性"
               data-summary="QNDに権限昇格脆弱性が報告され、攻撃者は管理者権限を取得できるため、即時対応が必要。JPCERTが警告発表し、パッチ適用と検証が求められる。"
               data-imp="70"
-              data-recent="1">
+              data-recent="1"
+              data-tags="">
             <span class="badge imp-70">imp 70</span>
             <span class="badge hot">48h +1</span>
             <a href="#topic-384">週刊レポート: QNDに権限付与の脆弱性</a>
@@ -562,7 +571,8 @@
               data-title="ウィークリーレポート: Gogs にリモートコード実行可能な脆弱性"
               data-summary="Gogsにリモートコード実行可能な脆弱性が報告され、既存ユーザーはパッチ適用を検討すべき。"
               data-imp="70"
-              data-recent="1">
+              data-recent="1"
+              data-tags="">
             <span class="badge imp-70">imp 70</span>
             <span class="badge hot">48h +1</span>
             <a href="#topic-385">ウィークリーレポート: Gogs にリモートコード実行可能な脆弱性</a>
@@ -577,7 +587,8 @@
               data-title="IF25 水素オークション＆熱オークション"
               data-summary="EUが水素と熱の二つのオークションを同時に開始し、産業用低炭化プロセスへの転換を加速させる。"
               data-imp="70"
-              data-recent="1">
+              data-recent="1"
+              data-tags="">
             <span class="badge imp-70">imp 70</span>
             <span class="badge hot">48h +1</span>
             <a href="#topic-402">IF25 水素オークション＆熱オークション</a>
@@ -592,7 +603,8 @@
               data-title="三菱電機 GT Designer3"
               data-summary="三菱電機のGT Designer3に関するCISAの情報が公開されたため、既存システムへの影響を検証し、6か月以内に対応判断が必要である。"
               data-imp="60"
-              data-recent="1">
+              data-recent="1"
+              data-tags="">
             <span class="badge imp-60">imp 60</span>
             <span class="badge hot">48h +1</span>
             <a href="#topic-370">三菱電機 GT Designer3</a>
@@ -608,7 +620,8 @@
 ～高熱効率・長寿命なラジアントチューブバーナの開発による省エネの取り組み～"
               data-summary="経済産業大臣賞を受賞した高熱効率・長寿命ラジアントチューブバーナの開発が省エネ事例として評価された。"
               data-imp="60"
-              data-recent="1">
+              data-recent="1"
+              data-tags="">
             <span class="badge imp-60">imp 60</span>
             <span class="badge hot">48h +1</span>
             <a href="#topic-373">2025年度省エネ大賞 省エネ事例部門「経済産業大臣賞」を受賞
@@ -624,7 +637,8 @@
               data-title="JVN: 複数の日立エネルギー製品における通信チャネルで送受信するメッセージに対する完全性の検証不備の脆弱性"
               data-summary="複数のHitachi Energy製品で通信チャネルのメッセージ完全性検証が不備となる脆弱性が報告され、既存システムへの即時対応が必要。"
               data-imp="60"
-              data-recent="1">
+              data-recent="1"
+              data-tags="">
             <span class="badge imp-60">imp 60</span>
             <span class="badge hot">48h +1</span>
             <a href="#topic-375">JVN: 複数の日立エネルギー製品における通信チャネルで送受信するメッセージに対する完全性の検証不備の脆弱性</a>
@@ -696,8 +710,8 @@
               data-title="eval がビジネス向け AI の次の章をどのように推進するか"
               data-summary="evalsがビジネスAIの次章を推進し、モデル評価と改善を体系化して導入速度を加速させる。"
               data-imp="80"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/evals-drive-next-chapter-of-ai" target="_blank" rel="noopener">eval がビジネス向け AI の次の章をどのように推進するか</a>
@@ -774,8 +788,8 @@
               data-title="ウォルト・ディズニー・カンパニーとOpenAIが、最愛のキャラクターをソラにもたらすという画期的な合意に達した"
               data-summary="ウォルト・ディズニーとOpenAIがSoraにキャラクターを導入する合意を結び、エンタメとAIの融合が加速。"
               data-imp="80"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/disney-sora-agreement" target="_blank" rel="noopener">ウォルト・ディズニー・カンパニーとOpenAIが、最愛のキャラクターをソラにもたらすという画期的な合意に達した</a>
@@ -852,8 +866,8 @@
               data-title="Codex を使用して Android 版 Sora を 28 日以内に出荷した方法"
               data-summary="Codexを活用し、Android版Soraを28日で出荷した手法を公開。開発速度と品質を両立させる実践例として業界に示唆を与える。"
               data-imp="80"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/shipping-sora-for-android-with-codex" target="_blank" rel="noopener">Codex を使用して Android 版 Sora を 28 日以内に出荷した方法</a>
@@ -931,8 +945,8 @@
               data-title="OpenAIとFoxconn、AIサプライチェーン全体で米国の製造業を強化するために協力"
               data-summary="OpenAIとFoxconnが協力し、米国のAIサプライチェーン製造を強化する。両社は共同で設計・生産体制を構築し、国内製造拠点を増やす方針を示した。"
               data-imp="70"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/openai-and-foxconn-collaborate" target="_blank" rel="noopener">OpenAIとFoxconn、AIサプライチェーン全体で米国の製造業を強化するために協力</a>
@@ -1009,8 +1023,8 @@
               data-title="OpenAI、エンタープライズ AI 導入を加速するために Thrive Holdings の所有権を取得"
               data-summary="OpenAIがThrive Holdingsを取得し、エンタープライズ向けAI導入を加速する。これにより企業は統合プラットフォームでAI活用が容易になると期待される。"
               data-imp="70"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/thrive-holdings" target="_blank" rel="noopener">OpenAI、エンタープライズ AI 導入を加速するために Thrive Holdings の所有権を取得</a>
@@ -1087,8 +1101,8 @@
               data-title="OpenAIがNeptuneを買収へ"
               data-summary="OpenAIがNeptuneを買収することで、生成AIのデータ管理機能が拡充される。これにより同社はエンタープライズ向けサービスを強化し、競争優位性を高める可能性がある。"
               data-imp="70"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/openai-to-acquire-neptune" target="_blank" rel="noopener">OpenAIがNeptuneを買収へ</a>
@@ -1165,8 +1179,8 @@
               data-title="BBVA と OpenAI が協力してグローバル バンキングを変革"
               data-summary="BBVAとOpenAIが提携し、グローバルバンキングにAIを導入することで業界全体のデジタルトランスフォーメーションを加速させる。"
               data-imp="70"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/bbva-collaboration-expansion" target="_blank" rel="noopener">BBVA と OpenAI が協力してグローバル バンキングを変革</a>
@@ -1243,8 +1257,8 @@
               data-title="AI 機能の進歩に伴うサイバー レジリエンスの強化"
               data-summary="AIの進化に伴いサイバーレジリエンスを強化する必要が高まっている。"
               data-imp="61"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/strengthening-cyber-resilience" target="_blank" rel="noopener">AI 機能の進歩に伴うサイバー レジリエンスの強化</a>
@@ -1321,8 +1335,8 @@
               data-title="Amazon SageMaker AI を使用した AI 開発で使用されるアセットの追跡と管理"
               data-summary="Amazon SageMaker AI が提供するアセット追跡機能により、データ・モデルのバージョン管理と可視化が容易になり、複数環境での再現性と監査性を向上させる。"
               data-imp="60"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/machine-learning/tracking-and-managing-assets-used-in-ai-development-with-amazon-sagemaker-ai/" target="_blank" rel="noopener">Amazon SageMaker AI を使用した AI 開発で使用されるアセットの追跡と管理</a>
@@ -1401,8 +1415,8 @@
               data-title="Intuit と OpenAI が AI を活用した新しいエクスペリエンスで提携"
               data-summary="OpenAIとTargetが提携し、AIを活用した新しいエクスペリエンスを共同開発する。これにより小売業界の顧客体験が変化し、両社は競争優位性を高める可能性がある。"
               data-imp="60"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/target-partnership" target="_blank" rel="noopener">Intuit と OpenAI が AI を活用した新しいエクスペリエンスで提携</a>
@@ -1479,8 +1493,8 @@
               data-title="GPT-5 と数学的発見の未来"
               data-summary="GPT-5が数学的発見に与える影響を検討し、研究コミュニティへの実務適用可能性を示す。"
               data-imp="60"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/introducing-gpt-5-2" target="_blank" rel="noopener">GPT-5 と数学的発見の未来</a>
@@ -1557,8 +1571,8 @@
               data-title="メンタルヘルス関連訴訟に対する当社の取り組み"
               data-summary="当社はメンタルヘルス関連訴訟に対し、専門チームを設置し、法的リスク評価と予防策を実施しています。"
               data-imp="60"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/mental-health-litigation-approach" target="_blank" rel="noopener">メンタルヘルス関連訴訟に対する当社の取り組み</a>
@@ -1625,8 +1639,8 @@
               data-title="OpenAI、デニス・ドレッサーを最高収益責任者に任命"
               data-summary="OpenAIがデニス・ドレッサーを最高収益責任者に任命し、売上拡大戦略を強化する。"
               data-imp="60"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/openai-appoints-denise-dresser" target="_blank" rel="noopener">OpenAI、デニス・ドレッサーを最高収益責任者に任命</a>
@@ -1703,8 +1717,8 @@
               data-title="GPT-5.2 による科学と数学の進歩"
               data-summary="GPT-5.2が科学・数学領域で精度向上し、研究開発の効率化を促進する。"
               data-imp="60"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/gpt-5-2-for-science-and-math" target="_blank" rel="noopener">GPT-5.2 による科学と数学の進歩</a>
@@ -1781,8 +1795,8 @@
               data-title="Strands Agent を使用した高度なオーケストレーション技術でエージェントのワークフローをカスタマイズする"
               data-summary="Strands Agentを用いてエージェントワークフローの高度なオーケストレーションが可能になり、カスタマイズ性と統合力が向上した。"
               data-imp="60"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/machine-learning/customize-agent-workflows-with-advanced-orchestration-techniques-using-strands-agents/" target="_blank" rel="noopener">Strands Agent を使用した高度なオーケストレーション技術でエージェントのワークフローをカスタマイズする</a>
@@ -1860,8 +1874,8 @@
               data-title="Accenture と OpenAI がエンタープライズ AI の成功を加速する"
               data-summary="AccentureとOpenAIが連携し、企業向けAI導入を加速する。共同でソリューション開発・実装支援を行い、エンタープライズAIの普及を促進する。"
               data-imp="50"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/accenture-partnership" target="_blank" rel="noopener">Accenture と OpenAI がエンタープライズ AI の成功を加速する</a>
@@ -1938,8 +1952,8 @@
               data-title="ドイツテレコムで強力な AI をヨーロッパ全土の数百万人に提供"
               data-summary="ドイツテレコムがヨーロッパ全土の数百万人に強力なAIを提供し、サービス拡大を図る。"
               data-imp="50"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/deutsche-telekom-collaboration" target="_blank" rel="noopener">ドイツテレコムで強力な AI をヨーロッパ全土の数百万人に提供</a>
@@ -2016,8 +2030,8 @@
               data-title="Amazon Bedrock を使用して生成 AI ワークロードを運用し、数百のユースケースに拡張する – パート 1: GenAIOps"
               data-summary="Amazon Bedrockを利用して生成AIワークロードを運用し、数百のユースケースへ拡張できるようになった。Bedrockは既存AWS環境に統合可能で、設計・実装に影響が出るため早期検討が必要だ。"
               data-imp="50"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/machine-learning/operationalize-generative-ai-workloads-and-scale-to-hundreds-of-use-cases-with-amazon-bedrock-part-1-genaiops/" target="_blank" rel="noopener">Amazon Bedrock を使用して生成 AI ワークロードを運用し、数百のユースケースに拡張する – パート 1: GenAIOps</a>
@@ -2094,8 +2108,8 @@
               data-title="Gemini 3 Flash: スピードを追求したフロンティア インテリジェンス"
               data-summary="Gemini 3 Flashは高速で低コストなインテリジェンスを提供し、開発者が迅速にAI機能を統合できるよう設計された新モデルです。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="AI,低価格,高速化,開発者向け">
             <div>
               
                 <a href="https://deepmind.google/blog/gemini-3-flash-frontier-intelligence-built-for-speed/" target="_blank" rel="noopener">Gemini 3 Flash: スピードを追求したフロンティア インテリジェンス</a>
@@ -2186,8 +2200,8 @@
               data-title="開発者はアプリを ChatGPT に送信できるようになりました"
               data-summary="開発者はChatGPTにアプリを提出し、審査後公開できるようになった。承認済みアプリは新しいインプロダクトディレクトリで検索可能となり、SDKとガイドラインが更新された。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://openai.com/index/developers-can-now-submit-apps-to-chatgpt" target="_blank" rel="noopener">開発者はアプリを ChatGPT に送信できるようになりました</a>
@@ -2307,8 +2321,8 @@
               data-title="「Chromium」「WebKit」のゼロデイ脆弱性は描画ライブラリ「ANGLE」に登場／「Edge」「Chrome」などのWebブラウザー、iPhone、iPad、MacなどのApple製品は更新を"
               data-summary="ChromiumとWebKitのゼロデイ脆弱性がANGLEに発見され、Edge・Chrome・Apple製品でメモリ破損を引き起こす可能性があるため、直ちにパッチ適用が必要。"
               data-imp="70"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071534.html" target="_blank" rel="noopener">「Chromium」「WebKit」のゼロデイ脆弱性は描画ライブラリ「ANGLE」に登場／「Edge」「Chrome」などのWebブラウザー、iPhone、iPad、MacなどのApple製品は更新を</a>
@@ -2385,8 +2399,8 @@
               data-title="無料で高機能な画像編集・処理ソフト「GIMP」v3.2 RC2のほか【ダイジェストニュース】"
               data-summary="GIMPがバージョン3.2 RC2をリリースし、無料で高機能な画像編集・処理ソフトとしての位置づけを維持した。"
               data-imp="60"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="GIMP,画像編集,無料ソフト">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/digest/2071829.html" target="_blank" rel="noopener">無料で高機能な画像編集・処理ソフト「GIMP」v3.2 RC2のほか【ダイジェストニュース】</a>
@@ -2473,8 +2487,8 @@
               data-title="「Gemini 3」の新ファミリー「Gemini 3 Flash」登場、日常用に最適な性能・コストバランス／「Gemini」アプリのデフォルトモデルに。 前代旗艦モデル「Gemini 2.5 Pro」より3倍高速かつ安価"
               data-summary="GoogleがGemini 3 Flashを発表し、前世代より高速・低価格で日常利用に最適化したモデルを提供。"
               data-imp="55"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="AI,Gemini,コスト削減">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2072258.html" target="_blank" rel="noopener">「Gemini 3」の新ファミリー「Gemini 3 Flash」登場、日常用に最適な性能・コストバランス／「Gemini」アプリのデフォルトモデルに。 前代旗艦モデル「Gemini 2.5 Pro」より3倍高速かつ安価</a>
@@ -2563,8 +2577,8 @@
               data-title="【アップデート情報】窓の杜収録ソフト 12月17日～「Adobe Express Photos」や「Checker Plus for Gmail」など"
               data-summary="窓の杜が12月17日からAdobe Express PhotosやChecker Plus for Gmail等を追加し、ユーザーは新機能を利用できる。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/update/library/2071812.html" target="_blank" rel="noopener">【アップデート情報】窓の杜収録ソフト 12月17日～「Adobe Express Photos」や「Checker Plus for Gmail」など</a>
@@ -2642,8 +2656,8 @@
               data-title="Geminiの「Deep Research」機能が強化、グラフや図表もまじえたレポートを出力できるように／有償サブスクリプション「Google AI Ultra」で提供"
               data-summary="GoogleがGemini Deep Researchをアップデートし、グラフや図表を含むビジュアルレポート生成機能を追加した。これにより分析作業の効率化と可視化が可能になるため、開発・運用チームは新機能を検証すべきだ。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071883.html" target="_blank" rel="noopener">Geminiの「Deep Research」機能が強化、グラフや図表もまじえたレポートを出力できるように／有償サブスクリプション「Google AI Ultra」で提供</a>
@@ -2722,8 +2736,8 @@
               data-title="OpenAI、画像生成モデル「GPT Image 1.5」を発表 ～「ChatGPT」に写真加工ページも／従来より最大4倍の速さ、ディテールを保ったまま表示通りに画像の生成・編集"
               data-summary="OpenAIがGPT Image 1.5を発表し、ChatGPT Imagesで最大4倍速の画像生成・編集を実現。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071942.html" target="_blank" rel="noopener">OpenAI、画像生成モデル「GPT Image 1.5」を発表 ～「ChatGPT」に写真加工ページも／従来より最大4倍の速さ、ディテールを保ったまま表示通りに画像の生成・編集</a>
@@ -2802,8 +2816,8 @@
               data-title="2025年10月プレビューパッチ「KB5067036」に問題、「WSL」とVPNツールの組み合わせで／「Cisco Secure Client」や「OpenVPN」などの製品への影響"
               data-summary="KB5067036パッチ適用後、Windows 11でWSLのミラーリングネットワークが失敗し、Cisco Secure ClientやOpenVPN等のVPNツールとの連携に支障をきたす。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071884.html" target="_blank" rel="noopener">2025年10月プレビューパッチ「KB5067036」に問題、「WSL」とVPNツールの組み合わせで／「Cisco Secure Client」や「OpenVPN」などの製品への影響</a>
@@ -2882,8 +2896,8 @@
               data-title="2025年12月セキュリティパッチで「MSMQ」にトラブル、セキュリティ変更の影響で／一部のクライアント・サーバーOSで発生"
               data-summary="12月のセキュリティパッチ適用後、一部MSMQ環境で機能障害が報告され、影響は限定的だが対策が必要。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071919.html" target="_blank" rel="noopener">2025年12月セキュリティパッチで「MSMQ」にトラブル、セキュリティ変更の影響で／一部のクライアント・サーバーOSで発生</a>
@@ -2962,8 +2976,8 @@
               data-title="Googleの自律型強調AI「Jules」、開発者の指示がなくても働く機能を導入／TODOコメントをもとに実装を提案、定期的な定型雑務を肩代わり"
               data-summary="Googleが自律型コーディングAIエージェント「Jules」をアップデートし、Suggested TasksやScheduled Tasksで開発者の指示なしにタスクを提案・実行できるようになった。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071962.html" target="_blank" rel="noopener">Googleの自律型強調AI「Jules」、開発者の指示がなくても働く機能を導入／TODOコメントをもとに実装を提案、定期的な定型雑務を肩代わり</a>
@@ -3042,8 +3056,8 @@
               data-title="Google、AI搭載ミニアプリ構築ツール「Opal」を「Gemini」アプリから利用可能ほか【ダイジェストニュース】"
               data-summary="GoogleがAI搭載ミニアプリ構築ツール「Opal」をGeminiアプリから利用可能にし、開発者向けの新機能を拡充した。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/digest/2072116.html" target="_blank" rel="noopener">Google、AI搭載ミニアプリ構築ツール「Opal」を「Gemini」アプリから利用可能ほか【ダイジェストニュース】</a>
@@ -3122,8 +3136,8 @@
               data-title="「仕様駆動開発（SDD）」の手引き【開発者と読み解くAIの世界】"
               data-summary="実装先行・仕様後付けの負のサイクルを解消するため、仕様駆動開発（SDD）の手引きを紹介。AIと共に設計から実装へ移行し、品質向上とリードタイム短縮を図る提案である。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/serial/aidev/2071380.html" target="_blank" rel="noopener">「仕様駆動開発（SDD）」の手引き【開発者と読み解くAIの世界】</a>
@@ -3202,8 +3216,8 @@
               data-title="日本の「Microsoft 365」と「Microsoft Copilot」で障害／現在、問題を調査中"
               data-summary="日本のMicrosoft 365とCopilotで障害が発生し、アクセスやサインインに問題が報告されている。原因調査中であるため、ユーザーは一時的なサービス停止を経験している。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="Microsoft365,Copilot,障害">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2072279.html" target="_blank" rel="noopener">日本の「Microsoft 365」と「Microsoft Copilot」で障害／現在、問題を調査中</a>
@@ -3292,8 +3306,8 @@
               data-title="「Google 検索」に新機能 ～トップニュースにお気に入りのメディア・サイトを追加／「AIによる概要」「AIモード」も改善、AI時代におけるニュースの提供形態を選ぶ"
               data-summary="Googleが検索機能にPreferred Sourcesを導入し、トップニュースでお気に入りメディアを追加できるようになった。AIによる概要・モードも改善され、ユーザーは情報取得方法を選択可能になる。"
               data-imp="45"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071381.html" target="_blank" rel="noopener">「Google 検索」に新機能 ～トップニュースにお気に入りのメディア・サイトを追加／「AIによる概要」「AIモード」も改善、AI時代におけるニュースの提供形態を選ぶ</a>
@@ -3370,8 +3384,8 @@
               data-title="Canonical、「Ubuntu Pro for WSL」の一般提供を開始 ～個人利用であれば5台まで無料／最大15年間のエンタープライズサポートを「Microsoft Store」から簡単に有効化"
               data-summary="CanonicalがUbuntu Pro for WSLの一般提供を開始し、Microsoft Storeから無料で5台まで個人利用できる。エンタープライズサポートは最大15年有効化可能。"
               data-imp="45"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071722.html" target="_blank" rel="noopener">Canonical、「Ubuntu Pro for WSL」の一般提供を開始 ～個人利用であれば5台まで無料／最大15年間のエンタープライズサポートを「Microsoft Store」から簡単に有効化</a>
@@ -3448,8 +3462,8 @@
               data-title="Google、無償提供していた「ダークウェブレポート」を2026年初頭に廃止へ／自分の個人情報がダークウェブに漏洩していないかスキャンできるツール"
               data-summary="Googleは無償のダークウェブレポートを2026年初頭に段階的廃止することを発表し、ユーザーは個人情報漏洩スキャン機能を利用できなくなる。"
               data-imp="40"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071522.html" target="_blank" rel="noopener">Google、無償提供していた「ダークウェブレポート」を2026年初頭に廃止へ／自分の個人情報がダークウェブに漏洩していないかスキャンできるツール</a>
@@ -3526,8 +3540,8 @@
               data-title="「ペイント」のツールバーを折りたたみ、キャンバスだけのスッキリとしたレイアウトに／まずはCanary/Devチャネルに展開"
               data-summary="MicrosoftがWindows 11標準ペイントのツールバーを折りたたみ、キャンバスのみレイアウトに変更したアップデートをCanary/Devチャネルで先行配布する。"
               data-imp="40"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071564.html" target="_blank" rel="noopener">「ペイント」のツールバーを折りたたみ、キャンバスだけのスッキリとしたレイアウトに／まずはCanary/Devチャネルに展開</a>
@@ -3604,8 +3618,8 @@
               data-title="「Microsoft Store」アプリのライブラリにアンインストール機能、削除が簡単に"
               data-summary="Windows 11 Insider Previewビルドでテストされる最新OS機能は、製品版に必ずしも搭載されない可能性があるため、注意が必要です。"
               data-imp="35"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/insiderpre/2071791.html" target="_blank" rel="noopener">「Microsoft Store」アプリのライブラリにアンインストール機能、削除が簡単に</a>
@@ -3682,8 +3696,8 @@
               data-title="「Google Chrome」に脆弱性、「WebGPU」の解放後メモリ利用と「V8」の境界外書き／修正版が公開、Windows環境ではv143.0.7499.146/.147が展開中"
               data-summary="Google Chromeの安定版が12月16日に更新され、Windows/Macでv143.0.7499.146/.147、Linuxでv143.0.7499.146が展開中。"
               data-imp="35"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/news/2071882.html" target="_blank" rel="noopener">「Google Chrome」に脆弱性、「WebGPU」の解放後メモリ利用と「V8」の境界外書き／修正版が公開、Windows環境ではv143.0.7499.146/.147が展開中</a>
@@ -3760,8 +3774,8 @@
               data-title="大阪万博の「ヌルヌル」で見せた光景は「即今」、落合陽一氏が「パビリオン」を振り返る ～「人間の精神が変容するようなものを作りたかった」／AIと物理世界が溶け合った境地とは？ 特別講演レポート【AIフェスティバル2025】【特集・集中企画】"
               data-summary="大阪万博で落合陽一氏がAIと物理世界の融合を語り、イベントは無料で多く来場。"
               data-imp="30"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/special/2070929.html" target="_blank" rel="noopener">大阪万博の「ヌルヌル」で見せた光景は「即今」、落合陽一氏が「パビリオン」を振り返る ～「人間の精神が変容するようなものを作りたかった」／AIと物理世界が溶け合った境地とは？ 特別講演レポート【AIフェスティバル2025】【特集・集中企画】</a>
@@ -3841,8 +3855,8 @@
               data-title="無料の3DCG統合環境「Blender 5.0」はモディファイアの適応性が上がる制作効率がUP！【Blenderウォッチング】"
               data-summary="Blenderは無料で高機能な3Dモデリングツールとして紹介され、使い方や関連情報を幅広く解説する記事が公開された。"
               data-imp="30"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://forest.watch.impress.co.jp/docs/serial/blenderwthing/2071854.html" target="_blank" rel="noopener">無料の3DCG統合環境「Blender 5.0」はモディファイアの適応性が上がる制作効率がUP！【Blenderウォッチング】</a>
@@ -3978,8 +3992,8 @@
               data-title="IF25 水素オークション＆熱オークション"
               data-summary="EUが水素と熱の二つのオークションを同時に開始し、産業用低炭化プロセスへの転換を加速させる。"
               data-imp="70"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://cinea.ec.europa.eu/programmes/innovation-fund/auctions_en" target="_blank" rel="noopener">IF25 水素オークション＆熱オークション</a>
@@ -4058,8 +4072,8 @@
               data-title="ハンガリー：ヨーロッパ全土で水の持続可能性を推進"
               data-summary="ハンガリーが欧州全土で水の持続可能性を推進し、EU環境政策に沿った水資源管理と再利用強化策を発表した。"
               data-imp="60"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/newsroom/clima/redirection/item/915425/en" target="_blank" rel="noopener">ハンガリー：ヨーロッパ全土で水の持続可能性を推進</a>
@@ -4138,8 +4152,8 @@
               data-title="EU、脱炭素化と競争力のある経済への明確な道筋を定める2040年気候目標に合意"
               data-summary="EUが2040年までに温室効果ガス排出を90％削減する法的拘束力のある目標を設定し、欧州議会と加盟国間で暫定合意が成立した。これにより企業は長期的な環境規制への準拠を計画すべきだ。"
               data-imp="55"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2967" target="_blank" rel="noopener">EU、脱炭素化と競争力のある経済への明確な道筋を定める2040年気候目標に合意</a>
@@ -4219,8 +4233,8 @@
               data-title="よりシンプルでスマートな環境法制による持続可能な成長の促進"
               data-summary="EUが産業排出・循環経済等の環境法規制を簡素化し、企業負担軽減と環境保護目標維持を両立させる。"
               data-imp="55"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2997" target="_blank" rel="noopener">よりシンプルでスマートな環境法制による持続可能な成長の促進</a>
@@ -4297,8 +4311,8 @@
               data-title="ETS2 アローワンスの早期オークション"
               data-summary="新規 ETS2 が導入され、建物・道路輸送等の排出権オークションルールが改定された。これにより企業は早期対応を検討する必要がある。"
               data-imp="50"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/15472-EU-emissions-trading-system-ETS2-early-auctioning-of-allowances_en" target="_blank" rel="noopener">ETS2 アローワンスの早期オークション</a>
@@ -4377,8 +4391,8 @@
               data-title="バイオ燃料、バイオリキッド、バイオマス燃料の生産経路の価値の見直しと方法論の修正"
               data-summary="EU委員会がバイオ燃料等の生産経路価値を見直し、方法論を修正する方針を示した。これにより規制基準が変更される可能性があるため、業界は早期対応を検討すべきである。"
               data-imp="50"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14343-Renewable-energy-revising-biofuel-bioliquid-and-biomass-fuel-production-pathway-values-and-modifying-methodology_en" target="_blank" rel="noopener">バイオ燃料、バイオリキッド、バイオマス燃料の生産経路の価値の見直しと方法論の修正</a>
@@ -4457,8 +4471,8 @@
               data-title="12月16日 |イノベーション ファンド 2025 ネットゼロ テクノロジーズ コール情報デー"
               data-summary="イノベーション ファンドが12月16日開催のネットゼロ テクノロジーズ コールで、幅広い技術を対象に資金提供する。申請者は競争入札方式で提案書を提出し、環境セクター全体の革新を促進できる。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://cinea.ec.europa.eu/funding-opportunities/calls-proposals/innovation-fund-2025-net-zero-technologies-call_en" target="_blank" rel="noopener">12月16日 |イノベーション ファンド 2025 ネットゼロ テクノロジーズ コール情報デー</a>
@@ -4537,8 +4551,8 @@
               data-title="欧州委員会はクリーンで競争力のある自動車分野に向けて行動を起こす"
               data-summary="欧州委員会が自動車分野のクリーン移行を支援するパッケージを提示し、2050年カーボンニュートラルと戦略的独立性を目指す。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_3051" target="_blank" rel="noopener">欧州委員会はクリーンで競争力のある自動車分野に向けて行動を起こす</a>
@@ -4617,8 +4631,8 @@
               data-title="欧州委員会は2026年から2027年までの主要なホライゾン・ヨーロッパ作業プログラムを採択し、気候変動対策に49億ユーロを充てる"
               data-summary="欧州委員会が2026–2027年のホライゾン・ヨーロッパ作業プログラムを採択し、総額140億ユーロのうち少なくとも35％を気候変動対策に充てる方針を示した。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://climate.ec.europa.eu/news-other-reads/news/commission-adopts-main-horizon-europe-work-programme-2026-2027-and-dedicates-eu49-billion-climate-2025-12-11_en" target="_blank" rel="noopener">欧州委員会は2026年から2027年までの主要なホライゾン・ヨーロッパ作業プログラムを採択し、気候変動対策に49億ユーロを充てる</a>
@@ -4697,8 +4711,8 @@
               data-title="EU排出権取引収益のうち52億ユーロがイノベーション基金のもとでクリーン移行技術に割り当てられる"
               data-summary="EUが排出権取引収益の52億ユーロをイノベーション基金でクリーン移行技術に投入し、2025年ネットゼロ技術呼び込みと水素・産業熱脱炭化オークションを開始した。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2858" target="_blank" rel="noopener">EU排出権取引収益のうち52億ユーロがイノベーション基金のもとでクリーン移行技術に割り当てられる</a>
@@ -4777,8 +4791,8 @@
               data-title="2025年炭素市場レポート：EU ETSは電力部門の排出量を削減し、海上輸送にも拡大"
               data-summary="EU ETSが電力部門の排出削減を推進し、海上輸送へ拡大したことで、企業は新規投資とコスト管理に直面する。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://climate.ec.europa.eu/news-other-reads/news/2025-carbon-market-report-eu-ets-lowers-power-sector-emissions-and-expands-maritime-transport-2025-12-03_en" target="_blank" rel="noopener">2025年炭素市場レポート：EU ETSは電力部門の排出量を削減し、海上輸送にも拡大</a>
@@ -4857,8 +4871,8 @@
               data-title="2月10日 |統合的空間計画、自治体の能力開発、クリーンエネルギーへの移行"
               data-summary="自治体が統合的空間計画とクリーンエネルギー移行を推進するイベントで、実践ツールや協力関係を紹介し持続可能な未来構築を促す。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://eu-mayors.ec.europa.eu/en/events/integrated-spatial-planning-capacity-building-municipalities-clean-energy-transition" target="_blank" rel="noopener">2月10日 |統合的空間計画、自治体の能力開発、クリーンエネルギーへの移行</a>
@@ -4937,8 +4951,8 @@
               data-title="ヨーロッパの気候変動に対する回復力とリスク管理のための統合フレームワーク"
               data-summary="EUが気候変動対策の統合フレームワークを導入し、各国の政策調整とリスク管理を強化することで、将来の脅威に備える。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14770-European-climate-resilience-and-risk-management-integrated-framework_en" target="_blank" rel="noopener">ヨーロッパの気候変動に対する回復力とリスク管理のための統合フレームワーク</a>
@@ -5017,8 +5031,8 @@
               data-title="EUにおける気候関連損失と気候回復力"
               data-summary="EUで2021-2024年に2億8億ユーロの気候関連損失が発生し、コストは増加中。政府・企業・金融機関が共同で対策を講じ、設計段階からレジリエンスを組み込む必要がある。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://x.com/EUClimateAction/status/1995873234638831926/photo/1" target="_blank" rel="noopener">EUにおける気候関連損失と気候回復力</a>
@@ -5097,8 +5111,8 @@
               data-title="近代化基金、クリーンエネルギーへの新規投資18億ユーロを発表、5年間の総額は200億ユーロ以上に"
               data-summary="欧州委員会とEU投資銀行が、近代化基金から1.8億ユーロをクリーンエネルギー投資に配分し、ポルトガルを初の受益国として含めた。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_3104" target="_blank" rel="noopener">近代化基金、クリーンエネルギーへの新規投資18億ユーロを発表、5年間の総額は200億ユーロ以上に</a>
@@ -5177,8 +5191,8 @@
               data-title="行動日"
               data-summary="EUが毎年実施する気候行動デーは国民の環境意識向上を目的とした調査イベントである。"
               data-imp="30"
-              data-recent="2">
-
+              data-recent="2"
+              data-tags="">
             <div>
               
                 <a href="https://ec.europa.eu/eusurvey/runner/ClimateActionDays" target="_blank" rel="noopener">行動日</a>
@@ -5255,8 +5269,8 @@
               data-title="ザグレブの気候変動に強い都市"
               data-summary="ザグレブは気候変動に強い都市として注目され、持続可能な発展を目指す会議が開催された。"
               data-imp="30"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.neodoljivahrvatska.eu/2025/11/27/klimatski-otporni-gradovi-put-u-odrzivu-buducnost-odrzana-konferencija-u-zagrebu/" target="_blank" rel="noopener">ザグレブの気候変動に強い都市</a>
@@ -5335,8 +5349,8 @@
               data-title="気候協定コミュニティのためのClimate Fresk"
               data-summary="気候協定コミュニティ向けのClimate Freskに関する情報は提供されていないため、実務への影響は限定的。"
               data-imp="30"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="http://www.climatefresk.org/" target="_blank" rel="noopener">気候協定コミュニティのためのClimate Fresk</a>
@@ -5416,8 +5430,8 @@
               data-title="パリ協定10周年"
               data-summary="パリ協定10周年を記念し、EUは協定の継続的実行と目標達成に向けた取り組みを強調した。"
               data-imp="30"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7405302699237302272/" target="_blank" rel="noopener">パリ協定10周年</a>
@@ -5496,8 +5510,8 @@
               data-title="EU 環境と気候ラップ 2025"
               data-summary="本記事は2025年のEU環境と気候に関するハイライトを紹介しているが、具体的な情報は示されていない。"
               data-imp="30"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="EU,環境,気候">
             <div>
               
                 <a href="https://www.instagram.com/p/DR17rxxjLtl/?igsh=NTc4MTIwNjQ2YQ%3D%3D" target="_blank" rel="noopener">EU 環境と気候ラップ 2025</a>
@@ -5647,8 +5661,8 @@
 ～混焼率50％超　脱炭素化に貢献する船舶・発電向け新製品～"
               data-summary="国内初の大型アンモニア混焼エンジンが開発・商品化され、船舶・発電向けに脱炭素化を促進する。"
               data-imp="70"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-eng.co.jp/news/2025/20251120.html" target="_blank" rel="noopener">国内初！大型アンモニア混焼エンジンを開発・商品化
@@ -5727,8 +5741,8 @@
 ～高熱効率・長寿命なラジアントチューブバーナの開発による省エネの取り組み～"
               data-summary="経済産業大臣賞を受賞した高熱効率・長寿命ラジアントチューブバーナの開発が省エネ事例として評価された。"
               data-imp="60"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-steel.co.jp/release/2025/12/251217-2.html" target="_blank" rel="noopener">2025年度省エネ大賞 省エネ事例部門「経済産業大臣賞」を受賞
@@ -5808,8 +5822,8 @@
               data-title="次のレベルの高炉"
               data-summary="次世代高炉技術に関する調査記事で、従来のプロセスを超える新設計が紹介されている。"
               data-imp="60"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://worldsteel.org/climate-action/breakthrough-technologies/next-level-blast-furnace/" target="_blank" rel="noopener">次のレベルの高炉</a>
@@ -5886,8 +5900,8 @@
               data-title="風力発電支援構造物向け最大板厚130mmの厚鋼板を開発、経済産業省の性能評価完了"
               data-summary="最大板厚130mmの厚鋼板を風力発電支持構造物向けに開発し、経済産業省の性能評価が完了した。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-steel.co.jp/release/2025/12/251217.html" target="_blank" rel="noopener">風力発電支援構造物向け最大板厚130mmの厚鋼板を開発、経済産業省の性能評価完了</a>
@@ -5977,8 +5991,8 @@
               data-title="下野市での自動運転バスの車・インフラ一体化システムの実証実験に参画"
               data-summary="下野市で自動運転バスの車・インフラ一体化システムを実証実験に参画し、単眼カメラによるAI画像解析で盲点を補完し安全性と運行効率を向上させる。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.mhi.com/news/25121801.html" target="_blank" rel="noopener">下野市での自動運転バスの車・インフラ一体化システムの実証実験に参画</a>
@@ -6058,8 +6072,8 @@
 ～焼結鉱の生産性向上を実現～"
               data-summary="焼結鉱製造プロセスに粒度分布センサを導入し、生産性向上を図る。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-steel.co.jp/release/2025/12/251218-1.html" target="_blank" rel="noopener">焼結鉱製造プロセスにおける造粒物の粒度分布センサを開発・導入
@@ -6139,8 +6153,8 @@
               data-title="鉄鋼スラグ製品を輸送するガット船にGXスチール「JGreeX®」を採用"
               data-summary="GXスチール「JGreeX®」が鉄鋼スラグ輸送用ガット船に採用され、耐久性とコスト削減を図る。"
               data-imp="45"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-steel.co.jp/release/2025/12/251202-2.html" target="_blank" rel="noopener">鉄鋼スラグ製品を輸送するガット船にGXスチール「JGreeX®」を採用</a>
@@ -6218,8 +6232,8 @@
 ～東西製鉄所に次ぐ第３回の継続製鉄所による海外事業収益の拡大～"
               data-summary="インドでJSWスチールと共同設立した一貫製鉄所が、東西製鉄所に次ぐ第3の海外拡大を図り、収益拡大を狙う。"
               data-imp="40"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-steel.co.jp/release/2025/12/251203.html" target="_blank" rel="noopener">インドにおけるJSWスチールとの一貫製鉄所合弁事業について
@@ -6297,8 +6311,8 @@
               data-title="「エコプロ2025」へのJFEグループ出展について"
               data-summary="JFEグループがエコプロ2025に出展し、環境技術をアピールする。"
               data-imp="35"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-holdings.co.jp/release/2025/1203/001818/" target="_blank" rel="noopener">「エコプロ2025」へのJFEグループ出展について</a>
@@ -6375,8 +6389,8 @@
               data-title="2025年鉄鋼統計年鑑発行"
               data-summary="2025年鉄鋼統計年鑑が公開され、国内外の鉄鋼生産・需要データを網羅した。"
               data-imp="35"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://worldsteel.org/media/press-releases/2025/2025-steel-statistical-yearbook-published/" target="_blank" rel="noopener">2025年鉄鋼統計年鑑発行</a>
@@ -6453,8 +6467,8 @@
               data-title="ステンレス鋼の『新仕上げ「MD」』が「大谷美術館賞優秀賞」を受賞"
               data-summary="ステンレス鋼の新仕上げMDが大谷美術館賞優秀賞を受賞し、製品認知度向上と市場差別化に寄与する。"
               data-imp="30"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-steel.co.jp/release/2025/12/251217-3.html" target="_blank" rel="noopener">ステンレス鋼の『新仕上げ「MD」』が「大谷美術館賞優秀賞」を受賞</a>
@@ -6533,8 +6547,8 @@
               data-title="自動翻訳"
               data-summary="自動翻訳に関する情報が不足しているため、実務や業界への影響は不明。"
               data-imp="30"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://worldsteel.org/auto-translate-two/" target="_blank" rel="noopener">自動翻訳</a>
@@ -6607,8 +6621,8 @@
               data-title="ブレークスルーテクノロジーカンファレンス2025"
               data-summary="ブレークスルーテクノロジーカンファレンス2025は、製造業向けの技術発表イベントである。"
               data-imp="30"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://worldsteel.org/climate-action/breakthrough-technology/breakthrough-technology-conference-2025/" target="_blank" rel="noopener">ブレークスルーテクノロジーカンファレンス2025</a>
@@ -6685,8 +6699,8 @@
               data-title="ワールドスチールがsteelChallenge-20世界選手権ファイナリストを発表"
               data-summary="worldsteelがsteelChallenge-20世界選手権ファイナリストを発表し、業界の注目度を高めた。"
               data-imp="30"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://worldsteel.org/media/press-releases/2025/worldsteel-announces-steelchallenge-20-world-championship-finaliststs/" target="_blank" rel="noopener">ワールドスチールがsteelChallenge-20世界選手権ファイナリストを発表</a>
@@ -6764,8 +6778,8 @@
 のプレゼンテーション開始のお知らせ"
               data-summary="サンドウィッチマンさんが出演する新CM「電磁鋼板篇」と「テマ高架橋篇」のプレゼンテーション開始を発表。企業はプロモーション戦略として注目し、広告効果を期待できる。"
               data-imp="20"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-holdings.co.jp/release/2025/1218/001830/" target="_blank" rel="noopener">サンドウィッチマンさん出演の新CM「電磁鋼板篇」「テマ高架橋篇」
@@ -6845,8 +6859,8 @@
               data-title="米国市場におけるオンコールアフターサービスを刷新&lt;br /&gt;ジェネレーティブAIにより顧客満足度の向上と従業員の負担軽減を実現"
               data-summary=""
               data-imp="0"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.mhi.com/news/25121802.html" target="_blank" rel="noopener">米国市場におけるオンコールアフターサービスを刷新<br />ジェネレーティブAIにより顧客満足度の向上と従業員の負担軽減を実現</a>
@@ -6872,8 +6886,8 @@
               data-title="JFEスチール社長賞など新商品開発賞について"
               data-summary="JFEスチール社長賞や新商品開発賞が設立されたことを示す情報は提供されていない。"
               data-imp="0"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="賞,新商品開発,JFEスチール">
             <div>
               
                 <a href="https://www.jfe-steel.co.jp/release/2025/12/251218-2.html" target="_blank" rel="noopener">JFEスチール社長賞など新商品開発賞について</a>
@@ -6963,8 +6977,8 @@
 令和７年度気候変動アクション環境大臣賞を受賞"
               data-summary=""
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://www.jfe-steel.co.jp/release/2025/12/251208.html" target="_blank" rel="noopener">「CO₂削減と資源有効活用を両立するアルカリ活性材料コンクリートの開発」が
@@ -6987,8 +7001,8 @@
               data-title="2025年9月粗鋼生産量"
               data-summary=""
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://worldsteel.org/media/press-releases/2025/october-2025-crude-steel-production/" target="_blank" rel="noopener">2025年9月粗鋼生産量</a>
@@ -7010,8 +7024,8 @@
               data-title="用語集 – 気候変動対策"
               data-summary=""
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://worldsteel.org/climate-action/glossary-climate-action/" target="_blank" rel="noopener">用語集 – 気候変動対策</a>
@@ -7090,8 +7104,8 @@
               data-title="JVN: ブラザー製iPrint＆Scanにバンドルされている.NET 8.0に複数の脆弱性"
               data-summary="Brother製iPrint＆Scanにバンドルされた.NET8.0に複数脆弱性が報告され、即時パッチ適用を推奨。"
               data-imp="70"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#3" target="_blank" rel="noopener">JVN: ブラザー製iPrint＆Scanにバンドルされている.NET 8.0に複数の脆弱性</a>
@@ -7169,8 +7183,8 @@
               data-title="ウィークリーレポート: Apache Struts 2にサービス運用妨害（DoS）の脆弱性"
               data-summary="Apache Struts 2にDoS脆弱性が報告され、サービス運用妨害が可能となった。JPCERTが週次レポートで警告し、即時対策が求められる。"
               data-imp="70"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#7" target="_blank" rel="noopener">ウィークリーレポート: Apache Struts 2にサービス運用妨害（DoS）の脆弱性</a>
@@ -7249,8 +7263,8 @@
               data-title="週刊レポート: QNDに権限付与の脆弱性"
               data-summary="QNDに権限昇格脆弱性が報告され、攻撃者は管理者権限を取得できるため、即時対応が必要。JPCERTが警告発表し、パッチ適用と検証が求められる。"
               data-imp="70"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#2" target="_blank" rel="noopener">週刊レポート: QNDに権限付与の脆弱性</a>
@@ -7329,8 +7343,8 @@
               data-title="ウィークリーレポート: Gogs にリモートコード実行可能な脆弱性"
               data-summary="Gogsにリモートコード実行可能な脆弱性が報告され、既存ユーザーはパッチ適用を検討すべき。"
               data-imp="70"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html" target="_blank" rel="noopener">ウィークリーレポート: Gogs にリモートコード実行可能な脆弱性</a>
@@ -7409,8 +7423,8 @@
               data-title="JVN: Apache HTTP Server 2.4における複数の脆弱性に対するアップデート（2025年12月）"
               data-summary="Apache HTTP Server 2.4で複数脆弱性が報告され、パッチ適用が推奨された。既存ユーザーは直ちにアップデートを検討すべき。"
               data-imp="70"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://jvn.jp/vu/JVNVU97286548/" target="_blank" rel="noopener">JVN: Apache HTTP Server 2.4における複数の脆弱性に対するアップデート（2025年12月）</a>
@@ -7486,8 +7500,8 @@
               data-title="三菱電機 GT Designer3"
               data-summary="三菱電機のGT Designer3に関するCISAの情報が公開されたため、既存システムへの影響を検証し、6か月以内に対応判断が必要である。"
               data-imp="60"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.cisa.gov/news-events/ics-advisories/icsa-25-350-04" target="_blank" rel="noopener">三菱電機 GT Designer3</a>
@@ -7577,8 +7591,8 @@
               data-title="JVN: 複数の日立エネルギー製品における通信チャネルで送受信するメッセージに対する完全性の検証不備の脆弱性"
               data-summary="複数のHitachi Energy製品で通信チャネルのメッセージ完全性検証が不備となる脆弱性が報告され、既存システムへの即時対応が必要。"
               data-imp="60"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://jvn.jp/vu/JVNVU96826848/" target="_blank" rel="noopener">JVN: 複数の日立エネルギー製品における通信チャネルで送受信するメッセージに対する完全性の検証不備の脆弱性</a>
@@ -7657,8 +7671,8 @@
               data-title="ウィークリーレポート: 複数のフォーティネット製品に脆弱性"
               data-summary="複数のFortinet製品に脆弱性が報告され、即時対策が必要。"
               data-imp="60"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#8" target="_blank" rel="noopener">ウィークリーレポート: 複数のフォーティネット製品に脆弱性</a>
@@ -7736,8 +7750,8 @@
               data-title="ウィークリーレポート: エレコム製クローン for Windows に引用符で囲まれていないファイルパスの脆弱性"
               data-summary="エレコム製クローン for Windowsにおいて、ファイルパスが引用符で囲まれていないため脆弱性が存在し、攻撃者が任意コード実行できる恐れがあります。"
               data-imp="50"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#9" target="_blank" rel="noopener">ウィークリーレポート: エレコム製クローン for Windows に引用符で囲まれていないファイルパスの脆弱性</a>
@@ -7816,8 +7830,8 @@
               data-title="ウィークリーレポート: 複数のマイクロソフト製品に脆弱性"
               data-summary="複数のAdobe製品に脆弱性が報告され、即時パッチ適用と対策検討が求められる。"
               data-imp="45"
-              data-recent="2">
-
+              data-recent="2"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#10" target="_blank" rel="noopener">ウィークリーレポート: 複数のマイクロソフト製品に脆弱性</a>
@@ -7896,8 +7910,8 @@
               data-title="ウィークリーレポート: Google Chrome に複数の脆弱性"
               data-summary="Google Chromeに複数の脆弱性が報告され、セキュリティ対策が必要となる。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#6" target="_blank" rel="noopener">ウィークリーレポート: Google Chrome に複数の脆弱性</a>
@@ -7976,8 +7990,8 @@
               data-title="JVN: 複数のGuralp Systems製品における制限または調整なしのリソースの脆弱性"
               data-summary="複数のGuralp Systems製品でリソース割り当てに制限がなく、脆弱性が報告された。これにより不正アクセスやサービス停止のリスクが高まるため、直ちに対策を検討する必要がある。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://jvn.jp/vu/JVNVU92974910/" target="_blank" rel="noopener">JVN: 複数のGuralp Systems製品における制限または調整なしのリソースの脆弱性</a>
@@ -8067,8 +8081,8 @@
               data-title="JVN: 富士電機製V-SFT-6における複数の脆弱性"
               data-summary="富士電機製V-SFT-6に複数の脆弱性が報告され、JVNで公開されたため、既存システムへの影響検証が必要。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://jvn.jp/vu/JVNVU93984110/" target="_blank" rel="noopener">JVN: 富士電機製V-SFT-6における複数の脆弱性</a>
@@ -8147,8 +8161,8 @@
               data-title="ウィークリーレポート: GitLabに複数の脆弱性"
               data-summary="GitLabに複数の脆弱性が報告され、セキュリティ対策が必要となる。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#5" target="_blank" rel="noopener">ウィークリーレポート: GitLabに複数の脆弱性</a>
@@ -8227,8 +8241,8 @@
               data-title="ウィークリーレポート: 複数のMozilla製品に脆弱性"
               data-summary="複数のMozilla製品に脆弱性が報告され、即時調査とパッチ適用が必要。"
               data-imp="45"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#4" target="_blank" rel="noopener">ウィークリーレポート: 複数のMozilla製品に脆弱性</a>
@@ -8307,8 +8321,8 @@
               data-title="JVN: チョコ停ウォッチャーminiにおける複数の脆弱性"
               data-summary="複数の脆弱性が報告され、チョコ停ウォッチャーminiに影響。パッチ適用を検討すべき。"
               data-imp="45"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://jvn.jp/vu/JVNVU92827367/" target="_blank" rel="noopener">JVN: チョコ停ウォッチャーminiにおける複数の脆弱性</a>
@@ -8385,8 +8399,8 @@
               data-title="Güralp Systems Fortimus シリーズ、Minimus シリーズ、および Certimus シリーズ"
               data-summary="Güralp SystemsはFortimus、Minimus、Certimusシリーズを提供している。"
               data-imp="30"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.cisa.gov/news-events/ics-advisories/icsa-25-350-01" target="_blank" rel="noopener">Güralp Systems Fortimus シリーズ、Minimus シリーズ、および Certimus シリーズ</a>
@@ -8465,8 +8479,8 @@
               data-title="ジョンソンコントロールズ PowerG、IQPanel、IQHub"
               data-summary="Johnson ControlsがPowerG、IQPanel、IQHubを提供している。"
               data-imp="20"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.cisa.gov/news-events/ics-advisories/icsa-25-350-02" target="_blank" rel="noopener">ジョンソンコントロールズ PowerG、IQPanel、IQHub</a>
@@ -8546,8 +8560,8 @@
               data-title="日立エナジー AFS、AFR、AFFシリーズ"
               data-summary="日立エナジーはAFS、AFR、AFFシリーズを提供しているが、公開情報が限定的で実務への影響は小さい。"
               data-imp="20"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://www.cisa.gov/news-events/ics-advisories/icsa-25-350-03" target="_blank" rel="noopener">日立エナジー AFS、AFR、AFFシリーズ</a>
@@ -8627,8 +8641,8 @@
               data-title="JVN: 複数のJohnson Controls製品における複数の脆弱性"
               data-summary="Johnson Controls製品に複数脆弱性が報告され、リスク評価とパッチ適用が必要。"
               data-imp="0"
-              data-recent="1">
-
+              data-recent="1"
+              data-tags="">
             <div>
               
                 <a href="https://jvn.jp/vu/JVNVU99021467/" target="_blank" rel="noopener">JVN: 複数のJohnson Controls製品における複数の脆弱性</a>
@@ -8731,8 +8745,8 @@
               data-title="AWS ウィークリーまとめ: Amazon ECS、Amazon CloudWatch、Amazon Cognito など (2025 年 12 月 15 日)"
               data-summary="AWSが12月15日にECS、CloudWatch、Cognito等の更新を発表し、サービス機能拡張と運用改善を図った。"
               data-imp="45"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/" target="_blank" rel="noopener">AWS ウィークリーまとめ: Amazon ECS、Amazon CloudWatch、Amazon Cognito など (2025 年 12 月 15 日)</a>
@@ -8809,8 +8823,8 @@
               data-title="Amazon FSx for NetApp ONTAP が Amazon S3 と統合され、シームレスなデータ アクセスが可能になりました"
               data-summary="Amazon FSx for NetApp ONTAP が Amazon S3 と統合され、データアクセスがシームレスに。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/amazon-fsx-for-netapp-ontap-now-integrates-with-amazon-s3-for-seamless-data-access/" target="_blank" rel="noopener">Amazon FSx for NetApp ONTAP が Amazon S3 と統合され、シームレスなデータ アクセスが可能になりました</a>
@@ -8886,8 +8900,8 @@
               data-title="Amazon SageMaker AI とサーバーレス MLflow を使用して AI 開発を加速する"
               data-summary="AmazonがSageMaker AIとサーバーレスMLflowを組み合わせ、AI開発の高速化を実現する新機能を発表。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/accelerate-ai-development-using-amazon-sagemaker-ai-with-serverless-mlflow/" target="_blank" rel="noopener">Amazon SageMaker AI とサーバーレス MLflow を使用して AI 開発を加速する</a>
@@ -8963,8 +8977,8 @@
               data-title="AWS DevOps Agent は、インシデント対応を加速し、システムの信頼性を向上させるのに役立ちます (プレビュー)"
               data-summary="AWS DevOps Agentがインシデント対応を高速化し、システム信頼性向上に寄与するプレビュー版を公開。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/aws-devops-agent-helps-you-accelerate-incident-response-and-improve-system-reliability-preview/" target="_blank" rel="noopener">AWS DevOps Agent は、インシデント対応を加速し、システムの信頼性を向上させるのに役立ちます (プレビュー)</a>
@@ -9040,8 +9054,8 @@
               data-title="メモリ集中型のワークロード向けに第 5 世代 AMD EPYC プロセッサを搭載した Amazon EC2 X8aedz インスタンスの紹介"
               data-summary="Amazonがメモリ集中型ワークロード向けに第5世代AMD EPYCプロセッサ搭載のEC2 X8aedzインスタンスを発表。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-ec2-x8aedz-instances-powered-by-5th-gen-amd-epyc-processors-for-memory-intensive-workloads/" target="_blank" rel="noopener">メモリ集中型のワークロード向けに第 5 世代 AMD EPYC プロセッサを搭載した Amazon EC2 X8aedz インスタンスの紹介</a>
@@ -9117,8 +9131,8 @@
               data-title="Amazon Bedrock は、新しい Mistral Large 3 および Ministral 3 モデルを含む 18 のフルマネージド オープン ウェイト モデルを追加します"
               data-summary="Amazon Bedrockが18のフルマネージドオープンウェイトモデルを追加し、Mistral Large 3とMinistral 3を含む新機能を発表。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/amazon-bedrock-adds-fully-managed-open-weight-models/" target="_blank" rel="noopener">Amazon Bedrock は、新しい Mistral Large 3 および Ministral 3 モデルを含む 18 のフルマネージド オープン ウェイト モデルを追加します</a>
@@ -9194,8 +9208,8 @@
               data-title="スケールとパフォーマンスが向上した Amazon S3 Vector が一般提供開始"
               data-summary="Amazon S3 Vectorsが一般提供開始し、スケールとパフォーマンスが向上。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-generally-available-with-increased-scale-and-performance/" target="_blank" rel="noopener">スケールとパフォーマンスが向上した Amazon S3 Vector が一般提供開始</a>
@@ -9271,8 +9285,8 @@
               data-title="Amazon OpenSearch Service は、GPU アクセラレーションと自動最適化により、ベクトル データベースのパフォーマンスとコストを向上させます"
               data-summary="Amazon OpenSearch Service がGPUアクセラレーションと自動最適化を導入し、ベクトルデータベースのパフォーマンス向上とコスト削減を実現。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/amazon-opensearch-service-improves-vector-database-performance-and-cost-with-gpu-acceleration-and-auto-optimization/" target="_blank" rel="noopener">Amazon OpenSearch Service は、GPU アクセラレーションと自動最適化により、ベクトル データベースのパフォーマンスとコストを向上させます</a>
@@ -9348,8 +9362,8 @@
               data-title="新しく強化された AWS サポート プランにより、専門家のガイダンスに AI 機能が追加されます"
               data-summary="AWSが新しいサポートプランにAI機能を追加し、専門家のガイダンスを強化。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/new-and-enhanced-aws-support-plans-add-ai-capabilities-to-expert-guidance/" target="_blank" rel="noopener">新しく強化された AWS サポート プランにより、専門家のガイダンスに AI 機能が追加されます</a>
@@ -9425,8 +9439,8 @@
               data-title="Amazon CloudWatch は、運用、セキュリティ、コンプライアンスのための統合データ管理と分析を導入します"
               data-summary="Amazon CloudWatchが統合データ管理と分析機能を追加し、運用・セキュリティ・コンプライアンスの可視化と自動化を強化。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/amazon-cloudwatch-introduces-unified-data-management-and-analytics-for-operations-security-and-compliance/" target="_blank" rel="noopener">Amazon CloudWatch は、運用、セキュリティ、コンプライアンスのための統合データ管理と分析を導入します</a>
@@ -9502,8 +9516,8 @@
               data-title="AWS データベースのデータベース節約プランの導入"
               data-summary="AWSがデータベース向けの節約プランを発表し、RDS・Aurora・Neptuneなどで利用可能に。従量課金よりも長期契約でコスト削減できる新サービスです。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/introducing-database-savings-plans-for-aws-databases/" target="_blank" rel="noopener">AWS データベースのデータベース節約プランの導入</a>
@@ -9558,8 +9572,8 @@
               data-title="Amazon RDS for SQL Server および Oracle のコストを最適化し、スケーラビリティを向上させる新機能"
               data-summary="Amazon RDS for SQL Server と Oracle に新機能が追加され、コスト最適化とスケーラビリティ向上が実現。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/amazon-rds-for-oracle-and-rds-for-sql-server-add-new-capabilities-to-enhance-performance-and-optimize-costs/" target="_blank" rel="noopener">Amazon RDS for SQL Server および Oracle のコストを最適化し、スケーラビリティを向上させる新機能</a>
@@ -9635,8 +9649,8 @@
               data-title="AWS Lambda の耐久性のある関数を使用して、複数ステップのアプリケーションと AI ワークフローを構築する"
               data-summary="AWS Lambda の耐久性関数を使い、複数ステップのアプリやAIワークフローを構築できる新機能が発表。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/build-multi-step-applications-and-ai-workflows-with-aws-lambda-durable-functions/" target="_blank" rel="noopener">AWS Lambda の耐久性のある関数を使用して、複数ステップのアプリケーションと AI ワークフローを構築する</a>
@@ -9712,8 +9726,8 @@
               data-title="Amazon Bedrock AgentCore は、信頼できる AI エージェントをデプロイするための品質評価とポリシー制御を追加します"
               data-summary="Amazon Bedrock AgentCore が品質評価とポリシー制御を追加し、信頼できる AI エージェントのデプロイを容易にする新機能を発表。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/amazon-bedrock-agentcore-adds-quality-evaluations-and-policy-controls-for-deploying-trusted-ai-agents/" target="_blank" rel="noopener">Amazon Bedrock AgentCore は、信頼できる AI エージェントをデプロイするための品質評価とポリシー制御を追加します</a>
@@ -9789,8 +9803,8 @@
               data-title="Amazon S3 Storage Lens は、パフォーマンスメトリクス、数十億のプレフィックスのサポート、S3 テーブルへのエクスポートを追加します。"
               data-summary="Amazon S3 Storage Lens がパフォーマンスメトリクス、数十億のプレフィックスサポート、S3テーブルへのエクスポート機能を追加し、データ分析と運用効率を向上させる。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/amazon-s3-storage-lens-adds-performance-metrics-support-for-billions-of-prefixes-and-export-to-s3-tables/" target="_blank" rel="noopener">Amazon S3 Storage Lens は、パフォーマンスメトリクス、数十億のプレフィックスのサポート、S3 テーブルへのエクスポートを追加します。</a>
@@ -9866,8 +9880,8 @@
               data-title="Amazon S3 テーブルのレプリケーション サポートとインテリジェント階層化の発表"
               data-summary="AmazonがS3テーブルにレプリケーションとインテリジェント階層化を追加し、データ可用性とコスト最適化を強化。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/announcing-replication-support-and-intelligent-tiering-for-amazon-s3-tables/" target="_blank" rel="noopener">Amazon S3 テーブルのレプリケーション サポートとインテリジェント階層化の発表</a>
@@ -9943,8 +9957,8 @@
               data-title="Amazon SageMaker HyperPod でのチェックポイントレスで柔軟なトレーニングの導入"
               data-summary="AmazonがSageMaker HyperPodでチェックポイントレス・エラスティックトレーニングを発表し、GPUリソースの効率化と学習時間短縮を実現。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/" target="_blank" rel="noopener">Amazon SageMaker HyperPod でのチェックポイントレスで柔軟なトレーニングの導入</a>
@@ -10020,8 +10034,8 @@
               data-title="Amazon SageMaker AI の新しいサーバーレスカスタマイズによりモデルの微調整が高速化"
               data-summary="Amazon SageMaker AI がサーバーレスカスタマイズを導入し、モデル微調整の速度と効率が大幅に向上した。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" target="_blank" rel="noopener">Amazon SageMaker AI の新しいサーバーレスカスタマイズによりモデルの微調整が高速化</a>
@@ -10089,8 +10103,8 @@
               data-title="Amazon Bedrock は強化の微調整を追加し、開発者がよりスマートで正確な AI モデルを構築する方法を簡素化します"
               data-summary="Amazon Bedrockが強化学習による微調整機能を追加し、開発者はよりスマートで正確なAIモデルを簡単に構築できるようになった。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" rel="noopener">Amazon Bedrock は強化の微調整を追加し、開発者がよりスマートで正確な AI モデルを構築する方法を簡素化します</a>
@@ -10166,8 +10180,8 @@
               data-title="AWS ウィークリーまとめ: AWS re:Invent 基調講演の要約、オンデマンドビデオなど (2025 年 12 月 8 日)"
               data-summary="AWSがre:Invent基調講演の要約とオンデマンド動画を公開し、最新サービスや機能更新を紹介。"
               data-imp="0"
-              data-recent="0">
-
+              data-recent="0"
+              data-tags="">
             <div>
               
                 <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-reinvent-keynote-recap-on-demand-videos-and-more-december-8-2025/" target="_blank" rel="noopener">AWS ウィークリーまとめ: AWS re:Invent 基調講演の要約、オンデマンドビデオなど (2025 年 12 月 8 日)</a>
@@ -10245,7 +10259,8 @@
   </section>
   
 <script>
-let activeTag = "";
+const selectedTags = new Set(); // 複数タグ
+let tagMode = "AND";            // "AND" or "OR"
 const btn = document.getElementById('closeFloating');
 
 function setFloatingClose(open, closeFn){
@@ -10254,20 +10269,36 @@ function setFloatingClose(open, closeFn){
   btn.onclick = closeFn;
 }
 
-function setTagFilter(tg){
-  activeTag = tg;
+function updateTagActiveView(){
   const box = document.getElementById('tag-active');
-  if (box){
-    box.textContent = `tag: ${tg}`;
-    box.style.display = '';
+  if (!box) return;
+
+  if (selectedTags.size === 0){
+    box.style.display = 'none';
+    box.textContent = '';
+    return;
   }
+  box.style.display = '';
+  box.textContent = `tags: ${[...selectedTags].join(', ')} (${tagMode})`;
+}
+
+function toggleTag(tg){
+  if (selectedTags.has(tg)) selectedTags.delete(tg);
+  else selectedTags.add(tg);
+
+  // ボタン見た目（active クラス）
+  document.querySelectorAll(`[data-tag-btn="${tg}"]`).forEach(b=>{
+    b.classList.toggle('active', selectedTags.has(tg));
+  });
+
+  updateTagActiveView();
   applyFilter();
 }
 
 function clearTagFilter(){
-  activeTag = "";
-  const box = document.getElementById('tag-active');
-  if (box) box.style.display = 'none';
+  selectedTags.clear();
+  document.querySelectorAll('[data-tag-btn]').forEach(b=>b.classList.remove('active'));
+  updateTagActiveView();
   applyFilter();
 }
 
@@ -10289,7 +10320,15 @@ function applyFilter() {
     const hitQ = !q || title.includes(q) || summary.includes(q);
     const hitImp = imp >= impMin;
     const hitRecent = recent >= recentMin;
-    const hitTag = !activeTag || tags.split(',').includes(activeTag);
+    const itemTags = tags.split(',').map(s=>s.trim()).filter(Boolean);
+
+    let hitTag = true;
+    if (selectedTags.size > 0){
+      const sel = [...selectedTags];
+      hitTag = (tagMode === "AND")
+        ? sel.every(t => itemTags.includes(t))
+        : sel.some(t => itemTags.includes(t));
+    }
 
     const show = hitQ && hitImp && hitRecent && hitTag;
     el.style.display = show ? '' : 'none';
@@ -10330,6 +10369,11 @@ function applyFilter() {
 document.getElementById('q')?.addEventListener('input', applyFilter);
 document.getElementById('impMin')?.addEventListener('change', applyFilter);
 document.getElementById('recentMin')?.addEventListener('change', applyFilter);
+document.getElementById('tagModeOr')?.addEventListener('change', (e) => {
+  tagMode = e.target.checked ? "OR" : "AND";
+  updateTagActiveView();
+  applyFilter();
+});
 
 function toggleCat(id) {
   const sec = document.getElementById('cat-' + id);
