@@ -196,6 +196,35 @@
       background: #fff; /* 背景必須 */
     }
 
+    /* Tag bar: wrap + mobile collapse */
+    .tag-bar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      align-items:center;
+    }
+
+    .btn-reset{
+      background:#f5f5f5;
+      border:1px solid #ccc;
+      font-weight:700;
+    }
+
+    .btn-more{
+      background:#fff;
+      border:1px dashed #ddd;
+      font-weight:650;
+    }
+
+    /* スマホ時：初期は7個まで表示（Reset + OR + タグ群含めて調整可） */
+    @media (max-width: 640px){
+      #tagBar.collapsed button:nth-of-type(n+8){
+        display:none;
+      }
+      /* ORチェックのラベルは常に見せたいなら、上のnth-of-type対象外にするため別classで扱う */
+      .tag-mode{ margin-left:4px; }
+    }
+
   </style>
 </head>
 <body>
@@ -207,7 +236,7 @@
     <div class="summary-grid">
       <div class="summary-item">
         <div class="k">Generated (JST)</div>
-        <div class="v">2025-12-18 20:01:42 JST</div>
+        <div class="v">2025-12-18 20:53:59 JST</div>
       </div>
       <div class="summary-item">
         <div class="k">Runtime</div>
@@ -224,84 +253,91 @@
     </div>
     <div class="small" style="margin-top:10px">
       <span class="badge">Tags</span>
-      <button class="btn" type="button" onclick="clearTagFilter()">All</button>
-      <label class="small" style="margin-left:8px">
-        <input type="checkbox" id="tagModeOr"> OR（どれか）
-      </label>
 
-      
-        <button class="btn" type="button" data-tag-btn="AI" onclick="toggleTag('AI')">
-          AI (2)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="Copilot" onclick="toggleTag('Copilot')">
-          Copilot (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="EU" onclick="toggleTag('EU')">
-          EU (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="GIMP" onclick="toggleTag('GIMP')">
-          GIMP (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="Gemini" onclick="toggleTag('Gemini')">
-          Gemini (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="JFEスチール" onclick="toggleTag('JFEスチール')">
-          JFEスチール (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="Microsoft365" onclick="toggleTag('Microsoft365')">
-          Microsoft365 (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="コスト削減" onclick="toggleTag('コスト削減')">
-          コスト削減 (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="低価格" onclick="toggleTag('低価格')">
-          低価格 (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="新商品開発" onclick="toggleTag('新商品開発')">
-          新商品開発 (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="気候" onclick="toggleTag('気候')">
-          気候 (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="無料ソフト" onclick="toggleTag('無料ソフト')">
-          無料ソフト (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="環境" onclick="toggleTag('環境')">
-          環境 (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="画像編集" onclick="toggleTag('画像編集')">
-          画像編集 (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="賞" onclick="toggleTag('賞')">
-          賞 (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="開発者向け" onclick="toggleTag('開発者向け')">
-          開発者向け (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="障害" onclick="toggleTag('障害')">
-          障害 (1)
-        </button>
-      
-        <button class="btn" type="button" data-tag-btn="高速化" onclick="toggleTag('高速化')">
-          高速化 (1)
-        </button>
-      
+      <div id="tagBar" class="tag-bar collapsed" style="margin-top:6px">
+        <button class="btn btn-reset" type="button" onclick="clearTagFilter()">🔄 Reset</button>
+
+        <label class="small tag-mode">
+          <input type="checkbox" id="tagModeOr"> OR（どれか）
+        </label>
+
+        
+          <button class="btn" type="button" data-tag-btn="AI" onclick="toggleTag('AI')">
+            AI (2)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="Copilot" onclick="toggleTag('Copilot')">
+            Copilot (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="EU" onclick="toggleTag('EU')">
+            EU (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="GIMP" onclick="toggleTag('GIMP')">
+            GIMP (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="Gemini" onclick="toggleTag('Gemini')">
+            Gemini (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="JFEスチール" onclick="toggleTag('JFEスチール')">
+            JFEスチール (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="Microsoft365" onclick="toggleTag('Microsoft365')">
+            Microsoft365 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="コスト削減" onclick="toggleTag('コスト削減')">
+            コスト削減 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="低価格" onclick="toggleTag('低価格')">
+            低価格 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="新商品開発" onclick="toggleTag('新商品開発')">
+            新商品開発 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="気候" onclick="toggleTag('気候')">
+            気候 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="無料ソフト" onclick="toggleTag('無料ソフト')">
+            無料ソフト (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="環境" onclick="toggleTag('環境')">
+            環境 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="画像編集" onclick="toggleTag('画像編集')">
+            画像編集 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="賞" onclick="toggleTag('賞')">
+            賞 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="開発者向け" onclick="toggleTag('開発者向け')">
+            開発者向け (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="障害" onclick="toggleTag('障害')">
+            障害 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="高速化" onclick="toggleTag('高速化')">
+            高速化 (1)
+          </button>
+        
+      </div>
+
+      <button id="tagMore" class="btn btn-more" type="button" style="margin-top:6px">＋ more</button>
+
     </div>
     <div id="tag-active" class="small" style="margin-top:6px; display:none;"></div>
     <div class="quick-controls">
@@ -10431,6 +10467,18 @@ document.addEventListener('click', (e) => {
 window.addEventListener('load', () => {
   if (location.hash) scrollToTopic(location.hash);
 });
+
+// Tag bar: More toggle（スマホ圧迫対策）
+document.getElementById('tagMore')?.addEventListener('click', () => {
+  const bar = document.getElementById('tagBar');
+  if (!bar) return;
+  bar.classList.toggle('collapsed');
+
+  // ボタン文言切替（任意）
+  const more = document.getElementById('tagMore');
+  if (more) more.textContent = bar.classList.contains('collapsed') ? '＋ more' : '− less';
+});
+
 
 // 初期状態：カテゴリを折りたたむ（スマホ向け）
 toggleAllCats();
