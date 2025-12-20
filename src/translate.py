@@ -2,6 +2,11 @@ import re
 import requests
 from db import connect
 
+import time
+
+def _now_sec():
+    return time.perf_counter()
+
 API = "https://translate.googleapis.com/translate_a/single"
 
 def translate(text: str) -> str:
@@ -15,6 +20,8 @@ def looks_english(text: str) -> bool:
     return bool(re.search(r"[A-Za-z]", text or ""))
 
 def main():
+    t0 = _now_sec()
+    print("[TIME] step=translate start")
     conn = connect()
     cur = conn.cursor()
 
@@ -34,6 +41,8 @@ def main():
 
     conn.commit()
     conn.close()
+
+    print(f"[TIME] step=translate end sec={_now_sec() - t0:.1f}")
 
 if __name__ == "__main__":
     main()

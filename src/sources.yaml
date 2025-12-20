@@ -1,8 +1,11 @@
+
 categories:
   - id: system
     name: システム
   - id: manufacturing
-    name: 製造
+    name: 製造（鉄鋼）
+  - id: environment
+    name: 環境（CO2・規制）
   - id: security
     name: セキュリティ
   - id: ai
@@ -33,7 +36,7 @@ sources:
     category: security
     url: https://www.jpcert.or.jp/rss/jpcert-all.rdf
 
-  # --- AI (Foundations / Models) ---    
+  # --- AI ---
   - id: openai-news
     name: OpenAI News
     category: ai
@@ -68,18 +71,35 @@ sources:
     name: Hugging Face Blog
     category: ai
     url: https://huggingface.co/blog/feed.xml
-      # --- AI (Research / OSS) ---
+
   - id: arxiv-ai
     name: arXiv AI (cs.AI)
     category: ai
     url: http://export.arxiv.org/rss/cs.AI
 
   - id: arxiv-ml
-    name: arXiv Machine Learning
+    name: arXiv Machine Learning (cs.LG)
     category: ai
     url: http://export.arxiv.org/rss/cs.LG
 
-  # --- 製造 (OT/ICS) ---
+  - id: github-ml
+    name: GitHub Machine Learning
+    category: ai
+    url: https://github.blog/category/machine-learning/feed/
+
+  # --- 製造（鉄鋼） ---
+  # 鉄鋼団体・企業ニュース（鉄鋼主軸に寄せる）
+  - id: worldsteel
+    name: worldsteel (World Steel Association)
+    category: manufacturing
+    url: https://worldsteel.org/feed/
+
+  - id: jfe-holdings
+    name: JFE Holdings Releases
+    category: manufacturing
+    url: https://www.jfe-holdings.co.jp/rss/release.xml
+
+  # 既存（製造/OT・ICSも残す）
   - id: mhi
     name: Mitsubishi Heavy Industries News
     category: manufacturing
@@ -89,6 +109,17 @@ sources:
     name: Siemens ProductCERT Advisories
     category: manufacturing
     url: https://www.siemens.com/cert/rss/advisories.xml
+
+  # --- 環境（CO2・規制） ---
+  - id: eu-clima
+    name: European Commission - DG CLIMA
+    category: environment
+    url: https://ec.europa.eu/newsroom/clima/feed?item_type_id=1536&lang=en&orderby=item_date
+
+  - id: meti-en
+    name: METI (Japan) - English RSS
+    category: environment
+    url: https://www.meti.go.jp/ml_index_en_atom.xml
 
   # --- 開発 ---
   - id: github-blog
@@ -101,35 +132,31 @@ sources:
     category: dev
     url: https://devblogs.microsoft.com/feed/
 
-      # --- AI (stable) ---
-  - id: huggingface-blog
-    name: Hugging Face Blog
-    category: ai
-    url: https://huggingface.co/blog/feed.xml
-
-  - id: arxiv-ai
-    name: arXiv AI (cs.AI)
-    category: ai
-    url: http://export.arxiv.org/rss/cs.AI
-
-  - id: arxiv-ml
-    name: arXiv Machine Learning
-    category: ai
-    url: http://export.arxiv.org/rss/cs.LG
-
-  - id: github-ml
-    name: GitHub Machine Learning
-    category: ai
-    url: https://github.blog/category/machine-learning/feed/
-
-  - id: mhi
-    name: Mitsubishi Heavy Industries News
-    category: manufacturing
-    url: https://www.mhi.com/rss/mhi_news.xml
-    
-  - id: github-blog
-    name: GitHub Blog
-    category: dev
-    url: https://github.blog/feed/
+  - id: madonomori
+    name: 窓の杜 (Impress Watch)
+    category: dev   # systemでもOK（好みで）
+    url: https://forest.watch.impress.co.jp/data/rss/1.0/wf/feed.rdf
 
 
+
+      # --- ニュース（全国 / 世界） ---
+  - id: nhk-news
+    name: NHK NEWS (Japan)
+    category: news
+    kind: news
+    region: jp
+    url: https://www3.nhk.or.jp/rss/news/cat0.xml
+
+  - id: jiji-top
+    name: Jiji Press (Japan)
+    category: news
+    kind: news
+    region: jp
+    url: https://www.jiji.com/rss/ranking.rdf
+
+  - id: bbc-world
+    name: BBC World (Global)
+    category: news
+    kind: news
+    region: global
+    url: https://feeds.bbci.co.uk/news/world/rss.xml
