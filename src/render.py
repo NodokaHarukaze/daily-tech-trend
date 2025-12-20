@@ -1206,6 +1206,7 @@ def render_news_pages(out_dir: Path, generated_at: str, cur) -> None:
                 tech_extra_css=TECH_EXTRA_CSS,
 
                 page=page,
+                nav_prefix="../", 
                 title=title,
                 heading=heading,
                 generated_at=generated_at,
@@ -2141,6 +2142,7 @@ def main():
     (tech_dir / "index.html").write_text(tech_html_sub, encoding="utf-8")
     (out_dir / "index.html").write_text(tech_html_root, encoding="utf-8")
 
+    render_news_pages(out_dir, generated_at, cur)
 
     conn.close()
     print(f"[TIME] step=render end sec={_now_sec() - t0:.1f}")
