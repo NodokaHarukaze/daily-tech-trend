@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>技術動向ダイジェスト（Daily）</title>
+  <title>技術動向ダイジェスト</title>
   <style>
     
 body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:24px;line-height:1.6}
@@ -269,15 +269,15 @@ a{color:inherit}
     <div class="summary-grid">
       <div class="summary-item">
         <div class="k">Generated (JST)</div>
-        <div class="v">2025-12-22 15:27:56 JST</div>
+        <div class="v">2025-12-22 18:30:58 JST</div>
       </div>
       <div class="summary-item">
         <div class="k">Runtime</div>
-        <div class="v">1673 sec</div>
+        <div class="v">1087 sec</div>
       </div>
       <div class="summary-item">
         <div class="k">Articles</div>
-        <div class="v">720 <span class="small">(new48h 107)</span></div>
+        <div class="v">740 <span class="small">(new48h 122)</span></div>
       </div>
       <div class="summary-item">
         <div class="k">RSS Sources</div>
@@ -299,8 +299,8 @@ a{color:inherit}
             AI (13)
           </button>
         
-          <button class="btn" type="button" data-tag-btn="vulnerability" onclick="toggleTag('vulnerability')">
-            vulnerability (7)
+          <button class="btn" type="button" data-tag-btn="脆弱性" onclick="toggleTag('脆弱性')">
+            脆弱性 (7)
           </button>
         
           <button class="btn" type="button" data-tag-btn="AWS" onclick="toggleTag('AWS')">
@@ -311,8 +311,8 @@ a{color:inherit}
             ai (6)
           </button>
         
-          <button class="btn" type="button" data-tag-btn="脆弱性" onclick="toggleTag('脆弱性')">
-            脆弱性 (6)
+          <button class="btn" type="button" data-tag-btn="vulnerability" onclick="toggleTag('vulnerability')">
+            vulnerability (5)
           </button>
         
           <button class="btn" type="button" data-tag-btn="EU" onclick="toggleTag('EU')">
@@ -347,10 +347,6 @@ a{color:inherit}
             HyperPod (2)
           </button>
         
-          <button class="btn" type="button" data-tag-btn="Windows11" onclick="toggleTag('Windows11')">
-            Windows11 (2)
-          </button>
-        
           <button class="btn" type="button" data-tag-btn="chrome" onclick="toggleTag('chrome')">
             chrome (2)
           </button>
@@ -369,10 +365,6 @@ a{color:inherit}
         
           <button class="btn" type="button" data-tag-btn="openai" onclick="toggleTag('openai')">
             openai (2)
-          </button>
-        
-          <button class="btn" type="button" data-tag-btn="patch" onclick="toggleTag('patch')">
-            patch (2)
           </button>
         
           <button class="btn" type="button" data-tag-btn="scalability" onclick="toggleTag('scalability')">
@@ -409,10 +401,6 @@ a{color:inherit}
         
           <button class="btn" type="button" data-tag-btn="AgentCore" onclick="toggleTag('AgentCore')">
             AgentCore (1)
-          </button>
-        
-          <button class="btn" type="button" data-tag-btn="BDレコーダー" onclick="toggleTag('BDレコーダー')">
-            BDレコーダー (1)
           </button>
         
           <button class="btn" type="button" data-tag-btn="CVE" onclick="toggleTag('CVE')">
@@ -455,6 +443,10 @@ a{color:inherit}
             EU規制 (1)
           </button>
         
+          <button class="btn" type="button" data-tag-btn="Explzh" onclick="toggleTag('Explzh')">
+            Explzh (1)
+          </button>
+        
           <button class="btn" type="button" data-tag-btn="FSx" onclick="toggleTag('FSx')">
             FSx (1)
           </button>
@@ -495,6 +487,14 @@ a{color:inherit}
             Grassroots (1)
           </button>
         
+          <button class="btn" type="button" data-tag-btn="H3" onclick="toggleTag('H3')">
+            H3 (1)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="Hub" onclick="toggleTag('Hub')">
+            Hub (1)
+          </button>
+        
       </div>
 
       <button id="tagMore" class="btn btn-more" type="button" style="margin-top:6px">＋ more</button>
@@ -503,19 +503,6 @@ a{color:inherit}
     <div id="tag-active" class="small" style="margin-top:6px; display:none;"></div>
     <div class="quick-controls">
       <input id="q" type="search" placeholder="Search title/summary..." />
-      <label class="small">imp ≥
-        <select id="impMin">
-          <option value="0">0</option><option value="1">1</option><option value="2">2</option>
-          <option value="3">3</option><option value="4">4</option><option value="5">5</option>
-        </select>
-      </label>
-      <label class="small">recent ≥
-        <select id="recentMin">
-          <option value="-999">any</option>
-          <option value="0">0</option><option value="1">1</option><option value="3">3</option>
-          <option value="5">5</option><option value="10">10</option>
-        </select>
-      </label>
       <button class="btn" type="button" onclick="toggleAllCats()">Toggle categories</button>
       <label class="small">sort
         <select id="sortKey">
@@ -721,24 +708,6 @@ a{color:inherit}
       <ol class="top-list">
         
           <li class="topic-row"
-              data-title="長期金利が一時２．０５０％に上昇した。１９９９年２月以来、２６年１０カ月ぶりの高水準"
-              data-summary="長期金利が一時2.050％に上昇し、1999年2月以来26年10カ月ぶりの高水準となった。"
-              data-imp="40"
-              data-recent="2"
-              data-date="2025-12-22T03:50:00+00:00"
-              data-tags="interest-rate,finance,economy">
-            <span class="badge imp-40">重要度 40</span>
-            <span class="badge hot">48h +2</span>
-            <a href="#topic-658">長期金利が一時２．０５０％に上昇した。１９９９年２月以来、２６年１０カ月ぶりの高水準</a>
-            <span class="date">2025/12/22 12:50</span>
-            
-              <span class="badge"><a href="#cat-news">news</a></span>
-            
-            
-
-          </li>
-        
-          <li class="topic-row"
               data-title="三菱重工とエクシオグループ、国内初の2相DLC搭載GPUサーバーを構築、商用利用を開始"
               data-summary="三菱重工とエクシオグループが国内初の2相DLC搭載GPUサーバーを構築し、商用利用を開始した。高熱対策として革新的な冷却技術を導入したことで、データセンターでのAI負荷に対応できるようになった。"
               data-imp="80"
@@ -757,7 +726,7 @@ a{color:inherit}
           </li>
         
           <li class="topic-row"
-              data-title="今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにAIエージェント、エージェントランチャー、ナレーターの改良など"
+              data-title="今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにエージェントAI、エージェントランチャー、ナレーターの改良など"
               data-summary="Microsoftが12月19日にWindows 11 Insider Preview Build 26220をリリースし、タスクバーにAIエージェントやナレーター改良など新機能を追加した。"
               data-imp="65"
               data-recent="1"
@@ -765,7 +734,7 @@ a{color:inherit}
               data-tags="Windows11,AI,Insider">
             <span class="badge imp-65">重要度 65</span>
             <span class="badge hot">48h +1</span>
-            <a href="#topic-691">今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにAIエージェント、エージェントランチャー、ナレーターの改良など</a>
+            <a href="#topic-691">今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにエージェントAI、エージェントランチャー、ナレーターの改良など</a>
             <span class="date">2025/12/22 14:22</span>
             
               <span class="badge"><a href="#cat-dev">開発</a></span>
@@ -775,126 +744,144 @@ a{color:inherit}
           </li>
         
           <li class="topic-row"
-              data-title="米国がベネズエラ沖で船舶を拿捕、当局者発表"
-              data-summary="米国がベネズエラ沖で船舶を拿捕し、トランプ大統領の制裁油タンカー封鎖命令に従った。"
+              data-title="JVN: 複数のキーエンス製品における複数の脆弱性"
+              data-summary="キーエンス製品に複数の脆弱性が報告され、即時対応が必要。"
               data-imp="50"
               data-recent="1"
-              data-date="2025-12-20T19:27:31+00:00"
-              data-tags="制裁,封鎖,海運,石油,ベネズエラ">
+              data-date="2025-12-22T02:30:00+00:00"
+              data-tags="">
             <span class="badge imp-50">重要度 50</span>
             <span class="badge hot">48h +1</span>
-            <a href="#topic-601">米国がベネズエラ沖で船舶を拿捕、当局者発表</a>
-            <span class="date">2025/12/21 04:27</span>
+            <a href="#topic-712">JVN: 複数のキーエンス製品における複数の脆弱性</a>
+            <span class="date">2025/12/22 11:30</span>
             
-              <span class="badge"><a href="#cat-news">news</a></span>
+              <span class="badge"><a href="#cat-security">セキュリティ</a></span>
             
             
 
           </li>
         
           <li class="topic-row"
-              data-title="オーストラリア州、ボンディ銃乱射事件を受けてインティファーダの合唱を禁止する計画"
-              data-summary="オーストラリア・ニューサウスウェールズ州が、30年ぶりの致命的銃乱射事件を受けてヘイトスピーチ法改正を検討する。"
+              data-title="注意喚起: WatchGuard製Fireboxのikedにおける境界外書き込みの脆弱性（CVE-2025-14733）に関する注意喚起  (公開)"
+              data-summary="WatchGuard製Fireboxのikedサービスに境界外書き込み脆弱性（CVE-2025-14733）が報告され、JPCERTが注意喚起を発表した。"
+              data-imp="50"
+              data-recent="1"
+              data-date="2025-12-22T06:37:00+00:00"
+              data-tags="">
+            <span class="badge imp-50">重要度 50</span>
+            <span class="badge hot">48h +1</span>
+            <a href="#topic-713">注意喚起: WatchGuard製Fireboxのikedにおける境界外書き込みの脆弱性（CVE-2025-14733）に関する注意喚起  (公開)</a>
+            <span class="date">2025/12/22 15:37</span>
+            
+              <span class="badge"><a href="#cat-security">セキュリティ</a></span>
+            
+            
+
+          </li>
+        
+          <li class="topic-row"
+              data-title="GitHub、セルフホスト型「GitHub Actions」の有償補償を延期／価格は1分あたり0.002ドル、一部の開発者からの猛回復を受け"
+              data-summary="GitHubはセルフホスト型GitHub Actionsの有償化を延期し、2026年1月からランナー使用料を最大39％引き下げる。"
               data-imp="45"
               data-recent="1"
-              data-date="2025-12-20T07:20:49+00:00"
+              data-date="2025-12-21T21:45:00+00:00"
+              data-tags="pricing,GitHubActions,self-hosted">
+            <span class="badge imp-45">重要度 45</span>
+            <span class="badge hot">48h +1</span>
+            <a href="#topic-667">GitHub、セルフホスト型「GitHub Actions」の有償補償を延期／価格は1分あたり0.002ドル、一部の開発者からの猛回復を受け</a>
+            <span class="date">2025/12/22 06:45</span>
+            
+              <span class="badge"><a href="#cat-dev">開発</a></span>
+            
+            
+
+          </li>
+        
+          <li class="topic-row"
+              data-title="生成AIが作った・編集した動画を見破れる ～「Gemini」アプリに「SynthID」の検出機能／アップロードしてたずねだけ"
+              data-summary="GoogleがGeminiアプリに動画生成・編集検出機能を追加し、Veo 3.1等のモデルで作られた動画かどうかを簡易チェックできるようになった。"
+              data-imp="45"
+              data-recent="1"
+              data-date="2025-12-22T01:02:36+00:00"
+              data-tags="AI,SyntheticMedia,Gemini">
+            <span class="badge imp-45">重要度 45</span>
+            <span class="badge hot">48h +1</span>
+            <a href="#topic-671">生成AIが作った・編集した動画を見破れる ～「Gemini」アプリに「SynthID」の検出機能／アップロードしてたずねだけ</a>
+            <span class="date">2025/12/22 10:02</span>
+            
+              <span class="badge"><a href="#cat-dev">開発</a></span>
+            
+            
+
+          </li>
+        
+          <li class="topic-row"
+              data-title="なぜか［フォロー中］欄の情報が古い……X/Twitterモバイルの仕様変更はいずれWebにも？／人気のカスタマイズ拡張機能「Control Panel for Twitter」を入れておけば防げる"
+              data-summary="Xモバイルアプリで［フォロー中］タイムラインが人気順に変更され、ヘッダーに新しい順・人気のプルダウンが追加された。既定は人気順で、新着投稿が上部に表示されなくなる。"
+              data-imp="45"
+              data-recent="1"
+              data-date="2025-12-22T07:25:00+00:00"
               data-tags="">
             <span class="badge imp-45">重要度 45</span>
             <span class="badge hot">48h +1</span>
-            <a href="#topic-527">オーストラリア州、ボンディ銃乱射事件を受けてインティファーダの合唱を禁止する計画</a>
-            <span class="date">2025/12/20 16:20</span>
+            <a href="#topic-708">なぜか［フォロー中］欄の情報が古い……X/Twitterモバイルの仕様変更はいずれWebにも？／人気のカスタマイズ拡張機能「Control Panel for Twitter」を入れておけば防げる</a>
+            <span class="date">2025/12/22 16:25</span>
             
-              <span class="badge"><a href="#cat-news">news</a></span>
-            
-            
-
-          </li>
-        
-          <li class="topic-row"
-              data-title="JAXA H3ロケット8号機打ち上げ中止原因は作業手順の変更"
-              data-summary="JAXAは12月17日、種子島宇宙センターの注水設備でバルブを開ける作業手順変更が原因とし、H3ロケット8号機の打ち上げを直前で中止した。"
-              data-imp="45"
-              data-recent="1"
-              data-date="2025-12-20T13:12:59+00:00"
-              data-tags="launch,procedure,H3">
-            <span class="badge imp-45">重要度 45</span>
-            <span class="badge hot">48h +1</span>
-            <a href="#topic-545">JAXA H3ロケット8号機打ち上げ中止原因は作業手順の変更</a>
-            <span class="date">2025/12/20 22:12</span>
-            
-              <span class="badge"><a href="#cat-news">news</a></span>
+              <span class="badge"><a href="#cat-dev">開発</a></span>
             
             
 
           </li>
         
           <li class="topic-row"
-              data-title="警察とメガバンクなど連携 詐欺被害金 追跡や回収の新拠点検討"
-              data-summary="警察とメガバンクが連携し、特殊詐欺被害金の追跡・回収を行う新拠点『金融犯罪対策センター』設置を検討中。"
-              data-imp="45"
+              data-title="JVN: UEFIファームウェアを搭載した一部のマザーボードにおけるIOMMU初期化処理の不備の脆弱性"
+              data-summary="一部マザーボードのUEFIファームウェアにIOMMU初期化処理不備があり、攻撃者がメモリ管理を乗っ取る脆弱性が確認された。"
+              data-imp="40"
               data-recent="1"
-              data-date="2025-12-20T19:38:10+00:00"
-              data-tags="fraud,banking,police">
-            <span class="badge imp-45">重要度 45</span>
+              data-date="2025-12-22T01:00:00+00:00"
+              data-tags="IOMMU,UEFI,脆弱性">
+            <span class="badge imp-40">重要度 40</span>
             <span class="badge hot">48h +1</span>
-            <a href="#topic-607">警察とメガバンクなど連携 詐欺被害金 追跡や回収の新拠点検討</a>
-            <span class="date">2025/12/21 04:38</span>
+            <a href="#topic-711">JVN: UEFIファームウェアを搭載した一部のマザーボードにおけるIOMMU初期化処理の不備の脆弱性</a>
+            <span class="date">2025/12/22 10:00</span>
             
-              <span class="badge"><a href="#cat-news">news</a></span>
+              <span class="badge"><a href="#cat-security">セキュリティ</a></span>
             
             
 
           </li>
         
           <li class="topic-row"
-              data-title="オーストラリア首相、ボンダイ攻撃を悼む中、情報調査を発表"
-              data-summary="オーストラリア首相がボンダイ攻撃を悼み、急速に変化する安全保障環境への対応を訴え情報調査を発表した。"
-              data-imp="45"
+              data-title="発表苦手でもOK！ ニュース原稿執筆から読み上げイメージ確認まで機械任せにするテクK【残業を減らす！Officeテクニック】"
+              data-summary="PowerPointで完成したスライドを、説明用原稿作成時に声に出して自然に話せるように調整する手法が紹介されている。"
+              data-imp="30"
               data-recent="1"
-              data-date="2025-12-21T08:30:09+00:00"
-              data-tags="">
-            <span class="badge imp-45">重要度 45</span>
+              data-date="2025-12-21T21:55:00+00:00"
+              data-tags="office,productivity,presentation">
+            <span class="badge imp-30">重要度 30</span>
             <span class="badge hot">48h +1</span>
-            <a href="#topic-623">オーストラリア首相、ボンダイ攻撃を悼む中、情報調査を発表</a>
-            <span class="date">2025/12/21 17:30</span>
+            <a href="#topic-668">発表苦手でもOK！ ニュース原稿執筆から読み上げイメージ確認まで機械任せにするテクK【残業を減らす！Officeテクニック】</a>
+            <span class="date">2025/12/22 06:55</span>
             
-              <span class="badge"><a href="#cat-news">news</a></span>
+              <span class="badge"><a href="#cat-dev">開発</a></span>
             
             
 
           </li>
         
           <li class="topic-row"
-              data-title="栃木大田原銀行の出張所でATMなど壊れる重機使用し破壊か"
-              data-summary="栃木大田原銀行の出張所で重機を使ってATMが破壊され、現金盗難が疑われる事件が発生。警察は残された重機を調査中。"
-              data-imp="45"
+              data-title="「Word」のルビ付きテキストの入力で問題、同じ文言が勝手に追加されてしまう／現在、開発チームが原因を調査中"
+              data-summary="Microsoft Wordのルビ機能で同じ文言が自動追加される不具合が報告された。"
+              data-imp="30"
               data-recent="1"
-              data-date="2025-12-21T03:59:25+00:00"
-              data-tags="banking,atm,robbery">
-            <span class="badge imp-45">重要度 45</span>
+              data-date="2025-12-21T23:45:00+00:00"
+              data-tags="Word,ルビ,バグ">
+            <span class="badge imp-30">重要度 30</span>
             <span class="badge hot">48h +1</span>
-            <a href="#topic-627">栃木大田原銀行の出張所でATMなど壊れる重機使用し破壊か</a>
-            <span class="date">2025/12/21 12:59</span>
+            <a href="#topic-670">「Word」のルビ付きテキストの入力で問題、同じ文言が勝手に追加されてしまう／現在、開発チームが原因を調査中</a>
+            <span class="date">2025/12/22 08:45</span>
             
-              <span class="badge"><a href="#cat-news">news</a></span>
-            
-            
-
-          </li>
-        
-          <li class="topic-row"
-              data-title="経産省 国産AI開発へ 来年度から5年間 1兆円規模の支援検討へ"
-              data-summary="経済産業省が来年度から5年間、民間の国産AI開発を1兆円規模で支援する方針を検討。予算案に3000億円を先行投入し、官民連携で加速を図る。"
-              data-imp="45"
-              data-recent="1"
-              data-date="2025-12-21T08:36:30+00:00"
-              data-tags="AI,支援,国産,政策">
-            <span class="badge imp-45">重要度 45</span>
-            <span class="badge hot">48h +1</span>
-            <a href="#topic-632">経産省 国産AI開発へ 来年度から5年間 1兆円規模の支援検討へ</a>
-            <span class="date">2025/12/21 17:36</span>
-            
-              <span class="badge"><a href="#cat-news">news</a></span>
+              <span class="badge"><a href="#cat-dev">開発</a></span>
             
             
 
@@ -2229,7 +2216,7 @@ a{color:inherit}
                 <span class="badge imp">重要度 45</span>
               
               
-                <a href="https://openai.com/index/gpt-5-2-codex" target="_blank" rel="noopener">GPT-5.2 システム カードへの付録: GPT-5.2-Codex</a>
+                <a href="https://openai.com/index/introducing-gpt-5-2-codex" target="_blank" rel="noopener">GPT-5.2 システム カードへの付録: GPT-5.2-Codex</a>
               
               
                 <span class="small">（2025/12/18 09:00）</span>
@@ -2388,24 +2375,6 @@ a{color:inherit}
         <ul>
           
             <li>
-              <a href="#topic-671">生成AIが作った・編集した動画を見破れる ～「Gemini」アプリに「SynthID」の検出機能／アップロードしてたずねだけ</a>
-              <span class="date">
-                2025/12/22 01:02
-              </span>
-              <span class="badge">48h +1</span>
-              <span class="small">（累計 1）</span>
-            </li>
-          
-            <li>
-              <a href="#topic-672">パナソニックのBDレコーダーが安い！Amazonでタイムセール【本日みつけたお買い得情報】</a>
-              <span class="date">
-                2025/12/22 01:09
-              </span>
-              <span class="badge">48h +1</span>
-              <span class="small">（累計 1）</span>
-            </li>
-          
-            <li>
               <a href="#topic-673">UGREENのおトクな福袋がセール中！「充電セット」「新春カップルセット」「無線日用品」など【本日みつけたお買い得情報】</a>
               <span class="date">
                 2025/12/22 01:29
@@ -2424,9 +2393,27 @@ a{color:inherit}
             </li>
           
             <li>
-              <a href="#topic-691">今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにAIエージェント、エージェントランチャー、ナレーターの改良など</a>
+              <a href="#topic-691">今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにエージェントAI、エージェントランチャー、ナレーターの改良など</a>
               <span class="date">
                 2025/12/22 05:22
+              </span>
+              <span class="badge">48h +1</span>
+              <span class="small">（累計 1）</span>
+            </li>
+          
+            <li>
+              <a href="#topic-707">約30年の歴史を持つファイル圧縮・解凍ソフト「Explzh」がv10.00に／個人での非商用ならば無償</a>
+              <span class="date">
+                2025/12/22 06:07
+              </span>
+              <span class="badge">48h +1</span>
+              <span class="small">（累計 1）</span>
+            </li>
+          
+            <li>
+              <a href="#topic-708">なぜか［フォロー中］欄の情報が古い……X/Twitterモバイルの仕様変更はいずれWebにも？／人気のカスタマイズ拡張機能「Control Panel for Twitter」を入れておけば防げる</a>
+              <span class="date">
+                2025/12/22 07:25
               </span>
               <span class="badge">48h +1</span>
               <span class="small">（累計 1）</span>
@@ -2657,7 +2644,7 @@ a{color:inherit}
           </li>
         
            <li id="topic-691" class="topic-row"
-              data-title="今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにAIエージェント、エージェントランチャー、ナレーターの改良など"
+              data-title="今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにエージェントAI、エージェントランチャー、ナレーターの改良など"
               data-summary="Microsoftが12月19日にWindows 11 Insider Preview Build 26220をリリースし、タスクバーにAIエージェントやナレーター改良など新機能を追加した。"
               data-imp="65"
               data-recent="1"
@@ -2668,7 +2655,7 @@ a{color:inherit}
                 <span class="badge imp">重要度 65</span>
               
               
-                <a href="https://forest.watch.impress.co.jp/docs/news/2073136.html" target="_blank" rel="noopener">今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにAIエージェント、エージェントランチャー、ナレーターの改良など</a>
+                <a href="https://forest.watch.impress.co.jp/docs/news/2073136.html" target="_blank" rel="noopener">今年最後（？）のプレビュー版「Windows 11」公開、AIエージェント時代に備えた新機能多数／タスクバーにエージェントAI、エージェントランチャー、ナレーターの改良など</a>
               
               
                 <span class="small">（2025/12/22 14:22）</span>
@@ -3037,37 +3024,27 @@ a{color:inherit}
 
           </li>
         
-           <li id="topic-431" class="topic-row"
-              data-title="2025年10月プレビューパッチ「KB5067036」に問題、「WSL」とVPNツールの組み合わせで／「Cisco Secure Client」や「OpenVPN」などの製品への影響"
-              data-summary="10月の非セキュリティプレビュー更新KB5067036適用後、Windows 11でWSLのミラーリングネットワークが失敗する問題が報告されている。"
+           <li id="topic-708" class="topic-row"
+              data-title="なぜか［フォロー中］欄の情報が古い……X/Twitterモバイルの仕様変更はいずれWebにも？／人気のカスタマイズ拡張機能「Control Panel for Twitter」を入れておけば防げる"
+              data-summary="Xモバイルアプリで［フォロー中］タイムラインが人気順に変更され、ヘッダーに新しい順・人気のプルダウンが追加された。既定は人気順で、新着投稿が上部に表示されなくなる。"
               data-imp="45"
-              data-recent="0"
-              data-date="2025-12-17T04:10:00+00:00"
-              data-tags="WSL,VPN,patch,Windows11">
+              data-recent="1"
+              data-date="2025-12-22T07:25:00+00:00"
+              data-tags="">
             <div>
               
                 <span class="badge imp">重要度 45</span>
               
               
-                <a href="https://forest.watch.impress.co.jp/docs/news/2071884.html" target="_blank" rel="noopener">2025年10月プレビューパッチ「KB5067036」に問題、「WSL」とVPNツールの組み合わせで／「Cisco Secure Client」や「OpenVPN」などの製品への影響</a>
+                <a href="https://forest.watch.impress.co.jp/docs/news/2073116.html" target="_blank" rel="noopener">なぜか［フォロー中］欄の情報が古い……X/Twitterモバイルの仕様変更はいずれWebにも？／人気のカスタマイズ拡張機能「Control Panel for Twitter」を入れておけば防げる</a>
               
               
-                <span class="small">（2025/12/17 13:10）</span>
+                <span class="small">（2025/12/22 16:25）</span>
               
 
               
+                <span class="badge">48h +1</span>
               
-                <span class="small">
-                  
-                    <span class="badge">WSL</span>
-                  
-                    <span class="badge">VPN</span>
-                  
-                    <span class="badge">patch</span>
-                  
-                    <span class="badge">Windows11</span>
-                  
-                </span>
               
             </div>
 
@@ -3076,26 +3053,26 @@ a{color:inherit}
                 <summary class="small">要約・解説を表示</summary>
 
                 
-                  <div><strong>要約</strong>：10月の非セキュリティプレビュー更新KB5067036適用後、Windows 11でWSLのミラーリングネットワークが失敗する問題が報告されている。</div>
+                  <div><strong>要約</strong>：Xモバイルアプリで［フォロー中］タイムラインが人気順に変更され、ヘッダーに新しい順・人気のプルダウンが追加された。既定は人気順で、新着投稿が上部に表示されなくなる。</div>
                 
 
                 
                   <ul class="kps">
                     
-                      <li>2025年10月に配布された非セキュリティプレビューパッチKB5067036を適用したWindows 11環境で発生</li>
+                      <li>Xモバイルアプリで［フォロー中］タイムラインの仕様変更が進行中。</li>
                     
-                      <li>WSL（Windows Subsystem for Linux）のミラーリングネットワーク機能が失敗する症状が報告されている</li>
+                      <li>ヘッダーラベルに「新しい順」「人気」のプルダウンが追加された。</li>
                     
-                      <li>問題はVPNツールとの組み合わせに関連している可能性が示唆されている</li>
+                      <li>既定は「人気」になり、時系列ではなく人気順に表示される。</li>
                     
                   </ul>
                 
 
                 
                 <div class="perspectives">
-                  <div><b>目線者技術</b>: パッチ適用後のWSL環境でネットワークミラーリングが失敗するため、開発者はテスト環境を再構築し、VPN設定の互換性を確認する必要があります。</div>
-                  <div><b>経営者目線</b>: この問題は社内開発プロセスに影響を与える可能性があるため、パッチ適用計画とリスク管理策を見直すべきです。</div>
-                  <div><b>消費者目線</b>: 一般ユーザーはWSLを利用している場合、VPN接続時にネットワーク障害が起こる恐れがあります。対策としてパッチの遅延適用や代替ツールの検討が推奨されます。</div>
+                  <div><b>目線者技術</b>: 開発者としてはUIの変更に伴うコード調整やテストが必要になるが、機能自体はフロントエンド側のみで実装可能。</div>
+                  <div><b>経営者目線</b>: 経営視点ではユーザー体験向上とリテンションへの影響を評価し、今後のアップデート方</div>
+                  
                 </div>
                 
 
@@ -3105,7 +3082,7 @@ a{color:inherit}
                   <div class="small" style="margin-top:6px;">
                     根拠：
                     
-                      <a href="https://forest.watch.impress.co.jp/docs/news/2071884.html" target="_blank" rel="noopener">https://forest.watch.impress.co.jp/docs/news/2071884.html</a>
+                      <a href="https://forest.watch.impress.co.jp/docs/news/2073116.html" target="_blank" rel="noopener">https://forest.watch.impress.co.jp/docs/news/2073116.html</a>
                     
                   </div>
                 
@@ -3923,81 +3900,6 @@ a{color:inherit}
 
           </li>
         
-           <li id="topic-672" class="topic-row"
-              data-title="パナソニックのBDレコーダーが安い！Amazonでタイムセール【本日みつけたお買い得情報】"
-              data-summary="パナソニック製ブルーレイレコーダーがAmazonでセール中。価格は通常より安く、在庫がある限り購入可能。"
-              data-imp="30"
-              data-recent="1"
-              data-date="2025-12-22T01:09:59+00:00"
-              data-tags="sale,BDレコーダー">
-            <div>
-              
-                <span class="badge imp">重要度 30</span>
-              
-              
-                <a href="https://forest.watch.impress.co.jp/docs/serial/goodbuy/2073157.html" target="_blank" rel="noopener">パナソニックのBDレコーダーが安い！Amazonでタイムセール【本日みつけたお買い得情報】</a>
-              
-              
-                <span class="small">（2025/12/22 10:09）</span>
-              
-
-              
-                <span class="badge">48h +1</span>
-              
-              
-                <span class="small">
-                  
-                    <span class="badge">sale</span>
-                  
-                    <span class="badge">BDレコーダー</span>
-                  
-                </span>
-              
-            </div>
-
-            
-              <details class="insight">
-                <summary class="small">要約・解説を表示</summary>
-
-                
-                  <div><strong>要約</strong>：パナソニック製ブルーレイレコーダーがAmazonでセール中。価格は通常より安く、在庫がある限り購入可能。</div>
-                
-
-                
-                  <ul class="kps">
-                    
-                      <li>Amazon.co.jpの家電・カメラ・AV機器ストアでBDレコーダーがセール中。</li>
-                    
-                      <li>パナソニック製品が対象となっている。</li>
-                    
-                      <li>販売は現在進行中で、在庫状況により購入可否が変わる。</li>
-                    
-                  </ul>
-                
-
-                
-                <div class="perspectives">
-                  <div><b>目線者技術</b>: 開発者としては、価格低下に伴い需要増加が予想され、サーバー負荷や物流管理の調整が必要になる可能性があります。</div>
-                  <div><b>経営者目線</b>: 経営視点では、セールによる売上向上と在庫回転率改善を期待できる一方で、利益率への影響をモニタリングする必要があります。</div>
-                  <div><b>消費者目線</b>: 消費者としては、通常価格よりも安価にBDレコーダーが手に入るチャンスであり、購入時期や在庫状況を確認したうえで検討すべきです。</div>
-                </div>
-                
-
-                
-
-                
-                  <div class="small" style="margin-top:6px;">
-                    根拠：
-                    
-                      <a href="https://forest.watch.impress.co.jp/docs/serial/goodbuy/2073157.html" target="_blank" rel="noopener">https://forest.watch.impress.co.jp/docs/serial/goodbuy/2073157.html</a>
-                    
-                  </div>
-                
-              </details>
-            
-
-          </li>
-        
            <li id="topic-690" class="topic-row"
               data-title="どんなことでもソースコードっぽく表現できる「なんちゃってソースコードジェネレータ」／「わかる人にだけわかる」ように伝えたいとき、便利かも？【やじうまの杜】"
               data-summary="や"
@@ -4118,6 +4020,83 @@ a{color:inherit}
                     根拠：
                     
                       <a href="https://forest.watch.impress.co.jp/docs/serial/goodbuy/2073158.html" target="_blank" rel="noopener">https://forest.watch.impress.co.jp/docs/serial/goodbuy/2073158.html</a>
+                    
+                  </div>
+                
+              </details>
+            
+
+          </li>
+        
+           <li id="topic-707" class="topic-row"
+              data-title="約30年の歴史を持つファイル圧縮・解凍ソフト「Explzh」がv10.00に／個人での非商用ならば無償"
+              data-summary="老舗のファイル圧縮・解凍ソフト『Explzh』が12月21日にv10.00へメジャーアップデート。5年ぶりの新バージョンで、個人利用は無償。"
+              data-imp="20"
+              data-recent="1"
+              data-date="2025-12-22T06:07:32+00:00"
+              data-tags="ファイル圧縮,Explzh,v10.00">
+            <div>
+              
+                <span class="badge imp">重要度 20</span>
+              
+              
+                <a href="https://forest.watch.impress.co.jp/docs/news/2073137.html" target="_blank" rel="noopener">約30年の歴史を持つファイル圧縮・解凍ソフト「Explzh」がv10.00に／個人での非商用ならば無償</a>
+              
+              
+                <span class="small">（2025/12/22 15:07）</span>
+              
+
+              
+                <span class="badge">48h +1</span>
+              
+              
+                <span class="small">
+                  
+                    <span class="badge">ファイル圧縮</span>
+                  
+                    <span class="badge">Explzh</span>
+                  
+                    <span class="badge">v10.00</span>
+                  
+                </span>
+              
+            </div>
+
+            
+              <details class="insight">
+                <summary class="small">要約・解説を表示</summary>
+
+                
+                  <div><strong>要約</strong>：老舗のファイル圧縮・解凍ソフト『Explzh』が12月21日にv10.00へメジャーアップデート。5年ぶりの新バージョンで、個人利用は無償。</div>
+                
+
+                
+                  <ul class="kps">
+                    
+                      <li>老舗のファイル圧縮・解凍ソフト『Explzh』が12月21日、v10.00へとアップデートされた。</li>
+                    
+                      <li>2023年5月以来のメジャーバージョンアップとなる。</li>
+                    
+                      <li>個人での非商用ならば無償で利用できる。</li>
+                    
+                  </ul>
+                
+
+                
+                <div class="perspectives">
+                  <div><b>目線者技術</b>: 今回のバージョンアップは既存機能に大きな変更がないため、既存システムへの影響は最小限。ただし、新しいAPIやライブラリが追加されている場合は、依存関係を確認しておくと安心。</div>
+                  <div><b>経営者目線</b>: 新バージョンのリリースは顧客満足度向上に寄与する可能性があります。個人利用無償である点はマーケティング素材として活用できる。</div>
+                  <div><b>消費者目線</b>: ユーザーは5年ぶりのアップデートを歓迎し、機能改善やバグ修正が期待できます。個人利用無料なので手軽に試せます。</div>
+                </div>
+                
+
+                
+
+                
+                  <div class="small" style="margin-top:6px;">
+                    根拠：
+                    
+                      <a href="https://forest.watch.impress.co.jp/docs/news/2073137.html" target="_blank" rel="noopener">https://forest.watch.impress.co.jp/docs/news/2073137.html</a>
                     
                   </div>
                 
@@ -4720,17 +4699,17 @@ a{color:inherit}
               data-summary="輸出貿易管理令の一部を改正する政令が閣議決定され、核兵器拡散防止と大量破壊兵器対策に関わる規制が強化された。"
               data-imp="45"
               data-recent="0"
-              data-date="2025-11-13T15:00:00+00:00"
+              data-date="2025-11-10T15:00:00+00:00"
               data-tags="">
             <div>
               
                 <span class="badge imp">重要度 45</span>
               
               
-                <a href="https://www.meti.go.jp/english/press/2025/1114_002.html" target="_blank" rel="noopener">輸出貿易管理令の一部を改正する政令が閣議決定されました</a>
+                <a href="https://www.meti.go.jp/english/press/2025/1111_004.html" target="_blank" rel="noopener">輸出貿易管理令の一部を改正する政令が閣議決定されました</a>
               
               
-                <span class="small">（2025/11/14 00:00）</span>
+                <span class="small">（2025/11/11 00:00）</span>
               
 
               
@@ -5607,7 +5586,7 @@ a{color:inherit}
             </li>
           
             <li>
-              <a href="#topic-692">MHI Group to Accelerate Development of Digital Talent<br />-- Achieving Value Creation and High Profitability  Through AI and Digital Utilization --</a>
+              <a href="#topic-692">三菱重工グループ、デジタル人材の育成を加速<br /> ～AI・デジタル活用による価値創造と高収益の実現～</a>
               <span class="date">
                 2025/12/22 02:30
               </span>
@@ -6997,7 +6976,7 @@ a{color:inherit}
           </li>
         
            <li id="topic-692" class="topic-row"
-              data-title="MHI Group to Accelerate Development of Digital Talent&lt;br /&gt;-- Achieving Value Creation and High Profitability  Through AI and Digital Utilization --"
+              data-title="三菱重工グループ、デジタル人材の育成を加速&lt;br /&gt; ～AI・デジタル活用による価値創造と高収益の実現～"
               data-summary="MHIグループは日本・海外全従業員を対象にデジタル人材育成を加速し、教育・コミュニティ・実践で価値創造と高収益化を目指す。"
               data-imp="30"
               data-recent="1"
@@ -7008,7 +6987,7 @@ a{color:inherit}
                 <span class="badge imp">重要度 30</span>
               
               
-                <a href="https://www.mhi.com/news/25122202.html" target="_blank" rel="noopener">MHI Group to Accelerate Development of Digital Talent<br />-- Achieving Value Creation and High Profitability  Through AI and Digital Utilization --</a>
+                <a href="https://www.mhi.com/news/25122202.html" target="_blank" rel="noopener">三菱重工グループ、デジタル人材の育成を加速<br /> ～AI・デジタル活用による価値創造と高収益の実現～</a>
               
               
                 <span class="small">（2025/12/22 11:30）</span>
@@ -7164,7 +7143,36 @@ a{color:inherit}
     <div class="topbox">
       <h3>⭐注目TOP5（48h増分）</h3>
       
-        <div class="small">該当なし</div>
+        <ul>
+          
+            <li>
+              <a href="#topic-711">JVN: UEFIファームウェアを搭載した一部のマザーボードにおけるIOMMU初期化処理の不備の脆弱性</a>
+              <span class="date">
+                2025/12/22 01:00
+              </span>
+              <span class="badge">48h +1</span>
+              <span class="small">（累計 1）</span>
+            </li>
+          
+            <li>
+              <a href="#topic-712">JVN: 複数のキーエンス製品における複数の脆弱性</a>
+              <span class="date">
+                2025/12/22 02:30
+              </span>
+              <span class="badge">48h +1</span>
+              <span class="small">（累計 1）</span>
+            </li>
+          
+            <li>
+              <a href="#topic-713">注意喚起: WatchGuard製Fireboxのikedにおける境界外書き込みの脆弱性（CVE-2025-14733）に関する注意喚起  (公開)</a>
+              <span class="date">
+                2025/12/22 06:37
+              </span>
+              <span class="badge">48h +1</span>
+              <span class="small">（累計 1）</span>
+            </li>
+          
+        </ul>
       
     </div>
 
@@ -8018,17 +8026,17 @@ a{color:inherit}
               data-summary="マイクロソフトが2025年10月にリリースするセキュリティ更新プログラムについて注意喚起が行われ、ユーザーは既存システムの修正・検証を速やかに実施すべきである。"
               data-imp="60"
               data-recent="0"
-              data-date="2025-10-15T02:15:00+00:00"
+              data-date="2025-11-12T02:11:00+00:00"
               data-tags="">
             <div>
               
                 <span class="badge imp">重要度 60</span>
               
               
-                <a href="https://www.jpcert.or.jp/at/2025/at250022.html" target="_blank" rel="noopener">注意喚起: 2025年10月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)</a>
+                <a href="https://www.jpcert.or.jp/at/2025/at250023.html" target="_blank" rel="noopener">注意喚起: 2025年10月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)</a>
               
               
-                <span class="small">（2025/10/15 11:15）</span>
+                <span class="small">（2025/11/12 11:11）</span>
               
 
               
@@ -8143,35 +8151,27 @@ a{color:inherit}
 
           </li>
         
-           <li id="topic-377" class="topic-row"
-              data-title="JVN: 富士電機製V-SFT-6における複数の脆弱性"
-              data-summary="富士電機製V‑SFT‑6に複数の脆弱性が報告され、JVNで公開された。"
+           <li id="topic-712" class="topic-row"
+              data-title="JVN: 複数のキーエンス製品における複数の脆弱性"
+              data-summary="キーエンス製品に複数の脆弱性が報告され、即時対応が必要。"
               data-imp="50"
-              data-recent="0"
-              data-date="2025-12-17T06:30:15+00:00"
-              data-tags="vulnerability,fujitec,software">
+              data-recent="1"
+              data-date="2025-12-22T02:30:00+00:00"
+              data-tags="">
             <div>
               
                 <span class="badge imp">重要度 50</span>
               
               
-                <a href="https://jvn.jp/vu/JVNVU93984110/" target="_blank" rel="noopener">JVN: 富士電機製V-SFT-6における複数の脆弱性</a>
+                <a href="https://jvn.jp/vu/JVNVU97069449/" target="_blank" rel="noopener">JVN: 複数のキーエンス製品における複数の脆弱性</a>
               
               
-                <span class="small">（2025/12/17 15:30）</span>
+                <span class="small">（2025/12/22 11:30）</span>
               
 
               
+                <span class="badge">48h +1</span>
               
-                <span class="small">
-                  
-                    <span class="badge">vulnerability</span>
-                  
-                    <span class="badge">fujitec</span>
-                  
-                    <span class="badge">software</span>
-                  
-                </span>
               
             </div>
 
@@ -8180,26 +8180,26 @@ a{color:inherit}
                 <summary class="small">要約・解説を表示</summary>
 
                 
-                  <div><strong>要約</strong>：富士電機製V‑SFT‑6に複数の脆弱性が報告され、JVNで公開された。</div>
+                  <div><strong>要約</strong>：キーエンス製品に複数の脆弱性が報告され、即時対応が必要。</div>
                 
 
                 
                   <ul class="kps">
                     
-                      <li>富士電機製 V-SFT-6 に複数の脆弱性があることが報告されている。</li>
+                      <li>株式会社キーエンスが提供する複数の製品に脆弱性が存在します。</li>
                     
-                      <li>JVN（日本脆弱性情報ベース）にて詳細が公開されている。</li>
+                      <li>複数の脆弱性が同一製品群で確認されています。</li>
                     
-                      <li>対象は富士電機社製ソフトウェア V‑SFT‑6 である。</li>
+                      <li>JVNで詳細情報が公開されています。</li>
                     
                   </ul>
                 
 
                 
                 <div class="perspectives">
-                  <div><b>目線者技術</b>: 複数の脆弱性が報告されたため、既存システムへの影響を検証し、パッチ適用や設定変更を行う必要があります。</div>
-                  <div><b>経営者目線</b>: 本件は顧客信頼に直結するリスクであり、迅速な対応と情報共有が求められます。</div>
-                  <div><b>消費者目線</b>: 利用者は製品のアップデート状況を確認し、安全性確保のため最新バージョンへの更新を推奨します。</div>
+                  <div><b>目線者技術</b>: 複数製品に共通する脆弱性は、パッチ適用や設定変更を迅速に行う必要があります。既存のファームウェア更新プロセスを見直し、CI/CDに脆弱性検査を組み込むことでリスク低減が図れます。</div>
+                  <div><b>経営者目線</b>: ビジネス継続性を守るため、製品ライン全体でのパッチ管理と顧客への通知体制を強化すべきです。信用失墜防止に向けた迅速な対応は経営リスク回避につながります。</div>
+                  <div><b>消費者目線</b>: ユーザーはキーエンス製品の最新バージョンへ更新し、セキュリティパッチが適用されているか確認することが重要です。安全性を確保するために定期的なアップデートを怠らないよう注意してください。</div>
                 </div>
                 
 
@@ -8209,7 +8209,7 @@ a{color:inherit}
                   <div class="small" style="margin-top:6px;">
                     根拠：
                     
-                      <a href="https://jvn.jp/vu/JVNVU93984110/" target="_blank" rel="noopener">https://jvn.jp/vu/JVNVU93984110/</a>
+                      <a href="https://jvn.jp/vu/JVNVU97069449/" target="_blank" rel="noopener">https://jvn.jp/vu/JVNVU97069449/</a>
                     
                   </div>
                 
@@ -8218,35 +8218,27 @@ a{color:inherit}
 
           </li>
         
-           <li id="topic-380" class="topic-row"
-              data-title="ウィークリーレポート: 複数のフォーティネット製品に脆弱性"
-              data-summary="複数のFortinet製品に脆弱性が報告され、即時パッチ適用が推奨される。"
+           <li id="topic-713" class="topic-row"
+              data-title="注意喚起: WatchGuard製Fireboxのikedにおける境界外書き込みの脆弱性（CVE-2025-14733）に関する注意喚起  (公開)"
+              data-summary="WatchGuard製Fireboxのikedサービスに境界外書き込み脆弱性（CVE-2025-14733）が報告され、JPCERTが注意喚起を発表した。"
               data-imp="50"
-              data-recent="0"
-              data-date="2025-12-17T00:11:00+00:00"
-              data-tags="fortinet,vulnerability,patch">
+              data-recent="1"
+              data-date="2025-12-22T06:37:00+00:00"
+              data-tags="">
             <div>
               
                 <span class="badge imp">重要度 50</span>
               
               
-                <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#8" target="_blank" rel="noopener">ウィークリーレポート: 複数のフォーティネット製品に脆弱性</a>
+                <a href="https://www.jpcert.or.jp/at/2025/at250027.html" target="_blank" rel="noopener">注意喚起: WatchGuard製Fireboxのikedにおける境界外書き込みの脆弱性（CVE-2025-14733）に関する注意喚起  (公開)</a>
               
               
-                <span class="small">（2025/12/17 09:11）</span>
+                <span class="small">（2025/12/22 15:37）</span>
               
 
               
+                <span class="badge">48h +1</span>
               
-                <span class="small">
-                  
-                    <span class="badge">fortinet</span>
-                  
-                    <span class="badge">vulnerability</span>
-                  
-                    <span class="badge">patch</span>
-                  
-                </span>
               
             </div>
 
@@ -8255,26 +8247,26 @@ a{color:inherit}
                 <summary class="small">要約・解説を表示</summary>
 
                 
-                  <div><strong>要約</strong>：複数のFortinet製品に脆弱性が報告され、即時パッチ適用が推奨される。</div>
+                  <div><strong>要約</strong>：WatchGuard製Fireboxのikedサービスに境界外書き込み脆弱性（CVE-2025-14733）が報告され、JPCERTが注意喚起を発表した。</div>
                 
 
                 
                   <ul class="kps">
                     
-                      <li>複数のFortinet製品に脆弱性が存在することを報告している。</li>
+                      <li>WatchGuard Fireboxのikedサービスに境界外書き込み脆弱性(CVE-2025-14733)が存在することが確認された。</li>
                     
-                      <li>JPCERTがWeekly Reportとして情報を公開した。</li>
+                      <li>この脆弱性はikedaプロセスでバッファオーバーランを引き起こし、権限昇格やリモートコード実行の可能性があると報告されている。</li>
                     
-                      <li>脆弱性は複数製品に共通して影響を与える可能性がある。</li>
+                      <li>JPCERTが公式サイトに注意喚起を掲載し、ユーザーへパッチ適用を促している。</li>
                     
                   </ul>
                 
 
                 
                 <div class="perspectives">
-                  <div><b>目線者技術</b>: Fortinet製品のユーザーは、パッチ適用前に既存システムへの影響を検証し、6か月以内に対応判断を行う必要があります。</div>
-                  <div><b>経営者目線</b>: 経営層はセキュリティ対策として迅速なパッチ管理体制を整備し、業務継続計画に組み込むべきです。</div>
-                  <div><b>消費者目線</b>: 一般ユーザーはFortinet製品のアップデート通知を確認し、最新バージョンへ更新することで安全性を確保できます。</div>
+                  <div><b>目線者技術</b>: 技術者としては、Fireboxのikedaデーモンに対する境界外書き込み脆弱性が確認されており、既存環境で動作している場合は即時パッチ適用やサービス停止を検討すべきです。</div>
+                  <div><b>経営者目線</b>: 経営者としては、重要なネットワーク機器の脆弱性に対し、リスク評価と対応計画を迅速に策定し、業務継続への影響を最小化する必要があります。</div>
+                  <div><b>消費者目線</b>: 消費</div>
                 </div>
                 
 
@@ -8284,7 +8276,7 @@ a{color:inherit}
                   <div class="small" style="margin-top:6px;">
                     根拠：
                     
-                      <a href="https://www.jpcert.or.jp/wr/2025/wr251217.html#8" target="_blank" rel="noopener">https://www.jpcert.or.jp/wr/2025/wr251217.html#8</a>
+                      <a href="https://www.jpcert.or.jp/at/2025/at250027.html" target="_blank" rel="noopener">https://www.jpcert.or.jp/at/2025/at250027.html</a>
                     
                   </div>
                 
@@ -8575,6 +8567,83 @@ a{color:inherit}
                     根拠：
                     
                       <a href="https://jvn.jp/vu/JVNVU96501642/" target="_blank" rel="noopener">https://jvn.jp/vu/JVNVU96501642/</a>
+                    
+                  </div>
+                
+              </details>
+            
+
+          </li>
+        
+           <li id="topic-711" class="topic-row"
+              data-title="JVN: UEFIファームウェアを搭載した一部のマザーボードにおけるIOMMU初期化処理の不備の脆弱性"
+              data-summary="一部マザーボードのUEFIファームウェアにIOMMU初期化処理不備があり、攻撃者がメモリ管理を乗っ取る脆弱性が確認された。"
+              data-imp="40"
+              data-recent="1"
+              data-date="2025-12-22T01:00:00+00:00"
+              data-tags="IOMMU,UEFI,脆弱性">
+            <div>
+              
+                <span class="badge imp">重要度 40</span>
+              
+              
+                <a href="https://jvn.jp/vu/JVNVU98834100/" target="_blank" rel="noopener">JVN: UEFIファームウェアを搭載した一部のマザーボードにおけるIOMMU初期化処理の不備の脆弱性</a>
+              
+              
+                <span class="small">（2025/12/22 10:00）</span>
+              
+
+              
+                <span class="badge">48h +1</span>
+              
+              
+                <span class="small">
+                  
+                    <span class="badge">IOMMU</span>
+                  
+                    <span class="badge">UEFI</span>
+                  
+                    <span class="badge">脆弱性</span>
+                  
+                </span>
+              
+            </div>
+
+            
+              <details class="insight">
+                <summary class="small">要約・解説を表示</summary>
+
+                
+                  <div><strong>要約</strong>：一部マザーボードのUEFIファームウェアにIOMMU初期化処理不備があり、攻撃者がメモリ管理を乗っ取る脆弱性が確認された。</div>
+                
+
+                
+                  <ul class="kps">
+                    
+                      <li>UEFIファームウェア搭載マザーボードでIOMMU初期化処理に不備があることが判明した。</li>
+                    
+                      <li>この不備は入力-出力メモリ管理ユニット（IOMMU）の設定を正しく行わないため、攻撃者がメモリ操作権限を取得できる可能性がある。</li>
+                    
+                      <li>脆弱性の詳細はJVNで公開されており、該当機種に対するパッチやアップデートが推奨されている。</li>
+                    
+                  </ul>
+                
+
+                
+                <div class="perspectives">
+                  <div><b>目線者技術</b>: IOMMU初期化不備は低レベルファームウェア実装ミスであり、既存システムの修正・検証が必要になる可能性が高い。6か月以内にパッチ適用を計画すべき。</div>
+                  <div><b>経営者目線</b>: この脆弱性は顧客データ保護や信頼性に直結するため、リスク評価と対応策（アップデートの推奨）を迅速に実施し、ブランドイメージへの影響を最小化する必要がある。</div>
+                  <div><b>消費者目線</b>: 一般ユーザーはマザーボードメーカーから提供されるファームウェア更新を適用することでリスクを回避できる。アップデート前にシステムのバックアップを取ることが推奨される。</div>
+                </div>
+                
+
+                
+
+                
+                  <div class="small" style="margin-top:6px;">
+                    根拠：
+                    
+                      <a href="https://jvn.jp/vu/JVNVU98834100/" target="_blank" rel="noopener">https://jvn.jp/vu/JVNVU98834100/</a>
                     
                   </div>
                 
@@ -10115,8 +10184,6 @@ function clearTagFilter(){
 
 function applyFilter() {
   const q = (document.getElementById('q')?.value || '').toLowerCase();
-  const impMin = parseInt(document.getElementById('impMin')?.value || '0', 10);
-  const recentMin = parseInt(document.getElementById('recentMin')?.value || '-999', 10);
 
   const rows = document.querySelectorAll('.category-body .topic-row');
   let hit = 0;
@@ -10129,8 +10196,6 @@ function applyFilter() {
     const tags = (el.dataset.tags || ''); // "EU規制,CBAM" など
 
     const hitQ = !q || title.includes(q) || summary.includes(q);
-    const hitImp = imp >= impMin;
-    const hitRecent = recent >= recentMin;
     const itemTags = tags.split(',').map(s=>s.trim()).filter(Boolean);
 
     let hitTag = true;
@@ -10150,7 +10215,7 @@ function applyFilter() {
   const box = document.getElementById('filter-count');
   if (!box) return;
 
-  const isFiltering = q || impMin > 0 || recentMin > -999;
+  const isFiltering = q ;
   if (isFiltering) {
     box.textContent = `該当: ${hit}件 / 全${rows.length}件`;
     box.style.display = '';
@@ -10165,8 +10230,6 @@ function applyFilter() {
   if (isFiltering && hit === 0) {
     const tips = [];
     if (q) tips.push('検索語を短くする／別表現にする');
-    if (impMin > 0) tips.push('重要度の下限を下げる');
-    if (recentMin > -999) tips.push('recent の条件を緩める');
     tips.push('フィルタをすべてリセットする');
 
     hint.innerHTML = `該当なし。<strong>条件を緩めてください：</strong> ${tips.join('・')}`;
@@ -10178,8 +10241,6 @@ function applyFilter() {
 
 
 document.getElementById('q')?.addEventListener('input', applyFilter);
-document.getElementById('impMin')?.addEventListener('change', applyFilter);
-document.getElementById('recentMin')?.addEventListener('change', applyFilter);
 document.getElementById('tagModeOr')?.addEventListener('change', (e) => {
   tagMode = e.target.checked ? "OR" : "AND";
   updateTagActiveView();
