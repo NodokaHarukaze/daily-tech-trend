@@ -4,7 +4,7 @@ import os
 
 import json
 from pathlib import Path
-#from typing import Any, Dict, List
+from typing import Any, Dict, List
 
 import yaml
 from jinja2 import Template
@@ -14,7 +14,6 @@ from db import connect
 
 from typing import Any, List
 import time
-from datetime import datetime, timezone, timedelta
 
 def fmt_date(s):
     if not s:
@@ -26,63 +25,118 @@ def _now_sec():
     return time.perf_counter()
 
 COMMON_CSS = r"""
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:24px;line-height:1.6}
+:root{
+  /* Base */
+  --bg: #fff;
+  --panel: #f9fafb;
+  --text-main: #1f2937;
+  --text-sub: #6b7280;
+  --border: #e5e7eb;
+
+  /* Accent */
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+
+  /* Status */
+  --new: #dc2626;
+  --new-soft: #fee2e2;
+
+  --important: #f59e0b;
+  --important-soft: #fef3c7;
+}
+body{
+  background:var(--bg);
+  color:var(--text-main);
+}
 h1{margin:0 0 10px}
 h2{margin:22px 0 10px}
-.meta{color:#666;font-size:12px;margin:6px 0 14px}
+.meta{color:var(--text-sub);font-size:12px;margin:6px 0 14px}
 .nav{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 18px}
-.nav a{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:6px 10px;text-decoration:none;color:#111}
+.nav a{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:6px 10px;text-decoration:none;color:#111}
 .nav a.active{border-color:#333;font-weight:700}
-.card{background:#fafafa;border:1px solid #eee;border-radius:12px;padding:12px 14px;margin:10px 0}
-.small{color:#666;font-size:12px}
-.badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:2px 8px;font-size:12px;color:#444;margin-left:6px}
-.btn{padding:6px 10px;border:1px solid #ddd;border-radius:10px;background:#fff;cursor:pointer;display:inline-block;text-decoration:none}
-.btn:hover{background:#f7f7f7}
+.meta,.small{
+  color:var(--text-sub);
+}
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--border);
+}
+
+.badge{
+  border:1px solid var(--border);
+  color:var(--text-main);
+}
+.badge.recent{
+  background:var(--new-soft);
+  color:var(--new);
+  border-color:var(--new);
+  font-weight:700;
+}
+.btn{padding:6px 10px;border:1px solid var(--border);border-radius:10px;background:var(--bg);cursor:pointer;display:inline-block;text-decoration:none}
+.btn:hover{background:var(--panel)}
 ul{margin:0;padding-left:18px}
 li{margin:10px 0}
 a{color:inherit}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a:hover{
+  color:var(--accent);
+}
+
+.nav a.active{
+  color:var(--accent);
+  border-color:var(--accent);
+  font-weight:700;
+}
+
 """
 TECH_EXTRA_CSS = r"""
 /* techの箱・構造を定義している部分をここへ集約 */
 .summary-card, .topbox, .top-col, .insight{
   background:#fafafa;
-  border:1px solid #eee;
+  border:1px solid var(--border);
   border-radius:12px;
   padding:12px 14px;
 }
-.top-col{ background:#fff; }
+.top-col{ background:var(--bg); }
 
 /* techの見出し間隔・小文字 */
 .small{color:#666;font-size:12px}
-.badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:2px 8px;font-size:12px;color:#444;margin-left:6px}
+.badge{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:2px 8px;font-size:12px;color:#444;margin-left:6px}
 
 /* もしtechにタグの見た目があるなら寄せる */
-.tag{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:2px 8px;font-size:12px;color:#444;margin-left:6px}
+.tag{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:2px 8px;font-size:12px;color:#444;margin-left:6px}
 
 
      /* --- UX改善①: 上部サマリー + 横断TOP --- */
-    .summary-card{background:#fafafa;border:1px solid #eee;border-radius:12px;padding:12px 14px;margin:10px 0 14px}
+    .summary-card{background:#fafafa;border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin:10px 0 14px}
     .summary-title{font-weight:800;font-size:16px;margin:0 0 6px}
     .summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:8px}
     .summary-item .k{color:#666;font-size:11px}
     .summary-item .v{font-size:13px;font-weight:650}
 
     .top-zone{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0 18px}
-    .top-col{background:#fff;border:1px solid #eee;border-radius:12px;padding:10px 12px}
+    .top-col{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:10px 12px}
     .top-col h3{margin:0 0 8px;font-size:14px}
     .top-list{margin:0;padding-left:18px}
     .mini{color:#666;font-size:12px;margin-top:2px}
 
     .quick-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
-    #q{padding:6px 10px;border:1px solid #ddd;border-radius:10px;min-width:260px}
-    .btn{padding:6px 10px;border:1px solid #ddd;border-radius:10px;background:#fff;cursor:pointer}
+    #q{padding:6px 10px;border:1px solid var(--border);border-radius:10px;min-width:260px}
+    .btn{padding:6px 10px;border:1px solid var(--border);border-radius:10px;background:var(--bg);cursor:pointer}
 
     .badge.hot{font-weight:800}
     .badge.new{border-style:dashed}
 
-    .imp-5{border-color:#f33}
-    .imp-4{border-color:#f80}
-    .imp-3{border-color:#cc0}
+   .badge.imp{
+      background:var(--important-soft);
+      color:var(--important);
+      border-color:var(--important);
+    }
     .imp-2{border-color:#6c6}
     .imp-1{border-color:#9ad}
     .imp-0{border-color:#ccc}
@@ -159,10 +213,10 @@ TECH_EXTRA_CSS = r"""
     }
     /* details 展開時の視認性向上 */
     details.insight {
-      border: 1px solid #eee;
+      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 6px 8px;
-      background: #fff;
+      background: var(--bg);
     }
 
     details.insight[open] {
@@ -227,7 +281,7 @@ TECH_EXTRA_CSS = r"""
       position: sticky;
       top: 0;
       z-index: 10;
-      background: #fff; /* 背景必須 */
+      background: var(--bg); /* 背景必須 */
     }
 
     /* Tag bar: wrap + mobile collapse */
@@ -245,8 +299,8 @@ TECH_EXTRA_CSS = r"""
     }
 
     .btn-more{
-      background:#fff;
-      border:1px dashed #ddd;
+      background:var(--bg);
+      border:1px dashed var(--border);
       font-weight:650;
     }
 
@@ -264,14 +318,6 @@ TECH_EXTRA_CSS = r"""
       color: #666;
       white-space: nowrap;
     }
-    /* techの主要ボックスをnewsの.cardに寄せる */
-    .summary-card, .topbox, .top-col, .insight{
-      background:#fafafa;
-      border:1px solid #eee;
-      border-radius:12px;
-      padding:12px 14px;
-    }
-    .top-col{ background:#fff; } /* 白カードは残すなら */
 """
 
 PORTAL_HTML = r"""
@@ -318,7 +364,7 @@ HTML = r"""
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>技術動向ダイジェスト（Daily）</title>
+  <title>技術動向ダイジェスト</title>
   <style>
     {{ common_css }}
     {{ tech_extra_css }}
@@ -327,8 +373,8 @@ HTML = r"""
 <body>
   <h1>技術動向ダイジェスト</h1>
   <div class="nav">
-    <a href="{{ nav_prefix }}tech/index.html" class="{{ 'active' if page=='tech' else '' }}">技術</a>
-    <a href="{{ nav_prefix }}news/index.html" class="{{ 'active' if page=='news' else '' }}">ニュース</a>
+    <a href="/daily-tech-trend/" class="{{ 'active' if page=='tech' else '' }}">技術</a>
+    <a href="/daily-tech-trend/news/" class="{{ 'active' if page=='news' else '' }}">ニュース</a>
   </div>
 
     <div class="summary-card">
@@ -375,20 +421,23 @@ HTML = r"""
     <div id="tag-active" class="small" style="margin-top:6px; display:none;"></div>
     <div class="quick-controls">
       <input id="q" type="search" placeholder="Search title/summary..." />
-      <label class="small">imp ≥
-        <select id="impMin">
-          <option value="0">0</option><option value="1">1</option><option value="2">2</option>
-          <option value="3">3</option><option value="4">4</option><option value="5">5</option>
-        </select>
-      </label>
-      <label class="small">recent ≥
-        <select id="recentMin">
-          <option value="-999">any</option>
-          <option value="0">0</option><option value="1">1</option><option value="3">3</option>
-          <option value="5">5</option><option value="10">10</option>
-        </select>
-      </label>
       <button class="btn" type="button" onclick="toggleAllCats()">Toggle categories</button>
+      <label class="small">sort
+        <select id="sortKey">
+          <option value="date">日付</option>
+          <option value="importance">重要度</option>
+        </select>
+      </label>
+
+      <label class="small">order
+        <select id="sortDir">
+          <option value="desc">降順</option>
+          <option value="asc">昇順</option>
+        </select>
+      </label>
+
+      <button class="btn" type="button" onclick="applySort()">Apply</button>
+
     </div>
     <div id="filter-count" class="small" style="margin-top:6px; display:none;"></div>
     <div id="filter-hint" class="small" style="margin-top:4px; display:none;"></div>
@@ -404,9 +453,14 @@ HTML = r"""
               data-summary="{{ (t.summary or '')|e }}"
               data-imp="{{ t.importance or 0 }}"
               data-recent="{{ t.recent or 0 }}"
+              data-date="{{ t.date }}"
               data-tags="{{ t.tags|default([])|join(',') }}">
-            <span class="badge imp-{{ t.importance or 0 }}">imp {{ t.importance or 0 }}</span>
-            {% if (t.recent or 0) > 0 %}<span class="badge {% if (t.recent or 0) >= 5 %}hot{% endif %}">48h +{{ t.recent }}</span>{% endif %}
+            <span class="badge imp">重要度 {{ t.importance or 0 }}</span>
+            {% if t.recent > 0 %}
+              <span class="badge recent {% if t.recent >= 5 %}hot{% endif %}">
+                48h +{{ t.recent }}
+              </span>
+            {% endif %}
             <a href="#topic-{{ t.id }}">{{ t.title }}</a>
             <span class="date">{{ fmt_date(t.date) }}</span>
             {% if t.category %}
@@ -427,9 +481,14 @@ HTML = r"""
               data-summary="{{ (t.summary or '')|e }}"
               data-imp="{{ t.importance or 0 }}"
               data-recent="{{ t.recent or 0 }}"
+              data-date="{{ t.date }}"
               data-tags="{{ t.tags|default([])|join(',') }}">
-            <span class="badge imp-{{ t.importance or 0 }}">imp {{ t.importance or 0 }}</span>
-            <span class="badge hot">48h +{{ t.recent }}</span>
+            <span class="badge imp">重要度 {{ t.importance or 0 }}</span>
+            {% if t.recent > 0 %}
+              <span class="badge recent {% if t.recent >= 5 %}hot{% endif %}">
+                48h +{{ t.recent }}
+              </span>
+            {% endif %}
             <a href="#topic-{{ t.id }}">{{ t.title }}</a>
             <span class="date">{{ fmt_date(t.date) }}</span>
             {% if t.category %}
@@ -464,7 +523,11 @@ HTML = r"""
               <span class="date">
                 {{ fmt_date(item.date) }}
               </span>
-              <span class="badge">48h +{{ item.recent }}</span>
+              {% if item.recent > 0 %}
+                <span class="badge recent {% if item.recent >= 5 %}hot{% endif %}">
+                  48h +{{ item.recent }}
+                </span>
+              {% endif %}
               <span class="small">（累計 {{ item.articles }}）</span>
             </li>
           {% endfor %}
@@ -482,8 +545,12 @@ HTML = r"""
               data-summary="{{ (t.summary or '')|e }}"
               data-imp="{{ t.importance or 0 }}"
               data-recent="{{ t.recent or 0 }}"
+              data-date="{{ t.date }}"
               data-tags="{{ t.tags|default([])|join(',') }}">
             <div>
+              {% if t.importance is not none %}
+                <span class="badge imp">重要度 {{ t.importance }}</span>
+              {% endif %}
               {% if t.url and t.url != "#" %}
                 <a href="{{ t.url }}" target="_blank" rel="noopener">{{ t.title }}</a>
               {% else %}
@@ -492,12 +559,11 @@ HTML = r"""
               {% if t.date %}
                 <span class="small">（{{ fmt_date(t.date) }}）</span>
               {% endif %}
-              {% if t.importance is not none %}
-                <span class="badge imp">重要度 {{ t.importance }}</span>
-              {% endif %}
 
               {% if t.recent > 0 %}
-                <span class="badge">48h +{{ t.recent }}</span>
+                <span class="badge recent {% if (t.recent or 0) >= 5 %}hot{% endif %}">
+                  48h +{{ t.recent }}
+                </span>
               {% endif %}
               {% if t.tags and t.tags|length>0 %}
                 <span class="small">
@@ -508,7 +574,7 @@ HTML = r"""
               {% endif %}
             </div>
 
-            {% if t.summary or (t.key_points and t.key_points|length>0) or t.impact_guess or (t.next_actions and t.next_actions|length>0) %}
+            {% if t.summary or (t.key_points and t.key_points|length>0) or (t.perspectives) or (t.evidence_urls and t.evidence_urls|length>0) %}
               <details class="insight">
                 <summary class="small">要約・解説を表示</summary>
 
@@ -524,10 +590,12 @@ HTML = r"""
                   </ul>
                 {% endif %}
 
-                {% if t.impact_guess %}
-                  <div style="margin-top:6px;">
-                    <strong>影響・示唆（推測含む）</strong>：{{ t.impact_guess }}
-                  </div>
+                {% if t.perspectives %}
+                <div class="perspectives">
+                  {% if t.perspectives.engineer %}<div><b>技術者目線</b>: {{ t.perspectives.engineer }}</div>{% endif %}
+                  {% if t.perspectives.management %}<div><b>経営者目線</b>: {{ t.perspectives.management }}</div>{% endif %}
+                  {% if t.perspectives.consumer %}<div><b>消費者目線</b>: {{ t.perspectives.consumer }}</div>{% endif %}
+                </div>
                 {% endif %}
 
                 {% if t.next_actions and t.next_actions|length>0 %}
@@ -570,15 +638,6 @@ HTML = r"""
       </div>
   </section>
   {% endfor %}
-  {% if category in ["manufacturing","security","system","dev"] %}
-  <div class="small" style="margin:4px 0 10px">
-    関連ニュース：
-    {% if category != "dev" %}
-      <a href="../news/japan.html#{{ category if category != 'system' else 'policy' }}">国内</a> /
-    {% endif %}
-    <a href="../news/global.html#{{ category if category != 'system' else 'policy' }}">世界</a>
-  </div>
-{% endif %}
 <script>
 const selectedTags = new Set(); // 複数タグ
 let tagMode = "AND";            // "AND" or "OR"
@@ -625,8 +684,6 @@ function clearTagFilter(){
 
 function applyFilter() {
   const q = (document.getElementById('q')?.value || '').toLowerCase();
-  const impMin = parseInt(document.getElementById('impMin')?.value || '0', 10);
-  const recentMin = parseInt(document.getElementById('recentMin')?.value || '-999', 10);
 
   const rows = document.querySelectorAll('.category-body .topic-row');
   let hit = 0;
@@ -639,8 +696,6 @@ function applyFilter() {
     const tags = (el.dataset.tags || ''); // "EU規制,CBAM" など
 
     const hitQ = !q || title.includes(q) || summary.includes(q);
-    const hitImp = imp >= impMin;
-    const hitRecent = recent >= recentMin;
     const itemTags = tags.split(',').map(s=>s.trim()).filter(Boolean);
 
     let hitTag = true;
@@ -651,7 +706,7 @@ function applyFilter() {
         : sel.some(t => itemTags.includes(t));
     }
 
-    const show = hitQ && hitImp && hitRecent && hitTag;
+    const show = hitQ && hitTag;
     el.style.display = show ? '' : 'none';
     if (show) hit++;
   });
@@ -660,7 +715,7 @@ function applyFilter() {
   const box = document.getElementById('filter-count');
   if (!box) return;
 
-  const isFiltering = q || impMin > 0 || recentMin > -999;
+  const isFiltering = q ;
   if (isFiltering) {
     box.textContent = `該当: ${hit}件 / 全${rows.length}件`;
     box.style.display = '';
@@ -675,8 +730,6 @@ function applyFilter() {
   if (isFiltering && hit === 0) {
     const tips = [];
     if (q) tips.push('検索語を短くする／別表現にする');
-    if (impMin > 0) tips.push('重要度の下限を下げる');
-    if (recentMin > -999) tips.push('recent の条件を緩める');
     tips.push('フィルタをすべてリセットする');
 
     hint.innerHTML = `該当なし。<strong>条件を緩めてください：</strong> ${tips.join('・')}`;
@@ -688,8 +741,6 @@ function applyFilter() {
 
 
 document.getElementById('q')?.addEventListener('input', applyFilter);
-document.getElementById('impMin')?.addEventListener('change', applyFilter);
-document.getElementById('recentMin')?.addEventListener('change', applyFilter);
 document.getElementById('tagModeOr')?.addEventListener('change', (e) => {
   tagMode = e.target.checked ? "OR" : "AND";
   updateTagActiveView();
@@ -764,7 +815,65 @@ document.getElementById('tagMore')?.addEventListener('click', () => {
   if (more) more.textContent = bar.classList.contains('collapsed') ? '＋ more' : '− less';
 });
 
+function parseDateValue(v){
+  if (!v) return 0;
+  // 例: "2025-12-21T10:00:00+00:00" / "2025-12-21 10:00:00" などを許容
+  const t = Date.parse(String(v).replace(' ', 'T'));
+  return isNaN(t) ? 0 : t;
+}
 
+function applySort(){
+  const key = (document.getElementById('sortKey')?.value || 'date');
+  const dir = (document.getElementById('sortDir')?.value || 'desc');
+  const sign = (dir === 'asc') ? 1 : -1;
+
+  // 対象: Top list + 各カテゴリの直下 ul + topbox(tech) の ul
+  const lists = [
+    ...document.querySelectorAll('ol.top-list'),
+    ...document.querySelectorAll('.category-body > ul'),
+    ...document.querySelectorAll('.topbox > ul')
+  ];
+
+  for (const list of lists){
+    const items = [...list.querySelectorAll(':scope > li.topic-row')];
+    if (items.length <= 1) continue;
+
+    items.sort((a,b) => {
+      if (key === 'importance'){
+        const av = parseInt(a.dataset.imp || '0', 10) || 0;
+        const bv = parseInt(b.dataset.imp || '0', 10) || 0;
+        if (av !== bv) return (av - bv) * sign;
+      } else {
+        const av = parseDateValue(a.dataset.date);
+        const bv = parseDateValue(b.dataset.date);
+        if (av !== bv) return (av - bv) * sign;
+      }
+      // 同点のときは安定化（タイトル）
+      const at = (a.dataset.title || '');
+      const bt = (b.dataset.title || '');
+      return at.localeCompare(bt);
+    });
+
+    for (const li of items) list.appendChild(li);
+  }
+
+  // 保存（任意：次回アクセス時も同じ）
+  try{
+    localStorage.setItem('sortKey', key);
+    localStorage.setItem('sortDir', dir);
+  }catch(e){}
+}
+
+// 初期反映（任意）
+(function initSortUI(){
+  try{
+    const k = localStorage.getItem('sortKey');
+    const d = localStorage.getItem('sortDir');
+    if (k && document.getElementById('sortKey')) document.getElementById('sortKey').value = k;
+    if (d && document.getElementById('sortDir')) document.getElementById('sortDir').value = d;
+  }catch(e){}
+  applySort();
+})();
 // 初期状態：カテゴリを折りたたむ（スマホ向け）
 toggleAllCats();
 
@@ -789,9 +898,10 @@ NEWS_HTML = r"""
   <h1>{{ heading }}</h1>
 
   <div class="nav">
-    <a href="{{ nav_prefix }}tech/index.html" class="{{ 'active' if page=='tech' else '' }}">技術</a>
-    <a href="{{ nav_prefix }}news/index.html" class="{{ 'active' if page=='news' else '' }}">ニュース</a>
+    <a href="/daily-tech-trend/" class="{{ 'active' if page=='tech' else '' }}">技術</a>
+    <a href="/daily-tech-trend/news/" class="{{ 'active' if page=='news' else '' }}">ニュース</a>
   </div>
+
 
   <!-- techと同じ：今日の要点 -->
   <div class="summary-card">
@@ -838,9 +948,23 @@ NEWS_HTML = r"""
     <!-- techと同じ：検索（imp/recentはnewsでは使わないので固定） -->
     <div class="quick-controls">
       <input id="q" type="search" placeholder="Search title/summary..." />
-      <input id="impMin" type="hidden" value="0" />
-      <input id="recentMin" type="hidden" value="-999" />
       <button class="btn" type="button" onclick="toggleAllCats()">Toggle categories</button>
+      <label class="small">sort
+        <select id="sortKey">
+          <option value="date">日付</option>
+          <option value="importance">重要度</option>
+        </select>
+      </label>
+
+      <label class="small">order
+        <select id="sortDir">
+          <option value="desc">降順</option>
+          <option value="asc">昇順</option>
+        </select>
+      </label>
+
+      <button class="btn" type="button" onclick="applySort()">Apply</button>
+
     </div>
     <div id="filter-count" class="small" style="margin-top:6px; display:none;"></div>
     <div id="filter-hint" class="small" style="margin-top:4px; display:none;"></div>
@@ -855,12 +979,22 @@ NEWS_HTML = r"""
           <li class="topic-row"
               data-title="{{ it.title|e }}"
               data-summary="{{ (it.summary or '')|e }}"
-              data-imp="0"
-              data-recent="0"
+              data-imp="{{ it.importance or 0 }}"
+              data-date="{{ it.dt }}"
               data-tags="{{ it.tags|default([])|join(',') }}">
-            <span class="badge">{{ it.category }}</span>
-            <a class="topic-link" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
+            <span class="badge imp">重要度 {{ it.importance or 0 }}</span>            
+            <a class="topic-link" href="#news-{{ it.id }}">{{ it.title }}</a>
+            <a class="small" href="{{ it.url }}" target="_blank" rel="noopener">open</a>
             <span class="date">{{ it.dt_jst }}</span>
+
+            {% if it.tags and it.tags|length>0 %}
+              <span class="small">
+                {% for tg in it.tags %}
+                  <span class="badge">{{ tg }}</span>
+                {% endfor %}
+              </span>
+            {% endif %}
+
             {% if it.source %}<div class="mini">{{ it.source }}</div>{% endif %}
           </li>
         {% endfor %}
@@ -874,12 +1008,22 @@ NEWS_HTML = r"""
           <li class="topic-row"
               data-title="{{ it.title|e }}"
               data-summary="{{ (it.summary or '')|e }}"
-              data-imp="0"
-              data-recent="0"
+              data-imp="{{ it.importance or 0 }}"
+              data-date="{{ it.dt }}"
               data-tags="{{ it.tags|default([])|join(',') }}">
-            <span class="badge">{{ it.category }}</span>
-            <a class="topic-link" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
+            <span class="badge imp">重要度 {{ it.importance or 0 }}</span>           
+            <a class="topic-link" href="#news-{{ it.id }}">{{ it.title }}</a>
+            <a class="small" href="{{ it.url }}" target="_blank" rel="noopener">open</a>
             <span class="date">{{ it.dt_jst }}</span>
+
+            {% if it.tags and it.tags|length>0 %}
+              <span class="small">
+                {% for tg in it.tags %}
+                  <span class="badge">{{ tg }}</span>
+                {% endfor %}
+              </span>
+            {% endif %}
+
             {% if it.source %}<div class="mini">{{ it.source }}</div>{% endif %}
           </li>
         {% endfor %}
@@ -898,15 +1042,68 @@ NEWS_HTML = r"""
           <span class="badge">+{{ sec.recent48 }}/48h</span>
         {% endif %}
       </h2>
+      <button class="btn" type="button" onclick="toggleCat('{{ sec.anchor }}')">Toggle</button>
     </div>
 
     <div class="category-body">
       <ul>
         {% for it in sec.rows %}
-          <li class="topic-row">
-            <a href="{{ it.url }}" target="_blank">{{ it.title }}</a>
-            <div class="small">{{ it.source }} / {{ it.dt_jst }}</div>
+          <li id="news-{{ it.id }}" class="topic-row"
+            data-title="{{ it.title|e }}"
+            data-summary="{{ (it.summary or '')|e }}"
+            data-imp="{{ it.importance or 0 }}"
+            data-date="{{ it.dt }}"
+            data-tags="{{ it.tags|default([])|join(',') }}">
+
+           <div>
+            <span class="badge imp">重要度 {{ it.importance or 0 }}</span>
+            <a class="topic-link" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
+            <span class="date">{{ it.dt_jst }}</span>
+
+            {% if it.tags and it.tags|length>0 %}
+              <span class="small">
+                {% for tg in it.tags %}
+                  <span class="badge">{{ tg }}</span>
+                {% endfor %}
+              </span>
+            {% endif %}
+          </div>
+
+          {% if it.source %}<div class="mini">{{ it.source }}</div>{% endif %}
+
+           {% if it.summary or (it.key_points and it.key_points|length>0) or (it.perspectives and (it.perspectives.engineer or it.perspectives.management or it.perspectives.consumer)) %}
+              <details class="insight">
+                <summary class="small">要約・解説を表示</summary>
+
+                {% if it.summary %}<div><strong>要約</strong>：{{ it.summary }}</div>{% endif %}
+
+                {% if it.key_points and it.key_points|length>0 %}
+                  <ul class="kps">
+                    {% for kp in it.key_points %}<li>{{ kp }}</li>{% endfor %}
+                  </ul>
+                {% endif %}
+
+                {% if it.perspectives %}
+                  <div class="perspectives">
+                    {% if it.perspectives.engineer %}<div><b>技術者目線</b>: {{ it.perspectives.engineer }}</div>{% endif %}
+                    {% if it.perspectives.management %}<div><b>経営者目線</b>: {{ it.perspectives.management }}</div>{% endif %}
+                    {% if it.perspectives.consumer %}<div><b>消費者目線</b>: {{ it.perspectives.consumer }}</div>{% endif %}
+                  </div>
+                {% endif %}
+                {% if it.evidence_urls and it.evidence_urls|length>0 %}
+                  <div class="small" style="margin-top:6px;">
+                    根拠：
+                    {% for u in it.evidence_urls %}
+                      <a href="{{ u }}" target="_blank" rel="noopener">{{ u }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+              </details>
+          {% endif %}
+
           </li>
+
         {% endfor %}
       </ul>
     </div>
@@ -1011,6 +1208,106 @@ document.getElementById('tagMore')?.addEventListener('click', () => {
   const more = document.getElementById('tagMore');
   if (more) more.textContent = bar.classList.contains('collapsed') ? '＋ more' : '− less';
 });
+function parseDateValue(v){
+  if (!v) return 0;
+  // 例: "2025-12-21T10:00:00+00:00" / "2025-12-21 10:00:00" などを許容
+  const t = Date.parse(String(v).replace(' ', 'T'));
+  return isNaN(t) ? 0 : t;
+}
+
+function applySort(){
+  const key = (document.getElementById('sortKey')?.value || 'date');
+  const dir = (document.getElementById('sortDir')?.value || 'desc');
+  const sign = (dir === 'asc') ? 1 : -1;
+
+  // 対象: Top list + 各カテゴリの直下 ul + topbox(tech) の ul
+  const lists = [
+    ...document.querySelectorAll('ol.top-list'),
+    ...document.querySelectorAll('.category-body > ul'),
+    ...document.querySelectorAll('.topbox > ul')
+  ];
+
+  for (const list of lists){
+    const items = [...list.querySelectorAll(':scope > li.topic-row')];
+    if (items.length <= 1) continue;
+
+    items.sort((a,b) => {
+      if (key === 'importance'){
+        const av = parseInt(a.dataset.imp || '0', 10) || 0;
+        const bv = parseInt(b.dataset.imp || '0', 10) || 0;
+        if (av !== bv) return (av - bv) * sign;
+      } else {
+        const av = parseDateValue(a.dataset.date);
+        const bv = parseDateValue(b.dataset.date);
+        if (av !== bv) return (av - bv) * sign;
+      }
+      // 同点のときは安定化（タイトル）
+      const at = (a.dataset.title || '');
+      const bt = (b.dataset.title || '');
+      return at.localeCompare(bt);
+    });
+
+    for (const li of items) list.appendChild(li);
+  }
+
+  // 保存（任意：次回アクセス時も同じ）
+  try{
+    localStorage.setItem('sortKey', key);
+    localStorage.setItem('sortDir', dir);
+  }catch(e){}
+}
+
+// 初期反映（任意）
+(function initSortUI(){
+  try{
+    const k = localStorage.getItem('sortKey');
+    const d = localStorage.getItem('sortDir');
+    if (k && document.getElementById('sortKey')) document.getElementById('sortKey').value = k;
+    if (d && document.getElementById('sortDir')) document.getElementById('sortDir').value = d;
+  }catch(e){}
+  applySort();
+})();
+
+function openSectionFor(el){
+  const sec = el.closest('.category-section');
+  if (sec) sec.classList.remove('collapsed');
+}
+function ensureVisible(el){
+  if (el.style.display === 'none') el.style.display = '';
+}
+function scrollToNews(hash){
+  if (!hash || !hash.startsWith('#news-')) return false;
+  const el = document.querySelector(hash);
+  if (!el) return false;
+
+  openSectionFor(el);
+  ensureVisible(el);
+
+  const det = el.querySelector('details.insight');
+  if (det && !det.open) det.open = true;
+
+  requestAnimationFrame(() => {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  return true;
+}
+
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href^="#news-"]');
+  if (!a) return;
+  const hash = a.getAttribute('href');
+  if (scrollToNews(hash)) {
+    e.preventDefault();
+    history.replaceState(null, '', hash);
+  }
+});
+
+window.addEventListener('load', () => {
+  if (location.hash) scrollToNews(location.hash);
+});
+
+
+toggleAllCats();
 
 </script>
 
@@ -1047,15 +1344,6 @@ def _safe_json_list(s: str | None) -> List[str]:
         pass
     return []
 
-def _safe_json_any_list(s: str | None) -> List[Any]:
-    """list[Any] を想定（next_actions が dict 配列になる想定）"""
-    if not s:
-        return []
-    try:
-        v = json.loads(s)
-        return v if isinstance(v, list) else []
-    except Exception:
-        return []
 def load_categories_from_yaml() -> List[Dict[str, str]]:
     try:
         with open("src/sources.yaml", encoding="utf-8") as f:
@@ -1070,6 +1358,15 @@ def load_categories_from_yaml() -> List[Dict[str, str]]:
     except Exception:
         return []
     return []
+
+def _safe_json_obj(s: str | None) -> Dict[str, Any]:
+    if not s:
+        return {}
+    try:
+        v = json.loads(s)
+        return v if isinstance(v, dict) else {}
+    except Exception:
+        return {}
 
 def build_categories_fallback(cur) -> List[Dict[str, str]]:
     """
@@ -1111,30 +1408,42 @@ def render_news_pages(out_dir: Path, generated_at: str, cur) -> None:
     sections_jp = render_news_region_page(cur, "jp", limit_each=30, cutoff_dt=cutoff_48h_str)
     sections_gl = render_news_region_page(cur, "global", limit_each=30, cutoff_dt=cutoff_48h_str)
 
-        # --- techと同じ構成にするためのnews用データ ---
+    # --- techと同じ構成にするためのnews用データ ---
     # Top（最新）
     jp_top = fetch_news_articles(cur, "jp", 10)
     gl_top = fetch_news_articles(cur, "global", 10)
 
     def to_top_items(rows, region_label):
-        out = []
-        for r in rows:
-            # fetch_news_articles(region指定) の戻り: title,url,source,category,dt
-            title, url, source, category, dt = r
-            out.append({
-                "title": title,
-                "url": url,
-                "source": source,
-                "category": category or "other",
-                "region": region_label,
-                "dt": dt,
-                "dt_jst": fmt_date(dt),
-                "tags": [region_label, (category or "other"), source] if source else [region_label, (category or "other")],
-                "recent": 0,
-                "importance": 0,
-                "summary": f"{source} / {fmt_date(dt)}",
-            })
-        return out
+      out = []
+      for r in rows:
+          # fetch_news_articles(region指定) の戻り:
+          # title,url,source,category,dt,importance,tags,summary
+          article_id, title, url, source, category, dt, importance, tags, summary = r
+
+          imp = int(importance) if importance is not None else 0
+
+          llm_tags = _safe_json_list(tags)
+          if not llm_tags:
+              llm_tags = [region_label, (category or "other")]
+              if source:
+                  llm_tags.append(source)
+
+          out.append({
+              "id": int(article_id),
+              "title": title,
+              "url": url,
+              "source": source,
+              "category": category or "other",
+              "region": region_label,
+              "dt": dt,
+              "dt_jst": fmt_date(dt),
+              "tags": llm_tags,
+              "recent": 0,
+              "importance": imp,
+              "summary": (summary or "").strip() or f"{source} / {fmt_date(dt)}",
+          })
+      return out
+
 
     jp_top_items = to_top_items(jp_top, "jp")
     gl_top_items = to_top_items(gl_top, "global")
@@ -1193,10 +1502,32 @@ def render_news_pages(out_dir: Path, generated_at: str, cur) -> None:
             "rows": flatten(sections_gl, 999),
         },
     ]
+    # --- ここから差し替え ---
+
+    # # sections_jp / sections_gl は「NEWS_SECTIONS順の配列」なので
+    # # そのまま “カテゴリ別セクション” として使う（総合ページ用に地域プレフィックスだけ付ける）
+    # def with_prefix(sections, prefix, anchor_prefix):
+    #     out = []
+    #     for sec in sections:
+    #         out.append({
+    #             "anchor": f"{anchor_prefix}-{sec['anchor']}",         # 例: jp-manufacturing
+    #             "title": f"{prefix} {sec['title']}",                  # 例: 🇯🇵 製造業・鉄鋼...
+    #             "count": sec["count"],
+    #             "recent48": sec.get("recent48", 0),
+    #             "rows": sec.get("rows", []),
+    #         })
+    #     return out
+
+    # sections_all = (
+    #     with_prefix(sections_jp, "🇯🇵", "jp")
+    #     + with_prefix(sections_gl, "🌍", "global")
+    # )
+
+    # --- ここまで差し替え ---
 
 
     pages = [
-        ("news",   "ニュースダイジェスト（総合）", "ニュースダイジェスト（総合）", sections_all, "index.html"),
+        ("news",   "ニュースダイジェスト", "ニュースダイジェスト", sections_all, "index.html"),
     ]
 
     for page, title, heading, sections, filename in pages:
@@ -1246,10 +1577,39 @@ def render_news_region_page(cur, region, limit_each=30, cutoff_dt=None):
     sections = []
     for cat, title in NEWS_SECTIONS:
         rows = fetch_news_articles_by_category(cur, region, cat, limit_each)
-        items = [{
-            "title": r[0], "url": r[1], "source": r[2],
-            "dt_jst": fmt_date(r[4]),
-        } for r in rows]
+        items = []
+        for r in rows:
+            # fetch_news_articles_by_category() のSELECT順に合わせる
+            (
+                article_id, title, url, source, category, dt,
+                importance, typ, summary, key_points, perspectives, tags, evidence_urls
+            ) = r
+
+            # フィルタ/検索向けのタグは LLM tags を優先し、無い場合はフォールバック
+            llm_tags = _safe_json_list(tags)
+            if not llm_tags:
+                llm_tags = [region, (category or cat or "other")]
+                if source:
+                    llm_tags.append(source)
+
+            items.append({
+                "id": int(article_id),
+                "title": title,
+                "url": url,
+                "source": source,
+                "category": category or cat or "other",  # ←追加
+                "dt": dt,                                # ←追加（data-date用）
+                "dt_jst": fmt_date(dt),
+
+                # LLM結果
+                "importance": int(importance) if importance is not None else 0,
+                "type": typ or "",
+                "summary": summary or "",
+                "key_points": _safe_json_list(key_points),
+                "perspectives": _safe_json_obj(perspectives),
+                "tags": llm_tags,
+                "evidence_urls": _safe_json_list(evidence_urls),
+            })
 
         recent48 = 0
         if cutoff_dt:
@@ -1280,16 +1640,42 @@ def render_news_region_page(cur, region, limit_each=30, cutoff_dt=None):
 
 
 def fetch_news_articles(cur, region: str, limit: int = 60):
-    # region: ""(all) / "jp" / "global"
     if region:
         cur.execute(
             """
             SELECT
-              COALESCE(NULLIF(title,''), url) AS title,
+              articles.id AS article_id,
+              COALESCE(NULLIF(title_ja,''), NULLIF(title,''), url) AS title,
               url,
               COALESCE(NULLIF(source,''), '') AS source,
               COALESCE(NULLIF(category,''), '') AS category,
-              COALESCE(NULLIF(published_at,''), fetched_at) AS dt
+              COALESCE(NULLIF(published_at,''), fetched_at) AS dt,
+
+              (
+                SELECT i.importance
+                FROM topic_articles ta
+                JOIN topic_insights i ON i.topic_id = ta.topic_id
+                WHERE ta.article_id = articles.id
+                ORDER BY i.importance DESC, ta.topic_id DESC
+                LIMIT 1
+              ) AS importance,
+              (
+                SELECT i.tags
+                FROM topic_articles ta
+                JOIN topic_insights i ON i.topic_id = ta.topic_id
+                WHERE ta.article_id = articles.id
+                ORDER BY i.importance DESC, ta.topic_id DESC
+                LIMIT 1
+              ) AS tags,
+              (
+                SELECT i.summary
+                FROM topic_articles ta
+                JOIN topic_insights i ON i.topic_id = ta.topic_id
+                WHERE ta.article_id = articles.id
+                ORDER BY i.importance DESC, ta.topic_id DESC
+                LIMIT 1
+              ) AS summary
+
             FROM articles
             WHERE kind='news' AND region=?
             ORDER BY
@@ -1308,7 +1694,7 @@ def fetch_news_articles(cur, region: str, limit: int = 60):
         cur.execute(
             """
             SELECT
-              COALESCE(NULLIF(title,''), url) AS title,
+              COALESCE(NULLIF(title_ja,''), NULLIF(title,''), url) AS title,
               url,
               COALESCE(NULLIF(source,''), '') AS source,
               COALESCE(NULLIF(category,''), '') AS category,
@@ -1335,24 +1721,85 @@ def fetch_news_articles_by_category(cur, region: str, category: str, limit: int 
     cur.execute(
         """
         SELECT
-          COALESCE(NULLIF(title,''), url) AS title,
-          url,
-          COALESCE(NULLIF(source,''), '') AS source,
-          COALESCE(NULLIF(category,''), '') AS category,
-          COALESCE(NULLIF(published_at,''), fetched_at) AS dt
-        FROM articles
-        WHERE kind='news'
-          AND region=?
-          AND COALESCE(NULLIF(category,''), 'other')=?
+          a.id AS article_id,
+          COALESCE(NULLIF(a.title_ja,''), NULLIF(a.title,''), a.url) AS title,
+          a.url,
+          COALESCE(NULLIF(a.source,''), '') AS source,
+          COALESCE(NULLIF(a.category,''), '') AS category,
+          COALESCE(NULLIF(a.published_at,''), a.fetched_at) AS dt,
+
+          -- 代表insight（importanceが高いtopicを採用）
+          (
+            SELECT i.importance
+            FROM topic_articles ta
+            JOIN topic_insights i ON i.topic_id = ta.topic_id
+            WHERE ta.article_id = a.id
+            ORDER BY i.importance DESC, ta.topic_id DESC
+            LIMIT 1
+          ) AS importance,
+          (
+            SELECT i.type
+            FROM topic_articles ta
+            JOIN topic_insights i ON i.topic_id = ta.topic_id
+            WHERE ta.article_id = a.id
+            ORDER BY i.importance DESC, ta.topic_id DESC
+            LIMIT 1
+          ) AS type,
+          (
+            SELECT i.summary
+            FROM topic_articles ta
+            JOIN topic_insights i ON i.topic_id = ta.topic_id
+            WHERE ta.article_id = a.id
+            ORDER BY i.importance DESC, ta.topic_id DESC
+            LIMIT 1
+          ) AS summary,
+          (
+            SELECT i.key_points
+            FROM topic_articles ta
+            JOIN topic_insights i ON i.topic_id = ta.topic_id
+            WHERE ta.article_id = a.id
+            ORDER BY i.importance DESC, ta.topic_id DESC
+            LIMIT 1
+          ) AS key_points,
+          (
+            SELECT i.perspectives
+            FROM topic_articles ta
+            JOIN topic_insights i ON i.topic_id = ta.topic_id
+            WHERE ta.article_id = a.id
+            ORDER BY i.importance DESC, ta.topic_id DESC
+            LIMIT 1
+          ) AS perspectives,
+          (
+            SELECT i.tags
+            FROM topic_articles ta
+            JOIN topic_insights i ON i.topic_id = ta.topic_id
+            WHERE ta.article_id = a.id
+            ORDER BY i.importance DESC, ta.topic_id DESC
+            LIMIT 1
+          ) AS tags,
+          (
+            SELECT i.evidence_urls
+            FROM topic_articles ta
+            JOIN topic_insights i ON i.topic_id = ta.topic_id
+            WHERE ta.article_id = a.id
+            ORDER BY i.importance DESC, ta.topic_id DESC
+            LIMIT 1
+          ) AS evidence_urls
+
+        FROM articles a
+        WHERE a.kind='news'
+          AND a.region=?
+          AND COALESCE(NULLIF(a.category,''), 'other')=?
         ORDER BY
           datetime(
             substr(
-              replace(replace(COALESCE(NULLIF(published_at,''), fetched_at),'T',' '),'+00:00',''),
+              replace(replace(COALESCE(NULLIF(a.published_at,''), a.fetched_at),'T',' '),'+00:00',''),
               1, 19
             )
           ) DESC,
-          id DESC
+          a.id DESC
         LIMIT ?
+
         """,
         (region, category, limit),
     )
@@ -1395,17 +1842,21 @@ def main():
 
     # ★ ここを追加（完全決定順）
     categories = sorted(categories, key=lambda c: c["id"])
-    # カテゴリID → 表示名マップ（Global/Trending表示用）
-    cat_name = {c["id"]: c["name"] for c in categories}
 
-    LIMIT_PER_CAT = 20
-    HOT_TOP_N = 5
+    TECH_EXCLUDE = {"news"}
+    tech_categories = [c for c in categories if c["id"] not in TECH_EXCLUDE]
+
+    # tech側で使うのは tech_categories
+    cat_name = {c["id"]: c["name"] for c in tech_categories}
 
     topics_by_cat: Dict[str, List[Dict[str, Any]]] = {}
     hot_by_cat: Dict[str, List[Dict[str, Any]]] = {}
     cutoff_48h = (datetime.now(timezone.utc) - timedelta(hours=48)).isoformat(timespec="seconds")
 
-    for cat in categories:
+    LIMIT_PER_CAT = 20
+    HOT_TOP_N = 5
+
+    for cat in tech_categories:
         cat_id = cat["id"]
 
         # (A) 注目TOP5（48h増分、published_atベース）
@@ -1438,7 +1889,8 @@ def main():
                 FROM topics t
                 JOIN topic_articles ta ON ta.topic_id = t.id
                 JOIN articles a ON a.id = ta.article_id
-                WHERE t.category IS NULL OR t.category = ''
+                WHERE (t.category IS NULL OR t.category = '')
+                  AND COALESCE(t.category,'') <> 'news'
                 GROUP BY t.id
                 HAVING recent_count > 0
                 ORDER BY recent_count DESC, total_count DESC, t.id DESC
@@ -1478,6 +1930,7 @@ def main():
                 JOIN topic_articles ta ON ta.topic_id = t.id
                 JOIN articles a ON a.id = ta.article_id
                 WHERE t.category = ?
+                  AND COALESCE(t.category,'') <> 'news'
                 GROUP BY t.id
                 HAVING recent_count > 0
                 ORDER BY recent_count DESC, total_count DESC, t.id DESC
@@ -1559,13 +2012,12 @@ def main():
                   i.importance,
                   i.summary,
                   i.key_points,
-                  i.impact_guess,
-                  i.next_actions,
                   i.evidence_urls,
-                  i.tags
+                  i.tags,
+                  i.perspectives
                 FROM topics t
                 LEFT JOIN topic_insights i ON i.topic_id = t.id
-                WHERE t.category IS NULL OR t.category = ''
+                WHERE (t.category IS NULL OR t.category = '')
                 ORDER BY
                   COALESCE(i.importance, 0) DESC,
                   COALESCE(recent, 0) DESC,
@@ -1633,13 +2085,13 @@ def main():
                   i.importance,
                   i.summary,
                   i.key_points,
-                  i.impact_guess,
-                  i.next_actions,
                   i.evidence_urls,
-                  i.tags
+                  i.tags,
+                  i.perspectives
                 FROM topics t
                 LEFT JOIN topic_insights i ON i.topic_id = t.id
                 WHERE t.category = ?
+                  AND COALESCE(t.category,'') <> 'news'
                 ORDER BY
                   COALESCE(i.importance, 0) DESC,
                   COALESCE(recent, 0) DESC,
@@ -1653,7 +2105,7 @@ def main():
         rows = cur.fetchall()
         items: List[Dict[str, Any]] = []
         for r in rows:
-            tid, title, url, article_date, recent, importance, summary, key_points, impact_guess, next_actions, evidence_urls, tags = r
+            tid, title, url, article_date, recent, importance, summary, key_points, evidence_urls, tags, perspectives = r
             items.append(
                 {
                     "id": tid,
@@ -1664,10 +2116,9 @@ def main():
                     "importance": int(importance) if importance is not None else None,
                     "summary": summary or "",
                     "key_points": _safe_json_list(key_points),
-                    "impact_guess": impact_guess or "",
-                    "next_actions": _safe_json_any_list(next_actions),
                     "evidence_urls": _safe_json_list(evidence_urls),
                     "tags": _safe_json_list(tags),
+                    "perspectives": _safe_json_obj(perspectives),
                 }
             )
 
@@ -1747,13 +2198,13 @@ def main():
                   i.importance,
                   i.summary,
                   i.key_points,
-                  i.impact_guess,
-                  i.next_actions,
                   i.evidence_urls,
-                  i.tags
+                  i.tags,
+                  i.perspectives
                 FROM topics t
                 LEFT JOIN topic_insights i ON i.topic_id = t.id
                 WHERE (t.category IS NULL OR t.category = '')
+                  AND COALESCE(NULLIF(t.category,''), 'other') <> 'news'
                   AND t.id IN ({placeholders})
                 """
                 params = [cutoff_48h, *missing_ids]
@@ -1814,20 +2265,20 @@ def main():
                   i.importance,
                   i.summary,
                   i.key_points,
-                  i.impact_guess,
-                  i.next_actions,
                   i.evidence_urls,
-                  i.tags
+                  i.tags,
+                  i.perspectives
                 FROM topics t
                 LEFT JOIN topic_insights i ON i.topic_id = t.id
                 WHERE t.category = ?
+                  AND COALESCE(NULLIF(t.category,''), 'other') <> 'news'
                   AND t.id IN ({placeholders})
                 """
                 params = [cutoff_48h, cat_id, *missing_ids]
 
             cur.execute(sql_missing, params)
             for r in cur.fetchall():
-                tid, title, url, article_date, recent, importance, summary, key_points, impact_guess, next_actions, evidence_urls, tags = r
+                tid, title, url, article_date, recent, importance, summary, key_points, evidence_urls, tags, perspectives = r
                 items.append(
                     {
                         "id": tid,
@@ -1838,10 +2289,9 @@ def main():
                         "importance": int(importance) if importance is not None else None,
                         "summary": summary or "",
                         "key_points": _safe_json_list(key_points),
-                        "impact_guess": impact_guess or "",
-                        "next_actions": _safe_json_any_list(next_actions),
                         "evidence_urls": _safe_json_list(evidence_urls),
                         "tags": _safe_json_list(tags),
+                        "perspectives": _safe_json_obj(perspectives),
                     }
                 )
 
@@ -1868,13 +2318,13 @@ def main():
 
         topics_by_cat[cat_id] = items
 
-        all_tags = {}
-        for cat_id, items in topics_by_cat.items():
-            for t in items:
-                for tg in (t.get("tags") or []):
-                    all_tags[tg] = all_tags.get(tg, 0) + 1
-        tag_list = sorted(all_tags.items(), key=lambda x: (-x[1], x[0]))[:50]  # 上位50など
-        # --- UX改善①: 上部サマリー用meta ---
+    all_tags = {}
+    for cat_id, items in topics_by_cat.items():
+        for t in items:
+            for tg in (t.get("tags") or []):
+                all_tags[tg] = all_tags.get(tg, 0) + 1
+    tag_list = sorted(all_tags.items(), key=lambda x: (-x[1], x[0]))[:50]  # 上位50など
+    # --- UX改善①: 上部サマリー用meta ---
     runtime_sec = int(os.environ.get("RUNTIME_SEC", "0") or "0")
 
     # 記事総数（最終採用＝articlesテーブル件数）
@@ -1931,10 +2381,9 @@ def main():
     # --- UX改善①: カテゴリ横断TOP ---
     # Global Top 10: importance desc, recent desc, id asc（完全決定）
     TECH_CATS = {"ai", "dev", "security", "system", "manufacturing", "cloud", "data"}  # 必要に応じて調整
-    tech_cat_ids = [c.get("id") for c in categories if c.get("id") in TECH_CATS]
-    # もし TECH_CATS 側が空なら、other以外全部を技術扱いにフォールバック
+    tech_cat_ids = [c["id"] for c in tech_categories if c.get("id") in TECH_CATS]
     if not tech_cat_ids:
-        tech_cat_ids = [c.get("id") for c in categories if c.get("id") and c.get("id") != "other"]
+        tech_cat_ids = [c["id"] for c in tech_categories if c.get("id") and c.get("id") != "other"]
 
     ph = ",".join(["?"] * len(tech_cat_ids))
     cur.execute(
@@ -1972,7 +2421,12 @@ def main():
       (
         SELECT COALESCE(SUM(
           CASE
-            WHEN datetime(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at)) >= datetime(?) THEN 1
+            WHEN datetime(
+              substr(
+                replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
+                1, 19
+              )
+            ) >= datetime(?) THEN 1
             ELSE 0
           END
         ), 0)
@@ -1982,9 +2436,11 @@ def main():
       ) AS recent,
       i.importance,
       i.summary,
-      i.tags
+      i.tags,
+      i.perspectives
     FROM topics t
     LEFT JOIN topic_insights i ON i.topic_id = t.id
+    WHERE COALESCE(NULLIF(t.category,''), 'other') <> 'news'
     ORDER BY
       CASE
         WHEN COALESCE(NULLIF(t.category,''), 'other') IN ({ph}) THEN 1
@@ -1999,7 +2455,7 @@ def main():
 )
 
     global_top = []
-    for tid, title, category, url, article_date,recent, importance, summary, tags in cur.fetchall():
+    for tid, title, category, url, article_date,recent, importance, summary, tags, perspectives in cur.fetchall():
         global_top.append({
             "id": tid,
             "title": title,
@@ -2009,6 +2465,7 @@ def main():
             "importance": int(importance) if importance is not None else 0,
             "summary": summary or "",
             "tags": _safe_json_list(tags),
+            "perspectives": _safe_json_obj(perspectives),
             "one_liner": "",  # 今は空でOK（後で短文化したければ追加）
             "date": article_date,
         })
@@ -2063,13 +2520,19 @@ def main():
           ) AS recent,
           i.importance,
           i.summary,
-          i.tags
+          i.tags,
+          i.perspectives
         FROM topics t
         LEFT JOIN topic_insights i ON i.topic_id = t.id
         WHERE (
           SELECT COALESCE(SUM(
             CASE
-              WHEN datetime(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at)) >= datetime(?) THEN 1
+              WHEN datetime(
+                substr(
+                  replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
+                  1, 19
+                )
+              ) >= datetime(?) THEN 1
               ELSE 0
             END
           ), 0)
@@ -2077,13 +2540,14 @@ def main():
           JOIN articles a3 ON a3.id = ta3.article_id
           WHERE ta3.topic_id = t.id
         ) > 0
+          AND COALESCE(NULLIF(t.category,''), 'other') <> 'news'
         ORDER BY COALESCE(recent,0) DESC, COALESCE(i.importance,0) DESC, t.id ASC
         LIMIT 10
         """,
         (cutoff_48h, cutoff_48h),
     )
     trending_top = []
-    for tid, title, category, url, article_date, recent, importance, summary, tags in cur.fetchall():
+    for tid, title, category, url, article_date, recent, importance, summary, tags, perspectives in cur.fetchall():
         trending_top.append({
             "id": tid,
             "title": title,
@@ -2093,6 +2557,7 @@ def main():
             "importance": int(importance) if importance is not None else 0,
             "summary": summary or "",
             "tags": _safe_json_list(tags),
+            "perspectives": _safe_json_obj(perspectives),
             "one_liner": "",
             "date": article_date,
         })
@@ -2110,7 +2575,7 @@ def main():
         tech_extra_css=TECH_EXTRA_CSS,
         page="tech",
         nav_prefix="../",
-        categories=categories,
+        categories=tech_categories,
         cat_name=cat_name,
         topics_by_cat=topics_by_cat,
         hot_by_cat=hot_by_cat,
@@ -2127,7 +2592,7 @@ def main():
         tech_extra_css=TECH_EXTRA_CSS,
         page="tech",
         nav_prefix="./",
-        categories=categories,
+        categories=tech_categories,
         cat_name=cat_name,
         topics_by_cat=topics_by_cat,
         hot_by_cat=hot_by_cat,

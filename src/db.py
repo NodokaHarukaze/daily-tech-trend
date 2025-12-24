@@ -67,12 +67,27 @@ def init_db():
       impact_guess TEXT,
       next_actions TEXT,
       evidence_urls TEXT,
+      tags TEXT,
+      perspectives TEXT,          
       updated_at TEXT
     )
     """)
 
+    ensure_column(cur, "topic_insights", "tags", "TEXT")
+    ensure_column(cur, "topic_insights", "perspectives", "TEXT")
+    ensure_column(cur, "topic_insights", "evidence_urls", "TEXT")
+    ensure_column(cur, "topic_insights", "src_article_id", "INTEGER")
+    ensure_column(cur, "topic_insights", "src_hash", "TEXT")
+
+
     conn.commit()
     conn.close()
+
+def ensure_column(cur, table: str, col: str, coltype: str):
+    cur.execute(f"PRAGMA table_info({table})")
+    cols = {r[1] for r in cur.fetchall()}
+    if col not in cols:
+        cur.execute(f"ALTER TABLE {table} ADD COLUMN {col} {coltype}")
 
 
 def recompute_score_48h():

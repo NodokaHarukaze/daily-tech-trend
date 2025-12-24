@@ -28,7 +28,7 @@ def pick_topic_inputs(conn, limit=30):
     cur = conn.cursor()
 
     cutoff_48h = (datetime.now(timezone.utc) - timedelta(hours=48)).isoformat(timespec="seconds")
-
+    
     cur.execute("""
       SELECT
         t.id AS topic_id,
@@ -39,15 +39,9 @@ def pick_topic_inputs(conn, limit=30):
       FROM topics t
       JOIN topic_articles ta ON ta.topic_id = t.id
       JOIN articles a ON a.id = ta.article_id
-      LEFT JOIN topic_insights i ON i.topic_id = t.id
-      WHERE (
-            i.topic_id IS NULL
-         OR COALESCE(i.summary,'') = ''
-         OR COALESCE(i.key_points,'') = ''
-         OR COALESCE(i.key_points,'') = '[]'
-         OR COALESCE(i.next_actions,'') = ''
-         OR COALESCE(i.next_actions,'') = '[]'
-        )
+      LEFT JOIN topic_insights ti ON ti.topic_id = t.id
+      WHERE
+        ti.topic_id IS NULL
         AND (
           SELECT COALESCE(SUM(
             CASE
@@ -69,11 +63,13 @@ def pick_topic_inputs(conn, limit=30):
             datetime(a2.fetched_at) DESC,
             datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
             a2.url ASC
-          LIMIT ?
+          LIMIT 1
         )
+      LIMIT ?
     """, (cutoff_48h, limit))
 
     return cur.fetchall()
+
 
 
 def call_llm(topic_title, category, url, body):
@@ -87,18 +83,14 @@ def call_llm(topic_title, category, url, body):
       "出力はJSONのみ。JSON以外の文字（挨拶、説明、コードブロック、注釈）を一切出さない。"
       "必ず全フィールドを出力し、欠落や型違いは禁止。"
       "key_pointsは入力textに明記された事実のみ。推測・解釈・一般論は禁止。"
-      "impact_guessは推測可だが、推測が含まれる文は必ず文頭に『推測：』。"
-      "next_actionsは実行可能なタスクに限定し、actionは命令形、expected_outcomeは得られる成果を明示。"
       "evidence_urlsは必ず1つ以上で、入力のevidence_urlを必ず含める。"
-      "tagsは短い名詞、重複禁止、最大5"
-      "出力は必ずJSONオブジェクト1つのみ。"
-      "前後に文章や注釈、Markdown、コードフェンスは禁止。"
-      "必須キー: importance(int), summary(string)"
+      "tagsは1〜5個の配列。短い名詞。重複禁止。本文/要約から抽出。足りない場合は推測で補ってよい。"
+      "必須キー: importance(int), type(string), summary(string), key_points(array[3]), perspectives(object), tags(array[1..5]), evidence_urls(array[>=1])。"
+      "perspectivesの各コメントは推論可。"
+      "perspectivesは engineer/management/consumer の3キー固定。"
     )
 
-
-    user = {
-    
+    user = {    
         "topic_title": topic_title,
         "category": category,
         "evidence_url": url,
@@ -120,32 +112,21 @@ def call_llm(topic_title, category, url, body):
     "type": "security|release|research|incident|biz|other",
     "summary": "日本語180字以内の要約1行（結論→理由の順）",
     "key_points": [
-      "本文に明記された事実を3つ（各15〜40字、推測禁止）"
+      "本文に明記された事実1（15〜40字、推測禁止）",
+      "本文に明記された事実2（15〜40字、推測禁止）",
+      "本文に明記された事実3（15〜40字、推測禁止）"
     ],
-    "impact_guess": (
-      "影響・示唆。必要なら推測を含めてよいが、その場合は必ず文頭に『推測：』。"
-      "エンジニア視点/事業視点をそれぞれ1文ずつ（合計2文）"
-    ),
-    
-    "next_actions": [
-      {
-        "action": "次にやる具体アクション（命令形、25〜60字）",
-        "expected_outcome": "その結果得られるもの（名詞句中心、20〜60字）",
-        "priority": "now|next|later"
-      }
-    ],
-
     "perspectives": {
-      "sales": "営業視点コメント（40〜90字）",
-      "engineer": "技術者視点コメント（40〜90字）",
-      "management": "経営者視点コメント（40〜90字）"
+      "engineer": "技術者目線のコメント（推論）。100〜150字。",
+      "management": "経営者目線のコメント（推論）。100〜150字。",
+      "consumer": "消費者目線のコメント（推論）。100〜150字。"
     },
+
     "tags": [
       "1〜5個。短い名詞。本文/要約から抽出。足りない場合は推測で補ってよい（例: EU規制, 脆弱性, 鉄鋼, 脱炭素, 生成AI）"
     ],
     "evidence_urls": ["根拠URL（最低1つ）"]
-}
-
+    }
 
     payload = {
         "model": MODEL,
@@ -205,22 +186,20 @@ def upsert_insight(conn, topic_id, insight):
         type,
         summary,
         key_points,
-        impact_guess,
-        next_actions,
         evidence_urls,
         tags,
+        perspectives,
         updated_at
       )
-      VALUES (?,?,?,?,?,?,?,?,?,?)
+      VALUES (?,?,?,?,?,?,?,?,?)
       ON CONFLICT(topic_id) DO UPDATE SET
         importance=excluded.importance,
         type=excluded.type,
         summary=excluded.summary,
         key_points=excluded.key_points,
-        impact_guess=excluded.impact_guess,
-        next_actions=excluded.next_actions,
         evidence_urls=excluded.evidence_urls,
         tags=excluded.tags,
+        perspectives=excluded.perspectives,
         updated_at=excluded.updated_at
     """, (
         topic_id,
@@ -228,10 +207,9 @@ def upsert_insight(conn, topic_id, insight):
         insight.get("type", "other"),
         insight.get("summary", ""),
         json.dumps(insight.get("key_points", []), ensure_ascii=False),
-        insight.get("impact_guess", ""),
-        json.dumps(insight.get("next_actions", []), ensure_ascii=False),
         json.dumps(insight.get("evidence_urls", []), ensure_ascii=False),
-        json.dumps(insight.get("tags", []), ensure_ascii=False),  # ★ 追加
+        json.dumps(insight.get("tags", []), ensure_ascii=False),
+        json.dumps(insight.get("perspectives", {}), ensure_ascii=False),
         _now()
     ))
 
@@ -276,8 +254,8 @@ def main():
               "type": "other",
               "summary": "",
               "key_points": [],
-              "impact_guess": "",
-              "next_actions": [],
+              "tags": [],
+              "perspectives": {"engineer":"", "management":"", "consumer":""},
               "evidence_urls": [r["url"]],
           })
           conn.commit()
