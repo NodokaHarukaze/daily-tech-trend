@@ -316,15 +316,15 @@ a:hover{
     <div class="summary-grid">
       <div class="summary-item">
         <div class="k">Generated (JST)</div>
-        <div class="v">2026-01-20 22:08:11 JST</div>
+        <div class="v">2026-01-20 22:29:56 JST</div>
       </div>
       <div class="summary-item">
         <div class="k">Runtime</div>
-        <div class="v">-1768945388 sec</div>
+        <div class="v">102 sec</div>
       </div>
       <div class="summary-item">
         <div class="k">Articles</div>
-        <div class="v">2552 <span class="small">(new48h 219)</span></div>
+        <div class="v">2556 <span class="small">(new48h 223)</span></div>
       </div>
       <div class="summary-item">
         <div class="k">RSS Sources</div>
@@ -11419,7 +11419,7 @@ a:hover{
                 <span class="badge imp">重要度 45</span>
               
               
-                <a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-09" target="_blank" rel="noopener">シーメンスの産業用エッジデバイス</a>
+                <a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-08" target="_blank" rel="noopener">シーメンスの産業用エッジデバイス</a>
               
               
                 <span class="small">（2026/01/14 21:00）</span>
@@ -14131,6 +14131,22 @@ a:hover{
   </section>
   
 <script>
+// Safari対策：スクロール復元を抑止
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+function forceTopIfNoHash(){
+  if (!location.hash) window.scrollTo(0, 0);
+}
+
+// bfcache/戻る対策（Safariで重要）
+window.addEventListener('pageshow', () => {
+  forceTopIfNoHash();
+});
+
+// 通常ロード対策
+window.addEventListener('load', () => {
+  setTimeout(forceTopIfNoHash, 0);
+});
 const selectedTags = new Set(); // 複数タグ
 let tagMode = "AND";            // "AND" or "OR"
 const btn = document.getElementById('closeFloating');
@@ -14366,8 +14382,13 @@ function applySort(){
   }catch(e){}
   applySort();
 })();
-// 初期状態：カテゴリを折りたたむ（スマホ向け）
-toggleAllCats();
+window.addEventListener('load', () => {
+  // 先にトップ固定→その後に折りたたみ（ズレを減らす）
+  setTimeout(() => {
+    if (!location.hash) window.scrollTo(0, 0);
+    toggleAllCats();
+  }, 0);
+});
 
 </script>
 
