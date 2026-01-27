@@ -316,15 +316,15 @@ a:hover{
     <div class="summary-grid">
       <div class="summary-item">
         <div class="k">Generated (JST)</div>
-        <div class="v">2026-01-27 18:08:00 JST</div>
+        <div class="v">2026-01-27 20:03:30 JST</div>
       </div>
       <div class="summary-item">
         <div class="k">Runtime</div>
-        <div class="v">478 sec</div>
+        <div class="v">1498 sec</div>
       </div>
       <div class="summary-item">
         <div class="k">Articles</div>
-        <div class="v">3232 <span class="small">(new48h 244)</span></div>
+        <div class="v">3243 <span class="small">(new48h 248)</span></div>
       </div>
       <div class="summary-item">
         <div class="k">RSS Sources</div>
@@ -343,11 +343,11 @@ a:hover{
 
         
           <button class="btn" type="button" data-tag-btn="AI" onclick="toggleTag('AI')">
-            AI (24)
+            AI (25)
           </button>
         
           <button class="btn" type="button" data-tag-btn="脆弱性" onclick="toggleTag('脆弱性')">
-            脆弱性 (14)
+            脆弱性 (13)
           </button>
         
           <button class="btn" type="button" data-tag-btn="ai" onclick="toggleTag('ai')">
@@ -370,10 +370,6 @@ a:hover{
             Copilot (5)
           </button>
         
-          <button class="btn" type="button" data-tag-btn="EU" onclick="toggleTag('EU')">
-            EU (4)
-          </button>
-        
           <button class="btn" type="button" data-tag-btn="EU規制" onclick="toggleTag('EU規制')">
             EU規制 (4)
           </button>
@@ -384,6 +380,10 @@ a:hover{
         
           <button class="btn" type="button" data-tag-btn="風力発電" onclick="toggleTag('風力発電')">
             風力発電 (4)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="EU" onclick="toggleTag('EU')">
+            EU (3)
           </button>
         
           <button class="btn" type="button" data-tag-btn="S3" onclick="toggleTag('S3')">
@@ -402,10 +402,6 @@ a:hover{
             アップデート (3)
           </button>
         
-          <button class="btn" type="button" data-tag-btn="環境" onclick="toggleTag('環境')">
-            環境 (3)
-          </button>
-        
           <button class="btn" type="button" data-tag-btn="AgentCore" onclick="toggleTag('AgentCore')">
             AgentCore (2)
           </button>
@@ -414,12 +410,12 @@ a:hover{
             CLI (2)
           </button>
         
-          <button class="btn" type="button" data-tag-btn="CloudWatch" onclick="toggleTag('CloudWatch')">
-            CloudWatch (2)
+          <button class="btn" type="button" data-tag-btn="CVE" onclick="toggleTag('CVE')">
+            CVE (2)
           </button>
         
-          <button class="btn" type="button" data-tag-btn="DLL" onclick="toggleTag('DLL')">
-            DLL (2)
+          <button class="btn" type="button" data-tag-btn="CloudWatch" onclick="toggleTag('CloudWatch')">
+            CloudWatch (2)
           </button>
         
           <button class="btn" type="button" data-tag-btn="ETS" onclick="toggleTag('ETS')">
@@ -440,6 +436,10 @@ a:hover{
         
           <button class="btn" type="button" data-tag-btn="Python" onclick="toggleTag('Python')">
             Python (2)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="RE-CONNECT" onclick="toggleTag('RE-CONNECT')">
+            RE-CONNECT (2)
           </button>
         
           <button class="btn" type="button" data-tag-btn="SDK" onclick="toggleTag('SDK')">
@@ -484,6 +484,10 @@ a:hover{
         
           <button class="btn" type="button" data-tag-btn="制御システム" onclick="toggleTag('制御システム')">
             制御システム (2)
+          </button>
+        
+          <button class="btn" type="button" data-tag-btn="環境" onclick="toggleTag('環境')">
+            環境 (2)
           </button>
         
           <button class="btn" type="button" data-tag-btn=".NET" onclick="toggleTag('.NET')">
@@ -536,10 +540,6 @@ a:hover{
         
           <button class="btn" type="button" data-tag-btn="Bluetooth" onclick="toggleTag('Bluetooth')">
             Bluetooth (1)
-          </button>
-        
-          <button class="btn" type="button" data-tag-btn="CBAM" onclick="toggleTag('CBAM')">
-            CBAM (1)
           </button>
         
       </div>
@@ -663,6 +663,27 @@ a:hover{
           </li>
         
           <li class="topic-row"
+              data-title="CISA、悪用された既知の脆弱性 1 つをカタログに追加"
+              data-summary="CISAが3つの既知脆弱性をKEVカタログに追加し、連邦機関への対策期限を設定した。"
+              data-imp="45"
+              data-recent="1"
+              data-date="2026-01-26T12:00:00+00:00"
+              data-tags="KEV,CVE,連邦機関">
+            <span class="badge imp">重要度 45</span>
+            
+              <span class="badge recent ">
+                48h +1
+              </span>
+            
+            <a href="#topic-231">CISA、悪用された既知の脆弱性 1 つをカタログに追加</a>
+            <span class="date">2026/01/26 21:00</span>
+            
+              <span class="badge"><a href="#cat-security">セキュリティ</a></span>
+            
+            
+          </li>
+        
+          <li class="topic-row"
               data-title="AutomationDirect CLICK プログラマブル ロジック コントローラー"
               data-summary="AutomationDirect CLICK PLCに脆弱性があり、認証情報漏洩で権限昇格・データ解読が可能。"
               data-imp="45"
@@ -746,33 +767,34 @@ a:hover{
             
           </li>
         
-          <li class="topic-row"
-              data-title="JVN: Schneider Electric製EcoStruxure Process Expertにおけるインストール時のファイルアクセス権の設定がしっかりな脆弱性"
-              data-summary="Schneider ElectricのEcoStruxure Process Expertにインストール時ファイルアクセス権脆弱性が報告され、修正が必要。"
-              data-imp="45"
-              data-recent="1"
-              data-date="2026-01-26T00:30:40+00:00"
-              data-tags="脆弱性,ファイルアクセス権,EcoStruxure">
-            <span class="badge imp">重要度 45</span>
-            
-              <span class="badge recent ">
-                48h +1
-              </span>
-            
-            <a href="#topic-3469">JVN: Schneider Electric製EcoStruxure Process Expertにおけるインストール時のファイルアクセス権の設定がしっかりな脆弱性</a>
-            <span class="date">2026/01/26 09:30</span>
-            
-              <span class="badge"><a href="#cat-security">セキュリティ</a></span>
-            
-            
-          </li>
-        
       </ol>
     </div>
 
     <div class="top-col">
       <h3>🔥Trending（48h増分）</h3>
       <ol class="top-list">
+        
+          <li class="topic-row"
+              data-title="CISA、悪用された既知の脆弱性 1 つをカタログに追加"
+              data-summary="CISAが3つの既知脆弱性をKEVカタログに追加し、連邦機関への対策期限を設定した。"
+              data-imp="45"
+              data-recent="1"
+              data-date="2026-01-26T12:00:00+00:00"
+              data-tags="KEV,CVE,連邦機関">
+            <span class="badge imp">重要度 45</span>
+            
+              <span class="badge recent ">
+                48h +1
+              </span>
+            
+            <a href="#topic-231">CISA、悪用された既知の脆弱性 1 つをカタログに追加</a>
+            <span class="date">2026/01/26 21:00</span>
+            
+              <span class="badge"><a href="#cat-security">セキュリティ</a></span>
+            
+            
+
+          </li>
         
           <li class="topic-row"
               data-title="AutomationDirect CLICK プログラマブル ロジック コントローラー"
@@ -972,28 +994,6 @@ a:hover{
 
           </li>
         
-          <li class="topic-row"
-              data-title="JVN: Beat-access Windows版におけるDLL読み込みに関する脆弱性"
-              data-summary="富士フイルムビジネスイノベーションのbeat-access Windows版にDLL読み込み脆弱性が報告され、即時対応が必要。"
-              data-imp="45"
-              data-recent="1"
-              data-date="2026-01-27T03:00:00+00:00"
-              data-tags="脆弱性,DLL,Windows">
-            <span class="badge imp">重要度 45</span>
-            
-              <span class="badge recent ">
-                48h +1
-              </span>
-            
-            <a href="#topic-3602">JVN: Beat-access Windows版におけるDLL読み込みに関する脆弱性</a>
-            <span class="date">2026/01/27 12:00</span>
-            
-              <span class="badge"><a href="#cat-security">セキュリティ</a></span>
-            
-            
-
-          </li>
-        
       </ol>
     </div>
   </section>
@@ -1013,19 +1013,6 @@ a:hover{
       <h3>⭐注目TOP5（48h増分）</h3>
       
         <ul>
-          
-            <li>
-              <a href="#topic-3530">**NVIDIA Earth-2 オープン モデルは天気スタック全体に広がります**</a>
-              <span class="date">
-                2026/01/26 14:53
-              </span>
-              
-                <span class="badge recent ">
-                  48h +1
-                </span>
-              
-              <span class="small">（累計 1）</span>
-            </li>
           
             <li>
               <a href="#topic-3531">Totogi BSS Magic と Amazon Bedrock を使用して Totogi が変更リクエスト処理を自動化する方法</a>
@@ -1070,6 +1057,19 @@ a:hover{
               <a href="#topic-3578">GPT-OSS の Agentic RL トレーニングのロックを解除する: 実践的な振り返り</a>
               <span class="date">
                 2026/01/27 01:53
+              </span>
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
+              
+              <span class="small">（累計 1）</span>
+            </li>
+          
+            <li>
+              <a href="#topic-3634">Alyah ⭐️: アラビア語 LLM における首長国の方言能力の確実な評価に向けて</a>
+              <span class="date">
+                2026/01/27 10:26
               </span>
               
                 <span class="badge recent ">
@@ -3138,114 +3138,6 @@ a:hover{
 
           </li>
         
-           <li id="topic-3530" class="topic-row"
-              data-title="**NVIDIA Earth-2 オープン モデルは天気スタック全体に広がります**"
-              data-summary="NVIDIA Earth‑2 Open Modelsが発表され、天気スタック全体に拡散する見込み。"
-              data-imp="35"
-              data-recent="1"
-              data-date="2026-01-26T14:53:45+00:00"
-              data-tags="ai,earth-2,weather,open-models">
-            <div>
-              
-                <span class="badge imp">重要度 35</span>
-              
-              
-                <a href="https://huggingface.co/blog/nvidia/earth-2-open-models" target="_blank" rel="noopener">**NVIDIA Earth-2 オープン モデルは天気スタック全体に広がります**</a>
-              
-              
-                <span class="small">（2026/01/26 23:53）</span>
-              
-
-              
-                <span class="badge recent ">
-                  48h +1
-                </span>
-              
-              
-                <span class="small">
-                  
-                    <span class="badge">ai</span>
-                  
-                    <span class="badge">earth-2</span>
-                  
-                    <span class="badge">weather</span>
-                  
-                    <span class="badge">open-models</span>
-                  
-                </span>
-              
-            </div>
-
-            
-              <details class="insight">
-                <summary class="small">要約・解説を表示</summary>
-
-                
-                  <div><strong>要約</strong>：NVIDIA Earth‑2 Open Modelsが発表され、天気スタック全体に拡散する見込み。</div>
-                
-
-                
-                  <ul class="kps">
-                    
-                    
-                    
-                      
-                      
-                      
-                        
-                        
-                          <li>NVIDIAがEarth‑2 Open Modelsを公開したこと</li>
-                          
-                        
-                      
-                    
-                      
-                      
-                      
-                        
-                        
-                          <li>モデルは天気関連の技術スタックへ広がる予定である</li>
-                          
-                        
-                      
-                    
-                      
-                      
-                      
-                        
-                        
-                          <li>オープンソースとして提供される点が特徴的である</li>
-                          
-                        
-                      
-                    
-                    
-                  </ul>
-                
-
-                
-                <div class="perspectives">
-                  <div><b>技術者目線</b>: 既存天気解析システムへの統合検討が必要。</div>
-                  <div><b>経営者目線</b>: 市場拡大と競争優位性の強化に寄与する可能性あり。</div>
-                  <div><b>消費者目線</b>: ユーザーはより高精度な天候情報を期待できる。</div>
-                </div>
-                
-
-                
-
-                
-                  <div class="small" style="margin-top:6px;">
-                    根拠：
-                    
-                      <a href="https://huggingface.co/blog/nvidia/earth-2-open-models" target="_blank" rel="noopener">https://huggingface.co/blog/nvidia/earth-2-open-models</a>
-                    
-                  </div>
-                
-              </details>
-            
-
-          </li>
-        
            <li id="topic-3578" class="topic-row"
               data-title="GPT-OSS の Agentic RL トレーニングのロックを解除する: 実践的な振り返り"
               data-summary="GPT-OSS の Agentic RL トレーニングロックが解除され、実践的振り返りが報告された。"
@@ -3346,6 +3238,116 @@ a:hover{
                     根拠：
                     
                       <a href="https://huggingface.co/blog/LinkedIn/gpt-oss-agentic-rl" target="_blank" rel="noopener">https://huggingface.co/blog/LinkedIn/gpt-oss-agentic-rl</a>
+                    
+                  </div>
+                
+              </details>
+            
+
+          </li>
+        
+           <li id="topic-3634" class="topic-row"
+              data-title="Alyah ⭐️: アラビア語 LLM における首長国の方言能力の確実な評価に向けて"
+              data-summary="Alyah⭐️がアラビア語LLMの首長国方言評価を確実に行うため発表された。"
+              data-imp="35"
+              data-recent="1"
+              data-date="2026-01-27T10:26:42+00:00"
+              data-tags="ai,arabic,llm,dialect,evaluation">
+            <div>
+              
+                <span class="badge imp">重要度 35</span>
+              
+              
+                <a href="https://huggingface.co/blog/tiiuae/emirati-benchmarks" target="_blank" rel="noopener">Alyah ⭐️: アラビア語 LLM における首長国の方言能力の確実な評価に向けて</a>
+              
+              
+                <span class="small">（2026/01/27 19:26）</span>
+              
+
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
+              
+              
+                <span class="small">
+                  
+                    <span class="badge">ai</span>
+                  
+                    <span class="badge">arabic</span>
+                  
+                    <span class="badge">llm</span>
+                  
+                    <span class="badge">dialect</span>
+                  
+                    <span class="badge">evaluation</span>
+                  
+                </span>
+              
+            </div>
+
+            
+              <details class="insight">
+                <summary class="small">要約・解説を表示</summary>
+
+                
+                  <div><strong>要約</strong>：Alyah⭐️がアラビア語LLMの首長国方言評価を確実に行うため発表された。</div>
+                
+
+                
+                  <ul class="kps">
+                    
+                    
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>Alyah⭐️は新しいアラビア語LLMモデルである。</li>
+                          
+                        
+                      
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>本モデルは首長国（Emirati）方言の能力を評価することを目的としている。</li>
+                          
+                        
+                      
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>評価手法の詳細はHugging Faceブログに記載されている。</li>
+                          
+                        
+                      
+                    
+                    
+                  </ul>
+                
+
+                
+                <div class="perspectives">
+                  <div><b>技術者目線</b>: 実装時に方言データセットが必要になる可能性あり。</div>
+                  <div><b>経営者目線</b>: 市場拡大の機会となるが、リソース投入を検討する必要がある。</div>
+                  <div><b>消費者目線</b>: より正確な翻訳や対話体験が期待できる。</div>
+                </div>
+                
+
+                
+
+                
+                  <div class="small" style="margin-top:6px;">
+                    根拠：
+                    
+                      <a href="https://huggingface.co/blog/tiiuae/emirati-benchmarks" target="_blank" rel="noopener">https://huggingface.co/blog/tiiuae/emirati-benchmarks</a>
                     
                   </div>
                 
@@ -5465,6 +5467,58 @@ a:hover{
               <span class="small">（累計 1）</span>
             </li>
           
+            <li>
+              <a href="#topic-3630">導入</a>
+              <span class="date">
+                2026/01/27 10:19
+              </span>
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
+              
+              <span class="small">（累計 1）</span>
+            </li>
+          
+            <li>
+              <a href="#topic-3631">RE-CONNECTの専門家マッチング施設を通じて技術力を構築</a>
+              <span class="date">
+                2026/01/27 10:23
+              </span>
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
+              
+              <span class="small">（累計 1）</span>
+            </li>
+          
+            <li>
+              <a href="#topic-3632">経済システム研究の今後の特集号: エネルギー システム モデルと経済モデルの統合 - 理論的進歩と応用。</a>
+              <span class="date">
+                2026/01/27 10:26
+              </span>
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
+              
+              <span class="small">（累計 1）</span>
+            </li>
+          
+            <li>
+              <a href="#topic-3633">多分野のレンズを通して見るコンピューティングとデジタル化: エネルギー、資源、環境への将来の影響</a>
+              <span class="date">
+                2026/01/27 10:33
+              </span>
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
+              
+              <span class="small">（累計 1）</span>
+            </li>
+          
         </ul>
       
     </div>
@@ -5566,6 +5620,112 @@ a:hover{
                     根拠：
                     
                       <a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14666-Revision-of-EU-rules-on-sustainable-finance-disclosure_en" target="_blank" rel="noopener">https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14666-Revision-of-EU-rules-on-sustainable-finance-disclosure_en</a>
+                    
+                  </div>
+                
+              </details>
+            
+
+          </li>
+        
+           <li id="topic-3633" class="topic-row"
+              data-title="多分野のレンズを通して見るコンピューティングとデジタル化: エネルギー、資源、環境への将来の影響"
+              data-summary="AI・IoTの拡大でデータセンターやエネルギーシステム等のインフラが増加し、エネルギー消費と環境負荷に影響を与える。"
+              data-imp="45"
+              data-recent="1"
+              data-date="2026-01-27T10:33:16+00:00"
+              data-tags="AI,IoT,インフラ">
+            <div>
+              
+                <span class="badge imp">重要度 45</span>
+              
+              
+                <a href="https://ec.europa.eu/newsroom/clima/redirection/item/919651/en" target="_blank" rel="noopener">多分野のレンズを通して見るコンピューティングとデジタル化: エネルギー、資源、環境への将来の影響</a>
+              
+              
+                <span class="small">（2026/01/27 19:33）</span>
+              
+
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
+              
+              
+                <span class="small">
+                  
+                    <span class="badge">AI</span>
+                  
+                    <span class="badge">IoT</span>
+                  
+                    <span class="badge">インフラ</span>
+                  
+                </span>
+              
+            </div>
+
+            
+              <details class="insight">
+                <summary class="small">要約・解説を表示</summary>
+
+                
+                  <div><strong>要約</strong>：AI・IoTの拡大でデータセンターやエネルギーシステム等のインフラが増加し、エネルギー消費と環境負荷に影響を与える。</div>
+                
+
+                
+                  <ul class="kps">
+                    
+                    
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>AI・自動化・IoTが急速に社会経済を変革している</li>
+                          
+                        
+                      
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>データセンターやエネルギーシステム、水網、半導体製造などのインフラ拡大が進行中</li>
+                          
+                        
+                      
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>増加したインフラはエネルギー使用量と環境への影響を高める</li>
+                          
+                        
+                      
+                    
+                    
+                  </ul>
+                
+
+                
+                <div class="perspectives">
+                  <div><b>技術者目線</b>: 既存インフラ設計にAI・IoT対応を検討すべき。</div>
+                  <div><b>経営者目線</b>: 投資先のインフラ選定で環境コストを考慮する必要がある。</div>
+                  <div><b>消費者目線</b>: 日常生活でエネルギー消費増加に注意が必要。</div>
+                </div>
+                
+
+                
+
+                
+                  <div class="small" style="margin-top:6px;">
+                    根拠：
+                    
+                      <a href="https://ec.europa.eu/newsroom/clima/redirection/item/919651/en" target="_blank" rel="noopener">https://ec.europa.eu/newsroom/clima/redirection/item/919651/en</a>
                     
                   </div>
                 
@@ -6856,33 +7016,37 @@ a:hover{
 
           </li>
         
-           <li id="topic-1923" class="topic-row"
-              data-title="赤沢経済産業大臣が欧州委員会のセジュルネ副委員長とオンライン会談"
-              data-summary="赤沢経済産業大臣が欧州委員会副委員長とオンライン会談を行い、日欧の協力関係強化が期待される。"
+           <li id="topic-3631" class="topic-row"
+              data-title="RE-CONNECTの専門家マッチング施設を通じて技術力を構築"
+              data-summary="RE-CONNECT専門家マッチング施設が設立され、対象国の排出透明性・モデリング課題に対しアドホック支援を提供する。"
               data-imp="35"
-              data-recent="0"
-              data-date="2025-12-23T15:00:00+00:00"
-              data-tags="会談,EU,日本">
+              data-recent="1"
+              data-date="2026-01-27T10:23:41+00:00"
+              data-tags="RE-CONNECT,専門家マッチング,排出透明性">
             <div>
               
                 <span class="badge imp">重要度 35</span>
               
               
-                <a href="https://www.meti.go.jp/english/press/2025/1224_001.html" target="_blank" rel="noopener">赤沢経済産業大臣が欧州委員会のセジュルネ副委員長とオンライン会談</a>
+                <a href="https://ec.europa.eu/newsroom/clima/redirection/item/919648/en" target="_blank" rel="noopener">RE-CONNECTの専門家マッチング施設を通じて技術力を構築</a>
               
               
-                <span class="small">（2025/12/24 00:00）</span>
+                <span class="small">（2026/01/27 19:23）</span>
               
 
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
               
               
                 <span class="small">
                   
-                    <span class="badge">会談</span>
+                    <span class="badge">RE-CONNECT</span>
                   
-                    <span class="badge">EU</span>
+                    <span class="badge">専門家マッチング</span>
                   
-                    <span class="badge">日本</span>
+                    <span class="badge">排出透明性</span>
                   
                 </span>
               
@@ -6893,7 +7057,7 @@ a:hover{
                 <summary class="small">要約・解説を表示</summary>
 
                 
-                  <div><strong>要約</strong>：赤沢経済産業大臣が欧州委員会副委員長とオンライン会談を行い、日欧の協力関係強化が期待される。</div>
+                  <div><strong>要約</strong>：RE-CONNECT専門家マッチング施設が設立され、対象国の排出透明性・モデリング課題に対しアドホック支援を提供する。</div>
                 
 
                 
@@ -6906,7 +7070,7 @@ a:hover{
                       
                         
                         
-                          <li>赤沢経済産業大臣が12月19日にオンライン会談を実施した</li>
+                          <li>施設はRE-CONNECT対象国と現地チームへアドホックなピアまたは専門家サポートを提供する。</li>
                           
                         
                       
@@ -6916,7 +7080,7 @@ a:hover{
                       
                         
                         
-                          <li>会談相手は欧州委員会セジュルネ副委員長である</li>
+                          <li>主眼は排出透明性や国別モデリング・トランスペアレンシー課題に関する支援である。</li>
                           
                         
                       
@@ -6926,7 +7090,7 @@ a:hover{
                       
                         
                         
-                          <li>議題は日欧間の繁栄と産業戦略に関するものだった</li>
+                          <li>同施設は排出透明性およびモデリング問題の両方に対応している。</li>
                           
                         
                       
@@ -6937,9 +7101,9 @@ a:hover{
 
                 
                 <div class="perspectives">
-                  <div><b>技術者目線</b>: 技術的な協力が進む可能性を検討すべき。</div>
-                  <div><b>経営者目線</b>: 両国間のビジネスチャンス拡大を期待できる。</div>
-                  <div><b>消費者目線</b>: 消費者への直接影響は限定的だが、製品価格に波及する可能性あり。</div>
+                  <div><b>技術者目線</b>: 専門家マッチングで技術力向上が期待できる。</div>
+                  <div><b>経営者目線</b>: 組織の排出透明性強化に資する。</div>
+                  <div><b>消費者目線</b>: 消費者は企業の環境情報をより正確に把握できる。</div>
                 </div>
                 
 
@@ -6949,7 +7113,7 @@ a:hover{
                   <div class="small" style="margin-top:6px;">
                     根拠：
                     
-                      <a href="https://www.meti.go.jp/english/press/2025/1224_001.html" target="_blank" rel="noopener">https://www.meti.go.jp/english/press/2025/1224_001.html</a>
+                      <a href="https://ec.europa.eu/newsroom/clima/redirection/item/919648/en" target="_blank" rel="noopener">https://ec.europa.eu/newsroom/clima/redirection/item/919648/en</a>
                     
                   </div>
                 
@@ -6958,29 +7122,37 @@ a:hover{
 
           </li>
         
-           <li id="topic-2291" class="topic-row"
-              data-title="写真。"
-              data-summary="PICに関する詳細が不明のため、影響は限定的と判断される。"
+           <li id="topic-3632" class="topic-row"
+              data-title="経済システム研究の今後の特集号: エネルギー システム モデルと経済モデルの統合 - 理論的進歩と応用。"
+              data-summary="経済システム研究が統合モデリング特集号を発表し、エネルギー転換におけるマイクロ・マクロ連携課題を提示した。"
               data-imp="35"
-              data-recent="0"
-              data-date="2026-01-12T11:12:38+00:00"
-              data-tags="ニュース">
+              data-recent="1"
+              data-date="2026-01-27T10:26:46+00:00"
+              data-tags="研究,エネルギー,経済モデル">
             <div>
               
                 <span class="badge imp">重要度 35</span>
               
               
-                <a href="https://ec.europa.eu/newsroom/clima/redirection/item/917250/en" target="_blank" rel="noopener">写真。</a>
+                <a href="https://ec.europa.eu/newsroom/clima/redirection/item/919649/en" target="_blank" rel="noopener">経済システム研究の今後の特集号: エネルギー システム モデルと経済モデルの統合 - 理論的進歩と応用。</a>
               
               
-                <span class="small">（2026/01/12 20:12）</span>
+                <span class="small">（2026/01/27 19:26）</span>
               
 
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
               
               
                 <span class="small">
                   
-                    <span class="badge">ニュース</span>
+                    <span class="badge">研究</span>
+                  
+                    <span class="badge">エネルギー</span>
+                  
+                    <span class="badge">経済モデル</span>
                   
                 </span>
               
@@ -6991,7 +7163,7 @@ a:hover{
                 <summary class="small">要約・解説を表示</summary>
 
                 
-                  <div><strong>要約</strong>：PICに関する詳細が不明のため、影響は限定的と判断される。</div>
+                  <div><strong>要約</strong>：経済システム研究が統合モデリング特集号を発表し、エネルギー転換におけるマイクロ・マクロ連携課題を提示した。</div>
                 
 
                 
@@ -7004,7 +7176,7 @@ a:hover{
                       
                         
                         
-                          <li>情報なし</li>
+                          <li>統合モデリングフレームワークの進展を目指す特集号が開始された</li>
                           
                         
                       
@@ -7014,7 +7186,7 @@ a:hover{
                       
                         
                         
-                          <li>情報なし</li>
+                          <li>マイクロレベルのエネルギー意思決定とマクロ経済影響の橋渡しに課題がある</li>
                           
                         
                       
@@ -7024,105 +7196,7 @@ a:hover{
                       
                         
                         
-                          <li>情報なし</li>
-                          
-                        
-                      
-                    
-                    
-                  </ul>
-                
-
-                
-                <div class="perspectives">
-                  <div><b>技術者目線</b>: 現状把握できず検証不可。</div>
-                  <div><b>経営者目線</b>: リスク低いが確認要。</div>
-                  <div><b>消費者目線</b>: 利用者への影響は想定しない。</div>
-                </div>
-                
-
-                
-
-                
-                  <div class="small" style="margin-top:6px;">
-                    根拠：
-                    
-                      <a href="https://ec.europa.eu/newsroom/clima/redirection/item/917250/en" target="_blank" rel="noopener">https://ec.europa.eu/newsroom/clima/redirection/item/917250/en</a>
-                    
-                  </div>
-                
-              </details>
-            
-
-          </li>
-        
-           <li id="topic-2294" class="topic-row"
-              data-title="なぜ参加するのでしょうか？"
-              data-summary="環境関連の参加を促す呼びかけが行われた。"
-              data-imp="35"
-              data-recent="0"
-              data-date="2026-01-15T16:14:11+00:00"
-              data-tags="環境">
-            <div>
-              
-                <span class="badge imp">重要度 35</span>
-              
-              
-                <a href="https://ec.europa.eu/newsroom/clima/redirection/item/917976/en" target="_blank" rel="noopener">なぜ参加するのでしょうか？</a>
-              
-              
-                <span class="small">（2026/01/16 01:14）</span>
-              
-
-              
-              
-                <span class="small">
-                  
-                    <span class="badge">環境</span>
-                  
-                </span>
-              
-            </div>
-
-            
-              <details class="insight">
-                <summary class="small">要約・解説を表示</summary>
-
-                
-                  <div><strong>要約</strong>：環境関連の参加を促す呼びかけが行われた。</div>
-                
-
-                
-                  <ul class="kps">
-                    
-                    
-                    
-                      
-                      
-                      
-                        
-                        
-                          <li>本文に明記された事実1</li>
-                          
-                        
-                      
-                    
-                      
-                      
-                      
-                        
-                        
-                          <li>本文に明記された事実2</li>
-                          
-                        
-                      
-                    
-                      
-                      
-                      
-                        
-                        
-                          <li>本文に明記された事実3</li>
+                          <li>高次元問題管理やスケール・構造整合性が主要な技術的障壁である</li>
                           
                         
                       
@@ -7133,9 +7207,9 @@ a:hover{
 
                 
                 <div class="perspectives">
-                  <div><b>技術者目線</b>: 技術的な詳細は示されていないため、影響は不明。</div>
-                  <div><b>経営者目線</b>: 参加のメリットが明確でないため、投資判断は難しい。</div>
-                  <div><b>消費者目線</b>: 消費者への具体的な恩恵は記載されていない。</div>
+                  <div><b>技術者目線</b>: 既存モデルへの統合は計算リソース増大を要するが、精度向上の可能性がある。</div>
+                  <div><b>経営者目線</b>: 投資判断に影響し得るため、研究動向を注視すべき。</div>
+                  <div><b>消費者目線</b>: エネルギー政策の透明性向上につながる期待が持てる。</div>
                 </div>
                 
 
@@ -7145,7 +7219,7 @@ a:hover{
                   <div class="small" style="margin-top:6px;">
                     根拠：
                     
-                      <a href="https://ec.europa.eu/newsroom/clima/redirection/item/917976/en" target="_blank" rel="noopener">https://ec.europa.eu/newsroom/clima/redirection/item/917976/en</a>
+                      <a href="https://ec.europa.eu/newsroom/clima/redirection/item/919649/en" target="_blank" rel="noopener">https://ec.europa.eu/newsroom/clima/redirection/item/919649/en</a>
                     
                   </div>
                 
@@ -7548,6 +7622,112 @@ a:hover{
                     根拠：
                     
                       <a href="https://climate.ec.europa.eu/eu-action/climate-disinformation_en" target="_blank" rel="noopener">https://climate.ec.europa.eu/eu-action/climate-disinformation_en</a>
+                    
+                  </div>
+                
+              </details>
+            
+
+          </li>
+        
+           <li id="topic-3630" class="topic-row"
+              data-title="導入"
+              data-summary="RE-CONNECTプロジェクトが隔月で気候モデリング情報ニュースレターを配信し、最新動向を共有する。"
+              data-imp="20"
+              data-recent="1"
+              data-date="2026-01-27T10:19:57+00:00"
+              data-tags="ニュース,気候モデリング,RE-CONNECT">
+            <div>
+              
+                <span class="badge imp">重要度 20</span>
+              
+              
+                <a href="https://ec.europa.eu/newsroom/clima/redirection/item/919644/en" target="_blank" rel="noopener">導入</a>
+              
+              
+                <span class="small">（2026/01/27 19:19）</span>
+              
+
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
+              
+              
+                <span class="small">
+                  
+                    <span class="badge">ニュース</span>
+                  
+                    <span class="badge">気候モデリング</span>
+                  
+                    <span class="badge">RE-CONNECT</span>
+                  
+                </span>
+              
+            </div>
+
+            
+              <details class="insight">
+                <summary class="small">要約・解説を表示</summary>
+
+                
+                  <div><strong>要約</strong>：RE-CONNECTプロジェクトが隔月で気候モデリング情報ニュースレターを配信し、最新動向を共有する。</div>
+                
+
+                
+                  <ul class="kps">
+                    
+                    
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>RE-CONNECT Climate Change Modelling Information Newsletterは隔月で配信される。</li>
+                          
+                        
+                      
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>グローバルな気候モデリングコミュニティの最近の進展に関する定期的な更新が提供される。</li>
+                          
+                        
+                      
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>ニュースレターはRE-CONNECTプロジェクトの一環として発行されている。</li>
+                          
+                        
+                      
+                    
+                    
+                  </ul>
+                
+
+                
+                <div class="perspectives">
+                  <div><b>技術者目線</b>: 気候モデリングの最新情報を把握できるが、実装への直接影響は少ない。</div>
+                  <div><b>経営者目線</b>: 業界動向を追うことで戦略策定に役立つ。</div>
+                  <div><b>消費者目線</b>: 専門知識がなくても概要を得られる。</div>
+                </div>
+                
+
+                
+
+                
+                  <div class="small" style="margin-top:6px;">
+                    根拠：
+                    
+                      <a href="https://ec.europa.eu/newsroom/clima/redirection/item/919644/en" target="_blank" rel="noopener">https://ec.europa.eu/newsroom/clima/redirection/item/919644/en</a>
                     
                   </div>
                 
@@ -9783,9 +9963,9 @@ a:hover{
         <ul>
           
             <li>
-              <a href="#topic-3226">AutomationDirect CLICK プログラマブル ロジック コントローラー</a>
+              <a href="#topic-231">CISA、悪用された既知の脆弱性 1 つをカタログに追加</a>
               <span class="date">
-                2026/01/26 00:30
+                2026/01/26 12:00
               </span>
               
                 <span class="badge recent ">
@@ -9796,7 +9976,7 @@ a:hover{
             </li>
           
             <li>
-              <a href="#topic-3469">JVN: Schneider Electric製EcoStruxure Process Expertにおけるインストール時のファイルアクセス権の設定がしっかりな脆弱性</a>
+              <a href="#topic-3226">AutomationDirect CLICK プログラマブル ロジック コントローラー</a>
               <span class="date">
                 2026/01/26 00:30
               </span>
@@ -9805,7 +9985,7 @@ a:hover{
                   48h +1
                 </span>
               
-              <span class="small">（累計 1）</span>
+              <span class="small">（累計 2）</span>
             </li>
           
             <li>
@@ -10244,6 +10424,112 @@ a:hover{
                     根拠：
                     
                       <a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-05" target="_blank" rel="noopener">https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-05</a>
+                    
+                  </div>
+                
+              </details>
+            
+
+          </li>
+        
+           <li id="topic-231" class="topic-row"
+              data-title="CISA、悪用された既知の脆弱性 1 つをカタログに追加"
+              data-summary="CISAが3つの既知脆弱性をKEVカタログに追加し、連邦機関への対策期限を設定した。"
+              data-imp="45"
+              data-recent="1"
+              data-date="2026-01-26T12:00:00+00:00"
+              data-tags="KEV,CVE,連邦機関">
+            <div>
+              
+                <span class="badge imp">重要度 45</span>
+              
+              
+                <a href="https://www.cisa.gov/news-events/alerts/2026/01/26/cisa-adds-five-known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA、悪用された既知の脆弱性 1 つをカタログに追加</a>
+              
+              
+                <span class="small">（2026/01/26 21:00）</span>
+              
+
+              
+                <span class="badge recent ">
+                  48h +1
+                </span>
+              
+              
+                <span class="small">
+                  
+                    <span class="badge">KEV</span>
+                  
+                    <span class="badge">CVE</span>
+                  
+                    <span class="badge">連邦機関</span>
+                  
+                </span>
+              
+            </div>
+
+            
+              <details class="insight">
+                <summary class="small">要約・解説を表示</summary>
+
+                
+                  <div><strong>要約</strong>：CISAが3つの既知脆弱性をKEVカタログに追加し、連邦機関への対策期限を設定した。</div>
+                
+
+                
+                  <ul class="kps">
+                    
+                    
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>CISAはCVE-2025-20393をKEVに追加した。</li>
+                          
+                        
+                      
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>CVE-2025-40602とCVE-59374も同様にリストアップされた。</li>
+                          
+                        
+                      
+                    
+                      
+                      
+                      
+                        
+                        
+                          <li>BOD 22-01は連邦機関に対し期限内の修復を義務付けている。</li>
+                          
+                        
+                      
+                    
+                    
+                  </ul>
+                
+
+                
+                <div class="perspectives">
+                  <div><b>技術者目線</b>: 即時パッチ適用が必要。</div>
+                  <div><b>経営者目線</b>: 法令遵守とリスク低減が求められる。</div>
+                  <div><b>消費者目線</b>: セキュリティ強化で安心できる。</div>
+                </div>
+                
+
+                
+
+                
+                  <div class="small" style="margin-top:6px;">
+                    根拠：
+                    
+                      <a href="https://www.cisa.gov/news-events/alerts/2025/12/17/cisa-adds-three-known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">https://www.cisa.gov/news-events/alerts/2025/12/17/cisa-adds-three-known-exploited-vulnerabilities-catalog</a>
                     
                   </div>
                 
@@ -10878,108 +11164,6 @@ a:hover{
                     根拠：
                     
                       <a href="https://jvn.jp/jp/JVN03776126/" target="_blank" rel="noopener">https://jvn.jp/jp/JVN03776126/</a>
-                    
-                  </div>
-                
-              </details>
-            
-
-          </li>
-        
-           <li id="topic-3179" class="topic-row"
-              data-title="JVN: 複数のPioneer製品のインストーラーにおけるDLL読み込みに関する脆弱性"
-              data-summary="パイオニア製品のインストーラーにDLL読み込み脆弱性が報告され、修正が必要と判断される。"
-              data-imp="45"
-              data-recent="0"
-              data-date="2026-01-23T02:30:00+00:00"
-              data-tags="脆弱性,Pioneer,DLL">
-            <div>
-              
-                <span class="badge imp">重要度 45</span>
-              
-              
-                <a href="https://jvn.jp/vu/JVNVU93474119/" target="_blank" rel="noopener">JVN: 複数のPioneer製品のインストーラーにおけるDLL読み込みに関する脆弱性</a>
-              
-              
-                <span class="small">（2026/01/23 11:30）</span>
-              
-
-              
-              
-                <span class="small">
-                  
-                    <span class="badge">脆弱性</span>
-                  
-                    <span class="badge">Pioneer</span>
-                  
-                    <span class="badge">DLL</span>
-                  
-                </span>
-              
-            </div>
-
-            
-              <details class="insight">
-                <summary class="small">要約・解説を表示</summary>
-
-                
-                  <div><strong>要約</strong>：パイオニア製品のインストーラーにDLL読み込み脆弱性が報告され、修正が必要と判断される。</div>
-                
-
-                
-                  <ul class="kps">
-                    
-                    
-                    
-                      
-                      
-                      
-                        
-                        
-                          <li>複数のPioneer製品のインストーラーにDLL読み込み脆弱性が存在すること</li>
-                          
-                        
-                      
-                    
-                      
-                      
-                      
-                        
-                        
-                          <li>脆弱性はパイオニア株式会社が提供する製品で発見されたこと</li>
-                          
-                        
-                      
-                    
-                      
-                      
-                      
-                        
-                        
-                          <li>対策としてインストーラの修正が必要とされること</li>
-                          
-                        
-                      
-                    
-                    
-                  </ul>
-                
-
-                
-                <div class="perspectives">
-                  <div><b>技術者目線</b>: 既存インストーラーに影響あり、即時検証が必須。</div>
-                  <div><b>経営者目線</b>: 顧客信頼維持のため迅速なパッチ配布を要する。</div>
-                  <div><b>消費者目線</b>: 安全性向上のためアップデートを推奨される。</div>
-                </div>
-                
-
-                
-
-                
-                  <div class="small" style="margin-top:6px;">
-                    根拠：
-                    
-                      <a href="https://jvn.jp/jp/JVN17956874/" target="_blank" rel="noopener">https://jvn.jp/jp/JVN17956874/</a>
                     
                   </div>
                 
