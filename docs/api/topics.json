@@ -1,7 +1,367 @@
 {
-  "generated_at": "2026-07-24T21:39:13+00:00",
+  "generated_at": "2026-07-25T00:35:04+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 36474,
+      "title": "ギブソンタンカーレポート – 構造チェックメイト",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:31:31.877867+00:00"
+    },
+    {
+      "id": 36403,
+      "title": "英国の小売売上高が予想外に増加",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:31:23.147667+00:00"
+    },
+    {
+      "id": 36475,
+      "title": "GMS 第 30 週 – 粗雑なクロス、水は引いた",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:31:14.447625+00:00"
+    },
+    {
+      "id": 36328,
+      "title": "ICCトップ検察官、性的違法行為疑惑で解任",
+      "category": "news",
+      "importance": 54,
+      "summary": "ICCトップ検察官、性的違法行為疑惑で解任",
+      "updated_at": "2026-07-25T00:31:05.703234+00:00"
+    },
+    {
+      "id": 36446,
+      "title": "キーウ郊外にミサイル、１０人死亡　ウクライナはロシア中部攻撃",
+      "category": "news",
+      "importance": 70,
+      "summary": "キーウ郊外にマイル、１０人死亡 ウクライナはロシア中部攻撃",
+      "updated_at": "2026-07-25T00:30:57.323280+00:00"
+    },
+    {
+      "id": 36404,
+      "title": "英国の工場状況は7月に改善",
+      "category": "market",
+      "importance": 60,
+      "summary": "英国の製造業PMIが7月に上昇し、拡大が継続。市場環境改善が要因。",
+      "updated_at": "2026-07-25T00:30:48.929850+00:00"
+    },
+    {
+      "id": 36476,
+      "title": "バイヤーがオーストラリアのブランドを再評価する中、海上鉄鉱石市場は第3四半期の圧力を和らげる",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:30:37.272709+00:00"
+    },
+    {
+      "id": 36445,
+      "title": "フランスとスペインで14万人以上が避難、マドリッドの山火事の鎮火に消防士らが苦戦",
+      "category": "news",
+      "importance": 54,
+      "summary": "フランスとスペインで14万人以上が避難、マドリッドの山火事の鎮火に消防士らが苦戦",
+      "updated_at": "2026-07-25T00:30:28.437575+00:00"
+    },
+    {
+      "id": 36449,
+      "title": "東北や新潟県 非常に激しい雨のおそれ 各地で危険な暑さも",
+      "category": "news",
+      "importance": 70,
+      "summary": "東北や新潟県非常に激しい雨の予報各地で危険な暑さもあります",
+      "updated_at": "2026-07-25T00:30:14.822833+00:00"
+    },
+    {
+      "id": 36405,
+      "title": "ドイツの消費者ムードが予想外に弱まる",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:30:01.100795+00:00"
+    },
+    {
+      "id": 36477,
+      "title": "海運業のEU ETSにおける炭素コストの「償還権」はほとんど法的強制力がないことが新たな研究で判明",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:29:52.339797+00:00"
+    },
+    {
+      "id": 36450,
+      "title": "Anthropic、「Claude Opus 5」公開 Fable 5に保留性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも",
+      "category": "news",
+      "importance": 60,
+      "summary": "Anthropic、「Claude Opus 5」公開 Fable 5に保留性能を半額で――サイバー安全策は緩和、拒否時は自動フォールバックも",
+      "updated_at": "2026-07-25T00:29:43.645451+00:00"
+    },
+    {
+      "id": 36327,
+      "title": "ヨルダン川西岸銃乱射事件でパレスチナ人4人とイスラエル人2人が死亡",
+      "category": "news",
+      "importance": 54,
+      "summary": "ヨルダン川西岸銃乱射事件でパレスチナ人4人とイスラエル人2人が死亡",
+      "updated_at": "2026-07-25T00:29:30.016406+00:00"
+    },
+    {
+      "id": 36406,
+      "title": "ドイツのPMIは製造業の好調を受けて7月に成長に戻る",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:29:21.682949+00:00"
+    },
+    {
+      "id": 36480,
+      "title": "タンカー市場：サウジアラビアの石油輸出が大幅に減少",
+      "category": "market",
+      "importance": 60,
+      "summary": "サウジアラビアの原油輸出が2026年上半期に大幅減少し、海",
+      "updated_at": "2026-07-25T00:29:12.938399+00:00"
+    },
+    {
+      "id": 36448,
+      "title": "米大統領“大規模攻撃の準備万端もイラン側と話し合っている”",
+      "category": "news",
+      "importance": 70,
+      "summary": "米大統領「大規模攻撃の準備万端もイラン側と話し合っている」",
+      "updated_at": "2026-07-25T00:29:02.180587+00:00"
+    },
+    {
+      "id": 36444,
+      "title": "ゼレンスキー氏、国防相解任をめぐる危機解決に努め、そのコストを計算",
+      "category": "news",
+      "importance": 75,
+      "summary": "ゼレンスキー氏は国防相メイハイル・フェドロフを解任し、抗議が続いている。",
+      "updated_at": "2026-07-25T00:28:48.516029+00:00"
+    },
+    {
+      "id": 36407,
+      "title": "インドの製造業の伸びは6月に鈍化",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:28:40.194730+00:00"
+    },
+    {
+      "id": 36481,
+      "title": "Xeneta 海上コンテナ輸送市場の週刊最新情報: 料金は引き続き軟化",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:28:31.498236+00:00"
+    },
+    {
+      "id": 36442,
+      "title": "「犬たちは怒っていた」：LAバンドのムナは史上最悪のライブをどうやって乗り切ったのか",
+      "category": "news",
+      "importance": 54,
+      "summary": "「犬たちは怒っていた」：LAバンドのムナは史上最悪のライブをどうやって乗り切ったのか",
+      "updated_at": "2026-07-25T00:28:22.705403+00:00"
+    },
+    {
+      "id": 36451,
+      "title": "「上下２階建てカメラ」の実力は？ 「OsmoPocket 4P」は撮影の幅を大胆に広げたジンバルカメラだった",
+      "category": "news",
+      "importance": 60,
+      "summary": "「上下２階建てカメラ」の実力は？ 「OsmoPocket 4P」は撮影の幅を大胆に広げたジンバルカメラだった",
+      "updated_at": "2026-07-25T00:28:14.311364+00:00"
+    },
+    {
+      "id": 36408,
+      "title": "米国の新築住宅販売が回復",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:28:00.669761+00:00"
+    },
+    {
+      "id": 36453,
+      "title": "「165日→30分」に短縮 「1万9000人の全社RAG」 大企業が明かすAI共通基盤のリアル",
+      "category": "policy",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:27:51.911084+00:00"
+    },
+    {
+      "id": 36443,
+      "title": "警告射撃や宣伝行為 - OpenAI ハッキングについてどの程度心配すべきでしょうか?",
+      "category": "news",
+      "importance": 54,
+      "summary": "警告射撃や宣伝行為 - OpenAI ハッキングについてどの程度心配すべきでしょうか?",
+      "updated_at": "2026-07-25T00:27:43.194120+00:00"
+    },
+    {
+      "id": 36447,
+      "title": "PORTER、JJJJoundとコラボバックパック・メッセンジャー",
+      "category": "security",
+      "importance": 64,
+      "summary": "PORTER、JJJJoundとコラボバックパック・メッセンジャー",
+      "updated_at": "2026-07-25T00:27:29.540049+00:00"
+    },
+    {
+      "id": 36409,
+      "title": "米国の事業活動の伸びが8か月ぶりの高水準に加速",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:27:21.057240+00:00"
+    },
+    {
+      "id": 36482,
+      "title": "ホルムズ海峡閉鎖でスーパーマーケットの価格はすでに高騰中",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-25T00:27:12.197865+00:00"
+    },
+    {
+      "id": 36452,
+      "title": "仕事外のネット利用「平日4時間以上」で抑うつ傾向　富山大が調査",
+      "category": "news",
+      "importance": 60,
+      "summary": "仕事外のネット利用「平日４時間以上」でうつ病傾向 富山大が調査",
+      "updated_at": "2026-07-25T00:27:03.471981+00:00"
+    },
+    {
+      "id": 36331,
+      "title": "キエフ近くのドローン展示会へのロシアの攻撃で10人死亡",
+      "category": "news",
+      "importance": 80,
+      "summary": "ロシアがキエフ近くのドローン展示会をミサイルで攻撃し、10人が死亡した。",
+      "updated_at": "2026-07-25T00:26:54.874669+00:00"
+    },
+    {
+      "id": 36440,
+      "title": "動画: スパイダーマンに扮した運転手が車椅子の男性を車で交通量の多い道路を横切る",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36441,
+      "title": "動画: スペインとフランスで山火事が猛威を振るう",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36454,
+      "title": "令和８年度多摩川水系上下流交流会の参加者を募集します ～いつも飲んでいる水道水の“はじまり”を知りたくないですか？～",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36455,
+      "title": "東京の海辺で夜景とゴルフを。若洲ゴルフリンクスでナイター営業を実施！",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36456,
+      "title": "再犯防止に関するオンライン研修会を開催します！",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36462,
+      "title": "高度な配送と取引 – 週間配送市場レポート 2026 年第 30 週",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36463,
+      "title": "Mintra が EU AI 法の準備を支援するオンライン トレーニングを開始",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36464,
+      "title": "VHBS 新しい ConTex コンテナ船タイムチャーター評価指数第 30 週",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36465,
+      "title": "韓国-米国韓国企業が共同プロジェクトを強化、造船パートナーシップセンターを開設",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36466,
+      "title": "密閉空間の安全には訓練内容の改訂だけでは不十分だとMarinePALSが警告",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36467,
+      "title": "TEN Ltd.、韓国サムスン重工業に発注したDP2シャトルタンカー12隻シリーズの3隻目の納入と命名を発表",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36468,
+      "title": "ホルムズ海峡の海運リスク：民間事業者が警戒を続ける理由",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36469,
+      "title": "WSC: EC 提案は責任あるシップリサイクルへの実績ベースのアプローチを強化",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36470,
+      "title": "フーシ派の「封鎖」主張はでっち上げ、船舶攻撃は「海賊行為」であるとサウジアラビアが国連安全保障理事会に発言",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36472,
+      "title": "ドルーリー氏: 先週の世界コンテナ指数は4%下落",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
+    {
+      "id": 36473,
+      "title": "代替燃料週間: EU、電子燃料の割り当てを省略",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-25T00:14:22.559252+00:00"
+    },
     {
       "id": 36342,
       "title": "アメリカにはオープンなAIモデルが必要 MSやNVIDIAとか遅いスピードな規制に反対する",
@@ -123,14 +483,6 @@
       "updated_at": "2026-07-24T21:30:35.736279+00:00"
     },
     {
-      "id": 36327,
-      "title": "ヨルダン川西岸銃乱射事件でパレスチナ人4人とイスラエル人2人が死亡",
-      "category": "news",
-      "importance": 54,
-      "summary": "ヨルダン川西岸銃乱射事件でパレスチナ人4人とイスラエル人2人が死亡",
-      "updated_at": "2026-07-24T21:30:26.999940+00:00"
-    },
-    {
       "id": 36348,
       "title": "「全東信」経営破綻 経産省と金融庁が調査を開始",
       "category": "news",
@@ -153,14 +505,6 @@
       "importance": 40,
       "summary": "タンカー、フーシ派の船舶脅迫を受けて急Uターン",
       "updated_at": "2026-07-24T21:29:56.165267+00:00"
-    },
-    {
-      "id": 36331,
-      "title": "キエフ近くのドローン展示会へのロシアの攻撃で10人死亡",
-      "category": "news",
-      "importance": 54,
-      "summary": "キエフ近くのドローン展示会へのロシアの攻撃で10人死亡",
-      "updated_at": "2026-07-24T21:29:47.773817+00:00"
     },
     {
       "id": 36344,
@@ -225,14 +569,6 @@
       "importance": 70,
       "summary": "フィギュアスケート女子シングル 島田麻央がシニアデビュー",
       "updated_at": "2026-07-24T21:28:23.498888+00:00"
-    },
-    {
-      "id": 36328,
-      "title": "ICCトップ検察官、性的違法行為疑惑で解任",
-      "category": "news",
-      "importance": 54,
-      "summary": "ICCトップ検察官、性的違法行為疑惑で解任",
-      "updated_at": "2026-07-24T21:28:15.097519+00:00"
     },
     {
       "id": 36417,
@@ -462,342 +798,6 @@
       "id": 36362,
       "title": "なぜ企業がNGOにとって完璧なパートナーとなるのか",
       "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36363,
-      "title": "気候の状況: 急速に発達するエルニーニョにより、2026 年は記録的な暖かさになる可能性が高まる",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36364,
-      "title": "資金へのアクセスがサハラ以南の女性の「気候変動への回復力を強化」",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36365,
-      "title": "ファクトチェック: いいえ、ヨーロッパの熱波は大気汚染の悪化が「原因」ではありません",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36366,
-      "title": "AIにもサプライチェーン管理が必要？ 中国AI「Kimi K3」を批判でAIの調達リスクが浮き彫りに",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36367,
-      "title": "令和8年度第4回東京都私立学校審議会（第861回）答申",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36368,
-      "title": "東京から世界へ！タレンツ・トーキョー「ミートアップ・サポート・プログラム」　ロカルノ国際映画祭（スイス）への派遣者決定",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36369,
-      "title": "出会い・結婚の「叶えたい」を東京都が支えたい！ 「出会い・結婚」をテーマとした動画を公開しました！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36370,
-      "title": "東京アプリがもっと便利に！東京ポイントからPayPayポイント・WAON POINTへの交換が可能になります",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36371,
-      "title": "東京都エコ農産物の専門店 「トウキョウ エコ マルシェ」が麻布十番にオープン",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36372,
-      "title": "子どもや子育て家庭の不安や悩みに寄り添う相談チャット 子供・子育てメンター「ギュッとチャット」 アンバサダー就任＆LINEスタンプ配信",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36373,
-      "title": "東京2025世界陸上・東京2025デフリンピック1周年 興奮とレガシーを未来へ繋ぐ記念イベント「RUNS：INTO KK（C）」開催！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36374,
-      "title": "はっけん！とちょうアドベンチャースタンプラリー　都庁を巡って限定オリジナルグッズをゲット！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36375,
-      "title": "総フォロワー240万人！若者に人気のインフルエンサーゆら猫さんを活用！ 夏休み期間における「トー横」対策 SNS・屋外ビジョンによる啓発等を実施します",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36376,
-      "title": "令和8年度普通交付税（東京都市町村分）の算定結果について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36377,
-      "title": "令和8年度　東京都普通交付税の算定結果について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36378,
-      "title": "国立研究開発法人審議会（第25回）の開催について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36379,
-      "title": "一般職（事務系） − 官庁訪問情報を更新しました。",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36380,
-      "title": "Public Medical Hubシステム利用規約（自治体向け）（医療機関・薬局向け）の改正について掲載しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36381,
-      "title": "「ガバメントAI 源内OSS Ver 2.0の計画に関するオンライン説明会」の開催について（ご案内）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36383,
-      "title": "作業指示プロセスについて知っておくべきことすべて",
-      "category": "maintenance",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36384,
-      "title": "ソフトウェア プロジェクトから戦略的変革まで: EAM 導入による収益性の解放",
-      "category": "maintenance",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36385,
-      "title": "ワイドミュラーの PCB 設計調査で AI ツールの影響が明らかに",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36387,
-      "title": "世界の粗鋼生産量は2026年6月に1.7％増加",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36388,
-      "title": "イタリアの鉄筋価格は需要低迷と市場の不確実性の中で下落",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36389,
-      "title": "スペインの鉄鋼生産量増加にもかかわらずスクラップ消費量は減少",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36390,
-      "title": "タタ・スチール、買い手の不安拡大を受けて石炭輸出価格の見直しを推進",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36391,
-      "title": "キルギス：2026年1月から5月にかけて石炭輸出が増加",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36395,
-      "title": "Amazon Bedrock で OpenAI GPT-5.6 Sol、Terra、Luna を使ってみる",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36396,
-      "title": "AWS でのバンキング向けに、説明可能な次善の製品推奨システムを構築する",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36397,
-      "title": "AWS での Claude Opus 5 の紹介: Anthropic の最も有能な Opus モデル",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36398,
-      "title": "気温が上昇すると、海洋が矢面に立たされる",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36399,
-      "title": "TMC CEO、海底金属はサプライチェーンの大きな部分になると語る",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36400,
-      "title": "トウモロコシの鮮度が9週間で最高値に",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36401,
-      "title": "米国、キューバの石油探査・研究会社とガス輸入業者を制裁",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36402,
-      "title": "ユーロ圏のサービス部門が成長に戻る",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36403,
-      "title": "英国の小売売上高が予想外に増加",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36404,
-      "title": "英国の工場状況は7月に改善",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36405,
-      "title": "ドイツの消費者ムードが予想外に弱まる",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36406,
-      "title": "ドイツのPMIは製造業の好調を受けて7月に成長に戻る",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36407,
-      "title": "インドの製造業の伸びは6月に鈍化",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36408,
-      "title": "米国の新築住宅販売が回復",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-24T21:14:10.999272+00:00"
-    },
-    {
-      "id": 36409,
-      "title": "米国の事業活動の伸びが8か月ぶりの高水準に加速",
-      "category": "market",
       "importance": 0,
       "summary": "",
       "updated_at": "2026-07-24T21:14:10.999272+00:00"
