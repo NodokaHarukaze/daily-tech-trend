@@ -1,11 +1,16 @@
 {
-  "generated_at": "2026-07-26T21:38:03+00:00",
+  "generated_at": "2026-07-27T00:35:47+00:00",
   "latest": {
     "report_date": "2026-07-27",
     "executive_summary": "- クラウドベースAIインフラの急速拡張: AWS・Azure・GoogleがGPUやAI機能を追加することで、開発・運用コストを削減し、機械学習モデルのデプロイが容易になります。\n- AIとRustが牽引するセキュリティ・パフォーマンスの統合: Claude SecurityやRustベースの画像デコードにより、脆弱性リスクが低減し、データ保護とアプリケーションの高速化が実現します。\n- 産業用AIと自動化による品質・効率の再定義: AI品質部長や予知保全AI、GitHub Agentic Workflowsの導入で、欠陥率や開発時間を大幅に削減し、競争力を高めます。",
     "accuracy_score": null
   },
   "verifications": [
+    {
+      "report_date": "2026-07-20",
+      "horizon": "1週間後",
+      "accuracy": 1.0
+    },
     {
       "report_date": "2026-07-14",
       "horizon": "1週間後",
