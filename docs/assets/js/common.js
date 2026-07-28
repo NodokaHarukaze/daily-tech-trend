@@ -346,6 +346,166 @@ if (DTT_GOATCOUNTER_ENDPOINT) {
     });
   }
 
+  // --- トップページ軽量化: details.insight の中身を初回展開時に遅延fetch ---
+  // 検索インデックス(search.html内 ensureIndex())と同型のパターン。
+  const INSIGHTS_FILE_BY_PREFIX = { topic: 'tech', news: 'news' };
+  let insightsData = null;
+  let insightsPromise = null;
+
+  function ensureInsights(pagePrefix){
+    if (insightsPromise) return insightsPromise;
+    const name = INSIGHTS_FILE_BY_PREFIX[pagePrefix] || pagePrefix;
+    insightsPromise = fetch(`/daily-tech-trend/assets/data/insights_${name}.json`)
+      .then(r => r.ok ? r.json() : {})
+      .then(data => { insightsData = data || {}; return insightsData; })
+      .catch(() => { insightsData = {}; return insightsData; });
+    return insightsPromise;
+  }
+
+  function truncateUrlLike(s, length){
+    // Jinja2 の truncate(60, True) と同じ算出方法（leeway既定5）
+    const leeway = 5, end = '...';
+    s = String(s || '');
+    if (s.length <= length + leeway) return s;
+    return s.slice(0, length - end.length) + end;
+  }
+
+  function buildTechKeyPoints(list){
+    const out = [];
+    let limited = false;
+    const seen = new Set();
+    (list || []).forEach(raw => {
+      const k = raw || '';
+      if (k.includes('本文中の明確な事実は限定的') || k.includes('本文が短く')) {
+        if (!limited) { out.push('推測：本文情報が限られるため、影響範囲・当事者・時系列をリンク先で要確認'); limited = true; }
+      } else if (k.startsWith('推測')) {
+        if (!seen.has(k)) { out.push(k); seen.add(k); }
+      } else {
+        out.push(k);
+      }
+    });
+    if (out.length === 0) out.push('推測：リンク先の本文確認が必要');
+    return out;
+  }
+
+  function buildNewsKeyPoints(list){
+    const out = [];
+    let hasGuess = false;
+    (list || []).forEach(raw => {
+      const kp = raw || '';
+      if (kp.includes('推測') || kp.includes('本文確認')) {
+        if (!hasGuess) { out.push(kp); hasGuess = true; }
+      } else {
+        out.push(kp);
+      }
+    });
+    if (out.length === 0) out.push('推測：記事情報が限定的なため、リンク先の本文確認が必要');
+    return out;
+  }
+
+  function appendPerspectiveBlock(container, obj, className, heading){
+    if (!obj) return;
+    const rows = [['engineer', '技術者目線'], ['management', '経営者目線'], ['consumer', '消費者目線']];
+    if (!rows.some(([k]) => obj[k])) return;
+    const box = document.createElement('div');
+    box.className = className;
+    if (heading) {
+      const h = document.createElement('div');
+      h.style.fontSize = '12px'; h.style.color = '#666'; h.style.marginBottom = '2px';
+      h.textContent = heading;
+      box.appendChild(h);
+    }
+    rows.forEach(([key, label]) => {
+      if (!obj[key]) return;
+      const div = document.createElement('div');
+      const b = document.createElement('b');
+      b.textContent = label;
+      div.appendChild(b);
+      div.appendChild(document.createTextNode(': ' + obj[key]));
+      box.appendChild(div);
+    });
+    container.appendChild(box);
+  }
+
+  function renderInsightBody(container, data, variant){
+    container.innerHTML = '';
+    if (!data) {
+      container.textContent = '（読み込みに失敗しました）';
+      return;
+    }
+
+    if (variant === 'news' && data.importance_basis) {
+      const div = document.createElement('div');
+      div.className = 'small';
+      div.style.marginTop = '6px';
+      const b = document.createElement('strong');
+      b.textContent = '算出根拠（簡易）';
+      div.appendChild(b);
+      div.appendChild(document.createTextNode('：' + data.importance_basis));
+      container.appendChild(div);
+    }
+
+    if (data.summary) {
+      const div = document.createElement('div');
+      if (variant === 'tech') { div.style.fontSize = '13px'; div.style.lineHeight = '1.6'; }
+      const b = document.createElement('strong');
+      b.textContent = '要約';
+      div.appendChild(b);
+      div.appendChild(document.createTextNode('：' + data.summary));
+      container.appendChild(div);
+    }
+
+    if (data.key_points && data.key_points.length) {
+      const lis = variant === 'tech' ? buildTechKeyPoints(data.key_points) : buildNewsKeyPoints(data.key_points);
+      if (lis.length) {
+        const ul = document.createElement('ul');
+        ul.className = 'kps';
+        lis.forEach(text => {
+          const li = document.createElement('li');
+          li.textContent = text;
+          ul.appendChild(li);
+        });
+        container.appendChild(ul);
+      }
+    }
+
+    appendPerspectiveBlock(container, data.perspectives, 'perspectives', null);
+    appendPerspectiveBlock(container, data.perspective_digest, 'perspective-digest', '立場別くわしい解説');
+
+    if (data.evidence_urls && data.evidence_urls.length) {
+      const div = document.createElement('div');
+      div.className = 'evidence-urls';
+      const b = document.createElement('strong');
+      b.textContent = '根拠';
+      div.appendChild(b);
+      div.appendChild(document.createTextNode('：'));
+      data.evidence_urls.forEach((u, i) => {
+        const a = document.createElement('a');
+        a.href = u;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = truncateUrlLike(u, 60);
+        div.appendChild(a);
+        if (i < data.evidence_urls.length - 1) div.appendChild(document.createTextNode(' | '));
+      });
+      container.appendChild(div);
+    }
+  }
+
+  function initInsightLazyLoad(pagePrefix){
+    const variant = pagePrefix === 'news' ? 'news' : 'tech';
+    document.querySelectorAll('details.insight[data-insight-topic]').forEach(det => {
+      det.addEventListener('toggle', () => {
+        if (!det.open) return;
+        const body = det.querySelector('[data-insight-pending]');
+        if (!body) return;
+        ensureInsights(pagePrefix).then(data => {
+          renderInsightBody(body, data[det.dataset.insightTopic], variant);
+        });
+      }, { once: true });
+    });
+  }
+
   function setupCommon(pagePrefix){
     document.getElementById('q')?.addEventListener('input', applyFilter);
     document.getElementById('tagModeOr')?.addEventListener('change', e => { tagMode = e.target.checked ? 'OR' : 'AND'; saveTagState(); updateTagActiveView(); applyFilter(); });
@@ -361,6 +521,7 @@ if (DTT_GOATCOUNTER_ENDPOINT) {
     initSortUI();
     collapseTopZonesOnFirstView();
     enableMobileTopZoneAccordion();
+    initInsightLazyLoad(pagePrefix);
     bindHashNavigation(pagePrefix);
     setupCategoryToc();
     syncToggleAllCatsLabel();
