@@ -1,7 +1,471 @@
 {
-  "generated_at": "2026-07-29T03:38:33+00:00",
+  "generated_at": "2026-07-29T06:37:19+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 37464,
+      "title": "BYDが作った軽EV「RACCO」発売 214万5000円 CEV補助金込みなら200万円切り",
+      "category": "news",
+      "importance": 60,
+      "summary": "BYDが作った軽EV「RACCO」発売 214万5000円 CEV補助金込みなら200万円切り",
+      "updated_at": "2026-07-29T06:34:02.609417+00:00"
+    },
+    {
+      "id": 37142,
+      "title": "「人生の恋人」 - シアトル、フードフェスティバル銃乱射事件の犠牲者に追悼の意を表する",
+      "category": "news",
+      "importance": 48,
+      "summary": "「人生の恋人」 - シアトル、フードフェスティバル銃乱射事件の犠牲者に追悼の意を表する",
+      "updated_at": "2026-07-29T06:33:42.998404+00:00"
+    },
+    {
+      "id": 37480,
+      "title": "適切なサイジングの推奨事項 (RSR): データセンター運用における仮想マシンのクラウド ワークロードの等角予測",
+      "category": "ai",
+      "importance": 70,
+      "summary": "クラウドワークロードのサイジングにおいて、ブートストラップ型コンフォーマル予測を用いたPI構築がコスト効率とパフォーマンス向上に寄与する。",
+      "updated_at": "2026-07-29T06:33:33.906772+00:00"
+    },
+    {
+      "id": 37459,
+      "title": "【動画】熊本 八代 地震発生時に撮影 住宅の防犯カメラの映像",
+      "category": "news",
+      "importance": 70,
+      "summary": "【動画】熊本 八代地震発生時撮影 住宅の防犯カメラの映像",
+      "updated_at": "2026-07-29T06:33:21.025951+00:00"
+    },
+    {
+      "id": 37262,
+      "title": "タタパワー、インド初の民間原子力発電所の2032年建設を目指す",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-29T06:33:06.175027+00:00"
+    },
+    {
+      "id": 37381,
+      "title": "メキシコの麻薬カルテルがどのようにして覚せい剤研究所をナイジェリアに委託したのか",
+      "category": "news",
+      "importance": 48,
+      "summary": "メキシコの麻薬カルテルがどのようにして覚せい剤研究所をナイジェリアに委託したのか",
+      "updated_at": "2026-07-29T06:32:56.797493+00:00"
+    },
+    {
+      "id": 37481,
+      "title": "GrocLM: 大規模な言語モデルを使用した電子商取引における食料品カテゴリの推奨事項",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-29T06:32:47.952446+00:00"
+    },
+    {
+      "id": 37449,
+      "title": "だいち2号、熊本地震による地殻変動を観測 日奈久断層帯で最大約50cm",
+      "category": "security",
+      "importance": 64,
+      "summary": "だいち2号、熊本地震による地殻変動を観測 日奈久断層帯で最大約50cm",
+      "updated_at": "2026-07-29T06:32:38.392733+00:00"
+    },
+    {
+      "id": 37423,
+      "title": "EVの普及が加速する中でのスマート充電のビジネスケース",
+      "category": "smart_factory",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-29T06:32:29.464061+00:00"
+    },
+    {
+      "id": 37380,
+      "title": "トランプ政権、中国製の新型人型ロボットを禁止",
+      "category": "news",
+      "importance": 54,
+      "summary": "トランプ政権、中国製の新型人型ロボットを禁止",
+      "updated_at": "2026-07-29T06:32:19.945150+00:00"
+    },
+    {
+      "id": 37482,
+      "title": "マスクされた拡散言語モデル用の CaRE コンピューティング対応リマスキング評価プロトコル",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-29T06:32:04.982222+00:00"
+    },
+    {
+      "id": 37407,
+      "title": "高市首相 「熊本地震との関連調査中を含め死者13人」明らかに",
+      "category": "news",
+      "importance": 70,
+      "summary": "高市優先 「熊本地震との関連調査中を含め死者13人」",
+      "updated_at": "2026-07-29T06:31:55.522902+00:00"
+    },
+    {
+      "id": 37238,
+      "title": "Green Award Foundation が海事関係者を集めて進化するエネルギー情勢について議論",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-29T06:31:40.407037+00:00"
+    },
+    {
+      "id": 37295,
+      "title": "日本の地震：これまでにわかっていること",
+      "category": "news",
+      "importance": 54,
+      "summary": "日本の地震：これまでにわかっていること",
+      "updated_at": "2026-07-29T06:31:31.071497+00:00"
+    },
+    {
+      "id": 37472,
+      "title": "2026 年 7 月の計測学ニュース マガジン",
+      "category": "quality",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-29T06:31:21.812514+00:00"
+    },
+    {
+      "id": 37460,
+      "title": "地震の揺れの影響とみられる線路の変形を確認 国交省",
+      "category": "news",
+      "importance": 70,
+      "summary": "地震の揺れの影響とみられる線路の変形を確認",
+      "updated_at": "2026-07-29T06:31:12.221195+00:00"
+    },
+    {
+      "id": 37239,
+      "title": "LRはスーパーヨットの原子力推進の将来に関する業界の議論に貢献",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-29T06:30:57.536080+00:00"
+    },
+    {
+      "id": 37382,
+      "title": "イランと米国の貿易ストライキ、戦闘の一時的な休息を打ち砕く",
+      "category": "news",
+      "importance": 54,
+      "summary": "イランと米国の貿易ストライキ、戦闘の一時的な休息を打ち砕く",
+      "updated_at": "2026-07-29T06:30:48.176044+00:00"
+    },
+    {
+      "id": 37473,
+      "title": "NIAR と Hexagon がパートナーシップを拡大し、計測トレーニングと地域検査サービスを推進",
+      "category": "quality",
+      "importance": 50,
+      "summary": "NIARとHexagonが協業拡大し、計測トレーニングと地域検査サービスを推進。",
+      "updated_at": "2026-07-29T06:30:33.219028+00:00"
+    },
+    {
+      "id": 37176,
+      "title": "イオンモール熊本 爆発 2人死亡 1人心肺停止 熊本県",
+      "category": "news",
+      "importance": 70,
+      "summary": "イオンモール熊本爆発 2人死亡 1人心肺停止 熊本県",
+      "updated_at": "2026-07-29T06:30:21.928077+00:00"
+    },
+    {
+      "id": 37240,
+      "title": "DN Solutions は韓国の造船を促進するための船舶部品の機械加工と自動化を紹介します",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-29T06:30:07.098374+00:00"
+    },
+    {
+      "id": 37148,
+      "title": "フランス南西部の山火事、地域が新たな40度の熱波に備える中、再燃",
+      "category": "news",
+      "importance": 54,
+      "summary": "フランス南西部の山火事、地域が新たな40度の熱波に備える中、再燃",
+      "updated_at": "2026-07-29T06:29:57.376441+00:00"
+    },
+    {
+      "id": 37474,
+      "title": "よりスマート、より速く、よりスリムに: マルチセンサー検査プラットフォームが生産ラインをどのように変革するか",
+      "category": "quality",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-29T06:29:42.838856+00:00"
+    },
+    {
+      "id": 37457,
+      "title": "2秒前後の長周期が卓越、高速道路に段差やひび割れ　熊本地震",
+      "category": "industry",
+      "importance": 73,
+      "summary": "2秒前後の長周期が卓越、高速道路に段差やひび割れ　熊本地震",
+      "updated_at": "2026-07-29T06:29:33.589742+00:00"
+    },
+    {
+      "id": 37437,
+      "title": "飛び散る破片、壁や天井崩れ　警察庁、イオンモール内部映像公開―熊本震度７",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37438,
+      "title": "RTX 5060搭載PCとプレイモニター・マウス・キーボードなどお得なセットが上位【マウスコンピューターに関するPCランキング［独立型GPU搭載モデル編 2026/7/29版］】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37439,
+      "title": "クロードでの共有チャットがGoogle検索で丸見えになって怖すぎる、公開……／Redditに注目して恐ろしく、「リンクを知っている人だけしか見ない」ではない【やじうまの杜】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37440,
+      "title": "動画で学ぶ「よく出る宅建」講座が配信開始、窓の杜読者限定でクーポン配布／ユニークな講義が定評の大澤茂雄氏が本試験の罠を見破るコツを伝授【ラーニング】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37441,
+      "title": "「Apple Watch Series 11」が安い！【Amazon暮らし応援サマーセール】【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37442,
+      "title": "AIエージェント「Gemini Spark」がより身近に、「Google AI Pro」プランも拡大／5TBのストレージ、「YouTube Premium Lite」などもセットで月額2,900円",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37443,
+      "title": "LINEヤフー、令和8年熊本地震で募金特設ページ",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37444,
+      "title": "熊本地震、運送各社が集荷・配送を一時停止",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37445,
+      "title": "ソニーFGとアナログ、「コンディショニングチェア」開発「状態」をつくる",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37446,
+      "title": "OpenAI、録音・録画音声モデル「GPT-Live-Transcribe」",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37447,
+      "title": "激安スーパー「アキダイ」、食品ロス削減アプリで生鮮食品半額",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37448,
+      "title": "ヨドバシ.com、領収書「商品同梱」「メール送信」終了",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37450,
+      "title": "平均年間給与は6社が1000万円超、富士通は前年度比約80万円アップ",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37451,
+      "title": "経産省内でも博士人材を活用、先端技術の政策反映に期待",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37452,
+      "title": "日産証券が金融業務をローコードで内製、貴金属寄託の新サービスも開発",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37453,
+      "title": "拡散言語モデルがICMLで盛況、Sakana AIは推論時スケーリング手法を考案",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37454,
+      "title": "日立がAI駆動開発を加速、生産性3割向上へ モダナイニーズの取り込み強化",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37455,
+      "title": "熊本地震で金融機関に影響、地銀や郵便局のATMや店舗の営業が一部休止",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37456,
+      "title": "熊本地震でルネサスやソニーセミコンが生産停止、TSMCは新工場建設中断",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37458,
+      "title": "【動画】熊本 氷川町 住宅に被害 上空からの映像",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37461,
+      "title": "イオンモール熊本内部の様子も──自衛隊や警察庁、逮捕活動の動画・写真をSNSで積極的に発信",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37462,
+      "title": "OpenAIの暴走AIエージェント、別企業のシステムにも不正侵入",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37463,
+      "title": "停電中の自宅を離れる時は「ブレーカー落とす」　消費者庁などが「通電火災」の注意喚起",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37465,
+      "title": "エンジニア、社内ネットワークSEって実は「一時仕事」？",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37466,
+      "title": "「年収2000万円以上が約6割」 CTO、CIOなどハイクラス転職が5年で2.2倍のバブル、求められる人材像は",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37467,
+      "title": "同志社女子大、「更新のたびに認証システムを止めなきゃならない」をゼロに　何を変えた？",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37468,
+      "title": "若手ITエンジニアの5割が「管理職になりたくない」 それでも「審査する条件」とは？",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37469,
+      "title": "「2025年経済構造実態調査」二次集計結果　産業横断調査（企業等に関する集計）",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37470,
+      "title": "特殊詐欺等の被害防止に向けた対策の一層の強化に関する要請",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37478,
+      "title": "専門用語への LLM の使用について: コーパスの良い代替手段?",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37479,
+      "title": "核放射線予測のための大気拡散誘導時空間変換装置",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37483,
+      "title": "新たな中東ストライキとAPI原油の引き抜きで原油価格が急騰",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37488,
+      "title": "JVN: Apache TomcatのWebSocket chatサンプルにおけるサービス運営妨害（DoS）の脆弱性（2026年7月28日）",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
+    {
+      "id": 37489,
+      "title": "JVN: てがろぐ -Fumy Otegaru Memo Logger-における制限が慎重な正規表現を使用している脆弱性",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-29T06:15:12.889301+00:00"
+    },
     {
       "id": 37392,
       "title": "PHILIPSの高コスパAndroidタブレットが、Amazonタイムセールでさらにお得に 11インチモデルの「T8015」が2万5980円など",
@@ -51,14 +515,6 @@
       "updated_at": "2026-07-29T03:34:12.579190+00:00"
     },
     {
-      "id": 37142,
-      "title": "「人生の恋人」 - シアトル、フードフェスティバル銃乱射事件の犠牲者に追悼の意を表する",
-      "category": "news",
-      "importance": 90,
-      "summary": "シアトルのフードフェスティバルで発生した銃撃事件で3人が死亡し、家族が追悼の意を表した。",
-      "updated_at": "2026-07-29T03:34:02.930928+00:00"
-    },
-    {
       "id": 37433,
       "title": "JVN: CISA ICS勧告 / ICS医療勧告（2026年07月28日）",
       "category": "security",
@@ -81,14 +537,6 @@
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
       "updated_at": "2026-07-29T03:33:28.779610+00:00"
-    },
-    {
-      "id": 37381,
-      "title": "メキシコの麻薬カルテルがどのようにして覚せい剤研究所をナイジェリアに委託したのか",
-      "category": "news",
-      "importance": 54,
-      "summary": "メキシコの麻薬カルテルがどのようにして覚せい剤研究所をナイジェリアに委託したのか",
-      "updated_at": "2026-07-29T03:33:19.177687+00:00"
     },
     {
       "id": 37434,
@@ -123,14 +571,6 @@
       "updated_at": "2026-07-29T03:32:35.919354+00:00"
     },
     {
-      "id": 37380,
-      "title": "トランプ政権、中国製の新型人型ロボットを禁止",
-      "category": "news",
-      "importance": 54,
-      "summary": "トランプ政権、中国製の新型人型ロボットを禁止",
-      "updated_at": "2026-07-29T03:32:26.163340+00:00"
-    },
-    {
       "id": 37405,
       "title": "元東京地検特捜部の検事 懲戒免職へ 女性との不適切な関係で",
       "category": "news",
@@ -155,44 +595,12 @@
       "updated_at": "2026-07-29T03:31:57.740856+00:00"
     },
     {
-      "id": 37295,
-      "title": "日本の地震：これまでにわかっていること",
-      "category": "news",
-      "importance": 54,
-      "summary": "日本の地震：これまでにわかっていること",
-      "updated_at": "2026-07-29T03:31:48.018928+00:00"
-    },
-    {
-      "id": 37176,
-      "title": "イオンモール熊本 爆発 2人死亡 1人心肺停止 熊本県",
-      "category": "news",
-      "importance": 70,
-      "summary": "イオンモール熊本爆発 2人死亡 1人心肺停止 熊本県",
-      "updated_at": "2026-07-29T03:31:38.909961+00:00"
-    },
-    {
       "id": 37246,
       "title": "FX Daily: スイスフランが人気の資金調達通貨に",
       "category": "market",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
       "updated_at": "2026-07-29T03:31:23.555317+00:00"
-    },
-    {
-      "id": 37382,
-      "title": "イランと米国の貿易ストライキ、戦闘の一時的な休息を打ち砕く",
-      "category": "news",
-      "importance": 54,
-      "summary": "イランと米国の貿易ストライキ、戦闘の一時的な休息を打ち砕く",
-      "updated_at": "2026-07-29T03:31:14.087998+00:00"
-    },
-    {
-      "id": 37407,
-      "title": "高市首相 「熊本地震との関連調査中を含め死者13人」明らかに",
-      "category": "news",
-      "importance": 70,
-      "summary": "高市優先 「熊本地震との関連調査中を含め死者13人」",
-      "updated_at": "2026-07-29T03:30:59.139666+00:00"
     },
     {
       "id": 37424,
@@ -393,414 +801,6 @@
       "importance": 0,
       "summary": "",
       "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37412,
-      "title": "熊本地震、ふるさと納税で支援受付スタート　ふるさとチョイスや楽天で",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37413,
-      "title": "企業が広告を「早く、安全に、大量に」作るAI アドビの新ツールが向かう先は「代理店いらず」か",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37414,
-      "title": "熊本「通れた道」マップ、トヨタが公開　ホンダも「通行実績情報マップ」",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37415,
-      "title": "Meta、エルパソのデータセンターをBlackRockと共同開発 総額140億ドル、Metaの喜び率は20％",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37416,
-      "title": "熊本の地震で約84センチの地殻変動　国土地理院が観測",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37417,
-      "title": "TSMC熊本工場、段階的に通常操業へ 熊本の地震で一時中断、従業員の無事確認 台湾報道",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37420,
-      "title": "熊本地震の被災自治体等へ、ガバメントAI資源内を緊急提供します",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37422,
-      "title": "データセンターの電力密度: グリッドと電力の制約に基づいた液冷 AI データセンターの計画",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37423,
-      "title": "EVの普及が加速する中でのスマート充電のビジネスケース",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37425,
-      "title": "環境に優しい市長候補者、AI に関する議論と保護を呼びかけ",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T03:14:54.721728+00:00"
-    },
-    {
-      "id": 37369,
-      "title": "バルト海の乾燥指数は火曜日にさらに低下",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:34:17.382182+00:00"
-    },
-    {
-      "id": 37332,
-      "title": "OpenAIやAnthropicなどの従業員、米政府に「AI開発のペース調整を」と一時",
-      "category": "news",
-      "importance": 60,
-      "summary": "OpenAIやAnthropicなどの従業員、米政府に「AI開発のペース調整を」と一時",
-      "updated_at": "2026-07-29T00:34:07.781471+00:00"
-    },
-    {
-      "id": 37247,
-      "title": "ダラス連銀の企業活動が過去11カ月で最も増加",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:33:43.465703+00:00"
-    },
-    {
-      "id": 37333,
-      "title": "「いつものChrome」が攻撃の踏み台に？ マルウェア「msaRAT」の客観と、情シスが今すぐやるべきこと",
-      "category": "policy",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:33:33.894030+00:00"
-    },
-    {
-      "id": 37307,
-      "title": "みずほ銀行らが推進する「サプライチェーン途絶リスクマネジメント支援」に、トムソン・ロイターと日立製作所が新たに参画",
-      "category": "industry",
-      "importance": 57,
-      "summary": "みずほ銀行らが推進する「サプライチェーン途絶リスクマネジメント支援」に、トムソン・ロイターと日立製作所が新たに参画",
-      "updated_at": "2026-07-29T00:33:24.245023+00:00"
-    },
-    {
-      "id": 37146,
-      "title": "ガーナ、最も背の高い男性「寛大で人気のある巨人」を追悼",
-      "category": "news",
-      "importance": 48,
-      "summary": "ガーナ、最も背の高い男性「寛大で人気のある巨人」を追悼",
-      "updated_at": "2026-07-29T00:33:09.159676+00:00"
-    },
-    {
-      "id": 37248,
-      "title": "米国の住宅価格上昇率は5月に加速",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:32:54.197457+00:00"
-    },
-    {
-      "id": 37371,
-      "title": "世界最大の砂電池がオンラインに",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:32:44.620322+00:00"
-    },
-    {
-      "id": 37308,
-      "title": "Synology、自然言語でファイルを検索できるローカルAI「Deep Search」提供、Windows/Mac対応アプリ、30日間無料試用可能",
-      "category": "industry",
-      "importance": 60,
-      "summary": "Synologyは自然言語でPC上のファイルを検索できるローカルAIアプリケーション「Deep Search」をWindowsとmacOS向けに発表し、価格は49.99ドル、30日間無料試用が可能である。",
-      "updated_at": "2026-07-29T00:32:34.941781+00:00"
-    },
-    {
-      "id": 37249,
-      "title": "中国の財政支出は上半期に1.5%増加",
-      "category": "market",
-      "importance": 50,
-      "summary": "中国の財政支出が上半期に1.5%増加し、中央政府が主導。中央支出6.5%、地方0.6%増。",
-      "updated_at": "2026-07-29T00:32:25.987037+00:00"
-    },
-    {
-      "id": 37293,
-      "title": "傍観者のビデオには、10 代のライフガードによる劇的な海洋救助が映っています",
-      "category": "news",
-      "importance": 54,
-      "summary": "傍観者のビデオには、10 代のライフガードによる劇的な海洋救助が映っています",
-      "updated_at": "2026-07-29T00:32:14.798870+00:00"
-    },
-    {
-      "id": 37334,
-      "title": "MFAなのに突破された？ 「Microsoft正規画面で認証したのに侵入された」理由",
-      "category": "policy",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:32:05.682886+00:00"
-    },
-    {
-      "id": 37306,
-      "title": "【Excel】COUNTIFS関数でミスを防ぐ！重複・未入力・条件不一致をチェックする方法【いまさら聞けないExcelの使い方講座】",
-      "category": "company",
-      "importance": 70,
-      "summary": "COUNTIFS関数を使って重複・未入力・条件不一致をチェックする方法を紹介している。",
-      "updated_at": "2026-07-29T00:31:56.130081+00:00"
-    },
-    {
-      "id": 37250,
-      "title": "英国の店頭価格上昇率は7カ月ぶりの低水準に鈍化",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:31:47.324205+00:00"
-    },
-    {
-      "id": 37372,
-      "title": "原油価格は現物市場の警告サインを無視",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:31:28.710700+00:00"
-    },
-    {
-      "id": 37322,
-      "title": "熊本で震度7 最新映像から分かること【災害担当デスクが解説】",
-      "category": "news",
-      "importance": 70,
-      "summary": "熊本で限界7 最新映像からわかること【災害担当デスクが解説】",
-      "updated_at": "2026-07-29T00:31:19.150771+00:00"
-    },
-    {
-      "id": 37251,
-      "title": "英国のバーナム首相、次期予算での印紙税変更を否定",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:31:10.034187+00:00"
-    },
-    {
-      "id": 37319,
-      "title": "東京 八丈町が避難指示 土砂災害警戒区域の住民が対象",
-      "category": "news",
-      "importance": 70,
-      "summary": "東京八丈町が避難指示 土砂災害警戒地域の住民が対象",
-      "updated_at": "2026-07-29T00:30:51.007911+00:00"
-    },
-    {
-      "id": 37373,
-      "title": "米軍はレアアース戦争で中国のはったりを言ったばかり",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T00:30:35.952250+00:00"
-    },
-    {
-      "id": 37291,
-      "title": "歌手D4vdが殺人裁判に臨むと裁判官が判断、BBCが法廷外で",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37292,
-      "title": "ネタニヤフ首相とトランプ大統領のホワイトハウス訪問は一か八かの理由",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37294,
-      "title": "「とんでもない状況だ」：スペイン、壊滅的な山火事に立ち向かう",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37296,
-      "title": "ジダンがフランス代表監督に就任決定",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37297,
-      "title": "動物園職員が遠く離れた岩から絶滅寸前のカタツムリを救出",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37298,
-      "title": "元特捜検事を近く懲戒処分　捜査対象女性と不適切関係―法務・検察",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37299,
-      "title": "Sakana AI、「Fable 5」を越えて達成した「Fugu-Ultra」v1.1を発表／「Claude Code」互換エンドポイントも実装",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37300,
-      "title": "AI検索「Perplexity」もCLI、コマンドラインツールやエージェントとの連携に／macOS（Apple Silicon）、Linux（x86_64/arm64）でも利用可能",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37301,
-      "title": "Windowsの右クリックメニュー編集ツール「customMenu」v1.8（ほか／23件を掲載（7月28日のダイジェストニュース））",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37302,
-      "title": "「iPhone Air」が安い！AmazonでApple製品のセールが実施中【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37303,
-      "title": "Appleの完全ワイヤレスイヤホン「AirPods Pro 3」が安い！Amazonでタイムセール【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37304,
-      "title": "「Excel」ブックやシェイプを正規表現検索・削除できる「正規表現検索」アドインv7.20／メインウィンドウのデザイン刷新、GREPインデックス検索にも変更",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37305,
-      "title": "【アップデート情報】窓の杜収録ソフト 7月29日～「CrystalDiskInfo」「Microsoft Edge」「Opera」など",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37309,
-      "title": "川重の乗る多脚ロボット「コルレオ」 開発は仮想空間とフィジカルAI活用",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37310,
-      "title": "【レビュー】食事の「摂取」カロリーが自動でわかる シャープのスマートウォッチを2週間使った",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37311,
-      "title": "5車線が収まる大断面トンネル　住宅近接、生態系も守る横浜環状南線工事",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37312,
-      "title": "AIが生成した数当てゲームで実践、頭の内部コードをトレースする",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37313,
-      "title": "ドコモが金融を刷新強化、ホワイトレーベルでdカードやd払いを提供する",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37314,
-      "title": "NotebookLM上級者向け「ExtendLM」、インストール管理や資料追加を効率化",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37315,
-      "title": "従来型モバイルバッテリーの発火事故は減らせる、購入・使用・対処を正しく",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37316,
-      "title": "流行語・新語の変換でMS-IMEが苦戦、クラウド辞書に差",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
-    },
-    {
-      "id": 37317,
-      "title": "AWSがDCネットワーク「RNG」開発",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T00:15:18.346428+00:00"
     }
   ]
 }
