@@ -274,92 +274,10 @@
             {% endif %}
             {% if t.source %}<div class="mini">{{ t.source }}</div>{% endif %}
 
-            {% if t.summary or (t.key_points and t.key_points|length>0) or (t.perspectives) or (t.perspective_digest) or (t.evidence_urls and t.evidence_urls|length>0) %}
-              <details class="insight" role="group">
+            {% if t.has_insight %}
+              <details class="insight" role="group" data-insight-topic="{{ t.id }}">
                 <summary>要約・解説を表示</summary>
-
-                {% if t.summary %}
-                  <div style="font-size:13px;line-height:1.6"><strong>要約</strong>：{{ t.summary }}</div>
-                {% endif %}
-
-                {% if t.key_points and t.key_points|length>0 %}
-                  <ul class="kps">
-                    {% set shown = namespace(n=0, limited=0) %}
-                    {% set seen = namespace(items=[]) %}
-                    {% for kp in t.key_points %}
-                      {% set k = (kp or "") %}
-                      {# 既存の「短文テンプレ」は1回に畳む #}
-                      {% if "本文中の明確な事実は限定的" in k or "本文が短く" in k %}
-                        {% if shown.limited == 0 %}
-                          <li>推測：本文情報が限られるため、影響範囲・当事者・時系列をリンク先で要確認</li>
-                          {% set shown.limited = 1 %}
-                          {% set shown.n = shown.n + 1 %}
-                        {% endif %}
-                      {% else %}
-                        {# 「推測: ...」が重複する場合は1回だけ出す #}
-                        {% if k.startswith("推測") %}
-                          {% if k not in seen.items %}
-                            <li>{{ k }}</li>
-                            {% set seen.items = seen.items + [k] %}
-                            {% set shown.n = shown.n + 1 %}
-                          {% endif %}
-                        {% else %}
-                          <li>{{ k }}</li>
-                          {% set shown.n = shown.n + 1 %}
-                        {% endif %}
-                      {% endif %}
-                    {% endfor %}
-                    {% if shown.n == 0 %}
-                      <li>推測：リンク先の本文確認が必要</li>
-                    {% endif %}
-                  </ul>
-                {% endif %}
-
-                {% if t.perspectives %}
-                <div class="perspectives">
-                  {% if t.perspectives.engineer %}<div><b>技術者目線</b>: {{ t.perspectives.engineer }}</div>{% endif %}
-                  {% if t.perspectives.management %}<div><b>経営者目線</b>: {{ t.perspectives.management }}</div>{% endif %}
-                  {% if t.perspectives.consumer %}<div><b>消費者目線</b>: {{ t.perspectives.consumer }}</div>{% endif %}
-                </div>
-                {% endif %}
-
-                {% if t.perspective_digest %}
-                <div class="perspective-digest">
-                  <div style="font-size:12px;color:#666;margin-bottom:2px">立場別くわしい解説</div>
-                  {% if t.perspective_digest.engineer %}<div><b>技術者目線</b>: {{ t.perspective_digest.engineer }}</div>{% endif %}
-                  {% if t.perspective_digest.management %}<div><b>経営者目線</b>: {{ t.perspective_digest.management }}</div>{% endif %}
-                  {% if t.perspective_digest.consumer %}<div><b>消費者目線</b>: {{ t.perspective_digest.consumer }}</div>{% endif %}
-                </div>
-                {% endif %}
-
-                {% if t.next_actions and t.next_actions|length>0 %}
-                  <div style="margin-top:10px;font-size:13px"><strong>次アクション</strong></div>
-                  <ul class="nas">
-                    {% for na in t.next_actions %}
-                      {% if na is mapping %}
-                        <li>
-                          <div><strong>{{ na.action }}</strong>
-                            {% if na.priority %}<span class="badge">{{ na.priority }}</span>{% endif %}
-                          </div>
-                          {% if na.expected_outcome %}
-                            <div class="small">→ {{ na.expected_outcome }}</div>
-                          {% endif %}
-                        </li>
-                      {% else %}
-                        <li>{{ na }}</li>
-                      {% endif %}
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-
-                {% if t.evidence_urls and t.evidence_urls|length>0 %}
-                  <div class="evidence-urls">
-                    <strong>根拠</strong>：
-                    {% for u in t.evidence_urls %}
-                      <a href="{{ u }}" target="_blank" rel="noopener">{{ u|truncate(60, True) }}</a>{% if not loop.last %} | {% endif %}
-                    {% endfor %}
-                  </div>
-                {% endif %}
+                <div class="insight-body" data-insight-pending>読み込み中…</div>
               </details>
             {% endif %}
 

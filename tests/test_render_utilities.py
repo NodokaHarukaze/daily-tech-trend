@@ -298,19 +298,25 @@ def _render_news_html(sections) -> str:
     )
 
 
-def test_news_html_renders_perspective_digest_section():
+def test_news_html_uses_lazy_placeholder_instead_of_inline_perspective_digest():
+    """トップページ軽量化（2026-07-28実装）以降、perspectives/perspective_digestの実データは
+    HTMLへ直接出力せず insights_news.json 側に切り出し、HTML側は data-insight-topic 付きの
+    プレースホルダのみを出力する。"""
     conn = _bootstrap_news_db_with_perspective_digest()
     sections = render_main.render_news_region_page(conn.cursor(), "jp", limit_each=10)
     html = _render_news_html(sections)
 
-    # 既存の perspectives（短評）は変更されず表示される
-    assert "技術者短評" in html
-    # perspective_digest は「立場別くわしい解説」の小見出し付きで、直後に追加表示される
-    assert "立場別くわしい解説" in html
-    assert "技術者向けのくわしい解説文" in html
-    persp_pos = html.index("技術者短評")
-    digest_pos = html.index("立場別くわしい解説")
-    assert digest_pos > persp_pos
+    assert "技術者短評" not in html
+    assert "立場別くわしい解説" not in html
+    assert 'data-insight-topic="1"' in html
+    assert "読み込み中" in html
+
+    # 実データ自体は render_news_region_page の戻り値（insights_news.json 書き出し元）に残る
+    news_section = next(s for s in sections if s["count"] > 0)
+    item = (news_section["rows"] or news_section["other_rows"])[0]
+    payload = render_main._insight_payload(item)
+    assert payload["perspectives"] == {"engineer": "技術者短評"}
+    assert payload["perspective_digest"]["engineer"].startswith("技術者向けのくわしい解説文")
 
 
 def test_news_html_hides_perspective_digest_when_empty():
@@ -351,8 +357,13 @@ def test_news_html_hides_perspective_digest_when_empty():
     sections = render_main.render_news_region_page(conn.cursor(), "jp", limit_each=10)
     html = _render_news_html(sections)
 
-    # perspective_digest が空/NULLの記事では何も表示しない
+    # perspective_digest が空/NULLの記事では何も表示しない（HTML上は元々表示していなかった。
+    # トップページ軽量化以降はJSON側でも perspective_digest キー自体を持たないことを確認する）
     assert "立場別くわしい解説" not in html
+    news_section = next(s for s in sections if s["count"] > 0)
+    item = (news_section["rows"] or news_section["other_rows"])[0]
+    payload = render_main._insight_payload(item)
+    assert "perspective_digest" not in payload
 
 
 def test_render_forecast_skips_empty_placeholder_and_shows_fallback(tmp_path: Path):

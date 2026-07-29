@@ -5,7 +5,7 @@ import re
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
 from urllib.parse import urlparse
 
 import yaml
@@ -442,6 +442,59 @@ def _safe_json_obj(s: str | None) -> Dict[str, Any]:
         return {}
 
 
+def _tech_has_insight(t: Dict[str, Any]) -> bool:
+    """tech.html 277行目の details.insight 表示条件と一致させる（トップページ軽量化）"""
+    return bool(
+        t.get("summary")
+        or t.get("key_points")
+        or t.get("perspectives")
+        or t.get("perspective_digest")
+        or t.get("evidence_urls")
+    )
+
+
+def _news_has_insight(it: Dict[str, Any]) -> bool:
+    """news.html 153行目の details.insight 表示条件と一致させる（トップページ軽量化）"""
+    persp = it.get("perspectives") or {}
+    pdig = it.get("perspective_digest") or {}
+    return bool(
+        it.get("importance_basis")
+        or it.get("summary")
+        or it.get("key_points")
+        or (persp and (persp.get("engineer") or persp.get("management") or persp.get("consumer")))
+        or (pdig and (pdig.get("engineer") or pdig.get("management") or pdig.get("consumer")))
+    )
+
+
+def _insight_payload(item: Dict[str, Any]) -> Dict[str, Any]:
+    """details.insight の中身をJSONへ切り出す用のペイロード（トップページ軽量化）"""
+    payload: Dict[str, Any] = {}
+    if item.get("summary"):
+        payload["summary"] = item["summary"]
+    if item.get("key_points"):
+        payload["key_points"] = item["key_points"]
+    if item.get("perspectives"):
+        payload["perspectives"] = item["perspectives"]
+    if item.get("perspective_digest"):
+        payload["perspective_digest"] = item["perspective_digest"]
+    if item.get("evidence_urls"):
+        payload["evidence_urls"] = item["evidence_urls"]
+    if item.get("importance_basis"):
+        payload["importance_basis"] = item["importance_basis"]
+    return payload
+
+
+def write_insights_json(out_dir: Path, name: str, items_by_id: Dict[str, Dict[str, Any]]) -> Path:
+    """insights_{name}.json を docs/assets/data/ へ書き出す（トップページ軽量化・details.insight遅延ロード用）"""
+    data_dir = Path(out_dir) / "assets" / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    path = data_dir / f"insights_{name}.json"
+    path.write_text(
+        json.dumps(items_by_id, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+    return path
+
 
 def _news_importance_basis_simple(importance: int, dt: str, category: str, tags: List[str]) -> str:
     imp = int(importance or 0)
@@ -613,6 +666,14 @@ def render_news_pages(out_dir: Path, generated_at: str, cur) -> None:
 
     # --- ここまで差し替え ---
 
+    # トップページ軽量化: details.insight の中身を insights_news.json へ切り出す
+    insights_news = {
+        str(it["id"]): _insight_payload(it)
+        for sec in sections_all
+        for it in sec.get("rows", [])
+        if it.get("has_insight")
+    }
+    write_insights_json(out_dir, "news", insights_news)
 
     pages = [
         ("news",   "ニュースダイジェスト", "ニュースダイジェスト", sections_all, "index.html"),
@@ -742,6 +803,7 @@ def render_news_region_page(cur, region, limit_each=30, cutoff_dt=None, min_per_
                     llm_tags,
                 ),
             })
+            items[-1]["has_insight"] = _news_has_insight(items[-1])
 
         # 重要度0（LLM未分析）の記事を除外
         items = [it for it in items if it.get("importance", 0) > 0]
@@ -1527,664 +1589,8 @@ def render_search_page(out_dir: Path, generated_at: str, cur, limit: int = 3000)
     )
 
 
-def main():
-    t0 = _now_sec()
-    print("[TIME] step=render start")
-
-    out_dir = Path("docs")
-    out_dir.mkdir(exist_ok=True)
-
-    conn = connect()
-    cur = conn.cursor()
-    # categories: YAML -> DB -> other
-    categories = load_categories_from_yaml()
-    if not categories:
-        categories = build_categories_fallback(cur)
-    categories = ensure_category_coverage(cur, categories)
-
-    category_order = [
-        "system",
-        "manufacturing",
-        "smart_factory",
-        "market",
-        "environment",
-        "quality",
-        "maintenance",
-        "policy",
-        "decarbonization_ops",
-        "security",
-        "standards",
-        "ai",
-        "dev",
-        "other",
-    ]
-    order_index = {cat_id: idx for idx, cat_id in enumerate(category_order)}
-    # YAML定義から削除されたカテゴリ（DBに残存データがあっても非表示）
-    allowed_cats = set(category_order)
-    categories = [c for c in categories if c["id"] in allowed_cats]
-    categories = sorted(
-        categories,
-        key=lambda c: (order_index.get(c["id"], len(category_order)), c["id"]),
-    )
-
-    TECH_EXCLUDE = {"news"}
-    tech_categories = [c for c in categories if c["id"] not in TECH_EXCLUDE]
-
-    # tech側で使うのは tech_categories
-    cat_name = {c["id"]: c["name"] for c in tech_categories}
-
-    topics_by_cat: Dict[str, List[Dict[str, Any]]] = {}
-    hot_by_cat: Dict[str, List[Dict[str, Any]]] = {}
-    # 48h cutoff（UTCでSQLite互換の "YYYY-MM-DD HH:MM:SS"）
-    cutoff_48h = (datetime.now(timezone.utc) - timedelta(hours=48)).strftime("%Y-%m-%d %H:%M:%S")
-
-    LIMIT_PER_CAT = 15
-    HOT_TOP_N = 5
-
-    for cat in tech_categories:
-        cat_id = cat["id"]
-
-        # (A) 注目TOP5（48h増分、published_atベース）
-        if cat_id == "other":
-            cur.execute(
-                """
-                SELECT
-                  t.id,
-                  COALESCE(t.title_ja, t.title) AS ttitle,
-                  COUNT(ta.article_id) AS total_count,
-                  SUM(
-                    CASE
-                      WHEN datetime(
-                        substr(
-                          replace(replace(COALESCE(NULLIF(a.published_at,''), a.fetched_at),'T',' '),'+00:00',''),
-                          1, 19
-                        )
-                      ) >= datetime(?) THEN 1
-                      ELSE 0
-                    END
-                  ) AS recent_count,
-                  MAX(
-                    datetime(
-                      substr(
-                        replace(replace(COALESCE(NULLIF(a.published_at,''), a.fetched_at),'T',' '),'+00:00',''),
-                        1, 19
-                      )
-                    )
-                  ) AS article_date
-                FROM topics t
-                JOIN topic_articles ta ON ta.topic_id = t.id
-                JOIN articles a ON a.id = ta.article_id
-                WHERE (t.category IS NULL OR t.category = '')
-                  AND COALESCE(t.category,'') <> 'news'
-                  AND COALESCE(a.kind,'') <> 'news'
-                GROUP BY t.id
-                HAVING recent_count > 0
-                ORDER BY recent_count DESC, total_count DESC, t.id DESC
-                LIMIT ?
-                """,
-                (cutoff_48h, HOT_TOP_N),
-            )
-
-
-        else:
-            cur.execute(
-                """
-                SELECT
-                  t.id,
-                  COALESCE(t.title_ja, t.title) AS ttitle,
-                  COUNT(ta.article_id) AS total_count,
-                  SUM(
-                    CASE
-                      WHEN datetime(
-                        substr(
-                          replace(replace(COALESCE(NULLIF(a.published_at,''), a.fetched_at),'T',' '),'+00:00',''),
-                          1, 19
-                        )
-                      ) >= datetime(?) THEN 1
-                      ELSE 0
-                    END
-                  ) AS recent_count,
-                  MAX(
-                    datetime(
-                      substr(
-                        replace(replace(COALESCE(NULLIF(a.published_at,''), a.fetched_at),'T',' '),'+00:00',''),
-                        1, 19
-                      )
-                    )
-                  ) AS article_date
-                FROM topics t
-                JOIN topic_articles ta ON ta.topic_id = t.id
-                JOIN articles a ON a.id = ta.article_id
-                WHERE t.category = ?
-                  AND COALESCE(t.category,'') <> 'news'
-                  AND COALESCE(a.kind,'') <> 'news'
-                GROUP BY t.id
-                HAVING recent_count > 0
-                ORDER BY recent_count DESC, total_count DESC, t.id DESC
-                LIMIT ?
-                """,
-                (cutoff_48h, cat_id, HOT_TOP_N),
-            )
-
-
-        rows = cur.fetchall()
-        hot_by_cat[cat_id] = [
-            {"id": tid, "title": clean_for_html(title), "articles": int(total), "recent": int(recent),"date": article_date or ""}
-            for (tid, title, total, recent, article_date) in rows
-        ]
-
-        # ★ 注目TOP5の並びも完全決定（揺れ防止）
-        hot_by_cat[cat_id] = sorted(
-            hot_by_cat[cat_id],
-            key=lambda x: (-x["recent"], -x["articles"], x["id"]),
-        )
-
-        # (B) 一覧（topics + insights + 代表URL + 48h増分）
-        if cat_id == "other":
-            cur.execute(
-                """
-                SELECT
-                  t.id,
-                  COALESCE(t.title_ja, t.title) AS title,
-                  (
-                      SELECT a2.url
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                          CASE
-                            WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
-                            ELSE 1
-                          END,
-                          datetime(a2.fetched_at) DESC,
-                          datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                          a2.url ASC
-                        LIMIT 1
-
-                    ) AS url,
-                    (
-                      SELECT COALESCE(
-                        NULLIF(a2.published_at,''),
-                        a2.fetched_at
-                      )
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                        CASE
-                          WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
-                          ELSE 1
-                        END,
-                        datetime(a2.fetched_at) DESC,
-                        datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                        a2.url ASC
-                      LIMIT 1
-                    ) AS article_date,
-                  (
-                      SELECT COALESCE(SUM(
-                        CASE
-                          WHEN datetime(
-                            substr(
-                              replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
-                              1, 19
-                            )
-                          ) >= datetime(?) THEN 1
-                          ELSE 0
-                        END
-                      ), 0)
-                      FROM topic_articles ta3
-                      JOIN articles a3 ON a3.id = ta3.article_id
-                      WHERE ta3.topic_id = t.id
-                    ) AS recent,
-                  (
-                      SELECT a2.source
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                          CASE WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0 ELSE 1 END,
-                          datetime(a2.fetched_at) DESC,
-                          datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                          a2.url ASC
-                      LIMIT 1
-                    ) AS source,
-                  i.importance,
-                  i.summary,
-                  i.key_points,
-                  i.evidence_urls,
-                  i.tags,
-                  i.perspectives,
-                  i.perspective_digest
-                FROM topics t
-                LEFT JOIN topic_insights i ON i.topic_id = t.id
-                WHERE (t.category IS NULL OR t.category = '')
-                  AND NOT EXISTS (
-                    SELECT 1
-                    FROM topic_articles ta4
-                    JOIN articles a4 ON a4.id = ta4.article_id
-                    WHERE ta4.topic_id = t.id
-                      AND COALESCE(a4.kind,'') = 'news'
-                  )
-                ORDER BY
-                  COALESCE(i.importance, 0) DESC,
-                  COALESCE(recent, 0) DESC,
-                  t.id DESC
-                LIMIT ?
-                """,
-                (cutoff_48h, LIMIT_PER_CAT),
-            )
-        else:
-            cur.execute(
-                """
-                SELECT
-                  t.id,
-                  COALESCE(t.title_ja, t.title) AS title,
-                  (
-                      SELECT a2.url
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                          CASE
-                            WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
-                            ELSE 1
-                          END,
-                          datetime(a2.fetched_at) DESC,
-                          datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                          a2.url ASC
-                        LIMIT 1
-                    ) AS url,
-                    (
-                      SELECT COALESCE(
-                        NULLIF(a2.published_at,''),
-                        a2.fetched_at
-                      )
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                        CASE
-                          WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
-                          ELSE 1
-                        END,
-                        datetime(a2.fetched_at) DESC,
-                        datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                        a2.url ASC
-                      LIMIT 1
-                    ) AS article_date,
-                  (
-                      SELECT COALESCE(SUM(
-                        CASE
-                          WHEN datetime(
-                            substr(
-                              replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
-                              1, 19
-                            )
-                          ) >= datetime(?) THEN 1
-                          ELSE 0
-                        END
-                      ), 0)
-                      FROM topic_articles ta3
-                      JOIN articles a3 ON a3.id = ta3.article_id
-                      WHERE ta3.topic_id = t.id
-                    ) AS recent,
-                  (
-                      SELECT a2.source
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                          CASE WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0 ELSE 1 END,
-                          datetime(a2.fetched_at) DESC,
-                          datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                          a2.url ASC
-                      LIMIT 1
-                    ) AS source,
-
-                  i.importance,
-                  i.summary,
-                  i.key_points,
-                  i.evidence_urls,
-                  i.tags,
-                  i.perspectives,
-                  i.perspective_digest
-                FROM topics t
-                LEFT JOIN topic_insights i ON i.topic_id = t.id
-                WHERE t.category = ?
-                  AND COALESCE(t.category,'') <> 'news'
-                  AND NOT EXISTS (
-                    SELECT 1
-                    FROM topic_articles ta4
-                    JOIN articles a4 ON a4.id = ta4.article_id
-                    WHERE ta4.topic_id = t.id
-                      AND COALESCE(a4.kind,'') = 'news'
-                  )
-                ORDER BY
-                  COALESCE(i.importance, 0) DESC,
-                  COALESCE(recent, 0) DESC,
-                  t.id DESC
-                LIMIT ?
-                """,
-                (cutoff_48h, cat_id, LIMIT_PER_CAT),
-            )
-
-
-        rows = cur.fetchall()
-        items: List[Dict[str, Any]] = []
-        for r in rows:
-            tid, title, url, article_date, recent, source, importance, summary, key_points, evidence_urls, tags, perspectives, perspective_digest = r
-            items.append(
-                {
-                    "id": tid,
-                    "title": clean_for_html(title),  # ← ここはSQLで title_ja 優先済み
-                    "url": url or "#",
-                    "date": article_date or "",
-                    "recent": int(recent or 0),
-                    "source": source or "",
-                    "importance": int(importance) if importance is not None else None,
-                    "summary": summary or "",
-                    "key_points": _safe_json_list(key_points),
-                    "evidence_urls": _safe_json_list(evidence_urls),
-                    "tags": _safe_json_list(tags),
-                    "perspectives": _safe_json_obj(perspectives),
-                    "perspective_digest": _safe_json_obj(perspective_digest),
-                }
-            )
-
-        # トピック順を完全決定（最後の揺れ防止）
-        items = sorted(
-            items,
-            key=lambda x: (
-                -(x["importance"] or 0),
-                -(x["recent"] or 0),
-                x["id"]
-            )
-        )
-
-        # ===== A: 確実対応：注目TOP5を詳細リストにも必ず混ぜる =====
-        hot_ids = [x["id"] for x in hot_by_cat.get(cat_id, [])]
-        item_ids = {x["id"] for x in items}
-        missing_ids = [tid for tid in hot_ids if tid not in item_ids]
-
-        if missing_ids:
-            # IN句プレースホルダを生成
-            placeholders = ",".join(["?"] * len(missing_ids))
-
-            if cat_id == "other":
-                sql_missing = f"""
-                SELECT
-                  t.id,
-                  COALESCE(t.title_ja, t.title) AS title,
-                  (
-                      SELECT a2.url
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                          CASE
-                            WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
-                            ELSE 1
-                          END,
-                          datetime(a2.fetched_at) DESC,
-                          datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                          a2.url ASC
-                        LIMIT 1
-                    ) AS url,
-                    (
-                      SELECT COALESCE(
-                        NULLIF(a2.published_at,''),
-                        a2.fetched_at
-                      )
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                        CASE
-                          WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
-                          ELSE 1
-                        END,
-                        datetime(a2.fetched_at) DESC,
-                        datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                        a2.url ASC
-                      LIMIT 1
-                    ) AS article_date,
-                  (
-                      SELECT COALESCE(SUM(
-                        CASE
-                          WHEN datetime(
-                            substr(
-                              replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
-                              1, 19
-                            )
-                          ) >= datetime(?) THEN 1
-                          ELSE 0
-                        END
-                      ), 0)
-                      FROM topic_articles ta3
-                      JOIN articles a3 ON a3.id = ta3.article_id
-                      WHERE ta3.topic_id = t.id
-                    ) AS recent,
-                  (
-                      SELECT a2.source
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                          CASE WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0 ELSE 1 END,
-                          datetime(a2.fetched_at) DESC,
-                          datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                          a2.url ASC
-                      LIMIT 1
-                    ) AS source,
-                  i.importance,
-                  i.summary,
-                  i.key_points,
-                  i.evidence_urls,
-                  i.tags,
-                  i.perspectives,
-                  i.perspective_digest
-                FROM topics t
-                LEFT JOIN topic_insights i ON i.topic_id = t.id
-                WHERE (t.category IS NULL OR t.category = '')
-                  AND COALESCE(NULLIF(t.category,''), 'other') NOT IN ('news', 'market')
-                  AND NOT EXISTS (
-                    SELECT 1
-                    FROM topic_articles ta4
-                    JOIN articles a4 ON a4.id = ta4.article_id
-                    WHERE ta4.topic_id = t.id
-                      AND COALESCE(a4.kind,'') = 'news'
-                  )
-                  AND t.id IN ({placeholders})
-                """
-                params = [cutoff_48h, *missing_ids]
-            else:
-                sql_missing = f"""
-                SELECT
-                  t.id,
-                  COALESCE(t.title_ja, t.title) AS title,
-                  (
-                      SELECT a2.url
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                          CASE
-                            WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
-                            ELSE 1
-                          END,
-                          datetime(a2.fetched_at) DESC,
-                          datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                          a2.url ASC
-                        LIMIT 1
-                    ) AS url,
-                    (
-                      SELECT COALESCE(
-                        NULLIF(a2.published_at,''),
-                        a2.fetched_at
-                      )
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                        CASE
-                          WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
-                          ELSE 1
-                        END,
-                        datetime(a2.fetched_at) DESC,
-                        datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                        a2.url ASC
-                      LIMIT 1
-                    ) AS article_date,
-                  (
-                      SELECT COALESCE(SUM(
-                        CASE
-                          WHEN datetime(
-                            substr(
-                              replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
-                              1, 19
-                            )
-                          ) >= datetime(?) THEN 1
-                          ELSE 0
-                        END
-                      ), 0)
-                      FROM topic_articles ta3
-                      JOIN articles a3 ON a3.id = ta3.article_id
-                      WHERE ta3.topic_id = t.id
-                    ) AS recent,
-                  (
-                      SELECT a2.source
-                      FROM topic_articles ta2
-                      JOIN articles a2 ON a2.id = ta2.article_id
-                      WHERE ta2.topic_id = t.id
-                      ORDER BY
-                          CASE WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0 ELSE 1 END,
-                          datetime(a2.fetched_at) DESC,
-                          datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
-                          a2.url ASC
-                      LIMIT 1
-                    ) AS source,
-                  i.importance,
-                  i.summary,
-                  i.key_points,
-                  i.evidence_urls,
-                  i.tags,
-                  i.perspectives,
-                  i.perspective_digest
-                FROM topics t
-                LEFT JOIN topic_insights i ON i.topic_id = t.id
-                WHERE t.category = ?
-                  AND COALESCE(NULLIF(t.category,''), 'other') <> 'news'
-                  AND NOT EXISTS (
-                    SELECT 1
-                    FROM topic_articles ta4
-                    JOIN articles a4 ON a4.id = ta4.article_id
-                    WHERE ta4.topic_id = t.id
-                      AND COALESCE(a4.kind,'') = 'news'
-                  )
-                  AND t.id IN ({placeholders})
-                """
-                params = [cutoff_48h, cat_id, *missing_ids]
-
-            cur.execute(sql_missing, params)
-            for r in cur.fetchall():
-                tid, title, url, article_date, recent, source, importance, summary, key_points, evidence_urls, tags, perspectives, perspective_digest = r
-                items.append(
-                    {
-                        "id": tid,
-                        "title": clean_for_html(title),
-                        "url": url or "#",
-                        "date": article_date or "",
-                        "recent": int(recent or 0),
-                        "source": source or "",
-                        "importance": int(importance) if importance is not None else None,
-                        "summary": summary or "",
-                        "key_points": _safe_json_list(key_points),
-                        "evidence_urls": _safe_json_list(evidence_urls),
-                        "tags": _safe_json_list(tags),
-                        "perspectives": _safe_json_obj(perspectives),
-                        "perspective_digest": _safe_json_obj(perspective_digest),
-                    }
-                )
-
-            # 再ソート（表示順の規則を維持）
-            items = sorted(
-                items,
-                key=lambda x: (
-                    -(x["importance"] or 0),
-                    -(x["recent"] or 0),
-                    x["id"]
-                )
-            )
-
-            # 表示件数を LIMIT_PER_CAT に戻す（ただし注目TOP5は落とさない）
-            hot_set = set(hot_ids)
-            kept = []
-            for it in items:
-                if len(kept) >= LIMIT_PER_CAT and it["id"] not in hot_set:
-                    continue
-                kept.append(it)
-            items = kept
-        # ===== A: 確実対応ここまで =====
-
-
-        # 改善3: importance が None かつ recent=0 の記事を除外（ファイルサイズ最適化）
-        hot_set_for_filter = {x["id"] for x in hot_by_cat.get(cat_id, [])}
-        items = [
-            it for it in items
-            if it["importance"] is not None or it["recent"] > 0 or it["id"] in hot_set_for_filter
-        ]
-
-        topics_by_cat[cat_id] = items
-
-    all_tags = {}
-    for cat_id, items in topics_by_cat.items():
-        for t in items:
-            for tg in (t.get("tags") or []):
-                all_tags[tg] = all_tags.get(tg, 0) + 1
-    tag_list = sorted(all_tags.items(), key=lambda x: (-x[1], x[0]))[:50]  # 上位50など
-
-    # 改善4: タグをグループに分類
-    TAG_GROUPS = {
-        "技術": {"ai", "ml", "llm", "cloud", "api", "docker", "kubernetes", "devops", "cicd",
-                 "database", "network", "linux", "python", "rust", "go", "java", "typescript",
-                 "frontend", "backend", "performance", "compute", "gpu", "semiconductor", "hardware"},
-        "セキュリティ": {"security", "vulnerability", "patch", "patch_window", "ransomware",
-                         "authentication", "encryption", "privacy", "zero-day", "malware", "firewall"},
-        "ビジネス": {"market", "investment", "regulation", "supply_chain", "price", "earnings",
-                     "partnership", "strategy", "governance", "compliance"},
-    }
-    tag_dict = dict(tag_list)
-    grouped: dict = {g: [] for g in TAG_GROUPS}
-    grouped["その他"] = []
-    for tg, cnt in tag_list:
-        placed = False
-        for g, members in TAG_GROUPS.items():
-            if tg in members:
-                grouped[g].append((tg, cnt))
-                placed = True
-                break
-        if not placed:
-            grouped["その他"].append((tg, cnt))
-    tag_groups = [(g, tags) for g, tags in grouped.items() if tags]
-    # --- UX改善①: 上部サマリー用meta ---
-    runtime_sec = int(os.environ.get("RUNTIME_SEC", "0") or "0")
-
-    # 記事総数（最終採用＝articlesテーブル件数）
-    cur.execute("SELECT COUNT(*) FROM articles")
-    total_articles = int(cur.fetchone()[0] or 0)
-
-    # 新規記事数（48h）
-    cur.execute(
-        """
-        SELECT COUNT(*)
-        FROM articles
-        WHERE datetime(COALESCE(NULLIF(published_at,''), fetched_at)) >= datetime(?)
-        """,
-        (cutoff_48h,),
-    )
-    new_articles_48h = int(cur.fetchone()[0] or 0)
-
-    # --- ops用データ取得 ---
+def _build_ops_page_data(cur, cutoff_48h: str, cat_name: Dict[str, str]) -> Dict[str, Any]:
+    """ops.html 用の統計データを取得・集計する（main() から分離）。"""
     cutoff_7d = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d %H:%M:%S")
 
     # 記事統計
@@ -2355,6 +1761,37 @@ def main():
     except Exception as e:
         _log_render_error("ops.rss_sources_count", e, level="warning")
         rss_sources = 0
+
+    return {
+        "ops_stats": ops_stats,
+        "daily_trend": daily_trend,
+        "category_dist": category_dist,
+        "source_exposure": source_exposure,
+        "feed_issues": feed_issues,
+        "primary_ratio_by_category": primary_ratio_by_category,
+        "primary_ratio_threshold": primary_ratio_threshold,
+        "rss_sources": rss_sources,
+    }
+
+
+def _build_meta_and_jp_priority(cur, cutoff_48h: str, rss_sources: int) -> Dict[str, Any]:
+    """上部サマリー用meta・JP優先トピックTOP10×2を取得・集計する（main() から分離）。"""
+    runtime_sec = int(os.environ.get("RUNTIME_SEC", "0") or "0")
+
+    # 記事総数（最終採用＝articlesテーブル件数）
+    cur.execute("SELECT COUNT(*) FROM articles")
+    total_articles = int(cur.fetchone()[0] or 0)
+
+    # 新規記事数（48h）
+    cur.execute(
+        """
+        SELECT COUNT(*)
+        FROM articles
+        WHERE datetime(COALESCE(NULLIF(published_at,''), fetched_at)) >= datetime(?)
+        """,
+        (cutoff_48h,),
+    )
+    new_articles_48h = int(cur.fetchone()[0] or 0)
 
     meta = {
         "generated_at_jst": None,  # 後で入れる
@@ -2559,6 +1996,701 @@ def main():
             "one_liner": "",
             "date": article_date or "",
         })
+
+    return {
+        "meta": meta,
+        "jp_priority_top": jp_priority_top,
+        "jp_priority_trending_top": jp_priority_trending_top,
+    }
+
+
+def _build_tech_categories(cur) -> Tuple[List[Dict[str, str]], Dict[str, str]]:
+    """カテゴリ一覧(YAML->DB->other)を構築し、tech側で使う tech_categories・cat_name を返す（main() から分離）。"""
+    categories = load_categories_from_yaml()
+    if not categories:
+        categories = build_categories_fallback(cur)
+    categories = ensure_category_coverage(cur, categories)
+
+    category_order = [
+        "system",
+        "manufacturing",
+        "smart_factory",
+        "market",
+        "environment",
+        "quality",
+        "maintenance",
+        "policy",
+        "decarbonization_ops",
+        "security",
+        "standards",
+        "ai",
+        "dev",
+        "other",
+    ]
+    order_index = {cat_id: idx for idx, cat_id in enumerate(category_order)}
+    # YAML定義から削除されたカテゴリ（DBに残存データがあっても非表示）
+    allowed_cats = set(category_order)
+    categories = [c for c in categories if c["id"] in allowed_cats]
+    categories = sorted(
+        categories,
+        key=lambda c: (order_index.get(c["id"], len(category_order)), c["id"]),
+    )
+
+    TECH_EXCLUDE = {"news"}
+    tech_categories = [c for c in categories if c["id"] not in TECH_EXCLUDE]
+
+    # tech側で使うのは tech_categories
+    cat_name = {c["id"]: c["name"] for c in tech_categories}
+    return tech_categories, cat_name
+
+
+def _build_tag_groups(topics_by_cat: Dict[str, List[Dict[str, Any]]], out_dir: Path) -> Dict[str, Any]:
+    """topics_by_cat から insights_tech.json を書き出し、tag_list・tag_groups を返す（main() から分離）。"""
+    # トップページ軽量化: details.insight の中身を insights_tech.json へ切り出す
+    # （docs/index.html と docs/tech/index.html は同じ topics_by_cat から生成されるため1回だけ書き出せば両方から参照できる）
+    insights_tech = {
+        str(t["id"]): _insight_payload(t)
+        for items in topics_by_cat.values()
+        for t in items
+        if t.get("has_insight")
+    }
+    write_insights_json(out_dir, "tech", insights_tech)
+
+    all_tags = {}
+    for cat_id, items in topics_by_cat.items():
+        for t in items:
+            for tg in (t.get("tags") or []):
+                all_tags[tg] = all_tags.get(tg, 0) + 1
+    tag_list = sorted(all_tags.items(), key=lambda x: (-x[1], x[0]))[:50]  # 上位50など
+
+    # 改善4: タグをグループに分類
+    TAG_GROUPS = {
+        "技術": {"ai", "ml", "llm", "cloud", "api", "docker", "kubernetes", "devops", "cicd",
+                 "database", "network", "linux", "python", "rust", "go", "java", "typescript",
+                 "frontend", "backend", "performance", "compute", "gpu", "semiconductor", "hardware"},
+        "セキュリティ": {"security", "vulnerability", "patch", "patch_window", "ransomware",
+                         "authentication", "encryption", "privacy", "zero-day", "malware", "firewall"},
+        "ビジネス": {"market", "investment", "regulation", "supply_chain", "price", "earnings",
+                     "partnership", "strategy", "governance", "compliance"},
+    }
+    tag_dict = dict(tag_list)
+    grouped: dict = {g: [] for g in TAG_GROUPS}
+    grouped["その他"] = []
+    for tg, cnt in tag_list:
+        placed = False
+        for g, members in TAG_GROUPS.items():
+            if tg in members:
+                grouped[g].append((tg, cnt))
+                placed = True
+                break
+        if not placed:
+            grouped["その他"].append((tg, cnt))
+    tag_groups = [(g, tags) for g, tags in grouped.items() if tags]
+    return {"tag_list": tag_list, "tag_groups": tag_groups}
+
+
+def _build_category_topics(cur, cat_id: str, cutoff_48h: str, LIMIT_PER_CAT: int, HOT_TOP_N: int) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """1カテゴリ分の注目TOP5(hot_list)と一覧(items)を構築する（main() のループ本体を分離）。"""
+
+    # (A) 注目TOP5（48h増分、published_atベース）
+    if cat_id == "other":
+        cur.execute(
+            """
+            SELECT
+              t.id,
+              COALESCE(t.title_ja, t.title) AS ttitle,
+              COUNT(ta.article_id) AS total_count,
+              SUM(
+                CASE
+                  WHEN datetime(
+                    substr(
+                      replace(replace(COALESCE(NULLIF(a.published_at,''), a.fetched_at),'T',' '),'+00:00',''),
+                      1, 19
+                    )
+                  ) >= datetime(?) THEN 1
+                  ELSE 0
+                END
+              ) AS recent_count,
+              MAX(
+                datetime(
+                  substr(
+                    replace(replace(COALESCE(NULLIF(a.published_at,''), a.fetched_at),'T',' '),'+00:00',''),
+                    1, 19
+                  )
+                )
+              ) AS article_date
+            FROM topics t
+            JOIN topic_articles ta ON ta.topic_id = t.id
+            JOIN articles a ON a.id = ta.article_id
+            WHERE (t.category IS NULL OR t.category = '')
+              AND COALESCE(t.category,'') <> 'news'
+              AND COALESCE(a.kind,'') <> 'news'
+            GROUP BY t.id
+            HAVING recent_count > 0
+            ORDER BY recent_count DESC, total_count DESC, t.id DESC
+            LIMIT ?
+            """,
+            (cutoff_48h, HOT_TOP_N),
+        )
+
+
+    else:
+        cur.execute(
+            """
+            SELECT
+              t.id,
+              COALESCE(t.title_ja, t.title) AS ttitle,
+              COUNT(ta.article_id) AS total_count,
+              SUM(
+                CASE
+                  WHEN datetime(
+                    substr(
+                      replace(replace(COALESCE(NULLIF(a.published_at,''), a.fetched_at),'T',' '),'+00:00',''),
+                      1, 19
+                    )
+                  ) >= datetime(?) THEN 1
+                  ELSE 0
+                END
+              ) AS recent_count,
+              MAX(
+                datetime(
+                  substr(
+                    replace(replace(COALESCE(NULLIF(a.published_at,''), a.fetched_at),'T',' '),'+00:00',''),
+                    1, 19
+                  )
+                )
+              ) AS article_date
+            FROM topics t
+            JOIN topic_articles ta ON ta.topic_id = t.id
+            JOIN articles a ON a.id = ta.article_id
+            WHERE t.category = ?
+              AND COALESCE(t.category,'') <> 'news'
+              AND COALESCE(a.kind,'') <> 'news'
+            GROUP BY t.id
+            HAVING recent_count > 0
+            ORDER BY recent_count DESC, total_count DESC, t.id DESC
+            LIMIT ?
+            """,
+            (cutoff_48h, cat_id, HOT_TOP_N),
+        )
+
+
+    rows = cur.fetchall()
+    hot_list = [
+        {"id": tid, "title": clean_for_html(title), "articles": int(total), "recent": int(recent),"date": article_date or ""}
+        for (tid, title, total, recent, article_date) in rows
+    ]
+
+    # ★ 注目TOP5の並びも完全決定（揺れ防止）
+    hot_list = sorted(
+        hot_list,
+        key=lambda x: (-x["recent"], -x["articles"], x["id"]),
+    )
+
+    # (B) 一覧（topics + insights + 代表URL + 48h増分）
+    if cat_id == "other":
+        cur.execute(
+            """
+            SELECT
+              t.id,
+              COALESCE(t.title_ja, t.title) AS title,
+              (
+                  SELECT a2.url
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                      CASE
+                        WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
+                        ELSE 1
+                      END,
+                      datetime(a2.fetched_at) DESC,
+                      datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                      a2.url ASC
+                    LIMIT 1
+
+                ) AS url,
+                (
+                  SELECT COALESCE(
+                    NULLIF(a2.published_at,''),
+                    a2.fetched_at
+                  )
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                    CASE
+                      WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
+                      ELSE 1
+                    END,
+                    datetime(a2.fetched_at) DESC,
+                    datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                    a2.url ASC
+                  LIMIT 1
+                ) AS article_date,
+              (
+                  SELECT COALESCE(SUM(
+                    CASE
+                      WHEN datetime(
+                        substr(
+                          replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
+                          1, 19
+                        )
+                      ) >= datetime(?) THEN 1
+                      ELSE 0
+                    END
+                  ), 0)
+                  FROM topic_articles ta3
+                  JOIN articles a3 ON a3.id = ta3.article_id
+                  WHERE ta3.topic_id = t.id
+                ) AS recent,
+              (
+                  SELECT a2.source
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                      CASE WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0 ELSE 1 END,
+                      datetime(a2.fetched_at) DESC,
+                      datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                      a2.url ASC
+                  LIMIT 1
+                ) AS source,
+              i.importance,
+              i.summary,
+              i.key_points,
+              i.evidence_urls,
+              i.tags,
+              i.perspectives,
+              i.perspective_digest
+            FROM topics t
+            LEFT JOIN topic_insights i ON i.topic_id = t.id
+            WHERE (t.category IS NULL OR t.category = '')
+              AND NOT EXISTS (
+                SELECT 1
+                FROM topic_articles ta4
+                JOIN articles a4 ON a4.id = ta4.article_id
+                WHERE ta4.topic_id = t.id
+                  AND COALESCE(a4.kind,'') = 'news'
+              )
+            ORDER BY
+              COALESCE(i.importance, 0) DESC,
+              COALESCE(recent, 0) DESC,
+              t.id DESC
+            LIMIT ?
+            """,
+            (cutoff_48h, LIMIT_PER_CAT),
+        )
+    else:
+        cur.execute(
+            """
+            SELECT
+              t.id,
+              COALESCE(t.title_ja, t.title) AS title,
+              (
+                  SELECT a2.url
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                      CASE
+                        WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
+                        ELSE 1
+                      END,
+                      datetime(a2.fetched_at) DESC,
+                      datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                      a2.url ASC
+                    LIMIT 1
+                ) AS url,
+                (
+                  SELECT COALESCE(
+                    NULLIF(a2.published_at,''),
+                    a2.fetched_at
+                  )
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                    CASE
+                      WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
+                      ELSE 1
+                    END,
+                    datetime(a2.fetched_at) DESC,
+                    datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                    a2.url ASC
+                  LIMIT 1
+                ) AS article_date,
+              (
+                  SELECT COALESCE(SUM(
+                    CASE
+                      WHEN datetime(
+                        substr(
+                          replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
+                          1, 19
+                        )
+                      ) >= datetime(?) THEN 1
+                      ELSE 0
+                    END
+                  ), 0)
+                  FROM topic_articles ta3
+                  JOIN articles a3 ON a3.id = ta3.article_id
+                  WHERE ta3.topic_id = t.id
+                ) AS recent,
+              (
+                  SELECT a2.source
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                      CASE WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0 ELSE 1 END,
+                      datetime(a2.fetched_at) DESC,
+                      datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                      a2.url ASC
+                  LIMIT 1
+                ) AS source,
+
+              i.importance,
+              i.summary,
+              i.key_points,
+              i.evidence_urls,
+              i.tags,
+              i.perspectives,
+              i.perspective_digest
+            FROM topics t
+            LEFT JOIN topic_insights i ON i.topic_id = t.id
+            WHERE t.category = ?
+              AND COALESCE(t.category,'') <> 'news'
+              AND NOT EXISTS (
+                SELECT 1
+                FROM topic_articles ta4
+                JOIN articles a4 ON a4.id = ta4.article_id
+                WHERE ta4.topic_id = t.id
+                  AND COALESCE(a4.kind,'') = 'news'
+              )
+            ORDER BY
+              COALESCE(i.importance, 0) DESC,
+              COALESCE(recent, 0) DESC,
+              t.id DESC
+            LIMIT ?
+            """,
+            (cutoff_48h, cat_id, LIMIT_PER_CAT),
+        )
+
+
+    rows = cur.fetchall()
+    items: List[Dict[str, Any]] = []
+    for r in rows:
+        tid, title, url, article_date, recent, source, importance, summary, key_points, evidence_urls, tags, perspectives, perspective_digest = r
+        items.append(
+            {
+                "id": tid,
+                "title": clean_for_html(title),  # ← ここはSQLで title_ja 優先済み
+                "url": url or "#",
+                "date": article_date or "",
+                "recent": int(recent or 0),
+                "source": source or "",
+                "importance": int(importance) if importance is not None else None,
+                "summary": summary or "",
+                "key_points": _safe_json_list(key_points),
+                "evidence_urls": _safe_json_list(evidence_urls),
+                "tags": _safe_json_list(tags),
+                "perspectives": _safe_json_obj(perspectives),
+                "perspective_digest": _safe_json_obj(perspective_digest),
+            }
+        )
+        items[-1]["has_insight"] = _tech_has_insight(items[-1])
+
+    # トピック順を完全決定（最後の揺れ防止）
+    items = sorted(
+        items,
+        key=lambda x: (
+            -(x["importance"] or 0),
+            -(x["recent"] or 0),
+            x["id"]
+        )
+    )
+
+    # ===== A: 確実対応：注目TOP5を詳細リストにも必ず混ぜる =====
+    hot_ids = [x["id"] for x in hot_list]
+    item_ids = {x["id"] for x in items}
+    missing_ids = [tid for tid in hot_ids if tid not in item_ids]
+
+    if missing_ids:
+        # IN句プレースホルダを生成
+        placeholders = ",".join(["?"] * len(missing_ids))
+
+        if cat_id == "other":
+            sql_missing = f"""
+            SELECT
+              t.id,
+              COALESCE(t.title_ja, t.title) AS title,
+              (
+                  SELECT a2.url
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                      CASE
+                        WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
+                        ELSE 1
+                      END,
+                      datetime(a2.fetched_at) DESC,
+                      datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                      a2.url ASC
+                    LIMIT 1
+                ) AS url,
+                (
+                  SELECT COALESCE(
+                    NULLIF(a2.published_at,''),
+                    a2.fetched_at
+                  )
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                    CASE
+                      WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
+                      ELSE 1
+                    END,
+                    datetime(a2.fetched_at) DESC,
+                    datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                    a2.url ASC
+                  LIMIT 1
+                ) AS article_date,
+              (
+                  SELECT COALESCE(SUM(
+                    CASE
+                      WHEN datetime(
+                        substr(
+                          replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
+                          1, 19
+                        )
+                      ) >= datetime(?) THEN 1
+                      ELSE 0
+                    END
+                  ), 0)
+                  FROM topic_articles ta3
+                  JOIN articles a3 ON a3.id = ta3.article_id
+                  WHERE ta3.topic_id = t.id
+                ) AS recent,
+              (
+                  SELECT a2.source
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                      CASE WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0 ELSE 1 END,
+                      datetime(a2.fetched_at) DESC,
+                      datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                      a2.url ASC
+                  LIMIT 1
+                ) AS source,
+              i.importance,
+              i.summary,
+              i.key_points,
+              i.evidence_urls,
+              i.tags,
+              i.perspectives,
+              i.perspective_digest
+            FROM topics t
+            LEFT JOIN topic_insights i ON i.topic_id = t.id
+            WHERE (t.category IS NULL OR t.category = '')
+              AND COALESCE(NULLIF(t.category,''), 'other') NOT IN ('news', 'market')
+              AND NOT EXISTS (
+                SELECT 1
+                FROM topic_articles ta4
+                JOIN articles a4 ON a4.id = ta4.article_id
+                WHERE ta4.topic_id = t.id
+                  AND COALESCE(a4.kind,'') = 'news'
+              )
+              AND t.id IN ({placeholders})
+            """
+            params = [cutoff_48h, *missing_ids]
+        else:
+            sql_missing = f"""
+            SELECT
+              t.id,
+              COALESCE(t.title_ja, t.title) AS title,
+              (
+                  SELECT a2.url
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                      CASE
+                        WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
+                        ELSE 1
+                      END,
+                      datetime(a2.fetched_at) DESC,
+                      datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                      a2.url ASC
+                    LIMIT 1
+                ) AS url,
+                (
+                  SELECT COALESCE(
+                    NULLIF(a2.published_at,''),
+                    a2.fetched_at
+                  )
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                    CASE
+                      WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0
+                      ELSE 1
+                    END,
+                    datetime(a2.fetched_at) DESC,
+                    datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                    a2.url ASC
+                  LIMIT 1
+                ) AS article_date,
+              (
+                  SELECT COALESCE(SUM(
+                    CASE
+                      WHEN datetime(
+                        substr(
+                          replace(replace(COALESCE(NULLIF(a3.published_at,''), a3.fetched_at),'T',' '),'+00:00',''),
+                          1, 19
+                        )
+                      ) >= datetime(?) THEN 1
+                      ELSE 0
+                    END
+                  ), 0)
+                  FROM topic_articles ta3
+                  JOIN articles a3 ON a3.id = ta3.article_id
+                  WHERE ta3.topic_id = t.id
+                ) AS recent,
+              (
+                  SELECT a2.source
+                  FROM topic_articles ta2
+                  JOIN articles a2 ON a2.id = ta2.article_id
+                  WHERE ta2.topic_id = t.id
+                  ORDER BY
+                      CASE WHEN COALESCE(NULLIF(a2.content,''), '') != '' THEN 0 ELSE 1 END,
+                      datetime(a2.fetched_at) DESC,
+                      datetime(COALESCE(NULLIF(a2.published_at,''), a2.fetched_at)) DESC,
+                      a2.url ASC
+                  LIMIT 1
+                ) AS source,
+              i.importance,
+              i.summary,
+              i.key_points,
+              i.evidence_urls,
+              i.tags,
+              i.perspectives,
+              i.perspective_digest
+            FROM topics t
+            LEFT JOIN topic_insights i ON i.topic_id = t.id
+            WHERE t.category = ?
+              AND COALESCE(NULLIF(t.category,''), 'other') <> 'news'
+              AND NOT EXISTS (
+                SELECT 1
+                FROM topic_articles ta4
+                JOIN articles a4 ON a4.id = ta4.article_id
+                WHERE ta4.topic_id = t.id
+                  AND COALESCE(a4.kind,'') = 'news'
+              )
+              AND t.id IN ({placeholders})
+            """
+            params = [cutoff_48h, cat_id, *missing_ids]
+
+        cur.execute(sql_missing, params)
+        for r in cur.fetchall():
+            tid, title, url, article_date, recent, source, importance, summary, key_points, evidence_urls, tags, perspectives, perspective_digest = r
+            items.append(
+                {
+                    "id": tid,
+                    "title": clean_for_html(title),
+                    "url": url or "#",
+                    "date": article_date or "",
+                    "recent": int(recent or 0),
+                    "source": source or "",
+                    "importance": int(importance) if importance is not None else None,
+                    "summary": summary or "",
+                    "key_points": _safe_json_list(key_points),
+                    "evidence_urls": _safe_json_list(evidence_urls),
+                    "tags": _safe_json_list(tags),
+                    "perspectives": _safe_json_obj(perspectives),
+                    "perspective_digest": _safe_json_obj(perspective_digest),
+                }
+            )
+
+        # 再ソート（表示順の規則を維持）
+        items = sorted(
+            items,
+            key=lambda x: (
+                -(x["importance"] or 0),
+                -(x["recent"] or 0),
+                x["id"]
+            )
+        )
+
+        # 表示件数を LIMIT_PER_CAT に戻す（ただし注目TOP5は落とさない）
+        hot_set = set(hot_ids)
+        kept = []
+        for it in items:
+            if len(kept) >= LIMIT_PER_CAT and it["id"] not in hot_set:
+                continue
+            kept.append(it)
+        items = kept
+    # ===== A: 確実対応ここまで =====
+
+
+    # 改善3: importance が None かつ recent=0 の記事を除外（ファイルサイズ最適化）
+    hot_set_for_filter = {x["id"] for x in hot_list}
+    items = [
+        it for it in items
+        if it["importance"] is not None or it["recent"] > 0 or it["id"] in hot_set_for_filter
+    ]
+
+    return hot_list, items
+
+
+def main():
+    t0 = _now_sec()
+    print("[TIME] step=render start")
+
+    out_dir = Path("docs")
+    out_dir.mkdir(exist_ok=True)
+
+    conn = connect()
+    cur = conn.cursor()
+    # categories: YAML -> DB -> other
+    tech_categories, cat_name = _build_tech_categories(cur)
+
+    topics_by_cat: Dict[str, List[Dict[str, Any]]] = {}
+    hot_by_cat: Dict[str, List[Dict[str, Any]]] = {}
+    # 48h cutoff（UTCでSQLite互換の "YYYY-MM-DD HH:MM:SS"）
+    cutoff_48h = (datetime.now(timezone.utc) - timedelta(hours=48)).strftime("%Y-%m-%d %H:%M:%S")
+
+    LIMIT_PER_CAT = 15
+    HOT_TOP_N = 5
+
+    for cat in tech_categories:
+        cat_id = cat["id"]
+        hot_list, items = _build_category_topics(cur, cat_id, cutoff_48h, LIMIT_PER_CAT, HOT_TOP_N)
+        hot_by_cat[cat_id] = hot_list
+        topics_by_cat[cat_id] = items
+
+    _tag_data = _build_tag_groups(topics_by_cat, out_dir)
+    tag_list = _tag_data["tag_list"]
+    tag_groups = _tag_data["tag_groups"]
+    # --- ops用データ取得 ---
+    _ops_data = _build_ops_page_data(cur, cutoff_48h, cat_name)
+    ops_stats = _ops_data["ops_stats"]
+    daily_trend = _ops_data["daily_trend"]
+    category_dist = _ops_data["category_dist"]
+    source_exposure = _ops_data["source_exposure"]
+    feed_issues = _ops_data["feed_issues"]
+    primary_ratio_by_category = _ops_data["primary_ratio_by_category"]
+    primary_ratio_threshold = _ops_data["primary_ratio_threshold"]
+    rss_sources = _ops_data["rss_sources"]
+
+    # --- UX改善①: 上部サマリー用meta・JP優先トピックTOP10×2 ---
+    _meta_data = _build_meta_and_jp_priority(cur, cutoff_48h, rss_sources)
+    meta = _meta_data["meta"]
+    jp_priority_top = _meta_data["jp_priority_top"]
+    jp_priority_trending_top = _meta_data["jp_priority_trending_top"]
 
     # --- UX改善①: カテゴリ横断TOP ---
     # Global Top 10: importance desc, recent desc, id asc（完全決定）

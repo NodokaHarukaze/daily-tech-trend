@@ -270,7 +270,7 @@ if not "!RC!"=="0" (
 `--limit 30 --max-sec 120` は保守的な初期値の一例（1晩で最大30件・最大2分）。実運用に入れる場合は数晩分のログ（`[TIME] generate_perspective_digest ... sec=`）を見ながら調整するとよい。
 
 ## 次回セッション向け残タスク
-- [ ] （ユーザー承認前提）上記の `run_daily.bat` 組み込みを実際に適用し、1晩分のログで想定通り動くか確認する
+- [x] （ユーザー承認前提）上記の `run_daily.bat` 組み込みを実際に適用し、1晩分のログで想定通り動くか確認する → **本セッション末尾の追記時点で判明: 同日07-13の別セッション「利用価値向上 第1弾」（548行目）で既に適用済みだった。** 当セクション執筆時点ではまだ見送り判断だったが、その後同日中に方針が変わり実際に組み込まれた（本ファイル内に「見送った」という記述と「組み込んだ」という記述が両方残っていたため、2026-07-23の自律発案セッションが `run_daily.bat` の実物とログを確認して矛盾を解消した。詳細は本ファイル末尾「Phase 3 本番配線 実態確認（2026-07-23）」を参照）
 - [ ] 「gpt-oss:20b + 文字数指定 + reasoning肥大化」の知見の Template本体 (`C:\work\★Template\tasks\knowledge.md`) への反映（引き続き夜間モードの書き込み制限で未実施）
 - [x] pre-existing テスト失敗12件（`test_opinion_page.py` 等）の根本原因調査 → 2026-07-13 全体改善タスク（下記）で解消
 
@@ -351,7 +351,7 @@ danieli.com, zeiss.com, ghgprotocol.org, env.go.jp
 接続不可: azure.microsoft.com(IoT blog, timeout), blog.skf.com
 
 ### 残タスク（次回以降）
-- [ ] 上記死亡フィードの URL 差し替え（各サイトの新フィードURLを Web で調査）または sources.yaml からの削除
+- [x] 上記死亡フィードの URL 差し替え（各サイトの新フィードURLを Web で調査）または sources.yaml からの削除 → **実装済み・完了記録あり**（2026-07-13、コミット`09418980`・`2ba60f4d`）。下記「死亡フィードの棚卸し・差し替え完了」節（666行目以降）に45件全件の実施記録があり、`src/sources.yaml`の現物も反映済みであることを2026-07-29セッションで確認した。このチェックボックスが未更新のまま残っていただけの記録漏れ（実害なし）
 - [x] render_main.py の段階的分割の継続（テンプレート外部化）→ 2026-07-21 第1弾・第2弾実施（下記参照）。残り2テンプレート（`FORECAST_HTML`/`FORECAST_HITS_HTML`）は未着手
 - [ ] git 履歴の肥大解消（filter-repo で過去の state.sqlite blob を除去。force-push を伴うため要ユーザー判断）
 
@@ -562,11 +562,104 @@ docs/ops/index.html 生成に実使用中）の2個を追加で `src/templates/`
 - 検証: 経緯リンク 215件 → 404 ゼロ、全テスト 224 pass
 
 ## 残り（第2弾以降・計測データを見てから優先度決定）
-- [ ] トップページ軽量化（936KB → 初期表示絞り込み）
-- [ ] 検索インデックス(1.9MB)の遅延ロード
-- [ ] ダークモード（common.css の変数上書き）
-- [ ] ウォッチリスト（localStorage）
-- [ ] 死亡フィードの URL 差し替え（Web調査は別エージェントで進行中）
+
+**【2026-07-28 09:07 自律発案セッションで棚卸し】この見出し自体が「第2弾以降」だが、下記5項目のうち3項目は
+実際には同日（2026-07-13）中に "第2弾" として実装済みだった（コミット `d5e9ec7e`
+「feat(ux): ダークモード・検索遅延ロード・タグ永続化・exec定常運用化（第2弾）」19:50）。
+このチェックリストだけが未反映のまま12日以上残っていた（他プロジェクトで繰り返し発見してきた
+「実装完了・文書化ゼロ」パターンと同型）。**
+
+- [x] トップページ軽量化（`docs/index.html` 現在964KB → 初期表示絞り込み） → **2026-07-28 12:07セッションで実装完了**。
+  2026-07-28計測: `<div class="topic-row">`マーカー244件、先頭行以降で約970KB（全体の98.4%）、
+  ヘッダ/CSS等ボイラープレートは約15.7KB（1.6%）のみ。重量はほぼ全てトピック行本体
+  （1行平均約3.97KB、Jinja2側で全件を静的HTMLとして出力しているため）。
+  `content-visibility:auto`（common.css）で描画パフォーマンスは対策済みだが、転送量（ネットワーク）は未対策。
+  2026-07-28 11:07セッションで設計完了（`tasks/design_toppage_lightweight.md`参照）。
+  追加計測で `<details class="insight">`（既定で折りたたみ非表示の要約/key_points/perspectives/
+  perspective_digest/evidence_urls）だけでファイル全体の**52.1%**（435KB/834KB）を占め、かつ検索・
+  フィルタ機能が読む`data-*`属性（`data-summary`だけで244件合計14.5KB）とは完全に独立していることを
+  実測で確認した。これにより「行は間引かず`.topic-row`は全件残したまま、`<details>`の中身だけを
+  ページ単位のJSON（`insights_tech.json`/`insights_news.json`）へ切り出し、初回`toggle`時に遅延fetch
+  する」設計（既存の検索インデックス遅延ロードと同型）を採用し、09-28 09:07セッションが懸念していた
+  「ページネーション化でフィルタに読み込んでいない行がヒットしなくなる」副作用を構造的に回避できることを
+  示した。
+  **実装内容（2026-07-28 12:07セッション）**:
+  1. `render_main.py`: `_tech_has_insight()`/`_news_has_insight()`でtech.html/news.htmlの
+     `<details class="insight">`表示条件を一箇所に集約し（テンプレート側は`{% if t.has_insight %}`
+     を参照するだけに単純化、条件の二重管理を回避）、`_insight_payload()`で summary/key_points/
+     perspectives/perspective_digest/evidence_urls/importance_basis を抽出、`write_insights_json()`
+     で `docs/assets/data/insights_tech.json`・`insights_news.json` へ書き出す関数を追加。
+     `docs/index.html`と`docs/tech/index.html`は同じ`topics_by_cat`から生成されるため
+     insights_tech.jsonは1回書き出すだけで両方から絶対パス（`/daily-tech-trend/assets/data/...`、
+     既存の`common_js_src`等と同じ絶対パス方式）で参照できる。
+  2. `tech.html`/`news.html`: `<details class="insight">`内部を`data-insight-topic="{{ t.id }}"`
+     ＋「読み込み中…」プレースホルダに置き換え（news.htmlの`sec.other_rows`側ネスト`.insight`は
+     実際の生成コードでは`other_rows`キー自体が渡されず常にdead codeと判明したため対象外・現状維持）。
+  3. `common.js`: `ensureInsights(pagePrefix)`（検索インデックスの`ensureIndex()`と同型）＋
+     `renderInsightBody()`＋各テンプレートのkey_points重複排除ロジック（tech版・news版で異なるため
+     `buildTechKeyPoints()`/`buildNewsKeyPoints()`として別実装、Jinjaの元ロジックと1:1で対応させた）
+     を追加。`details.insight`の`toggle`イベント（`{once:true}`）で初回展開時のみJSONをfetchしDOM構築。
+     XSS対策として全てDOM API（`textContent`/`createElement`）で構築し、innerHTML文字列結合は使わない
+     （既存Jinjaテンプレートは`{{ t.summary }}`等を`|e`なしで出力しており実は無防備だったが、今回新規に
+     書くJS側は素直に安全な実装にした。既存テンプレート側の同問題の修正は別スコープとして着手していない）。
+  4. `t.next_actions`（tech.html旧278-364行目に存在した「次アクション」ブロック）は`render_main.py`の
+     topics_by_cat構築ロジックに`next_actions`キーが一切存在せず、実際には常にUndefined→非表示の
+     dead codeだったため、JSON側への移植は行わなかった（実データが来ることは無い）。
+  5. テスト: `tests/test_insight_lazyload.py`新規（`_tech_has_insight`/`_news_has_insight`/
+     `_insight_payload`/`write_insights_json`の単体テスト）。既存`tests/test_render_utilities.py`の
+     `test_news_html_renders_perspective_digest_section`はperspective_digestが直接HTMLに出力される
+     前提だったため、プレースホルダ＋JSON側での検証に更新（`test_news_html_uses_lazy_placeholder_...`
+     に改名）。`python -m pytest -q` 236件全合格（既存235件+新規/更新分を含む）。
+  6. 実機検証（`python src/render.py`）: `docs/index.html` 1,012,969→521,265バイト（**約48.5%削減**、
+     詳細を1件も開かないユーザーの実質転送量）。`docs/news/index.html` 398,538→124,554バイト
+     （**約68.7%削減**）。全件のdetailsを開いた場合でも `docs/index.html`(521,265)+`insights_tech.json`
+     (165,485)=686,750バイトで旧`docs/index.html`単体(1,012,969)より約32%少ない（JSONは1回fetchで
+     複数ページ共有されるため実際はさらに有利）。`grep -c "技術者目線"`等でHTML側に生の立場別コメントが
+     一切漏れていないことを確認。`insights_tech.json`のキー数(188)とHTML側の`data-insight-topic`件数が
+     一致することを確認。
+  7. [x] **実機検証完了**（2026-07-29 02:07セッション）: `C:\work\AmazonAssociate\.venv`に既に
+     インストール済みのPlaywright 1.58.0 + Chromium(1208)を借用し（daily-tech-trend側には
+     playwrightを新規インストールせずMinimal Impactで検証）、`docs\index.html`が
+     `fetch('/daily-tech-trend/assets/data/...')`という絶対パスに依存している点を、Windowsの
+     ディレクトリジャンクション（`mklink /J`、管理者権限不要）で`<一時dir>\daily-tech-trend -> docs\`
+     とし本番同様のURL構造を再現して検証した。ヘッドレスChromiumで2パターンを確認し両方PASS:
+     - A) 通常クリック: `tech/index.html`をハッシュ無しで開くと`if (!location.hash) toggleAllCats();`
+       により全カテゴリが既定で折りたたまれる仕様（今回の検証で初めて気づいた既存挙動。バグではない）
+       のため、実際のユーザーと同じく「すべて開く」ボタンをクリックしてから`details.insight`の
+       `<summary>`をクリック → `toggle`イベント発火 → `insights_tech.json`へのfetchが観測され →
+       本文（要約等）が正しく描画されることを確認
+     - B) ハッシュ直接アクセス: `tech/index.html#topic-<id>`に直接アクセスすると
+       `revealHashTarget→scrollToHash`経路で`det.open = true`のプログラム代入が行われ、
+       これでも`toggle`イベントが実際に発火し（HTML Living Standardの仕様通り、ユーザー操作限定ではない）、
+       `insights_tech.json`へのfetchが観測され本文が描画されることを実機で確認（残課題だった論点そのもの）
+     検証スクリプトは`scripts\verify_lazy_insight_browser.py`として保存（pytestスイートには非組み込み。
+     実行方法・借用元venvはスクリプト冒頭のdocstringに明記）。news.htmlは同一の`common.js`関数
+     （`ensureInsights`/`initInsightLazyLoad`/`scrollToHash`は`pagePrefix`引数のみ異なる共通実装）を
+     使うため、tech側での実機確認により機構自体は妥当性が示されたと判断し、news側の個別実機確認は
+     時間対効果の観点から見送った。
+  8. **運用上の注意（今回の反省点）**: 本セッション中に`Get-ScheduledTask`で確認せず`python src/render.py`を
+     手動実行したところ、ちょうど同時刻に本番の"Daily Tech Trend"タスクが実行中（dedupeフェーズ）で
+     `data/state.sqlite`への書き込みが競合し、`diff.render`/`entities.render`で
+     `sqlite3.OperationalError: database is locked`が発生した（tech/news/insights_*.json自体は
+     正常に書き出せており実害はないが、次回からは**手動でrender.pyを実行する前に
+     `Get-ScheduledTask -TaskName "Daily Tech Trend"`のStateを確認する**ことをルール化する。
+     詳細は`tasks/lessons.md`にも記録）。
+- [x] 検索インデックス(1.9MB)の遅延ロード → **実装済み**（2026-07-13, `d5e9ec7e`）。
+  `src/render_feeds.py` `SEARCH_HTML`内、`q.addEventListener('focus', ...)`で検索欄フォーカス時に
+  初めて`search-index.json`を`fetch`する設計（203-216行目付近、コード内コメントに明記）
+- [x] ダークモード（common.css の変数上書き） → **実装済み**（2026-07-13, `d5e9ec7e`）。
+  `docs/assets/css/common.css` `@media (prefers-color-scheme: dark)`ブロックでCSS変数
+  （`--bg`/`--panel`/`--text-main`等）を上書き。OS設定に自動追従する方式で、手動トグルボタンは無い
+  （todo.md記載時に想定されていた実装方式と完全一致するかは不明だが、機能としての「ダークモード」自体は
+  達成されている）
+- [x] ウォッチリスト（localStorage） → **部分実装**（2026-07-13, `d5e9ec7e`）。
+  `docs/assets/js/common.js` 36-47行目でタグ選択（`dttSelectedTags`/`dttTagMode`）を`localStorage`に
+  永続化し次回訪問時に復元する仕組みがあり、コード内コメントで「ウォッチリスト的な使い方」と明記されている。
+  ただし記事単位の個別保存（ブックマーク）ではなくタグフィルタ状態の永続化のため、
+  todo.md記載時に想定されていた「特定記事を継続ウォッチする」機能そのものが必要であれば別途未着手
+- [x] 死亡フィードの URL 差し替え → **実装済み・完了記録あり**（2026-07-13）。下記
+  「死亡フィードの棚卸し・差し替え完了」節に18/18 OK の実施記録が既にあり、このチェックリストとの
+  重複・矛盾を解消した
 
 ---
 
@@ -648,3 +741,102 @@ PR TIMES カテゴリ別RDF（index.rdf のみ提供・非IT混在のためカ�
 - 第1弾: 17件復旧（うち4件は UA/WAF 対策で復旧）+ 廃止4件
 - 第2弾: 9件復旧 + 廃止14件
 - feed_health の陳腐化行も全掃除済み（sources.yaml と完全同期）
+
+---
+
+# Phase 3 本番配線 実態確認（2026-07-23 自律発案）
+
+## 発端
+07-22 12:07 セッション（成果物棚卸し更新）が「Phase3（立場別サマリー本番配線）の todo.md 内矛盾記述」を発見していた。「立場別200文字サマリー Phase 3」節（236行目）は「run_daily.bat への組み込みは今回は見送った・ユーザー承認前提の残タスク」と書いているが、同日付の後続「利用価値向上 第1弾」節（548行目）には「perspective_digest 自動生成の配線: run_daily.bat に組み込み済み」と書かれており矛盾していた。
+
+## 確認した事実
+1. **`C:\work\run_daily.bat` の実物を確認**: `generate_perspective_digest.py --limit 30 --max-sec 120` のステップが実在する（97-101行目、`[WARN] ... continuing` の non-fatal パターンで登録済み）。つまり「利用価値向上 第1弾」の記述が正しく、Phase 3 節の「見送った」は 07-13 のその後のセッションで方針が変わったまま Phase 3 節側が更新されずに残った、という**単純な記述の更新漏れ**だった（隠れたバグや設定ミスではない）
+2. **無人実行での稼働実績**: 07-13〜07-22 の全ログ（1日4回×10日=44回中44回で該当ステップが存在）を集計した結果、**44/44 回とも `updated_rows=30`（打ち切りなし・全件成功）、`[WARN]` は一度も出ていない**。所要時間は 98.8〜108.7 秒で安定し、`--max-sec 120` の予算に対し最大でも 90.6% 使用に留まっており、直近まで悪化傾向も見られない（切迫していない）
+3. **本番DBでの反映状況**: `topic_insights` 全16,775行中 `perspective_digest` 充填済みは980件。Phase2セッション（07-12）時点では「tech ページ（`docs/index.html`）には1件も表示されなかった」問題があったが、10日間の継続稼働で解消しており、現在は `docs/news/index.html` に67件・`docs/index.html`（tech ページ、`docs/tech/index.html` と同一）に18件、実際に「立場別くわしい解説」として表示されていることを確認した
+
+## 結論・対応
+- **本番配線は既に完了・安定稼働中であり、追加のユーザー承認や新規実装は不要**。Phase 3 節の「次回セッション向け残タスク」チェックボックスを実態に合わせて `[x]` に修正し、経緯を明記した（272行目）
+- `run_daily.bat` 自体への変更（`--max-sec` 引き上げ等）は、現状問題が一切ないため今回は行わない（Minimal Impact、生きた無人本番パイプラインへの不要な変更を避ける）
+- 本番DB・`run_daily.bat`・`docs/` への書き込みは一切行っていない（読み取り確認のみ）
+
+## 次回候補
+- 引き続き perspective_digest の充填率は緩やかに増加中（1晩30件ペース）。tech ページでの表示件数が増えてきたら、Phase 2 で見送った「表示デザインの調整」（現状は既存 perspectives ブロック直後に追加しただけ）の要否を再検討してもよい
+- 優先度は低い
+
+---
+
+## 2026-07-29 04:07 自律発案: render_main.py 可読性改善 第1弾（ops用データ取得ブロックの関数分離）
+
+### 発案理由
+queue.mdは全件完了済みで進行中の自律発案は無かった。Explore agentでC:\work配下の他プロジェクト（健康テスト・遠隔操作・AI動画生成研究・ComfyUI・PC設定関連・llama_runtime_PC2・CollectedInfo・AmazonAssociate・stable-diffusion-webui・NotifyAI・サーバー集約）のtodo.mdを横断調査したが、無人セッションから安全に着手できる新規候補は乏しかった（大半がGPU起動・ユーザーGUI確認待ち）。調査結果に含まれていた「daily-tech-trendのpre-existing 12件テスト失敗の根本原因調査」は、実際に`python -m pytest -q`を実行して確認したところ**2026-07-13に既に解消済み（現在236件全pass、失敗0件）**と判明し、古い情報に基づく誤った候補だった（knowledge.mdの「todo.mdの記述を鵜呑みにせず現状を確認する」教訓通り）。次に本ファイル502行目の「render_main.pyの残り約3,100行（DB読み書き・データ集計ロジック中心）の可読性改善」を調べたところ、`main()`関数が実際に約1,590行（1592-3182行）に達する巨大関数だったことを確認し、これを分割候補として選定した。
+
+### やったこと
+1. `main()`内の構造をセクションコメント単位で分析し、`--- ops用データ取得 ---`ブロック（記事統計・日別収集トレンド・カテゴリ別分布・ソース別TOP15・フィード健全性・一次情報比率・RSS数、約170行）が「`cur`・`cutoff_48h`・`cat_name`のみを入力に取り、複数のローカル変数を構築するだけ」という完全に自己完結したデータ取得・集計ロジックであることを確認。後続で参照される全変数（`ops_stats`/`daily_trend`/`category_dist`/`source_exposure`/`feed_issues`/`primary_ratio_by_category`/`primary_ratio_threshold`/`rss_sources`）の使用箇所をgrepで洗い出し、`ops.html`テンプレート描画にのみ使われることを確認した
+2. 新規関数 `_build_ops_page_data(cur, cutoff_48h, cat_name) -> Dict[str, Any]` を追加し、上記ブロックをそのまま移設（ロジック・SQL文は一字一句変更せず、戻り値をdictにまとめただけ）。`main()`側は関数呼び出し+アンパックの8行に置換した
+3. 初回実装で `primary_ratio_threshold`（一次情報比率の閾値、ops.html描画で3箇所から参照される）を戻り値に含め忘れており、`python src/render.py`実行時に`NameError`で発覚。pytestの236件は全てグリーンのまま検出できなかった（＝pytestスイートはmain()のops.html描画パスを実データでE2E検証していない）ため、**render.py実機実行による検証は今後もこの種の抽出ミスを検出する唯一の手段**という教訓を得た。戻り値dictとmain()側のアンパックに追記して修正
+4. 検証: 自分の変更を一時的に逆適用（reverse edit）してリファクタ前のファイル（1行単位でdiff確認、3182行で行数完全一致）を再現し、pytest 236件pass→`render.py`実行→`docs/`を退避。その後リファクタ後のファイルに戻して再度pytest 236件pass→`render.py`実行→`docs/`を比較。**差分は116ファイルで発生したが、全て`generated_at`/`最終更新`/`lastBuildDate`等のタイムスタンプ表示のみ（bash+pythonでタイムスタンプ行を除外した非タイムスタンプ差分を機械チェックし0件を確認）**。構造・データ内容の差分はゼロで、リファクタが完全に無害であることを実測で確認した
+5. 検証用に生成した`docs/`はコミット前に`git checkout -- docs`で元に戻し、退避用一時ディレクトリ（`/tmp/dtt_verify`）も削除済み
+
+### 成果物
+- `C:\work\daily-tech-trend\src\render_main.py`（`_build_ops_page_data`関数を新設、`main()`から約170行を分離。`main()`本体は約1,590行→約1,420行に縮小）
+
+### 教訓（tasks/lessons.mdにも別途記録）
+- 巨大関数からのブロック抽出は、そのブロックが「後続で参照する変数」を洗い出す際に**関数内で1回だけ計算されるスカラー変数**（今回の`primary_ratio_threshold`）を見落としやすい。抽出前に対象ブロックで定義される**全てのローカル変数名**を機械的にgrepし、抽出範囲外での参照有無を確認する手順を徹底する
+- pytestが全green でも、`main()`のような「実データ + 全ページ描画」を1回のテストで通しで検証していないコードベースでは、リファクタのregressionを検出できない。**render.py（またはmain()）を実際に実行する検証を、pytestとは別に必須の検証手順とする**
+
+### 次回候補
+- `main()`にはまだ他の自己完結ブロックが残っている（1601-2202行の「categories: YAML→DB→other」+ tech topics収集ループ、約600行が次に大きい塊。ただしこちらは`tech_categories`/`topics_by_cat`等、後続の広範囲で参照される変数が多く、依存関係の洗い出しがより難しいため、着手前に今回同様の変数使用箇所の全数grepを徹底すること）
+- ~~2260-2636行に元々あった「ops用データ取得」コメントの実体は2431行までで終わっており、2432-2635行（`meta`辞書構築＋JP優先トピックTOP10×2クエリ）は別の関心事（トップページ用データ）が同じコメントブロックに混在していたことも判明した。次回の分割ではこの部分を`_build_jp_priority_top(cur, cutoff_48h)`のような別関数として切り出すのも候補になる~~ → 2026-07-29 05:07セッションで対応済み（下記参照）
+
+---
+
+## 2026-07-29 05:07 自律発案: render_main.py 可読性改善 第2弾（meta辞書構築+JP優先トピックTOP10×2クエリの関数分離）
+
+### 発案理由
+queue.mdは全件完了済みで進行中の自律発案は無かった。04:07セッションが本ファイル787-789行「次回候補」に残した2項目のうち、「2432-2635行のmeta辞書構築＋JP優先トピックTOP10×2クエリ」を選定した。もう一方の候補（1601-2202行のcategories/tech topics収集ループ約600行）は`tech_categories`/`topics_by_cat`等の後続広範囲で参照される変数依存が多く難易度が高いと明記されていたため見送り、より自己完結度が高いこちらを選んだ。
+
+### やったこと
+1. 対象ブロック（`runtime_sec`計算〜`jp_priority_trending_top`ループ終端、約230行）が`cur`・`cutoff_48h`・`rss_sources`（`_build_ops_page_data`の戻り値）のみを入力に取ることを確認。後続で参照される`meta`/`jp_priority_top`/`jp_priority_trending_top`の3変数はテンプレート描画（`render_html`等呼び出し3箇所）にのみ使われることをgrepで確認済み
+2. `_build_ops_page_data`と同じ場所・同じ命名規約で`_build_meta_and_jp_priority(cur, cutoff_48h, rss_sources) -> Dict[str, Any]`を新設し、ロジック・SQL文は一字一句変更せず移設。`main()`側は`_build_ops_page_data`呼び出しの直後にこの関数を呼び、戻り値をアンパックする4行に置換した（ops呼び出し→meta/jp呼び出しの順序になったが、両者とも`cur`への読み取り専用クエリのみで副作用がなく相互に独立しているため実害なし）
+3. 検証: 自分の変更を一時的に逆適用したファイルを`.verify_tmp/`配下に作成し、`pytest`（236件pass）→`python src/render.py`実行→`docs/`退避。リファクタ後のファイルに戻して再度`pytest`（236件pass）→`render.py`実行→`docs/`をPythonでバイト比較。**差分は116ファイルで発生したが、正規表現で`generated_at`/`lastBuildDate`/`最終更新`/`Generated (JST)`等のタイムスタンプ文字列を除外した上で再比較すると差分0件**（構造・データ内容の差分ゼロ）を確認した
+4. 検証用に生成した`docs/`は`git checkout -- docs`で元に戻し、`.verify_tmp/`（一時ファイル一式）も削除済み。本番DB・スケジュールタスクへの操作はなし（実行前に`Get-ScheduledTask`で"Daily Tech Trend"等が全てReadyであることを確認済み）
+
+### 成果物
+- `C:\work\daily-tech-trend\src\render_main.py`（`_build_meta_and_jp_priority`関数を新設。`main()`本体はさらに約210行縮小）
+
+### 次回候補
+- `main()`に残る最大の自己完結ブロックは1601-2202行の「categories: YAML→DB→other」+ tech topics収集ループ（約600行）のみ。`tech_categories`/`topics_by_cat`が後続の広範囲（カテゴリ横断TOP・タグ集計・insights JSON書き出し等）で参照されるため、分割時は依存変数の全数grepを徹底すること
+- 本セッションで`main()`の「ops用データ取得」「上部サマリー用meta＋JP優先トップ」の2ブロックが分離済みとなり、残るは上記1ブロックのみ。次回は依存関係の複雑さを鑑み、一気に切り出すのではなく「categories構築」「tech topics収集ループ」のようにさらに小さく分割することも検討するとよい
+- 本セッションの分離は「①ops用データ取得」のみで、今後複数セッションに分けて残りのセクションを段階的に分離していく想定（過去のテンプレート外部化と同じ「1回に1-2個ずつ」のペースを踏襲）
+
+---
+
+## 2026-07-29 07:07 自律発案: render_main.py 可読性改善 第3弾（categories構築+tech topics収集ループの関数分離）
+
+### 発案理由
+queue.mdの本案件エントリ（状態: 進行中）を確認したところ、依頼内容は「残る最大の自己完結ブロック（1601-2202行、categories構築+tech topics収集ループ約600行）をさらに小さい単位に分割する」というもの。着手時点で`src/render_main.py`を確認したところ、**`_build_tech_categories`（categories: YAML→DB→other構築部分）と`_build_tag_groups`（insights_tech.json書き出し+タグ集計部分）が既に関数分離済み**（コミット前・未記録の状態）であることが判明した。git状態・ファイルmtime（06:12、todo.md最終更新05:18より後）から、本セッション開始前に別セッション（おそらく前回セッションが40分の作業時間内に完了しきれなかった続き）が着手し、この2関数の分離まで完了させていたが、todo.md/queue.mdへの記録・完了報告がされないまま終わっていたと推測される（無人セッションの40分打ち切りによる中断が疑われる）。本セッションはこの状態を引き継ぎ、`main()`に残った唯一の未分離ブロックである「tech topics収集ループ」（`for cat in tech_categories:` 本体、約554行）に着手した。
+
+### やったこと
+1. ループ本体（2112-2666行）が`cur`・`cat_id`（`cat["id"]`のみ、`cat_name`は不使用と確認）・`cutoff_48h`・`LIMIT_PER_CAT`・`HOT_TOP_N`のみを入力に取り、`hot_by_cat[cat_id]`・`topics_by_cat[cat_id]`の2辞書エントリのみを出力することを確認。ループ内で新規定義される全ローカル変数名（`cat_id`/`hot_ids`/`hot_set`/`hot_set_for_filter`/`it`/`item_ids`/`items`/`kept`/`missing_ids`/`params`/`placeholders`/`r`/`rows`/`sql_missing`）を機械的にgrepし、`main()`内のループ外（前後）で参照されていないことを確認済み（`hot_by_cat`/`topics_by_cat`はループ後に`_build_tag_groups`・テンプレート描画でのみ使用）
+2. `_build_category_topics(cur, cat_id, cutoff_48h, LIMIT_PER_CAT, HOT_TOP_N) -> Tuple[List, List]`を新設し、ループ1回分の処理をそのまま移設（SQL・ロジックは一字一句変更せず、`hot_by_cat[cat_id]`への直接代入を`hot_list`ローカル変数に、`hot_by_cat.get(cat_id, [])`参照を`hot_list`直接参照に置換したのみ）。`main()`側のループは5行（`cat_id`取得→関数呼び出し→2辞書へ代入）に縮小
+3. 抽出はPythonスクリプトによるバイト単位スライス（`newline=''`でCRLFを保持したまま読み書き）で実施し、手作業の書き写しミスを回避（第2弾までと同じ手法）
+4. 検証: 自分の変更を一時的に逆適用したファイル（`_build_category_topics`をループ本体に再インライン化）をスクリプトで生成し、`pytest`（236件pass）→`render.py`実行→`docs/`退避。リファクタ後のファイルに戻して再度`pytest`（236件pass）→`render.py`実行→`docs/`をバイト比較
+5. **1回目の比較で108件がタイムスタンプ以外の差分ありと判定され、特に`index.html`/`tech/index.html`で942行規模の差分（`<details class="insight">`ブロックの有無）が見つかり、一時的にリファクタが原因かと疑った。** しかし切り分けのため「逆適用版を2回連続実行」「本セッションの版を2回連続実行」した対照実験を行ったところ、いずれも差分はタイムスタンプ2行のみで、942行規模の差分は再現しなかった。さらに「逆適用版→(間にpytest等の待ち時間を挟む)→本セッション版」の順で実行し直すと942行差分が再現し、一方「逆適用版→(待ち時間なしで直後に)→本セッション版」では差分がタイムスタンプのみに収まった。これにより**942行差分はコードの違いではなく、2回のrender.py実行の間に本番DBへ挿入されたtopic_insights行（バックグラウンドで稼働中の別プロセスによるLLM insight生成）が原因**と判明した（`has_insight`フラグが実行タイミング依存でtrue化する既存の仕様。第2弾セッションが発見した「48h集計カウントの実行タイミング依存」と同種の非決定性）。最終的に間隔を空けない対照比較で**タイムスタンプ以外の差分ゼロ**を確認した
+6. 検証用に生成した`docs/`・一時ファイル一式（`.verify_tmp/`）は`git checkout -- docs`・削除で後始末済み。本番DB・スケジュールタスクへの操作なし（実行前後とも`Get-ScheduledTask`で"Daily Tech Trend"等がReadyであることを確認済み）
+
+### 成果物
+- `C:\work\daily-tech-trend\src\render_main.py`（`_build_category_topics`関数を新設。`main()`本体は約592行に縮小。これで1601-2202行に元々あった約600行の「categories構築+tech topics収集ループ」ブロックはすべて3関数（`_build_tech_categories`/`_build_tag_groups`/`_build_category_topics`）に分離完了）
+
+### 教訓（tasks/lessons.mdにも別途記録）
+- render.pyのdocs/バイト比較検証で「タイムスタンプ以外の差分」を検出した場合、即座にリファクタが原因と断定せず、**同一コードでの2回連続実行**と**時間を空けた同一コードでの2回実行**を両方試して切り分けること。本番DBが他プロセス（LLM insight生成等）によって継続的に更新されているため、render.py実行の「間隔」自体が非タイムスタンプ差分の発生源になりうる
+
+### 次回候補
+- `main()`のテンプレート外部化（6/6完了）+ 主要ブロック分離（ops用データ取得/meta+JP優先トップ/categories構築/tag集計/tech topics収集ループ、計5関数）が完了し、当初の「render_main.py可読性改善」シリーズの主要スコープはこれで一区切りとする
+- `main()`本体（約592行）にはまだDB接続・出力ファイル書き出し・カテゴリ横断TOP集計・複数テンプレート呼び出しが残っているが、これらは互いに逐次依存（前段の出力を次段が使う）が強く、これ以上の分離は費用対効果が下がる可能性がある。次に着手する場合は、まず現状の`main()`を通読して新たな自己完結ブロックがあるか再評価すること
+
+### 【重要・最優先】未コミットの変更が長期間残留中（2026-07-29 09:07セッションで発見）
+- `git status`確認したところ、テンプレート外部化第1〜3弾（コミット`049dfc82`/`60fb3a3`/`5d65b9b`、2026-07-21〜22）**より後**の作業が丸ごと未コミットのまま残っていた: `_build_ops_page_data`/`_build_meta_and_jp_priority`/`_build_tech_categories`/`_build_tag_groups`/`_build_category_topics`の5関数分離（04:07/05:07/06:07/07:07セッション分、`render_main.py`は3109→3241行）+ トップページ軽量化（`.insight`ブロック遅延ロード、02:07セッション分、`src/templates/news.html`・`tech.html`変更+新規`tests/test_insight_lazyload.py`・`scripts/verify_lazy_insight_browser.py`・`tasks/design_toppage_lightweight.md`）。`git diff --stat`で6ファイル・1028行挿入/811行削除、未追跡ファイルが3件
+- 2026-07-29 09:07時点で`py -3.11 -m pytest -q`は236件全pass（未コミットの変更を含む現在の作業ツリーで確認済み）。各セッションのレポート記載どおり機能面は検証済みだが、**`git commit`の手順自体がどのセッションでも実行されずに終わっていた**（40分打ち切りのたびに記録は残るがコミットだけ漏れる、という同型のパターンが複数回連続していたとみられる）
+- **本セッションではコミットしなかった**: 着手前に`Get-ScheduledTask`を確認したところ`Daily Tech Trend`タスクが`Running`状態だったため（`CollectedInfo_Pipeline`・`Watchdog Daily Tech Trend`は`Ready`）、本番パイプラインと同時にgit操作を行う競合リスクを避けて見送った
+- **次回セッションへの申し送り**: `Get-ScheduledTask -TaskName "Daily Tech Trend"`が`Ready`であることを確認した上で、`git add src/render_main.py src/templates/news.html src/templates/tech.html tests/test_render_utilities.py tasks/lessons.md tasks/todo.md scripts/verify_lazy_insight_browser.py tests/test_insight_lazyload.py tasks/design_toppage_lightweight.md`→ `pytest`再確認 → コミット（機能ごとに分割してもよいが、一括でも可。レポートに実施済みの検証内容が既に記載されているため再検証は`pytest`のみで十分）。**push は禁止事項なのでローカルコミットのみ**
+- 優先度は低い（テンプレート外部化・関数分離とも一区切りしたため、他プロジェクトの候補を優先してよい）

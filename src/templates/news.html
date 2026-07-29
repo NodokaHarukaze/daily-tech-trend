@@ -150,58 +150,10 @@
           {% endif %}
           {% if it.source %}<div class="mini">{{ it.source }}</div>{% endif %}
 
-           {% if it.importance_basis or it.summary or (it.key_points and it.key_points|length>0) or (it.perspectives and (it.perspectives.engineer or it.perspectives.management or it.perspectives.consumer)) or (it.perspective_digest and (it.perspective_digest.engineer or it.perspective_digest.management or it.perspective_digest.consumer)) %}
-              <details class="insight" role="group">
+           {% if it.has_insight %}
+              <details class="insight" role="group" data-insight-topic="{{ it.id }}">
                 <summary>要約・解説を表示</summary>
-                <div class="small" style="margin-top:6px;"><strong>算出根拠（簡易）</strong>：{{ it.importance_basis }}</div>
-
-                {% if it.summary %}<div><strong>要約</strong>：{{ it.summary }}</div>{% endif %}
-
-                {% if it.key_points and it.key_points|length>0 %}
-                  <ul class="kps">
-                    {% set shown = namespace(has_real=0, has_guess=0) %}
-                    {% for kp in it.key_points %}
-                      {% if "推測" in kp or "本文確認" in kp %}
-                        {% if shown.has_guess == 0 %}
-                          <li>{{ kp }}</li>
-                          {% set shown.has_guess = 1 %}
-                        {% endif %}
-                      {% else %}
-                        <li>{{ kp }}</li>
-                        {% set shown.has_real = 1 %}
-                      {% endif %}
-                    {% endfor %}
-
-                    {% if shown.has_real == 0 and shown.has_guess == 0 %}
-                      <li>推測：記事情報が限定的なため、リンク先の本文確認が必要</li>
-                    {% endif %}
-                  </ul>
-                {% endif %}
-
-                {% if it.perspectives %}
-                  <div class="perspectives">
-                    {% if it.perspectives.engineer %}<div><b>技術者目線</b>: {{ it.perspectives.engineer }}</div>{% endif %}
-                    {% if it.perspectives.management %}<div><b>経営者目線</b>: {{ it.perspectives.management }}</div>{% endif %}
-                    {% if it.perspectives.consumer %}<div><b>消費者目線</b>: {{ it.perspectives.consumer }}</div>{% endif %}
-                  </div>
-                {% endif %}
-                {% if it.perspective_digest %}
-                  <div class="perspective-digest">
-                    <div style="font-size:12px;color:#666;margin-bottom:2px">立場別くわしい解説</div>
-                    {% if it.perspective_digest.engineer %}<div><b>技術者目線</b>: {{ it.perspective_digest.engineer }}</div>{% endif %}
-                    {% if it.perspective_digest.management %}<div><b>経営者目線</b>: {{ it.perspective_digest.management }}</div>{% endif %}
-                    {% if it.perspective_digest.consumer %}<div><b>消費者目線</b>: {{ it.perspective_digest.consumer }}</div>{% endif %}
-                  </div>
-                {% endif %}
-                {% if it.evidence_urls and it.evidence_urls|length>0 %}
-                  <div class="evidence-urls">
-                    <strong>根拠</strong>：
-                    {% for u in it.evidence_urls %}
-                      <a href="{{ u }}" target="_blank" rel="noopener">{{ u|truncate(60, True) }}</a>{% if not loop.last %} | {% endif %}
-                    {% endfor %}
-                  </div>
-                {% endif %}
-
+                <div class="insight-body" data-insight-pending>読み込み中…</div>
               </details>
           {% endif %}
 
