@@ -834,9 +834,8 @@ queue.mdの本案件エントリ（状態: 進行中）を確認したところ�
 - `main()`のテンプレート外部化（6/6完了）+ 主要ブロック分離（ops用データ取得/meta+JP優先トップ/categories構築/tag集計/tech topics収集ループ、計5関数）が完了し、当初の「render_main.py可読性改善」シリーズの主要スコープはこれで一区切りとする
 - `main()`本体（約592行）にはまだDB接続・出力ファイル書き出し・カテゴリ横断TOP集計・複数テンプレート呼び出しが残っているが、これらは互いに逐次依存（前段の出力を次段が使う）が強く、これ以上の分離は費用対効果が下がる可能性がある。次に着手する場合は、まず現状の`main()`を通読して新たな自己完結ブロックがあるか再評価すること
 
-### 【重要・最優先】未コミットの変更が長期間残留中（2026-07-29 09:07セッションで発見）
-- `git status`確認したところ、テンプレート外部化第1〜3弾（コミット`049dfc82`/`60fb3a3`/`5d65b9b`、2026-07-21〜22）**より後**の作業が丸ごと未コミットのまま残っていた: `_build_ops_page_data`/`_build_meta_and_jp_priority`/`_build_tech_categories`/`_build_tag_groups`/`_build_category_topics`の5関数分離（04:07/05:07/06:07/07:07セッション分、`render_main.py`は3109→3241行）+ トップページ軽量化（`.insight`ブロック遅延ロード、02:07セッション分、`src/templates/news.html`・`tech.html`変更+新規`tests/test_insight_lazyload.py`・`scripts/verify_lazy_insight_browser.py`・`tasks/design_toppage_lightweight.md`）。`git diff --stat`で6ファイル・1028行挿入/811行削除、未追跡ファイルが3件
-- 2026-07-29 09:07時点で`py -3.11 -m pytest -q`は236件全pass（未コミットの変更を含む現在の作業ツリーで確認済み）。各セッションのレポート記載どおり機能面は検証済みだが、**`git commit`の手順自体がどのセッションでも実行されずに終わっていた**（40分打ち切りのたびに記録は残るがコミットだけ漏れる、という同型のパターンが複数回連続していたとみられる）
-- **本セッションではコミットしなかった**: 着手前に`Get-ScheduledTask`を確認したところ`Daily Tech Trend`タスクが`Running`状態だったため（`CollectedInfo_Pipeline`・`Watchdog Daily Tech Trend`は`Ready`）、本番パイプラインと同時にgit操作を行う競合リスクを避けて見送った
-- **次回セッションへの申し送り**: `Get-ScheduledTask -TaskName "Daily Tech Trend"`が`Ready`であることを確認した上で、`git add src/render_main.py src/templates/news.html src/templates/tech.html tests/test_render_utilities.py tasks/lessons.md tasks/todo.md scripts/verify_lazy_insight_browser.py tests/test_insight_lazyload.py tasks/design_toppage_lightweight.md`→ `pytest`再確認 → コミット（機能ごとに分割してもよいが、一括でも可。レポートに実施済みの検証内容が既に記載されているため再検証は`pytest`のみで十分）。**push は禁止事項なのでローカルコミットのみ**
-- 優先度は低い（テンプレート外部化・関数分離とも一区切りしたため、他プロジェクトの候補を優先してよい）
+### 【解消済み】未コミットの変更が長期間残留していた問題（2026-07-29 10:07セッションでコミット完了）
+- 2026-07-29 09:07セッションが発見した「テンプレート外部化第1〜3弾より後の作業が丸ごと未コミット」問題（5関数分離+トップページ軽量化、6ファイル・1045行挿入/812行削除）は、10:07セッションで解消した
+- 着手前に`Get-ScheduledTask -TaskName "Daily Tech Trend"`が`Ready`であること、`git diff`にシークレット等の不審な内容が無いこと、`pytest`236件全passを確認した上で、コミット`153b06a7`（`refactor(render_main): トップページ軽量化+main()の主要ブロックを5関数に分離`）として一括ローカルコミット（push無し）した
+- コミット後も`git status`がクリーン・`pytest`236件全passであることを再確認済み
+- 同型の「記録はあるがコミットが漏れる」再発防止策（`night_task.md`へのgit commit項目追加）は09:07セッションで既に実施済み。今回はその初回検証も兼ねた形になった
