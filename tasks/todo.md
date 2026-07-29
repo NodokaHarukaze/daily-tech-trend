@@ -839,3 +839,22 @@ queue.mdの本案件エントリ（状態: 進行中）を確認したところ�
 - 着手前に`Get-ScheduledTask -TaskName "Daily Tech Trend"`が`Ready`であること、`git diff`にシークレット等の不審な内容が無いこと、`pytest`236件全passを確認した上で、コミット`153b06a7`（`refactor(render_main): トップページ軽量化+main()の主要ブロックを5関数に分離`）として一括ローカルコミット（push無し）した
 - コミット後も`git status`がクリーン・`pytest`236件全passであることを再確認済み
 - 同型の「記録はあるがコミットが漏れる」再発防止策（`night_task.md`へのgit commit項目追加）は09:07セッションで既に実施済み。今回はその初回検証も兼ねた形になった
+
+## render_main.py main()残存ブロックの再点検 — 2026-07-30 02:07（自律発案）
+
+- 発端: `隙間時間有効活用\queue.md`に前回セッションが残した次回候補「まず`main()`（約592行）を通読して新たな自己完結ブロックがあるか再評価すること」を実施
+- `main()`（当時2649-3241行）を全文通読し、`hot_by_cat`/`topics_by_cat`のループの後、テンプレート描画までの間にある「カテゴリ横断TOP」ブロック（旧2695-3047行、約353行）が新たな自己完結ブロックであることを発見した。4本のSQLクエリ（Global Top 10 / Trending Top 10 / market_top / market_trending_top）でほぼ同型
+- 抽出前に対象ブロックの全ローカル変数名を機械的にgrepし、`TECH_CATS`/`tech_cat_ids`/`ph`はブロック内のみで完結し、`global_top`/`trending_top`/`market_top`/`market_trending_top`の4つの出力はテンプレート描画呼び出し（`tech.html`の2回のrender呼び出し）以外では参照されないことを確認した
+- `_build_cross_category_top(cur, cutoff_48h, tech_categories) -> Tuple[List, List, List, List]`を新設し、ロジック・SQL文は一字一句変更せずそのまま移設。`main()`側は関数呼び出し+4変数アンパックの3行に置換した（`main()`本体は約592行→約242行に縮小）
+- 抽出はPythonスクリプトによるバイト単位スライス（`newline=''`でCRLFを保持）で実施したが、挿入した関数ヘッダー・フッター文字列がプレーンな`\n`だったため一部の行がLFのみになる不具合が発生。`py_compile`は通ったが検証前に気づき、全行を`\r\n`に統一する後処理を追加して修正した（**教訓**: バイトスライス抽出時、既存行はCRLF保持でも新規に挿入する文字列リテラルは明示的に`\r\n`で書くか、書き込み後に改行コードを検査すること）
+- 検証: `Get-ScheduledTask -TaskName "Daily Tech Trend"`が`Ready`であることを実行前後で確認。リファクタ後のコードで`pytest`（236件pass）→`src/render.py`実行→`docs/`を`%TEMP%`配下に退避。その直後（間隔を空けず）に`git show HEAD:src/render_main.py`で元コードに戻して`pytest`（236件pass）→`src/render.py`実行→`docs/`を別ディレクトリに退避、というシーケンスで比較した（07-29 07:07セッションの教訓通り、本番DBの非同期更新由来の偽陽性差分を避けるため2回の実行間隔を最小化）
+- バイト比較は当初Git Bashの`/tmp/...`パスをWindows版Python（`py -3.11`）にそのまま渡してしまい「差分0件」という誤った結果が出た（`os.path.exists`がFalseで実質何も比較していなかった）。`cygpath -w`で実Windowsパス（`%LOCALAPPDATA%\Temp\...`）に変換して再実行し、正しく117ファイルの差分を検出した（**教訓**: Git Bash上で`py`（Windows Python）に`/tmp/...`のようなPOSIXパスを渡すと存在しないパス扱いになり検証が「無害」と誤判定されうる。Windows Python起動時は`cygpath -w`等でWindowsパスに変換してから渡すこと）
+- 117ファイルの差分内容を`generated_at`/`lastBuildDate`（RSS）等のタイムスタンプパターンで正規表現除外して再比較し、**タイムスタンプ以外の差分ゼロ**（116ファイルはHTML内`generated_at`表記のみ、`feed.xml`の1ファイルは`<lastBuildDate>`行のみ）を確認した
+- 検証用の一時docsコピー（`%TEMP%\docs_before`/`docs_after`）は確認後に削除済み。本番`docs/`は`git checkout -- docs`で無傷に復元済み。本番DB・スケジュールタスクへの操作はなし
+- コミット前に`git diff`でシークレットパターン（`sk-`/`ghp_`/`Bearer `等）が含まれないことを確認し、`Get-ScheduledTask`のReadyを再確認した上でローカルコミット（push無し）
+
+### 成果物
+- `C:\work\daily-tech-trend\src\render_main.py`（`_build_cross_category_top`関数を新設。`main()`本体は約242行に縮小）
+
+### 次回候補
+- `main()`（約242行）はDB接続・出力ファイル書き出し・複数`render_*_page`呼び出しの列挙が中心で、各呼び出しは既にモジュール化された関数への1〜3行の薄いラッパーが並ぶのみ。これ以上の分離候補は見当たらず、「render_main.py可読性改善」シリーズは今回で本当に完了と判断する。次にこのファイルへ触れるセッションは、無条件の再評価ではなく新たな機能追加・不具合修正の文脈で着手すること

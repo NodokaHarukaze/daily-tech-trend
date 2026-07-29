@@ -2646,52 +2646,9 @@ def _build_category_topics(cur, cat_id: str, cutoff_48h: str, LIMIT_PER_CAT: int
     return hot_list, items
 
 
-def main():
-    t0 = _now_sec()
-    print("[TIME] step=render start")
-
-    out_dir = Path("docs")
-    out_dir.mkdir(exist_ok=True)
-
-    conn = connect()
-    cur = conn.cursor()
-    # categories: YAML -> DB -> other
-    tech_categories, cat_name = _build_tech_categories(cur)
-
-    topics_by_cat: Dict[str, List[Dict[str, Any]]] = {}
-    hot_by_cat: Dict[str, List[Dict[str, Any]]] = {}
-    # 48h cutoff（UTCでSQLite互換の "YYYY-MM-DD HH:MM:SS"）
-    cutoff_48h = (datetime.now(timezone.utc) - timedelta(hours=48)).strftime("%Y-%m-%d %H:%M:%S")
-
-    LIMIT_PER_CAT = 15
-    HOT_TOP_N = 5
-
-    for cat in tech_categories:
-        cat_id = cat["id"]
-        hot_list, items = _build_category_topics(cur, cat_id, cutoff_48h, LIMIT_PER_CAT, HOT_TOP_N)
-        hot_by_cat[cat_id] = hot_list
-        topics_by_cat[cat_id] = items
-
-    _tag_data = _build_tag_groups(topics_by_cat, out_dir)
-    tag_list = _tag_data["tag_list"]
-    tag_groups = _tag_data["tag_groups"]
-    # --- ops用データ取得 ---
-    _ops_data = _build_ops_page_data(cur, cutoff_48h, cat_name)
-    ops_stats = _ops_data["ops_stats"]
-    daily_trend = _ops_data["daily_trend"]
-    category_dist = _ops_data["category_dist"]
-    source_exposure = _ops_data["source_exposure"]
-    feed_issues = _ops_data["feed_issues"]
-    primary_ratio_by_category = _ops_data["primary_ratio_by_category"]
-    primary_ratio_threshold = _ops_data["primary_ratio_threshold"]
-    rss_sources = _ops_data["rss_sources"]
-
-    # --- UX改善①: 上部サマリー用meta・JP優先トピックTOP10×2 ---
-    _meta_data = _build_meta_and_jp_priority(cur, cutoff_48h, rss_sources)
-    meta = _meta_data["meta"]
-    jp_priority_top = _meta_data["jp_priority_top"]
-    jp_priority_trending_top = _meta_data["jp_priority_trending_top"]
-
+def _build_cross_category_top(
+    cur, cutoff_48h: str, tech_categories: List[Dict[str, str]]
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]]]:
     # --- UX改善①: カテゴリ横断TOP ---
     # Global Top 10: importance desc, recent desc, id asc（完全決定）
     TECH_CATS = {"ai", "dev", "security", "system", "manufacturing", "cloud", "data"}  # 必要に応じて調整
@@ -3045,6 +3002,60 @@ def main():
             "one_liner": "",
             "date": article_date or "",
         })
+
+    return global_top, trending_top, market_top, market_trending_top
+
+
+def main():
+    t0 = _now_sec()
+    print("[TIME] step=render start")
+
+    out_dir = Path("docs")
+    out_dir.mkdir(exist_ok=True)
+
+    conn = connect()
+    cur = conn.cursor()
+    # categories: YAML -> DB -> other
+    tech_categories, cat_name = _build_tech_categories(cur)
+
+    topics_by_cat: Dict[str, List[Dict[str, Any]]] = {}
+    hot_by_cat: Dict[str, List[Dict[str, Any]]] = {}
+    # 48h cutoff（UTCでSQLite互換の "YYYY-MM-DD HH:MM:SS"）
+    cutoff_48h = (datetime.now(timezone.utc) - timedelta(hours=48)).strftime("%Y-%m-%d %H:%M:%S")
+
+    LIMIT_PER_CAT = 15
+    HOT_TOP_N = 5
+
+    for cat in tech_categories:
+        cat_id = cat["id"]
+        hot_list, items = _build_category_topics(cur, cat_id, cutoff_48h, LIMIT_PER_CAT, HOT_TOP_N)
+        hot_by_cat[cat_id] = hot_list
+        topics_by_cat[cat_id] = items
+
+    _tag_data = _build_tag_groups(topics_by_cat, out_dir)
+    tag_list = _tag_data["tag_list"]
+    tag_groups = _tag_data["tag_groups"]
+    # --- ops用データ取得 ---
+    _ops_data = _build_ops_page_data(cur, cutoff_48h, cat_name)
+    ops_stats = _ops_data["ops_stats"]
+    daily_trend = _ops_data["daily_trend"]
+    category_dist = _ops_data["category_dist"]
+    source_exposure = _ops_data["source_exposure"]
+    feed_issues = _ops_data["feed_issues"]
+    primary_ratio_by_category = _ops_data["primary_ratio_by_category"]
+    primary_ratio_threshold = _ops_data["primary_ratio_threshold"]
+    rss_sources = _ops_data["rss_sources"]
+
+    # --- UX改善①: 上部サマリー用meta・JP優先トピックTOP10×2 ---
+    _meta_data = _build_meta_and_jp_priority(cur, cutoff_48h, rss_sources)
+    meta = _meta_data["meta"]
+    jp_priority_top = _meta_data["jp_priority_top"]
+    jp_priority_trending_top = _meta_data["jp_priority_trending_top"]
+
+    # --- UX改善①: カテゴリ横断TOP ---
+    global_top, trending_top, market_top, market_trending_top = _build_cross_category_top(
+        cur, cutoff_48h, tech_categories
+    )
 
     # 改善5: テック→ニュース相互リンク用マップ
     NEWS_LINK_MAP = {
