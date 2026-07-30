@@ -1,7 +1,759 @@
 {
-  "generated_at": "2026-07-29T21:42:47+00:00",
+  "generated_at": "2026-07-30T03:37:59+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 37495,
+      "title": "アンソニー・ファウチ氏、新型コロナウイルスの起源に関する緊迫した米上院公聴会で質問に答えることを拒否",
+      "category": "news",
+      "importance": 54,
+      "summary": "アンソニー・ファウチ氏、新型コロナウイルスの起源に関する緊迫した米上院公聴会で質問に答えることを拒否",
+      "updated_at": "2026-07-30T03:34:27.439615+00:00"
+    },
+    {
+      "id": 37676,
+      "title": "【動画】イオンモール熊本 捜索活動の映像 現場の医師が撮影",
+      "category": "news",
+      "importance": 70,
+      "summary": "【動画】イオンモール熊本募活動の映像 現場の医師が撮影",
+      "updated_at": "2026-07-30T03:34:18.807028+00:00"
+    },
+    {
+      "id": 37607,
+      "title": "英国の消費者信用が予想以上に上昇",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-30T03:34:04.564822+00:00"
+    },
+    {
+      "id": 37736,
+      "title": "JVN: トレンドマイクロ製TrendAI Vision Oneに対するセキュリティアップデート（2026年7月）",
+      "category": "security",
+      "importance": 50,
+      "summary": "TrendMicroがTrendAI Vision One Service Gateway向けにセキュリティアップデートを公開。",
+      "updated_at": "2026-07-30T03:33:55.444653+00:00"
+    },
+    {
+      "id": 37652,
+      "title": "トランプ氏、OpenAIハッキング事件を受けAI制御を検討",
+      "category": "news",
+      "importance": 54,
+      "summary": "トランプ氏、OpenAIハッキング事件を受けAI制御を検討",
+      "updated_at": "2026-07-30T03:33:43.591385+00:00"
+    },
+    {
+      "id": 37663,
+      "title": "グリーション製の携帯浄水器や防災ラジオが安い！Amazon暮らし応援サマーSALE 携帯浄水器は1792まで。 ソーラー充電に対応した防災ラジオもセール中",
+      "category": "industry",
+      "importance": 57,
+      "summary": "グリーション製の携帯浄水器や防災ラジオが安い！Amazon暮らし応援サマーSALE 携帯浄水器は1792まで。 ソーラー充電に対応した防災ラジオもセール中",
+      "updated_at": "2026-07-30T03:33:29.242743+00:00"
+    },
+    {
+      "id": 37608,
+      "title": "イラン紛争でガソリン価格が高騰、米国経済に対する米国人の信頼感低下",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-30T03:33:20.591917+00:00"
+    },
+    {
+      "id": 37686,
+      "title": "API設計の常識が変わる？ HTTP新メソッド「QUERY」とセキュリティ対策について学ぶ",
+      "category": "policy",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-30T03:33:11.522799+00:00"
+    },
+    {
+      "id": 37502,
+      "title": "クレタ島で消防士2人死亡 山火事が南ヨーロッパの一部地域を脅かす中",
+      "category": "news",
+      "importance": 54,
+      "summary": "クレタ島で消防士2人死亡 山火事が南ヨーロッパの一部地域を脅かす中",
+      "updated_at": "2026-07-30T03:33:02.260726+00:00"
+    },
+    {
+      "id": 37679,
+      "title": "アメリカ中央軍 イランへの攻撃を完了したと発表",
+      "category": "news",
+      "importance": 70,
+      "summary": "アメリカ中央軍イランへの攻撃を完了したと発表",
+      "updated_at": "2026-07-30T03:32:48.148769+00:00"
+    },
+    {
+      "id": 37609,
+      "title": "中国経済圏は工業化と雇用の新たな時代を迎える：サラフディン",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-30T03:32:39.547870+00:00"
+    },
+    {
+      "id": 37687,
+      "title": "ChatGPTに「入力してはいけない」5項目――押さえておきたい「生成AIのNGリスト」",
+      "category": "policy",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-30T03:32:30.528703+00:00"
+    },
+    {
+      "id": 37654,
+      "title": "米軍への攻撃未遂を受け、米国がイランに「強力な」攻撃を開始",
+      "category": "news",
+      "importance": 54,
+      "summary": "米軍への攻撃未遂を受け、米国がイランに「強力な」攻撃を開始",
+      "updated_at": "2026-07-30T03:32:21.434048+00:00"
+    },
+    {
+      "id": 37681,
+      "title": "熊本地震 関連調査中含め死者28人に【現地からの映像も】",
+      "category": "news",
+      "importance": 70,
+      "summary": "熊本地震関連調査中含め死者28人に【現地からの映像も】",
+      "updated_at": "2026-07-30T03:32:07.380777+00:00"
+    },
+    {
+      "id": 37610,
+      "title": "なぜイングランド銀行は金利を据え置くと予想されているのでしょうか?",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-30T03:31:58.650673+00:00"
+    },
+    {
+      "id": 37706,
+      "title": "特許庁長官と知的財産活動に関する意見交換会を実施",
+      "category": "manufacturing",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-30T03:31:49.672560+00:00"
+    },
+    {
+      "id": 37691,
+      "title": "令和8年熊本地震罹災証明書（り災証明書）のオンライン申請について",
+      "category": "policy",
+      "importance": 61,
+      "summary": "令和8年熊本地震罹災証明書（り災証明書）のオンライン申請について",
+      "updated_at": "2026-07-30T03:31:40.605059+00:00"
+    },
+    {
+      "id": 37650,
+      "title": "オーストラリア、「テロ支援」コンテンツの削除を怠った疑いでテレグラム社を提訴",
+      "category": "news",
+      "importance": 54,
+      "summary": "オーストラリア、「テロ支援」コンテンツの削除を怠った疑いでテレグラム社を提訴",
+      "updated_at": "2026-07-30T03:31:32.020173+00:00"
+    },
+    {
+      "id": 37611,
+      "title": "税務データ: 堅調な経済パフォーマンス",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-30T03:31:18.035085+00:00"
+    },
+    {
+      "id": 37737,
+      "title": "JVN: Develar製app-builder(zipx.Unzip)における任意のファイルが上書きされる脆弱性",
+      "category": "security",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-07-30T03:31:09.104478+00:00"
+    },
+    {
+      "id": 37651,
+      "title": "シンガポール、ウイルス感染のストロー舐め行為でフランス人少女に465ドルの罰金",
+      "category": "news",
+      "importance": 54,
+      "summary": "シンガポール、ウイルス感染のストロー舐め行為でフランス人少女に465ドルの罰金",
+      "updated_at": "2026-07-30T03:31:00.208730+00:00"
+    },
+    {
+      "id": 37680,
+      "title": "食料品の消費税率 来年4月から2年間 1％ 高市首相が方針表明へ",
+      "category": "news",
+      "importance": 70,
+      "summary": "食料品の消費金利 来年4月から2年間 1％ 高市真剣が方針表明へ",
+      "updated_at": "2026-07-30T03:30:51.634626+00:00"
+    },
+    {
+      "id": 37643,
+      "title": "ウィンブルドンがインドのアイスクリームとボリウッドのビートを提供する理由",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37644,
+      "title": "戦闘激化でスーダンの主要都市に避難する数千人が再び脅威にさらされる",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37645,
+      "title": "「イスラエル入植者が我が家を包囲」：毎週攻撃を受けるパレスチナ人の村内",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37646,
+      "title": "「死ぬかと思った」：生存者らが語る大地震の衝撃と恐怖",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37647,
+      "title": "インドのCJP抗議：なぜテクノロジーだけでは試験問題の漏洩を止められないのか",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37648,
+      "title": "中国のロボット軍団が英国の小売業界を変革",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37649,
+      "title": "DJ Guetta、亡くなったエレクトロニック・ミュージシャンのKavinskyに追悼の意を表する",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37653,
+      "title": "サルマン・ラシュディ襲撃犯、テロ犯罪で有罪判決",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37655,
+      "title": "韓国サムスン、４～６月期の営業利益１９倍　過去最高の１０兆円超",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37656,
+      "title": "なぜ私の所に税務調査が!? 税務署に目を付けられやすい個人事業主の傾向は？ 無申告“転売ヤー”に重加算税が課された事例も【注目記事】",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37657,
+      "title": "アイオーデータ、10Gbps×5/8ポートでファンレスのアンマネージドスイッチ「BSH-XG」シリーズ発売",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37658,
+      "title": "北海道石狩市が「石狩データセンターコンソーシアム」を設立、関東・関西に次ぐ国内拠点化を目指す インターネットさくら、NTT東日本など11社が参加",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37659,
+      "title": "KDDIに総務省が行政指導、ISP向けメールシステムへの不正アクセスで約762万件のパスワード漏えい",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37660,
+      "title": "Seagateの内蔵用HDD 8TBモデルが3万5,970円！Amazon暮らし応援サマーSALE デスクトップ向け内蔵用SATA HDD「BarraCuda」がセール中",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37661,
+      "title": "ネスカフェ「ゴールドブレンド」が安い！Amazon暮らし応援サマーSALE 詰め替え用の「エコ＆システムパック」95g×2本は1622㎡",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37662,
+      "title": "「Apple Watch」と「AirPods Pro」がセール中！Amazon暮らし応援サマーSALE スマートウォッチのGPSモデルの42mm版が6万3800件",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37664,
+      "title": "JR北海道、困難維持「黄8線区」応援自販機 コカコーラと協働",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37665,
+      "title": "【鈴木淳也の注目】通信キャリア系「最終発」のドコモFG 金融事業拡大を見極めるAIとNTTパワー",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37666,
+      "title": "「3Dフードプリンター」とは？ 一般家庭にも宇宙食にもつながる最先端の現場",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37667,
+      "title": "コクヨ、テストの「山を張る」ふせん",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37668,
+      "title": "※Wonderがわかるレストランのソフト化、1店舗で複数ブランドを運営可能に",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37669,
+      "title": "AI活用やDXは世界中で失敗 日本の強みを生かそうか",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37670,
+      "title": "構造の核はTransformer 建築ーの全体像を解説",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37671,
+      "title": "金融領域のAI活用第一段 カギは業界特化の「3つのレイヤー」",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37672,
+      "title": "シャドーAIのリスク増大",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37673,
+      "title": "「DGX Spark」体験記",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37674,
+      "title": "NECの4～6月期決算は増収増益、国内ITと航空・防衛が近づく",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37675,
+      "title": "日立の4～6月期決算は増収増益、売上高は第1四半期で過去最高",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37677,
+      "title": "イオンモール熊本 5人死亡 1人心肺停止 5人がけが 熊本県",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37678,
+      "title": "日本製紙 八代工場 8人死亡 2人けが 1人安否不明 熊本県",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37682,
+      "title": "メタ、売上高28％増も純利益14％減 AI投資拡大で設備投資は最大1450億ドルへ",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37683,
+      "title": "紙iPadにもそのまま書ける驚きのペン、ゼブラ「STYLUS 2WAY」開発秘話「失敗」を逆手にとったアイデアとは？",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37684,
+      "title": "Microsoftは増収増益、AzureとAI需要が引き寄せるCopilot有料シート数は3000万超に",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37685,
+      "title": "Thnking Machinesの共同創業者、また1人OpenAIに復帰へ",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37688,
+      "title": "観光の仕事の魅力を見て、知って、体験しよう！ 職場見学プログラムの参加者を募集します",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37689,
+      "title": "第9回衆議院議員選挙区画定審議会",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37690,
+      "title": "令和9年度の地方財政措置についての各府省への申入れ概要",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37692,
+      "title": "大韓民国、中華人民共和国および独立関税地域産の熱間圧延鋼板、板および条に対するアンチダンピング関税調査の開始",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37694,
+      "title": "ワイドミュラー、イノベーション、成長、顧客価値の加速に向けて再編",
+      "category": "smart_factory",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37695,
+      "title": "Dragos、現実世界の専門知識に基づいて構築された OT ネイティブ AI をデビュー",
+      "category": "smart_factory",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37696,
+      "title": "あなたの家には必要以上のコストがかかっています: 家庭のエネルギー効率に関する賢いガイド",
+      "category": "smart_factory",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37697,
+      "title": "モジュラー データセンター アプローチで AI の成長を迅速化",
+      "category": "smart_factory",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37698,
+      "title": "コンポーネントから共創へ: OEM パートナーシップが差別化と新たな収益を生み出す方法",
+      "category": "smart_factory",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37699,
+      "title": "チューブベンダーを確実に稼働させるためのメンテナンス習慣",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37700,
+      "title": "経済的不確実性が続く中、金属成形業者は回復力を維持",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37701,
+      "title": "J.M.ハットン、インディアナ州での事業を拡大",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37702,
+      "title": "Tk Accelis、イギリスのSkf Franceにバーを供給",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37703,
+      "title": "Tk Accelis、フランスおよび英国事業向けにSKFと10年間の鉄鋼供給契約を締結",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37708,
+      "title": "2 つの設定を有効にすることで、ARC-AGI-3 ベンチマークのスコアが 3 倍になった方法",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37709,
+      "title": "Adani Portsの第1四半期純利益は10%増加し3,650億ルピーとなった。収益は前年比 19% 増加",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37710,
+      "title": "HD Korea Shipbuilding は船舶の価格高騰で韓国の第 2 四半期利益を 73% 増加",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37711,
+      "title": "サバンナ港の6月の取引量は18%増加",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37712,
+      "title": "EU制裁：ロシアに対する第21次制裁パッケージ",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37713,
+      "title": "バーリ社、2026年第2四半期の純利益が27億5,000億ランドという過去最高を記録と報告",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37714,
+      "title": "INTERCARGOは船員と民間船舶の保護を呼びかける",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37715,
+      "title": "バルカー船隊の老朽化によりタンクトップ保護の需要が高まる",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37716,
+      "title": "ロッテルダム港のバンカー量は2026年上半期に25.1%減少",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37717,
+      "title": "トップシップス社、高仕様新造MRタンカー3隻の買収と約9億3,000万ドルの潜在的な総収益未積みを発表",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37718,
+      "title": "BAR Technologies、海運業は脱炭素化を「将来の燃料」問題として扱うのをやめるべきだと語る",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37719,
+      "title": "Diana Shipping Inc.、ジェンコ海運・貿易船団価値の低下を強調し、価値がさらに損なわれる前に取締役会に行動を起こすよう求める",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37720,
+      "title": "新しい報告書は、シンガポールと香港が勢いを維持する一方で、ロンドンの海事仲裁件数が新たに増加していることを明らかにした",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37721,
+      "title": "Performance Shipping Inc.、第 2 四半期の純利益の大幅な増加を報告",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37722,
+      "title": "ファーンリーズ 2026 年第 31 週",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37723,
+      "title": "バルト海の乾燥指数は4週間の最低水準に低下",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37724,
+      "title": "ケープサイズ船のトンマイル需要に占める築年数の割合: 鉄鉱石 vs ボーキサイト",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37725,
+      "title": "Capital Clean Energy Carriers Corp.、好調な市況を背景に第 2 四半期の収益増加を報告",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37726,
+      "title": "ドライバルク輸送：エルニーニョが新たな需要ショックとなるとBIMCOが発表",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37727,
+      "title": "シップリサイクルは依然として抑制されている",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37728,
+      "title": "2つの閉鎖回廊: ホルムズとバブ・エル・マンデブはどちらもタンカーの通行を事実上遮断",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37729,
+      "title": "ガス貯蔵量不足とディーゼル不足が欧州の冬の供給を脅かす",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37730,
+      "title": "米国、マダガスカルのレアアースプロジェクトを支援",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
+    {
+      "id": 37731,
+      "title": "投資家はアメリカの次のレアアース勝者を見つけようと競っている",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-07-30T03:14:57.829799+00:00"
+    },
     {
       "id": 37500,
       "title": "フランスの消防団が暑さと闘う中、地元住民が家を守るための戦いについてBBCに語る",
@@ -49,758 +801,6 @@
       "importance": 70,
       "summary": "高市総理大臣は来年4月から2年間、食料品の消費税率を1％に引き下げる方針を30日で明らかにする見通しである。",
       "updated_at": "2026-07-29T21:35:24.378032+00:00"
-    },
-    {
-      "id": 37612,
-      "title": "ウズベキスタンの天然ガス生産量は上半期に18％減少",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T21:35:16.213661+00:00"
-    },
-    {
-      "id": 37366,
-      "title": "EY-パルテノンによるギリシャの造船所部門の分析: 地域の造船および船舶修理ハブへの発展の見通し",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T21:35:07.195453+00:00"
-    },
-    {
-      "id": 37498,
-      "title": "FIFA、アルゼンチンに対する懲戒手続きを開始",
-      "category": "news",
-      "importance": 70,
-      "summary": "FIFAは、スペインに敗れたワールドカップ決勝後および大会全体にわたるアルゼンチンの行動に対し、懲戒手続きを開始した。",
-      "updated_at": "2026-07-29T21:34:57.989226+00:00"
-    },
-    {
-      "id": 37530,
-      "title": "熊本地震 熱中症対策やガソリン供給など重点的に取り組む 政府",
-      "category": "news",
-      "importance": 70,
-      "summary": "熊本地震熱中症対策やガソリン供給など政府が重点的に取り組む",
-      "updated_at": "2026-07-29T21:34:49.802542+00:00"
-    },
-    {
-      "id": 37613,
-      "title": "ドイツのユニパー、カナダとの20年間のLNG契約を締結",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T21:34:41.211021+00:00"
-    },
-    {
-      "id": 37367,
-      "title": "中東の紛争が海洋に与える影響",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T21:34:32.160021+00:00"
-    },
-    {
-      "id": 37495,
-      "title": "アンソニー・ファウチ氏、新型コロナウイルスの起源に関する緊迫した米上院公聴会で質問に答えることを拒否",
-      "category": "news",
-      "importance": 54,
-      "summary": "アンソニー・ファウチ氏、新型コロナウイルスの起源に関する緊迫した米上院公聴会で質問に答えることを拒否",
-      "updated_at": "2026-07-29T21:34:23.037754+00:00"
-    },
-    {
-      "id": 37527,
-      "title": "【被害情報】熊本 氷川町 複数の建物が倒壊 5人が心肺停止",
-      "category": "news",
-      "importance": 70,
-      "summary": "【被害情報】熊本 氷川町 複数の建物が倒壊 5人が心肺停止",
-      "updated_at": "2026-07-29T21:34:09.118417+00:00"
-    },
-    {
-      "id": 37614,
-      "title": "Westwood Insight – ノルウェーのM&A取引がFLAGSに与える影響",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T21:34:00.578025+00:00"
-    },
-    {
-      "id": 37483,
-      "title": "新たな中東ストライキとAPI原油の引き抜きで原油価格が急騰",
-      "category": "market",
-      "importance": 70,
-      "summary": "中東の再戦闘とAPI在庫報告で原油価格が急騰。ブレントは$87.95、WTIは$82.89に上昇。",
-      "updated_at": "2026-07-29T21:33:51.655085+00:00"
-    },
-    {
-      "id": 37503,
-      "title": "米国とイランの戦争から遠ざかろうとするサウジアラビアのジレンマ",
-      "category": "news",
-      "importance": 54,
-      "summary": "米国とイランの戦争から遠ざかろうとするサウジアラビアのジレンマ",
-      "updated_at": "2026-07-29T21:33:40.081613+00:00"
-    },
-    {
-      "id": 37526,
-      "title": "【地震速報】熊本県熊本地方で震度4  津波の心配なし (5:16)",
-      "category": "news",
-      "importance": 70,
-      "summary": "【地震速報】熊本県熊本地方で被害4 津波の心配なし (5:16)",
-      "updated_at": "2026-07-29T21:33:26.312943+00:00"
-    },
-    {
-      "id": 37615,
-      "title": "米国とサウジアラビアのイラク攻撃で中東の供給懸念が再燃し、原油は5％上昇",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T21:33:12.480443+00:00"
-    },
-    {
-      "id": 37583,
-      "title": "調達予算が OT サプライ チェーンのセキュリティをどのように解決するか",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T21:33:03.392465+00:00"
-    },
-    {
-      "id": 37501,
-      "title": "ゼンデイヤ、『スパイダーマン』でのトム・ホランドとの共演について「親友同士なら簡単だよ」",
-      "category": "news",
-      "importance": 54,
-      "summary": "ゼンデイヤ、『スパイダーマン』でのトム・ホランドとの共演について「親友同士なら簡単だよ」",
-      "updated_at": "2026-07-29T21:32:54.513832+00:00"
-    },
-    {
-      "id": 37528,
-      "title": "FRB政策決定 5 先行き連続で据え置き",
-      "category": "news",
-      "importance": 70,
-      "summary": "FRB政策決定 5 先行き連続で据え置き",
-      "updated_at": "2026-07-29T21:32:40.738596+00:00"
-    },
-    {
-      "id": 37616,
-      "title": "新たな4,000万ポンドの計画によりドーバー港の交通量が削減されることを期待",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-07-29T21:32:32.111408+00:00"
-    },
-    {
-      "id": 37492,
-      "title": "BTS、アジアンポップ賞導入から1か月後にグラミー賞から辞退",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37493,
-      "title": "「デルル」「時計をしろ」：「ゴキブリ」抗議活動でZ世代のスラングがインド議会に持ち込まれる",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37494,
-      "title": "ロシア、テレグラム創設者ドゥロフ氏をテロ幇助容疑で告発",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37496,
-      "title": "13人が死亡した大地震の後、100回以上の余震が日本を襲った",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37497,
-      "title": "オスカー受賞ソングライター、グレン・ハンサードが事故で死亡",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37502,
-      "title": "クレタ島で消防士2人死亡 山火事が南ヨーロッパの一部地域を脅かす中",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37504,
-      "title": "イランが弾道ミサイル発射　ヨルダンの米軍基地標的",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37505,
-      "title": "OpenAI、文字起こしモデル「GPT-Live-Transcribe」「GPT-Transcribe」を発表／人間のような対話が可能な「GPT-Live」をトランスクリプションに特化",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37506,
-      "title": "OpenAI、脆弱性の発見・検証・修正を行う「Codex Security CLI」をオープンソース公開／CI/CDへ組み込むことも可能",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37507,
-      "title": "Mozilla Suite 後継のインターネット統合環境「SeaMonkey」v2.53.24が公開ほか【ダイジェストニュース】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37508,
-      "title": "生命保険契約照会システムで、一部情報が外部から閲覧可能な状態に。生命保険協会が発表",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37509,
-      "title": "総務省、令和8年熊本地震に関する通信インフラなどの被害状況を公開 災害用無料Wi-Fi「00000JAPAN」、災害用伝言板が稼働中",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37510,
-      "title": "Gemini Spark、プロプランで利用可能 24時間働ける「AIパートナー」",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37511,
-      "title": "築地駅直結の20階建て複合施設　駅前広場も新設",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37512,
-      "title": "HP製PCに「Rakuten AI」標準搭載 ハイブリッドAI実用化へ",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37513,
-      "title": "PayPay、アプリから寄付が可能に 令和8年熊本地震にも対応",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37514,
-      "title": "PFN、自衛隊の戦略立案AIを開発へ",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37515,
-      "title": "アマゾン、Prime Videoで操作できる動画広告",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37516,
-      "title": "「AI開発の減速を」 OpenAIやAnthropicの開発者ら米政府に代わって",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37517,
-      "title": "矢崎総業、次世代FAの開発拠点が稼働 疲労工の技能継承「今がピーク」",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37518,
-      "title": "同音異義語の使い分けに強いCopilot Keyboard、候補画面で意味を確認",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37519,
-      "title": "表やリストを自動抽出する「Instant Data Scraper」、CSVやExcelで保存",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37520,
-      "title": "CDNを使うにはDNSから設定する、キャッシュからの情報流出に要注意",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37521,
-      "title": "「構造計算NG」でも設計瑕疵に当たらず、小規模な木造の法解釈で新たな視点",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37522,
-      "title": "クラスやデコレータ、ラムダ式　流れが見えにくいパターンを理解する",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37523,
-      "title": "ナフサ由来の断熱材や塗料に調達リスク、脱石油建材への期待高まる",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37524,
-      "title": "1位は「大東建託がペルチェとファンのダブル搭載ベスト開発、熱中症対策で重ね着を不要に」",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37531,
-      "title": "ソニー、熊本の半導体工場で生産停止　令和8年熊本地震で　建屋などの被害状況を確認中",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37532,
-      "title": "「受信料の値上げは検討していない」NHK井上会長が明言しながら３カ年経営計画巡り",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37533,
-      "title": "陸自が「イオンモール熊本」内部をドローン撮影　防衛省が映像公開",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37534,
-      "title": "PayPayアプリで熊本地震への寄付が可能に 最短3ステップ・1考え",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37535,
-      "title": "熊本地震で「Yahoo!天気」が意外な活躍？ 断水・停電情報など投稿続出 ライフライン情報共有の場に",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37536,
-      "title": "警察庁、熊本地震に便乗した詐欺に注意喚起　義援金名目で電子マネーなどだまし取る手口",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37537,
-      "title": "災害時、スマホの電池を少しでも長く　携帯各社のバッテリー節電策まとめ",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37538,
-      "title": "dependabot を飼いならす: 更新をグループ化し、ペースを落とし、セキュリティを高速に保ちます",
-      "category": "dev",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37539,
-      "title": "炭素クレジットの購入を待つことに隠れたリスク",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37540,
-      "title": "ほとんどの国が自然破壊補助金の目標を達成できていないことが研究で判明",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37541,
-      "title": "データの改善により、サステナビリティ指標の調整を行う企業が増えている理由",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37542,
-      "title": "GHG プロトコルは炭素会計基準の次の段階を概説します",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37543,
-      "title": "Ofgem、グリッド容量を解放するために投機的なデータセンターをターゲットに",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37544,
-      "title": "アストラゼネカ、ネットゼロの推進で世界の車両の80%を電動化",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37545,
-      "title": "山火事による気候変動による損失の増加に、ヨーロッパの保険会社は立ち向かうことができるだろうか?",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37546,
-      "title": "Q&A: 中国の再生可能エネルギーに関する第 15 次「5 か年計画」は気候変動に対して何を意味しますか?",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37547,
-      "title": "気候変動により、アフリカ全土で小児マラリアのリスクが「変化」している",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37548,
-      "title": "世界は2030年に向けた23の自然目標のうち22を達成できていない、と国連報告書草案が発表",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37549,
-      "title": "「Kimi K3」中国製オープンウェイトAIの衝撃。中国製AIモデルのコスト99％削減の裏にある技術とリスク",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37550,
-      "title": "「クロード・コード」は開発の司令塔に 常識を一変させた５つの進化",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37551,
-      "title": "Windows Updateで要注意 甘く見るとPCの起動も認証も解除「3つのセキュリティ移行」",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37552,
-      "title": "「AIで何を変えたの？」と聞かれる今、転職で給料が上がる人／考えない人",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37553,
-      "title": "「特定利用空港」に関する国からの説明について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37554,
-      "title": "水道管の漏水事故について（第三報）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37555,
-      "title": "「人権に関する都民の意識調査」結果について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37556,
-      "title": "夏の梅毒集中啓発を実施します！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37557,
-      "title": "新規事業：東京油田も活用！ 国産SAFの供給と利用を一層促進「国産SAF利用促進緊急対策事業」の採択事業者を決定",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37558,
-      "title": "廃棄物の中間処理・積替保管施設をお持ちの事業者・区市町村の皆様へ　リチウムイオン電池火災対策を、都が支援します（電池検知機・火災検知機等の導入補助事業）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37559,
-      "title": "「どこでもえどはく」（第1回）葛西で開催！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37560,
-      "title": "2026年度耐震キャンペーンを実施します！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37561,
-      "title": "在住外国人支援事業助成 対象事業を決定",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37562,
-      "title": "特定緊急輸送道路沿道建築物の耐震化の状況について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37563,
-      "title": "「サーキュラーエコノミーの実現に向けた社会実装化事業」の二次公募の開始及び一次公募の選定結果について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37564,
-      "title": "「建築物液状化対策促進　東京コンソーシアム」会議及び現場見学会を開催します",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37565,
-      "title": "住民基本台帳に基づく人口、人口動態及び世帯数（令和8年1月1日現在）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37566,
-      "title": "KDDI株式会社に対する通信の秘密の保護に関わる対策（指導）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37567,
-      "title": "統計法等に関する研究会（第5回）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37568,
-      "title": "ガバメントAI ソース内の公式ロゴをリリースしました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37571,
-      "title": "ポンプの信頼性: メカニカル シール – 小さなコンポーネント、大きな影響",
-      "category": "maintenance",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37572,
-      "title": "Hugging Face AI のセキュリティ侵害は、メーカーにとっての脅威を浮き彫りにしますか?",
-      "category": "quality",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37573,
-      "title": "回復力のある運用のための将来のフレームワーク",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37574,
-      "title": "Fortifi、成形、小分け、コーティング、フライのサプライヤーを買収",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37575,
-      "title": "イーサネット APL の信頼性について制御エンジニアが理解しておくべきこと",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37576,
-      "title": "ABB、中国で抄紙機用ドライブを供給へ",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37577,
-      "title": "デジタルトランスフォーメーションが依然としてOTデータを実用的な知識に変えるには至っていない理由",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37578,
-      "title": "プロセス制御エンジニアが実際のプロセスの変更を測定ノイズから分離する方法",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37579,
-      "title": "デジタル通信がセーフティ クリティカルになったとき: ネットワーク スイッチの障害が制御システムのロジックとオペレーターの状況認識にどのような影響を与えたのか",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37580,
-      "title": "グリーン化の副次的なメリット",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37581,
-      "title": "持続可能性はどこまでも広がります",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
-    },
-    {
-      "id": 37582,
-      "title": "燃料電池はバイオガスまたは水素を電気に変換します",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-29T21:16:10.870080+00:00"
     }
   ]
 }
