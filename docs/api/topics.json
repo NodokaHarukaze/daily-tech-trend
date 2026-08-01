@@ -1,7 +1,519 @@
 {
-  "generated_at": "2026-07-31T21:43:11+00:00",
+  "generated_at": "2026-08-01T00:39:27+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 38164,
+      "title": "ヨーロッパ全土で火災が続く中、ギリシャの山火事から数百人が海から逃れる",
+      "category": "news",
+      "importance": 48,
+      "summary": "ヨーロッパ全土で火災が続く中、ギリシャの山火事から数百人が海から逃れる",
+      "updated_at": "2026-08-01T00:35:45.134080+00:00"
+    },
+    {
+      "id": 38262,
+      "title": "中国と米国、経済貿易問題についてビデオ会談を開催",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:35:30.807043+00:00"
+    },
+    {
+      "id": 38350,
+      "title": "ホルムズ危機で湾岸からのVLCC貿易の方向転換にベネズエラが介入",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:35:21.663701+00:00"
+    },
+    {
+      "id": 38316,
+      "title": "熊本 断水の影響 「災害中間支援組織」が支援漏れないよう調整",
+      "category": "news",
+      "importance": 70,
+      "summary": "熊本地震の被災地で、NPO法人などが物資提供を進めているが、復旧には支援の漏れやムラをなくすことが重要だと報じられた。",
+      "updated_at": "2026-08-01T00:35:12.558748+00:00"
+    },
+    {
+      "id": 38166,
+      "title": "ボーエン氏：ハマスの武装解除計画は大きな障害に直面しているが、それはガザに稀な希望をもたらしている",
+      "category": "news",
+      "importance": 48,
+      "summary": "ボーエン氏：ハマスの武装解除計画は大きな障害に直面しているが、それはガザに稀な希望をもたらしている",
+      "updated_at": "2026-08-01T00:35:03.924755+00:00"
+    },
+    {
+      "id": 38263,
+      "title": "ドイツの失業率、労働市場の軟化で6.4%に上昇",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:34:49.463775+00:00"
+    },
+    {
+      "id": 38351,
+      "title": "ブラジルの鉄鉱石輸出は2026年に減速",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:34:40.304266+00:00"
+    },
+    {
+      "id": 38314,
+      "title": "熊本で震度7 同程度の地震注意 猛暑予想 熱中症対策を",
+      "category": "news",
+      "importance": 70,
+      "summary": "熊本で被害7 同程度の地震注意 猛暑予想 熱中症対策",
+      "updated_at": "2026-08-01T00:34:31.139878+00:00"
+    },
+    {
+      "id": 38163,
+      "title": "ガザ和平合意のロードマップには何が含まれていますか?",
+      "category": "news",
+      "importance": 48,
+      "summary": "ガザ和平合意のロードマップには何が含まれていますか?",
+      "updated_at": "2026-08-01T00:34:16.879981+00:00"
+    },
+    {
+      "id": 38264,
+      "title": "イタリアの信頼感統計は第3四半期の順調なスタートを示唆している",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:34:08.231232+00:00"
+    },
+    {
+      "id": 38352,
+      "title": "Xeneta 週間海上コンテナ輸送市場最新情報: 海上コンテナ料金は安定",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:33:59.025766+00:00"
+    },
+    {
+      "id": 38318,
+      "title": "39度予想 熊本被災地でも猛暑日に できるかぎりの対策を",
+      "category": "news",
+      "importance": 70,
+      "summary": "39度予想熊本被災地でも猛暑日にできるかぎりの対策",
+      "updated_at": "2026-08-01T00:33:49.858892+00:00"
+    },
+    {
+      "id": 38167,
+      "title": "スペイン首相、モロッコから6万人の移民がセウタに到着後、人身売買業者を非難",
+      "category": "news",
+      "importance": 48,
+      "summary": "スペイン首相、モロッコから6万人の移民がセウタに到着後、人身売買業者を非難",
+      "updated_at": "2026-08-01T00:33:35.579608+00:00"
+    },
+    {
+      "id": 38265,
+      "title": "日本の鉱工業生産の伸びは5カ月ぶりの高水準",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:33:21.428980+00:00"
+    },
+    {
+      "id": 38353,
+      "title": "AIの電力需要が爆発する中、ベンチャーキャピタルの資金が米国の原子力スタートアップに流入",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:33:12.375971+00:00"
+    },
+    {
+      "id": 38309,
+      "title": "Nature Remo、エアコンのリモコン操作がアプリに同期ズレがなくなる",
+      "category": "security",
+      "importance": 80,
+      "summary": "Natureがスマートリモコン『Nature Remo』でエアコン付属リモコン操作をNature Homeアプリに同期する新機能を提供開始した。",
+      "updated_at": "2026-08-01T00:33:03.204607+00:00"
+    },
+    {
+      "id": 38029,
+      "title": "登山者10人のうちニルマル・プルジャさんは雪崩で行方不明の恐れ",
+      "category": "news",
+      "importance": 70,
+      "summary": "10人の登山者のうち、ニルマル・プルジャさんは雪崩で行方不明で、他の2人の遺体が山から回収され、残りはまだ行方不明です。",
+      "updated_at": "2026-08-01T00:32:54.930085+00:00"
+    },
+    {
+      "id": 38266,
+      "title": "日銀、何の驚きもなく金利を1.00％に据え置く",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:32:46.843551+00:00"
+    },
+    {
+      "id": 38320,
+      "title": "「Excel好き」では進化できない、「Excel/CSVでデータ連携」が今も残る、AIをどう使うか",
+      "category": "policy",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-01T00:32:37.820588+00:00"
+    },
+    {
+      "id": 38317,
+      "title": "千葉 市川 マンションで「爆発音がした」通報 複数人けがか",
+      "category": "news",
+      "importance": 70,
+      "summary": "千葉市川マンションで「爆発蔓延した」通報 複数人けがか",
+      "updated_at": "2026-08-01T00:32:28.780994+00:00"
+    },
+    {
+      "id": 38297,
+      "title": "中国、東シナ海に新構造物　２４基目、外務省が抗議",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38298,
+      "title": "「Google Chrome 151」がリリース ～XMLパーサーがメモリ安全な「Rust」実装【15:55追記】／PDFのテキスト注釈の追加・編集にも対応。370件のセキュリティ修正も",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38299,
+      "title": "Google、音楽生成AIモデル「Lyria 3.5」を発表 ～楽曲性や歌詞、ボーカル品質が向上／音楽制作サービス「Google Flow Music」で提供開始",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38300,
+      "title": "「Node.js」のセキュリティアップデートが2度の延期の末リリース、11件の脆弱性を修正／v22.23.2、v24.18.1、v26.5.1が公開",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38301,
+      "title": "Google、動画生成AI「Gemini Omni」を期間限定で無料開放。サブスク未参加者が対象／8月4日まで、最大10本の動画を無償で作成",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38302,
+      "title": "「Google Chrome 151」のセキュリティ修正はかなり大規模、370件に渡る脆弱性対応／相当度最大の「Critical」は7件",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38303,
+      "title": "OpenAI、「GPT-5.6」ファミリーを割引、最大80％オフ／「Luna」は80％、「Terra」は20％。「Sol」は最大2.5倍高速な「Fastモード」を導入",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38304,
+      "title": "すぐに使えるスポットクーラーが安い、工事不要で25,800円！【Amazon暮らし応援サマーセール】【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38305,
+      "title": "Kindle本が最大15％還元！Amazonで「ジュニアキャンペーン」実施中／9月3日まで5週連続開催。 購入したKindle本金額に応じてAmazonポイント獲得【Book Watch/セール情報】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38306,
+      "title": "AIエージェント「Gemini Spark」が「Chrome」と統合へ、AIが高度な「お使い」を代行／「Google AI Pro」での「Gemini Spark」も新たに160を超える国へ拡大",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38307,
+      "title": "リンゴ味のゼロカロリー炭酸「カロリミット アップルスパークリング」が安い【Amazon暮らし応援サマーセール】【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38308,
+      "title": "ここを直して！ 「ChatGPT」デスクトップアプリの生成画像編集が直感的に／複数リポジトリをまたぐレビューや、内蔵ブラウザーの強化も",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38310,
+      "title": "ガバメントAI基盤「源内」、熊本市など3自治体が利用希望",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38311,
+      "title": "CEDEC AWARDS 2026 最優秀賞、任天堂が全部門を獲得",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38312,
+      "title": "熊本地震で橋桁が落ちた南九州道の高架橋、耐震設計の専門家の視点",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38313,
+      "title": "円相場 再び急激な円買い 米財務省が市場介入の可能性伝達",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38315,
+      "title": "熊本地震 避難生活の長期化も見据え環境改善進める 政府",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38319,
+      "title": "「ICチップなら安心」は本当か 床師対策で問われる不動産取引の多重防御",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38321,
+      "title": "「東京都男女平等参画推進総合計画」の改定について",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38322,
+      "title": "小池知事も参加 オープニングイベント開催決定！！ 「東京クリーンアップアクション」オープニングイベント・広報展開のお知らせ",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38323,
+      "title": "新規事業　地域や環境に配慮したデータセンターの整備を促進します　認定制度を創設し、補助事業を開始",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38325,
+      "title": "夏休みにも関わらず欧州HRC市場の輸入活動は活発化",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38326,
+      "title": "オーストリア、6月も鉄鋼生産量を増加",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38327,
+      "title": "スペインの電気業界、GOESセーフガードの撤回を求める",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38328,
+      "title": "ウクライナ：海軍封鎖のためプゴクが作戦を一時停止",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38329,
+      "title": "Suncoke Energy, Inc. が現金配当を発表",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38332,
+      "title": "Kim K3 を Amazon SageMaker HyperPod および Amazon EKS にデプロイする",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38333,
+      "title": "高度な配送と取引 – 週間配送市場レポート 2026 年第 31 週",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38334,
+      "title": "サウジアラビアの紅海経由SABIC貨物は中東紛争の影響を受けず",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38335,
+      "title": "世界の船員訓練規則が見直しに直面する中、IMOはジャマイカの専門知識に依存",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38336,
+      "title": "商船三井、統合版『MOL REPORT 2026』を発行 ～グローバル社会インフラ企業への進化～",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38337,
+      "title": "Dualolog が安全な船舶と陸上のコラボレーションのための Workspace を発表",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38338,
+      "title": "HII が 2026 年第 2 四半期の業績を報告",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38339,
+      "title": "フジャイラの燃料油在庫は今月急増",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38340,
+      "title": "Best Oasis 週刊リサイクル市場レポート、2026 年 7 月 31 日",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38341,
+      "title": "米国の新たなLPG輸出能力はターミナル料金の変動性を低下させる可能性がある",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38342,
+      "title": "中国の原油輸入は第2四半期に減少した",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38343,
+      "title": "ギブソンタンカーレポート – Prisoners of Geography",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38344,
+      "title": "ドルーリー氏: 先週の世界コンテナ指数は 3% 下落",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38345,
+      "title": "イランとフーシ派反政府勢力が攻撃を強化する中、中東の輸送ボトルネックは続く",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38346,
+      "title": "GMS 第 31 週 – 一時停止、通路が開く",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38347,
+      "title": "代替燃料週間: ARA の分断",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38348,
+      "title": "限界の問題",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
+    {
+      "id": 38349,
+      "title": "金曜日にバルト海の乾燥指数が上昇、月間上昇率を記録",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T00:16:02.781688+00:00"
+    },
     {
       "id": 38267,
       "title": "アゼルバイジャンのパイプラインはカスピ海のガスをヨーロッパに繋ぐ重要な「動脈」の役割を果たしている、とSOCAR幹部が語る",
@@ -17,14 +529,6 @@
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
       "updated_at": "2026-07-31T21:35:49.210825+00:00"
-    },
-    {
-      "id": 38164,
-      "title": "ヨーロッパ全土で火災が続く中、ギリシャの山火事から数百人が海から逃れる",
-      "category": "news",
-      "importance": 48,
-      "summary": "ヨーロッパ全土で火災が続く中、ギリシャの山火事から数百人が海から逃れる",
-      "updated_at": "2026-07-31T21:35:40.118903+00:00"
     },
     {
       "id": 37982,
@@ -51,14 +555,6 @@
       "updated_at": "2026-07-31T21:35:13.427297+00:00"
     },
     {
-      "id": 38166,
-      "title": "ボーエン氏：ハマスの武装解除計画は大きな障害に直面しているが、それはガザに稀な希望をもたらしている",
-      "category": "news",
-      "importance": 48,
-      "summary": "ボーエン氏：ハマスの武装解除計画は大きな障害に直面しているが、それはガザに稀な希望をもたらしている",
-      "updated_at": "2026-07-31T21:35:04.280635+00:00"
-    },
-    {
       "id": 38225,
       "title": "総務省参与（総務大臣科学技術顧問）の発令",
       "category": "policy",
@@ -81,14 +577,6 @@
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
       "updated_at": "2026-07-31T21:34:26.768096+00:00"
-    },
-    {
-      "id": 38163,
-      "title": "ガザ和平合意のロードマップには何が含まれていますか?",
-      "category": "news",
-      "importance": 54,
-      "summary": "ガザ和平合意のロードマップには何が含まれていますか?",
-      "updated_at": "2026-07-31T21:34:17.704667+00:00"
     },
     {
       "id": 38226,
@@ -115,14 +603,6 @@
       "updated_at": "2026-07-31T21:33:45.960946+00:00"
     },
     {
-      "id": 38167,
-      "title": "スペイン首相、モロッコから6万人の移民がセウタに到着後、人身売買業者を非難",
-      "category": "news",
-      "importance": 54,
-      "summary": "スペイン首相、モロッコから6万人の移民がセウタに到着後、人身売買業者を非難",
-      "updated_at": "2026-07-31T21:33:36.885873+00:00"
-    },
-    {
       "id": 38191,
       "title": "高額療養費制度 自己負担の上限額引き上げも 年間上限額を新設",
       "category": "news",
@@ -137,14 +617,6 @@
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
       "updated_at": "2026-07-31T21:33:19.623879+00:00"
-    },
-    {
-      "id": 38029,
-      "title": "登山者10人のうちニルマル・プルジャさんは雪崩で行方不明の恐れ",
-      "category": "news",
-      "importance": 54,
-      "summary": "登山者10人のうちニルマル・プルジャさんは雪崩で行方不明の恐れ",
-      "updated_at": "2026-07-31T21:33:00.991265+00:00"
     },
     {
       "id": 38193,
@@ -326,478 +798,6 @@
       "id": 38187,
       "title": "ファミマ小谷社長、地震発生翌日に熊本で陣頭指揮　水・運転手不足に緊急対応",
       "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38188,
-      "title": "アイシン、熊本の工場で順次生産再開　近藤副社長「10年前の対策生きる」",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38189,
-      "title": "自転車の交通違反 「青切符」導入3か月で全国7000件交付",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38190,
-      "title": "熊本 八代 倒壊住宅から女性救出 ベトナム人ら地元住民が協力",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38192,
-      "title": "九州新幹線 熊本～新水俣間「8月中の運転再開は困難」 JR九州",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38194,
-      "title": "タカラトミー、デュエマアプリで個人情報漏えいか　最大15万5000人分　氏名や住所など閲覧の恐れ",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38195,
-      "title": "クロードも３組織に不正アクセス 既存システムを「実験の一部」と誤認 人類が経緯を公表",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38196,
-      "title": "全国の「歴史の古い草原」分布を初めて地図化──シンク・ネイチャー",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38197,
-      "title": "ダイナミックマッププラットフォーム、「3Dmapsocket」の一般道点群データの提供エリアを拡大",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38198,
-      "title": "キオクシアQ1、純利益があれば同期比4500％増 株式分割・自社株買いも",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38199,
-      "title": "ソニーの熊本工場、8月中旬には「地震前の稼働水準」に　早期復旧の理由を決算会見で明かす",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38200,
-      "title": "一般消費者が「空調服」と書いたら商標権侵害？ 公式Xの注意喚起が波紋、弁理士の見解は",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38201,
-      "title": "ロシアの「.ru」ドメインが実質使えなくなりそう？ 本人確認義務化でユーザー悲鳴、関連事業者は対応急ぐ",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38202,
-      "title": "ソニー、タムロン買収提案の狙いを説明　「イメージング事業の発展につながる」",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38203,
-      "title": "セブン＆アイ、共通会員IDのPayPay統合を正式発表 ソフトバンクや三井住友カードなど計3000億円のお祝い",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38204,
-      "title": "早期に停止しないでください: メモリ速度での大文字と小文字を折り畳むソース コード",
-      "category": "dev",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38205,
-      "title": "SBTi、改訂された FLAG 規格の策定に向けた協議を開始",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38206,
-      "title": "テスコ、ダノン、WWFが首相への「グッドフード法案」支持の呼びかけに参加",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38207,
-      "title": "数字で見る: 英国のエネルギーミックスはどのように変化しているか",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38208,
-      "title": "CBAM ウェビナーのフォローアップ:「CBAM 検証者になる: 認定と検証のすべて」",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38209,
-      "title": "夏を思いっきり楽しもう！「夏の子供の外遊び」をテーマとした動画を公開　アニメーション編",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38210,
-      "title": "都民・大学研究者による事業提案制度 都民投票を開始します！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38211,
-      "title": "令和9年度東京都予算の見積方針のポイント",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38212,
-      "title": "「『叶えたい』を支えたい 結婚・子育て支援策の推進に向けた論点整理2026」の公表について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38213,
-      "title": "「チルドレンファーストの社会の実現に向けた子供政策強化の方針2026」の公表について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38214,
-      "title": "「2050東京戦略 政策レビュー」の公表について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38215,
-      "title": "令和8年熊本地震への都の対応（熊本県への応援職員の派遣について）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38216,
-      "title": "キングサーモンプロジェクト「Pilots at BAT Program」募集開始 グローバルを志すスタートアップに対して、ニューヨークでの現地支援プログラムを展開",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38217,
-      "title": "令和7年度一般会計決算（見込み）について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38218,
-      "title": "令和7年度 都税収入決算見込額について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38219,
-      "title": "奨学金返還支援企業とのマッチングイベントを開催します",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38220,
-      "title": "日本橋川沿いに生まれる、歩いて楽しい水辺や周辺の空間の「呼称・愛称」の決定について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38221,
-      "title": "令和8年熊本地震に係る普通交付税（9月定例交付分）の繰上げ交付",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38222,
-      "title": "令和8年8月3日付 公害等調整委員会事務局人事",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38223,
-      "title": "LINEヤフー株式会社に対する特定利用者情報の保護及び外部送信規律の遵守に向けた取り組み（指導）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38224,
-      "title": "ふるさと納税に関する現況調査結果の概要",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38227,
-      "title": "2026年度（令和8年度）デジタル庁「こども霞が関見学デー」を開催しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38228,
-      "title": "自治体向けマイナンバーカード活用情報において「マイナンバーカードの利用に必要となる基本情報」の資料を更新しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38229,
-      "title": "カード代替電磁的記録における大臣認定を取得した確認用プログラムを更新しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38230,
-      "title": "マイナンバーカードの普及と利活用に関するダッシュボードを更新しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38231,
-      "title": "GビズIDの利用状況に関するダッシュボードを更新しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38232,
-      "title": "公金受取口座の登録状況に関するダッシュボードを更新しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38233,
-      "title": "デジタル庁における障害者である職員の任免状況を更新しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38234,
-      "title": "デジタル社会構想会議の開催についての資料を一部改正しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38235,
-      "title": "行政手続における特定の個人を識別するための番号の利用等に関する法律第十九条第八号に基づく利用特定個人情報の提供に関する命令第百六十二条の内閣総理大臣及び総務大臣が定める事務及び情報を定める告示を更新しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38237,
-      "title": "エマソンは、Holy Cross Energy による再生可能発電資産の管理の統合を支援します",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38238,
-      "title": "効率は依然として持続可能性を支えています",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38240,
-      "title": "中国黒鉛電極市場、6月の下落から安定へ",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38241,
-      "title": "アルジェリアの鉄鋼消費：国が支援に介入",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38242,
-      "title": "タタ・スチール、第 1 四半期、インドの業績で 12% 純増",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38243,
-      "title": "ティッセンクルップ首相のボレゴ氏が欧州水素ロビーの議長に",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38244,
-      "title": "アゼルバイジャン：2026年上半期に鉄金属輸出が増加",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38247,
-      "title": "Amazon Bedrock AgentCore Observability を使用した本番エージェントの最適化",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38248,
-      "title": "Amazon Quick でのエージェント カタログ エクスペリエンスの発表",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38249,
-      "title": "犯罪詐欺行為の阻止",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38250,
-      "title": "Univé は AI 対応の労働力を構築します",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38251,
-      "title": "豊かな知性を築く",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38252,
-      "title": "ヨーロッパ全土で責任ある AI を推進",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38253,
-      "title": "ウィンターマール・オフショアが2026年上半期の実績を報告",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-07-31T21:15:38.759120+00:00"
-    },
-    {
-      "id": 38254,
-      "title": "IMO、バヌアツの海洋安全保障強化を支援",
-      "category": "market",
       "importance": 0,
       "summary": "",
       "updated_at": "2026-07-31T21:15:38.759120+00:00"
