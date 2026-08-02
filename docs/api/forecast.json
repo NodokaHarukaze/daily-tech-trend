@@ -1,11 +1,16 @@
 {
-  "generated_at": "2026-08-01T06:44:06+00:00",
+  "generated_at": "2026-08-02T05:20:46+00:00",
   "latest": {
     "report_date": "2026-08-01",
     "executive_summary": "- AIによるセキュリティと脅威検知の進化: AppleやMicrosoftがAIベースの脅威検知をOSやクラウドサービスに組み込むことで、企業・個人のデータ保護が強化され、セキュリティ対策のコストと労力が削減されます。\n- マイクロVMとエッジAIによるコスト効率と低レイテンシ化: AWSのLambda MicroVMやEdge MicroVM、MicrosoftのGPU統合AIサービスにより、クラウドとエッジでのAI推論が高速化・低コスト化し、リアルタイムアプリケーションの展開が容易になります。\n- 公共・産業連携で加速するAIエコシステム: NISTの助成金ポータルやAI製造センター、三菱重工・Preferred Networksの鉄道保守AI実証実験、BLUETTIやPHILIPSのAI搭載消費電源・タブレットなど、政府・産業・消費者が協力してAI技術を製造業やインフラ、日常生活に浸透させ、社会全体のデジタル化を推進します。",
     "accuracy_score": null
   },
   "verifications": [
+    {
+      "report_date": "2026-07-26",
+      "horizon": "1週間後",
+      "accuracy": 0.6
+    },
     {
       "report_date": "2026-07-24",
       "horizon": "1週間後",
@@ -50,6 +55,11 @@
       "report_date": "2026-07-05",
       "horizon": "1週間後",
       "accuracy": 0.125
+    },
+    {
+      "report_date": "2026-07-03",
+      "horizon": "1〜6ヶ月後",
+      "accuracy": 0.0
     },
     {
       "report_date": "2026-07-02",
@@ -120,6 +130,11 @@
       "report_date": "2026-05-08",
       "horizon": "1〜6ヶ月後",
       "accuracy": 1.0
+    },
+    {
+      "report_date": "2026-05-04",
+      "horizon": "1〜6ヶ月後",
+      "accuracy": 0.0
     },
     {
       "report_date": "2026-05-03",

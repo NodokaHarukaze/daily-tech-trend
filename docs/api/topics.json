@@ -1,7 +1,231 @@
 {
-  "generated_at": "2026-08-01T06:44:06+00:00",
+  "generated_at": "2026-08-02T05:20:46+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 38410,
+      "title": "プライドボートパレードのためにアムステルダムの運河に並ぶ群衆",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38411,
+      "title": "モスクワのレストランで女性が爆弾爆発、3人死亡、国営メディアが報道",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38412,
+      "title": "コンゴ民主共和国における現在のエボラ出血熱の流行は史上最悪だとWHOが発表",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38413,
+      "title": "登山家のニルマル・プルジャさんがパキスタンの雪崩で死亡、所属会社が発表",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38414,
+      "title": "イタリア、ほぼすべての主要都市に最高度の暑さ警報を発令",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38415,
+      "title": "ペルーで観光旅客機が墜落、13人死亡",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38416,
+      "title": "インファンティーノへの圧力高まる中「全面見直し」を求める",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38417,
+      "title": "EU、セウタ移民の入国問題について話し合うため緊急会合を開催",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38418,
+      "title": "ロシア軍攻撃で９人死亡　ウクライナ首都、防空弾不足か",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38419,
+      "title": "Google EarthのNano Banana画像生成、フェイク対策のため開始1日で停止",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38420,
+      "title": "愛子さま 三重県の鳥羽水族館でジュゴンやラッコをご覧に",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38421,
+      "title": "モスクワで爆発 3人死亡 15人けが 原因や背景を捜査",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38422,
+      "title": "米報道“週末にも攻撃計画” イランもけん制 攻撃応酬に懸念",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38423,
+      "title": "岡山 矢掛町で2歳男児が行方不明 きょうも警察と消防が捜索",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38424,
+      "title": "イオンモール熊本での捜索活動が終了 7人が死亡 5人がけが",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38425,
+      "title": "熊本地震 断水の早期解消へ復旧の取り組み進める 政府",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38426,
+      "title": "熊本地震 関連調査中含め36人死亡 避難所の熱中症対策を強化へ",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38427,
+      "title": "令和８年熊本地震への都の対応（第８報）（給水車の派遣について）",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38429,
+      "title": "英国株のさらなる引き締めが予想される：全鋼",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38430,
+      "title": "工場管理者向けの 5 つのリアルタイム生産監視指標",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38431,
+      "title": "米国のステンレス鋼丸棒市場、スポット購入は抑制されているにもかかわらずコスト逆風に直面",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38432,
+      "title": "環境と信用のハードルが海洋鉄の施肥の可能性を制限する可能性がある - 研究",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38433,
+      "title": "コストのかかる二次操作を排除するフォーム ツール",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38436,
+      "title": "数学と理論的コンピューターサイエンスにおける 10 の進歩",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38437,
+      "title": "イングランド銀行は石炭から遠ざかっている",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38438,
+      "title": "フィンランドの砂電池はレアアースを一切使用せずに排出量を 70% 削減",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38439,
+      "title": "太陽光発電を増強するために設計された物議を醸すスペースミラー",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
+    {
+      "id": 38440,
+      "title": "スリナムの260億ドルの石油賭けがついに報われる",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-01T21:15:14.940171+00:00"
+    },
     {
       "id": 38381,
       "title": "大量の移民がセウタに渡ったきっかけは何だったのでしょうか？",
@@ -574,230 +798,6 @@
       "id": 38307,
       "title": "リンゴ味のゼロカロリー炭酸「カロリミット アップルスパークリング」が安い【Amazon暮らし応援サマーセール】【本日みつけたお買い得情報】",
       "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38308,
-      "title": "ここを直して！ 「ChatGPT」デスクトップアプリの生成画像編集が直感的に／複数リポジトリをまたぐレビューや、内蔵ブラウザーの強化も",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38310,
-      "title": "ガバメントAI基盤「源内」、熊本市など3自治体が利用希望",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38311,
-      "title": "CEDEC AWARDS 2026 最優秀賞、任天堂が全部門を獲得",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38312,
-      "title": "熊本地震で橋桁が落ちた南九州道の高架橋、耐震設計の専門家の視点",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38313,
-      "title": "円相場 再び急激な円買い 米財務省が市場介入の可能性伝達",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38315,
-      "title": "熊本地震 避難生活の長期化も見据え環境改善進める 政府",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38319,
-      "title": "「ICチップなら安心」は本当か 床師対策で問われる不動産取引の多重防御",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38321,
-      "title": "「東京都男女平等参画推進総合計画」の改定について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38322,
-      "title": "小池知事も参加 オープニングイベント開催決定！！ 「東京クリーンアップアクション」オープニングイベント・広報展開のお知らせ",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38323,
-      "title": "新規事業　地域や環境に配慮したデータセンターの整備を促進します　認定制度を創設し、補助事業を開始",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38325,
-      "title": "夏休みにも関わらず欧州HRC市場の輸入活動は活発化",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38326,
-      "title": "オーストリア、6月も鉄鋼生産量を増加",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38327,
-      "title": "スペインの電気業界、GOESセーフガードの撤回を求める",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38328,
-      "title": "ウクライナ：海軍封鎖のためプゴクが作戦を一時停止",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38329,
-      "title": "Suncoke Energy, Inc. が現金配当を発表",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38332,
-      "title": "Kim K3 を Amazon SageMaker HyperPod および Amazon EKS にデプロイする",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38333,
-      "title": "高度な配送と取引 – 週間配送市場レポート 2026 年第 31 週",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38334,
-      "title": "サウジアラビアの紅海経由SABIC貨物は中東紛争の影響を受けず",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38335,
-      "title": "世界の船員訓練規則が見直しに直面する中、IMOはジャマイカの専門知識に依存",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38336,
-      "title": "商船三井、統合版『MOL REPORT 2026』を発行 ～グローバル社会インフラ企業への進化～",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38337,
-      "title": "Dualolog が安全な船舶と陸上のコラボレーションのための Workspace を発表",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38338,
-      "title": "HII が 2026 年第 2 四半期の業績を報告",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38339,
-      "title": "フジャイラの燃料油在庫は今月急増",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38340,
-      "title": "Best Oasis 週刊リサイクル市場レポート、2026 年 7 月 31 日",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38341,
-      "title": "米国の新たなLPG輸出能力はターミナル料金の変動性を低下させる可能性がある",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38342,
-      "title": "中国の原油輸入は第2四半期に減少した",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38343,
-      "title": "ギブソンタンカーレポート – Prisoners of Geography",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38344,
-      "title": "ドルーリー氏: 先週の世界コンテナ指数は 3% 下落",
-      "category": "market",
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-01T00:16:02.781688+00:00"
