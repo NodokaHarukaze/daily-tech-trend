@@ -1,7 +1,231 @@
 {
-  "generated_at": "2026-08-02T05:20:46+00:00",
+  "generated_at": "2026-08-02T13:28:17+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 38448,
+      "title": "ジンジャーヘアのポートレートはアメリカ人をつなぐ予期せぬ「黄金の糸」を示す",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38449,
+      "title": "新しい意欲的なライフスタイルとしての孤独：「私たちは孤独ではない」",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38450,
+      "title": "オーストラリアは現代テクノロジーと先住民の知識を組み合わせて山火事と戦う方法",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38451,
+      "title": "ロシア船、制裁を無視して軍用車両をマリへ派遣",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38452,
+      "title": "コンゴ民主共和国でウイルスが蔓延する中、ウガンダがエボラ出血熱との戦いに勝利しているように見える理由",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38453,
+      "title": "ソプラノ歌手ヴィンセント・パストーレさんが80歳で死去",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38454,
+      "title": "若い銃をレンタル - ヨーロッパ全土で殺害のために募集された 10 代の殺し屋",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38455,
+      "title": "スペインの移民危機がどのようにして政治的嵐を引き起こしたのか - ソーシャルメディアによって引き起こされた",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38456,
+      "title": "トランプ大統領、「速やかに」合意形成を条件にイラン攻撃を中止すると表明",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38457,
+      "title": "イラン攻撃取りやめに同意　トランプ米大統領",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38458,
+      "title": "「AIでも導入評価されない問題」は解決できるのか",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38459,
+      "title": "熊本地震 暑さ対策や支援物資の効率的配送も【支援の動き】",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38460,
+      "title": "トランプ大統領  イランへの攻撃を中止することに同意と投稿",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38461,
+      "title": "消費税減税 財源は予算編成過程で明確に 城内成長戦略相",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38462,
+      "title": "高知・和歌山で40度超の酷暑日 東北・関東甲信は激しい雨警戒",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38463,
+      "title": "熊本 地震活動が活発 震度7程度に注意 危険な暑さ熱中症対策を",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38464,
+      "title": "熱中症“初期症状見逃さないで”脱水状態に注意【専門家ＱＡ】",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38465,
+      "title": "新作「レイダース」で初めて「スプラトゥーン」に触れたマンガ家がその面白さに驚愕！　と同時に絶望した理由",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38466,
+      "title": "OpenAI、アクティブユーザー10億人超に、導入企業は200万社超",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38467,
+      "title": "Google、パーソナルAI「Gemini Spark」を日本でも利用可能、Chrome統合は米国から",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38468,
+      "title": "「AI活用する新人増えてOJT負担増」 複数の調査で暴露した現場の苦悩",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38470,
+      "title": "欧州の長鋼価格は夏季閉鎖に向けた季節再入荷で堅調に推移",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38471,
+      "title": "最新の取引でイタリアの国産鋼厚板価格が下落。 9月生産分のほとんどが完売しました",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38472,
+      "title": "欧州の HRC 生産者は夏の小康にもかかわらず健全な注文を維持。混合価格",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38473,
+      "title": "中国交渉がつまずく中、フォーテスキューの鉄橋に11億ドルの被害",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38474,
+      "title": "この鉱山のベテランが「ブームの向こう側」の未来を見る場所",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38477,
+      "title": "AI の電力需要が本当の問題ではありません。その柔軟性のなさは、",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
+    {
+      "id": 38478,
+      "title": "バカ・ムエルタの記録的な生産高でもアルゼンチン経済全体を押し上げることはできない",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-02T06:15:07.879998+00:00"
+    },
     {
       "id": 38410,
       "title": "プライドボートパレードのためにアムステルダムの運河に並ぶ群衆",
@@ -577,230 +801,6 @@
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-01T03:15:38.498813+00:00"
-    },
-    {
-      "id": 38369,
-      "title": "ロックウェル・オートメーション、2026年度第3四半期の業績を発表",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T03:15:38.498813+00:00"
-    },
-    {
-      "id": 38370,
-      "title": "イタリア、北欧の現地HRC価格は市場の静穏、取引制限の中で下落",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T03:15:38.498813+00:00"
-    },
-    {
-      "id": 38371,
-      "title": "オウトクンプ、ヨーロッパ事業領域の新社長を任命",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T03:15:38.498813+00:00"
-    },
-    {
-      "id": 38164,
-      "title": "ヨーロッパ全土で火災が続く中、ギリシャの山火事から数百人が海から逃れる",
-      "category": "news",
-      "importance": 48,
-      "summary": "ヨーロッパ全土で火災が続く中、ギリシャの山火事から数百人が海から逃れる",
-      "updated_at": "2026-08-01T00:35:45.134080+00:00"
-    },
-    {
-      "id": 38262,
-      "title": "中国と米国、経済貿易問題についてビデオ会談を開催",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:35:30.807043+00:00"
-    },
-    {
-      "id": 38350,
-      "title": "ホルムズ危機で湾岸からのVLCC貿易の方向転換にベネズエラが介入",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:35:21.663701+00:00"
-    },
-    {
-      "id": 38316,
-      "title": "熊本 断水の影響 「災害中間支援組織」が支援漏れないよう調整",
-      "category": "news",
-      "importance": 70,
-      "summary": "熊本地震の被災地で、NPO法人などが物資提供を進めているが、復旧には支援の漏れやムラをなくすことが重要だと報じられた。",
-      "updated_at": "2026-08-01T00:35:12.558748+00:00"
-    },
-    {
-      "id": 38263,
-      "title": "ドイツの失業率、労働市場の軟化で6.4%に上昇",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:34:49.463775+00:00"
-    },
-    {
-      "id": 38351,
-      "title": "ブラジルの鉄鉱石輸出は2026年に減速",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:34:40.304266+00:00"
-    },
-    {
-      "id": 38314,
-      "title": "熊本で震度7 同程度の地震注意 猛暑予想 熱中症対策を",
-      "category": "news",
-      "importance": 70,
-      "summary": "熊本で被害7 同程度の地震注意 猛暑予想 熱中症対策",
-      "updated_at": "2026-08-01T00:34:31.139878+00:00"
-    },
-    {
-      "id": 38264,
-      "title": "イタリアの信頼感統計は第3四半期の順調なスタートを示唆している",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:34:08.231232+00:00"
-    },
-    {
-      "id": 38352,
-      "title": "Xeneta 週間海上コンテナ輸送市場最新情報: 海上コンテナ料金は安定",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:33:59.025766+00:00"
-    },
-    {
-      "id": 38265,
-      "title": "日本の鉱工業生産の伸びは5カ月ぶりの高水準",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:33:21.428980+00:00"
-    },
-    {
-      "id": 38353,
-      "title": "AIの電力需要が爆発する中、ベンチャーキャピタルの資金が米国の原子力スタートアップに流入",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:33:12.375971+00:00"
-    },
-    {
-      "id": 38309,
-      "title": "Nature Remo、エアコンのリモコン操作がアプリに同期ズレがなくなる",
-      "category": "security",
-      "importance": 80,
-      "summary": "Natureがスマートリモコン『Nature Remo』でエアコン付属リモコン操作をNature Homeアプリに同期する新機能を提供開始した。",
-      "updated_at": "2026-08-01T00:33:03.204607+00:00"
-    },
-    {
-      "id": 38266,
-      "title": "日銀、何の驚きもなく金利を1.00％に据え置く",
-      "category": "market",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:32:46.843551+00:00"
-    },
-    {
-      "id": 38320,
-      "title": "「Excel好き」では進化できない、「Excel/CSVでデータ連携」が今も残る、AIをどう使うか",
-      "category": "policy",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-01T00:32:37.820588+00:00"
-    },
-    {
-      "id": 38297,
-      "title": "中国、東シナ海に新構造物　２４基目、外務省が抗議",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38298,
-      "title": "「Google Chrome 151」がリリース ～XMLパーサーがメモリ安全な「Rust」実装【15:55追記】／PDFのテキスト注釈の追加・編集にも対応。370件のセキュリティ修正も",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38299,
-      "title": "Google、音楽生成AIモデル「Lyria 3.5」を発表 ～楽曲性や歌詞、ボーカル品質が向上／音楽制作サービス「Google Flow Music」で提供開始",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38300,
-      "title": "「Node.js」のセキュリティアップデートが2度の延期の末リリース、11件の脆弱性を修正／v22.23.2、v24.18.1、v26.5.1が公開",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38301,
-      "title": "Google、動画生成AI「Gemini Omni」を期間限定で無料開放。サブスク未参加者が対象／8月4日まで、最大10本の動画を無償で作成",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38302,
-      "title": "「Google Chrome 151」のセキュリティ修正はかなり大規模、370件に渡る脆弱性対応／相当度最大の「Critical」は7件",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38303,
-      "title": "OpenAI、「GPT-5.6」ファミリーを割引、最大80％オフ／「Luna」は80％、「Terra」は20％。「Sol」は最大2.5倍高速な「Fastモード」を導入",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38304,
-      "title": "すぐに使えるスポットクーラーが安い、工事不要で25,800円！【Amazon暮らし応援サマーセール】【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38305,
-      "title": "Kindle本が最大15％還元！Amazonで「ジュニアキャンペーン」実施中／9月3日まで5週連続開催。 購入したKindle本金額に応じてAmazonポイント獲得【Book Watch/セール情報】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38306,
-      "title": "AIエージェント「Gemini Spark」が「Chrome」と統合へ、AIが高度な「お使い」を代行／「Google AI Pro」での「Gemini Spark」も新たに160を超える国へ拡大",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
-    },
-    {
-      "id": 38307,
-      "title": "リンゴ味のゼロカロリー炭酸「カロリミット アップルスパークリング」が安い【Amazon暮らし応援サマーセール】【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-01T00:16:02.781688+00:00"
     }
   ]
 }
