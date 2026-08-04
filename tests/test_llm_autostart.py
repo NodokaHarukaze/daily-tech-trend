@@ -146,6 +146,51 @@ def test_post_ollama_uses_pinned_model_first(monkeypatch):
     assert session.post_model == "gpt-oss:20b"
 
 
+def test_post_ollama_unloads_failed_candidates_between_attempts(monkeypatch):
+    """失敗した候補モデルは次候補を試す前にアンロードされる。
+
+    アンロードせず次候補へ進むと、候補が「全モデル総当たり」になるケースで
+    Ollamaが失敗モデルを解放しないまま次々ロードし続けRAMを食い潰す
+    (2026-08-04: run_daily.batが14時間PCフリーズした事故の原因)。
+    """
+    _reset_flags()
+
+    class FailThenSucceedSession:
+        def __init__(self):
+            self.unload_calls = []
+            self.chat_calls = []
+
+        def get(self, url="", *_args, **_kwargs):
+            if "/api/ps" in str(url):
+                return DummyResponse(status_code=200, payload={"models": []})
+            return DummyResponse(
+                status_code=200,
+                payload={"data": [{"id": "model-a"}, {"id": "model-b"}, {"id": "model-c"}]},
+            )
+
+        def post(self, url="", *_args, **kwargs):
+            if "/api/generate" in str(url):
+                body = kwargs.get("json", {})
+                if body.get("keep_alive") == 0:
+                    self.unload_calls.append(body.get("model"))
+                return DummyResponse()
+            model = kwargs["json"]["model"]
+            self.chat_calls.append(model)
+            if model == "model-c":
+                return DummyResponse(status_code=200)
+            return DummyResponse(status_code=400)
+
+    session = FailThenSucceedSession()
+    monkeypatch.setattr(llm_insights_api, "_SESSION", session)
+    monkeypatch.setenv("OLLAMA_MODEL", "model-a")
+
+    res = llm_insights_api.post_ollama({}, timeout=1, retries=0)
+
+    assert res.status_code == 200
+    assert session.chat_calls == ["model-a", "model-b", "model-c"]
+    assert session.unload_calls == ["model-a", "model-b"]
+
+
 # 後方互換: post_lmstudio エイリアスが動作すること
 def test_post_lmstudio_alias_works(monkeypatch):
     _reset_flags()

@@ -286,12 +286,18 @@ def post_ollama(
                     if _SELECTED_MODEL == model:
                         _SELECTED_MODEL = None
                     print(f"[WARN] model '{model}' failed on Ollama; trying next candidate")
+                    # 失敗した候補は即アンロードする。アンロードせず次候補へ進むと、
+                    # 候補が全モデル総当たり(_pick_model_candidates)になるケースで
+                    # Ollamaが失敗モデルを解放しないままロードし続け、RAMを食い潰す
+                    # (2026-08-04: 14時間PCフリーズの原因)。
+                    _unload_model(model)
                     continue
 
                 _SELECTED_MODEL = model
                 return r
             except Exception as e:
                 last_err = e
+                _unload_model(model)
 
         if i < eff_retries:
             # 指数バックオフ。backoff_sec が明示指定されていれば従来通り線形扱い。
