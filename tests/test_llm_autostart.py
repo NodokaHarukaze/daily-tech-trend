@@ -191,6 +191,76 @@ def test_post_ollama_unloads_failed_candidates_between_attempts(monkeypatch):
     assert session.unload_calls == ["model-a", "model-b"]
 
 
+def test_post_ollama_registers_timeout_failure_and_tries_next_candidate(monkeypatch):
+    """タイムアウト等の例外で失敗した候補も_FAILED_MODELSに登録され、
+    同一リトライ周回内で再選択されず次候補へ進む。
+
+    登録しないと、次のリトライ周回で_pick_model_candidates()が同じ
+    (VRAM不足等で毎回タイムアウトする)モデルを再度候補の先頭に選び、
+    ロード→タイムアウト→アンロードを繰り返すだけで他の健全な候補へ
+    進めない（2026-08-09発見の残存リスク）。
+    """
+    _reset_flags()
+
+    class TimeoutThenSucceedSession:
+        def __init__(self):
+            self.unload_calls = []
+            self.chat_calls = []
+
+        def get(self, url="", *_args, **_kwargs):
+            if "/api/ps" in str(url):
+                return DummyResponse(status_code=200, payload={"models": []})
+            return DummyResponse(
+                status_code=200,
+                payload={"data": [{"id": "model-a"}, {"id": "model-b"}]},
+            )
+
+        def post(self, url="", *_args, **kwargs):
+            if "/api/generate" in str(url):
+                body = kwargs.get("json", {})
+                if body.get("keep_alive") == 0:
+                    self.unload_calls.append(body.get("model"))
+                return DummyResponse()
+            model = kwargs["json"]["model"]
+            self.chat_calls.append(model)
+            if model == "model-a":
+                raise TimeoutError("read timed out")
+            return DummyResponse(status_code=200)
+
+    session = TimeoutThenSucceedSession()
+    monkeypatch.setattr(llm_insights_api, "_SESSION", session)
+    monkeypatch.setenv("OLLAMA_MODEL", "model-a")
+
+    res = llm_insights_api.post_ollama({}, timeout=1, retries=1)
+
+    assert res.status_code == 200
+    assert session.chat_calls == ["model-a", "model-b"]
+    assert "model-a" in llm_insights_api._FAILED_MODELS
+
+
+def test_pick_model_candidates_respects_exclude_env(monkeypatch):
+    """OLLAMA_EXCLUDE_MODELS指定モデルは自動収集の候補から除外される。
+
+    VRAMに収まらないと判明済みの巨大モデル（例: qwen3:30b-a3b）が
+    「全モデル総当たり」に混入すると、ロード→タイムアウト→アンロードの
+    ムダな周回でRAM/VRAM圧迫のリスクを再現しうるため、既知の除外先を
+    明示指定できるようにする。
+    """
+    _reset_flags()
+    monkeypatch.setattr(
+        llm_insights_api,
+        "_SESSION",
+        DummyModelSession(["gpt-oss:20b", "qwen3:30b-a3b"]),
+    )
+    monkeypatch.setenv("OLLAMA_MODEL", "gpt-oss:20b")
+    monkeypatch.setenv("OLLAMA_EXCLUDE_MODELS", "qwen3:30b-a3b")
+
+    candidates = llm_insights_api._pick_model_candidates()
+
+    assert "qwen3:30b-a3b" not in candidates
+    assert candidates == ["gpt-oss:20b"]
+
+
 # 後方互換: post_lmstudio エイリアスが動作すること
 def test_post_lmstudio_alias_works(monkeypatch):
     _reset_flags()

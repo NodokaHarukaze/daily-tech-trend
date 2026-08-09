@@ -31,9 +31,13 @@ _LOAD_ATTEMPTED_MODELS = set()
 
 def _model_settings() -> dict:
     primary = (os.getenv("OLLAMA_MODEL") or DEFAULT_MODEL).strip() or DEFAULT_MODEL
+    exclude = {
+        m.strip() for m in (os.getenv("OLLAMA_EXCLUDE_MODELS") or "").split(",") if m.strip()
+    }
     return {
         "primary": primary,
         "fallback": (os.getenv("OLLAMA_FALLBACK_MODEL") or "").strip(),
+        "exclude": exclude,
     }
 
 
@@ -90,6 +94,7 @@ def _pick_model_candidates(timeout: float = 4.0) -> list[str]:
     cfg = _model_settings()
     requested = cfg["primary"]
     fallback = cfg["fallback"]
+    exclude = cfg["exclude"]
 
     try:
         model_ids = _available_models(timeout=timeout)
@@ -101,9 +106,9 @@ def _pick_model_candidates(timeout: float = 4.0) -> list[str]:
     def _add(mid: str, *, skip_embed_filter: bool = False):
         if not mid or mid in candidates or mid in _FAILED_MODELS:
             return
-        # 自動収集の候補からは埋め込みモデルを除外。
+        # 自動収集の候補からは埋め込みモデル・OLLAMA_EXCLUDE_MODELS指定モデルを除外。
         # ユーザー明示指定（requested / fallback / _SELECTED_MODEL）は尊重して通す。
-        if not skip_embed_filter and _is_embedding_model(mid):
+        if not skip_embed_filter and (_is_embedding_model(mid) or mid in exclude):
             return
         candidates.append(mid)
 
@@ -297,6 +302,13 @@ def post_ollama(
                 return r
             except Exception as e:
                 last_err = e
+                # HTTP 400系と同様、タイムアウト等の例外も_FAILED_MODELSに登録する。
+                # 登録しないと次のリトライ周回で同じ(壊れた/VRAM不足の)モデルを
+                # 再度候補に選んでしまい、ロード→タイムアウト→アンロードを
+                # 繰り返すだけで他の候補へ進めない（2026-08-09 発見の残存リスク）。
+                _FAILED_MODELS.add(model)
+                if _SELECTED_MODEL == model:
+                    _SELECTED_MODEL = None
                 _unload_model(model)
 
         if i < eff_retries:
