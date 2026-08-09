@@ -499,3 +499,33 @@ if target not in candidates:
 **適用条件**: Ollama + gpt-oss系モデルで自由記述の長文（100〜300字程度）をJSON構造化出力させる場合全般。既存の `think: false`（qwen3）・`think: "low"`（gpt-oss, `/api/chat`使用時）の知見の延長で、`/v1/chat/completions`（OpenAI互換）使用時は `reasoning_effort` パラメータを使う
 
 **出典**: daily-tech-trend「立場別200文字サマリー」機能 Phase 1 実装時の実機検証（2026-07-12, 隙間時間有効活用 自律発案セッション）
+
+---
+
+### 夜間パイプラインの所要時間が日ごとに伸びる場合、原因は「GPU の空き VRAM 不足によるモデルの CPU 退避」
+
+**問題**: `run_daily.bat` の所要時間が 8/1 は約40分だったのが 8/2 は約8時間、8/3 は約12.7時間と日を追って悪化し、
+8/4 には RAM 28.8GB を枯渇させて PC が約14時間フリーズした。ログには
+`HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=180)` が大量に出る。
+
+**原因の連鎖**: 他の GPU ジョブ（ComfyUI 常駐 / OneTrainer の LoRA 学習など）が VRAM を占有している
+→ `gpt-oss:20b`（13.9GB）が VRAM 16GB に収まらずレイヤーの大半が CPU 実行に落ちる（`ENVIRONMENT.md` の既知現象）
+→ 1リクエストが 180 秒でも返らずタイムアウト
+→ `post_ollama` が `_pick_model_candidates()` の**全モデル総当たり**で次々に別モデルをロード
+→ 失敗モデルが解放されないまま積み上がり RAM 枯渇 → OS ごとフリーズ
+
+**解決策**:
+1. **実行前に空き VRAM を確認する**。`nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader` で
+   対象モデルのサイズ + コンテキスト分の空きがあることを確かめる。無ければ ComfyUI は
+   `POST http://127.0.0.1:8188/free {"unload_models":true,"free_memory":true}` でプロセスを落とさずに VRAM だけ解放できる（可逆）
+2. **実行中は `/api/ps` の `size` と `size_vram` が一致していることを確認する**。
+   `size=13.9GB / size_vram=13.9GB` なら完全 GPU 常駐で健全。乖離していたら即中断してよい
+3. 失敗モデルの即アンロード（`160f8a0e1` で修正済み）は連鎖を緩和するが万能ではない。
+   `_unload_model()` の POST タイムアウトは 10 秒で、RAM スラッシング中はこのアンロード要求自体が失敗しうる
+4. タイムアウト失敗は `_FAILED_MODELS` に登録されない（HTTP 400 系のみ）ため、同じモデルがリトライで再ロードされる点にも注意
+
+**実測（2026-08-09 再開テスト）**: 空き VRAM 15.3GB / 空き RAM 20.1GB の状態で手動実行したところ、
+`size_vram=13.9GB` の完全 GPU 常駐を維持し、**タイムアウト 0 件・所要 32 分**（09:47:16→10:19:13）で完走した。
+最小空き RAM は 17.29GB で、枯渇の兆候は皆無だった。所要時間そのものが健全性の指標として使える。
+
+**適用条件**: VRAM 16GB のノード（PC1/PC2）で、他の GPU 常駐プロセスと同居しながら Ollama バッチを回す全ケース
