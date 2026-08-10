@@ -238,6 +238,50 @@ def test_post_ollama_registers_timeout_failure_and_tries_next_candidate(monkeypa
     assert "model-a" in llm_insights_api._FAILED_MODELS
 
 
+def test_unload_model_uses_configurable_timeout_default(monkeypatch):
+    """`_unload_model`はハードコードの10秒ではなく、環境変数で調整可能な
+
+    LLM_UNLOAD_TIMEOUT_SEC（既定30秒）をデフォルトタイムアウトに使う。
+    RAMスラッシング中はアンロード要求自体が短いタイムアウトで失敗しうるため
+    (2026-08-10 12:07セッションが残した残存リスク)、他のタイムアウト定数と
+    同じパターンで個別に延長できるようにした。
+    """
+    _reset_flags()
+    calls = []
+
+    class CapturingSession:
+        def get(self, url="", *_args, **_kwargs):
+            return DummyResponse(status_code=200, payload={"models": []})
+
+        def post(self, url="", *_args, **kwargs):
+            calls.append(kwargs.get("timeout"))
+            return DummyResponse()
+
+    monkeypatch.setattr(llm_insights_api, "_SESSION", CapturingSession())
+
+    llm_insights_api._unload_model("model-a")
+
+    assert calls == [llm_insights_api.LLM_UNLOAD_TIMEOUT_SEC]
+    assert llm_insights_api.LLM_UNLOAD_TIMEOUT_SEC == 30
+
+
+def test_unload_model_timeout_override_still_works(monkeypatch):
+    """呼び出し側が明示的にtimeoutを渡した場合は、そちらを優先する（既存動作の維持）。"""
+    _reset_flags()
+    calls = []
+
+    class CapturingSession:
+        def post(self, url="", *_args, **kwargs):
+            calls.append(kwargs.get("timeout"))
+            return DummyResponse()
+
+    monkeypatch.setattr(llm_insights_api, "_SESSION", CapturingSession())
+
+    llm_insights_api._unload_model("model-a", timeout=5.0)
+
+    assert calls == [5.0]
+
+
 def test_pick_model_candidates_respects_exclude_env(monkeypatch):
     """OLLAMA_EXCLUDE_MODELS指定モデルは自動収集の候補から除外される。
 

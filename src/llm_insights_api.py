@@ -17,6 +17,8 @@ _SESSION = requests.Session()
 LLM_LONG_TIMEOUT_SEC = int(os.getenv("LLM_LONG_TIMEOUT_SEC", "120"))
 LLM_SHORT_TIMEOUT_SEC = int(os.getenv("LLM_SHORT_TIMEOUT_SEC", "60"))
 LLM_HEALTH_TIMEOUT_SEC = int(os.getenv("LLM_HEALTH_TIMEOUT_SEC", "4"))
+# RAMスラッシング中はアンロード要求自体が10秒では失敗しうるため、他より長めに個別設定可能にする
+LLM_UNLOAD_TIMEOUT_SEC = int(os.getenv("LLM_UNLOAD_TIMEOUT_SEC", "30"))
 # リトライ戦略: 指数バックオフ（base=1.5）で 3 回まで
 LLM_RETRY_COUNT = int(os.getenv("LLM_RETRY_COUNT", "2"))
 LLM_RETRY_BASE_SEC = float(os.getenv("LLM_RETRY_BASE_SEC", "1.0"))
@@ -182,7 +184,7 @@ def _get_running_models(timeout: float = 4.0) -> list[str]:
         return []
 
 
-def _unload_model(model: str, timeout: float = 10.0) -> None:
+def _unload_model(model: str, timeout: float = LLM_UNLOAD_TIMEOUT_SEC) -> None:
     """指定モデルをOllamaからアンロードする"""
     try:
         _SESSION.post(
