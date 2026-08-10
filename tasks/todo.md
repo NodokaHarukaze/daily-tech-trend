@@ -945,3 +945,33 @@ queue.mdの本案件エントリ（状態: 進行中）を確認したところ�
 ### 次回やること
 - `OLLAMA_EXCLUDE_MODELS`を実際に`run_daily.bat`で設定するか判断する（ユーザー、または日中/監視可能なセッション）
 - 上記「残存リスク」「別件」に残る3項目（`_unload_model`タイムアウト・VRAMプリフライト・Watchdogタスク）は未着手のまま
+
+## 2026-08-10 12:07 自律発案: VRAMプリフライトチェックの実装（`run_daily.bat`への組み込みは見送り）
+
+### 背景
+`隙間時間有効活用\tasks\candidate_pool.md`の「未着手・着手可能な候補」にあった「VRAMプリフライトチェックの実装検討」に着手。上記「残存リスク」節の恒久対策候補（`run_daily.bat`冒頭で空きVRAM確認）をコードとして実装した。
+
+### やったこと
+- `src/vram_preflight.py`を新規作成: `get_free_vram_mb()`（`nvidia-smi --query-gpu=memory.free`で取得、非搭載機はNoneでfail-open）、`try_free_ollama_models()`（`/api/ps`でロード中モデルを列挙し`keep_alive=0`で即時アンロード、ベストエフォート）、`check_preflight(min_free_mb, ...)`（不足時はアンロードを試み再判定）、CLI(`main()`、exit 0=実行可/1=不足)を実装
+- 既定閾値`DEFAULT_MIN_FREE_MB=14000`は`gpt-oss:20b`のVRAM常駐実測(13.9GB、上記2026-08-09 10:19節)に余裕を加えた値
+- `tests/test_vram_preflight.py`新規16件（nvidia-smi成功/非搭載/異常終了/不正出力、アンロード成功/接続失敗/個別失敗耐性、preflight判定の各分岐、CLI）追加。`pytest tests/ -q`で255件全pass（既存239+新規16）
+- 実機(PC2, GPUアイドル・空きVRAM 15170MB)でCLI実行し、閾値14000MBでは`exit 0`、閾値999999MBでは`exit 1`（Ollamaに現在ロード中モデル無しのため即NG）と、想定通りの分岐を確認
+- `git add`+コミット（push無し）
+
+### あえてやらなかったこと
+- **`run_daily.bat`（`C:\work\run_daily.bat`、daily-tech-trendのgit管理外・本番の生きた無人パイプライン）への実際の組み込みは行っていない**。候補プールの記載通り「本番の無人パイプラインに触れるため、テスト・ドライラン必須で通常以上の慎重さが必要」な変更であり、`OLLAMA_EXCLUDE_MODELS`（2026-08-09 11:07節）と同じ理由（監視なしでの本番起動設定変更はリスクが見合わない）で、実配線の判断はユーザーまたは監視可能なセッションに委ねる
+- 実配線する場合の組み込み案（`(A) Precheck disabled`セクション、collectの直前に追加する想定）:
+  ```bat
+  set "LASTSTEP=vram_preflight"
+  py -3.11 -u "%ROOT%\src\vram_preflight.py" --min-free-mb 14000 >> "%LOG%" 2>&1
+  if not "!ERRORLEVEL!"=="0" (
+    echo [SKIP] insufficient VRAM, skip run >> "%LOG%"
+    exit /b 0
+  )
+  ```
+  正常終了(`exit /b 0`)扱いでスキップする設計は、2026-08-09 10:19節の教訓「PAUSE時のexit /b 0はタスクスケジューラ上成功に見えて監視の盲点になる」と同じ死角を持つため、実配線時はログの`[SKIP]`行を監視するか、専用の通知を追加することを推奨する
+- system RAM枯渇（事故の実測値は28.8GB）そのものの直接チェックは実装していない（候補プール記載のスコープが「VRAM」だったため）。GPU VRAMが十分な状態を保てればOllamaがCPUオフロードに頼らずRAM消費が抑えられる想定だが、厳密な再発防止にはRAM側の空き容量チェックも将来的に検討の余地がある
+
+### 次回やること
+- 実配線の承認判断（ユーザー、または日中/監視可能なセッション）
+- 上記の他、`_unload_model`タイムアウト延長・Watchdogタスクの扱い・`OLLAMA_EXCLUDE_MODELS`実運用判断は未着手のまま
