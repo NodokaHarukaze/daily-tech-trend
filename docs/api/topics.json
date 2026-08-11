@@ -1,7 +1,343 @@
 {
-  "generated_at": "2026-08-10T21:54:05+00:00",
+  "generated_at": "2026-08-11T00:46:34+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 39526,
+      "title": "【地震】熊本・八代市 芦北町で震度3 津波心配なし（7:59）",
+      "category": "news",
+      "importance": 70,
+      "summary": "【地震】熊本・八代市芦北町で被害3 津波心配なし（7:59）",
+      "updated_at": "2026-08-11T00:36:55.372305+00:00"
+    },
+    {
+      "id": 39494,
+      "title": "米国、中国の支配を打破するためにオーストラリアのスカンジウム採掘業者に4億ドルを賭ける",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-11T00:35:35.917803+00:00"
+    },
+    {
+      "id": 39414,
+      "title": "トランプ大統領、小児ワクチンの制限とMMR接種の分割命令に署名",
+      "category": "news",
+      "importance": 54,
+      "summary": "トランプ大統領、小児ワクチンの制限とMMR接種の分割命令に署名",
+      "updated_at": "2026-08-11T00:34:52.852730+00:00"
+    },
+    {
+      "id": 39436,
+      "title": "東京メトロ半蔵門線 運転見合わせ 渋谷ー九段下",
+      "category": "news",
+      "importance": 10,
+      "summary": "東京メトロ半蔵門線は、午前8時半現在、半蔵門駅での駅構内点検のため渋谷駅と九段下駅の間で運転を見合わせている。",
+      "updated_at": "2026-08-11T00:34:11.465643+00:00"
+    },
+    {
+      "id": 39562,
+      "title": "ホルムズショックはまだ終わっていない",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-11T00:32:53.736442+00:00"
+    },
+    {
+      "id": 39522,
+      "title": "カナダ便、子供がシートベルト着用拒否で欠航",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39523,
+      "title": "売上金保管指示「許せない」　「明るく、責任感の強い子」―イオン爆発犠牲の大竹玖瑠美さん親族・熊本地震",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39524,
+      "title": "熊本地震から2週間 依然 活発な活動 最大震度5弱以上に注意",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39525,
+      "title": "アメリカ大統領「イランに補償求める」イランは重要ポスト交代",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39527,
+      "title": "親が子にAIを使える理由は「勉強に使える」ではなく「うちの子だけは遅れさせたくない」？ 2000人を調査",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39528,
+      "title": "ザッカーバーグCEO、超知能の集中化に警鐘 「単一の善意ある超知能は存在しない」とオープンモデル公開再開へ",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39529,
+      "title": "デジ庁が個人情報漏えいを公表　「対象者を絞る」だけの処理はなぜ失敗した？",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39530,
+      "title": "「第27期東京都自然環境保全審議会計画部会」開催のお知らせ",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39532,
+      "title": "オウムにならないでください",
+      "category": "smart_factory",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39533,
+      "title": "シュナイダーはビルフィンガーの無人洋上ブイの 1,000 時間の自律走行を支援",
+      "category": "smart_factory",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39534,
+      "title": "炉制御ソリューションの実践的な理解",
+      "category": "smart_factory",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39537,
+      "title": "ヴァージン アトランティック航空、ChatGPT Work でカスタマー ジャーニーを強化",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39538,
+      "title": "Zapier が ChatGPT Work を使用して中核的なマーケティング プロセスをどのように変革したか",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39539,
+      "title": "ChatGPT Business にプレミアム シートが登場",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39540,
+      "title": "英国P&Iクラブ、シニア引受ディレクターにキム・ジョンスク氏を任命",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39541,
+      "title": "アマゾン川の水位低下：2026 年の乾季に航行リスクが増大",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39542,
+      "title": "バルト海の乾燥指数は9週間の高値から低下",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39543,
+      "title": "海峡が再開したらどうなるでしょうか？注意すべき重要な要素",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39544,
+      "title": "バングラデシュの船舶リサイクル市場が圧迫される中、インドが勢いを増す",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39545,
+      "title": "従来の船舶用コーティングは、ハイドロジェット処理後の腐食防止に苦労しています",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39546,
+      "title": "寧波コンテナ貨物指数レポート、2026 年 8 月 7 日",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39547,
+      "title": "新しいオイル状態アナライザーはエンジン最適化の結果を即座に提供します",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39548,
+      "title": "d’AMICO International Shipping S.A.、マウント・ハイ・ディスカバリーでの購入オプションの行使を発表",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39549,
+      "title": "持続可能な燃料サプライチェーンに対する信頼の構築",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39550,
+      "title": "HMM、インド～東アフリカ間の新路線で世界展開を拡大",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39551,
+      "title": "Xclusiv Shipbrokers Weekly 2026 年 8 月 10 日",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39552,
+      "title": "MEPC 85: ツバルは、より高いコンプライアンスコストを伴うより厳格なネットゼロルールを提案",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39553,
+      "title": "2026 年の海上保険: 変化する経営環境における補償プロセス",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39554,
+      "title": "ウクライナ、一部のタンカーと黒海の石油インフラを標的にしないことで合意",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39555,
+      "title": "バイオ燃料バンカーのスナップショット: 原料の利益がロッテルダム B30 の価格下落を和らげる",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39556,
+      "title": "偽旗と不正レジストリ: 世界的な輸送に対する隠れた脅威",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39557,
+      "title": "2026年のピークシーズンの出荷では需要が依然として変動要因であることがソゲセレポートで判明",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39558,
+      "title": "LNG輸送は先週軟調",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39559,
+      "title": "鉄鋼需要の鈍化を受けて中国の港湾在庫はさらに上昇",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39560,
+      "title": "冬季需要のピークを前に世界的なディーゼル需要が悪化",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39561,
+      "title": "コロンビア、4年間にわたる再生可能エネルギー推進の後、石油とガスを復活させる",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
+    {
+      "id": 39570,
+      "title": "エージェント型モバイルアプリ開発のための開発者デバイスプラットフォームの紹介",
+      "category": "system",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T00:16:13.604364+00:00"
+    },
     {
       "id": 39437,
       "title": "コロンビアでM7.4の地震 111人死亡 87人けが各地で建物被害",
@@ -35,28 +371,12 @@
       "updated_at": "2026-08-10T21:35:42.042435+00:00"
     },
     {
-      "id": 39436,
-      "title": "東京メトロ半蔵門線 運転見合わせ 渋谷ー九段下",
-      "category": "news",
-      "importance": 70,
-      "summary": "東京メトロ半蔵門線 運転見合わせ 渋谷ー九段下",
-      "updated_at": "2026-08-10T21:35:12.948699+00:00"
-    },
-    {
       "id": 39463,
       "title": "エンタープライズ産業オートメーションのベスト プラクティスの拡張",
       "category": "manufacturing",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
       "updated_at": "2026-08-10T21:34:44.349985+00:00"
-    },
-    {
-      "id": 39414,
-      "title": "トランプ大統領、小児ワクチンの制限とMMR接種の分割命令に署名",
-      "category": "news",
-      "importance": 54,
-      "summary": "トランプ大統領、小児ワクチンの制限とMMR接種の分割命令に署名",
-      "updated_at": "2026-08-10T21:34:15.226132+00:00"
     },
     {
       "id": 39439,
@@ -478,326 +798,6 @@
       "id": 39468,
       "title": "ティッセンクルップの流通部門を分社化、従来の倉庫業の枠を超えて推進",
       "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39469,
-      "title": "ニュージーランドが電気炉を稼働させ、国家排出量の1%を削減",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39472,
-      "title": "Meta が Muse Glimmer とともに戻ってきました: ローカル、エージェント、マルチモーダル、オープンソース",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39473,
-      "title": "知識の蒸留を大規模に実行できるほど安価にする",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39474,
-      "title": "低遅延の多言語音声エージェントの構築: NVIDIA Magpie TTS によるオープン ウェイトと完全な展開制御",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39475,
-      "title": "nOps が Amazon Bedrock AgentCore を使用して FinOps エージェントを 75% 高速に出荷した方法",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39476,
-      "title": "SageMaker AI を使用して Amazon EKS でインタラクティブ IDE を実行し、AI ワークフローを強化します",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39477,
-      "title": "最先端のサイバーモデルをより信頼できる手に委ねる",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39478,
-      "title": "サイバー防御の枠が狭まる中、Daybreak を拡大",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39479,
-      "title": "AI ネイティブの財務機能の構築で学んだこと",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39480,
-      "title": "Model ML は GPT-5.6 Sol を使用して財務業務をより効率的に完了します",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39481,
-      "title": "テキサス州の責任ある AI インフラストラクチャに関する OpenAI のアボット知事への書簡",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39482,
-      "title": "SSY アトランティック ケープサイズ インデックス 2026 年 8 月 7 日",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39483,
-      "title": "Rates Spark：米国CPIを前に地政学が焦点",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39484,
-      "title": "中国のリフレ傾向は勢いを失いつつあるのか？",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39485,
-      "title": "FX Daily: テストは 1 つ終了、残り 4 つ",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39486,
-      "title": "ホルムズ島再開への疑念が高まる中、米国株先物はまちまち。タップ時の CPI データ",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39487,
-      "title": "ホルムズ情勢の不確実性とフーシ派の攻撃で供給リスクが高まる中、原油価格は上昇",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39488,
-      "title": "コモディティ飼料：供給リスクが続く中、原油高",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39489,
-      "title": "議会がカリフォルニア州の運送免除を無効にする動き、港湾コミュニティと企業がその影響を被ることになる",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39490,
-      "title": "バルト海乾燥指数は6ポイント低下の3083に低下",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39491,
-      "title": "MMI 日次鉄鉱石指数レポート 2026 年 8 月 10 日",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39492,
-      "title": "ドローン攻撃で黒海石油輸出が圧迫されるなか、カザフスタンが新たな航路を検討",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39493,
-      "title": "熱波はEUにGDPの1%の損失をもたらす可能性があるとオランダ銀行が発表",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39494,
-      "title": "米国、中国の支配を打破するためにオーストラリアのスカンジウム採掘業者に4億ドルを賭ける",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39495,
-      "title": "COTデータが示すように、石油強気の見方は2週連続で縮小",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39496,
-      "title": "インドの精製会社、8月にLPGロスを削減",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39497,
-      "title": "ウクライナの無人機戦争で中央アジアに対するロシアの燃料支配が崩壊",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39498,
-      "title": "ロシア、イランのブーシェフル工場で原子力職員を再構築",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39499,
-      "title": "トランプ大統領、米国の石油輸出を制限するよう圧力強まる",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39500,
-      "title": "エジプトとリビア、10億ドルの石油パイプライン契約に近づく",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39501,
-      "title": "イランが強硬な最後通告から数日後に治安長官を更迭した理由",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39502,
-      "title": "BofA：ホルムズには石油市場を安定させるために10倍以上の船舶が必要",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39503,
-      "title": "ホルムズ危機はエネルギー安全保障の経済学を永遠に変えた",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39504,
-      "title": "アメリカの40億ドル規模の風力発電計画は恒久的に安価なガスへの賭けである",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39513,
-      "title": "JVN: LINE PC版（Windows版）のインストーラにおけるDLL読み込みに関する脆弱性",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39516,
-      "title": "#StopRansomware: Gunra ランサムウェア",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39517,
-      "title": "GKE の ClusterNetworkPolicy: マイクロサービスの制御と自律性のバランスをとる",
-      "category": "system",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39518,
-      "title": "Google が The Forrester Wave™: AI プラットフォーム、2026 年第 3 四半期のリーダーに選出",
-      "category": "system",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39519,
-      "title": "Malachyte がマネージド型リアルタイム AI で小売業のコールドスタート問題を解決する方法",
-      "category": "system",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39520,
-      "title": "WPP が AI マーケティングのためのプラットフォームとデータ エンジニアリングをどのように運用するか",
-      "category": "system",
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-10T21:16:09.891643+00:00"
