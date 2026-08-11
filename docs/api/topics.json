@@ -1,7 +1,135 @@
 {
-  "generated_at": "2026-08-11T00:46:34+00:00",
+  "generated_at": "2026-08-11T03:53:43+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 39571,
+      "title": "オーストラリアのビーチで座礁したクジラを少女が発見",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39572,
+      "title": "見る: 強烈な地震がコロンビアを震撼させ、建物を崩壊させる瞬間",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39573,
+      "title": "偽の花嫁に騙される孤独な中国人男性",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39574,
+      "title": "WNBAを巡るトランスジェンダー論争",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39575,
+      "title": "Nvidia、AIインフラ開発のために大手投資家から5,000億ドルを調達",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39576,
+      "title": "コロンビア、ここ数年で最大規模の地震で少なくとも132人死亡",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39577,
+      "title": "街は混乱、救助隊待つ住民　「家がシーツの上で跳ねているよう」―コロンビア",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39578,
+      "title": "【インプレスより】この節税対策、大丈夫ですか？ 贈与の「疑問」を家族で話し合おう!",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39579,
+      "title": "「海外旅行保険はクレカでOK」時代は終わった？　「利用付帯」は旅行前の注意を",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39580,
+      "title": "YouTube、収益化参加基準をもとに365日間で8000時間再生など",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39581,
+      "title": "ロシア中部にウクライナが無人機攻撃 13人死亡",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39582,
+      "title": "YouTube、収益化基準を2027年に大幅にへ 新規参加条件が従来の2倍に",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39584,
+      "title": "専門家のアドバイスに基づいて、安全性と危険からの保護を向上させます",
+      "category": "quality",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39585,
+      "title": "カザフスタン：アクソランでのタングステン採掘が2028年に開始",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39586,
+      "title": "アゼルバイジャン：2026年1月から7月にかけてトルコからの鉄金属輸入量が減少",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
+    {
+      "id": 39587,
+      "title": "ジャールカンド州の製鉄所の爆発でラムガルの労働者9人が負傷",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-11T03:16:01.715329+00:00"
+    },
     {
       "id": 39526,
       "title": "【地震】熊本・八代市 芦北町で震度3 津波心配なし（7:59）",
@@ -670,134 +798,6 @@
       "id": 39449,
       "title": "「第27期東京都自然環境保全審議会鳥獣部会」開催のお知らせ",
       "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39450,
-      "title": "誰もがより住みやすく、活躍できる共生社会の実現　令和8年度第1回多文化共生推進委員会開催",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39451,
-      "title": "令和8年度新規事業　原則無料で大型自動車第二種免許の取得から就職までを支援　バス運転手育成委託訓練の受講者を募集します",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39452,
-      "title": "「あまみずグリーンインフラCONCEPT BOOK Ver.2」の発表について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39453,
-      "title": "令和8年熊本地震への都の対応（第20報）（乳児用液体ミルクの提供について）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39454,
-      "title": "自治体標準オープンデータセット定義書一覧およびデータセットのサンプルを更新しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39455,
-      "title": "第2回U18 AIチャンピオンシップデジタルにおいて、大臣奨励賞を贈呈しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39457,
-      "title": "ABB がギアレスミルドライブをデジタル化するための Grinding Connect サービスを開始",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39458,
-      "title": "フローセンサーは、データセンターが圧力下でも冷却を保つのに役立ちます",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39459,
-      "title": "IMI、韓国のコンバインドサイクルプラントのバルブの信頼性を向上",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39460,
-      "title": "ハネウェルの Experion Cognition の概要",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39461,
-      "title": "最高級のコスト効率の高い火炎検出",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39462,
-      "title": "シュナイダーエレクトリックのモーター制御はワイドミュラーのコネクタを使用して配線時間を 75% 節約します",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39465,
-      "title": "夏の景気減速でヨーロッパ諸国のコイル価格は抑制される",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39466,
-      "title": "ティッセンクルップ、材料部門を名称変更して存続させる",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39467,
-      "title": "欧州コイルとグリーンスチールの総まとめ：欧州市場は強気ムードで休日の一時停止を継続",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-10T21:16:09.891643+00:00"
-    },
-    {
-      "id": 39468,
-      "title": "ティッセンクルップの流通部門を分社化、従来の倉庫業の枠を超えて推進",
-      "category": "manufacturing",
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-10T21:16:09.891643+00:00"
