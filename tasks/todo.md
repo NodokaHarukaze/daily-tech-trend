@@ -994,3 +994,96 @@ queue.mdの本案件エントリ（状態: 進行中）を確認したところ�
 - Watchdogタスク(`Watchdog Daily Tech Trend`)の復活/削除判断は未着手のまま（ユーザー判断待ち）
 - `OLLAMA_EXCLUDE_MODELS`実運用判断・VRAMプリフライトの`run_daily.bat`実配線判断も引き続きユーザー/監視可能なセッション待ち
 - これで「残存リスク」節の3項目は全てコード対応済み。残る論点は全て「本番設定の有効化判断」のみ（ユーザー判断待ち）
+
+---
+
+# パイプライン更新効率化（2026-08-13）
+
+## 背景（実測）
+1回の実行 38分 / 1日6回（6,9,12,15,18,21時）= 1日3.8時間。
+`logs/run_20260813_150002.log` および本番DBコピーでのプロファイル結果:
+
+| ステップ | 実測 | 備考 |
+|---|---:|---|
+| collect | 44s | 正常 |
+| normalize | 10s | 正常 |
+| dedupe | 847s | 全32,319件を毎回総当たり。削除は43件のみ |
+| thread | 855s | うち491sが `mark_news_representative_articles` |
+| translate | 41s | 正常 |
+| LLM(rescue) | 300s | 毎回 max_sec で打ち切り |
+| render | 15s | 正常 |
+| その他 | ~170s | backfill/forecast/exec/push |
+
+dedupe + thread = 1702s = 全体の74%。
+
+## 根本原因
+1. `thread.py:78` `mark_news_representative_articles`
+   CTE `ranked` を相関サブクエリ `EXISTS(...)` 内で参照 → SQLiteが対象行ごとに
+   ウィンドウ関数クエリを再計算。実測491s。（edges再構築は実測0.03sで無関係）
+2. `dedupe.py`
+   純Pythonの `SequenceMatcher` を874万回呼ぶ（実測換算514s）。
+   判定済みの過去記事3万件を毎回再判定しており、新規は1日314件のみ＝99%が無駄。
+3. LLM未生成トピック 16,655件。300s×6回=30分/日では消化不能。
+
+## 方針（ユーザー承認済み 2026-08-13）
+- 範囲: 高速化 + スケジュール再設計
+- 制約: **既存の判定結果と完全一致を維持**（検証必須）
+
+### 設計判断: rapidfuzz置換は採用しない
+`difflib.SequenceMatcher`(Ratcliff/Obershelp) と `rapidfuzz.fuzz.ratio`(Indel距離ベース)は
+計算式が異なり同値を返さない。「完全一致維持」と両立しないため、
+**増分化のみ**で高速化する。比較回数が874万→数万に落ちるためSequenceMatcherのままで足りる。
+
+## タスク
+
+### Phase 1: thread.py の1クエリ書き換え … 完了
+- [x] `mark_news_representative_articles` を一時テーブル経由の2段UPDATEに書き換え
+- [x] 本番DBコピーで旧実装/新実装の `is_representative` 全行一致を検証
+      → **32,319行 完全一致**（`is_representative=1` は 15,870行で内訳も一致）
+      → **592.06s → 0.21s（2,768倍）**
+      （旧592sはdedupe検証との並行実行によるもの。単独実測は491s）
+- [x] `pytest tests/` 全pass（257件）
+
+### Phase 2: dedupe.py の増分化 … 完了
+- [x] `articles.dedupe_checked INTEGER DEFAULT 0` を `ensure_column` で追加
+- [x] 判定済み記事は「候補インデックスへの登録」のみ行い、類似比較をスキップ
+      （exact URL判定は安価なので従来通り実施し、取りこぼしを防ぐ）
+- [x] 判定した記事に `dedupe_checked=1` を立てる
+- [x] 本番DBコピーで旧実装/新実装の削除article_id集合と dedupe_judgments 一致を検証
+      → 残存article_id **完全一致**、dedupe_judgments **18,115行 完全一致**
+      → 定常状態 **598.8s → 0.87s（691倍）**
+- [x] `pytest tests/` 全pass（257件）
+
+**注意: 新コードでの初回実行のみ、全記事に判定済みフラグを立てるため
+従来通り約9分かかる（実測517s）。2回目以降が0.87s。**
+
+### Phase 3: LLM予算の拡大（本番設定変更・ユーザー承認済み 2026-08-13）
+浮いた28分をLLM insight生成に回す。light/full分離は今回は採用せず、
+`LLM_MAX_SEC` の引き上げのみという最小変更を選択（案は
+`scratchpad/run_daily_proposed.bat` に保存済み。将来必要になれば流用可）。
+
+判断根拠（DB実測）: 新規トピック数に対し insight 生成が慢性的に1/3しかなく、
+未生成16,655件は「古い取りこぼし」ではなく毎日積み上がる赤字だった。
+
+| 日付 | 新規topic | insight生成 |
+|---|---:|---:|
+| 08-13 | 154 | 60 |
+| 08-12 | 227 | 85 |
+| 08-11 | 169 | 53 |
+| 08-10 | 257 | 50 |
+| 08-09 | 454 | 94 |
+
+- [ ] `C:\work\run_daily.bat` に `LLM_MAX_SEC=1200` を追加（変更前にバックアップ）
+- [ ] タスクスケジューラは6回のまま据え置き（再登録不要）
+- [ ] 次回実行のログで所要時間と insight 生成数を確認
+
+### 検証手順
+1. 本番DBを scratchpad にコピー
+2. 旧実装（git stash / 別コピー）と新実装をそれぞれコピーDBに対して実行
+3. 出力テーブルを全行比較して一致を確認
+4. `pytest tests/` 全pass
+5. 実際の1回実行で所要時間を実測し、38分→目標10分以内を確認
+
+## 目標
+1回 38分 → 10分以内。1日3.8時間 → 1時間以内。
+浮いた時間をLLM insight のバックログ消化に回す。

@@ -76,9 +76,19 @@ def ensure_topic_articles_columns(cur):
 
 
 def mark_news_representative_articles(cur):
+    """news トピックごとの代表記事に is_representative=1 を立てる。
+
+    以前は CTE `ranked` を相関サブクエリ `EXISTS(...)` の中から参照していたが、
+    SQLite が CTE をマテリアライズせず対象行ごとにウィンドウ関数クエリを
+    再計算するため、実測で約490秒かかっていた。
+    代表記事を一時テーブルへ一度だけ確定させ、UPDATE 2本に分けることで解消する。
+    判定結果（どの行に1が立つか）は従来と同一。
+    """
+    cur.execute("DROP TABLE IF EXISTS temp._news_rep")
     cur.execute(
         """
-        WITH ranked AS (
+        CREATE TEMP TABLE _news_rep AS
+        SELECT topic_id, article_id FROM (
           SELECT
             ta.topic_id,
             ta.article_id,
@@ -94,19 +104,34 @@ def mark_news_representative_articles(cur):
           JOIN articles a ON a.id = ta.article_id
           WHERE COALESCE(t.kind,'')='news'
         )
+        WHERE rn = 1
+        """
+    )
+    cur.execute(
+        "CREATE UNIQUE INDEX temp.idx__news_rep ON _news_rep(topic_id, article_id)"
+    )
+
+    # まず news トピック配下を一旦 0 に落としてから、代表行だけ 1 を立てる
+    cur.execute(
+        """
         UPDATE topic_articles
-        SET is_representative = CASE
-          WHEN EXISTS (
-            SELECT 1 FROM ranked r
-            WHERE r.topic_id = topic_articles.topic_id
-              AND r.article_id = topic_articles.article_id
-              AND r.rn = 1
-          ) THEN 1
-          ELSE 0
-        END
+        SET is_representative = 0
         WHERE topic_id IN (SELECT id FROM topics WHERE COALESCE(kind,'')='news')
         """
     )
+    cur.execute(
+        """
+        UPDATE topic_articles
+        SET is_representative = 1
+        WHERE topic_id IN (SELECT id FROM topics WHERE COALESCE(kind,'')='news')
+          AND EXISTS (
+            SELECT 1 FROM _news_rep r
+            WHERE r.topic_id = topic_articles.topic_id
+              AND r.article_id = topic_articles.article_id
+          )
+        """
+    )
+    cur.execute("DROP TABLE temp._news_rep")
 
 def main():
     import time as _time

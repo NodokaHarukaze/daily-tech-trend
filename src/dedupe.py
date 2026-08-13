@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 from difflib import SequenceMatcher
 
-from db import connect
+from db import connect, ensure_column
 
 # カテゴリ別に重複判定しきい値を調整
 # 値が低いほど「重複」と判定されやすい。
@@ -227,8 +227,13 @@ def main():
     conn = connect()
     cur = conn.cursor()
     ensure_dedupe_log_table(cur)
+    # 判定済みフラグ。既に「残す」と判定された記事を毎回再判定しないための増分化用
+    ensure_column(cur, "articles", "dedupe_checked", "INTEGER DEFAULT 0")
 
-    cur.execute("SELECT id, source, category, title, url, url_norm FROM articles ORDER BY id DESC")
+    cur.execute(
+        "SELECT id, source, category, title, url, url_norm, COALESCE(dedupe_checked,0) "
+        "FROM articles ORDER BY id DESC"
+    )
     rows = cur.fetchall()
 
     seen_by_category: Dict[str, list[dict]] = {}
@@ -236,8 +241,9 @@ def main():
     seen_by_norm_url: Dict[str, dict] = {}
     deleted = 0
     candidate_checked = 0
+    judged_ids: list[int] = []
 
-    for idx, (i, source, category, title, url, url_norm) in enumerate(rows, start=1):
+    for idx, (i, source, category, title, url, url_norm, already_checked) in enumerate(rows, start=1):
         cat_key = (category or "").strip().lower() or "default"
         norm_title = normalize_title(title)
         norm_url = normalize_url(url_norm or url)
@@ -274,20 +280,28 @@ def main():
         title_token_count = len(title_tokens)
 
         blocking_keys = _blocking_keys(norm_title)
-        blocked_candidates: list[dict] = []
-        seen_ids: set[int] = set()
-        for bk in blocking_keys:
-            for kept in reversed(category_block.get(bk, [])[-block_window:]):
-                kept_id = kept["id"]
-                if kept_id in seen_ids:
-                    continue
-                seen_ids.add(kept_id)
-                blocked_candidates.append(kept)
 
-        if blocked_candidates:
-            candidate_slice = blocked_candidates
+        if already_checked:
+            # 前回までの実行で「残す」と判定済みの記事は再判定しない。
+            # 候補プール（カテゴリ／ブロック／URL索引）への登録だけを行い、
+            # 後続の新規記事が従来と同一の候補集合と比較できる状態を保つ。
+            # 候補を空にすることで下の for/else が必ず else（＝残す）へ抜ける。
+            candidate_slice: list[dict] = []
         else:
-            candidate_slice = list(reversed(category_seen[-category_window:]))
+            blocked_candidates: list[dict] = []
+            seen_ids: set[int] = set()
+            for bk in blocking_keys:
+                for kept in reversed(category_block.get(bk, [])[-block_window:]):
+                    kept_id = kept["id"]
+                    if kept_id in seen_ids:
+                        continue
+                    seen_ids.add(kept_id)
+                    blocked_candidates.append(kept)
+
+            if blocked_candidates:
+                candidate_slice = blocked_candidates
+            else:
+                candidate_slice = list(reversed(category_seen[-category_window:]))
 
         for kept in candidate_slice:
             candidate_checked += 1
@@ -350,11 +364,21 @@ def main():
             if norm_url:
                 seen_by_norm_url[norm_url] = kept_entry
 
+            if not already_checked:
+                judged_ids.append(i)
+
         if idx % 500 == 0:
             logger.info(
                 "dedupe progress processed=%d/%d deleted=%d candidate_checked=%d sec=%.1f",
                 idx, len(rows), deleted, candidate_checked, _now_sec() - t0,
             )
+
+    # 今回判定して残した記事に判定済みフラグを立て、次回以降の再判定対象から外す
+    if judged_ids:
+        cur.executemany(
+            "UPDATE articles SET dedupe_checked=1 WHERE id=?",
+            [(x,) for x in judged_ids],
+        )
 
     # 削除した記事に紐づく topic_articles の孤児行を掃除する
     # （残すとトピックが「記事0件のゾンビ」としてページに現れ、タイムラインが空になる）
@@ -371,7 +395,10 @@ def main():
 
     conn.commit()
     conn.close()
-    logger.info("step=dedupe end sec=%.1f deleted=%d total=%d", _now_sec() - t0, deleted, len(rows))
+    logger.info(
+        "step=dedupe end sec=%.1f deleted=%d total=%d judged=%d candidate_checked=%d",
+        _now_sec() - t0, deleted, len(rows), len(judged_ids), candidate_checked,
+    )
 
 
 if __name__ == "__main__":
