@@ -1152,3 +1152,63 @@ Get-ScheduledTaskInfo: LastRunTime=2026/08/13 15:00:01, NumberOfMissedRuns=2
   Set-ScheduledTask -TaskName "Daily Tech Trend" -Trigger $t.Triggers
   ```
 - [ ] 有効化された後、上記「次回セッションで確認すること」節のLLM_MAX_SEC=1200検証（`step=dedupe`所要時間・insight生成数）を実施する
+
+---
+
+## 2026-08-14 rescue の空回り解消（LLM予算の実効化）
+
+### 背景（実測）
+`LLM_MAX_SEC=1200` により1回のLLM処理件数は 22〜27件 → 110〜115件（4.5倍）になったが、
+そのうち約半分が「内容が1文字も変わっていないトピックの再生成」だった。
+
+`llm_insights_local.py:88`（旧）:
+```python
+if (not rescue) and prev_hash and (prev_hash == src_hash):
+    continue
+```
+`--rescue` は設計上ハッシュ比較を無効化していた（help: "Reprocess rows even when
+source hash is unchanged"）。一方 `pick_topic_inputs` の rescue 条件は
+`t.category='news' OR l.kind='news'` で news を無条件に候補へ入れるため、
+news トピックが毎回そのまま作り直されていた。
+
+本番DB実測（limit=120, rescue=True）:
+- 候補 120件 = 未生成59 + 内容変化0 + **内容変化なし61（50%）**
+- 「内容変化あり」は0件。つまり61件は完全な空回り
+
+### 対応
+1. `llm_insights_pipeline.pick_topic_inputs`: 壊れた insight の判定材料として
+   `prev_importance` と `prev_summary_empty` を返すよう追加
+   （summary は本文が長いので空フラグだけを持ち出す）
+2. `llm_insights_local`: `_needs_repair()` を追加し、rescue でも
+   「ハッシュ未変更 かつ 壊れていない」行はスキップ。
+   壊れた insight（importance=0 / 要約が空）は従来通り作り直す
+3. `run_daily.bat`: 候補件数を既定120 → **500** に引き上げ
+   （これをしないと有効候補59件で予算1200秒＝約110件分を使い切れず**逆効果**になる）
+
+### 効果（本番DB実測）
+| limit | 候補 | LLMに投げる | スキップ |
+|---:|---:|---:|---:|
+| 120（旧既定） | 120 | 59 | 61 |
+| **500（新設定）** | 500 | **344**（未生成331+変化13） | 156 |
+
+`pick_topic_inputs` のSQLコストは limit 120/500 とも 0.70秒で差なし。
+スキップ判定コストは 0.00秒。予算1200秒がすべて実のある生成に使われる見込み。
+
+### テスト
+`tests/test_llm_rescue_skip.py` 新規9件（_needs_repair の4分岐、新カラムの返却、
+内容未変更でスキップ／続報で再生成／壊れた行は修復／未生成は常に処理）。
+`pytest tests/` 266件全pass（既存257 + 新規9）。
+
+### 次回確認すること
+- 8/15 06:00 以降のログで:
+  - `[TIME] llm candidates=500 limit=500 rescue=1`
+  - `[TIME] step=llm end sec=... processed=... skipped_unchanged=...`
+    → processed が110件前後、skipped_unchanged が出ていること
+  - `insight未生成トピック総数` の減少ペースが上がったか（8/14時点 16,556件）
+
+### 未対応（指摘のみ）
+- **`--delay` 既定3秒が予算の約27%を消費している**。1件あたり LLM 8秒 + sleep 3秒で、
+  110件なら330秒が待ち時間。0にすれば同じ1200秒で約150件処理できる計算（+36%）。
+  ただし LLM サーバーへの負荷軽減が目的の設定であり、2026-08-04 のRAM枯渇事故の
+  経緯があるため無断では変更していない
+- 18時・21時トリガー無効（1日4回）の有効化はユーザー判断待ちのまま

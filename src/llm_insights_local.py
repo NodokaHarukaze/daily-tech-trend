@@ -37,7 +37,14 @@ def _now_sec():
 def _parse_args(argv: list[str]):
     parser = argparse.ArgumentParser(description="Generate LLM insights for topics")
     parser.add_argument("limit", nargs="?", type=int, default=120, help="Maximum topics to process")
-    parser.add_argument("--rescue", action="store_true", help="Reprocess rows even when source hash is unchanged")
+    parser.add_argument(
+        "--rescue",
+        action="store_true",
+        help=(
+            "Widen the candidate set to include news topics and broken insights. "
+            "Rows whose source hash is unchanged are still skipped unless they need repair."
+        ),
+    )
     parser.add_argument(
         "--max-sec",
         type=int,
@@ -61,6 +68,18 @@ def _row_get(row, key, default=""):
     return default if value is None else value
 
 
+def _needs_repair(row) -> bool:
+    """既存 insight が壊れており、内容が変わっていなくても作り直すべきかを判定する。
+
+    importance が 0 のまま、または要約が空のまま保存されている行は、
+    元記事が更新されていなくても生成し直す価値がある。
+    それ以外は同じ入力から同じ結果を作るだけなので再生成しない。
+    """
+    if int(_row_get(row, "prev_importance", 0) or 0) == 0:
+        return True
+    return bool(int(_row_get(row, "prev_summary_empty", 0) or 0))
+
+
 def main():
     t0 = _now_sec()
     args = _parse_args(sys.argv[1:])
@@ -70,8 +89,11 @@ def main():
     delay = max(0.0, float(args.delay or 0))
 
     conn = connect()
+    skipped_unchanged = 0
+    processed = 0
     try:
         rows = pick_topic_inputs(conn, limit=limit, rescue=rescue)
+        print(f"[TIME] llm candidates={len(rows)} limit={limit} rescue={int(rescue)}")
 
         for r in rows:
             if max_sec and (_now_sec() - t0) >= max_sec:
@@ -84,9 +106,12 @@ def main():
                 body = (r["body"] or "").strip()
                 src_hash = compute_src_hash(title, url, body)
 
+                # 内容ハッシュが前回と同じなら、LLM に投げても同じ結果にしかならない。
+                # rescue でも同様なので一律スキップし、予算を未生成トピックへ回す。
+                # ただし壊れた insight（importance=0 / 要約が空）だけは作り直す。
                 prev_hash = (r["prev_src_hash"] or "").strip()
-                if (not rescue) and prev_hash and (prev_hash == src_hash):
-                    print(f"[SKIP] same src_hash topic_id={topic_id}")
+                if prev_hash and (prev_hash == src_hash) and not _needs_repair(r):
+                    skipped_unchanged += 1
                     continue
 
                 t1 = _now_sec()
@@ -98,6 +123,7 @@ def main():
 
                 upsert_insight(conn, topic_id, ins, r["src_article_id"], src_hash)
                 conn.commit()
+                processed += 1
                 print(f"[OK] insight saved topic_id={topic_id} imp={ins['importance']} cat={r['category']}")
                 if delay > 0:
                     time.sleep(delay)
@@ -113,7 +139,10 @@ def main():
                 continue
     finally:
         conn.close()
-    print(f"[TIME] step=llm end sec={_now_sec() - t0:.1f}")
+    print(
+        f"[TIME] step=llm end sec={_now_sec() - t0:.1f} "
+        f"processed={processed} skipped_unchanged={skipped_unchanged}"
+    )
 
 
 if __name__ == "__main__":

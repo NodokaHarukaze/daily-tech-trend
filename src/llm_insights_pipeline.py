@@ -88,7 +88,11 @@ def pick_topic_inputs(conn, limit=300, rescue=False):
         t.score_48h AS importance_hint,
         COALESCE(NULLIF(l.content,''), NULLIF(l.title_ja,''), NULLIF(l.title,''), '') AS body,
         l.article_id AS src_article_id,
-        ti.src_hash AS prev_src_hash
+        ti.src_hash AS prev_src_hash,
+        -- 内容ハッシュが同じでも作り直す必要がある「壊れた insight」の判定材料。
+        -- summary は本文が長いので、空かどうかのフラグだけを持ち出す。
+        COALESCE(ti.importance, 0) AS prev_importance,
+        CASE WHEN COALESCE(ti.summary, '') = '' THEN 1 ELSE 0 END AS prev_summary_empty
       FROM topics t
       JOIN latest l ON l.topic_id = t.id AND l.rn = 1
       LEFT JOIN topic_insights ti ON ti.topic_id = t.id
@@ -105,7 +109,8 @@ def pick_topic_inputs(conn, limit=300, rescue=False):
     )
     SELECT
       topic_id, topic_title, category, kind, source, url,
-      published_at, importance_hint, body, src_article_id, prev_src_hash
+      published_at, importance_hint, body, src_article_id, prev_src_hash,
+      prev_importance, prev_summary_empty
     FROM (
       SELECT
         pending.*,
