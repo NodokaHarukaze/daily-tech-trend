@@ -31,13 +31,15 @@ dl dd{margin:.2rem 0 .5rem 1rem}
 <body>
 <nav><a href="../">&larr; Top</a></nav>
 <h1>セキュリティ エグゼクティブサマリー</h1>
-<p class="meta">直近7日の記事 20 件を対象 · 生成: 2026-08-14 15:23</p>
-<section class="exec-item"><h2>1. Metabase SQLインジェクション脆弱性（CVE-2026-72898）</h2><dl><dt>何が起きているか</dt><dd>MetabaseのSQLインジェクション脆弱性が公開され、攻撃者がデータベースに不正アクセスできる可能性がある。</dd><dt>事業への影響</dt><dd>社内外のデータベースに対する機密情報漏洩リスクが急増。顧客データや業務情報が外部に流出し、信頼失墜・法的制裁の可能性がある。</dd><dt>推奨行動</dt><dd>既定のパッチ適用を直ちに実施し、脆弱性スキャンを定期的に実行。社内の開発・運用チームに対し、SQLインジェクション対策の教育を徹底。</dd></dl></section>
-<section class="exec-item"><h2>2. OpenAI Ultrafastモード（GPT-5.6 Sol）の高速化</h2><dl><dt>何が起きているか</dt><dd>OpenAIが標準処理より最大14倍高速に動作するUltrafastモードを限定プレビューで提供開始。</dd><dt>事業への影響</dt><dd>AIベースのサービスや業務自動化の応答速度が大幅に向上し、顧客体験の改善・競争優位性の獲得が期待できる。</dd><dt>推奨行動</dt><dd>社内でUltrafastモードを試験導入し、APIコスト・性能を評価。必要に応じて既存AIワークフローをアップグレードし、顧客向けサービスに反映。</dd></dl></section>
-<section class="exec-item"><h2>3. CISAICSに関する複数の産業制御システム脆弱性（Siemens, Johnson Controls等）</h2><dl><dt>何が起きているか</dt><dd>複数のICS製品（Siemens Desigo DXR、PXCコントローラー、Johnson Controlsエアウォール等）がリモートコード実行・DoS等の脆弱性を有し、CISAが警告を発表。</dd><dt>事業への影響</dt><dd>工場・インフラ運用に不可欠な制御システムが攻撃対象となり、稼働停止・安全リスク・事業継続障害が発生する恐れがある。</dd><dt>推奨行動</dt><dd>対象製品のパッチ適用状況を確認し、速やかに更新。ICS環境の脆弱性スキャンを定期実施し、侵入検知・防御策を強化。経営層はリスク管理体制を見直し、サプライヤーとの連携を強化。</dd></dl></section>
+<p class="meta">直近7日の記事 20 件を対象 · 生成: 2026-08-15 06:24</p>
+<section class="exec-item"><h2>1. ChatGPT、Macの操作を記憶する「コンピュータ履歴」機能の提供開始</h2><dl><dt>何が起きているか</dt><dd>OpenAIがmacOS版ChatGPTデスクトップアプリに「Computer History」機能を追加し、ユーザーの操作履歴を記憶・参照できるようにした。</dd><dt>事業への影響</dt><dd>企業の情報漏洩リスクが増大し、従業員の業務データが外部AIサービスに蓄積されることで、コンプライアンス違反や機密情報流出の懸念が高まる。</dd><dt>推奨行動</dt><dd>経営層は社内でAIツール利用ポリシーを策定・周知し、データ保持・アクセス権限の管理体制を強化する。また、必要に応じて社内専用AI環境の導入を検討する。</dd></dl></section>
+<section class="exec-item"><h2>2. MetabaseのSQLインジェクション脆弱性（CVE-2026-72898）に関する注意喚起</h2><dl><dt>何が起きているか</dt><dd>Metabaseの最新版にSQLインジェクション脆弱性が報告され、攻撃者が任意のSQLを実行できる可能性があるとJPCERT/CCが警告した。</dd><dt>事業への影響</dt><dd>社内でMetabaseをBIツールとして利用している企業は、データベースへの不正アクセスや情報漏洩、業務停止リスクが高まる。</dd><dt>推奨行動</dt><dd>経営層は即時にMetabaseのパッチ適用状況を確認し、未適用の場合は直ちにアップデートを実施する。さらに、アクセス制御・監査ログの整備を行い、脆弱性対策の継続的な監視体制を構築する。</dd></dl></section>
+<section class="exec-item"><h2>3. CISAが発表したICS・医療機器の複数脆弱性（複数製品）</h2><dl><dt>何が起きているか</dt><dd>米国CISAが、Siemens、Johnson Controls、ANDRITZなどの産業制御システム・医療機器に対する複数の脆弱性を公開し、リモートコード実行や権限昇格、情報漏洩のリスクを指摘した。</dd><dt>事業への影響</dt><dd>製造業・医療機関など、ICSや医療機器を使用する企業は、システム停止・データ漏洩・サービス妨害の重大リスクに直面し、事業継続計画や顧客信頼に大きな影響を与える。</dd><dt>推奨行動</dt><dd>経営層は対象製品の脆弱性評価を実施し、CISAが推奨するパッチ・アップデートを速やかに適用する。加えて、ICS・医療機器のセキュリティ監視体制を強化し、定期的な脆弱性スキャンとインシデント対応訓練を実施する。</dd></dl></section>
 <section class="refs">
   <h3>参考にしたニュース</h3>
-  <ul><li><a href="https://www.jpcert.or.jp/at/2026/at260023.html" target="_blank" rel="noopener">注意喚起: MetabaseのSQLインジェクションの脆弱性（CVE-2026-72898）に関する注意喚起 (公開)</a> <small>(JPCERT/CC, 2026-08-14)</small></li>
+  <ul><li><a href="https://www.watch.impress.co.jp/docs/news/2132844.html" target="_blank" rel="noopener">ChatGPT、Macの操作を記憶する「コンピュータ履歴」</a> <small>(Impress Watch (INTERNET Watch), 2026-08-14)</small></li>
+<li><a href="https://www.watch.impress.co.jp/docs/news/2132778.html" target="_blank" rel="noopener">NearMe「時間貸切」サービス 大阪や北海道などへ拡大</a> <small>(Impress Watch (INTERNET Watch), 2026-08-14)</small></li>
+<li><a href="https://www.jpcert.or.jp/at/2026/at260023.html" target="_blank" rel="noopener">注意喚起: MetabaseのSQLインジェクションの脆弱性（CVE-2026-72898）に関する注意喚起 (公開)</a> <small>(JPCERT/CC, 2026-08-14)</small></li>
 <li><a href="https://www.watch.impress.co.jp/docs/news/2132760.html" target="_blank" rel="noopener">OpenAI、最大14倍高速な「ウルトラファストモード」 GPT-5.6 Sol</a> <small>(Impress Watch (INTERNET Watch), 2026-08-14)</small></li>
 <li><a href="https://www.watch.impress.co.jp/docs/news/2132694.html" target="_blank" rel="noopener">Gemini 3.7 Flash公開 主力モデルを3週間で更新、性能も大幅向上</a> <small>(Impress Watch (INTERNET Watch), 2026-08-14)</small></li>
 <li><a href="https://www.watch.impress.co.jp/docs/review/minireview/2128984.html" target="_blank" rel="noopener">暑い夜は変わる?　BAKUNEの夏寝具を挑戦【ミニレビュー】</a> <small>(Impress Watch (INTERNET Watch), 2026-08-14)</small></li>
@@ -54,8 +56,6 @@ dl dd{margin:.2rem 0 .5rem 1rem}
 <li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-05" target="_blank" rel="noopener">ANDRITZ HIPASE-250 および 250 SCALA</a> <small>(CISA ICS Advisories, 2026-08-13)</small></li>
 <li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-12" target="_blank" rel="noopener">シーメンス ソリッド エッジ</a> <small>(CISA ICS Advisories, 2026-08-13)</small></li>
 <li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-11" target="_blank" rel="noopener">シーメンス Simcenter Femap</a> <small>(CISA ICS Advisories, 2026-08-13)</small></li>
-<li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02" target="_blank" rel="noopener">Haiwell IoT クラウド HMI ゲートウェイ</a> <small>(CISA ICS Advisories, 2026-08-13)</small></li>
-<li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-01" target="_blank" rel="noopener">AVEVA エンタープライズ SCADA</a> <small>(CISA ICS Advisories, 2026-08-13)</small></li>
-<li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-04" target="_blank" rel="noopener">日立エナジー APM エッジ製品</a> <small>(CISA ICS Advisories, 2026-08-13)</small></li></ul>
+<li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02" target="_blank" rel="noopener">Haiwell IoT クラウド HMI ゲートウェイ</a> <small>(CISA ICS Advisories, 2026-08-13)</small></li></ul>
 </section>
 </body></html>
