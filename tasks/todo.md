@@ -1274,3 +1274,41 @@ insight 生成以外にも tech を対象にした LLM 処理が残っている�
 - `exec_summary`: 対象カテゴリは ai/security/manufacturing/system/policy/market/news の
   7つで、**news以外の6つが tech 系**。1カテゴリごとにLLMを呼ぶ
 - `forecast_generate` / `forecast_verify`: tech 記事も予測の材料にしている
+
+### 追記（2026-08-15）: generate_perspective_digest にも kind 除外を実装
+
+ユーザー承認により `generate_perspective_digest` にも `--skip-kinds`
+（既定 env `LLM_SKIP_KINDS`）を追加。run_daily.bat 側は既に
+`LLM_SKIP_KINDS=tech` を設定済みのため、バッチの追加変更は不要。
+
+実装上の注意: 元の WHERE が `ti.perspective_digest IS NULL OR ti.perspective_digest='{}'`
+と括弧なしの OR だったため、AND を素直に足すと
+`A OR (B AND kind条件)` と解釈され NULL 側に除外が効かなくなる。
+括弧で囲んで回避し、`test_skip_kinds_applies_to_both_null_and_empty_digest` で回帰を固定した。
+
+#### 【訂正】所要時間は減らない
+セッション中に「対象の64%が tech なので107秒のうち約68秒が削減できる」と見積もったが、
+**これは誤りだった**。run_daily.bat は `--limit 30` で呼んでおり、tech を除外しても
+news 側の未生成が5,778件あるため30件は埋まる。よって **107秒はそのまま消費される**。
+LLM insight と同じ「予算を使い切る」構造だった。
+
+本番DB実測（--limit 30）:
+| 設定 | 取得30件の内訳 |
+|---|---|
+| 除外なし | **tech 30件（100%）** |
+| tech除外 | **news 30件（100%）** |
+
+得られるのは時間短縮ではなく**予算の向き先の変更**。
+ただし除外前は取得30件が全て tech だったため、
+「立場別解説の生成が丸ごと、読まないページ向けに使われていた」状態は解消される。
+
+#### exec_summary は事情が違う（未対応・ユーザー判断待ち）
+`exec_summary` はカテゴリ単位で固定（ai/security/manufacturing/system/policy/market/news）
+であり、limit による埋め合わせが働かない。したがって tech 系6カテゴリを止めれば
+**実際に所要時間が減る**。1カテゴリごとにLLMを呼んでおり、
+8/15 15:00 実行では既知ステップを引いた残りが212秒で、その主要部分を占めると推定される
+（exec_summary 自体には [TIME] ログが無いため正確な内訳は未計測）。
+
+### テスト
+`tests/test_perspective_digest_skip_kinds.py` 新規6件。
+`pytest tests/` 278件全pass（既存272 + 新規6）。

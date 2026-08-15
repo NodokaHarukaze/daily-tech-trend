@@ -23,21 +23,47 @@ DEFAULT_LIMIT = 20
 MAX_LIMIT = 200  # 暴走防止（LLM呼び出しの上限）
 
 
-def _fetch_targets(cur, limit: int):
-    sql = """
+def _topics_has_kind(cur) -> bool:
+    """topics テーブルに kind カラムがあるかを検査する（旧DB / テストDB 互換）。"""
+    try:
+        cur.execute("PRAGMA table_info(topics)")
+        return any(row[1] == "kind" for row in cur.fetchall())
+    except Exception:
+        return False
+
+
+def _fetch_targets(cur, limit: int, skip_kinds=()):
+    """perspective_digest 未生成の行を新しい順に取り出す。
+
+    skip_kinds: 対象から外すトピックの kind（例: ("tech",)）。
+      参照されなくなったページ向けの生成に時間を使わないためのもの。
+    """
+    skip = tuple(k.strip().lower() for k in (skip_kinds or ()) if str(k or "").strip())
+    params: list = []
+
+    # 元の WHERE は "A OR B" なので、AND を足す際は括弧で囲まないと
+    # "A OR (B AND kind条件)" と解釈され、A 側に除外が効かなくなる
+    where = "(ti.perspective_digest IS NULL OR ti.perspective_digest = '{}')"
+    if skip and _topics_has_kind(cur):
+        placeholders = ",".join("?" for _ in skip)
+        where += f" AND LOWER(COALESCE(NULLIF(t.kind,''), '')) NOT IN ({placeholders})"
+        params.extend(skip)
+
+    sql = f"""
     SELECT
       ti.topic_id,
       COALESCE(NULLIF(t.title_ja, ''), NULLIF(t.title, ''), '') AS title,
       COALESCE(ti.summary, '') AS summary,
-      COALESCE(ti.perspectives, '{}') AS perspectives,
+      COALESCE(ti.perspectives, '{{}}') AS perspectives,
       COALESCE(ti.evidence_urls, '[]') AS evidence_urls
     FROM topic_insights ti
     JOIN topics t ON t.id = ti.topic_id
-    WHERE ti.perspective_digest IS NULL OR ti.perspective_digest = '{}'
+    WHERE {where}
     ORDER BY ti.updated_at DESC
     LIMIT ?
     """
-    cur.execute(sql, (limit,))
+    params.append(limit)
+    cur.execute(sql, params)
     return cur.fetchall()
 
 
@@ -59,14 +85,25 @@ def main() -> None:
         help="処理時間の上限秒（デフォルト: env PERSPECTIVE_DIGEST_MAX_SEC または 0=無制限）。"
         "夜間バッチ等の無人実行から呼ぶ場合は暴走防止のため必ず指定すること。",
     )
+    parser.add_argument(
+        "--skip-kinds",
+        default=os.environ.get("LLM_SKIP_KINDS", ""),
+        help="対象から外すトピックの kind をカンマ区切りで指定する（例: 'tech'）。"
+        "デフォルトは env LLM_SKIP_KINDS。参照しなくなったページ向けの生成を止めるために使う。",
+    )
     args = parser.parse_args()
 
     limit = max(1, min(int(args.limit or DEFAULT_LIMIT), MAX_LIMIT))
     max_sec = max(0, int(args.max_sec or 0))
+    skip_kinds = tuple(
+        k.strip().lower() for k in str(args.skip_kinds or "").split(",") if k.strip()
+    )
 
     conn = connect()
     cur = conn.cursor()
-    targets = _fetch_targets(cur, limit)
+    targets = _fetch_targets(cur, limit, skip_kinds)
+    if skip_kinds:
+        print(f"[generate_perspective_digest] skip_kinds={','.join(skip_kinds)}")
 
     if args.dry_run:
         print(f"[generate_perspective_digest] dry-run target_count={len(targets)}")
