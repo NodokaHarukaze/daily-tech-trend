@@ -23,18 +23,46 @@ def _articles_has_region(conn) -> bool:
         return False
 
 
-def pick_topic_inputs(conn, limit=300, rescue=False):
+def _topics_has_kind(conn) -> bool:
+    """topics テーブルに kind カラムがあるかを検査する（テスト DB 互換）。"""
+    try:
+        cur = conn.execute("PRAGMA table_info(topics)")
+        return any(row[1] == "kind" for row in cur.fetchall())
+    except Exception:
+        return False
+
+
+def pick_topic_inputs(conn, limit=300, rescue=False, skip_kinds=()):
     """トピック別に LLM 入力を抽出する。
 
     region (jp/global/other) × kind (news/tech) のバケット単位で
     新しい順に番号を振り、バケット横断でラウンドロビンする。
     これにより jp/news が大量にある日でも global/news が後回しにならない。
+
+    skip_kinds: 生成対象から外す kind（例: ("tech",)）。
+      参照されなくなったページ向けの生成に予算を使わないためのもの。
+      トピックの kind を優先し、無い場合は最新記事の kind で判定する。
     """
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
 
     # articles.region が無いテスト DB 互換のために式を切替える
     region_expr = "COALESCE(a.region, '')" if _articles_has_region(conn) else "''"
+
+    skip = tuple(
+        k.strip().lower() for k in (skip_kinds or ()) if str(k or "").strip()
+    )
+    if skip:
+        # topics.kind が無いテスト DB では最新記事の kind だけで判定する
+        kind_expr = (
+            "COALESCE(NULLIF(t.kind,''), NULLIF(l.kind,''), '')"
+            if _topics_has_kind(conn)
+            else "COALESCE(NULLIF(l.kind,''), '')"
+        )
+        placeholders = ",".join("?" for _ in skip)
+        kind_filter = f"AND LOWER({kind_expr}) NOT IN ({placeholders})"
+    else:
+        kind_filter = ""
 
     sql = f"""
     WITH latest AS (
@@ -106,6 +134,7 @@ def pick_topic_inputs(conn, limit=300, rescue=False):
            OR COALESCE(ti.src_hash, '') = ''
         ))
       )
+      {kind_filter}
     )
     SELECT
       topic_id, topic_title, category, kind, source, url,
@@ -124,7 +153,7 @@ def pick_topic_inputs(conn, limit=300, rescue=False):
     ORDER BY bucket_rn ASC, datetime(COALESCE(NULLIF(published_at,''), fetched_at)) DESC, topic_id DESC
     LIMIT ?
     """
-    cur.execute(sql, (1 if rescue else 0, limit))
+    cur.execute(sql, (1 if rescue else 0, *skip, limit))
     return cur.fetchall()
 
 

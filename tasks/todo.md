@@ -1212,3 +1212,65 @@ news トピックが毎回そのまま作り直されていた。
   ただし LLM サーバーへの負荷軽減が目的の設定であり、2026-08-04 のRAM枯渇事故の
   経緯があるため無断では変更していない
 - 18時・21時トリガー無効（1日4回）の有効化はユーザー判断待ちのまま
+
+---
+
+## 2026-08-15 技術動向ダイジェスト（tech）を LLM 生成対象から除外
+
+### 背景
+ユーザーが技術動向ダイジェストを参照しなくなったため、関連機能を止めて
+処理時間を短くできないかという相談。調査した結果:
+
+- **「技術動向ダイジェスト」は `src/templates/tech.html` の h1 で、生成先は
+  `docs/tech/index.html`。夜間バッチがこれを `docs/index.html` へコピーしているため
+  サイトのトップページそのもの**（CLAUDE.md にも「両者は同一」と記載）
+- **処理時間はほとんど短くならない**。LLM が `LLM_MAX_SEC=1200` の予算で
+  打ち切られており、tech を外しても news の未生成が9,934件残っていて候補が尽きず、
+  1200秒をそのまま使い切るため。短縮は30〜60秒（全体の2〜4%）程度
+
+8/15 15:00 実行（26分40秒=1600秒）の内訳:
+| ステップ | 秒 | tech停止で |
+|---|---:|---|
+| LLM insight | 1208 | 変わらない（予算固定） |
+| generate_perspective_digest | 107 | 対象の64%がtech |
+| collect | 34 | 約半分 |
+| render | 16 | 少し減る |
+| translate | 11 | 約半分 |
+| dedupe / thread | 1.6 | 誤差 |
+| その他(exec_summary/forecast/backfill/push) | 約212 | exec_summaryは7カテゴリ中6つがtech系 |
+
+### 対応（ユーザー承認: 「LLM要約だけ止める」）
+tech ページと収集は残し、LLM の insight 生成対象から tech を外した。
+得られるのは時間短縮ではなく**予算の集中**（news の消化が約2倍）。
+
+1. `pick_topic_inputs(conn, ..., skip_kinds=())` を追加。
+   `COALESCE(NULLIF(t.kind,''), NULLIF(l.kind,''), '')` で判定し、
+   topics.kind を優先。topics.kind が無い旧DB/テストDBでは記事側の kind に
+   フォールバック（`_topics_has_kind()` で検査、既存の `_articles_has_region()` と同じ方式）
+2. `llm_insights_local` に `--skip-kinds`（既定は env `LLM_SKIP_KINDS`）を追加
+3. `run_daily.bat` に `set "LLM_SKIP_KINDS=tech"` を追加
+
+### 効果（本番DB実測, limit=500 rescue=True）
+| 設定 | 候補の内訳 | LLMに投げる | スキップ |
+|---|---|---:|---:|
+| 除外なし | news 250 / tech 250 | 305 | 195 |
+| **tech除外** | **news 490 / tech 10** | **250** | 250 |
+
+tech が10件残るのは topics.kind='news' だが最新記事が tech のケース。
+topics.kind 基準では news 側のコンテンツなので除外しないのが正しい（安全側）。
+有効候補250件は予算（約110件分）を上回るので予算は使い切れる。
+
+### テスト
+`tests/test_llm_skip_kinds.py` 新規6件（tech除外／除外なし／大文字小文字と空白/
+複数除外／topics.kind非搭載DBでのフォールバック／rescue下でも効くこと）。
+`pytest tests/` 272件全pass（既存266 + 新規6）。
+バッチの環境変数伝搬もテストバッチで実行確認済み。
+
+### 残っている tech 向け LLM 処理（ユーザー判断待ち）
+insight 生成以外にも tech を対象にした LLM 処理が残っている。
+**これらは固定予算ではないため、止めれば実際に処理時間が減る**:
+- `generate_perspective_digest`: 実測107秒/回。未生成は tech 10,446件 / news 5,778件で
+  **対象の64%が tech**。kind の区別なく `topic_insights` 全体を対象にしている
+- `exec_summary`: 対象カテゴリは ai/security/manufacturing/system/policy/market/news の
+  7つで、**news以外の6つが tech 系**。1カテゴリごとにLLMを呼ぶ
+- `forecast_generate` / `forecast_verify`: tech 記事も予測の材料にしている

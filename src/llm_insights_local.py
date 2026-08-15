@@ -52,6 +52,15 @@ def _parse_args(argv: list[str]):
         help="Maximum processing time in seconds (default: env LLM_MAX_SEC or 300)",
     )
     parser.add_argument(
+        "--skip-kinds",
+        default=os.environ.get("LLM_SKIP_KINDS", ""),
+        help=(
+            "Comma-separated topic kinds to exclude from generation, e.g. 'tech'. "
+            "Default: env LLM_SKIP_KINDS. Use this to stop spending the budget on "
+            "pages that are no longer read."
+        ),
+    )
+    parser.add_argument(
         "--delay",
         type=float,
         default=float(os.environ.get("LLM_DELAY_SEC", "3") or "3"),
@@ -87,13 +96,19 @@ def main():
     rescue = args.rescue
     max_sec = max(0, int(args.max_sec or 0))
     delay = max(0.0, float(args.delay or 0))
+    skip_kinds = tuple(
+        k.strip().lower() for k in str(args.skip_kinds or "").split(",") if k.strip()
+    )
 
     conn = connect()
     skipped_unchanged = 0
     processed = 0
     try:
-        rows = pick_topic_inputs(conn, limit=limit, rescue=rescue)
-        print(f"[TIME] llm candidates={len(rows)} limit={limit} rescue={int(rescue)}")
+        rows = pick_topic_inputs(conn, limit=limit, rescue=rescue, skip_kinds=skip_kinds)
+        print(
+            f"[TIME] llm candidates={len(rows)} limit={limit} rescue={int(rescue)} "
+            f"skip_kinds={','.join(skip_kinds) or '-'}"
+        )
 
         for r in rows:
             if max_sec and (_now_sec() - t0) >= max_sec:
