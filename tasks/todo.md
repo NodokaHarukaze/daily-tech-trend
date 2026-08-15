@@ -1312,3 +1312,65 @@ LLM insight と同じ「予算を使い切る」構造だった。
 ### テスト
 `tests/test_perspective_digest_skip_kinds.py` 新規6件。
 `pytest tests/` 278件全pass（既存272 + 新規6）。
+
+---
+
+## 2026-08-15 使用範囲を news + 未来予測 に絞る（処理速度・コスト削減）
+
+### 前提（ユーザー確認）
+実際に使用しているのは **ニュースと未来予測のみ**。
+
+### 調査で分かった制約
+- `forecast_generate.py:80` の予測材料は kind を絞らず全記事から作っている。
+  `MIN_IMPORTANCE=30` に対し insight 未生成は50扱いなので、tech の要約を止めても
+  記事自体は材料に残る。**tech フィードの収集を止めると予測材料が減るため収集は残す**
+- `_insight_payload`（render_main.py:469）は `perspective_digest` を含む。
+  news ページの insight 表示で使うため perspective_digest は必要
+
+### 削減の根拠（本番DB実測）
+新規 news トピックは平均 **115件/日＝29件/回**（直近7日）。
+1200秒（約110件/回）は必要量の約4倍で、残りは古いトピックの掘り起こしに使われていた。
+未生成9,934件のうち8月分は694件のみで、**残り9,240件は4ヶ月以上前**。
+`pick_topic_inputs` は新しい順に取るため、予算を下げても新規は優先される。
+
+### 実施した変更
+| 対象 | 変更 | 実測/見込み |
+|---|---|---|
+| `run_daily.bat` | `LLM_MAX_SEC` 1200 → **600** | -608秒 |
+| `run_daily.bat` | `exec_summary` を停止（コメントアウト） | -100〜200秒（推定） |
+| `run_daily.bat` | `RENDER_SKIP_PAGES=tech,diff,entity` を追加 | — |
+| `run_daily.bat` | トップへのコピー元を tech → **news** に変更 | — |
+| `render_main.py` | `skipped_pages()` / `is_page_skipped()` を追加し、tech / diff / entity の出力を条件化 | **render 9.7秒 → 3.7秒** |
+| テンプレート4種 | ナビから 技術 / 差分 / 企業別 / エグゼクティブ を削除 | — |
+
+ナビを直したのは、tech を止めると「技術」リンクが `/daily-tech-trend/`
+＝トップ（＝ニュース自身）を指してしまい壊れるため。
+残したのは ニュース / 未来予測 / 予想的中 / 検索 / 運用 / RSS。
+
+### 検証
+- `RENDER_SKIP_PAGES` 有無で render を実測: **9.7秒 → 3.7秒**
+- スキップ時に `docs/tech/index.html`・`docs/diff/index.html` の更新時刻が変わらず、
+  `docs/news/`・`docs/forecast/`・`docs/ops/`・`docs/search.html` は更新されることを確認
+- `docs/news/index.html` をトップへコピーし、`<title>ニュースダイジェスト</title>`、
+  アセットが絶対パス（`/daily-tech-trend/assets/...`）で壊れないこと、
+  ナビが6項目になっていることを確認
+- バッチの構文と環境変数の伝搬をテストバッチで実行確認
+- `tests/test_render_skip_pages.py` 新規8件。`pytest tests/` 286件全pass
+
+### 見込み
+1回 1600秒（26分40秒） → **約800〜900秒（13〜15分）**
+
+### 次回確認すること（8/16 06:00 のログ）
+- `[TIME] llm budget reached sec=... max_sec=600`
+- `[SKIP] render tech/diff/entity page`
+- `exec_summary` の行が出ないこと
+- 全体の `SUCCESS_FROM_BAT` までの所要時間（目標15分以内）
+- `docs/index.html` がニュースになっていること
+
+### 未対応（判断待ち）
+- **古いページが `docs/` に残る**: `docs/tech/`・`docs/diff/`・`docs/entity/`・`docs/exec/` は
+  生成が止まっただけで削除はしていない。ナビからリンクは消えたが、
+  `render_feeds.py:279` が `docs/entity/` を読んで検索インデックスを作るため、
+  古い企業別ページは検索結果に残り続ける。sitemap にも残る可能性がある
+- `--delay` 既定3秒（1件あたり LLM 8秒 + sleep 3秒）は据え置き
+- 18時・21時トリガー無効（1日4回）の有効化も据え置き

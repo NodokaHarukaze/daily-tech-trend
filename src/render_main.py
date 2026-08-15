@@ -80,6 +80,21 @@ def build_asset_paths(base_path: str = "/daily-tech-trend/") -> dict[str, str]:
         "nav_prefix": normalized_base,
     }
 
+
+def skipped_pages() -> set[str]:
+    """生成をスキップするページ名の集合を環境変数 RENDER_SKIP_PAGES から読む。
+
+    参照されなくなったページを作り続けないためのもの。
+    カンマ区切りで指定する（例: RENDER_SKIP_PAGES=tech,diff,entity）。
+    毎回読み直すのは、テストや単発実行で環境変数を差し替えられるようにするため。
+    """
+    raw = os.environ.get("RENDER_SKIP_PAGES", "")
+    return {p.strip().lower() for p in raw.split(",") if p.strip()}
+
+
+def is_page_skipped(name: str) -> bool:
+    return name.strip().lower() in skipped_pages()
+
 COMMON_CSS = r"""
 :root{
   /* Base */
@@ -3131,11 +3146,17 @@ def main():
     # main() 呼び出しの冪等性のため、ここでクリアする。
     _render_errors.clear()
 
-    try:
-        (tech_dir / "index.html").write_text(tech_html_sub, encoding="utf-8")
-        (out_dir / "index.html").write_text(tech_html_root, encoding="utf-8")
-    except Exception as e:
-        _log_render_error("tech.write_html", e, level="error")
+    # tech ページ（技術動向ダイジェスト）。RENDER_SKIP_PAGES=tech で出力を止められる。
+    # 止めた場合 docs/index.html は書かれないため、run_daily.bat 側で
+    # docs/news/index.html をトップへコピーしている。
+    if is_page_skipped("tech"):
+        print("[SKIP] render tech page (RENDER_SKIP_PAGES)")
+    else:
+        try:
+            (tech_dir / "index.html").write_text(tech_html_sub, encoding="utf-8")
+            (out_dir / "index.html").write_text(tech_html_root, encoding="utf-8")
+        except Exception as e:
+            _log_render_error("tech.write_html", e, level="error")
 
     try:
         ops_dir = out_dir / "ops"
@@ -3193,13 +3214,17 @@ def main():
     except Exception as e:
         _log_render_error("search.render", e, level="error")
 
-    try:
-        # Diff ビュー生成（スナップショット保存→差分描画）
-        from diff_view import save_today_snapshot, render_diff_page
-        save_today_snapshot(conn)
-        render_diff_page(out_dir, conn)
-    except Exception as e:
-        _log_render_error("diff.render", e, level="error")
+    if is_page_skipped("diff"):
+        # スナップショット保存も差分描画のためだけの処理なので合わせて止める
+        print("[SKIP] render diff page (RENDER_SKIP_PAGES)")
+    else:
+        try:
+            # Diff ビュー生成（スナップショット保存→差分描画）
+            from diff_view import save_today_snapshot, render_diff_page
+            save_today_snapshot(conn)
+            render_diff_page(out_dir, conn)
+        except Exception as e:
+            _log_render_error("diff.render", e, level="error")
 
     try:
         # トピックタイムライン。生成済みメインページが 📈 経緯リンクで参照している
@@ -3219,13 +3244,17 @@ def main():
     except Exception as e:
         _log_render_error("topic_timeline.render", e, level="error")
 
-    try:
-        # エンティティ抽出＋企業別ページ（辞書マッチ）
-        from entities import extract_entities_by_dict, render_entity_pages
-        extract_entities_by_dict(conn)
-        render_entity_pages(out_dir, conn=conn, top_n=30)
-    except Exception as e:
-        _log_render_error("entities.render", e, level="error")
+    if is_page_skipped("entity"):
+        # 抽出処理も企業別ページのためだけのものなので合わせて止める
+        print("[SKIP] render entity pages (RENDER_SKIP_PAGES)")
+    else:
+        try:
+            # エンティティ抽出＋企業別ページ（辞書マッチ）
+            from entities import extract_entities_by_dict, render_entity_pages
+            extract_entities_by_dict(conn)
+            render_entity_pages(out_dir, conn=conn, top_n=30)
+        except Exception as e:
+            _log_render_error("entities.render", e, level="error")
 
     try:
         # sitemap は diff ページ生成後に作成（リンクを含めるため）
