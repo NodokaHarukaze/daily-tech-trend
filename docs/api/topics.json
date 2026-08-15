@@ -1,806 +1,806 @@
 {
-  "generated_at": "2026-08-15T03:26:20+00:00",
+  "generated_at": "2026-08-15T06:26:32+00:00",
   "count": 100,
   "items": [
     {
-      "id": 38964,
-      "title": "JVN: NetKids iMarkにおける複数の脆弱性",
+      "id": 38654,
+      "title": "ポーランド：アルセロミタルが高強度レールを開発",
+      "category": "manufacturing",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:21:07.463600+00:00"
+    },
+    {
+      "id": 38978,
+      "title": "ATN-B1 上の CPDLC の脆弱性",
       "category": "security",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:21:10.055219+00:00"
+      "updated_at": "2026-08-15T06:20:58.528735+00:00"
     },
     {
-      "id": 39667,
-      "title": "SSA-306654 V2.0 (最終更新: 2026-08-11): シーメンスの産業用製品における Insyde BIOS の脆弱性",
-      "category": "manufacturing",
+      "id": 38884,
+      "title": "事後対応型の修正からプロアクティブなパフォーマンスへ: ビル管理の再考",
+      "category": "smart_factory",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:21:01.204007+00:00"
+      "updated_at": "2026-08-15T06:20:49.476854+00:00"
     },
     {
-      "id": 39883,
-      "title": "食料品と燃料費の冷え込みで米国のインフレは緩和",
-      "category": "news",
-      "importance": 40,
-      "summary": "食料品と燃料費の冷え込みで米国のインフレは緩和",
-      "updated_at": "2026-08-15T03:20:52.289245+00:00"
-    },
-    {
-      "id": 40393,
-      "title": "Web版「Google Earth」に「飛行シミュレータ」、デスクトップアプリ不要で気軽に空の旅【再掲】【今すぐ読みたい！人気記事】",
-      "category": "company",
-      "importance": 49,
-      "summary": "Web版「Google Earth」に「飛行シミュレータ」、デスクトップアプリ不要で気軽に空の旅【再掲】【今すぐ読みたい！人気記事】",
-      "updated_at": "2026-08-15T03:20:43.866404+00:00"
-    },
-    {
-      "id": 38862,
-      "title": "概要 AI ビジョン トレーニングを加速する Generative AI Studio を発表",
-      "category": "quality",
+      "id": 39461,
+      "title": "最高級のコスト効率の高い火炎検出",
+      "category": "smart_factory",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:20:29.789354+00:00"
+      "updated_at": "2026-08-15T06:20:40.630304+00:00"
     },
     {
-      "id": 39668,
-      "title": "SSA-584312 V1.0: V2606 MP1 より前の Simcenter Femap のファイル解析の脆弱性",
-      "category": "manufacturing",
+      "id": 38670,
+      "title": "サウジアラビア、紅海の航路保護のため多国籍海事連合を発足",
+      "category": "market",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:20:20.904054+00:00"
+      "updated_at": "2026-08-15T06:20:31.726798+00:00"
     },
     {
-      "id": 40006,
-      "title": "世界をリードするオーストラリアの障害者支援が逼迫し、大規模な再編に直面",
-      "category": "news",
+      "id": 38922,
+      "title": "重要なサイバー機能の次のフロンティアへの対応",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:20:22.858957+00:00"
+    },
+    {
+      "id": 38671,
+      "title": "ギリシャ共和国がReCAAPに参加",
+      "category": "market",
+      "importance": 50,
+      "summary": "ギリシャがReCAAPに加盟し、海上安全協力を強化した。",
+      "updated_at": "2026-08-15T06:20:13.971692+00:00"
+    },
+    {
+      "id": 38993,
+      "title": "ゴル！ TelevisaUnivision が Google Cloud を使用して FIFA ワールドカップを何百万人もの視聴者にストリーミングした方法",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:20:05.068137+00:00"
+    },
+    {
+      "id": 38672,
+      "title": "バイオ燃料バンカーのスナップショット: 従来型 VLSFO の価格下落が B30-VLSFO に重し",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:19:56.082937+00:00"
+    },
+    {
+      "id": 38994,
+      "title": "BQ 検索イノベーションによる構造化データと非構造化データの洞察の統合",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:19:47.137227+00:00"
+    },
+    {
+      "id": 38673,
+      "title": "LNG輸送は先週も閑散としたままだった",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:19:38.273092+00:00"
+    },
+    {
+      "id": 38995,
+      "title": "Google Cloud が新たな脅威を検出、封じ込め、防御する方法",
+      "category": "system",
       "importance": 70,
-      "summary": "オーストラリアの障害者支援プログラムは成功したが、費用増大により再編が必要になった。",
-      "updated_at": "2026-08-15T03:20:12.052507+00:00"
+      "summary": "Google Cloud が新たな脅威を検出し、封じ込め、対策を行う方法を紹介",
+      "updated_at": "2026-08-15T06:19:29.383486+00:00"
     },
     {
-      "id": 40394,
-      "title": "「PostgreSQL」にセキュリティアップデート、任意コード実行を含む28件の脆弱性対応／「PostgreSQL 14」は2026年11月12日でサポートが終了、早期の移行計画を",
-      "category": "company",
-      "importance": 49,
-      "summary": "「PostgreSQL」にセキュリティアップデート、任意コード実行を含む28件の脆弱性対応／「PostgreSQL 14」は2026年11月12日でサポートが終了、早期の移行計画を",
-      "updated_at": "2026-08-15T03:19:58.736713+00:00"
-    },
-    {
-      "id": 38863,
-      "title": "Hexagon と Oracle Red Bull Sim Racing が 2026 年のフューチャー スキル チャレンジを開始",
-      "category": "quality",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:19:44.595167+00:00"
-    },
-    {
-      "id": 39669,
-      "title": "SSA-621657 V1.0: バージョン SE2026 Update 7 より前の Solid Edge におけるファイル解析の脆弱性",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:19:35.578975+00:00"
-    },
-    {
-      "id": 38864,
-      "title": "FARO CREAFORM、製造現場の寸法検査の柔軟性を高める MetraSCAN BLACK2 を発売",
-      "category": "quality",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:19:26.591678+00:00"
-    },
-    {
-      "id": 39670,
-      "title": "SSA-628843 V1.1 (最終更新: 2026-08-11): TPM 2.0 の範囲外読み取りの脆弱性",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:19:17.617948+00:00"
-    },
-    {
-      "id": 40011,
-      "title": "なぜ日本で「人間冷蔵庫」が販売されているのか？",
-      "category": "news",
-      "importance": 40,
-      "summary": "なぜ日本で「人間冷蔵庫」が販売されているのか？",
-      "updated_at": "2026-08-15T03:19:08.726415+00:00"
-    },
-    {
-      "id": 38775,
-      "title": "ハイネケンUK、再生大麦プログラムを開始",
-      "category": "decarbonization_ops",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:18:54.779775+00:00"
-    },
-    {
-      "id": 39671,
-      "title": "SSA-686975 V1.7 (最終更新: 2026-08-11): Intel CPU を使用する Siemens Industrial 製品の IPU 2022.3 の脆弱性",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:18:45.789351+00:00"
-    },
-    {
-      "id": 38776,
-      "title": "政府の調達改革はネットゼロより雇用を優先",
-      "category": "decarbonization_ops",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:18:36.790990+00:00"
-    },
-    {
-      "id": 39672,
-      "title": "SSA-751328 V1.0: Siemens ロゴの回復可能なハードコードされた AES マスター キー!ソフトな快適さ",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:18:27.790383+00:00"
-    },
-    {
-      "id": 38777,
-      "title": "マスタークラス: 財務チームが最も強力な持続可能性プロジェクトを特定し、資金を提供する方法",
-      "category": "decarbonization_ops",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:18:18.803452+00:00"
-    },
-    {
-      "id": 39673,
-      "title": "SSA-781903 V1.0: Desigo DXR および PXC コントローラーのサービス拒否の脆弱性",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:18:09.789583+00:00"
-    },
-    {
-      "id": 38984,
-      "title": "共有ストレージの未来を拓く: Filestore on Colossus",
+      "id": 38716,
+      "title": "舞台裏: Google エージェント スキルの構築、テスト、拡張方法",
       "category": "system",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:18:00.776568+00:00"
-    },
-    {
-      "id": 39674,
-      "title": "SSA-825228 V1.0: Siveillance Video Management Server でリモート コードが実行される可能性がある",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:17:51.785189+00:00"
-    },
-    {
-      "id": 38778,
-      "title": "マスタークラス: ビジネス調達を通じて循環性目標を推進する",
-      "category": "decarbonization_ops",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:17:42.806470+00:00"
-    },
-    {
-      "id": 39675,
-      "title": "SSA-834709 V1.0: 産業用 OS を搭載した SIMATIC IoT2050 Advanced 上の Node-RED における認証欠落の脆弱性",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:17:33.792508+00:00"
-    },
-    {
-      "id": 38779,
-      "title": "パーム油企業への持続可能性融資は森林破壊に関連していると報告書が警告",
-      "category": "decarbonization_ops",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:17:24.799046+00:00"
-    },
-    {
-      "id": 40046,
-      "title": "ポーランド長鋼価格はホリデーシーズンの低迷でも安定",
-      "category": "manufacturing",
       "importance": 50,
-      "summary": "ポーランドの長鋼価格は8月7日までの週で安定し、需要低迷とホリデーシーズンの影響にもかかわらず変動",
-      "updated_at": "2026-08-15T03:17:15.960721+00:00"
+      "summary": "Googleエージェントスキルの構築・テスト・拡張方法を解説",
+      "updated_at": "2026-08-15T06:19:16.968319+00:00"
     },
     {
-      "id": 38985,
-      "title": "エージェント AI のスケーリング: UiPath が AI ハイパーコンピューター上に高性能 GPU プラットフォームを構築した方法",
-      "category": "system",
+      "id": 38914,
+      "title": "制約プログラミングを使用した NHL でのプレーオフ決定シナリオの決定",
+      "category": "ai",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:17:05.591394+00:00"
+      "updated_at": "2026-08-15T06:19:06.306363+00:00"
     },
     {
-      "id": 40047,
-      "title": "クレックナー、ベッカー売却計画で第2四半期損失発生",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:16:56.576950+00:00"
-    },
-    {
-      "id": 38986,
-      "title": "「うるさい隣人」の解決: シャード アーキテクチャがマルチテナント プラットフォームを保護する方法",
-      "category": "system",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:16:47.568820+00:00"
-    },
-    {
-      "id": 40048,
-      "title": "マルセガリア シェフィールドの拡張が英国のステンレス割当の課題に答える",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:16:38.593956+00:00"
-    },
-    {
-      "id": 38780,
-      "title": "フォルクスワーゲン社長「電動化を全力で進めていく」",
+      "id": 38604,
+      "title": "ナショナルグリッドは将来のエネルギー労働力の育成に500万ポンドを約束",
       "category": "decarbonization_ops",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:16:29.596869+00:00"
+      "updated_at": "2026-08-15T06:18:57.245881+00:00"
     },
     {
-      "id": 39584,
-      "title": "専門家のアドバイスに基づいて、安全性と危険からの保護を向上させます",
-      "category": "quality",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:16:20.630485+00:00"
-    },
-    {
-      "id": 39329,
-      "title": "Tenaris が 2026 年の第 2 四半期の業績を発表",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:16:11.617358+00:00"
-    },
-    {
-      "id": 39677,
-      "title": "エムスチールはエティハド鉄道への貢献を通じて国家インフラプロジェクトを支援し続ける",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:16:02.622336+00:00"
-    },
-    {
-      "id": 39145,
-      "title": "Amazon Bedrock AgentCore ハーネスを使用して n8n で本番 AI エージェントを実行する",
+      "id": 38915,
+      "title": "TReNDS が Amazon Bedrock を使用して根本原因分析を自動化する方法",
       "category": "ai",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:15:53.655235+00:00"
+      "updated_at": "2026-08-15T06:18:48.302550+00:00"
     },
     {
-      "id": 40540,
-      "title": "Tenova がドイツの EAF と Hkm に供給",
-      "category": "manufacturing",
+      "id": 38674,
+      "title": "バルト海乾燥指数は111ポイント上昇して2843に上昇",
+      "category": "market",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:15:44.606651+00:00"
+      "updated_at": "2026-08-15T06:18:39.260754+00:00"
     },
     {
-      "id": 39146,
-      "title": "AgentCore でホストされる AI エージェントがローカル MCP ツールにアクセスできるようにするための MCP ブリッジを構築した方法",
+      "id": 38916,
+      "title": "Cohere Health が Amazon Bedrock AgentCore を使用して臨床ポリシーをデジタル化する方法",
       "category": "ai",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:15:35.654299+00:00"
+      "updated_at": "2026-08-15T06:18:30.370301+00:00"
     },
     {
-      "id": 39727,
-      "title": "アメリカ大陸での接続性の拡大: Alisios、Canoa、OlaLuz 海底ケーブルの導入",
+      "id": 38690,
+      "title": "オーストラリアの規制当局、ダーウィンのLNGプラントに対する汚染規制の強化を求める",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:18:21.431561+00:00"
+    },
+    {
+      "id": 38996,
+      "title": "ゼロコード、低コストのデータ取り込み: 新しい BigQuery DTS 機能",
       "category": "system",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:15:26.592034+00:00"
+      "updated_at": "2026-08-15T06:18:12.356407+00:00"
     },
     {
-      "id": 39070,
-      "title": "Mobileye が Amazon Bedrock AgentCore を使用してサポート業務をどのように変革したか",
+      "id": 38605,
+      "title": "ヴェオリア、新しい二酸化炭素回収技術を「英国初」で試験導入",
+      "category": "decarbonization_ops",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:18:03.524305+00:00"
+    },
+    {
+      "id": 39654,
+      "title": "エマソン、AI スケールのデータセンター向け自動化ポートフォリオを備えたプラットフォームを発表",
+      "category": "smart_factory",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:17:54.682469+00:00"
+    },
+    {
+      "id": 39655,
+      "title": "実稼働前にアジリティを構築する利点",
+      "category": "smart_factory",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:17:36.232899+00:00"
+    },
+    {
+      "id": 38692,
+      "title": "イラン戦争が英国の経済成長をどう決めるか",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:17:27.255479+00:00"
+    },
+    {
+      "id": 39472,
+      "title": "Meta が Muse Glimmer とともに戻ってきました: ローカル、エージェント、マルチモーダル、オープンソース",
       "category": "ai",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:15:17.646554+00:00"
+      "updated_at": "2026-08-15T06:17:18.226862+00:00"
     },
     {
-      "id": 39763,
-      "title": "Daybreak モデルが AWS で利用可能になりました",
+      "id": 38693,
+      "title": "フーシ派の脅威が続く中、バブ・エル・マンデブでダークタンカーの通過が急増",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:17:09.282207+00:00"
+    },
+    {
+      "id": 39537,
+      "title": "ヴァージン アトランティック航空、ChatGPT Work でカスタマー ジャーニーを強化",
       "category": "ai",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:15:08.595775+00:00"
+      "updated_at": "2026-08-15T06:17:00.225064+00:00"
     },
     {
-      "id": 39071,
-      "title": "LendingTree が Amazon Bedrock 上にマルチエージェント住宅ローンアシスタントを構築した方法",
+      "id": 38606,
+      "title": "ドイツのクリーンテクノロジー導入が2030年目標に遅れ",
+      "category": "decarbonization_ops",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:16:51.235381+00:00"
+    },
+    {
+      "id": 39538,
+      "title": "Zapier が ChatGPT Work を使用して中核的なマーケティング プロセスをどのように変革したか",
       "category": "ai",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:14:59.656860+00:00"
+      "updated_at": "2026-08-15T06:16:42.278199+00:00"
     },
     {
-      "id": 9969,
-      "title": "CISA、悪用された既知の脆弱性 3 件をカタログに追加",
+      "id": 38694,
+      "title": "マドゥロ政権崩壊から7カ月、大手石油会社は依然としてベネズエラに関与しない",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:16:33.432080+00:00"
+    },
+    {
+      "id": 39539,
+      "title": "ChatGPT Business にプレミアム シートが登場",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:16:24.242564+00:00"
+    },
+    {
+      "id": 38695,
+      "title": "トランプ大統領のイラン政策反転で欧州のガソリン価格が暴落",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:16:15.282463+00:00"
+    },
+    {
+      "id": 39368,
+      "title": "清水建設、数千万件の現場データの「分析が終わらない」　オンプレの壁をどう越えた？",
+      "category": "policy",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:16:06.231997+00:00"
+    },
+    {
+      "id": 38607,
+      "title": "ブランドはどうすれば ASA に違反せずに環境に配慮した主張を行うことができるでしょうか?",
+      "category": "decarbonization_ops",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:15:57.241283+00:00"
+    },
+    {
+      "id": 39370,
+      "title": "「ネットワーク機器の保守費“億超え”」「障害にすぐ気付けない」を解消　病院は何を変えた？",
+      "category": "policy",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:15:48.233828+00:00"
+    },
+    {
+      "id": 38696,
+      "title": "米国がイラン紛争から簡単に離脱できない理由",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:15:39.244947+00:00"
+    },
+    {
+      "id": 39371,
+      "title": "Claude Code運用を一元化する「Claude apps Gateway」発表 企業利用をどう管理する？",
+      "category": "policy",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:15:30.242897+00:00"
+    },
+    {
+      "id": 38717,
+      "title": "パブリック データとプライベート データの統合: Spanner の Data Commons を使用してナレッジ グラフを拡張する",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:15:21.249818+00:00"
+    },
+    {
+      "id": 39372,
+      "title": "「Apex人材が少ない」 Salesforce導入企業の約9割で「属人化」が課題に",
+      "category": "policy",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:15:12.236508+00:00"
+    },
+    {
+      "id": 38718,
+      "title": "Cortex Framework v7 が GA になりました: SAP の運用を中断することなくエージェント ワークフローを構築",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:15:03.226852+00:00"
+    },
+    {
+      "id": 39477,
+      "title": "最先端のサイバーモデルをより信頼できる手に委ねる",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:14:54.225873+00:00"
+    },
+    {
+      "id": 38697,
+      "title": "ジョージアのクレヴィ製油所がロシア産原油をカザフスタン産、リビア産原油に置き換える",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:14:45.250147+00:00"
+    },
+    {
+      "id": 39478,
+      "title": "サイバー防御の枠が狭まる中、Daybreak を拡大",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:14:36.231186+00:00"
+    },
+    {
+      "id": 38666,
+      "title": "Amazon Bedrock の自動推論ポリシーの改良",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:14:27.263317+00:00"
+    },
+    {
+      "id": 39473,
+      "title": "知識の蒸留を大規模に実行できるほど安価にする",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:14:18.228277+00:00"
+    },
+    {
+      "id": 38608,
+      "title": "レポート: 世界の車両の 70% 以上が 2025 年に新たにガソリンまたはディーゼルを購入しませんでした",
+      "category": "decarbonization_ops",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:14:09.241095+00:00"
+    },
+    {
+      "id": 39480,
+      "title": "Model ML は GPT-5.6 Sol を使用して財務業務をより効率的に完了します",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:14:00.230514+00:00"
+    },
+    {
+      "id": 38698,
+      "title": "なぜ中国とロシアは米国・イラン戦争の影から姿を現したのか?",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:13:51.252061+00:00"
+    },
+    {
+      "id": 39516,
+      "title": "#StopRansomware: Gunra ランサムウェア",
       "category": "security",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:14:50.649058+00:00"
+      "updated_at": "2026-08-15T06:13:42.311924+00:00"
     },
     {
-      "id": 39252,
-      "title": "労働組合、ポートヘッドランドでのBHPストライキの一部を中止",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:14:41.597330+00:00"
-    },
-    {
-      "id": 36129,
-      "title": "Johnson Controls C-CURE 9000 および Victor アプリケーション サーバー",
-      "category": "security",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:14:32.638526+00:00"
-    },
-    {
-      "id": 39253,
-      "title": "グリーンスチールメーカー Hydnum が 1 億 5,000 万ユーロの投資を確保",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:14:23.565426+00:00"
-    },
-    {
-      "id": 39683,
-      "title": "エースについて考えていますか？少ないトークンで実現できる",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:14:14.575684+00:00"
-    },
-    {
-      "id": 39254,
-      "title": "アルセロルミタル、フォス・シュル・メールでBFを再開",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:14:05.600616+00:00"
-    },
-    {
-      "id": 39678,
-      "title": "Smoltek、Heraeus の高度な超低イリジウム電解技術",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:13:56.592471+00:00"
-    },
-    {
-      "id": 39255,
-      "title": "バンク・オブ・アメリカ、マイニング取引のシェア拡大を目指しワシントン州へ向かう",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:13:47.591178+00:00"
-    },
-    {
-      "id": 40049,
-      "title": "溶接自動化計画のシミュレーション",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:13:38.589877+00:00"
-    },
-    {
-      "id": 39330,
-      "title": "トルコとのFTA：ウクライナの鉄鋼製品に何が起こるか",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:13:29.602397+00:00"
-    },
-    {
-      "id": 39684,
-      "title": "エンタープライズ ワークロード向けの AWS 向け Anthropic Claude アプリ ゲートウェイのデプロイ",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:13:20.652544+00:00"
-    },
-    {
-      "id": 38865,
-      "title": "WENZEL、ハインリッヒ・シュナイダー博士の PMS マルチセンサー測定機でポートフォリオを拡大",
-      "category": "quality",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:13:11.599319+00:00"
-    },
-    {
-      "id": 39679,
-      "title": "供給逼迫と輸入コスト上昇の中で米国の酸化鉄価格が上昇",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:13:02.629291+00:00"
-    },
-    {
-      "id": 38866,
-      "title": "Aberlink CMM が FeTu の次世代タービン開発をサポート",
-      "category": "quality",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:12:53.582998+00:00"
-    },
-    {
-      "id": 39728,
-      "title": "Database Migration Service で Gemini を使用して PostgreSQL の移行を加速する",
+      "id": 38719,
+      "title": "AI による現実世界のメインフレームのモダナイゼーション: メインフレームからクラウドへの安全でスケーラブルなパス",
       "category": "system",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:12:44.583700+00:00"
-    },
-    {
-      "id": 39192,
-      "title": "タウバーアーロンズ、南カリフォルニアで2つのオークションを実施",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:12:35.603205+00:00"
-    },
-    {
-      "id": 39729,
-      "title": "Looker のセマンティック レイヤーは、ユーザーの信頼のために Gemini Enterprise データを管理します",
-      "category": "system",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:12:26.635098+00:00"
-    },
-    {
-      "id": 39193,
-      "title": "バージニア・スチール、従業員を3倍にする計画を発表",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:12:17.678044+00:00"
-    },
-    {
-      "id": 39730,
-      "title": "平文の PQC: Google Cloud のポスト量子暗号ロードマップ",
-      "category": "system",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:12:08.804494+00:00"
-    },
-    {
-      "id": 39194,
-      "title": "SPS企業がJemison Metalsを買収へ",
-      "category": "manufacturing",
       "importance": 50,
-      "summary": "SPS Companies Inc.がBirminghamのJemison Metalsを買収する契約を締結した。",
-      "updated_at": "2026-08-15T03:11:59.920449+00:00"
+      "summary": "AIを活用し、メインフレームを安全かつスケーラブルにクラウドへ移行する手法を紹介",
+      "updated_at": "2026-08-15T06:13:33.280886+00:00"
     },
     {
-      "id": 39685,
-      "title": "First Orion は Amazon Nova Act を使用して QA 自動化を加速します",
+      "id": 39481,
+      "title": "テキサス州の責任ある AI インフラストラクチャに関する OpenAI のアボット知事への書簡",
       "category": "ai",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:11:49.444248+00:00"
+      "updated_at": "2026-08-15T06:13:22.434865+00:00"
     },
     {
-      "id": 39256,
-      "title": "カザフスタン：レアメタルに関する韓国との協力拡大",
-      "category": "manufacturing",
+      "id": 38675,
+      "title": "ユーロ圏の製造業の伸びは4月以来の高水準に強化",
+      "category": "market",
+      "importance": 60,
+      "summary": "ユーロ圏製造業PMIが7月に51.9に上昇し、4月以来最高の改善を示した。",
+      "updated_at": "2026-08-15T06:13:13.428130+00:00"
+    },
+    {
+      "id": 39656,
+      "title": "OSHA コンプライアンス ボックスがチェックされていてもプロセス安全管理プログラムが失敗する理由",
+      "category": "smart_factory",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:11:40.411591+00:00"
+      "updated_at": "2026-08-15T06:13:03.271945+00:00"
     },
     {
-      "id": 39686,
-      "title": "Pixieset は Amazon Bedrock で適切な問題を解決し、AI 機能の採用率 35% をどのように達成したか",
-      "category": "ai",
+      "id": 38676,
+      "title": "中国工場活動の伸びは4カ月ぶりの低水準に",
+      "category": "market",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:11:31.458609+00:00"
+      "updated_at": "2026-08-15T06:12:54.292843+00:00"
     },
     {
-      "id": 39195,
-      "title": "コンパクトで多種類の金属を切断できる可変速ソー",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:11:22.421897+00:00"
-    },
-    {
-      "id": 39687,
-      "title": "ONESTRUCTION が AWS GenAIIC を使用して石垣-IDS 基盤モデルを構築した方法",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:11:13.544750+00:00"
-    },
-    {
-      "id": 39196,
-      "title": "大型ストックに対応するフロアスタンディングバンドソー",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:11:04.614085+00:00"
-    },
-    {
-      "id": 39725,
-      "title": "ミラホルモンモニター、ミラAndroidアプリ",
-      "category": "security",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:10:55.743443+00:00"
-    },
-    {
-      "id": 40563,
-      "title": "ラブホテルでバスローブ姿の喫煙会見　男性職員を停職６カ月の懲戒処分―秋田県",
-      "category": "news",
-      "importance": 64,
-      "summary": "拝見でバスローブ姿の喫煙ヒアリング 男性職員を停止職６カ月の戒厳措置―秋田県",
-      "updated_at": "2026-08-15T03:10:46.791714+00:00"
-    },
-    {
-      "id": 38781,
-      "title": "「非常に残念」：裁判所が法的異議申し立てを却下した後、ガトウィック空港が第2滑走路開発に着手",
-      "category": "decarbonization_ops",
-      "importance": 50,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:10:32.975216+00:00"
-    },
-    {
-      "id": 39726,
-      "title": "Pulsetto 迷走神経刺激装置",
-      "category": "security",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:10:24.239614+00:00"
-    },
-    {
-      "id": 38782,
-      "title": "Lidl GB、Olio 余剰食品パートナーシップを約 200 店舗に拡大",
-      "category": "decarbonization_ops",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:10:15.178060+00:00"
-    },
-    {
-      "id": 39688,
-      "title": "AMIE を専門家レベルの視聴覚臨床相談に向けて推進",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:10:06.190255+00:00"
-    },
-    {
-      "id": 38987,
-      "title": "ミレンディルは、トレーニング前後のアプリケーションに AI ハイパーコンピューターの TPU と GPU を利用します",
+      "id": 39521,
+      "title": "AWS ウィークリーまとめ: AWS Heroes Summit、Amazon Bedrock、Dogwood、Kiro Crew のウェブ検索など (2026 年 8 月 10 日)",
       "category": "system",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:09:57.184054+00:00"
+      "updated_at": "2026-08-15T06:12:45.402661+00:00"
     },
     {
-      "id": 39935,
-      "title": "【例外適用を】Windows 11にゼロデイ攻撃リスク 2026年8月更新プログラム「KB5121003」の内容と注意点",
+      "id": 38677,
+      "title": "ICTSI 2026 年上半期の経常純利益は 25% 増の 6 億 469 万米ドル",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:12:36.492073+00:00"
+    },
+    {
+      "id": 39517,
+      "title": "GKE の ClusterNetworkPolicy: マイクロサービスの制御と自律性のバランスをとる",
+      "category": "system",
+      "importance": 50,
+      "summary": "GKEのClusterNetworkPolicyでマイクロサービス制御と自律性のバランスを実現",
+      "updated_at": "2026-08-15T06:12:27.631208+00:00"
+    },
+    {
+      "id": 38679,
+      "title": "ハンファ、米国のコスト上昇と受注減少でフィラデルフィア造船所の利益を遅らせる",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:12:16.467312+00:00"
+    },
+    {
+      "id": 39518,
+      "title": "Google が The Forrester Wave™: AI プラットフォーム、2026 年第 3 四半期のリーダーに選出",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:12:07.442800+00:00"
+    },
+    {
+      "id": 38680,
+      "title": "Sulnox: 第 1 四半期取引最新情報: 収益は 2025 年第 1 四半期と比べて 54% 増加",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:11:58.449191+00:00"
+    },
+    {
+      "id": 39519,
+      "title": "Malachyte がマネージド型リアルタイム AI で小売業のコールドスタート問題を解決する方法",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:11:49.449484+00:00"
+    },
+    {
+      "id": 38681,
+      "title": "CMB.TECHがVLCCを販売",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:11:40.451098+00:00"
+    },
+    {
+      "id": 39520,
+      "title": "WPP が AI マーケティングのためのプラットフォームとデータ エンジニアリングをどのように運用するか",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:11:31.450785+00:00"
+    },
+    {
+      "id": 38682,
+      "title": "ISM コースターとミニバルカー – 第 31 週目",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:11:22.451129+00:00"
+    },
+    {
+      "id": 39474,
+      "title": "低遅延の多言語音声エージェントの構築: NVIDIA Magpie TTS によるオープン ウェイトと完全な展開制御",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:11:13.493183+00:00"
+    },
+    {
+      "id": 38683,
+      "title": "Golar LNG、新たに6億ドルのシニア担保リボルビング・クレジット・ファシリティを発表",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:11:04.627504+00:00"
+    },
+    {
+      "id": 39475,
+      "title": "nOps が Amazon Bedrock AgentCore を使用して FinOps エージェントを 75% 高速に出荷した方法",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:10:55.537426+00:00"
+    },
+    {
+      "id": 38667,
+      "title": "数週間から数分へ: Formula 1® が AWS でエージェント AI を使用してデータ運用を加速する方法",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:10:46.522676+00:00"
+    },
+    {
+      "id": 39462,
+      "title": "シュナイダーエレクトリックのモーター制御はワイドミュラーのコネクタを使用して配線時間を 75% 節約します",
+      "category": "smart_factory",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:10:37.464557+00:00"
+    },
+    {
+      "id": 38699,
+      "title": "トランプ大統領、石油会社にガソリン価格値下げ命令、シェブロンCEOも標的に",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:10:28.471519+00:00"
+    },
+    {
+      "id": 39476,
+      "title": "SageMaker AI を使用して Amazon EKS でインタラクティブ IDE を実行し、AI ワークフローを強化します",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:10:19.531584+00:00"
+    },
+    {
+      "id": 38700,
+      "title": "ウクライナのドローン攻撃でロシア最大のオンライン小売業者が海外に進出",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:10:10.459843+00:00"
+    },
+    {
+      "id": 39479,
+      "title": "AI ネイティブの財務機能の構築で学んだこと",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:10:01.457851+00:00"
+    },
+    {
+      "id": 38701,
+      "title": "原油価格高騰の中、大手石油会社が記録的な利益を報告",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:09:52.468028+00:00"
+    },
+    {
+      "id": 39657,
+      "title": "デジタル化により半導体の設計、製造、運用が結びつく",
+      "category": "smart_factory",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:09:43.461585+00:00"
+    },
+    {
+      "id": 38702,
+      "title": "ウクライナのドローン作戦によりロシアの石油精製は24年ぶりの低水準に",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:09:34.467587+00:00"
+    },
+    {
+      "id": 39444,
+      "title": "Java 用 GitHub Copilot SDK の使用",
+      "category": "dev",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:09:25.528808+00:00"
+    },
+    {
+      "id": 38703,
+      "title": "ロシアは兵士、石油、時間が不足している",
+      "category": "market",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:09:16.455555+00:00"
+    },
+    {
+      "id": 39658,
+      "title": "クイックテイク: なぜ製薬会社は他の企業のように自動化できないのか",
+      "category": "smart_factory",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:09:07.444812+00:00"
+    },
+    {
+      "id": 38859,
+      "title": "散乱光技術を使用した高性能電池生産のためのローラー表面の測定",
+      "category": "quality",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:08:58.478904+00:00"
+    },
+    {
+      "id": 39529,
+      "title": "デジ庁が個人情報漏えいを公表　「対象者を絞る」だけの処理はなぜ失敗した？",
       "category": "policy",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:09:48.222041+00:00"
+      "updated_at": "2026-08-15T06:08:49.448294+00:00"
     },
     {
-      "id": 38783,
-      "title": "実際: 企業がエネルギーコストと戦うために電化を進める 5 つの方法",
-      "category": "decarbonization_ops",
+      "id": 38860,
+      "title": "Allient、超薄型 ThruSight-Theta 精密回転ステージを発売",
+      "category": "quality",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:09:39.192026+00:00"
+      "updated_at": "2026-08-15T06:08:40.476363+00:00"
     },
     {
-      "id": 39952,
-      "title": "圧力を受ける経済: アナリストが 2026 年の GDP 予測を修正する理由",
+      "id": 39570,
+      "title": "エージェント型モバイルアプリ開発のための開発者デバイスプラットフォームの紹介",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:08:31.462893+00:00"
+    },
+    {
+      "id": 38861,
+      "title": "モデルベースの特性: デジタル スレッドでの永続的な識別の有効化",
+      "category": "quality",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:08:22.570667+00:00"
+    },
+    {
+      "id": 33103,
+      "title": "SSA-434797 V1.0: シーメンス製品に影響を及ぼす OpenSSL のバッファ オーバーフローの脆弱性",
       "category": "manufacturing",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:09:30.265434+00:00"
+      "updated_at": "2026-08-15T06:08:13.708272+00:00"
     },
     {
-      "id": 39136,
-      "title": "監視と計画的な管理による持続可能な製造",
+      "id": 38979,
+      "title": "フューチャー モード パート 2: エージェント ブラウジングを保護するための基盤",
+      "category": "system",
+      "importance": 50,
+      "summary": "フューチャー モードパート2は、エージェントブラウジングを保護する基盤を紹介する。",
+      "updated_at": "2026-08-15T06:08:04.847762+00:00"
+    },
+    {
+      "id": 33109,
+      "title": "SSA-827968 V1.2 (最終更新: 2026-05-12): RUGGEDCOM APE1808 デバイスの V26.2.0 より前の Nozomi Guardian/CMC の脆弱性",
       "category": "manufacturing",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:09:21.345171+00:00"
+      "updated_at": "2026-08-15T06:07:55.060315+00:00"
     },
     {
-      "id": 39953,
-      "title": "ドイツのザルツギッター、地政学的な不確実性の中、2026年上半期に純利益を回復",
+      "id": 38908,
+      "title": "LFM2.5-2.6B を使用してローカル エージェントをあらゆる場所に展開",
+      "category": "ai",
+      "importance": 60,
+      "summary": "LFM",
+      "updated_at": "2026-08-15T06:07:46.164939+00:00"
+    },
+    {
+      "id": 33649,
+      "title": "SSA-104023 V1.0: RUGGEDCOM APE1808 デバイス上のパロアルトネットワーク PAN-OS における複数の脆弱性",
       "category": "manufacturing",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:09:12.404218+00:00"
+      "updated_at": "2026-08-15T06:07:37.445813+00:00"
     },
     {
-      "id": 39072,
-      "title": "Amazon SageMaker Python SDK の LLM 最適化統合",
-      "category": "ai",
+      "id": 38980,
+      "title": "Target が Spanner Graph を使用して小売業の発見を強化し、データベースのメンテナンスを 50% 削減する方法",
+      "category": "system",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:09:03.271209+00:00"
+      "updated_at": "2026-08-15T06:07:28.452558+00:00"
     },
     {
-      "id": 40052,
-      "title": "RingCentral がエンジニアリングから運用まで AI ネイティブの作業を構築する方法",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:08:54.219522+00:00"
-    },
-    {
-      "id": 39073,
-      "title": "Amazon Bedrock と AWS Lambda を使用したエージェント アプリ デプロイヤーの構築",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:08:45.309749+00:00"
-    },
-    {
-      "id": 40384,
-      "title": "注意喚起: 2026年8月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)",
-      "category": "security",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:08:36.265436+00:00"
-    },
-    {
-      "id": 39074,
-      "title": "Amazon Bedrock の自動推論ポリシーのエージェント スキル",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:08:27.380153+00:00"
-    },
-    {
-      "id": 39847,
-      "title": "ネットワーク構築・運用の“脱・常駐化”で工数6割削減　「白浜シンポジウム」はどう実現した？",
-      "category": "policy",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:08:18.409917+00:00"
-    },
-    {
-      "id": 39075,
-      "title": "OpenTelemetry と Amazon CloudWatch を使用して Amazon Bedrock 上の Codex の可視性を構築する",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:08:09.523809+00:00"
-    },
-    {
-      "id": 39848,
-      "title": "「激混み」新宿でも通信が途切れない はとバスは「車内のフリーWi-Fi」をどう実現？",
-      "category": "policy",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:08:00.402006+00:00"
-    },
-    {
-      "id": 38911,
-      "title": "単一アクションを超えたエージェントの動作とコストの制御: Amazon Bedrock AgentCore の新機能",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:07:51.296763+00:00"
-    },
-    {
-      "id": 39849,
-      "title": "AI普及で20代の14％が「すでに転職」 エンジニアが最も伸ばしたいスキル、1位は？",
-      "category": "policy",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:07:42.264982+00:00"
-    },
-    {
-      "id": 38912,
-      "title": "AgentCore ゲートウェイで AI トラフィックのレート制限を構成する",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:07:33.357518+00:00"
-    },
-    {
-      "id": 39850,
-      "title": "「PRが増えた＝開発生産性が上がった」ではない AI時代のDevExを測る「3つの視点」",
-      "category": "policy",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:07:24.403495+00:00"
-    },
-    {
-      "id": 38913,
-      "title": "Amazon Bedrock AgentCore の一時ポリシーによる AI エージェントの保護",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:07:15.289652+00:00"
-    },
-    {
-      "id": 39968,
-      "title": "支援から実行まで: 企業が AI を活用する方法",
-      "category": "ai",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:07:06.255805+00:00"
-    },
-    {
-      "id": 39137,
-      "title": "ハイドナム・スチール、スペイン初のクリーン・スチール・プラントに1億5,000万ユーロを確保",
+      "id": 33651,
+      "title": "SSA-392349 V1.1 (最終更新: 2026-07-14): 産業用デバイスにおけるサービス拒否の脆弱性",
       "category": "manufacturing",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:06:57.212633+00:00"
+      "updated_at": "2026-08-15T06:07:19.435005+00:00"
     },
     {
-      "id": 39954,
-      "title": "ウズベキスタン：ウズメトコンビナートと中国鋼鉄が新たな高炉建設について協議",
+      "id": 38981,
+      "title": "データベース オペレーション エージェントの紹介: 自律型データベース管理の未来",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:07:10.481879+00:00"
+    },
+    {
+      "id": 39662,
+      "title": "SSA-069220 V1.0: V2606 より前の Simcenter Nastran におけるスタック オーバーフローの脆弱性",
       "category": "manufacturing",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:06:48.204538+00:00"
+      "updated_at": "2026-08-15T06:07:01.472347+00:00"
     },
     {
-      "id": 38897,
-      "title": "ヨーロッパで生き残れるのはEafだけ：Pwc",
+      "id": 38982,
+      "title": "ドイツ銀行が API 対応エコシステムで俊敏性をいかに実現したか",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:06:52.420037+00:00"
+    },
+    {
+      "id": 39663,
+      "title": "SSA-077553 V1.0: Siemens License Server (SLS) の複数の脆弱性",
       "category": "manufacturing",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:06:39.187507+00:00"
+      "updated_at": "2026-08-15T06:06:43.425076+00:00"
     },
     {
-      "id": 40245,
-      "title": "ウクライナ：ロシアによる工業用地攻撃でザポリーシュスタル従業員死亡",
+      "id": 38983,
+      "title": "複数の結果セット: Database Migration Service が SQL サーバーから PostgreSQL への変換を自動化する方法",
+      "category": "system",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:06:34.439871+00:00"
+    },
+    {
+      "id": 39664,
+      "title": "SSA-127084 V1.0: RUGGEDCOM APE1808 デバイス上の Fortigate NGFW に複数の脆弱性",
       "category": "manufacturing",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:06:30.216417+00:00"
+      "updated_at": "2026-08-15T06:06:25.440725+00:00"
     },
     {
-      "id": 38898,
-      "title": "Steelonthenet.com の洞察レポート: 従業員数ではなく、固定費の単位: 製鉄所がサイクルをどうやって生き延びるか",
+      "id": 39143,
+      "title": "Amazon Bedrock AgentCore を使用した自動化された Web インサイト抽出",
+      "category": "ai",
+      "importance": 20,
+      "summary": "（要約を生成できませんでした）",
+      "updated_at": "2026-08-15T06:06:16.487319+00:00"
+    },
+    {
+      "id": 39665,
+      "title": "SSA-138516 V1.0: Parasolid X_T ファイル解析における境界外読み取りの脆弱性",
       "category": "manufacturing",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:06:21.201553+00:00"
+      "updated_at": "2026-08-15T06:06:07.561252+00:00"
     },
     {
-      "id": 39949,
-      "title": "本体2",
-      "category": "policy",
+      "id": 38771,
+      "title": "AI が生成した 1 つの巨大なプル リクエストをレビュー可能なスタックに変換します",
+      "category": "dev",
       "importance": 20,
       "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:06:12.190946+00:00"
-    },
-    {
-      "id": 39063,
-      "title": "欧州国産鉄鋼厚板価格は夏場も輸入低迷下で安定",
-      "category": "manufacturing",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:06:03.199329+00:00"
-    },
-    {
-      "id": 39950,
-      "title": "本体3",
-      "category": "policy",
-      "importance": 20,
-      "summary": "（要約を生成できませんでした）",
-      "updated_at": "2026-08-15T03:05:54.170607+00:00"
+      "updated_at": "2026-08-15T06:05:58.676469+00:00"
     }
   ]
 }
