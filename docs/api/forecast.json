@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T03:13:09+00:00",
+  "generated_at": "2026-08-18T06:13:28+00:00",
   "latest": {
     "report_date": "2026-08-18",
     "executive_summary": "- AIと自動化の標準化による業務効率の加速: Google AI StudioやMicrosoft Azure AI Factory、Blender 3.5のAI機能が企業のチャットボットやクリエイティブワークフローを標準化し、業務プロセスの自動化と生産性向上を促進します。\n- エッジ・クラウドハードウェアとソフトウェア最適化によるリアルタイム性能の向上: Amazon EC2 G7インスタンス、AWS Lambda MicroVMs、Microsoft Edge WebAssembly最適化などが、レンダリング速度・メモリ使用率・IoTコールドスタート時間を短縮し、低レイテンシーアプリケーションの実現を支援します。\n- 迅速なセキュリティ対策とコンプライアンスツールの統合: ZoomやMicrosoft Edgeの即時パッチ配信、GHGPツールによるScope3報告時間短縮などが、セキュリティリスクと規制遵守の迅速化を実現し、企業のリスク管理を強化します。",
