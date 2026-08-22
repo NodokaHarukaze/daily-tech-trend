@@ -1,7 +1,391 @@
 {
-  "generated_at": "2026-08-21T21:45:59+00:00",
+  "generated_at": "2026-08-22T02:21:01+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 42023,
+      "title": "プリヤンカー・チョープラー・ジョナス、愛とカーストの不平等についての映画製作について語る",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42024,
+      "title": "竜巻がニューヨークとデラウェア州に上陸",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42025,
+      "title": "ハリー王子とメーガン妃のアメリカン・ドリームはどうなったのでしょうか？",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42026,
+      "title": "ローゼンバーグ氏：ガソリンは不足しているが、ロシア人は戦争の影響が増大していると感じており、愛国心は欠けている",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42027,
+      "title": "イスラエルはヨルダン川西岸の再建を目指して入植地をどのように拡大しているか",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42028,
+      "title": "「命の尊さ、伝えていく」　３児亡くした母、事故２０年前に―福岡",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42029,
+      "title": "「Google Chrome」で15件の脆弱性修正、「難しい」ものも2件／Windows環境にはv151.0.7922.169/.170が展開中",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42030,
+      "title": "「Firefox 154」が正式公開 ～Windowsで「GeForce NOW」に対応、アプリアイコンの変更も／ローカルネットワークアクセスなどでセキュリティ強化、58件の脆弱性修正",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42031,
+      "title": "無料メーラー「Thunderbird」v154.0が公開 ～Microsoft Graphを利用した接続が可能に／55件の脆弱性を修正、全ウィンドウを閉じたらタスクトレイに格納するオプションも",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42032,
+      "title": "登場から約1年、「Excel」の「=COPILOT()」関数が2026年9月14日で廃止／一般提供に至らないままの姿を止める",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42033,
+      "title": "AI駆動開発でモックを仕様にする ～自分たちのチームのAIは、誰が考えるために速いのか【開発者と読むAIの世界】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42034,
+      "title": "ASUSの14インチChromebookが44,800円！Amazonでセール中【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42035,
+      "title": "TP-LinkのスイッチングハブがAmazonでセール中！2.5Gbps×8ポートモデルが11,815円【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42036,
+      "title": "「Claude」が「Gmail」のメール送信に対応、「Google ドライブ」のファイル操作も／すべての有料プランでサポート。Web、デスクトップの両方で利用可能",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42037,
+      "title": "Windows 11の2026年8月セキュリティパッチに問題があるか、一部ゲームが動作しないとの報告／RGB照明機能を備えたデバイスがか。Microsoftが調査中",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42038,
+      "title": "Microsoftのリモートデスクトップ管理ツール「RDCMan」がv3.20に、「Dev Box」に対応／大量の端末をリモート管理するユーザーに愛用されているSysinternalsツール",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42039,
+      "title": "土屋鞄 objcts.io、Apple Watchバンド二重巻きタイプ",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42040,
+      "title": "千葉 路上の車両の所有者への引き渡し 警察などに協力求める",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42041,
+      "title": "ICC赤根智子所長「『法監督』の終わりの始まりとさせない」",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42042,
+      "title": "東海から九州中心に気温上昇 酷暑日予想も 広範囲で大気不安定",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42043,
+      "title": "「Pythonを超えた人気言語」「AI時代の新たな領域FDE」、急速に変わる開発現場のいま",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42044,
+      "title": "情シスの8割が直面する「長期休暇明けに“残業の山”」問題　なくすには？",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42045,
+      "title": "デルタックス、ジョージア州に北米本社を設立",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42046,
+      "title": "サパ、1億6,300万ドルの拡張を発表",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42047,
+      "title": "BHPとその新最高経営責任者は歴史を繰り返さないようにできるだろうか?",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42048,
+      "title": "バルカン鋼鉄市場：価格、需要、貿易見通し",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42049,
+      "title": "イタリア・スチール・グループ、所有権争いの中で旧イルバ資産に入札",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42050,
+      "title": "パキスタンの石油精製業者は8月に18万5000トンの重油を輸出する予定",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42051,
+      "title": "エリザベス王女エネルギー島の基礎が無事完成",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42052,
+      "title": "2026 年上半期業績: ボスカリスは厳しい市場環境の中でも堅実な業績を達成",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42053,
+      "title": "パナマ運河、運河流域の降水量減少に対処するために追加措置を採用",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42054,
+      "title": "Xeneta 海上コンテナ輸送市場の毎週の最新情報 – 21.08.26",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42055,
+      "title": "VHBS 新しい ConTex コンテナ船タイムチャーター評価指数第 34 週",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42056,
+      "title": "高度な配送と取引 – 週間配送市場レポート 2026 年第 33 週～第 34 週",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42057,
+      "title": "ブレーメンの港は、2026 年上半期に貨物処理量の大幅な増加を記録",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42058,
+      "title": "アフィニティ・タンカー・ウィークリー、2026 年 8 月 21 日",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42059,
+      "title": "GMS 第 34 週 – 制裁の織機、船体",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42060,
+      "title": "ポート・ヒューストンのクロウリー、新しい週次配送サービスで中米と米国湾岸を結ぶ",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42061,
+      "title": "ノーチラス、海事専門家へのステナラインへの多額の投資を歓迎",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42062,
+      "title": "ギブソンタンカーレポート – Crossed Wakes",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42063,
+      "title": "Best Oasis 週刊リサイクル市場レポート、2026 年 8 月 21 日",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42064,
+      "title": "Odfjell SE 2Q26: 好調な財務結果",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42065,
+      "title": "新しい生物多様性協定が海運にとって何を意味するか",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42066,
+      "title": "Cavotec、インド初の自動係留システムの納入注文に署名",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42067,
+      "title": "海洋外交は開会前から始まる",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42068,
+      "title": "MED を修正する最新の実施規則 (EU) 2026/1434: 2026 年 8 月 31 日から施行",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42069,
+      "title": "新開発液冷電池システム「AQUBE」が初の商用受注を獲得しました。",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
+    {
+      "id": 42070,
+      "title": "中国の新5カ年計画は国家をピークオイルに備える",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T00:01:11.853970+00:00"
+    },
     {
       "id": 41912,
       "title": "エチオピア、ティグレの聖母マリア祭り、ドローン攻撃の懸念で中止",
@@ -414,390 +798,6 @@
       "id": 41963,
       "title": "未来の選択肢を、東京都と見つけよう　夫婦のコミュニケーションをテーマにした「不妊・不育おしゃべり会」を開催します！",
       "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41964,
-      "title": "練馬城址公園（石神井川より南側のエリア）の整備内容に関するオープンハウスを開催します",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41965,
-      "title": "洲ゴルフリンクス一般開放デー「わかすの日」10月3日、4日の2日間開催決定！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41967,
-      "title": "令和8年8月千葉豪雨に係る普通交付税（9月定例交付分）の繰上げ交付",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41968,
-      "title": "情報通信審議会 電気通信事業政策部会 接続政策委員会　接続料の算定等に関するワーキンググループ（第8回）配布資料",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41969,
-      "title": "共創PFキャンプ道東～ポータルDXのいまを知る編～を開催しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41970,
-      "title": "共創PFキャンプinデジタル庁～疲れないDX推進を考える編～を開催しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41971,
-      "title": "令和8年度 病院情報システム等の刷新に向けた協議会の構成員が決定しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41972,
-      "title": "AWS 統合オペレーションでチップのテープアウトを加速",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41973,
-      "title": "AI データセンターにおける業界の 800 VDC への移行にアーク フラッシュの安全性分析が重要である理由",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41974,
-      "title": "利益をもたらす建物: マイクログリッド、ヘッドルーム、収益",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41975,
-      "title": "製造におけるエージェント的 AI: ROI と現実",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41976,
-      "title": "ライン川の断流が続く中、ドイツの鉄鋼業界はインフラ対策を求める",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41977,
-      "title": "欧州の現地鉄鋼厚板市場は夏の景気低迷でほぼ平静。イタリアでさらに高額なオファーが登場",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41978,
-      "title": "夏休みで取引活動が抑制され、欧州長鋼市場は閑散",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41979,
-      "title": "イタリアのフェリエラ・ヴァルシデル社、北イタリア製鉄所で不可抗力を宣言",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41980,
-      "title": "キルギスタン：2026年上半期にウズベキスタンと中国への石炭販売が増加",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41981,
-      "title": "音声認識におけるベンチマーク最適化の測定",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41982,
-      "title": "AWS のエージェント AI で航空機の IFEC 診断を高速化",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41983,
-      "title": "クエリ認識圧縮により Amazon Bedrock の RAG コストを削減",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41984,
-      "title": "Amazon Bedrock AgentCore Gateway を使用して AI エージェント ツールへのアクセスを管理する",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41985,
-      "title": "Agentic Data Operations Platform (ADOP): 数時間にわたるデータ エンジニアリング",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41986,
-      "title": "Atari から EVE Online へ: 15 年にわたるゲームにおける AI 研究の構築",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41987,
-      "title": "モビリティが言語モデルに場所のより深い理解を与える仕組み",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41988,
-      "title": "ウェアラブルセンサーデータから候補バイオマーカーに優先順位を付けるAIツール",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41989,
-      "title": "中国船舶オークション市場月次レポート – 2026 年 7 月",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41990,
-      "title": "米国が「厳しい」経済制裁を警告、イランは「壊滅的な」対応を約束",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41991,
-      "title": "来週のアジア: フィリピンの金利決定とシンガポール、中国、台湾のデータ",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41992,
-      "title": "FX Daily: 自社株買い、ドル安について大騒ぎ",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41993,
-      "title": "MMI 日次鉄鉱石指数レポート 2026 年 8 月 21 日",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41994,
-      "title": "韓国が反発をリードする中、アジア株は主に上昇。日経は週間で損失を確定",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41995,
-      "title": "中東情勢の緊張の中、原油価格は2週間連続の上昇傾向にある",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41996,
-      "title": "船の読み方",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41997,
-      "title": "ワンオーシャン、クラウス・ライマース博士を最高製品・技術責任者に任命",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41998,
-      "title": "DP World、マレーシアに新しい倉庫を開設し、東南アジア全域での契約物流の拡大を加速",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41999,
-      "title": "Olam Agri と Vitol Bunkers がシンガポールで世界初の共同処理 VLSFO バイオバンカリング事業を完了",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42000,
-      "title": "Everllence の 175D エンジンがトゥルキエから沖合タグボートの注文を獲得",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42001,
-      "title": "EcoStone Solutions が船上環境システム向けのメーカーに依存しないサービスを開始",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42003,
-      "title": "イラン合意崩壊とホルムズへの立ち入り禁止が続く中、石油強気派が主導権を握る",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42004,
-      "title": "無視できなくなってきたバッテリーブーム",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42005,
-      "title": "サウジアラビアの地中海からの石油輸出、フーシ派避けの北へのシャトルで急増",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42006,
-      "title": "インドはクリーンパワーを使用よりも早く構築",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42007,
-      "title": "ウクライナのドローン攻撃がロシア奥地のルクオイル製油所を襲う",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42008,
-      "title": "トランプ大統領の「経済Dデー」で賭け金が高まる中、原油価格は100ドルに近づく",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42009,
-      "title": "米国の経済封鎖中、中国のティーポットはイラン石油の先を見据えている",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42010,
-      "title": "アメリカの次の戦略的パートナーは目に見えないところに隠れている",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42011,
-      "title": "インド、太陽光発電の無駄削減に向け電池投資を強化",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42012,
-      "title": "米国の石油掘削業者は原油価格の上昇に伴い反発を予想している",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 42013,
-      "title": "ベネズエラが石油輸出頭打ちに見舞われ、タンカーは1カ月待機",
-      "category": "market",
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-21T21:01:08.701795+00:00"
