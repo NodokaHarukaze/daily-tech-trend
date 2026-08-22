@@ -1,7 +1,95 @@
 {
-  "generated_at": "2026-08-22T05:20:32+00:00",
+  "generated_at": "2026-08-22T08:19:54+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 42087,
+      "title": "「静か、静か、静か！」 ―トランプ大統領が記者たちを黙らせるきっかけは何でしょうか？",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42088,
+      "title": "英国に帰国したハリー王子とメーガン妃は、心に残るブランドを探す",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42089,
+      "title": "カナダ、通商交渉決裂で米国の関税に「1ドル単位」で匹敵すると表明",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42090,
+      "title": "大阪パチンコ店放火５人殺害、死刑執行　高市政権で初―法務省",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42091,
+      "title": "女子ゴルフ 米ツアー第2ラウンド 山下美夢有 5打差で首位守る",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42092,
+      "title": "ホワイトソックス 村上宗隆 無安打もチームはサヨナラ勝ち",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42093,
+      "title": "熊本地震支援 「応援割」念頭に観光需要喚起策 木原官房長官",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42094,
+      "title": "国民民主党 代表選挙が告示 玉木氏と橋本氏が立候補",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42095,
+      "title": "台風20号が発生 先島諸島では土砂災害に警戒を",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42096,
+      "title": "「出社しないとつながりが薄れる」は誤解？　約7700人の追跡調査が示す実態",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
+    {
+      "id": 42097,
+      "title": "世界人道デーにおいても、エムスチール グループは思いやりを原動力とし続けます。⁣",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T06:00:42.422966+00:00"
+    },
     {
       "id": 42071,
       "title": "モディ氏は何年もかけて自分の強力なイメージを構築しましたが、なぜ今、Z 世代のリールを作っているのでしょうか?",
@@ -710,94 +798,6 @@
       "id": 41936,
       "title": "マネーフォワードME、アプリUIを刷新 タブは5点",
       "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41937,
-      "title": "熊本 氷川町 レンコン農家 地震被害で例年より遅い収穫",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41938,
-      "title": "中国 南部の大規模洪水で死者159人に 各地で大雨被害",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41939,
-      "title": "秋篠宮ご夫妻 日本人のパラグアイ移住90周年記念式典に",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41940,
-      "title": "千葉豪雨受け アンダーパスを緊急点検 3か所で異常 国交省",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41941,
-      "title": "内閣改造と党役員人事 来月の見方広がる 鈴木幹事長の続投焦点",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41942,
-      "title": "台風18号 来週 南西諸島に近づくおそれ 今後の情報に注意を",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41943,
-      "title": "栃木4人死亡事故 運転士「急ブレーキかけたが間に合わず」",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41944,
-      "title": "Wi-Fi・防災・暑さ・クマ出没――10の都民向け情報を1枚のマップに「東京マップ」正式公開",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41945,
-      "title": "Anthropic、8月末にもIPO申請書類を公開か 調達額はSpaceXの過去最大に匹敵する米報道",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41946,
-      "title": "SNSのウソ画像、どう見破る？ 熊本県庁やテレビ局も頼る「すごい企業」の正体",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41947,
-      "title": "FANZA、成人向けAI創作・公開サービス「FANZAスタジオ」発表 先行体験は8月24日から",
-      "category": "news",
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-21T21:01:08.701795+00:00"
