@@ -314,3 +314,35 @@
   **他ページからの導線（ナビ・サイトマップ・検索インデックス）**まで確認する。
   このリポジトリではナビが news/forecast/forecast_hits/ops の4テンプレートに直書きされており、
   共通化されていないため4箇所すべてを直す必要がある
+
+---
+
+## 2026-08-23 translate の例外処理でパイプライン全体が停止した件
+
+### 1. except 節の中の print が新たな例外源になる
+- **事象**: `except (RequestException, ValueError) as e: print(f"...title={title!r} err={e}")` の
+  print 自体が `UnicodeEncodeError: 'cp932' codec can't encode character '\xf6'` を投げ、
+  ハンドラの外なので誰も捕捉できずプロセスが死んだ。`run_daily.bat` は rc!=0 で
+  `goto :fail` するため render / git push に到達せず、**サイトが丸1日止まった**
+- **再発防止**: Windows のバッチから実行する Python スクリプトは、
+  冒頭で標準出力を UTF-8 化する（`sys.stdout.reconfigure(encoding="utf-8", errors="replace")`）。
+  `git_auto_push.py` / `feed_recheck.py` は対策済みだったが translate.py だけ漏れていた。
+  **新規スクリプトを bat に追加するときは必ずこの対策を入れる**
+- ストリームを `io.TextIOWrapper` で差し替えると pytest の出力キャプチャを壊すため、
+  `reconfigure()` を使う（差し替え済みストリームでは AttributeError を握りつぶす）
+
+### 2. 「公開の必須要件ではない処理」でパイプラインを止めない
+- **事象**: 翻訳は `COALESCE(title_ja, title)` で参照されており、失敗しても表示は原文になるだけ。
+  にもかかわらず bat が rc!=0 で全体を中断していた
+- **再発防止**: ベストエフォートな処理は **スクリプト側で例外を握って rc=0 を返す**。
+  bat 側の `[WARN] ... continuing` 扱い（forecast_generate 等）と同じ位置づけにする。
+  「このステップが失敗したら公開を止めるべきか？」を追加時に必ず判断する
+
+### 3. 外部APIへ投げる前に「そもそも処理が必要か」で絞る
+- **事象**: `translate_news_titles()` は `looks_english()` を通しておらず、
+  日本語タイトルまで含めて毎回最大600件を Google 翻訳へ投げ、429 を多発させていた。
+  同じファイルの topics 側はフィルタ済みで、**articles 側だけ非対称に漏れていた**
+- さらに旧 `looks_english()` は「英字を1文字でも含む」判定で、
+  『Windows運用管理で〜』のような日本語タイトルも英語と誤判定していた
+- **再発防止**: 外部APIを叩くループでは、対象件数を先に実測する。
+  同一ファイル内に似た処理が2つあるときは**フィルタ条件の対称性を確認する**

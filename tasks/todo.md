@@ -554,7 +554,8 @@ docs/ops/index.html 生成に実使用中）の2個を追加で `src/templates/`
 - **通知の配線**: run_daily.bat に notify.py ステップ追加（webhook 環境変数未設定なら no-op。設定手順は README）
 - **perspective_digest 自動生成の配線**: run_daily.bat に --limit 30 --max-sec 120 で組み込み（Phase 3 準備済み案の適用）
 - **計測フック**: common.js に GoatCounter フック（DTT_GOATCOUNTER_ENDPOINT 空なら無効。手順は README）
-- run_daily.bat は編集前に C:\workun_daily.bat.bak_20260713 へバックアップ済み
+- run_daily.bat は編集前に C:\work
+un_daily.bat.bak_20260713 へバックアップ済み
 
 ## 派生バグ修正（経緯リンク検証で発見）
 - **topic_articles の孤児行 9,281件**: dedupe.py が記事削除時に紐付けを掃除していなかった。一括削除＋ dedupe.py 末尾に恒久掃除を追加（テスト用最小DB対応の存在チェック付き）
@@ -1374,3 +1375,40 @@ LLM insight と同じ「予算を使い切る」構造だった。
   古い企業別ページは検索結果に残り続ける。sitemap にも残る可能性がある
 - `--delay` 既定3秒（1件あたり LLM 8秒 + sleep 3秒）は据え置き
 - 18時・21時トリガー無効（1日4回）の有効化も据え置き
+
+---
+
+## 2026-08-23 パイプライン停止（translate ステップで異常終了）の復旧
+
+### 事象
+- 8/23 の実行 3回（06:00 / 09:00 / 12:00）すべてが `FAILED_FROM_BAT step=translate rc=1`
+- `run_daily.bat` は translate 失敗で `goto :fail` するため render / git push に到達せず、
+  公開サイトは 8/22 17:19 のコミットで停止
+
+### 原因
+1. **直接原因**: `src/translate.py:63` の警告出力が `UnicodeEncodeError: 'cp932' codec can't
+   encode character '\xf6'` で異常終了。タイトル中の `ö` を cp932 の標準出力に書けない。
+   `except (RequestException, ValueError)` の外側の例外なので捕捉されずプロセスが死ぬ
+2. **背景原因**: Google 翻訳が 429 Too Many Requests を多発。
+   `translate_news_titles()` は `looks_english()` を通しておらず、**日本語タイトルまで含めて
+   毎回最大600件**を翻訳APIへ投げていた（`main()` の topics 側はフィルタ済みで非対称）
+
+### 計画
+- [x] 原因特定（ログ・コード・バッチの制御フロー確認）
+- [x] `src/translate.py` を修正
+  - [x] Windows の cp932 標準出力対策（`git_auto_push.py` と同じ UTF-8 ラップ）
+  - [x] 翻訳対象を「英字を含み日本語文字を含まない」に限定（SQL の GLOB + Python 判定）
+  - [x] 翻訳不要な日本語タイトルは `title_ja=title` で確定し LIMIT 枠の永久占有を防ぐ
+  - [x] 429 が連続したら打ち切って正常終了（次回実行へ持ち越し）
+  - [x] `main()` を保護し、翻訳失敗でパイプライン全体を止めない（rc=0 維持）
+- [x] `tests/test_translate.py` を新規作成
+- [x] `pytest tests/` 全passを確認
+- [x] 手動で translate 以降（translate → render → git push）を流して公開を復旧
+- [x] `tasks/lessons.md` に再発防止を記録
+
+### 検証結果
+- cp932 リダイレクト下での対照実験: 修正前 rc=1（UnicodeEncodeError） / 修正後 rc=0 で正常出力
+- `pytest tests/` **295件 全pass**（既存286 + 新規9）
+- 翻訳対象が 600件 → 24件（英語のみ）に減少。日本語混じり4件は `title_ja=title` で確定
+- translate 実行: 429 継続中だが **5回連続で打ち切り rc=0** で正常終了（次回へ持ち越し）
+- render → `docs/index.html` 更新 → push 完了（コミット 92305b6c7、177ファイル）。**公開復旧**
