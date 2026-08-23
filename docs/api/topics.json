@@ -1,7 +1,567 @@
 {
-  "generated_at": "2026-08-23T05:52:19+00:00",
+  "generated_at": "2026-08-23T21:24:57+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 42167,
+      "title": "通信大手が「コンビニ」に急接近、ソフトバンクもセブン-イレブンと提携",
+      "category": "industry",
+      "importance": 73,
+      "summary": "通信大手が「コンビニ」に急接近、ソフトバンクもセブン-イレブンと提携",
+      "updated_at": "2026-08-23T21:12:06.060466+00:00"
+    },
+    {
+      "id": 42149,
+      "title": "Robot boxing, football and sprinting at World Humanoid Games",
+      "category": "news",
+      "importance": 48,
+      "summary": "Robot boxing, football and sprinting at World Humanoid Games",
+      "updated_at": "2026-08-23T21:11:28.780739+00:00"
+    },
+    {
+      "id": 42168,
+      "title": "炎天下のスマホは操作不能になることも、警告や充電停止は休ませる合図",
+      "category": "industry",
+      "importance": 73,
+      "summary": "炎天下のスマホは操作不能になることも、警告や充電停止は休ませる合図",
+      "updated_at": "2026-08-23T21:10:51.550948+00:00"
+    },
+    {
+      "id": 42158,
+      "title": "DR Congo and M23 rebels agree roadmap for peace talks",
+      "category": "news",
+      "importance": 48,
+      "summary": "DR Congo and M23 rebels agree roadmap for peace talks",
+      "updated_at": "2026-08-23T21:10:14.313853+00:00"
+    },
+    {
+      "id": 42169,
+      "title": "350億円の基幹刷新を完遂した大東建託、社員に面白がってもらうDX目指す",
+      "category": "industry",
+      "importance": 73,
+      "summary": "350億円の基幹刷新を完遂した大東建託、社員に面白がってもらうDX目指す",
+      "updated_at": "2026-08-23T21:09:37.159212+00:00"
+    },
+    {
+      "id": 42160,
+      "title": "Zelensky should be asked what he knew about government corruption, sacked minister tells BBC",
+      "category": "news",
+      "importance": 48,
+      "summary": "Zelensky should be asked what he knew about government corruption, sacked minister tells BBC",
+      "updated_at": "2026-08-23T21:09:17.067140+00:00"
+    },
+    {
+      "id": 42170,
+      "title": "1位は「買い手から転換した東洋建設　売り手に回るM＆A、西松建設や西武建設も」",
+      "category": "industry",
+      "importance": 73,
+      "summary": "1位は「買い手から転換した東洋建設　売り手に回るM＆A、西松建設や西武建設も」",
+      "updated_at": "2026-08-23T21:08:39.772755+00:00"
+    },
+    {
+      "id": 42153,
+      "title": "Kejelcha breaks men's half marathon world record by 29 seconds",
+      "category": "news",
+      "importance": 48,
+      "summary": "Kejelcha breaks men's half marathon world record by 29 seconds",
+      "updated_at": "2026-08-23T21:08:19.770034+00:00"
+    },
+    {
+      "id": 42173,
+      "title": "新方式で国産初の量子コンピューター稼働開始 分子科学研究所",
+      "category": "news",
+      "importance": 70,
+      "summary": "新方式で国産初の量子コンピューター稼働開始 分子科学研究所",
+      "updated_at": "2026-08-23T21:07:59.820251+00:00"
+    },
+    {
+      "id": 42154,
+      "title": "Frustration builds in Indiana town struggling without power for 12 days",
+      "category": "news",
+      "importance": 54,
+      "summary": "Frustration builds in Indiana town struggling without power for 12 days",
+      "updated_at": "2026-08-23T21:07:22.601479+00:00"
+    },
+    {
+      "id": 42176,
+      "title": "東武鉄道4人死亡事故 複数のミス重なった疑い 警察 経緯解明へ",
+      "category": "news",
+      "importance": 70,
+      "summary": "東武鉄道4人死亡事故 複数のミス重なった疑い 警察 経緯解明へ",
+      "updated_at": "2026-08-23T21:06:45.251204+00:00"
+    },
+    {
+      "id": 42157,
+      "title": "France links sharp rise in drownings to heatwaves",
+      "category": "news",
+      "importance": 54,
+      "summary": "France links sharp rise in drownings to heatwaves",
+      "updated_at": "2026-08-23T21:06:07.781857+00:00"
+    },
+    {
+      "id": 42172,
+      "title": "茨城県南部の地震 最大震度5弱程度の地震に注意を",
+      "category": "news",
+      "importance": 70,
+      "summary": "茨城県南部の地震 最大震度5弱程度の地震に注意を",
+      "updated_at": "2026-08-23T21:05:30.966763+00:00"
+    },
+    {
+      "id": 42159,
+      "title": "Guinea rubbish landfill collapse kills 30",
+      "category": "news",
+      "importance": 54,
+      "summary": "Guinea rubbish landfill collapse kills 30",
+      "updated_at": "2026-08-23T21:04:54.051766+00:00"
+    },
+    {
+      "id": 42174,
+      "title": "経産省など 家事支援・ベビーシッター利用の税制優遇を要望へ",
+      "category": "news",
+      "importance": 70,
+      "summary": "経産省など 家事支援・ベビーシッター利用の税制優遇を要望へ",
+      "updated_at": "2026-08-23T21:04:34.512734+00:00"
+    },
+    {
+      "id": 42107,
+      "title": "Carney calls Trump's fresh tariffs a 'miscalculation' after trade talks collapse",
+      "category": "news",
+      "importance": 54,
+      "summary": "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
+      "updated_at": "2026-08-23T21:03:57.547666+00:00"
+    },
+    {
+      "id": 42171,
+      "title": "ウクライナ ゼレンスキー大統領 ロシアのミサイル増産に警戒",
+      "category": "news",
+      "importance": 70,
+      "summary": "ウクライナ ゼレンスキー大統領 ロシアのミサイル増産に警戒",
+      "updated_at": "2026-08-23T21:03:20.725957+00:00"
+    },
+    {
+      "id": 42155,
+      "title": "Trump waves green flag to start IndyCar race through Washington streets",
+      "category": "news",
+      "importance": 54,
+      "summary": "Trump waves green flag to start IndyCar race through Washington streets",
+      "updated_at": "2026-08-23T21:03:01.513480+00:00"
+    },
+    {
+      "id": 42175,
+      "title": "台風18号 あす以降 沖縄・奄美に接近へ 早めに備えを",
+      "category": "news",
+      "importance": 70,
+      "summary": "台風18号 あす以降 沖縄・奄美に接近へ 早めに備えを",
+      "updated_at": "2026-08-23T21:02:42.423884+00:00"
+    },
+    {
+      "id": 42150,
+      "title": "Man completes 2,800 mile scoot across Australia",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42151,
+      "title": "'New season, new trim' - Haaland reveals buzzcut",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42152,
+      "title": "Golf brand apologises for advert that shows woman being pushed over",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42156,
+      "title": "Dozens of co-ordinated arson attacks hit southern Thailand",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42161,
+      "title": "立民代表「統一会派も選択肢」",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42162,
+      "title": "「Microsoft Edge」に12件の脆弱性、修正版のv151.0.4129.101が公開／いずれも「Chromium」由来",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42163,
+      "title": "国内自動車メーカーの6月生産、マツダとスズキが好調　日産・スバルは減少",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42164,
+      "title": "地盤調査報告書816件に不正、大和ハウス子会社で常態化した改ざんの手口",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42165,
+      "title": "世界のパワートレーンのすみ分けとHEVの開発動向　中国勢の猛追に警戒",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42166,
+      "title": "5位は「災害調査にサイボーグ昆虫、潜水スーツ着たゴキブリが水中で3時間活動」40代の注目トップ10",
+      "category": "industry",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42177,
+      "title": "Google’s pollution-cutting project and ULEZ health gains: The sustainability success stories of the week",
+      "category": "decarbonization_ops",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42178,
+      "title": "「CTFはAIによって終わりました」　現役ハッカーが見た「人間の敗北」",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42179,
+      "title": "エンジニアがAI時代を生き抜くための2つの武器――「丁寧な対話」と「しなやかな挑戦」",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42180,
+      "title": "Work Order Planning: Why it Matters to Get it Right",
+      "category": "maintenance",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42181,
+      "title": "Kallanish Europe Steel Markets Panel Expects Higher Prices at Year-end",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42182,
+      "title": "Dan Jarvis, the 'steely-Eyed Messenger of Death' in Charge of Britain's Defence",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42183,
+      "title": "Heavy Fabrication and Welding Automation Equipment Auction Set for June 24",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42184,
+      "title": "US CRC Prices Rise 1.17% as Tight Supply and Strong Demand Support Market",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42185,
+      "title": "A 3d-Printed Option for Bending Easy-To-Mar Metal",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42186,
+      "title": "Gina Rinehart-Backed St George Mining Rattles the Tin for $60m",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42187,
+      "title": "Russia-Ukraine Clashes Paralyze Grain Exports… Global Wheat Prices Up About 30% YoY",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42188,
+      "title": "Is gold back?",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42189,
+      "title": "Euronext wheat drops as traders take profits after four-week high",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42190,
+      "title": "THINK Ahead: Bessent versus the bond market",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42191,
+      "title": "UK Retail Sales Fall in July",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42192,
+      "title": "India’s core sector growth rises by 5.4% in July on coal, refinery products",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42193,
+      "title": "Production in construction down by 1.3% in the euro area and by 1.0% in the EU",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42194,
+      "title": "U.S. services sector activity accelerates sharply in August, S&P Global says",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42195,
+      "title": "US Manufacturing PMI Falls Short of Expectations, Signals Slower Growth",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42196,
+      "title": "Eurozone Services Activity Remains Strong in August",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42197,
+      "title": "UK Services Activity Unexpectedly Strengthens",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42198,
+      "title": "Large European Banks Narrow Profitability Gap to US and APAC Peers",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42199,
+      "title": "UK Private Sector Activity Unexpectedly Accelerates",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42200,
+      "title": "Mexico expects trade deal similar to US-Canada USMCA outcomes",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42201,
+      "title": "Shipping’s safety gains face growing geopolitical test",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42202,
+      "title": "Northwest European gasoline margins climb on strong demand",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42203,
+      "title": "Gunvor’s LNG deal: Cheap long-term promise masked by expensive start",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42204,
+      "title": "Excelerate’s FSRU resumes operations, gas supply improves",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42205,
+      "title": "Oil prices post weekly surge on Hormuz impasse, Brent now up 12% over two weeks",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42206,
+      "title": "Oil Holds Near Highs as Iran Conflict Uncertainty Persists",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42207,
+      "title": "Underwater Volcanoes Are Geothermal Energy’s Next Frontier",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42208,
+      "title": "Private Equity Is Circling Utilities as AI Reshapes the Grid",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42209,
+      "title": "Super El Niño Threatens Food, Water and Trade Worldwide",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42210,
+      "title": "Pemex and Petrobras Bet Big on High-Risk High-Reward Drilling Off Mexico",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T21:01:07.031854+00:00"
+    },
+    {
+      "id": 42142,
+      "title": "Did a goat herder's lucky $200 nugget spark a gold rush in western Kenya?",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T06:00:52.563442+00:00"
+    },
+    {
+      "id": 42143,
+      "title": "Laptop catches fire on US flight, with passenger treated at airport",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T06:00:52.563442+00:00"
+    },
+    {
+      "id": 42144,
+      "title": "'We're not going to run from it': Sydney Marathon laughs off medal error",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T06:00:52.563442+00:00"
+    },
+    {
+      "id": 42145,
+      "title": "総務省、自治体のカスハラ対策支援　対応時間の目安も明示",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T06:00:52.563442+00:00"
+    },
+    {
+      "id": 42146,
+      "title": "地震による交通機関への影響 鉄道はすべて運転再開",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T06:00:52.563442+00:00"
+    },
+    {
+      "id": 42147,
+      "title": "アメリカ建国250年記念し自動車レース トランプ氏が開催推進",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T06:00:52.563442+00:00"
+    },
+    {
+      "id": 42148,
+      "title": "大分では40度の酷暑日予想 熊本も危険な暑さに",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T06:00:52.563442+00:00"
+    },
     {
       "id": 42137,
       "title": "Swedish sword attack victim was 17-year-old girl, police say",
@@ -195,14 +755,6 @@
       "updated_at": "2026-08-22T21:01:30.613839+00:00"
     },
     {
-      "id": 42107,
-      "title": "Carney calls Trump's fresh tariffs a 'miscalculation' after trade talks collapse",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
       "id": 42108,
       "title": "１万６０００回分超のワクチン到着　エボラ熱拡大で―コンゴ",
       "category": "news",
@@ -249,558 +801,6 @@
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42114,
-      "title": "【被害情報まとめ】地震 埼玉県や神奈川県で複数のけが人",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42115,
-      "title": "茨城 東京 埼玉 千葉で震度5弱 気象庁“今後1週間程度は注意”",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42116,
-      "title": "残業するくらいなら「年収100万円ダウン」でいい　“稼げるだけ”では入社しない今どきの人々",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42117,
-      "title": "Greenbrier, SSAB, Alter Demonstrate Circular Steel Loop",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42118,
-      "title": "BMW Project Demonstrates Industrial-Scale Circularity for Automotive Steel",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42119,
-      "title": "EU Trade Barriers Boost Polish Distributors' Profitability",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42120,
-      "title": "Iw KöLn Pleads for Retaining Domestic Steel Production",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42121,
-      "title": "Rio Tinto Celebrates 60 Years in Western Australia",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42122,
-      "title": "Baltic Dry Index Rises for 2nd Day, Still Posts Weekly Loss",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42123,
-      "title": "IEA: Southeast Asia Needs Grid Investment to Nearly Quadruple by 2050",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42124,
-      "title": "Every Chokepoint That Isn't Hormuz",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42125,
-      "title": "Clean Energy Spending Tracking Toward Record $180 Billion in 2026",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42126,
-      "title": "The Gas Turbine Shortage Just Became AI’s Biggest Constraint",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T21:01:30.613839+00:00"
-    },
-    {
-      "id": 42087,
-      "title": "「静か、静か、静か！」 ―トランプ大統領が記者たちを黙らせるきっかけは何でしょうか？",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42088,
-      "title": "英国に帰国したハリー王子とメーガン妃は、心に残るブランドを探す",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42089,
-      "title": "カナダ、通商交渉決裂で米国の関税に「1ドル単位」で匹敵すると表明",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42090,
-      "title": "大阪パチンコ店放火５人殺害、死刑執行　高市政権で初―法務省",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42091,
-      "title": "女子ゴルフ 米ツアー第2ラウンド 山下美夢有 5打差で首位守る",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42092,
-      "title": "ホワイトソックス 村上宗隆 無安打もチームはサヨナラ勝ち",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42093,
-      "title": "熊本地震支援 「応援割」念頭に観光需要喚起策 木原官房長官",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42094,
-      "title": "国民民主党 代表選挙が告示 玉木氏と橋本氏が立候補",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42095,
-      "title": "台風20号が発生 先島諸島では土砂災害に警戒を",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42096,
-      "title": "「出社しないとつながりが薄れる」は誤解？　約7700人の追跡調査が示す実態",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42097,
-      "title": "世界人道デーにおいても、エムスチール グループは思いやりを原動力とし続けます。⁣",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T06:00:42.422966+00:00"
-    },
-    {
-      "id": 42071,
-      "title": "モディ氏は何年もかけて自分の強力なイメージを構築しましたが、なぜ今、Z 世代のリールを作っているのでしょうか?",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42072,
-      "title": "これらの書店は中国人の読者に自分たちの国について質問させます - 今、扉は閉ざされています",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42073,
-      "title": "TikTok、児童プライバシーに関する最大規模の和解で米国に4億ドルを支払う",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42074,
-      "title": "米国の通商期限が迫る中、カナダの交渉担当者「我々にはやるべきことがまだある」と語る",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42075,
-      "title": "馬渕隆一さん死去　マブチモーター創業者",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42076,
-      "title": "【いつモノコト】バランス接続の到達痛快 スマホ用スティックDAC「GO link 2 Max」",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42077,
-      "title": "カシオ、シンプルで軽いダイバー風アナログウォッチ",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42078,
-      "title": "台風19号が発生 日本への直接の影響ない見込み",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42079,
-      "title": "千葉豪雨 被害住宅の応急修理支援する制度 受け付け順次始まる",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42080,
-      "title": "【速報中】高校野球 健大高崎がHRで逆転智弁和歌山との決勝",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42081,
-      "title": "Tesla の歴史 5 年間が皆さんの疑問に答えます",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42082,
-      "title": "オウトクンプ、トルニオにバイオコークスの集塊プラントを開設",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42083,
-      "title": "ヨーロッパの地元の HRC 価格は低迷市場でわずかに上昇。南欧への輸入水準は下方へ縮小",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42084,
-      "title": "EC、ティッセンクルップ氏の政権移行に向けた資金提供条件を緩和",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42085,
-      "title": "BHPピルバラ組合紛争の奇妙なエスカレーションで警察に通報",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42086,
-      "title": "私たち。鉄鋼供給不足で輸入が再開",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T03:01:03.469855+00:00"
-    },
-    {
-      "id": 42023,
-      "title": "プリヤンカー・チョープラー・ジョナス、愛とカーストの不平等についての映画製作について語る",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42024,
-      "title": "竜巻がニューヨークとデラウェア州に上陸",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42025,
-      "title": "ハリー王子とメーガン妃のアメリカン・ドリームはどうなったのでしょうか？",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42026,
-      "title": "ローゼンバーグ氏：ガソリンは不足しているが、ロシア人は戦争の影響が増大していると感じており、愛国心は欠けている",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42027,
-      "title": "イスラエルはヨルダン川西岸の再建を目指して入植地をどのように拡大しているか",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42028,
-      "title": "「命の尊さ、伝えていく」　３児亡くした母、事故２０年前に―福岡",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42029,
-      "title": "「Google Chrome」で15件の脆弱性修正、「難しい」ものも2件／Windows環境にはv151.0.7922.169/.170が展開中",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42030,
-      "title": "「Firefox 154」が正式公開 ～Windowsで「GeForce NOW」に対応、アプリアイコンの変更も／ローカルネットワークアクセスなどでセキュリティ強化、58件の脆弱性修正",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42031,
-      "title": "無料メーラー「Thunderbird」v154.0が公開 ～Microsoft Graphを利用した接続が可能に／55件の脆弱性を修正、全ウィンドウを閉じたらタスクトレイに格納するオプションも",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42032,
-      "title": "登場から約1年、「Excel」の「=COPILOT()」関数が2026年9月14日で廃止／一般提供に至らないままの姿を止める",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42033,
-      "title": "AI駆動開発でモックを仕様にする ～自分たちのチームのAIは、誰が考えるために速いのか【開発者と読むAIの世界】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42034,
-      "title": "ASUSの14インチChromebookが44,800円！Amazonでセール中【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42035,
-      "title": "TP-LinkのスイッチングハブがAmazonでセール中！2.5Gbps×8ポートモデルが11,815円【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42036,
-      "title": "「Claude」が「Gmail」のメール送信に対応、「Google ドライブ」のファイル操作も／すべての有料プランでサポート。Web、デスクトップの両方で利用可能",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42037,
-      "title": "Windows 11の2026年8月セキュリティパッチに問題があるか、一部ゲームが動作しないとの報告／RGB照明機能を備えたデバイスがか。Microsoftが調査中",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42038,
-      "title": "Microsoftのリモートデスクトップ管理ツール「RDCMan」がv3.20に、「Dev Box」に対応／大量の端末をリモート管理するユーザーに愛用されているSysinternalsツール",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42039,
-      "title": "土屋鞄 objcts.io、Apple Watchバンド二重巻きタイプ",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42040,
-      "title": "千葉 路上の車両の所有者への引き渡し 警察などに協力求める",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42041,
-      "title": "ICC赤根智子所長「『法監督』の終わりの始まりとさせない」",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42042,
-      "title": "東海から九州中心に気温上昇 酷暑日予想も 広範囲で大気不安定",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42043,
-      "title": "「Pythonを超えた人気言語」「AI時代の新たな領域FDE」、急速に変わる開発現場のいま",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42044,
-      "title": "情シスの8割が直面する「長期休暇明けに“残業の山”」問題　なくすには？",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42045,
-      "title": "デルタックス、ジョージア州に北米本社を設立",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42046,
-      "title": "サパ、1億6,300万ドルの拡張を発表",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42047,
-      "title": "BHPとその新最高経営責任者は歴史を繰り返さないようにできるだろうか?",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42048,
-      "title": "バルカン鋼鉄市場：価格、需要、貿易見通し",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42049,
-      "title": "イタリア・スチール・グループ、所有権争いの中で旧イルバ資産に入札",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42050,
-      "title": "パキスタンの石油精製業者は8月に18万5000トンの重油を輸出する予定",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42051,
-      "title": "エリザベス王女エネルギー島の基礎が無事完成",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
     }
   ]
 }
