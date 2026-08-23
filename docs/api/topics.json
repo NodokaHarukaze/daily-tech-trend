@@ -1,7 +1,359 @@
 {
-  "generated_at": "2026-08-22T08:19:54+00:00",
+  "generated_at": "2026-08-23T05:52:19+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 42137,
+      "title": "Swedish sword attack victim was 17-year-old girl, police say",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T03:00:58.799112+00:00"
+    },
+    {
+      "id": 42138,
+      "title": "バレンシアの佐藤龍之介「特別な瞬間」　新天地で先発デビュー―欧州サッカー",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T03:00:58.799112+00:00"
+    },
+    {
+      "id": 42139,
+      "title": "熊本 宇城 被災地で外国人支援へ 仮設シャワー設置に向け調査",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T03:00:58.799112+00:00"
+    },
+    {
+      "id": 42140,
+      "title": "米は制裁で圧力強化へ イラン“米に協力した国は敵と見なす”",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T03:00:58.799112+00:00"
+    },
+    {
+      "id": 42141,
+      "title": "JR山手線で人身事故 全線で運転見合わせ",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T03:00:58.799112+00:00"
+    },
+    {
+      "id": 42127,
+      "title": "The hotel booking mix-up that could free mushroom murderer",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42128,
+      "title": "Syria says Israeli strike near Damascus violation of international law",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42129,
+      "title": "自民、沖縄県政奪還へ総力戦　幹部投入、政党色に配慮も",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42130,
+      "title": "台風20号の影響 沖縄 八重山地方で線状降水帯発生のおそれ",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42131,
+      "title": "栃木4人死亡列車事故 安全確認後の警笛2回中1回しか確認されず",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42132,
+      "title": "りくりゅう 三浦さんと木原さん婚約 フィギュアペアで五輪金",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42133,
+      "title": "「comico」サ終にマンガ家が思う“縦読みマンガ”の弱点と戦略ミス",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42134,
+      "title": "TikTok、児童プライバシー訴訟で4億ドル支払いへ　米司法省と和解",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42135,
+      "title": "Windows運用管理で“やってはいけない”3つのこと　それぞれの見直し方とは？",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42136,
+      "title": "Europe Dodges a Rhine Crisis for the Worst Possible Reason",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-23T00:01:08.814686+00:00"
+    },
+    {
+      "id": 42098,
+      "title": "Robot horse and rider steal the spotlight at Chinese conference",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42099,
+      "title": "Watch: Moment humanoid robot beats Usain Bolt's 100m record",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42100,
+      "title": "Drugs at their fingertips, intense pressure: Why child stars fall into addiction",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42101,
+      "title": "Sydney Marathon medal mistakenly depicts Munich stadium",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42102,
+      "title": "Lindsay Clancy suffering 'command hallucination' when she killed children, court hears",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42103,
+      "title": "Father leaves 7-year-old son alone on Mount Fuji to continue hike",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42104,
+      "title": "US military newspaper editor voices censorship fears after being fired",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42105,
+      "title": "Fourteen killed in strike on Myanmar monastery",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42106,
+      "title": "Carney faces crucial test after walking away from Trump's deal",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42107,
+      "title": "Carney calls Trump's fresh tariffs a 'miscalculation' after trade talks collapse",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42108,
+      "title": "１万６０００回分超のワクチン到着　エボラ熱拡大で―コンゴ",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42109,
+      "title": "東京 杉並 道路が冠水し看板が水に流される【22日・映像】",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42110,
+      "title": "【地震】茨城 牛久市役所で天井の一部落ちる",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42111,
+      "title": "【地震】千葉 市川「広尾防災公園で水あふれ出している」通報",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42112,
+      "title": "【地震】東京 江東区“水道管が破裂”道路に水があふれ出す",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42113,
+      "title": "東京 足立区のスーパー 消火剤が大量に噴射 地震で誤作動か",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42114,
+      "title": "【被害情報まとめ】地震 埼玉県や神奈川県で複数のけが人",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42115,
+      "title": "茨城 東京 埼玉 千葉で震度5弱 気象庁“今後1週間程度は注意”",
+      "category": "news",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42116,
+      "title": "残業するくらいなら「年収100万円ダウン」でいい　“稼げるだけ”では入社しない今どきの人々",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42117,
+      "title": "Greenbrier, SSAB, Alter Demonstrate Circular Steel Loop",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42118,
+      "title": "BMW Project Demonstrates Industrial-Scale Circularity for Automotive Steel",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42119,
+      "title": "EU Trade Barriers Boost Polish Distributors' Profitability",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42120,
+      "title": "Iw KöLn Pleads for Retaining Domestic Steel Production",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42121,
+      "title": "Rio Tinto Celebrates 60 Years in Western Australia",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42122,
+      "title": "Baltic Dry Index Rises for 2nd Day, Still Posts Weekly Loss",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42123,
+      "title": "IEA: Southeast Asia Needs Grid Investment to Nearly Quadruple by 2050",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42124,
+      "title": "Every Chokepoint That Isn't Hormuz",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42125,
+      "title": "Clean Energy Spending Tracking Toward Record $180 Billion in 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
+    {
+      "id": 42126,
+      "title": "The Gas Turbine Shortage Just Became AI’s Biggest Constraint",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-22T21:01:30.613839+00:00"
+    },
     {
       "id": 42087,
       "title": "「静か、静か、静か！」 ―トランプ大統領が記者たちを黙らせるきっかけは何でしょうか？",
@@ -449,358 +801,6 @@
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42052,
-      "title": "2026 年上半期業績: ボスカリスは厳しい市場環境の中でも堅実な業績を達成",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42053,
-      "title": "パナマ運河、運河流域の降水量減少に対処するために追加措置を採用",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42054,
-      "title": "Xeneta 海上コンテナ輸送市場の毎週の最新情報 – 21.08.26",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42055,
-      "title": "VHBS 新しい ConTex コンテナ船タイムチャーター評価指数第 34 週",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42056,
-      "title": "高度な配送と取引 – 週間配送市場レポート 2026 年第 33 週～第 34 週",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42057,
-      "title": "ブレーメンの港は、2026 年上半期に貨物処理量の大幅な増加を記録",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42058,
-      "title": "アフィニティ・タンカー・ウィークリー、2026 年 8 月 21 日",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42059,
-      "title": "GMS 第 34 週 – 制裁の織機、船体",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42060,
-      "title": "ポート・ヒューストンのクロウリー、新しい週次配送サービスで中米と米国湾岸を結ぶ",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42061,
-      "title": "ノーチラス、海事専門家へのステナラインへの多額の投資を歓迎",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42062,
-      "title": "ギブソンタンカーレポート – Crossed Wakes",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42063,
-      "title": "Best Oasis 週刊リサイクル市場レポート、2026 年 8 月 21 日",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42064,
-      "title": "Odfjell SE 2Q26: 好調な財務結果",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42065,
-      "title": "新しい生物多様性協定が海運にとって何を意味するか",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42066,
-      "title": "Cavotec、インド初の自動係留システムの納入注文に署名",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42067,
-      "title": "海洋外交は開会前から始まる",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42068,
-      "title": "MED を修正する最新の実施規則 (EU) 2026/1434: 2026 年 8 月 31 日から施行",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42069,
-      "title": "新開発液冷電池システム「AQUBE」が初の商用受注を獲得しました。",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 42070,
-      "title": "中国の新5カ年計画は国家をピークオイルに備える",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-22T00:01:11.853970+00:00"
-    },
-    {
-      "id": 41912,
-      "title": "エチオピア、ティグレの聖母マリア祭り、ドローン攻撃の懸念で中止",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41913,
-      "title": "スイスアルプスの町で火災、５人行方不明",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41914,
-      "title": "ペルーの地震で建物が被害を受け、停電が発生",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41915,
-      "title": "メーガン妃、Netflixシリーズ『ザ・ジェントルメン』出演交渉中、BBCは理解",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41916,
-      "title": "報道によると、ドイツは森で発見された武器庫とロシアの関係を調査",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41917,
-      "title": "トゥパック殺人容疑者は2008年に甥が致命的な発砲をしたと警察に供述した",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41918,
-      "title": "感染速度に対する警告発令を受け、コンゴ民主共和国でエボラワクチンの治験開始へ",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41919,
-      "title": "カナダのシーク教寺院で刺傷、2人負傷",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41920,
-      "title": "英国、カナダ、オーストラリアがガザでの援助活動員殺害事件の刑事捜査を拒否したイスラエルを非難",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41921,
-      "title": "スウェーデンの学校で剣による襲撃で1人死亡",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41922,
-      "title": "ウクライナのショッピングモールでロシアのダブルタップドローン攻撃で15人死亡、当局発表",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41923,
-      "title": "イスラエル、増大する国際抗議活動を無視して閉鎖されていたヨルダン川西岸入植地を再開",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41924,
-      "title": "玉木氏「参院野党第１党」目指す　橋本氏、与党と対決姿勢―国民代表選、２２日に告示",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41925,
-      "title": "「なんでここに駅ないの？」 首都圏の「鉄道空白地帯」を暫定化マップするが話題に／最近も近畿バージョンをAIに作ってもらったよ【やじうまの杜】",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41926,
-      "title": "iPhoneやAndroidの写真・動画を「OneDrive」へ簡単バックアップ、Windows 11の［設定］に導線が追加",
-      "category": "company",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41927,
-      "title": "NECのルーター「UNIVERGE IX-R/IX-V」シリーズに本格的な脆弱性、既製ソフトウェアに更新を",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41928,
-      "title": "楽天ブックス関係会社のPCに不正アクセス、ユーザー3万3333人分の個人情報などが流出する可能性",
-      "category": "industry",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41929,
-      "title": "はてな、AI常駐の掲示板サービス「はてなパークス」",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41930,
-      "title": "「Watch+」開始から半年 各メディアのニュースレター事前登録をスタートしました",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41931,
-      "title": "プラス、防災EC「ソナティブ」 備蓄診断・期限通知",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41932,
-      "title": "G-SHOCK、VRChat公式アイテムにアバターの手首に装着",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41933,
-      "title": "・神社にキャッシュレス決済を「おまいりPay」活用",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41934,
-      "title": "LINE着せ替え、iOS版の一部デザイン未反映 返金対応",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41935,
-      "title": "グーグル、お気に入りのニュースを検索や発見で見つけやすい強化",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
-    },
-    {
-      "id": 41936,
-      "title": "マネーフォワードME、アプリUIを刷新 タブは5点",
-      "category": "security",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-21T21:01:08.701795+00:00"
     }
   ]
 }
