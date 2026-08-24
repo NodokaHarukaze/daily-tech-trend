@@ -8,8 +8,19 @@ import requests
 
 from llm_insights_pipeline import NEWS_FALLBACK_KEY_POINT
 
-OLLAMA_URL = "http://127.0.0.1:11434/v1/chat/completions"
-OLLAMA_BASE = "http://127.0.0.1:11434"
+# ============================================================
+# [接続先ノード] 2026-08-23 変更
+# 経緯: 既定の 127.0.0.1 は PC2 を指すが、PC2 は RDP ホストを兼ねている。
+#       14.65GB のモデル(second_constantine/gpt-oss-u:20b)が VRAM 16.3GB に
+#       収まらず全量 CPU 実行へ落ち、ロード失敗→再投入のループで
+#       CPU 1コア占有＋コミット 18.5GB となり RDP の操作が破綻した。
+#       （2026-08-04 の「RAM 28.8GB を食い潰して14時間フリーズ」と同根）
+#       PC3 (192.168.11.57) は VRAM 48GB で同じモデルを余裕で載せられるため、
+#       run_daily.bat から OLLAMA_BASE_URL で PC3 を指すようにした。
+# 戻し方: 環境変数 OLLAMA_BASE_URL を未設定にすればローカル(PC2)に戻る。
+# ============================================================
+OLLAMA_BASE = (os.getenv("OLLAMA_BASE_URL") or "http://127.0.0.1:11434").rstrip("/")
+OLLAMA_URL = f"{OLLAMA_BASE}/v1/chat/completions"
 DEFAULT_MODEL = "gpt-oss:20b"
 _SESSION = requests.Session()
 
@@ -174,8 +185,8 @@ def _ensure_ollama_ready() -> None:
             return
         time.sleep(1)
     raise RuntimeError(
-        "Ollama is not reachable at 127.0.0.1:11434. "
-        "Start Ollama manually or check OLLAMA_AUTOSTART_CMD."
+        f"Ollama is not reachable at {OLLAMA_BASE}. "
+        "Start Ollama manually or check OLLAMA_AUTOSTART_CMD / OLLAMA_BASE_URL."
     )
 
 
