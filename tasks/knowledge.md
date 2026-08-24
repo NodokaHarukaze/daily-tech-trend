@@ -533,3 +533,42 @@ if target not in candidates:
 最小空き RAM は 17.29GB で、枯渇の兆候は皆無だった。所要時間そのものが健全性の指標として使える。
 
 **適用条件**: VRAM 16GB のノード（PC1/PC2）で、他の GPU 常駐プロセスと同居しながら Ollama バッチを回す全ケース
+
+---
+
+### reasoning_effort 未指定の短文JSON生成は「壊れた要約が正常値として保存され続ける」形で静かに劣化する
+
+**問題**: ニュースダイジェスト（`docs/news/`）の各記事で「要約・解説を表示」を開いても、要約が記事タイトルそのままで、
+根拠・立場別コメントが定型文（「推測: 本文情報が少ないため、影響範囲はリンク先で要確認」等）に差し替わっていた。
+DB を調べると **news insight の約85%（4,830件）** が該当し、2026-07 以前から継続していた。
+
+**原因の連鎖**:
+1. `call_llm_short_news`（`src/llm_insights_api.py`）のペイロードに `reasoning_effort` が無く、`gpt-oss:20b` が既定の
+   reasoning を長く回す。実測で `reasoning` 1,736字 / `completion_tokens` が `max_tokens=700` を全消費し
+   `finish_reason: "length"` → JSON が途中で切れる
+2. `_extract_json_object` は閉じ括弧が来ないので `None` を返す。だが **再試行の条件が「応答が空のとき」だけ**だったため、
+   「非空だが解析不能」はそのままフォールバックへ落ちる
+3. フォールバックは `summary` に**記事タイトル**を入れる。結果 `importance>0` かつ `summary` 非空になり、
+   `_needs_repair()`（importance=0 / summary空 のみを検査）は「健全」と判定する
+4. `pick_topic_inputs` は `src_hash` 一致行をスキップするため、**壊れた行が二度と作り直されない**
+
+**解決策**（2026-08-24 適用）:
+1. news ペイロードに `"reasoning_effort": "low"` を追加。実測で completion 700→337トークン、29.5秒→8.4秒、
+   `finish_reason: "stop"` で完全な JSON が返る
+2. 再試行条件を「空応答」から「**JSONとして取り出せない応答**」へ拡張する
+3. フォールバック文言を定数 `NEWS_FALLBACK_KEY_POINT`（`llm_insights_pipeline.py`）に集約し、
+   `pick_topic_inputs` が `prev_is_fallback` フラグとして検出、`_needs_repair` が再生成対象に含める
+4. `post_ollama` は thinking 非対応モデル（gemma3 等は 400 `"<model>" does not support thinking` を返す）に
+   `reasoning_effort` を送ってしまった場合、そのモデルを `_FAILED_MODELS` に落とさず、
+   パラメータを外して同じモデルで1回だけ再試行する（`_NO_THINKING_MODELS` に学習）
+
+**教訓**: 「フォールバック値が正常値と区別できない形で保存される」設計は、**再生成条件をすり抜けて劣化を固定化する**。
+フォールバックで埋めた値には必ず機械判定できる目印（定数化した文言・専用フラグ列）を持たせ、
+再生成判定（`_needs_repair` 相当）から参照する。
+
+**適用条件**: Ollama + gpt-oss 系で短文 JSON を構造化生成し、結果を DB にキャッシュして
+「入力ハッシュが同じならスキップ」する全パイプライン。`### gpt-oss:20b に文字数指定…` の知見と同根だが、
+そちらは**文字数指定が引き金**、こちらは**引き金なしでも既定 reasoning だけで max_tokens を使い切る**点が異なる。
+
+**出典**: daily-tech-trend ニュース要約欠落の調査（2026-08-24, 遠隔・自律セッション）。
+実機再現スクリプトで `finish_reason` と `usage` を直接確認して特定した。

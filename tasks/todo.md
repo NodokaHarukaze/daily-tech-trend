@@ -1412,3 +1412,54 @@ LLM insight と同じ「予算を使い切る」構造だった。
 - 翻訳対象が 600件 → 24件（英語のみ）に減少。日本語混じり4件は `title_ja=title` で確定
 - translate 実行: 429 継続中だが **5回連続で打ち切り rc=0** で正常終了（次回へ持ち越し）
 - render → `docs/index.html` 更新 → push 完了（コミット 92305b6c7、177ファイル）。**公開復旧**
+
+---
+
+# 2026-08-24 ニュースダイジェストの要約が生成されていなかった件
+
+## 発端
+ユーザー報告「dairy-teck のニュースダイジェストの要約がされていない」。
+`docs/news/` の「要約・解説を表示」を開くと、要約が記事タイトルそのまま・根拠と立場別コメントが
+定型文（「推測: 本文情報が少ないため、影響範囲はリンク先で要確認」等）になっていた。
+
+## 原因（PC3 の実機で再現確認済み）
+`call_llm_short_news` のペイロードに `reasoning_effort` が無く、`gpt-oss:20b` が既定 reasoning を
+長く回して `max_tokens=700` を使い切り、JSON が途中で切れていた。
+
+| 条件 | finish_reason | completion | 所要 | 結果 |
+|---|---|---|---|---|
+| 現行（指定なし） | `length` | 700（上限到達） | 29.5秒 | JSON破断→定型文 |
+| `reasoning_effort: "low"` | `stop` | 337 | 8.4秒 | 正常なJSON |
+
+破断時のフォールバックが `summary` に**記事タイトル**を入れるため `importance>0` かつ `summary` 非空となり、
+`_needs_repair()` が「健全」と誤判定 → `src_hash` 一致でスキップされ、**壊れた行が二度と作り直されない**
+状態が固定化していた。DB 上 news insight の **約85%（4,830件）** が該当（少なくとも 2026-07 から継続）。
+
+## 修正
+1. `llm_insights_api.call_llm_short_news`: `"reasoning_effort": "low"` を追加
+2. 同: 再試行条件を `if not s:` → `if not s or not _extract_json_object(s):`（空応答だけでなく解析不能も再試行）
+3. `llm_insights_pipeline`: フォールバック文言を定数 `NEWS_FALLBACK_KEY_POINT` に集約し、
+   `pick_topic_inputs` が `prev_is_fallback` 列として検出（`key_points` 列が無いテストDBは 0 固定で互換）
+4. `llm_insights_local._needs_repair`: `prev_is_fallback=1` を再生成対象に追加
+5. `post_ollama`: thinking 非対応モデル（gemma3 は 400 `"gemma3:12b" does not support thinking` を返すことを実測）へ
+   `reasoning_effort` を送ってしまった場合、`_FAILED_MODELS` に落とさず、パラメータを外して同じモデルで1回だけ再試行
+   （`_NO_THINKING_MODELS` に学習）。既存の `call_llm_perspective_digest` も同じ潜在バグを抱えていた
+
+## 検証
+- `pytest tests -q` → **309 passed**（回帰テスト `test_llm_news_reasoning_effort.py` 7件・`test_llm_fallback_repair.py` 5件を新規追加）
+- 実機再生成: 3回（合計 約35分）で **158件** を再生成。1件あたり 16〜34秒 → **8〜12秒**に短縮
+- ニュースページ掲載分は一時スクリプトで狙い撃ち修復（29/29 成功・失敗0）
+- 再render後の `docs/assets/data/insights_news.json`: **129件中フォールバック残0**、ページ側の `data-insight-topic` と欠落なし一致
+
+## 残タスク
+- [ ] **フォールバック率の可視化**: `pipeline_report.py` か ops ページに
+      `select count(*) from topic_insights where key_points like '%<定型文>%'` を出す。
+      今回はログ上 `[OK] insight saved` が並んでいたため、件数だけの監視では劣化を検知できなかった
+- [ ] **過去分バックログの解消**: フォールバック行が約4,800件残っている。夜間の `--rescue` は新しい順に
+      処理するため、古い行まで届くのに時間がかかる（LLM_MAX_SEC=600 で1回あたり約70件）。
+      急ぐなら対象を絞ったバックフィル実行が必要
+- [ ] **他の呼び出しへの適用検討**: `call_llm`（tech用, `max_tokens=700`）と `call_llm_esg_*`（`max_tokens=500`）も
+      `reasoning_effort` 未指定。tech は現在 `LLM_SKIP_KINDS=tech` で生成停止中、かつ `_repair_json_with_llm` の
+      救済があるため今回は未変更
+- [ ] `forecast_verify` の `verify JSON 解析失敗` 警告（本件とは別件。応答が JSON **配列** で返るのに
+      `_extract_json_object` が `{` を探している可能性。要調査）

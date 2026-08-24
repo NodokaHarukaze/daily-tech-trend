@@ -5,6 +5,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
+# LLM 応答が JSON として解釈できなかったときに key_points へ入る定型文。
+# llm_insights_api.call_llm_short_news が使い、pick_topic_inputs は
+# 「壊れた insight」の目印として同じ文字列を検索する。片方だけ変えると
+# 再生成対象の検出が効かなくなるため、必ずこの定数を経由すること。
+NEWS_FALLBACK_KEY_POINT = "推測: 本文情報が少ないため、影響範囲はリンク先で要確認"
+
+
 def connect():
     base = Path(__file__).resolve().parent.parent
     return sqlite3.connect(base / "data" / "state.sqlite")
@@ -32,6 +39,15 @@ def _topics_has_kind(conn) -> bool:
         return False
 
 
+def _topic_insights_has_key_points(conn) -> bool:
+    """topic_insights テーブルに key_points カラムがあるかを検査する（テスト DB 互換）。"""
+    try:
+        cur = conn.execute("PRAGMA table_info(topic_insights)")
+        return any(row[1] == "key_points" for row in cur.fetchall())
+    except Exception:
+        return False
+
+
 def pick_topic_inputs(conn, limit=300, rescue=False, skip_kinds=()):
     """トピック別に LLM 入力を抽出する。
 
@@ -48,6 +64,15 @@ def pick_topic_inputs(conn, limit=300, rescue=False, skip_kinds=()):
 
     # articles.region が無いテスト DB 互換のために式を切替える
     region_expr = "COALESCE(a.region, '')" if _articles_has_region(conn) else "''"
+
+    # topic_insights.key_points が無いテスト DB 互換。列が無ければ常に「壊れていない」扱い。
+    has_key_points = _topic_insights_has_key_points(conn)
+    fallback_expr = (
+        "CASE WHEN COALESCE(ti.key_points, '') LIKE ? THEN 1 ELSE 0 END"
+        if has_key_points
+        else "0"
+    )
+    fallback_params = (f"%{NEWS_FALLBACK_KEY_POINT}%",) if has_key_points else ()
 
     skip = tuple(
         k.strip().lower() for k in (skip_kinds or ()) if str(k or "").strip()
@@ -120,7 +145,10 @@ def pick_topic_inputs(conn, limit=300, rescue=False, skip_kinds=()):
         -- 内容ハッシュが同じでも作り直す必要がある「壊れた insight」の判定材料。
         -- summary は本文が長いので、空かどうかのフラグだけを持ち出す。
         COALESCE(ti.importance, 0) AS prev_importance,
-        CASE WHEN COALESCE(ti.summary, '') = '' THEN 1 ELSE 0 END AS prev_summary_empty
+        CASE WHEN COALESCE(ti.summary, '') = '' THEN 1 ELSE 0 END AS prev_summary_empty,
+        -- LLM 応答が壊れて定型フォールバック文言に差し替わった insight。
+        -- 要約が空ではないので上のフラグでは拾えず、再生成対象から漏れていた。
+        {fallback_expr} AS prev_is_fallback
       FROM topics t
       JOIN latest l ON l.topic_id = t.id AND l.rn = 1
       LEFT JOIN topic_insights ti ON ti.topic_id = t.id
@@ -139,7 +167,7 @@ def pick_topic_inputs(conn, limit=300, rescue=False, skip_kinds=()):
     SELECT
       topic_id, topic_title, category, kind, source, url,
       published_at, importance_hint, body, src_article_id, prev_src_hash,
-      prev_importance, prev_summary_empty
+      prev_importance, prev_summary_empty, prev_is_fallback
     FROM (
       SELECT
         pending.*,
@@ -153,7 +181,7 @@ def pick_topic_inputs(conn, limit=300, rescue=False, skip_kinds=()):
     ORDER BY bucket_rn ASC, datetime(COALESCE(NULLIF(published_at,''), fetched_at)) DESC, topic_id DESC
     LIMIT ?
     """
-    cur.execute(sql, (1 if rescue else 0, *skip, limit))
+    cur.execute(sql, (*fallback_params, 1 if rescue else 0, *skip, limit))
     return cur.fetchall()
 
 

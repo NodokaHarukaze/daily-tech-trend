@@ -82,9 +82,13 @@ def _needs_repair(row) -> bool:
 
     importance が 0 のまま、または要約が空のまま保存されている行は、
     元記事が更新されていなくても生成し直す価値がある。
+    LLM 応答が壊れて定型フォールバック文言に差し替わった行も同様
+    （2026-08-24: news insight の約85%がこれに該当していた）。
     それ以外は同じ入力から同じ結果を作るだけなので再生成しない。
     """
     if int(_row_get(row, "prev_importance", 0) or 0) == 0:
+        return True
+    if int(_row_get(row, "prev_is_fallback", 0) or 0) == 1:
         return True
     return bool(int(_row_get(row, "prev_summary_empty", 0) or 0))
 

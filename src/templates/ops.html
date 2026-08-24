@@ -72,6 +72,11 @@
       <div class="summary-item"><div class="k">トピック数</div><div class="v">{{ ops.topic_total }}</div></div>
       <div class="summary-item"><div class="k">LLM分析済み</div><div class="v">{{ ops.insight_count }}</div></div>
       <div class="summary-item"><div class="k">分析未生成</div><div class="v">{{ ops.insight_pending }}</div></div>
+      <div class="summary-item" title="LLM応答がJSONとして解釈できず、要約が記事タイトル・根拠が定型文へ差し替わった割合（直近24時間に生成した分）。正常時は 0%。">
+        <div class="k">要約失敗率(24h)</div>
+        <div class="v"{% if ops.insight_fallback_warn %} style="color:#c0392b"{% endif %}>{{ ops.insight_fallback_rate }}%{% if ops.insight_fallback_warn %} ⚠{% endif %}</div>
+        <div class="small">{{ ops.insight_fallback_24h }}/{{ ops.insight_fallback_24h_total }} 件 ・未修復 {{ ops.insight_fallback_total }}</div>
+      </div>
       <div class="summary-item"><div class="k">RSSソース</div><div class="v">{{ meta.rss_sources }}</div></div>
     </div>
   </div>

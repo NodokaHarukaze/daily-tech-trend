@@ -13,7 +13,12 @@ from jinja2 import Template, Environment, FileSystemLoader
 from datetime import datetime, timedelta, timezone
 
 from db import connect
+from llm_insights_pipeline import NEWS_FALLBACK_KEY_POINT
 from text_clean import clean_for_html, clean_json_like
+
+# 要約フォールバック率がこの%以上なら運用ページで警告表示する。
+# 正常時は 0%、壊れていた期間は約85%だったため、20% を異常の閾値とする。
+INSIGHT_FALLBACK_WARN_PCT = 20.0
 
 from typing import Any, List
 import logging
@@ -1604,9 +1609,54 @@ def render_search_page(out_dir: Path, generated_at: str, cur, limit: int = 3000)
     )
 
 
+def compute_insight_fallback_stats(cur, cutoff_24h: str) -> Dict[str, Any]:
+    """要約フォールバック率を集計する。
+
+    LLM 応答が JSON として解釈できなかったとき、要約は記事タイトル・key_points は
+    定型文（NEWS_FALLBACK_KEY_POINT）に差し替わる。件数だけを見ているとログには
+    `[OK] insight saved` が並ぶため劣化を検知できず、実際に news insight の約85%が
+    壊れたまま8週間以上気付かれなかった（2026-08-24）。率を運用ページへ常時出す。
+
+    直近24時間に生成した分の率を主指標とし（回帰を早く検知するため）、
+    未修復の総件数も併記する。
+    """
+    like = f"%{NEWS_FALLBACK_KEY_POINT}%"
+    try:
+        cur.execute(
+            "SELECT COUNT(*), SUM(CASE WHEN key_points LIKE ? THEN 1 ELSE 0 END) "
+            "FROM topic_insights WHERE datetime(updated_at) >= datetime(?)",
+            (like, cutoff_24h),
+        )
+        row = cur.fetchone() or (0, 0)
+        recent_total = int(row[0] or 0)
+        recent_fb = int(row[1] or 0)
+        cur.execute("SELECT COUNT(*) FROM topic_insights WHERE key_points LIKE ?", (like,))
+        total_fb = int((cur.fetchone() or (0,))[0] or 0)
+    except Exception as e:
+        # 運用ページの1指標のためにページ全体を落とさない
+        _log_render_error("ops.insight_fallback", e, level="warning")
+        return {
+            "insight_fallback_24h": 0,
+            "insight_fallback_24h_total": 0,
+            "insight_fallback_rate": 0.0,
+            "insight_fallback_warn": False,
+            "insight_fallback_total": 0,
+        }
+
+    rate = round(100.0 * recent_fb / recent_total, 1) if recent_total else 0.0
+    return {
+        "insight_fallback_24h": recent_fb,
+        "insight_fallback_24h_total": recent_total,
+        "insight_fallback_rate": rate,
+        "insight_fallback_warn": recent_total > 0 and rate >= INSIGHT_FALLBACK_WARN_PCT,
+        "insight_fallback_total": total_fb,
+    }
+
+
 def _build_ops_page_data(cur, cutoff_48h: str, cat_name: Dict[str, str]) -> Dict[str, Any]:
     """ops.html 用の統計データを取得・集計する（main() から分離）。"""
     cutoff_7d = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d %H:%M:%S")
+    cutoff_24h = (datetime.now(timezone.utc) - timedelta(hours=24)).strftime("%Y-%m-%d %H:%M:%S")
 
     # 記事統計
     cur.execute("""
@@ -1628,6 +1678,8 @@ def _build_ops_page_data(cur, cutoff_48h: str, cat_name: Dict[str, str]) -> Dict
     cur.execute("SELECT COUNT(*) FROM topic_insights")
     ops_stats["insight_count"] = int(cur.fetchone()[0] or 0)
     ops_stats["insight_pending"] = max(0, ops_stats["topic_total"] - ops_stats["insight_count"])
+
+    ops_stats.update(compute_insight_fallback_stats(cur, cutoff_24h))
 
     # 日別収集トレンド（14日）
     cur.execute("""

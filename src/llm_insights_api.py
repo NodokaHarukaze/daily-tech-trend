@@ -6,6 +6,8 @@ import time
 
 import requests
 
+from llm_insights_pipeline import NEWS_FALLBACK_KEY_POINT
+
 OLLAMA_URL = "http://127.0.0.1:11434/v1/chat/completions"
 OLLAMA_BASE = "http://127.0.0.1:11434"
 DEFAULT_MODEL = "gpt-oss:20b"
@@ -29,6 +31,11 @@ _MODEL_PREPARED = False
 _SELECTED_MODEL = None
 _FAILED_MODELS = set()
 _LOAD_ATTEMPTED_MODELS = set()
+# reasoning_effort を受け付けないと判明したモデル。
+# Ollama は thinking 非対応モデルに reasoning_effort を送ると
+# 400 '"<model>" does not support thinking' を返すため、
+# 一度学習したらそのモデルには送らない（_FAILED_MODELS には落とさない）。
+_NO_THINKING_MODELS = set()
 
 
 def _model_settings() -> dict:
@@ -282,6 +289,13 @@ def post_ollama(
             candidates = _pick_model_candidates()
         for model in candidates:
             body["model"] = model
+            # reasoning_effort は thinking 対応モデルだけが受け付ける。
+            # 非対応と判明済みのモデルには送らない（毎回400を踏まないため）。
+            if "reasoning_effort" in payload:
+                if model in _NO_THINKING_MODELS:
+                    body.pop("reasoning_effort", None)
+                else:
+                    body["reasoning_effort"] = payload["reasoning_effort"]
             try:
                 r = _SESSION.post(OLLAMA_URL, json=body, timeout=eff_timeout)
                 if r.status_code >= 400:
@@ -289,6 +303,16 @@ def post_ollama(
                         detail = r.json()
                     except Exception:
                         detail = r.text
+                    # thinking 非対応による400はモデルの不良ではなくパラメータ不一致。
+                    # reasoning_effort を外して同じモデルで1回だけ再試行し、
+                    # _FAILED_MODELS には落とさない（候補を無駄に減らさない）。
+                    if "reasoning_effort" in body and "does not support thinking" in str(detail):
+                        _NO_THINKING_MODELS.add(model)
+                        body.pop("reasoning_effort", None)
+                        print(f"[INFO] model '{model}' は thinking 非対応。reasoning_effort を外して再試行する")
+                        r = _SESSION.post(OLLAMA_URL, json=body, timeout=eff_timeout)
+
+                if r.status_code >= 400:
                     _FAILED_MODELS.add(model)
                     if _SELECTED_MODEL == model:
                         _SELECTED_MODEL = None
@@ -568,11 +592,25 @@ def call_llm_short_news(title: str, body: str, url: str = "") -> dict:
         "inferred は、key_points または perspectives に '推測:' が1つでも含まれる場合 1、それ以外は0。"
     )
 
-    payload = {"model": _pick_usable_model(), "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}], "temperature": 0.3, "max_tokens": 700}
+    payload = {
+        "model": _pick_usable_model(),
+        "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
+        "temperature": 0.3,
+        "max_tokens": 700,
+        # gpt-oss系は既定のreasoningが肥大化し、max_tokensを使い切って
+        # JSONが途中で切れる（finish_reason=length）。実測: reasoning 1736字 /
+        # completion 700トークン全消費 → JSON破断 → 要約がフォールバック文言に
+        # 差し替わる事象が news 記事の約85%で発生していた（2026-08-24 調査）。
+        # reasoning_effort=low で completion 337トークン・8秒で完結する。
+        # thinking非対応モデルへは post_ollama が自動で外す。
+        "reasoning_effort": "low",
+    }
     r = post_ollama(payload, timeout=LLM_SHORT_TIMEOUT_SEC)
     s = _get_lm_content(r)
 
-    if not s:
+    # 空応答だけでなく「JSONとして取り出せない応答」も再試行対象にする。
+    # 本文が途中で切れた場合は s が非空のまま解析不能になるため。
+    if not s or not _extract_json_object(s):
         payload["messages"][1]["content"] = (
             f"タイトル: {title}\nURL: {url}\n本文:\n{body_for_llm}\n\n"
             "JSONのみで返して:\n"
@@ -609,7 +647,7 @@ def call_llm_short_news(title: str, body: str, url: str = "") -> dict:
 
     kps = [x.strip() for x in (key_points or []) if isinstance(x, str) and x.strip()][:3]
     if not kps:
-        kps = ["推測: 本文情報が少ないため、影響範囲はリンク先で要確認"]
+        kps = [NEWS_FALLBACK_KEY_POINT]
 
     def _fill_if_empty(v: str, fallback: str) -> str:
         return (v or "").strip() or fallback
