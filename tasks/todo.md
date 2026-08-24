@@ -1452,12 +1452,17 @@ LLM insight と同じ「予算を使い切る」構造だった。
 - 再render後の `docs/assets/data/insights_news.json`: **129件中フォールバック残0**、ページ側の `data-insight-topic` と欠落なし一致
 
 ## 残タスク
-- [ ] **フォールバック率の可視化**: `pipeline_report.py` か ops ページに
-      `select count(*) from topic_insights where key_points like '%<定型文>%'` を出す。
-      今回はログ上 `[OK] insight saved` が並んでいたため、件数だけの監視では劣化を検知できなかった
-- [ ] **過去分バックログの解消**: フォールバック行が約4,800件残っている。夜間の `--rescue` は新しい順に
-      処理するため、古い行まで届くのに時間がかかる（LLM_MAX_SEC=600 で1回あたり約70件）。
-      急ぐなら対象を絞ったバックフィル実行が必要
+- [x] **フォールバック率の可視化** → 運用ページ（`docs/ops/`）に「要約失敗率(24h)」を追加（2026-08-24 完了）。
+      直近24時間に生成した insight のうち定型文に落ちた割合を出し、20%以上で赤字＋⚠ 表示。
+      未修復の総件数も併記する。実装は `render_main.compute_insight_fallback_stats`
+- [x] **過去分バックフィル（直近2ヶ月）** → `src/backfill_insight_fallback.py` を追加し、
+      `--since 2026-07-01` の1,718件を実行（2026-08-24 18:00 開始・約5時間）。
+      定時実行（06/09/12/15/18/21時）の 0〜35分は自動待避して DB・LLM を取り合わない
+- [ ] **2026-06以前のバックログ（約3,000件）**: 今回のバックフィルは 2026-07 以降のみ。
+      残りは表示されない古いトピックが大半のため未実施。必要なら
+      `python src/backfill_insight_fallback.py --since all` で消化できる（約8時間）。
+      なお tech トピックのフォールバック行は `--rescue` の対象外（WHERE 条件に入らない）ため、
+      夜間パイプラインでは永久に拾われない。消すならこのスクリプトを使う
 - [ ] **他の呼び出しへの適用検討**: `call_llm`（tech用, `max_tokens=700`）と `call_llm_esg_*`（`max_tokens=500`）も
       `reasoning_effort` 未指定。tech は現在 `LLM_SKIP_KINDS=tech` で生成停止中、かつ `_repair_json_with_llm` の
       救済があるため今回は未変更
