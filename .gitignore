@@ -36,9 +36,12 @@ dist/
 # === Project specific ===
 
 # Local DB / runtime state (DO NOT COMMIT)
-data/
-src/data/
-logs/
+# 先頭の / は必須。アンカー無しの `data/` はどの階層の data ディレクトリにも
+# 一致してしまい、公開対象の docs/assets/data/（insights_*.json）まで
+# 巻き添えで除外していた（2026-08-25 修正）。
+/data/
+/src/data/
+/logs/
 
 # GitHub Pages output（公開対象のディレクトリ/ファイルのみ許可）
 docs/*
