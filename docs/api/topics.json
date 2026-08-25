@@ -1,7 +1,591 @@
 {
-  "generated_at": "2026-08-24T21:18:36+00:00",
+  "generated_at": "2026-08-25T00:20:14+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 41416,
+      "title": "令和8年度地方財政審議会（8月19日）議事要旨",
+      "category": "policy",
+      "importance": 50,
+      "summary": "令和8年度地方財政審議会が2024年8月18日に開催された。",
+      "updated_at": "2026-08-25T00:11:54.499222+00:00"
+    },
+    {
+      "id": 42420,
+      "title": "情報通信審議会　情報通信技術分科会　新世代モバイル通信システム委員会　ローカル5G検討作業班（第24回）開催案内",
+      "category": "policy",
+      "importance": 50,
+      "summary": "情報通信審議会の新世代モバイル通信システム委員会ローカル5G検討作業班が第24回開催することを案内します。",
+      "updated_at": "2026-08-25T00:11:42.678158+00:00"
+    },
+    {
+      "id": 42421,
+      "title": "情報通信審議会　情報通信技術分科会　電波利用環境委員会　CISPR B作業班（第29回）配付資料",
+      "category": "policy",
+      "importance": 20,
+      "summary": "情報通信審議会の情報通信技術分科会 電波利用環境委員会 CISPR A作業班（第26回）の配付資料が公開された。",
+      "updated_at": "2026-08-25T00:11:30.083910+00:00"
+    },
+    {
+      "id": 42510,
+      "title": "情報通信審議会　情報通信技術分科会　電波利用環境委員会　CISPR F作業班（第31回）配付資料",
+      "category": "policy",
+      "importance": 50,
+      "summary": "情報通信審議会 情報通信技術分科会 電波利用環境委員会 CISPR F作業班（第31回）の配付資料が公開された。",
+      "updated_at": "2026-08-25T00:11:16.321739+00:00"
+    },
+    {
+      "id": 42213,
+      "title": "Windowsのコード署名インフラが刷新へ ～2027年にはポスト量子暗号へ移行／まずは10月の「Windows Production PCA 2011」期限切れに備えよ",
+      "category": "company",
+      "importance": 70,
+      "summary": "Windowsはコード署名インフラを刷新し、2027年までにポスト量子暗号へ移行する計画であり、10月に「Windows Production PCA 2011」の期限切れに備える必要がある。",
+      "updated_at": "2026-08-25T00:11:06.172692+00:00"
+    },
+    {
+      "id": 42214,
+      "title": "【Outlook】お詫びメールにどう返信する？ Copilotに文面を考えさせる際の注意とコツ【残業を減らす！Officeテクニック】",
+      "category": "company",
+      "importance": 70,
+      "summary": "OutlookでCopilotを使って謝罪メールの返信文面を作成する際には、注意点とコツが紹介されている。",
+      "updated_at": "2026-08-25T00:10:53.417455+00:00"
+    },
+    {
+      "id": 42311,
+      "title": "「Premiere Pro」「Photoshop CC」が20％OFF！Amazonでアドビ製PCソフトのセール【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 80,
+      "summary": "AmazonでPremiere ProとPhotoshop CCが20％OFFのセールが開催されている。",
+      "updated_at": "2026-08-25T00:10:35.877960+00:00"
+    },
+    {
+      "id": 42312,
+      "title": "Amazonベーシックのトラックパッドが4,108円！Amazon「暮らし応援 夏祭りSale」【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 60,
+      "summary": "Amazonベーシックのトラックパッドが4,108円で販売されています。",
+      "updated_at": "2026-08-25T00:10:26.042196+00:00"
+    },
+    {
+      "id": 42267,
+      "title": "「北海道富良野ホップ炭酸水」が最大23％OFF！Amazonでポッカサッポロのセール【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 65,
+      "summary": "Amazonで「北海道富良野ホップ炭酸水」が最大23％OFFのセールが実施されている。",
+      "updated_at": "2026-08-25T00:10:14.251839+00:00"
+    },
+    {
+      "id": 42268,
+      "title": "『花の慶次』『エアマスター』『クロサギ』などのマンガが99円均一！Amazonで「Kindle本99円セール」／『鉄のラインバレル』『ゆるキャン△』『クレヨンしんちゃん』『まんがサイエンス』なども【Book Watch/セール情報】",
+      "category": "company",
+      "importance": 85,
+      "summary": "AmazonのKindle本が99円均一で販売され、花の慶次・エアマスター・クロサギなど複数のマンガが対象となっている。",
+      "updated_at": "2026-08-25T00:10:03.927759+00:00"
+    },
+    {
+      "id": 42269,
+      "title": "Windows 11の［自動再生］ダイアログもモダナイズ、「WinUI」で作り直して「Fluent 2」準拠",
+      "category": "company",
+      "importance": 85,
+      "summary": "Windows 11の自動再生ダイアログがWinUIで作り直され、Fluent 2デザインガイドラインに準拠したモダン化が実施された。",
+      "updated_at": "2026-08-25T00:09:51.103326+00:00"
+    },
+    {
+      "id": 42270,
+      "title": "【全文無料公開】「できるChatGPT」や動画生成AIの入門書など30冊が全文無料公開、1週間限定／「世界一やさしいCanva」「できる はじめてのマインクラフト建築」なども【Book Watch/ニュース】",
+      "category": "company",
+      "importance": 70,
+      "summary": "30冊のAI関連入門書が、1週間限定で全文無料公開される。",
+      "updated_at": "2026-08-25T00:09:39.698824+00:00"
+    },
+    {
+      "id": 42271,
+      "title": "「Excel」の「=COPILOT()」関数の廃止に注目が集まる ～窓の杜アクセスランキング［2026/8/17～2026/8/23]【記事アクセスランキング】",
+      "category": "company",
+      "importance": 65,
+      "summary": "MicrosoftはExcelの「=COPILOT()」関数を廃止することを発表した。",
+      "updated_at": "2026-08-25T00:09:26.994520+00:00"
+    },
+    {
+      "id": 42313,
+      "title": "新しい「Outlook」に馴染めない人に ～クラシック版そっくりにするオプションが導入／8月から「Outlook on the web」と新しい「Outlook for Windows」で順次展開",
+      "category": "company",
+      "importance": 70,
+      "summary": "Microsoft は新しい Outlook に馴染めないユーザー向けに、クラシック版と同じ外観になるオプションを導入し、8 月から「Outlook on the web」と新しい「Outlook for Windows」を順次展開する。",
+      "updated_at": "2026-08-25T00:09:15.625570+00:00"
+    },
+    {
+      "id": 42314,
+      "title": "AIコーディングを“一人プレイ”から“チーム戦”へ ～「Slack Code」が登場／「コードチャンネル」でチームとエージェントが計画・実装・レビューを共同で進める",
+      "category": "company",
+      "importance": 85,
+      "summary": "Slack Codeは、AIエージェントとチームがコードチャネルで計画・実装・レビューを共同で行う新しいツールです。",
+      "updated_at": "2026-08-25T00:09:02.865981+00:00"
+    },
+    {
+      "id": 33016,
+      "title": "アナログ審査見直しを進めるダイアローグ「RegTech ミート」7月の開催スケジュールを掲載しました",
+      "category": "policy",
+      "importance": 60,
+      "summary": "ダイアローグ「RegTech ミート」の7月開催スケジュールが公開された。",
+      "updated_at": "2026-08-25T00:08:50.438583+00:00"
+    },
+    {
+      "id": 42373,
+      "title": "Oracleがセキュリティ更新を毎月実施へ ～四半期ごとの「CPU」を補完する枠組み／新設の「CSPU」で943件のパッチを提供。「Java」「VirtualBox」「MySQL」などが影響",
+      "category": "company",
+      "importance": 80,
+      "summary": "Oracleは四半期ごとのCPUに加え、毎月のセキュリティ更新を実施し、新設されたCSPUで943件のパッチを提供する。",
+      "updated_at": "2026-08-25T00:08:40.871987+00:00"
+    },
+    {
+      "id": 42374,
+      "title": "「ChatGPT」に6つの新機能 ～「Site」の共同編集、ピン留めチャットの同期など／macOSでは「メッセージ」アプリ連携なども",
+      "category": "company",
+      "importance": 75,
+      "summary": "ChatGPTに「Site」の共同編集、ピン留めチャットの同期、macOSでのメッセージアプリ連携など6つの新機能が追加された。",
+      "updated_at": "2026-08-25T00:08:28.758542+00:00"
+    },
+    {
+      "id": 42375,
+      "title": "「GIMP 3.4」に向けた開発は順調、改善点多数 ～XCFに代わる新しいプロジェクト形式やPSDのサポート強化など／非破壊編集の拡充やUIの改善も。間もなく「GIMP 3.3.2」で試せる",
+      "category": "company",
+      "importance": 80,
+      "summary": "GIMP 3.4 の開発は順調で、XCF に代わる新しいプロジェクト形式や PSD サポートの強化、非破壊編集機能の拡充、UI 改善など多数の改善点が実装されている。",
+      "updated_at": "2026-08-25T00:08:17.449327+00:00"
+    },
+    {
+      "id": 42376,
+      "title": "「Adobe Firefly AIアシスタント」無料体験プログラムがスタート、日本語での利用にも対応／毎日一定の回数まで、無料で画像・動画・音声生成ができる",
+      "category": "company",
+      "importance": 80,
+      "summary": "Adobeは「Firefly AIアシスタント」の無料体験プログラムを開始し、日本語での利用が可能になり、毎日一定回数まで画像・動画・音声生成が無料で行えるようになった。",
+      "updated_at": "2026-08-25T00:08:04.591573+00:00"
+    },
+    {
+      "id": 42484,
+      "title": "３党合流、統一会派案に難色　中道代表",
+      "category": "news",
+      "importance": 60,
+      "summary": "中道代表が統一会派案に難色を示し、３党合流の提案に対して懸念を表明した。",
+      "updated_at": "2026-08-25T00:07:52.833604+00:00"
+    },
+    {
+      "id": 42496,
+      "title": "外環道シールド機の大ギア損傷、発端は22年の地中壁との接触事故と推定",
+      "category": "industry",
+      "importance": 85,
+      "summary": "2026年1月に東京外環道トンネル工事で発見されたシールド機内部の部材損傷は、2022年に起きた鋼製地中壁との接触事故が原因であると判明した。",
+      "updated_at": "2026-08-25T00:07:41.694663+00:00"
+    },
+    {
+      "id": 42497,
+      "title": "iPhoneをWindowsパソコンのWebカメラに、無料アプリで画質を大きく向上",
+      "category": "industry",
+      "importance": 70,
+      "summary": "iPhoneをWindowsパソコンのWebカメラとして使用でき、専用アプリだけで追加機材なしに会議や動画配信の画質が大幅に向上する。",
+      "updated_at": "2026-08-25T00:07:30.055776+00:00"
+    },
+    {
+      "id": 42498,
+      "title": "高所作業での足元を安定させるスニーカー",
+      "category": "industry",
+      "importance": 65,
+      "summary": "日進ゴムは2026年7月に高所作業用スニーカー「ハイパーVラボ屋根プロ＃1400」を発売した。",
+      "updated_at": "2026-08-25T00:07:17.402126+00:00"
+    },
+    {
+      "id": 42499,
+      "title": "電池不要の冷却ウエアで涼しさ持続、気化熱冷却や特殊保冷剤のベスト",
+      "category": "industry",
+      "importance": 70,
+      "summary": "建設現場で水循環式や保冷剤付きのベストなど、電力を使わずに冷たさが持続する製品への関心が高まっている。",
+      "updated_at": "2026-08-25T00:07:07.369817+00:00"
+    },
+    {
+      "id": 42500,
+      "title": "新システムは成長基盤、「2025年の崖」を克服したJFEホールディングス社長",
+      "category": "industry",
+      "importance": 85,
+      "summary": "JFEホールディングス社長は、製造業の成長にDX戦略が不可欠であると認識しつつ、基幹システム刷新プロジェクトを中断する決断を下したものの、2025年の崖を克服する目的は揺るがなかった。",
+      "updated_at": "2026-08-25T00:06:55.611769+00:00"
+    },
+    {
+      "id": 42501,
+      "title": "利用ライブラリの処理を理解、2つの文書をまとめて要約してみる",
+      "category": "industry",
+      "importance": 70,
+      "summary": "この記事ではGemini APIを利用した要約処理の基礎と、google-genaiライブラリの使い方について解説しています。",
+      "updated_at": "2026-08-25T00:06:43.498055+00:00"
+    },
+    {
+      "id": 42480,
+      "title": "What do locals think of IndyCar in Washington DC?",
+      "category": "news",
+      "importance": 60,
+      "summary": "米国大統領ドナルド・トランプ氏が、日曜日にワシントンDCの街路で開催されたインディカー競技を観戦する人々の中にいた。",
+      "updated_at": "2026-08-25T00:06:33.758311+00:00"
+    },
+    {
+      "id": 42489,
+      "title": "ソニーネットワークコミュニケーションズとファイバーゲート、入居者の希望に応じて選べ、オーナーの負担がない集合住宅向け光回線サービス提供",
+      "category": "industry",
+      "importance": 70,
+      "summary": "ソニーネットワークコミュニケーションズは、ファイバーゲートと提携し、NURO 光を基盤とした集合住宅向け卸サービス「FGBB 光 Select powered by NURO」を9月1日から提供開始する。",
+      "updated_at": "2026-08-25T00:06:23.049601+00:00"
+    },
+    {
+      "id": 42490,
+      "title": "東京都とGovTech東京、環境・福祉・防災などの役立つ情報をまとめた地図サービス「Tokyo Map」正式版公開",
+      "category": "industry",
+      "importance": 70,
+      "summary": "東京都とGovTech東京が、東京都の地図情報を統合した「Tokyo Map」正式版を無料で公開しました。",
+      "updated_at": "2026-08-25T00:06:06.389563+00:00"
+    },
+    {
+      "id": 42485,
+      "title": "外字（EUDC文字）が正しく表示・印刷されない問題、Windows 11/Windows Server 2025で／2025年9月以降の更新プログラムで発生",
+      "category": "company",
+      "importance": 70,
+      "summary": "Windows 11 と Windows Server 2025 の更新プログラム（2025年9月以降）で、外字（EUDC文字）が正しく表示・印刷されない問題が報告されています。",
+      "updated_at": "2026-08-25T00:05:54.598431+00:00"
+    },
+    {
+      "id": 42506,
+      "title": "岐阜 大野町 住宅で成人とみられる3人の遺体見つかる",
+      "category": "news",
+      "importance": 65,
+      "summary": "岐阜県大野町の住宅で成人とみられる3人の遺体が見つかり、死後しばらく時間が経過しているため性別は不明。警察は身元確認と死亡原因調査を進めている。",
+      "updated_at": "2026-08-25T00:05:42.103743+00:00"
+    },
+    {
+      "id": 42491,
+      "title": "最速14分でご飯が炊けて、同時におかずも温められる弁当箱型のコンパクトな炊飯器の記事に注目が集まる【アクセスランキング】",
+      "category": "industry",
+      "importance": 80,
+      "summary": "記事は、最速14分でご飯が炊け、同時におかずも温められる弁当箱型のコンパクトな炊飯器を紹介している。",
+      "updated_at": "2026-08-25T00:05:27.804720+00:00"
+    },
+    {
+      "id": 42502,
+      "title": "全国約2800拠点を結ぶ閉域網を構築",
+      "category": "industry",
+      "importance": 70,
+      "summary": "GSSネットワークは全国約2800拠点を結ぶ閉域網を構築した。",
+      "updated_at": "2026-08-25T00:05:17.565815+00:00"
+    },
+    {
+      "id": 42483,
+      "title": "'Half my business will be gone' - firms in Canada and US fear trade war",
+      "category": "news",
+      "importance": 80,
+      "summary": "カナダと米国の事業主が、相互に課される輸入税で不確実性と懸念を抱えている。",
+      "updated_at": "2026-08-25T00:05:04.819465+00:00"
+    },
+    {
+      "id": 42503,
+      "title": "日本交通に不正アクセス　流出疑い情報をネット上で確認",
+      "category": "industry",
+      "importance": 70,
+      "summary": "日本交通は同社システムへの不正アクセスによりマルウェア感染が発生し、システム停止を報告した。",
+      "updated_at": "2026-08-25T00:04:51.939445+00:00"
+    },
+    {
+      "id": 42482,
+      "title": "'Scared to death': Thousands evacuate Nevada homes as wildfire spreads",
+      "category": "news",
+      "importance": 70,
+      "summary": "米国ネバダ州リノ郊外で火災が拡大し、数万人に避難指示が出された。",
+      "updated_at": "2026-08-25T00:04:41.673288+00:00"
+    },
+    {
+      "id": 42508,
+      "title": "プールにはおしっこが何リットル混じっている？　人工甘味料を基に計測　カナダチームが2017年に調査",
+      "category": "news",
+      "importance": 65,
+      "summary": "カナダ・アルバータ大学の研究者が2017年に発表した論文で、人工甘味料を利用してプール内の尿量を数値化した。",
+      "updated_at": "2026-08-25T00:04:31.091351+00:00"
+    },
+    {
+      "id": 42395,
+      "title": "米財務長官“イランと取り引きある企業などに大規模経済制裁”",
+      "category": "news",
+      "importance": 80,
+      "summary": "米財務長官ベッセントは、イランと取引する企業や個人に対し大規模な経済制裁を科す措置を開始した。",
+      "updated_at": "2026-08-25T00:04:20.558321+00:00"
+    },
+    {
+      "id": 42486,
+      "title": "M5チップ搭載の「Apple 2026 MacBook Air」が最大15％OFF！Amazonでセール中【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 80,
+      "summary": "Appleの2026 MacBook Air（M5チップ搭載）がAmazonで最大15％OFFのセール中で、13.6インチモデルは236,980円、15.3インチモデルは270,980円から販売されている。",
+      "updated_at": "2026-08-25T00:04:08.621670+00:00"
+    },
+    {
+      "id": 42492,
+      "title": "イッツコム、Wi-Fi HaLowとAIカメラを活用したクマ出没の遠隔検知・通知の実証事業を富山県南砺市で実施",
+      "category": "industry",
+      "importance": 60,
+      "summary": "イッツ・コミュニケーションズ株式会社は富山県南砺市でWi‑Fi HaLowとAIカメラを用いたクマ出没の遠隔検知・通知実証事業を実施した。",
+      "updated_at": "2026-08-25T00:03:58.345945+00:00"
+    },
+    {
+      "id": 42493,
+      "title": "NTTタウンページ・トレンドマイクロ、鳥取県警と「警察庁推奨アプリ」普及および防犯啓発に関する連携協定を締結",
+      "category": "industry",
+      "importance": 70,
+      "summary": "NTTタウンページ、トレンドマイクロ、鳥取県警察本部が特殊詐欺防止と警察庁推奨アプリ普及のため連携協定を締結した。",
+      "updated_at": "2026-08-25T00:03:47.468458+00:00"
+    },
+    {
+      "id": 42487,
+      "title": "Ankerのワイヤレスイヤホン「Soundcore」が安い！Amazonでセール中【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 70,
+      "summary": "Ankerのワイヤレスイヤホン「Soundcore P31i」がAmazonで4,490円にセール中です。",
+      "updated_at": "2026-08-25T00:03:36.648641+00:00"
+    },
+    {
+      "id": 42488,
+      "title": "キビキビ、スッキリした「Windows Search」が間もなく製品版「Windows 11」に",
+      "category": "company",
+      "importance": 80,
+      "summary": "Windows Search が改良され、Bing の検索結果を除外する設定も可能になり、Release Preview チャネルでテスト中です。",
+      "updated_at": "2026-08-25T00:03:26.035423+00:00"
+    },
+    {
+      "id": 42481,
+      "title": "Is UK's Storm Shadow missile a game changer for Ukraine?",
+      "category": "news",
+      "importance": 70,
+      "summary": "英国のストームシャドウミサイルがロシア・ウクライナ戦争で差をつける可能性があると報じられた。",
+      "updated_at": "2026-08-25T00:03:14.085566+00:00"
+    },
+    {
+      "id": 42507,
+      "title": "相模原 高校生死亡 車に追われ農道逃げ込んだあと暴行受けたか",
+      "category": "news",
+      "importance": 70,
+      "summary": "相模原市の農道で男子高校生が車に追われオートバイで逃げ込み、暴行を受けた疑いがあるまま死亡した。",
+      "updated_at": "2026-08-25T00:03:01.053344+00:00"
+    },
+    {
+      "id": 42505,
+      "title": "台風18号 沖縄の大東島地方が暴風域に 暴風や高波に厳重警戒",
+      "category": "news",
+      "importance": 80,
+      "summary": "非常に強い台風18号が沖縄の大東島地方を暴風域に巻き込み、26日まで奄美・沖縄で住宅倒壊の恐れがある猛烈な風と高波が予想される。",
+      "updated_at": "2026-08-25T00:02:45.082047+00:00"
+    },
+    {
+      "id": 42494,
+      "title": "「povoデータオアシス」に西武・都営地下鉄など追加　データが無料でもらえる",
+      "category": "security",
+      "importance": 60,
+      "summary": "KDDIとパスモは、povo Data Oasisで無料の0.1GBデータ容量を受け取れるスポットに、西武鉄道・東京都交通局（都営地下鉄など）や埼玉高速鉄道、つくばエクスプレス線、多摩都市モノレール、千葉都市モノレール、東葉高速鉄道、北総鉄道、横浜市交通局の9事業者全駅を追加し、8月25日から開始する。",
+      "updated_at": "2026-08-25T00:02:34.404590+00:00"
+    },
+    {
+      "id": 42495,
+      "title": "ワンプレート冷凍食品が急成長した理由　ニップンが磨いた「一度においしく温める」技術",
+      "category": "security",
+      "importance": 80,
+      "summary": "ワンプレート冷凍食品が急成長し、ニップンは「一度においしく温める」技術を磨いた。",
+      "updated_at": "2026-08-25T00:02:20.894466+00:00"
+    },
+    {
+      "id": 42504,
+      "title": "熊本 大分など「酷暑日」予想 熱中症対策の徹底を",
+      "category": "news",
+      "importance": 70,
+      "summary": "西日本と東日本の各地で気温が上昇し、熊本地震被災地では日中最高気温が40度に達する酷暑日が予想されている。",
+      "updated_at": "2026-08-25T00:02:11.390560+00:00"
+    },
+    {
+      "id": 42509,
+      "title": "建築業でも「Claudeの有料導入」が急増　AI導入レベルが上がった企業を悩ます「新たな壁」とは",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42511,
+      "title": "Vietnam: Seaport profits surge as trade growth supports positive second-half outlook",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42512,
+      "title": "CK Hutchison Commences Investment Treaty Arbitration Against the Republic of Panama for Destruction of Port Investments",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42513,
+      "title": "KONGSBERG launches Aegir SSA",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42514,
+      "title": "MacGregor advances direct ship-to-well LCO₂ transfer, built on 50 years of proven bow-loading technology",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42515,
+      "title": "The Swedish Club reports strong financial performance amid challenging market conditions",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42516,
+      "title": "SEA.AI and Anschütz to Fuse Machine Vision into Autonomics",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42517,
+      "title": "Cargo securing on the PSC agenda",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42518,
+      "title": "Steelpaint Coating The Winner In Maersk Corrosion Protection Trial",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42519,
+      "title": "DNV Maritime Academy Hellas and World Maritime University launch Masterclass on Human Element in shipping",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42520,
+      "title": "OceanScore Pool-Price Index Market Commentary: August 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42521,
+      "title": "Xclusiv Shipbrokers Weekly 24th August 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42522,
+      "title": "Iran threatens to fine, detain vessels violating Hormuz transit rules",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42524,
+      "title": "Ningbo Containerized Freight Index Report, 21 August 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42525,
+      "title": "Platts Container Index rises to $7,565/FEU, hitting highest level in 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42526,
+      "title": "Syria’s tanker trade: what the data shows",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42527,
+      "title": "Baltic Dry Index Up for 3rd Day",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42528,
+      "title": "Greek shipping and the methane pathway: a decade in, and only getting started",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42529,
+      "title": "Demand for Dry Bulkers on the Rise So Far in 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42530,
+      "title": "Perfect Storm at Sea: High Bunker Prices Meet Declining Fuel Quality",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42531,
+      "title": "U.S. Leaves Europe Behind in Critical Minerals Race",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42532,
+      "title": "Venezuela’s Oil Revival Is Slower Than the U.S. Hoped",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
+    {
+      "id": 42533,
+      "title": "The Biggest Victims Of Trump’s Economic D-Day On Iran",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-25T00:01:01.342751+00:00"
+    },
     {
       "id": 42358,
       "title": "Trump Mobile promoted a 'Made in the USA' phone - but the details kept changing",
@@ -33,14 +617,6 @@
       "importance": 80,
       "summary": "国際度量衡総会で2027年5月20日からうるう秒を廃止し、連続的な協定世界時に移行する案が審議される。",
       "updated_at": "2026-08-24T21:11:12.201681+00:00"
-    },
-    {
-      "id": 42373,
-      "title": "Oracleがセキュリティ更新を毎月実施へ ～四半期ごとの「CPU」を補完する枠組み／新設の「CSPU」で943件のパッチを提供。「Java」「VirtualBox」「MySQL」などが影響",
-      "category": "company",
-      "importance": 85,
-      "summary": "Oracleは四半期ごとのCPUに加え、毎月セキュリティ更新を実施し、新設のCSPUで943件のパッチを提供した。",
-      "updated_at": "2026-08-24T21:11:01.255217+00:00"
     },
     {
       "id": 42379,
@@ -83,14 +659,6 @@
       "updated_at": "2026-08-24T21:10:06.539822+00:00"
     },
     {
-      "id": 42374,
-      "title": "「ChatGPT」に6つの新機能 ～「Site」の共同編集、ピン留めチャットの同期など／macOSでは「メッセージ」アプリ連携なども",
-      "category": "company",
-      "importance": 80,
-      "summary": "ChatGPTに6つの新機能が追加され、macOSではメッセージアプリ連携も可能になった。",
-      "updated_at": "2026-08-24T21:09:55.796701+00:00"
-    },
-    {
       "id": 42399,
       "title": "ドコモ・バイクシェア、新ブランドへの刷新また延期　8月のシステム障害受け",
       "category": "news",
@@ -123,14 +691,6 @@
       "updated_at": "2026-08-24T21:09:14.716909+00:00"
     },
     {
-      "id": 42375,
-      "title": "「GIMP 3.4」に向けた開発は順調、改善点多数 ～XCFに代わる新しいプロジェクト形式やPSDのサポート強化など／非破壊編集の拡充やUIの改善も。間もなく「GIMP 3.3.2」で試せる",
-      "category": "company",
-      "importance": 85,
-      "summary": "GIMPの開発チームは、XCFに代わる新プロジェクト形式やPSDサポート強化、非破壊編集拡充とUI改善を含む多数の機能向上を進めており、これらは間もなく「GIMP 3.3.2」で試せる。",
-      "updated_at": "2026-08-24T21:09:01.878166+00:00"
-    },
-    {
       "id": 42359,
       "title": "The formidable challenges facing new Tata boss",
       "category": "news",
@@ -161,14 +721,6 @@
       "importance": 70,
       "summary": "マネーフォワードはみずほ証券が提供する「みずほ証券ネット倶楽部」とのAPI連携を開始し、同サービス上の総合口座における資産残高や保有銘柄などの情報を自動で取り込めるようになる。",
       "updated_at": "2026-08-24T21:08:17.517727+00:00"
-    },
-    {
-      "id": 42376,
-      "title": "「Adobe Firefly AIアシスタント」無料体験プログラムがスタート、日本語での利用にも対応／毎日一定の回数まで、無料で画像・動画・音声生成ができる",
-      "category": "company",
-      "importance": 85,
-      "summary": "AdobeはFirefly AIアシスタントの無料体験プログラムを開始し、日本語で利用できるようになり、毎日一定回数まで画像・動画・音声を無料生成できる。",
-      "updated_at": "2026-08-24T21:08:06.898088+00:00"
     },
     {
       "id": 42404,
@@ -249,558 +801,6 @@
       "importance": 70,
       "summary": "青森県営野球場の建設前に行われた発掘調査で、日本最大級の縄文集落があったことが判明し、そこが三内丸山遺跡である。",
       "updated_at": "2026-08-24T21:05:50.985900+00:00"
-    },
-    {
-      "id": 42370,
-      "title": "Russia's second-biggest online retailer targeted in Ukrainian strikes",
-      "category": "news",
-      "importance": 80,
-      "summary": "ロシア第二位のオンライン小売業者オゾンは、ダゲスタンとクラスノダーを含む南部ロシアの倉庫が夜間攻撃で被害を受けた。",
-      "updated_at": "2026-08-24T21:05:38.344802+00:00"
-    },
-    {
-      "id": 42387,
-      "title": "DGX Sparkの本命用途は「ローカル推論」、GUIを使った操作も可能に",
-      "category": "industry",
-      "importance": 70,
-      "summary": "米NVIDIAのAI専用パソコン「DGX Spark」は、ローカル環境で推論サーバーとして使用することが主な用途とされている。",
-      "updated_at": "2026-08-24T21:05:27.404740+00:00"
-    },
-    {
-      "id": 42364,
-      "title": "Four arrested over suspected poisoning of elephants in Kenya",
-      "category": "news",
-      "importance": 60,
-      "summary": "ケニアで象の死亡疑惑により4人が逮捕された。",
-      "updated_at": "2026-08-24T21:05:16.664745+00:00"
-    },
-    {
-      "id": 42388,
-      "title": "AIリスクが発生する根本要因は？　従来のソフトウエア品質管理が通用せず",
-      "category": "industry",
-      "importance": 70,
-      "summary": "AIのリスクは、開発に用いられる帰納的アプローチと人間に似た能力を持つ性質が原因である。",
-      "updated_at": "2026-08-24T21:05:05.432535+00:00"
-    },
-    {
-      "id": 42159,
-      "title": "Guinea rubbish landfill collapse kills 30",
-      "category": "news",
-      "importance": 85,
-      "summary": "ガーナの首都で主要なごみ処理場の土垂れが住宅を埋没させ、31人が死亡した。",
-      "updated_at": "2026-08-24T21:04:55.189434+00:00"
-    },
-    {
-      "id": 42389,
-      "title": "光電融合の業界地図、NVIDIAとブロードコムが先陣　「基本」の22社",
-      "category": "industry",
-      "importance": 70,
-      "summary": "光電融合の業界地図を描いた記事で、NVIDIAとブロードコムが先陣に立つ22社が紹介されている。",
-      "updated_at": "2026-08-24T21:04:45.972052+00:00"
-    },
-    {
-      "id": 42362,
-      "title": "New Zealand to introduce bill for under-16s social media ban",
-      "category": "news",
-      "importance": 60,
-      "summary": "ニュージーランド政府は未成年者向けのソーシャルメディア禁止法案を導入しようとしている。",
-      "updated_at": "2026-08-24T21:04:35.451842+00:00"
-    },
-    {
-      "id": 42390,
-      "title": "1位は「庁舎が暑い原因は設計ミス、窓を壁と間違い計算　梓設計が1800万円負担」50代の注目トップ10",
-      "category": "industry",
-      "importance": 80,
-      "summary": "庁舎の熱問題は設計ミスで、窓を壁と誤って計算したことが原因であり、梓設計が1800万円を負担する。",
-      "updated_at": "2026-08-24T21:04:23.590335+00:00"
-    },
-    {
-      "id": 42366,
-      "title": "Sonya Massey's killer Sean Grayson dies in US prison",
-      "category": "news",
-      "importance": 80,
-      "summary": "ソニャ・マッセイの殺人犯であるシーアン・グレイソンが米国刑務所で死亡した。",
-      "updated_at": "2026-08-24T21:04:12.189854+00:00"
-    },
-    {
-      "id": 42391,
-      "title": "冷却台は本当に冷える？　CPU温度が11℃低下、PCスタンドも効果",
-      "category": "industry",
-      "importance": 60,
-      "summary": "CPUやSSDは発熱しやすく、ノートパソコンのディスプレイヒンジ付近に配置されることが多い。",
-      "updated_at": "2026-08-24T21:04:00.790935+00:00"
-    },
-    {
-      "id": 42369,
-      "title": "Israel warns of 'forceful' response to kites flown from Gaza",
-      "category": "news",
-      "importance": 60,
-      "summary": "ハマスは、最近イスラエルの国境コミュニティで発見された凧がガザから子どもたちによって打ち上げられたと主張した。",
-      "updated_at": "2026-08-24T21:03:48.108086+00:00"
-    },
-    {
-      "id": 42392,
-      "title": "量子センシング・イニシアチブ始動、欧州のプロジェクトや新興企業に資金",
-      "category": "industry",
-      "importance": 70,
-      "summary": "ドイツの飛躍的イノベーション機構（SPRIND）が、欧州の量子センシングプロジェクトとスタートアップに資金提供する「量子センシング・イニシアチブ」を立ち上げた。",
-      "updated_at": "2026-08-24T21:03:37.162450+00:00"
-    },
-    {
-      "id": 42365,
-      "title": "Access to Zambian courts prevented as election petition deadline looms",
-      "category": "news",
-      "importance": 80,
-      "summary": "ザンビアの選挙訴訟期限が迫る中、裁判所へのアクセスが制限されている。",
-      "updated_at": "2026-08-24T21:03:25.363338+00:00"
-    },
-    {
-      "id": 42395,
-      "title": "米財務長官“イランと取り引きある企業などに大規模経済制裁”",
-      "category": "news",
-      "importance": 85,
-      "summary": "米財務長官ベッセントは、イランと取引を行う企業や個人に対して大規模な経済制裁を科す措置を開始した。",
-      "updated_at": "2026-08-24T21:03:13.724024+00:00"
-    },
-    {
-      "id": 42367,
-      "title": "Outrage in Nepal over rape and murder of three-year-old girl",
-      "category": "news",
-      "importance": 85,
-      "summary": "ネパールで、三歳の少女が先週死亡し、彼女の行方不明から三日後に遺体が発見されて以来抗議活動が続いている。",
-      "updated_at": "2026-08-24T21:03:02.894178+00:00"
-    },
-    {
-      "id": 42394,
-      "title": "除染土再生利用 さいたま市と仙台市の国の出先機関でも 都外初",
-      "category": "news",
-      "importance": 65,
-      "summary": "政府は、東京電力福島第一原子力発電所の事故後に除染で取り除かれた土を再生利用する計画を最終調整し、さいたま市と仙台市の国の出先機関が入る合同庁舎敷地内でも実施することを決定した。",
-      "updated_at": "2026-08-24T21:02:51.331301+00:00"
-    },
-    {
-      "id": 42309,
-      "title": "Burnham to hand long-range missile blueprints to Zelensky as he visits Kyiv",
-      "category": "news",
-      "importance": 80,
-      "summary": "英国首相バーナムは、ロシアからの「過激な脅迫」に対してもウクライナへの支援を約束した。",
-      "updated_at": "2026-08-24T21:02:39.510592+00:00"
-    },
-    {
-      "id": 42396,
-      "title": "トランプ大統領 カナダの自動車などへの追加関税を50％に",
-      "category": "news",
-      "importance": 85,
-      "summary": "トランプ大統領がカナダから輸入される自動車と自動車部品への追加関税を来年1月から50％に引き上げると表明した。",
-      "updated_at": "2026-08-24T21:02:29.149173+00:00"
-    },
-    {
-      "id": 42371,
-      "title": "Iran faces 'greatest financial offensive ever', says US treasury secretary",
-      "category": "news",
-      "importance": 80,
-      "summary": "米国はイランとのすべての経済関係を切り、金融的に協力する国も孤立させると述べた。",
-      "updated_at": "2026-08-24T21:02:19.208797+00:00"
-    },
-    {
-      "id": 42393,
-      "title": "福岡県議会 藏内議長25日辞職の見通し 会派離脱の議員も",
-      "category": "news",
-      "importance": 70,
-      "summary": "福岡県議会の藏内勇夫議長が24日に辞職願を提出し、25日には辞職する見通しである。",
-      "updated_at": "2026-08-24T21:02:07.701662+00:00"
-    },
-    {
-      "id": 42372,
-      "title": "年５ミリシーベルト超え、延べ５．３万人　被ばく作業員、事故１５年で―「がん」１７件が労災認定・福島第１",
-      "category": "news",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42405,
-      "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
-      "category": "dev",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42406,
-      "title": "Why every business just got a stake in the High Seas",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42407,
-      "title": "Weakened ZEV Mandate would cut £1.5bn from EV charging sales",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42408,
-      "title": "Could Norway’s oil and gas plans pave the way for more UK fossil fuel projects?",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42409,
-      "title": "COP17 mobilises $1.3bn for land restoration and drought resilience",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42410,
-      "title": "エンジニア1200人が「ユニクロのポロシャツ」で猛暑に挑む　OKIグループ会社の狙いは？",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42411,
-      "title": "「AIがもたらす破滅の回避には米中合意が必要」　レポートが描く人類とAIの生存戦略",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42412,
-      "title": "パーソルキャリアがAPMで実践する“先回り”の改善サイクル　システムが「動いている」から「良い状態」へ",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42413,
-      "title": "The European Commission publishes guidance for CBAM verifiers and accreditation bodies",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42414,
-      "title": "普及初期段階にある次世代再生可能エネルギー発電技術を公募します！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42415,
-      "title": "第23回 江戸東京きらりプロジェクト推進委員会 開催について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42416,
-      "title": "東京都児童福祉審議会第8回専門部会「里親等委託の推進に向けた検討」の開催について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42417,
-      "title": "クラウドファンディング（購入寄付型・株式型）を活用した都内ベンチャー企業や中小企業の資金調達支援　令和8年度手数料助成の申請受付開始について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42418,
-      "title": "自殺対策に係る民間団体補助事業における補助金交付決定の取消し等について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42419,
-      "title": "令和8年度第1回東京都国民健康保険運営協議会を開催します",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42420,
-      "title": "情報通信審議会　情報通信技術分科会　新世代モバイル通信システム委員会　ローカル5G検討作業班（第24回）開催案内",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42421,
-      "title": "情報通信審議会　情報通信技術分科会　電波利用環境委員会　CISPR B作業班（第29回）配付資料",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42423,
-      "title": "AI Is 'Lowering The Barrier' To Software-Driven Automation",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42424,
-      "title": "Why CAD Isn't Enough Anymore: The Rise Of Engineering Intelligence",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42425,
-      "title": "PSB Industries Introduces Remote Monitoring For Direct OEM Visibility",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42426,
-      "title": "ISASecure Launches HCSA Certification Scheme For High-Criticality Industrial Components",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42427,
-      "title": "Transformation Strategy Sets The Direction, Delivery Makes It Real",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42428,
-      "title": "AI Vision in Manufacturing Quality Inspection",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42429,
-      "title": "European Local HRC Prices Ease in Northern Europe as Market Awaits Post-Summer Demand Recovery",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42430,
-      "title": "Steel Dynamics Press Release: Mon, 24 Aug 2026",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42431,
-      "title": "July 2026 crude steel production",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42432,
-      "title": "AI-powered metadata correction and harmonization",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42433,
-      "title": "Building a restaurant telephony AI host with Amazon Connect",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42434,
-      "title": "Agentic Resource Discovery (ARD): An open specification for agent discovery",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42435,
-      "title": "Democratizing institutional knowledge: Building an AI-powered knowledge management system with AWS",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42436,
-      "title": "Introducing new Ray capabilities on SageMaker HyperPod",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42437,
-      "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42438,
-      "title": "Skarpenord strengthens presence in South Korea with new sales office and local partner",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42439,
-      "title": "Govt to buy LNG cargo at $23.93 per MMBtu from Aramco",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42440,
-      "title": "India sugar stocks surge on higher prices, festive-season demand",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42441,
-      "title": "China Steel Production in July 2026",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42442,
-      "title": "Pakistan caps diesel crack, adopts Platts Dubai benchmark to set fuel prices",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42443,
-      "title": "JPMorgan stays constructive on stocks, expects a grind higher with rotation",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42444,
-      "title": "Which equity factors win when rate hikes begin?",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42445,
-      "title": "Hedge funds cut equity positions at fastest pace in two months: Goldman Sachs",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42446,
-      "title": "Chicago Fed Activity Index Falls in July",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42447,
-      "title": "U.S. to unveil ‘greatest financial offensive’ against Iran as Tehran threatens ship seizures",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42448,
-      "title": "Nearly half favour improving the economy nationally over regional development as most Brits say economy growth does more good than harm",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42449,
-      "title": "U.S. racks up 40 trillion dollars in debt, raising concerns over economic crisis",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42450,
-      "title": "China: Meeting signals stronger H2 policy push",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42451,
-      "title": "Fed’s Kashkari says rising Treasury yields not a concern",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42452,
-      "title": "Singapore inflation surprises lower, but upside risks keep MAS on tightening watch",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
-    },
-    {
-      "id": 42453,
-      "title": "Barclays sees UK growth holding firm despite inflation pressure",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-24T21:00:54.848037+00:00"
     }
   ]
 }
