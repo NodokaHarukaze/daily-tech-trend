@@ -1,7 +1,423 @@
 {
-  "generated_at": "2026-08-26T00:14:56+00:00",
+  "generated_at": "2026-08-26T03:15:27+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 42698,
+      "title": "令和8年度　建設局優良工事等表彰式及び建設局災害復旧等功労者表彰式を開催します！",
+      "category": "policy",
+      "importance": 70,
+      "summary": "令和8年9月8日、東京都庁第一本庁舎5階大会議場で建設局優良工事等表彰式と災害復旧功労者表彰式が開催される。",
+      "updated_at": "2026-08-26T03:11:58.390825+00:00"
+    },
+    {
+      "id": 42699,
+      "title": "外濠の水辺再生事業に関する都民向け勉強会2026の開催",
+      "category": "policy",
+      "importance": 80,
+      "summary": "東京都が外濠の水辺再生事業に関する都民向け勉強会を開催し、参加者には東京ポイント500点を進呈する。",
+      "updated_at": "2026-08-26T03:11:46.173051+00:00"
+    },
+    {
+      "id": 42700,
+      "title": "建設リサイクル法等に関する一斉パトロールの実施結果",
+      "category": "policy",
+      "importance": 70,
+      "summary": "東京都と区市が、建設リサイクル法第10条届出工事に対し6月1日から30日にかけて564件を抜き打ちパトロールし、24件の助言・108件の指導、石綿飛散防止策123件、フロン回収違反なし、廃棄物処理指導8件を実施した。",
+      "updated_at": "2026-08-26T03:11:34.154535+00:00"
+    },
+    {
+      "id": 42701,
+      "title": "令和8年度東京都入札監視委員会第1回第二監視部会の開催について",
+      "category": "policy",
+      "importance": 60,
+      "summary": "東京都入札監視委員会第二監視部会が令和8年9月7日14時00分から16時30分まで、東京都第一本庁舎北塔33階特別会議室N6で開催される。",
+      "updated_at": "2026-08-26T03:11:21.657988+00:00"
+    },
+    {
+      "id": 42702,
+      "title": "「第30回捨て看板等の共同除却キャンペーン」を実施します",
+      "category": "policy",
+      "importance": 80,
+      "summary": "東京都が第30回捨て看板等の共同除却キャンペーンを9月1日から10月31日まで、13区市で実施する。",
+      "updated_at": "2026-08-26T03:11:10.611268+00:00"
+    },
+    {
+      "id": 42806,
+      "title": "多様な視点から広報表現を見直す実践研修を開催",
+      "category": "policy",
+      "importance": 70,
+      "summary": "東京都は、令和8年8月19日に都職員向けに『男女平等参画の視点に基づく公的広報物ガイドライン』をテーマとした研修を開催し、270名が参加した。",
+      "updated_at": "2026-08-26T03:11:00.627060+00:00"
+    },
+    {
+      "id": 42485,
+      "title": "外字（EUDC文字）が正しく表示・印刷されない問題、Windows 11/Windows Server 2025で／2025年9月以降の更新プログラムで発生",
+      "category": "company",
+      "importance": 41,
+      "summary": "外字（EUDC文字）が正しく表示・印刷されない問題、Windows 11/Windows Server 2025で／2025年9月以降の更新プログラムで発生",
+      "updated_at": "2026-08-26T03:10:48.618412+00:00"
+    },
+    {
+      "id": 42486,
+      "title": "M5チップ搭載の「Apple 2026 MacBook Air」が最大15％OFF！Amazonでセール中【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 80,
+      "summary": "M5チップ搭載のApple 2026 MacBook AirがAmazonで最大15％OFFで販売されている。",
+      "updated_at": "2026-08-26T03:10:37.543374+00:00"
+    },
+    {
+      "id": 42487,
+      "title": "Ankerのワイヤレスイヤホン「Soundcore」が安い！Amazonでセール中【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 80,
+      "summary": "Ankerのワイヤレスイヤホン「Soundcore」がAmazonでセール中で価格が安いことが報告されている。",
+      "updated_at": "2026-08-26T03:10:28.530449+00:00"
+    },
+    {
+      "id": 42488,
+      "title": "キビキビ、スッキリした「Windows Search」が間もなく製品版「Windows 11」に",
+      "category": "company",
+      "importance": 80,
+      "summary": "Windows Search のユーザーインターフェースが刷新され、スッキリとしたデザインに改良されたことが報告されています。",
+      "updated_at": "2026-08-26T03:10:21.732469+00:00"
+    },
+    {
+      "id": 42541,
+      "title": "Claude Cowork、ChatGPT Work、Gemini Sparkはどう違う？ 得意なタスクは？ ～御三家からAIエージェントが出揃った【柳谷智宣のAI ウォッチ！】",
+      "category": "company",
+      "importance": 60,
+      "summary": "Claude Cowork、ChatGPT Work、Gemini Spark はそれぞれ異なる AI エージェントであり、得意なタスクが異なる。",
+      "updated_at": "2026-08-26T03:10:09.199792+00:00"
+    },
+    {
+      "id": 42542,
+      "title": "「Claude」アプリで長文の回答が約4倍滑らかに、リフレッシュレート120HzのMacでアピール／ストリーミングレンダラーを再構築、Web版（claude.ai）とデスクトップ版で恩恵【やじうまの杜】",
+      "category": "company",
+      "importance": 80,
+      "summary": "Claudeアプリは長文回答を約4倍滑らかに表示し、120HzリフレッシュレートのMacで効果的に動作するようになり、Web版（claude.ai）とデスクトップ版の両方でストリーミングレンダラーが再構築された。",
+      "updated_at": "2026-08-26T03:09:55.435308+00:00"
+    },
+    {
+      "id": 42578,
+      "title": "WindowsのGUIでローカルAIを構築できる無料ツール「LM Studio」 ～インストールと基本的なチャットのつかいかた／日本語でお手軽！ 専門的な設定やコマンドライン操作も不要で始められる - ローカルAIの杜",
+      "category": "company",
+      "importance": 70,
+      "summary": "LM StudioはWindows用の無料GUIツールで、ローカルAIを構築しチャット機能を利用できる。",
+      "updated_at": "2026-08-26T03:09:43.052478+00:00"
+    },
+    {
+      "id": 42579,
+      "title": "個人・職場でアプリ統合、「Microsoft 365 Copilot」アプリが「Microsoft Copilot」アプリへ／Apple/Googleでのサインインにも対応、8月中旬から展開",
+      "category": "company",
+      "importance": 85,
+      "summary": "Microsoft 365 Copilot アプリは「Microsoft Copilot」アプリへ統合され、Apple と Google のサインインに対応し、8 月中旬から展開が開始される。",
+      "updated_at": "2026-08-26T03:09:32.393711+00:00"
+    },
+    {
+      "id": 42778,
+      "title": "「Microsoft Edge」にセキュリティ修正、「Chromium」のアップデートを取り込む／修正版のv151.0.4129.107が公開",
+      "category": "company",
+      "importance": 80,
+      "summary": "Microsoft Edge は v151.0.4129.107 のセキュリティ修正を公開し、Chromium の最新アップデートを取り込んだ。",
+      "updated_at": "2026-08-26T03:09:21.834417+00:00"
+    },
+    {
+      "id": 42779,
+      "title": "オープンなCPU命令セット「RISC-V」を「CPython」が正式サポート／あくまでベストエフォートの「Tier 3」プラットフォームに",
+      "category": "company",
+      "importance": 60,
+      "summary": "CPythonがオープンCPU命令セット「RISC‑V」を正式にサポートすることになった。",
+      "updated_at": "2026-08-26T03:09:09.662208+00:00"
+    },
+    {
+      "id": 42649,
+      "title": "デジタル庁、「マイナアプリ」を提供開始／iOS/Androidでマイナンバーカードの情報を使った本人確認が可能",
+      "category": "company",
+      "importance": 80,
+      "summary": "デジタル庁がiOSとAndroid向けに「マイナアプリ」を提供開始し、マイナンバーカードの情報を使って本人確認が可能になった。",
+      "updated_at": "2026-08-26T03:08:55.152447+00:00"
+    },
+    {
+      "id": 42650,
+      "title": "Windowsの「拡大鏡」アプリがさらにブラッシュアップ、よりモダンで整ったデザインに",
+      "category": "company",
+      "importance": 60,
+      "summary": "Windowsの拡大鏡アプリがさらにブラッシュアップされ、よりモダンで整ったデザインに変更された。",
+      "updated_at": "2026-08-26T03:08:42.531762+00:00"
+    },
+    {
+      "id": 42651,
+      "title": "AIが生成した文章をチェックして『AIっぽい』表現を指摘できる「Ningenize」　ほか【ダイジェストニュース】",
+      "category": "company",
+      "importance": 60,
+      "summary": "Ningenize は AI が生成した文章をチェックし、『AIっぽい』表現を指摘できるツールです。",
+      "updated_at": "2026-08-26T03:08:31.112893+00:00"
+    },
+    {
+      "id": 42849,
+      "title": "オードリー・タンが警鐘　AIを「親友」にしてはいけない",
+      "category": "industry",
+      "importance": 85,
+      "summary": "オードリー・タン氏はAIを「親友」と勘違いせず、支援的知能として利用し、人間の関係や判断を代替させないことが重要だと語った。",
+      "updated_at": "2026-08-26T03:08:19.480017+00:00"
+    },
+    {
+      "id": 42850,
+      "title": "NVIDIAが巨額の金融支援、GPU貸しで急成長する「ネオクラウド」の正体",
+      "category": "industry",
+      "importance": 70,
+      "summary": "NVIDIA が巨額の資金提供と GPU 貸しを行い、AI 専用計算リソースを提供するネオクラウドが急成長している。",
+      "updated_at": "2026-08-26T03:08:08.282932+00:00"
+    },
+    {
+      "id": 42851,
+      "title": "東京都が八重洲駐車場を地下シェルター化、弾道ミサイル対策で2例目",
+      "category": "industry",
+      "importance": 80,
+      "summary": "東京都が八重洲駐車場を地下シェルター化し、弾道ミサイル対策の2例目となる。",
+      "updated_at": "2026-08-26T03:07:50.911707+00:00"
+    },
+    {
+      "id": 42852,
+      "title": "自動運転「レベル4」、国連やNHTSAが要件策定　ロボタクシー普及を後押し",
+      "category": "industry",
+      "importance": 80,
+      "summary": "国連と米国規制当局が自動運転レベル4の安全基準要件を明らかにし、ハードウェア上の制約は取り払われつつある。",
+      "updated_at": "2026-08-26T03:07:35.664174+00:00"
+    },
+    {
+      "id": 42853,
+      "title": "日本の防衛デュアルユース関連市場、可能性と規模",
+      "category": "industry",
+      "importance": 60,
+      "summary": "日本では防衛と民生の両方に展開できるデュアルユース型技術の開発・事業化が始まっている。",
+      "updated_at": "2026-08-26T03:07:21.153497+00:00"
+    },
+    {
+      "id": 42854,
+      "title": "ついに熱マネがEVの「一等地」へ、テスラが変えた常識　中国勢も",
+      "category": "industry",
+      "importance": 85,
+      "summary": "中国のLeapmotorが開発したEV「B05」のフロントフードを分解すると、熱マネジメントシステムユニットが配置されていることが確認された。",
+      "updated_at": "2026-08-26T03:07:07.443921+00:00"
+    },
+    {
+      "id": 42855,
+      "title": "複数文書をまとめて要約、エラー処理やレート制限を実装",
+      "category": "industry",
+      "importance": 70,
+      "summary": "第3回では、前回までの知識をもとに複数文書の内容をまとめる要約アプリを作成し、エラー処理やレート制限を実装することが説明されている。",
+      "updated_at": "2026-08-26T03:06:56.052929+00:00"
+    },
+    {
+      "id": 42780,
+      "title": "「GNU Emacs 31.1」が公開 ～ターミナルでのマウス操作が既定で有効に、新規ユーザー向けプリセットも／Windows向けのバイナリはもう少し待って",
+      "category": "company",
+      "importance": 85,
+      "summary": "GNU Emacs 31.1 が公開され、ターミナルでのマウス操作が既定で有効になり、新規ユーザー向けプリセットも追加された。",
+      "updated_at": "2026-08-26T03:06:43.510645+00:00"
+    },
+    {
+      "id": 42781,
+      "title": "【アップデート情報】窓の杜収録ソフト　8月26日　～「Microsoft Edge」「Process Explorer」「nPOP」など",
+      "category": "company",
+      "importance": 60,
+      "summary": "窓の杜の8月26日版にMicrosoft Edge、Process Explorer、nPOPなどが収録されていることを報告している。",
+      "updated_at": "2026-08-26T03:06:31.044991+00:00"
+    },
+    {
+      "id": 42782,
+      "title": "【Excel】数値の「0」は「未」、「1」は「済」と表示できる？ 難しいユーザー定義書式を記述する冴えたやり方【いまさら聞けないExcelの使い方講座】",
+      "category": "company",
+      "importance": 60,
+      "summary": "Excel のユーザー定義書式を使えば、数値「0」を「未」、数値「1」を「済」と表示できる。",
+      "updated_at": "2026-08-26T03:06:19.683427+00:00"
+    },
+    {
+      "id": 42847,
+      "title": "【いつモノコト】暑すぎる夏に　朝から夕方まで冷たい「魔法瓶氷のう」が手放せない",
+      "category": "security",
+      "importance": 70,
+      "summary": "今年は酷暑日が比較的少ないものの、厳しい暑さの日が続いている。",
+      "updated_at": "2026-08-26T03:06:09.299254+00:00"
+    },
+    {
+      "id": 42840,
+      "title": "新しいウィンドウ切り替えツール「Window Hopper」を追加した「PowerToys 0.101」が公開／「Insider」チャネルを新設、「Advanced Paste」はローカルAI「Phi Silica」に対応",
+      "category": "company",
+      "importance": 80,
+      "summary": "Microsoft が PowerToys 0.101 を公開し、ウィンドウ切替ツール「Window Hopper」を追加したほか、新しい Insider チャネルを設置し、「Advanced Paste」がローカル AI 「Phi Silica」に対応した。",
+      "updated_at": "2026-08-26T03:05:54.460623+00:00"
+    },
+    {
+      "id": 42839,
+      "title": "ホンダ、米国でＨＶ新工場検討　大型車生産、３０年ごろ稼働目指す",
+      "category": "news",
+      "importance": 70,
+      "summary": "ホンダは米国で大型車生産を目的としたHV新工場の検討を行い、稼働開始を2030年頃に目指している。",
+      "updated_at": "2026-08-26T03:05:42.351956+00:00"
+    },
+    {
+      "id": 42860,
+      "title": "法人パソコンにも高騰の波　“中古”の常識を変えた「リファービッシュPC」に企業が熱視線のワケ　VAIOに聞く",
+      "category": "news",
+      "importance": 75,
+      "summary": "VAIOのリファービッシュPC「Reborn VAIO」が物価高を背景に企業調達担当者から注目されている。",
+      "updated_at": "2026-08-26T03:05:29.772579+00:00"
+    },
+    {
+      "id": 42861,
+      "title": "「Meta Glasses」日本でも発売　「Ray-Ban Meta」より安い5万600円?",
+      "category": "news",
+      "importance": 70,
+      "summary": "Metaは日本でRay‑Ban Meta（約7万3700円）とOakley Meta（約7万7220円）の販売を開始し、さらに低価格帯のMeta Glassesを展開する予定です。",
+      "updated_at": "2026-08-26T03:05:18.525742+00:00"
+    },
+    {
+      "id": 42848,
+      "title": "OpenAI、自社チップ「ハラペーニョ」の性能を公表 電力効率やレイテンシ向上",
+      "category": "security",
+      "importance": 85,
+      "summary": "OpenAIは自社開発の推論プラットフォーム用チップ「Jalapeño（ハラペーニョ）」の実測ベンチマーク結果を公開した。",
+      "updated_at": "2026-08-26T03:05:07.340206+00:00"
+    },
+    {
+      "id": 42845,
+      "title": "バッファローのWi-FiルーターがAmazon暮らし応援夏祭りSaleに登場！　Wi-Fi 7と10GbE対応の「WXR18000BE10P」は6万2080円",
+      "category": "industry",
+      "importance": 70,
+      "summary": "バッファローのWi‑Fiルーター「WXR18000BE10P」がAmazon暮らし応援夏祭りSaleで6万2080円にタイムセール価格になっている。",
+      "updated_at": "2026-08-26T03:04:56.201580+00:00"
+    },
+    {
+      "id": 42862,
+      "title": "Jアラート、きょう午前11時ごろに全国一斉試験　各地で防災無線など鳴る",
+      "category": "news",
+      "importance": 70,
+      "summary": "総務省消防庁が8月26日午前11時ごろに全国瞬時警報システム（Jアラート）のテストを実施する。",
+      "updated_at": "2026-08-26T03:04:44.577332+00:00"
+    },
+    {
+      "id": 42841,
+      "title": "PHILIPSの11インチタブレットが2万5000円台から！Amazonタイムセール【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 70,
+      "summary": "PHILIPSの11インチタブレットがAmazonタイムセールで2万5000円台から販売されている。",
+      "updated_at": "2026-08-26T03:04:33.836588+00:00"
+    },
+    {
+      "id": 42842,
+      "title": "Ankerのスマートトラッカーが最安1,790円！さらに薄くなったカード型新モデルも安い！【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 80,
+      "summary": "Ankerのスマートトラッカーが最安で1,790円、さらに薄くなったカード型新モデルも同様に低価格で販売されている。",
+      "updated_at": "2026-08-26T03:04:21.910542+00:00"
+    },
+    {
+      "id": 42863,
+      "title": "「Microsoft Teams」障害か　朝から「会議に入れない」",
+      "category": "news",
+      "importance": 80,
+      "summary": "午前9時過ぎから多くのユーザーがMicrosoft Teamsで会議に入れない障害を報告し、10時半時点でも復旧していない。",
+      "updated_at": "2026-08-26T03:04:10.689102+00:00"
+    },
+    {
+      "id": 42843,
+      "title": "iPhoneに「Copilot」アプリが2つ！？――名称とアイコン変更でユーザーに混乱／削除するときは間違えないように注意、結構難しいぞ！【やじうまの杜】",
+      "category": "company",
+      "importance": 70,
+      "summary": "iPhoneに「Copilot」という名前のアプリが2つ存在し、名称とアイコンの変更でユーザーが混乱している。",
+      "updated_at": "2026-08-26T03:04:00.096302+00:00"
+    },
+    {
+      "id": 42844,
+      "title": "日本通信の格安SIM/eSIMの申込パックが38％OFFの2,400円！Amazon 暮らし応援 夏祭りSale【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 80,
+      "summary": "日本通信の格安SIM/eSIM申込パックが38％OFFで2,400円に設定され、Amazon「暮らし応援 夏祭りSale」にて販売されています。",
+      "updated_at": "2026-08-26T03:03:48.198251+00:00"
+    },
+    {
+      "id": 42857,
+      "title": "米「カントリー音楽の女王」ドリー・パートンさん死去",
+      "category": "news",
+      "importance": 85,
+      "summary": "ドリー・パートンさんが25日、南部テネシー州で亡くなり、80歳でした。",
+      "updated_at": "2026-08-26T03:03:37.444380+00:00"
+    },
+    {
+      "id": 42846,
+      "title": "Seagateの内蔵用HDDがAmazon暮らし応援夏祭りSaleで安い！　デスクトップ向け「BarraCuda」24TBモデルは8万9980円",
+      "category": "industry",
+      "importance": 60,
+      "summary": "Seagateの24TB BarraCudaがAmazon暮らし応援夏祭りSaleで8万9980円にタイムセール中。",
+      "updated_at": "2026-08-26T03:03:26.559763+00:00"
+    },
+    {
+      "id": 42856,
+      "title": "CTCが台湾SIerと合弁、TSMCなど台湾半導体企業にシステム構築",
+      "category": "industry",
+      "importance": 70,
+      "summary": "伊藤忠テクノソリューションズとシステックスが合弁会社を設立し、TSMCなどの台湾半導体企業向けにITインフラ・ネットワーク・クラウド・セキュリティーの設計・構築・運用・保守サービスを提供する。",
+      "updated_at": "2026-08-26T03:03:14.401167+00:00"
+    },
+    {
+      "id": 42858,
+      "title": "米ルビオ長官“当面新たな攻撃なし”同盟国などに伝達 米報道",
+      "category": "news",
+      "importance": 60,
+      "summary": "ルビオ国務長官が同盟国に対し、当面イランへの新たな攻撃を開始する見通しはないと伝えた。",
+      "updated_at": "2026-08-26T03:02:57.954117+00:00"
+    },
+    {
+      "id": 42859,
+      "title": "高級時計窃盗事件 2人組の男 現場にハンマー残し逃走か",
+      "category": "news",
+      "importance": 70,
+      "summary": "東京中野区の商業施設にある時計店で、海外製高級腕時計4本（約2億円相当）が盗まれ、ショーケースを割る際に使われたとみられるハンマーが現場に残された。",
+      "updated_at": "2026-08-26T03:02:44.739174+00:00"
+    },
+    {
+      "id": 42674,
+      "title": "台風18号 鹿児島 奄美や沖縄本島を暴風域に巻き込んで西へ",
+      "category": "news",
+      "importance": 70,
+      "summary": "強い台風18号は沖縄・奄美から遠ざかりつつあるが、速度が遅いため影響が長引く見込みである。",
+      "updated_at": "2026-08-26T03:02:34.444814+00:00"
+    },
+    {
+      "id": 42801,
+      "title": "西・東日本で危険な暑さ予想 午後は大気の状態不安定に",
+      "category": "news",
+      "importance": 70,
+      "summary": "西日本（熊本県を含む）では午前中から35度以上の猛暑が続き、午後も高温が予想される。",
+      "updated_at": "2026-08-26T03:02:23.502941+00:00"
+    },
+    {
+      "id": 42864,
+      "title": "「Windows 10が残存する」企業の言い分、だが一台でも見過ごしてはいけない“その代償”",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-26T03:01:11.598631+00:00"
+    },
+    {
+      "id": 42865,
+      "title": "New Model Added to Compact CO₂ Capture System \"CO₂MPACT™ Full-Module\"<br />-- Expanding CO₂ Capture Capacity to Meet a Broader Range of Customer Needs --",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-26T03:01:11.598631+00:00"
+    },
+    {
+      "id": 42866,
+      "title": "Weekly Report: macOSの画面共有機能における不適切な認証の脆弱性に関する悪用観測状況",
+      "category": "security",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-26T03:01:11.598631+00:00"
+    },
     {
       "id": 42807,
       "title": "「医師・歯科医師・薬剤師統計　東京都集計結果報告（令和6年）」医師数、歯科医師数、薬剤師数ともに令和4年度に比べ増加",
@@ -67,116 +483,12 @@
       "updated_at": "2026-08-26T00:10:27.890932+00:00"
     },
     {
-      "id": 42485,
-      "title": "外字（EUDC文字）が正しく表示・印刷されない問題、Windows 11/Windows Server 2025で／2025年9月以降の更新プログラムで発生",
-      "category": "company",
-      "importance": 85,
-      "summary": "Windows 11 と Windows Server 2025 の 2025 年 9 月以降の更新プログラムで、外字（EUDC文字）が正しく表示・印刷されない問題が報告された。",
-      "updated_at": "2026-08-26T00:10:17.048530+00:00"
-    },
-    {
-      "id": 42486,
-      "title": "M5チップ搭載の「Apple 2026 MacBook Air」が最大15％OFF！Amazonでセール中【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 80,
-      "summary": "AppleのM5チップ搭載『2026 MacBook Air』がAmazonで最大15％OFFで販売中です。",
-      "updated_at": "2026-08-26T00:10:04.281607+00:00"
-    },
-    {
-      "id": 42487,
-      "title": "Ankerのワイヤレスイヤホン「Soundcore」が安い！Amazonでセール中【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 60,
-      "summary": "Ankerのワイヤレスイヤホン「Soundcore」がAmazonでセール中です。",
-      "updated_at": "2026-08-26T00:09:51.621408+00:00"
-    },
-    {
-      "id": 42488,
-      "title": "キビキビ、スッキリした「Windows Search」が間もなく製品版「Windows 11」に",
-      "category": "company",
-      "importance": 85,
-      "summary": "Windows Search がスッキリとしたデザインに刷新され、近日中に正式版 Windows 11 に搭載される予定です。",
-      "updated_at": "2026-08-26T00:09:36.472623+00:00"
-    },
-    {
-      "id": 42541,
-      "title": "Claude Cowork、ChatGPT Work、Gemini Sparkはどう違う？ 得意なタスクは？ ～御三家からAIエージェントが出揃った【柳谷智宣のAI ウォッチ！】",
-      "category": "company",
-      "importance": 60,
-      "summary": "Claude Cowork、ChatGPT Work、Gemini Spark はそれぞれ異なる AI エージェントであり、得意なタスクが異なるという事実が報じられている。",
-      "updated_at": "2026-08-26T00:09:25.561638+00:00"
-    },
-    {
-      "id": 42542,
-      "title": "「Claude」アプリで長文の回答が約4倍滑らかに、リフレッシュレート120HzのMacでアピール／ストリーミングレンダラーを再構築、Web版（claude.ai）とデスクトップ版で恩恵【やじうまの杜】",
-      "category": "company",
-      "importance": 80,
-      "summary": "Claudeアプリで長文回答が約4倍滑らかになり、120HzリフレッシュレートのMacでアピールできるようにストリーミングレンダラーを再構築し、Web版（claude.ai）とデスクトップ版の両方で恩恵がある。",
-      "updated_at": "2026-08-26T00:09:11.227411+00:00"
-    },
-    {
-      "id": 42578,
-      "title": "WindowsのGUIでローカルAIを構築できる無料ツール「LM Studio」 ～インストールと基本的なチャットのつかいかた／日本語でお手軽！ 専門的な設定やコマンドライン操作も不要で始められる - ローカルAIの杜",
-      "category": "company",
-      "importance": 70,
-      "summary": "LM StudioはWindows用の無料GUIツールで、ローカルAIを構築し、専門的な設定やコマンドライン操作なしにチャットが可能です。",
-      "updated_at": "2026-08-26T00:08:59.343574+00:00"
-    },
-    {
-      "id": 42579,
-      "title": "個人・職場でアプリ統合、「Microsoft 365 Copilot」アプリが「Microsoft Copilot」アプリへ／Apple/Googleでのサインインにも対応、8月中旬から展開",
-      "category": "company",
-      "importance": 70,
-      "summary": "Microsoft 365 Copilot アプリが統合され、8月中旬から Microsoft Copilot アプリとして展開される。",
-      "updated_at": "2026-08-26T00:08:47.568540+00:00"
-    },
-    {
       "id": 33641,
       "title": "第5回先進的なAI利活用アドバイザリーボードの会議資料等を掲載しました",
       "category": "policy",
       "importance": 50,
       "summary": "第5回先進的なAI利活用アドバイザリーボードの会議資料等を公開しました。",
       "updated_at": "2026-08-26T00:08:36.908501+00:00"
-    },
-    {
-      "id": 42778,
-      "title": "「Microsoft Edge」にセキュリティ修正、「Chromium」のアップデートを取り込む／修正版のv151.0.4129.107が公開",
-      "category": "company",
-      "importance": 80,
-      "summary": "Microsoft Edge がセキュリティ修正を含む Chromium のアップデートを取り込み、v151.0.4129.107 を公開した。",
-      "updated_at": "2026-08-26T00:08:25.131013+00:00"
-    },
-    {
-      "id": 42779,
-      "title": "オープンなCPU命令セット「RISC-V」を「CPython」が正式サポート／あくまでベストエフォートの「Tier 3」プラットフォームに",
-      "category": "company",
-      "importance": 70,
-      "summary": "CPython がオープンCPU命令セット RISC‑V を正式にサポートし、ベストエフォートの Tier 3 プラットフォームとして提供することを発表した。",
-      "updated_at": "2026-08-26T00:08:08.994158+00:00"
-    },
-    {
-      "id": 42649,
-      "title": "デジタル庁、「マイナアプリ」を提供開始／iOS/Androidでマイナンバーカードの情報を使った本人確認が可能",
-      "category": "company",
-      "importance": 85,
-      "summary": "デジタル庁がiOSとAndroid向けに「マイナアプリ」を提供開始し、マイナンバーカードの情報を利用した本人確認機能を実装した。",
-      "updated_at": "2026-08-26T00:07:56.787536+00:00"
-    },
-    {
-      "id": 42650,
-      "title": "Windowsの「拡大鏡」アプリがさらにブラッシュアップ、よりモダンで整ったデザインに",
-      "category": "company",
-      "importance": 70,
-      "summary": "Windowsの拡大鏡アプリがさらにブラッシュアップされ、よりモダンで整ったデザインになった。",
-      "updated_at": "2026-08-26T00:07:45.966080+00:00"
-    },
-    {
-      "id": 42651,
-      "title": "AIが生成した文章をチェックして『AIっぽい』表現を指摘できる「Ningenize」　ほか【ダイジェストニュース】",
-      "category": "company",
-      "importance": 70,
-      "summary": "NingenizeはAIが生成した文章をチェックし、『AIっぽい』表現を指摘できるツールです。",
-      "updated_at": "2026-08-26T00:07:34.969172+00:00"
     },
     {
       "id": 42790,
@@ -267,22 +579,6 @@
       "updated_at": "2026-08-26T00:05:27.070877+00:00"
     },
     {
-      "id": 42780,
-      "title": "「GNU Emacs 31.1」が公開 ～ターミナルでのマウス操作が既定で有効に、新規ユーザー向けプリセットも／Windows向けのバイナリはもう少し待って",
-      "category": "company",
-      "importance": 75,
-      "summary": "GNU Emacs 31.1 が公開され、ターミナルでのマウス操作が既定で有効になり、新規ユーザー向けプリセットも追加された。",
-      "updated_at": "2026-08-26T00:05:15.594909+00:00"
-    },
-    {
-      "id": 42801,
-      "title": "西・東日本で危険な暑さ予想 午後は大気の状態不安定に",
-      "category": "news",
-      "importance": 80,
-      "summary": "西日本と東日本で高気圧により26日も危険な暑さが予想され、熊本県の被災地など各地で熱中症対策を徹底するよう呼びかけられた。",
-      "updated_at": "2026-08-26T00:05:04.053912+00:00"
-    },
-    {
       "id": 41503,
       "title": "熊本地震で携帯通信網の「備え」発動　政府のデジタル支援策も相次ぐ",
       "category": "industry",
@@ -315,14 +611,6 @@
       "updated_at": "2026-08-26T00:04:03.653472+00:00"
     },
     {
-      "id": 42781,
-      "title": "【アップデート情報】窓の杜収録ソフト　8月26日　～「Microsoft Edge」「Process Explorer」「nPOP」など",
-      "category": "company",
-      "importance": 70,
-      "summary": "窓の杜が8月26日付でMicrosoft Edge、Process Explorer、nPOP、GNU Emacs 31.1、Ningenizeなど40件のソフトウェアを更新し、Windows Insider Previewやデジタル庁のマイナアプリ提供開始、CPythonによるRISC‑Vサポートも報告した。",
-      "updated_at": "2026-08-26T00:03:48.909416+00:00"
-    },
-    {
       "id": 42786,
       "title": "「吸う」「吹く」が1台でできるコードレスハンディクリーナー＆エアダスター、サンワサプライが発売",
       "category": "industry",
@@ -345,14 +633,6 @@
       "importance": 70,
       "summary": "トランプ大統領がオンタリオ湖を『アメリカ湖』に改名することを検討していると主張した。",
       "updated_at": "2026-08-26T00:03:12.943835+00:00"
-    },
-    {
-      "id": 42782,
-      "title": "【Excel】数値の「0」は「未」、「1」は「済」と表示できる？ 難しいユーザー定義書式を記述する冴えたやり方【いまさら聞けないExcelの使い方講座】",
-      "category": "company",
-      "importance": 85,
-      "summary": "Excelで数値0を「未」、1を「済」と表示するユーザー定義書式の設定方法が解説されている。",
-      "updated_at": "2026-08-26T00:02:59.485312+00:00"
     },
     {
       "id": 42787,
@@ -397,14 +677,6 @@
     {
       "id": 42805,
       "title": "AI／DX案件数が1年で3倍に　フリーランスにまで「上流」と「出社」を求める背景とは？",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42806,
-      "title": "多様な視点から広報表現を見直す実践研修を開催",
       "category": "policy",
       "importance": 0,
       "summary": "",
@@ -529,278 +801,6 @@
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42830,
-      "title": "LNG Bunker Snapshot: Singapore LNG bunker price surges amid Middle East supply concerns",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42831,
-      "title": "Why Maritime Operations Centers Need Fusion, Not Another Data Feed",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42832,
-      "title": "Baltic Dry Index Rises for 4th Day",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42833,
-      "title": "Iran’s bottleneck is Hormuz, not the buyer",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42834,
-      "title": "LNG Shipping: Pacific LNG Trade on the Rise",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42835,
-      "title": "Iran’s blockade trilemma: endure, escalate or negotiate",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42836,
-      "title": "SPR Sinks Toward Operational Minimum as U.S. Crude Inventories Build",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42837,
-      "title": "The U.S. Power Play in Iraq That Moscow and Beijing Didn’t See Coming",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42838,
-      "title": "Big Oil Is Betting Billions On Nuclear Fusion",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-26T00:01:05.641632+00:00"
-    },
-    {
-      "id": 42652,
-      "title": "ウェザーニュース、地震到達まであと何秒? がわかる新機能",
-      "category": "security",
-      "importance": 70,
-      "summary": "ウェザーニュースは緊急地震速報発表時に、現在地への揺れ到達予想までの残り秒数をリアルタイムでカウントダウン表示する機能を実装し、会員が利用できる。",
-      "updated_at": "2026-08-25T21:12:13.287760+00:00"
-    },
-    {
-      "id": 42653,
-      "title": "シャープ、対話AIロボ「ポケとも」第2弾 　時にはユーザーを叱る“おれさま”タイプ",
-      "category": "security",
-      "importance": 70,
-      "summary": "シャープは対話AIキャラクター「ポケとも」の第2弾「おれさまタイプ」を発表し、同日から予約販売を開始した。",
-      "updated_at": "2026-08-25T21:12:01.636657+00:00"
-    },
-    {
-      "id": 42654,
-      "title": "パスポートのオンライン申請、iPhoneのマイナカードに対応",
-      "category": "security",
-      "importance": 70,
-      "summary": "デジタル庁はマイナポータルのパスポート申請画面を刷新し、iPhoneのマイナンバーカードでの申請に対応した。",
-      "updated_at": "2026-08-25T21:11:49.020400+00:00"
-    },
-    {
-      "id": 42655,
-      "title": "KDDI、au Starlink Directを閉域網で利用可能に",
-      "category": "security",
-      "importance": 70,
-      "summary": "KDDIは8月25日から法人向け閉域リモートアクセスで「au Starlink Direct」を利用できるオプションを開始し、国内初の衛星と直接通信する閉域接続サービスとなった。",
-      "updated_at": "2026-08-25T21:11:25.696031+00:00"
-    },
-    {
-      "id": 42675,
-      "title": "楽天版SHEIN？　若者向けプチプラ通販「ラクヨコ」開設　SNS感覚で数百円から商品探し",
-      "category": "news",
-      "importance": 65,
-      "summary": "楽天グループが8月25日に低価格ファッションアイテムや雑貨を集めたオンラインストア「楽天ラクヨコ」を開設し、若年層向けに約6万点の商品を数百円から販売する。",
-      "updated_at": "2026-08-25T21:11:02.656166+00:00"
-    },
-    {
-      "id": 42656,
-      "title": "ローソン、常温・冷凍商品の納品を1日延長　月120台トラック削減",
-      "category": "security",
-      "importance": 70,
-      "summary": "ローソンは全国店舗向けに常温・冷凍商品の発注から納品までの期間を1日延長し、9月～11月にかけて順次変更することで月間約120台のトラック削減が見込まれる。",
-      "updated_at": "2026-08-25T21:10:51.488346+00:00"
-    },
-    {
-      "id": 42657,
-      "title": "モス、冷凍食品新ブランド「MOS Deli」　スーパーで“焼きおにバーガー”",
-      "category": "security",
-      "importance": 70,
-      "summary": "モスフードサービスは家庭用冷凍食品の新ブランド「MOS Deli」を立ち上げ、9月1日に「焼きおにバーガー 牛カルビ」と「焼きおにバーガー 鶏きんぴら」の2個入りを560円でスーパーやドラッグストア等で販売する。",
-      "updated_at": "2026-08-25T21:10:39.418394+00:00"
-    },
-    {
-      "id": 42536,
-      "title": "Caste divides make scorching summers harder in a parched corner of India",
-      "category": "news",
-      "importance": 70,
-      "summary": "高温と水不足がブンデルカンド地域の既存のカースト格差を深めている。",
-      "updated_at": "2026-08-25T21:10:28.666581+00:00"
-    },
-    {
-      "id": 42658,
-      "title": "羽田空港第1ターミナル北側サテライト、9月1日オープン　バス移動を削減",
-      "category": "security",
-      "importance": 70,
-      "summary": "羽田空港第1ターミナル北側サテライト施設が9月1日に利用開始され、バス移動を削減することを目的としている。",
-      "updated_at": "2026-08-25T21:10:18.227734+00:00"
-    },
-    {
-      "id": 42676,
-      "title": "被害総額約2億円か　「中野ブロードウェイ」の時計店で窃盗、電動キックボードで逃走",
-      "category": "news",
-      "importance": 80,
-      "summary": "東京都中野区の商業施設「中野ブロードウェイ」にある時計店で、ショーケースを割って腕時計4本が盗まれ、被害総額は約2億円に上るとみられる。",
-      "updated_at": "2026-08-25T21:10:07.893788+00:00"
-    },
-    {
-      "id": 42677,
-      "title": "東京23区で「徒歩10分以内」に駅がない地域はどこ？　駅空白地帯マップが話題",
-      "category": "news",
-      "importance": 85,
-      "summary": "47mapsが公式Xアカウントで、東京23区周辺の「徒歩10分以内に駅がない地域」を示す地図を公開した。",
-      "updated_at": "2026-08-25T21:09:45.222277+00:00"
-    },
-    {
-      "id": 42670,
-      "title": "【比較動画】クマ撃退スプレー 市販製品の「性能」に大きな差",
-      "category": "news",
-      "importance": 80,
-      "summary": "クマ撃退スプレーとして販売されている12製品について、消費者庁・環境省・国民生活センターが共同で噴射テストを実施し、性能に大きな差が確認された。",
-      "updated_at": "2026-08-25T21:09:35.031774+00:00"
-    },
-    {
-      "id": 42678,
-      "title": "防衛装備庁、テラドローンと迎撃ドローンの量産契約を正式締結　国産機「Terra B1」を調達へ",
-      "category": "news",
-      "importance": 80,
-      "summary": "防衛装備庁はテラドローンと量産調達契約を結び、国産機「Terra B1」を迎撃ドローンとして調達する。",
-      "updated_at": "2026-08-25T21:09:24.490832+00:00"
-    },
-    {
-      "id": 42534,
-      "title": "How Canada could hit back to hurt the US economy - and Trump",
-      "category": "news",
-      "importance": 60,
-      "summary": "カナダは輸出の約70％を米国に売っており、貿易争いでどれほど影響力があるかが問われている。",
-      "updated_at": "2026-08-25T21:09:11.885940+00:00"
-    },
-    {
-      "id": 42659,
-      "title": "楽天市場から”独立\"したプチプラEC「楽天ラクヨコ」　若年層をターゲット",
-      "category": "security",
-      "importance": 60,
-      "summary": "楽天グループがファッションや雑貨などのプチプラアイテムを販売するオンラインストア「楽天ラクヨコ」を開設し、若年層を対象に約6万商品から販売開始した。",
-      "updated_at": "2026-08-25T21:09:00.726430+00:00"
-    },
-    {
-      "id": 42679,
-      "title": "「まるでキャバクラ」――「ライザのアトリエ」主人公と話せるAIアプリに「課金圧強すぎ」の声　「10日に会話15回」で月額980円",
-      "category": "news",
-      "importance": 70,
-      "summary": "人気RPG「ライザのアトリエ」のキャラクターと会話できるAIアプリ「RyzaChat ライザと創るあなただけのひと夏の夢物語」が8月25日に正式配信を開始した。",
-      "updated_at": "2026-08-25T21:08:47.553365+00:00"
-    },
-    {
-      "id": 42597,
-      "title": "中野ブロードウェイの店舗で高級時計盗まれる 被害2億円相当か",
-      "category": "news",
-      "importance": 80,
-      "summary": "東京・中野区の商業施設にある時計店で、男がハンマーを使ってショーケースを破壊し、海外製高級腕時計4本（約2億円相当）を盗み逃走した。",
-      "updated_at": "2026-08-25T21:08:36.753075+00:00"
-    },
-    {
-      "id": 42660,
-      "title": "M6搭載の新「Mac mini」　常時稼働型エージェントコンピュータに",
-      "category": "security",
-      "importance": 70,
-      "summary": "アップルはM6とM5 Pro搭載の新しいMac miniを発表し、AIパフォーマンスを大幅に向上させた。",
-      "updated_at": "2026-08-25T21:08:20.442986+00:00"
-    },
-    {
-      "id": 42680,
-      "title": "新型「Mac mini」登場　M6チップに刷新、1万5000円アップの14万9800円から　上位はM5 Proに",
-      "category": "news",
-      "importance": 70,
-      "summary": "Appleが新型Mac miniを発表し、標準モデルに2nmチップM6、上位モデルにM5 Proを搭載、価格は14万9800円からで9月22日に発売される。",
-      "updated_at": "2026-08-25T21:08:07.315134+00:00"
-    },
-    {
-      "id": 42574,
-      "title": "Kit Harington joins HBO's Harry Potter series as Gilderoy Lockhart",
-      "category": "news",
-      "importance": 60,
-      "summary": "Kit HaringtonがHBOのハリー・ポッターシリーズでニコラス・フールトを代替し、フールトはスケジュール問題で出演辞退した。",
-      "updated_at": "2026-08-25T21:07:54.180375+00:00"
-    },
-    {
-      "id": 42681,
-      "title": "「Mac Studio」待望の新モデル　M5 UltraでAI性能は最大4.3倍に　512GBメモリも選べる",
-      "category": "news",
-      "importance": 80,
-      "summary": "Apple が新デスクトップPC「Mac Studio」の上位モデルに M5 Ultra チップを搭載し、ユニファイドメモリを最大512GBまで選択できるようになった。",
-      "updated_at": "2026-08-25T21:07:41.633555+00:00"
-    },
-    {
-      "id": 42642,
-      "title": "Tornado tears through French village, leaving dozens hurt and homes ravaged",
-      "category": "news",
-      "importance": 80,
-      "summary": "トルネードがフランスのポマ村を襲い、数百軒の家屋が被害を受け、15人が病院に搬送された。",
-      "updated_at": "2026-08-25T21:07:28.604282+00:00"
-    },
-    {
-      "id": 42672,
-      "title": "「百日せき」患者増の2か月前に下水調査で流行の兆し 阪大など",
-      "category": "news",
-      "importance": 70,
-      "summary": "大阪大学などの研究グループが下水に含まれる百日せき菌の遺伝子を調べ、患者数が増え始める2か月以上前に流行の兆しが現れていたことが分かった。",
-      "updated_at": "2026-08-25T21:07:17.293895+00:00"
-    },
-    {
-      "id": 42637,
-      "title": "US firefighters say major blaze near Reno about a quarter contained",
-      "category": "news",
-      "importance": 80,
-      "summary": "官公庁は風が炎をさらに2日間燃えさせる恐れがあると懸念している。",
-      "updated_at": "2026-08-25T21:07:03.295408+00:00"
-    },
-    {
-      "id": 42661,
-      "title": "登録車は4カ月連続プラス、軽は持ち直し　7月国内自動車販売",
-      "category": "industry",
-      "importance": 70,
-      "summary": "2026年7月の国内新車販売（登録車と軽自動車）は前年同月比で6.8％増の41万7163台となり、4カ月連続でプラスに転じた。",
-      "updated_at": "2026-08-25T21:06:46.628620+00:00"
     }
   ]
 }
