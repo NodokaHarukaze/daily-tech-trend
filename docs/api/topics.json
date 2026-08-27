@@ -1,7 +1,503 @@
 {
-  "generated_at": "2026-08-27T03:15:56+00:00",
+  "generated_at": "2026-08-27T06:15:11+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 42929,
+      "title": "マウス・キーボード操作を記録して再現できる自動化ツール「makuroku」v0.9.9　ほか【ダイジェストニュース】",
+      "category": "company",
+      "importance": 65,
+      "summary": "自動化ツール「makuroku」のバージョン0.9.9がリリースされた。",
+      "updated_at": "2026-08-27T06:11:59.413828+00:00"
+    },
+    {
+      "id": 42930,
+      "title": "「OpenSSL」に9件のセキュリティ欠陥、v4.0.2/v3.6.4などが一斉公開／QUICサーバーの二重解放やCMS復号でのヒープ破壊など",
+      "category": "company",
+      "importance": 80,
+      "summary": "OpenSSL の v4.0.2 と v3.6.4 を含む複数バージョンで、9 件のセキュリティ欠陥が一斉に公開された。",
+      "updated_at": "2026-08-27T06:11:47.962019+00:00"
+    },
+    {
+      "id": 42931,
+      "title": "「Apache Tomcat」に重要な脆弱性 ～セキュリティ制約をバイパスされるなどの恐れ／v9 / v10 / v11系統に影響、全10件の問題を修正",
+      "category": "company",
+      "importance": 85,
+      "summary": "Apache Tomcat の v9、v10、v11 系統に影響する重要な脆弱性が報告され、セキュリティ制約をバイパスできる恐れがあるため、全10件の問題が修正された。",
+      "updated_at": "2026-08-27T06:11:36.477597+00:00"
+    },
+    {
+      "id": 43187,
+      "title": "竹中工務店が仕上げ材加工に新システム、手書き図面からCADデータ生成",
+      "category": "industry",
+      "importance": 70,
+      "summary": "竹中工務店と爽美が手書き図面からAIでCADデータを自動生成する仕上げ材加工システムを開発し、2026年9月より近畿地方でレンタルを開始した。",
+      "updated_at": "2026-08-27T06:11:23.394006+00:00"
+    },
+    {
+      "id": 43188,
+      "title": "岐路に立つデンソー、新たな競合はテックジャイアント　トヨタの将来左右",
+      "category": "industry",
+      "importance": 80,
+      "summary": "デンソーはAIを活用したE2E自動運転とSDVの急速な進化に直面し、従来のメガサプライヤーだけでなくテックジャイアントも競合として立ちはだかっている。",
+      "updated_at": "2026-08-27T06:11:09.626143+00:00"
+    },
+    {
+      "id": 43189,
+      "title": "ダブルチェックしたのに外観不良の流出が減らない、工場マネジャーの悩み",
+      "category": "industry",
+      "importance": 70,
+      "summary": "工場マネジャーが、ダブルチェックを行っても外観不良の流出が減らないことに悩んでいる。",
+      "updated_at": "2026-08-27T06:10:57.066224+00:00"
+    },
+    {
+      "id": 43190,
+      "title": "光コンピューティング、GPU比で1000倍速狙う　20年代製品化",
+      "category": "industry",
+      "importance": 80,
+      "summary": "光コンピューティングはGPU比で1000倍速を目指し、2020年代に製品化が始まる可能性がある。",
+      "updated_at": "2026-08-27T06:10:47.528999+00:00"
+    },
+    {
+      "id": 43191,
+      "title": "引き継ぎをきちんとしよう、後任は前任者を逃してはいけない",
+      "category": "industry",
+      "importance": 70,
+      "summary": "引き継ぎは今の職場で最後に果たすべき重要な仕事だ。",
+      "updated_at": "2026-08-27T06:10:37.049698+00:00"
+    },
+    {
+      "id": 43204,
+      "title": "地域における外国人との秩序ある共生社会の実現のための研究会（第3回）",
+      "category": "policy",
+      "importance": 50,
+      "summary": "地域における外国人との秩序ある共生社会の実現を目的とした研究会第3回が開催された。",
+      "updated_at": "2026-08-27T06:10:25.203062+00:00"
+    },
+    {
+      "id": 43205,
+      "title": "第19回評価分科会",
+      "category": "policy",
+      "importance": 10,
+      "summary": "第19回評価分科会",
+      "updated_at": "2026-08-27T06:10:13.686661+00:00"
+    },
+    {
+      "id": 43206,
+      "title": "情報通信審議会　情報通信技術分科会　ITU部会　放送業務委員会（第62回）",
+      "category": "policy",
+      "importance": 50,
+      "summary": "情報通信審議会の情報通信技術分科会において、ITU部会放送業務委員会が第62回を開催した。",
+      "updated_at": "2026-08-27T06:10:04.300500+00:00"
+    },
+    {
+      "id": 43207,
+      "title": "令和8年熊本地震に伴う受信料の免除の承認",
+      "category": "policy",
+      "importance": 60,
+      "summary": "令和8年熊本地震に伴い、受信料の免除が承認された。",
+      "updated_at": "2026-08-27T06:09:48.150837+00:00"
+    },
+    {
+      "id": 43208,
+      "title": "リチウムイオン電池等の回収・再資源化に関する調査　＜通知に対する改善措置状況（1回目のフォローアップ）＞",
+      "category": "policy",
+      "importance": 70,
+      "summary": "リチウムイオン電池等の回収・再資源化に関する調査について、通知に対する改善措置状況を初めてフォローアップした。",
+      "updated_at": "2026-08-27T06:09:36.583355+00:00"
+    },
+    {
+      "id": 43209,
+      "title": "外国年金受給者の生存証明手続の円滑化に関する調査　＜通知に対する改善措置状況（1回目のフォローアップ）＞",
+      "category": "policy",
+      "importance": 60,
+      "summary": "外国年金受給者の生存証明手続きに関する調査で、通知に対する改善措置状況を1回目のフォローアップとして報告した。",
+      "updated_at": "2026-08-27T06:09:23.673010+00:00"
+    },
+    {
+      "id": 43210,
+      "title": "生活困窮者の自立支援対策に関する行政評価・監視　＜勧告に対する改善措置状況（2回目のフォローアップ）＞",
+      "category": "policy",
+      "importance": 60,
+      "summary": "生活困窮者の自立支援対策に関する行政評価・監視の2回目フォローアップで、勧告に対する改善措置状況が報告されている。",
+      "updated_at": "2026-08-27T06:09:12.710876+00:00"
+    },
+    {
+      "id": 43069,
+      "title": "AIエージェント「ChatGPT Work」がサインインを要するWebサイトの操作も実行可能に／公共料金のプラン調査・変更などのタスクをこなせる。もちろん、安全性にも配慮",
+      "category": "company",
+      "importance": 85,
+      "summary": "OpenAI の AI エージェント「ChatGPT Work」がサインインを要する Web サイトの操作も実行でき、公共料金のプラン調査・変更などのタスクをこなせるようになった。",
+      "updated_at": "2026-08-27T06:09:01.773554+00:00"
+    },
+    {
+      "id": 43070,
+      "title": "「WebView2」ランタイムのリリース間隔も2週間ごとに ～「Edge」の新サイクルに追随／4週間ごとのリリースはv152が最後、v153から新体制へ",
+      "category": "company",
+      "importance": 85,
+      "summary": "Microsoft は「WebView2」ランタイムのリリース間隔を Edge の新サイクルに合わせて、2週間ごとに更新する方針を発表し、4週間ごとのリリースは v152 が最後で、v153 から新体制へ移行する。",
+      "updated_at": "2026-08-27T06:08:49.882244+00:00"
+    },
+    {
+      "id": 43141,
+      "title": "BAROCO MiSTELの左右分離型キーボードが安い！Amazon「暮らし応援 夏祭りSale」【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 60,
+      "summary": "BAROCO MiSTELの左右分離型キーボードがAmazonで夏祭りSaleにて安く販売されている。",
+      "updated_at": "2026-08-27T06:08:37.310326+00:00"
+    },
+    {
+      "id": 43142,
+      "title": "災害時の備えにも！Amazonベーシックのアルカリ電池がセール中【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 65,
+      "summary": "Amazonベーシックのアルカリ電池がセール中で、単3形×4本は958円、単4形×4本は512円、108本詰め合わせのスーパーバリューパックは4,515円で販売されている。",
+      "updated_at": "2026-08-27T06:08:23.620319+00:00"
+    },
+    {
+      "id": 43144,
+      "title": "Google、「Gemini 3.5 Transcribe」を発表 ～「あー」「えーっと」まじりの声も話者の意図をくんだ整ったテキストに／Androidや「Gemini」アプリに導入、「Chrome」にも搭載予定",
+      "category": "company",
+      "importance": 85,
+      "summary": "Google が「Gemini 3.5 Transcribe」を発表し、Androidや Gemini アプリ、Chrome に統合予定である。",
+      "updated_at": "2026-08-27T06:08:12.541290+00:00"
+    },
+    {
+      "id": 43145,
+      "title": "Amazonベーシックのニッケル水素充電池が安い！Amazonでタイムセール中【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 80,
+      "summary": "Amazonベーシックのニッケル水素充電池がタイムセールで、単3形×4本は958円、単4形×4本は512円から販売されている。",
+      "updated_at": "2026-08-27T06:08:00.792493+00:00"
+    },
+    {
+      "id": 43195,
+      "title": "「脳のゴミ掃除」を薬で活性化、東大と新潟大がマウスで実証　アルツハイマー病の原因を抑制、海馬の萎縮も阻止",
+      "category": "news",
+      "importance": 70,
+      "summary": "東京大学と新潟大学の研究者が、薬剤で脳のゴミ掃除システムを活性化し、PS19マウスにおいてタウタンパク質の蓄積を抑制し、神経変性や海馬萎縮を阻止したことを国際誌『Molecular Neurodegeneration』で報告した。",
+      "updated_at": "2026-08-27T06:07:49.386361+00:00"
+    },
+    {
+      "id": 43181,
+      "title": "イオン、食品・日用品145品目を値下げ　期間限定・最長29日間",
+      "category": "security",
+      "importance": 60,
+      "summary": "イオンは9月2日から全国約10,000店舗でトップバリュ145品目を期間限定で値下げし、値下げ期間は商品ごとに異なり最長29日間です。",
+      "updated_at": "2026-08-27T06:07:33.556832+00:00"
+    },
+    {
+      "id": 43177,
+      "title": "かつてのガラケーそっくり。既視感ありまくりのトイカメラ「HS-07」の予約が本日スタート【やじうまWatch】",
+      "category": "industry",
+      "importance": 70,
+      "summary": "トイカメラ「HS-07」の予約受付が本日スタートした。",
+      "updated_at": "2026-08-27T06:07:22.459345+00:00"
+    },
+    {
+      "id": 43178,
+      "title": "うっかり騙されないために。ダークパターンとはどんなものか、手軽に体験できる博物館風サイト【やじうまWatch】",
+      "category": "industry",
+      "importance": 70,
+      "summary": "新しい博物館風の体験型サイトが登場し、ブラウザー上でダークパターンを手軽に体験できるようになった。",
+      "updated_at": "2026-08-27T06:07:12.783061+00:00"
+    },
+    {
+      "id": 43174,
+      "title": "富山、石川の８市町に災害救助法　内閣府",
+      "category": "news",
+      "importance": 60,
+      "summary": "内閣府が富山県と石川県の8市町に災害救助法を適用した。",
+      "updated_at": "2026-08-27T06:07:00.388401+00:00"
+    },
+    {
+      "id": 43196,
+      "title": "10代のInstagram・Facebook利用を「1日2時間」に制限へ　Meta、米訴訟で和解　最大約2.9兆円支払いも",
+      "category": "news",
+      "importance": 80,
+      "summary": "Metaは米国訴訟和解により、10代のInstagram・Facebook利用を1日2時間に制限し、各州へ最大約180億ドル（約2兆8700億円）を支払うことに合意した。",
+      "updated_at": "2026-08-27T06:06:49.640348+00:00"
+    },
+    {
+      "id": 43182,
+      "title": "ソフトバンク、AIで生徒の悩みを早期把握　教師を支援する「メンタリ」",
+      "category": "security",
+      "importance": 60,
+      "summary": "ソフトバンクはAIを活用した教師支援サービス「メンタリ」を開始し、小中高等学校向けに一定期間無償で提供する。",
+      "updated_at": "2026-08-27T06:06:37.436426+00:00"
+    },
+    {
+      "id": 42948,
+      "title": "ネパール・中国の国境地帯で土石流“日本人5人と連絡取れず”",
+      "category": "news",
+      "importance": 90,
+      "summary": "ネパールと中国の国境地帯で発生した土石流により、両国合わせて160人が死亡し数百人が行方不明となり、日本人観光客5名とも連絡が取れない状態だ。",
+      "updated_at": "2026-08-27T06:06:24.310977+00:00"
+    },
+    {
+      "id": 43179,
+      "title": "Ankerの紛失防止トラッカーがAmazonでお買い得！　暮らし応援夏祭りSale　iOS/Androidの両方に対応した「Eufy SmartTrack Card E40」が4990円に",
+      "category": "industry",
+      "importance": 70,
+      "summary": "Amazon.co.jpの暮らし応援夏祭りSaleで、Anker Eufyストアページにて紛失防止トラッカー「Eufy SmartTrack Card E40」が4990円で販売されている。",
+      "updated_at": "2026-08-27T06:06:09.178989+00:00"
+    },
+    {
+      "id": 43180,
+      "title": "「ESET HOME セキュリティ プレミアム」がAmazon暮らし応援夏祭りSaleで安い！　オンラインコード版1台3年版が8264円、5台3年版は1万1880円",
+      "category": "industry",
+      "importance": 70,
+      "summary": "Amazon.co.jpの暮らし応援夏祭りSaleで、キヤノンITソリューションズストアが「ESET HOME セキュリティ プレミアム」をオンラインコード版1台3年版を8,264円、5台3年版を11,880円で販売している。",
+      "updated_at": "2026-08-27T06:05:57.907795+00:00"
+    },
+    {
+      "id": 43183,
+      "title": "金融・法務向け「Gemini Enterprise」登場　業界特化AIを提供",
+      "category": "security",
+      "importance": 70,
+      "summary": "Google Cloud が企業向けAIプラットフォーム「Gemini Enterprise」の金融サービス用と法務用のプレビュー版を提供開始した。",
+      "updated_at": "2026-08-27T06:05:44.157585+00:00"
+    },
+    {
+      "id": 43197,
+      "title": "NVIDIA、Hugging Face買収で協議　2兆円規模で　海外報道",
+      "category": "news",
+      "importance": 80,
+      "summary": "米半導体大手NVIDIAが、AI開発プラットフォームを運営する米Hugging Faceの買収を協議していると報じられた。",
+      "updated_at": "2026-08-27T06:05:32.192470+00:00"
+    },
+    {
+      "id": 43175,
+      "title": "アプリウィンドウをはじめから最大化して開くアクセシビリティ設定がWindows 11に",
+      "category": "company",
+      "importance": 65,
+      "summary": "Windows 11に、アプリウィンドウを最初から最大化して開くアクセシビリティ設定が追加された。",
+      "updated_at": "2026-08-27T06:05:19.639509+00:00"
+    },
+    {
+      "id": 43198,
+      "title": "価格高騰が変えた法人PC調達　「売上2倍」のリユースPC事業者が見た需要の変化",
+      "category": "news",
+      "importance": 80,
+      "summary": "リユースPC事業者リングローの2026年3～4月の売上が前年同月比約2倍になった。",
+      "updated_at": "2026-08-27T06:05:08.243500+00:00"
+    },
+    {
+      "id": 43184,
+      "title": "「オルカン高配当」登場　世界の高配当株へ低コスト投資し、配当金のみ分配",
+      "category": "security",
+      "importance": 60,
+      "summary": "三菱UFJアセットマネジメントは、9月30日から投資信託eMAXISシリーズに「オルカン高配当」という全世界の高配当株へ投資する新商品を設定した。",
+      "updated_at": "2026-08-27T06:04:55.009973+00:00"
+    },
+    {
+      "id": 43185,
+      "title": "三菱UFJ、相続手続きをデジタル化「エムットそうぞく」",
+      "category": "security",
+      "importance": 70,
+      "summary": "三菱UFJ銀行は、個人向けライフステージ総合金融サービス「エムット」の一環として、デジタル相続プラットフォーム「エムットそうぞく」を2026年度下期から提供開始する。",
+      "updated_at": "2026-08-27T06:04:43.933066+00:00"
+    },
+    {
+      "id": 43199,
+      "title": "「Twitter」が帰ってきた？　元Twitter法務のスタートアップが新SNS立ち上げ　Xとは係争中",
+      "category": "news",
+      "importance": 70,
+      "summary": "米スタートアップのOperation Bluebirdが8月24日に「Twitter.now」という新しいSNSを立ち上げ、X（旧Twitter）と商標権で係争中であることを主張した。",
+      "updated_at": "2026-08-27T06:04:33.436407+00:00"
+    },
+    {
+      "id": 43093,
+      "title": "石川 富山にレベル5大雨特別警報 最大級の警戒を",
+      "category": "news",
+      "importance": 80,
+      "summary": "気象庁が石川県と富山県にレベル5大雨特別警報を発表し、線状降水帯の影響で記録的な大雨による川の氾濫や土砂災害が発生している。",
+      "updated_at": "2026-08-27T06:04:22.203640+00:00"
+    },
+    {
+      "id": 43200,
+      "title": "「レスレリアーナのアトリエ」サービス終了へ　開始から約3年で",
+      "category": "news",
+      "importance": 60,
+      "summary": "コーエーテクモゲームスは、スマートフォン・PC向けゲーム「レスレリアーナのアトリエ」のサービスを2023年9月に開始し、11月25日午後4時に終了することを発表した。",
+      "updated_at": "2026-08-27T06:04:11.002612+00:00"
+    },
+    {
+      "id": 43186,
+      "title": "SBI新生銀行、「スマホATM」対応　セブンとローソンで利用可能",
+      "category": "security",
+      "importance": 70,
+      "summary": "SBI新生銀行がスマホATMサービスを開始し、セブン銀行ATMとローソン銀行ATMでキャッシュカードなしに現金の入出金が可能になった。",
+      "updated_at": "2026-08-27T06:03:58.987601+00:00"
+    },
+    {
+      "id": 43160,
+      "title": "中部電力 浜岡原発解体めぐり工事報告書き換えと発表",
+      "category": "news",
+      "importance": 80,
+      "summary": "中部電力が浜岡原子力発電所の1・2号機廃炉作業報告書を不正に改ざんしていたことが明らかになった。",
+      "updated_at": "2026-08-27T06:03:49.678408+00:00"
+    },
+    {
+      "id": 43176,
+      "title": "LLMのローカル実行ツール「Ollama」が「Claude Desktop」に対応 ～3カ月半ぶりの復活／現時点ではmacOSのみ、Windowsも間もなくサポート",
+      "category": "company",
+      "importance": 80,
+      "summary": "LLMのローカル実行ツール「Ollama」がClaude Desktopに対応し、現時点ではmacOSのみでWindowsへのサポートが間もなく予定されている。",
+      "updated_at": "2026-08-27T06:03:34.440109+00:00"
+    },
+    {
+      "id": 43193,
+      "title": "ドジャース 大谷翔平 7試合ぶり複数安打 佐々木朗希は4失点",
+      "category": "news",
+      "importance": 70,
+      "summary": "大谷翔平選手がドジャース戦で7試合ぶりに複数安打と6年連続2桁盗塁を記録し、佐々木朗希投手は4回途中で4失点を喫しチームはサヨナラ負けした。",
+      "updated_at": "2026-08-27T06:03:24.154614+00:00"
+    },
+    {
+      "id": 43162,
+      "title": "【大雨被害まとめ】石川 富山 道路冠水や床下浸水の情報",
+      "category": "news",
+      "importance": 85,
+      "summary": "石川県と富山県でレベル5大雨特別警報が発表され、土砂崩れや道路冠水・浸水などの被害が確認された。",
+      "updated_at": "2026-08-27T06:03:07.926569+00:00"
+    },
+    {
+      "id": 43194,
+      "title": "九州新幹線 熊本ー新水俣は9月18日運行再開 全線で運行再開へ",
+      "category": "news",
+      "importance": 80,
+      "summary": "九州新幹線の熊本駅と新水俣駅間区間は、9月18日から運行を再開する。",
+      "updated_at": "2026-08-27T06:02:56.563176+00:00"
+    },
+    {
+      "id": 43192,
+      "title": "NVIDIAは売上高2倍超、2026年5～7月期　懸念は供給制約とメモリー高騰",
+      "category": "industry",
+      "importance": 80,
+      "summary": "NVIDIAは2026年5～7月期に売上高962億ドル（前年同期比2.1倍）と純利益596億ドル（前年同期比2.3倍）を記録し、四半期として過去最高を更新した。",
+      "updated_at": "2026-08-27T06:02:46.069763+00:00"
+    },
+    {
+      "id": 43161,
+      "title": "芸術家 草間彌生さん死去 97歳 水玉モチーフの作品で知られる",
+      "category": "news",
+      "importance": 80,
+      "summary": "前衛芸術家の草間彌生さんが97歳で東京都内の病院にて亡くなった。",
+      "updated_at": "2026-08-27T06:02:32.849454+00:00"
+    },
+    {
+      "id": 43211,
+      "title": "デジタル空間における情報流通の諸課題への対処に関する検討会（第14回） 開催案内",
+      "category": "policy",
+      "importance": 50,
+      "summary": "デジタル空間における情報流通の諸課題への対処に関する検討会（第14回）が開催される予定である。",
+      "updated_at": "2026-08-27T06:02:20.619868+00:00"
+    },
+    {
+      "id": 43201,
+      "title": "2035年、AI推論需要の半分は「コード生成」に　推論市場の今と未来",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43202,
+      "title": "キオクシアが「DRAMとSSDの間を埋める」新手法、メモリ不足をどう解消？",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43203,
+      "title": "セガサミーHDが「増え続けるログをオンプレミスSIEMに保存し切れない」を解消へ　何を変えた？",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43212,
+      "title": "Gear Metrology Moves to the Center of Closed-Loop Manufacturing",
+      "category": "quality",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43213,
+      "title": "MHIET Establishes Hydrogen Co-Firing Specifications for the KU Series Gas Engine for Power Generation<br />-- Commencing Proposal Activities for Hydrogen-Capable Solutions Supporting Energy Transition",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43214,
+      "title": "AIで識別するリチウムイオン電池回収装置を活用した\n国内初の回収・運搬・資源化サービス「iGomi™」事業が 環境省実証事業に採択\n～神奈川県および県内4市と連携し、リチウムイオン電池等による重大火災事故を防ぐ～",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43215,
+      "title": "Rethinking the Transferable Adversarial Attacks and Robust Defense in Federated Learning",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43216,
+      "title": "Flower Hub: A Reproducible Benchmarking Platform for Federated Learning in Simulation and Deployment",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43217,
+      "title": "Understanding the Energy Scaling of Large Language Model Inference Across Context Lengths and Attention Architectures",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43218,
+      "title": "Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43219,
+      "title": "Physics-Informed Error Field Learning: A Post-Training Optimization Framework for Physics-Informed Neural Networks",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43220,
+      "title": "Demystifying Reinforcement Learning Post-Training of Language Models",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
+    {
+      "id": 43221,
+      "title": "GreenLeaf Law Embed Tiny: A Compact Embedding Model for Legal Domain Retrieval",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-27T06:01:10.342054+00:00"
+    },
     {
       "id": 42781,
       "title": "【アップデート情報】窓の杜収録ソフト　8月26日　～「Microsoft Edge」「Process Explorer」「nPOP」など",
@@ -107,30 +603,6 @@
       "updated_at": "2026-08-27T03:09:22.755344+00:00"
     },
     {
-      "id": 42929,
-      "title": "マウス・キーボード操作を記録して再現できる自動化ツール「makuroku」v0.9.9　ほか【ダイジェストニュース】",
-      "category": "company",
-      "importance": 60,
-      "summary": "自動化ツール「makuroku」がバージョン0.9.9でリリースされ、マウスとキーボードの操作を記録して再現できる機能が追加された。",
-      "updated_at": "2026-08-27T03:09:11.081379+00:00"
-    },
-    {
-      "id": 42930,
-      "title": "「OpenSSL」に9件のセキュリティ欠陥、v4.0.2/v3.6.4などが一斉公開／QUICサーバーの二重解放やCMS復号でのヒープ破壊など",
-      "category": "company",
-      "importance": 80,
-      "summary": "OpenSSLに9件のセキュリティ欠陥が報告され、v4.0.2やv3.6.4など複数バージョンで一斉公開された。",
-      "updated_at": "2026-08-27T03:08:57.450805+00:00"
-    },
-    {
-      "id": 42931,
-      "title": "「Apache Tomcat」に重要な脆弱性 ～セキュリティ制約をバイパスされるなどの恐れ／v9 / v10 / v11系統に影響、全10件の問題を修正",
-      "category": "company",
-      "importance": 85,
-      "summary": "Apache Tomcat の v9、v10、v11 系統に対して重要な脆弱性が報告され、セキュリティ制約をバイパスできる恐れがあるとともに、全10件の問題が修正された。",
-      "updated_at": "2026-08-27T03:08:41.825110+00:00"
-    },
-    {
       "id": 43150,
       "title": "ベテラン社員の頭の中を明らかに、暗黙知を構造化するデータ設計",
       "category": "industry",
@@ -195,22 +667,6 @@
       "updated_at": "2026-08-27T03:07:08.438961+00:00"
     },
     {
-      "id": 43069,
-      "title": "AIエージェント「ChatGPT Work」がサインインを要するWebサイトの操作も実行可能に／公共料金のプラン調査・変更などのタスクをこなせる。もちろん、安全性にも配慮",
-      "category": "company",
-      "importance": 70,
-      "summary": "ChatGPT Workがサインインを要するWebサイトの操作も実行可能になり、公共料金のプラン調査・変更などのタスクをこなせるようになった。",
-      "updated_at": "2026-08-27T03:06:58.432827+00:00"
-    },
-    {
-      "id": 43070,
-      "title": "「WebView2」ランタイムのリリース間隔も2週間ごとに ～「Edge」の新サイクルに追随／4週間ごとのリリースはv152が最後、v153から新体制へ",
-      "category": "company",
-      "importance": 80,
-      "summary": "WebView2ランタイムのリリース間隔が従来の4週間から2週間に変更され、v152以降は新しいリリース体制へ移行した。",
-      "updated_at": "2026-08-27T03:06:41.765212+00:00"
-    },
-    {
       "id": 43163,
       "title": "風速15mでも裏返らない晴雨兼用傘、アンベル「タフネス アンチフリップ」開発者に聞く「全天候での安心感」を支える技術",
       "category": "news",
@@ -225,22 +681,6 @@
       "importance": 55,
       "summary": "高級筆記具の人気が高まり、ボールペンや万年筆など中価格帯以上の新製品が次々と発売されている。",
       "updated_at": "2026-08-27T03:06:17.763860+00:00"
-    },
-    {
-      "id": 43141,
-      "title": "BAROCO MiSTELの左右分離型キーボードが安い！Amazon「暮らし応援 夏祭りSale」【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 80,
-      "summary": "BAROCO MiSTELの左右分離型キーボード「MD770-J」がAmazonの暮らし応援夏祭りSaleで20,700円から販売されている。",
-      "updated_at": "2026-08-27T03:06:07.421055+00:00"
-    },
-    {
-      "id": 43142,
-      "title": "災害時の備えにも！Amazonベーシックのアルカリ電池がセール中【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 60,
-      "summary": "Amazonベーシックのアルカリ電池が災害時の備えとしてセール中である。",
-      "updated_at": "2026-08-27T03:05:55.541441+00:00"
     },
     {
       "id": 43143,
@@ -283,22 +723,6 @@
       "updated_at": "2026-08-27T03:04:54.920628+00:00"
     },
     {
-      "id": 43093,
-      "title": "石川 富山にレベル5大雨特別警報 最大級の警戒を",
-      "category": "news",
-      "importance": 85,
-      "summary": "気象庁は午前6時20分に石川県と富山県でレベル5大雨特別警報を発表した。",
-      "updated_at": "2026-08-27T03:04:44.458105+00:00"
-    },
-    {
-      "id": 43144,
-      "title": "Google、「Gemini 3.5 Transcribe」を発表 ～「あー」「えーっと」まじりの声も話者の意図をくんだ整ったテキストに／Androidや「Gemini」アプリに導入、「Chrome」にも搭載予定",
-      "category": "company",
-      "importance": 85,
-      "summary": "Google が「Gemini 3.5 Transcribe」を発表し、Android・Geminiアプリ・Chrome に統合予定である。",
-      "updated_at": "2026-08-27T03:04:32.772496+00:00"
-    },
-    {
       "id": 43148,
       "title": "名古屋・セントラルパークアネックス跡地に「ゲートフロント久屋大通」",
       "category": "security",
@@ -307,36 +731,12 @@
       "updated_at": "2026-08-27T03:04:21.460866+00:00"
     },
     {
-      "id": 43145,
-      "title": "Amazonベーシックのニッケル水素充電池が安い！Amazonでタイムセール中【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 60,
-      "summary": "Amazonベーシックのニッケル水素充電池がタイムセールで単3形×4本が958円、単4形×4本が512円から販売されている。",
-      "updated_at": "2026-08-27T03:04:10.463459+00:00"
-    },
-    {
       "id": 43167,
       "title": "「マイナアプリ」一部端末でログインできない不具合　リリースから2日",
       "category": "news",
       "importance": 70,
       "summary": "一部端末でマイナアプリのログインができず、シークレットモードを解除するかデジタル認証アプリをアンインストールすると改善される。",
       "updated_at": "2026-08-27T03:04:00.279731+00:00"
-    },
-    {
-      "id": 43160,
-      "title": "中部電力 浜岡原発解体めぐり工事報告書き換えと発表",
-      "category": "news",
-      "importance": 80,
-      "summary": "中部電力は浜岡原子力発電所の1・2号機廃炉作業に関し、費用を不適切な手続きで請求していたと正式に発表した。",
-      "updated_at": "2026-08-27T03:03:47.831637+00:00"
-    },
-    {
-      "id": 43162,
-      "title": "【大雨被害まとめ】石川 富山 道路冠水や床下浸水の情報",
-      "category": "news",
-      "importance": 60,
-      "summary": "石川県では午前8時時点で大雨による人的被害は確認されていないが、羽咋市と宝達志水町の道路が冠水している。",
-      "updated_at": "2026-08-27T03:03:31.960791+00:00"
     },
     {
       "id": 43159,
@@ -371,14 +771,6 @@
       "updated_at": "2026-08-27T03:02:46.006695+00:00"
     },
     {
-      "id": 43161,
-      "title": "芸術家 草間彌生さん死去 97歳 水玉モチーフの作品で知られる",
-      "category": "news",
-      "importance": 85,
-      "summary": "前衛芸術家の草間彌生さんが97歳で東京都内の病院にて亡くなった。",
-      "updated_at": "2026-08-27T03:02:33.012076+00:00"
-    },
-    {
       "id": 43138,
       "title": "At least one dead after car crashes into crowd in northern France",
       "category": "news",
@@ -409,398 +801,6 @@
       "importance": 0,
       "summary": "",
       "updated_at": "2026-08-27T03:00:57.754414+00:00"
-    },
-    {
-      "id": 43171,
-      "title": "2026 Gartner® Hype Cycle™: DCIM tools enter the plateau of productivity",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T03:00:57.754414+00:00"
-    },
-    {
-      "id": 43172,
-      "title": "POSCO group and CSIRO Hold Critical Minerals Forum to Strengthen Collaboration on Low-Carbon Ironmaking Technologies",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T03:00:57.754414+00:00"
-    },
-    {
-      "id": 43173,
-      "title": "CO2輸送用ラインパイプ材の研究開発について\n～石油メジャーが参画する日本財団とDeepStarの連携技術開発助成プログラムに採択～",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T03:00:57.754414+00:00"
-    },
-    {
-      "id": 43079,
-      "title": "NVIDIAのE2E自動運転、商用解禁　「強力な基盤」は車メーカーの福音か",
-      "category": "industry",
-      "importance": 80,
-      "summary": "米NVIDIAはE2E自動運転向けのオープンウェイトAIモデルを商用利用可能にした。",
-      "updated_at": "2026-08-27T00:09:12.406397+00:00"
-    },
-    {
-      "id": 43080,
-      "title": "アンダーパス3カ所で排水設備に異常、千葉豪雨の死亡事故受け全国調査",
-      "category": "industry",
-      "importance": 80,
-      "summary": "国土交通省は千葉豪雨で冠水したアンダーパスの排水ポンプ不調を受け、全国102カ所のアンダーパス等で緊急点検を実施し、3カ所で異常が確認された。",
-      "updated_at": "2026-08-27T00:08:59.715686+00:00"
-    },
-    {
-      "id": 43081,
-      "title": "「電脳コイル」から20年、描かれた世界観を実現する最新AIグラスを検証",
-      "category": "industry",
-      "importance": 70,
-      "summary": "『電脳コイル』の20周年を記念して、最新AIグラスが実際に検証されました。",
-      "updated_at": "2026-08-27T00:08:48.795096+00:00"
-    },
-    {
-      "id": 43102,
-      "title": "「令和8年4月22日に発生した岩手県大槌町における林野火災に係る消防庁長官の火災原因調査報告書」の公表",
-      "category": "policy",
-      "importance": 50,
-      "summary": "令和8年4月22日に発生した岩手県大槌町の林野火災に関する消防庁長官の原因調査報告書が公表された。",
-      "updated_at": "2026-08-27T00:08:36.894948+00:00"
-    },
-    {
-      "id": 43071,
-      "title": "Androidスマホの写真を「OpenMTP」でMacにバックアップする【自宅Wi-Fiの“わからない”をスッキリ！】",
-      "category": "industry",
-      "importance": 70,
-      "summary": "Androidスマホの写真と動画をOpenMTPでMacにバックアップする方法が紹介されている。",
-      "updated_at": "2026-08-27T00:08:26.689399+00:00"
-    },
-    {
-      "id": 43072,
-      "title": "APIキー1つで複数のAIモデルを利用できる「ロリポップ ! AIゲートウェイ」、GMOペパボが提供開始",
-      "category": "industry",
-      "importance": 70,
-      "summary": "GMOペパボ株式会社が8月25日に、複数のAIモデルを1つのAPIキーで利用できるマネージドAIゲートウェイ「ロリポップ！AIゲートウェイ by GMOペパボ」を提供開始し、初期費用・月額基本料は無料で従量制料金が適用されます。",
-      "updated_at": "2026-08-27T00:08:09.001472+00:00"
-    },
-    {
-      "id": 9723,
-      "title": "医療特化AIの「2つの潮流」、AI立ち読みと成功例",
-      "category": "industry",
-      "importance": 70,
-      "summary": "医療分野のVertical AIは画像診断AIとヘルスケアデータの収集・活用が注目され、業界に深く切り込むことが成功のポイントとなっている。",
-      "updated_at": "2026-08-27T00:07:47.748475+00:00"
-    },
-    {
-      "id": 43073,
-      "title": "「共創の場」として他にない存在感の総合展示会、今後も国内外に産業の方向性を示す～CEATEC・JEITA　30年後には展示会はなくなる!? 鹿野エグゼクティブプロデューサーの未来予測",
-      "category": "industry",
-      "importance": 70,
-      "summary": "CEATECはJEITA主催の総合展示会で、2026年10月13日から16日に開催される。",
-      "updated_at": "2026-08-27T00:07:34.783396+00:00"
-    },
-    {
-      "id": 43066,
-      "title": "Trump says all mines cleared from Strait of Hormuz",
-      "category": "news",
-      "importance": 70,
-      "summary": "イランが紛争開始以来ストレート・オブ・ホルムズを閉鎖し、世界的な油価の大幅変動を引き起こしている。",
-      "updated_at": "2026-08-27T00:07:24.455741+00:00"
-    },
-    {
-      "id": 43082,
-      "title": "AIモデルの他社システム侵入が相次ぐ",
-      "category": "industry",
-      "importance": 80,
-      "summary": "米Anthropicは2026年7月30日に、同社のAIモデルが他社システムに侵入した事例を3件報告しました。",
-      "updated_at": "2026-08-27T00:07:10.145017+00:00"
-    },
-    {
-      "id": 43065,
-      "title": "Musk's SpaceX to build $100bn launch facility in Louisiana",
-      "category": "news",
-      "importance": 80,
-      "summary": "SpaceXはルイジアナ州に最大規模の$100億ドルの打ち上げ施設を建設し、2029年までにロケットを宇宙へ送ることを目指す。",
-      "updated_at": "2026-08-27T00:06:51.303554+00:00"
-    },
-    {
-      "id": 43083,
-      "title": "企業を襲うサイバー詐欺の実態",
-      "category": "industry",
-      "importance": 85,
-      "summary": "サイバー詐欺は、社長を装った人物がM&A案件を信じさせるビジネスメール詐欺や偽の取引先口座へ資金振込を促す手法から、パソコンディスプレーに表示される偽警告画面でサポート詐欺を仕掛けるまで、多様なデジタルツールとなりすましを利用した詐欺全般を指す。",
-      "updated_at": "2026-08-27T00:06:40.614072+00:00"
-    },
-    {
-      "id": 43064,
-      "title": "Bodies found on S Korean holiday island as missing persons scandal deepens",
-      "category": "news",
-      "importance": 70,
-      "summary": "警察軍曹が被害者家族への嘘と失踪事件の早期閉鎖を理由に逮捕された。",
-      "updated_at": "2026-08-27T00:06:24.123079+00:00"
-    },
-    {
-      "id": 43084,
-      "title": "顧客が気付かぬ痛みを探索　取り除く方法を共に考える",
-      "category": "industry",
-      "importance": 70,
-      "summary": "顧客の痛みを除去し、根本原因を共に探り対策を立てることで関係を深めることができると述べられている。",
-      "updated_at": "2026-08-27T00:06:08.914444+00:00"
-    },
-    {
-      "id": 43086,
-      "title": "DeepSeekを支える特徴を学ぶ　ボトルネック発生を防ぐ「MLA」",
-      "category": "industry",
-      "importance": 70,
-      "summary": "DeepSeek-V3-Baseのアーキテクチャには、MLA（Multi‑Layer Attention）という技術が採用されており、推論時にAttentionを高速化しつつメモリー使用量を削減することができる。",
-      "updated_at": "2026-08-27T00:05:55.612683+00:00"
-    },
-    {
-      "id": 43094,
-      "title": "個人で契約したChatGPTに、会社の情報を入力していいの？　超初心者向けAI解説",
-      "category": "news",
-      "importance": 70,
-      "summary": "生成AIは日常業務で広く利用されているが、機密情報を個人版ChatGPTに入力するとリスクがある。",
-      "updated_at": "2026-08-27T00:05:45.247090+00:00"
-    },
-    {
-      "id": 43068,
-      "title": "沖縄知事選、希薄化する対立軸　我部琉球大名誉教授に聞く",
-      "category": "news",
-      "importance": 70,
-      "summary": "沖縄県知事選挙において対立軸が希薄化していると、我部琉球大名誉教授が語った。",
-      "updated_at": "2026-08-27T00:05:32.611250+00:00"
-    },
-    {
-      "id": 43060,
-      "title": "Canada's retaliation tests the limit of American power under Trump",
-      "category": "news",
-      "importance": 60,
-      "summary": "トランプ政権が米国の優位性を利用して同盟国と敵対国に挑戦し、カナダとイランはそれぞれ反撃した。",
-      "updated_at": "2026-08-27T00:05:19.389038+00:00"
-    },
-    {
-      "id": 43088,
-      "title": "石川 羽咋 飯山川 飯山橋付近で水が堤防の高さ超えあふれる",
-      "category": "news",
-      "importance": 60,
-      "summary": "2026年8月7日午前5時10分頃、石川県羽咋市の飯山川において飯山橋付近で水が堤防を超えてあふれ、周辺道路が冠水した。",
-      "updated_at": "2026-08-27T00:05:06.380875+00:00"
-    },
-    {
-      "id": 43074,
-      "title": "業界の壁を越えた“ワンチーム”で活動する「日本オンライン詐欺対策アライアンス」（JASA）設立　詐欺対策カンファレンス Japan 2026",
-      "category": "industry",
-      "importance": 60,
-      "summary": "一般社団法人トラスト＆セーフティ協会（JTSA）が8月26日に「詐欺対策カンファレンス Japan 2026」を開催した。",
-      "updated_at": "2026-08-27T00:04:56.103647+00:00"
-    },
-    {
-      "id": 43075,
-      "title": "バッファロー、法人向けWi-Fiルーター「VR-U300W」2台セットの無料モニターキャンペーンを開催",
-      "category": "industry",
-      "importance": 60,
-      "summary": "バッファローは法人向けWi‑Fiルーター「VR-U300W」を2台セットで提供する無料モニターキャンペーンを開始し、募集社数は3社、応募期間は9月16日までとした。",
-      "updated_at": "2026-08-27T00:04:45.969833+00:00"
-    },
-    {
-      "id": 43077,
-      "title": "「思い出せない」をなくす　SwitchBotの身に付けるAI「AIマインドクリップ」を試した[Sponsored]",
-      "category": "security",
-      "importance": 65,
-      "summary": "SwitchBotが開発した身に付けるAI「AIマインドクリップ」を試し、買い物で忘れやすいアイテムを記憶する機能を紹介している。",
-      "updated_at": "2026-08-27T00:04:35.726921+00:00"
-    },
-    {
-      "id": 43092,
-      "title": "気象庁と国土交通省が会見「命の危険迫る 身の安全の確保を」",
-      "category": "news",
-      "importance": 70,
-      "summary": "気象庁と国土交通省は石川県と富山県に大雨の特別警報を発表し、午前7時20分から合同で記者会見を開いた。",
-      "updated_at": "2026-08-27T00:04:23.623701+00:00"
-    },
-    {
-      "id": 43078,
-      "title": "「視力がいい」だけでは足りない? スマートグラス時代の“見える”をJUN GINZAに聞く",
-      "category": "security",
-      "importance": 60,
-      "summary": "スマートグラスは視力が良いだけではなく、スマートフォンの利便性を高めるために注目されている。",
-      "updated_at": "2026-08-27T00:04:09.865887+00:00"
-    },
-    {
-      "id": 43091,
-      "title": "【映像】富山 氷見で用水路あふれる",
-      "category": "news",
-      "importance": 80,
-      "summary": "富山県氷見市の用水路が波を打って水があふれ出し、周辺地域が茶色い水で覆われ、住宅が浸水している映像が撮影された。",
-      "updated_at": "2026-08-27T00:03:55.827250+00:00"
-    },
-    {
-      "id": 43076,
-      "title": "ネスレ、史上最もスリム・静音な「ネスカフェ ゴールドブレンド バリスタ kotone」10月1日発売。日常に溶け込むデザインを実現　Amazon.co.jp・楽天などで予約受付中",
-      "category": "industry",
-      "importance": 60,
-      "summary": "ネスレ日本株式会社が、ワンタッチでコーヒーを入れられる「ネスカフェ ゴールドブレンド バリスタ kotone」を10月1日に発売し、市場想定価格は2万2000円である。",
-      "updated_at": "2026-08-27T00:03:45.713303+00:00"
-    },
-    {
-      "id": 43067,
-      "title": "US drug agency approves breakthrough treatment for pancreatic cancer",
-      "category": "news",
-      "importance": 80,
-      "summary": "米国の薬事機関が膵臓癌に対するブレークスルー治療として daraxonrasib を承認した。",
-      "updated_at": "2026-08-27T00:03:24.151786+00:00"
-    },
-    {
-      "id": 43089,
-      "title": "【映像】氷見で斜面崩れる",
-      "category": "news",
-      "importance": 70,
-      "summary": "富山県氷見市で斜面が崩れ、土砂が建物の近くに押し寄せている映像が撮影された。",
-      "updated_at": "2026-08-27T00:03:10.657556+00:00"
-    },
-    {
-      "id": 43061,
-      "title": "The question dominating Indian politics: Is it worse when women swear?",
-      "category": "news",
-      "importance": 70,
-      "summary": "ラフル・ガンディーの発言が、インド首相ナレンドラ・モディへの侮辱に対する性別格差を巡る議論を再燃させた。",
-      "updated_at": "2026-08-27T00:03:00.214700+00:00"
-    },
-    {
-      "id": 43063,
-      "title": "Iceland holds knife-edge referendum on EU - and it could be decided on fish",
-      "category": "news",
-      "importance": 80,
-      "summary": "アイスランドは土曜日にEU加盟交渉について国民投票を実施する。",
-      "updated_at": "2026-08-27T00:02:35.025184+00:00"
-    },
-    {
-      "id": 43090,
-      "title": "【映像】富山 氷見で複数の車が水につかる",
-      "category": "news",
-      "importance": 60,
-      "summary": "富山県氷見市で午前6時半頃に撮影された映像では、茶色く濁った水が一帯を覆い、複数の車がタイヤ上まで浸かり動けなくなっている様子が確認できた。",
-      "updated_at": "2026-08-27T00:02:24.629535+00:00"
-    },
-    {
-      "id": 43062,
-      "title": "'If you started running, they shot you' - inside Nigeria's growing kidnapping crisis",
-      "category": "news",
-      "importance": 80,
-      "summary": "多くのコミュニティが、南部へ拡大する誘拐危機により身代金目的で誘拐される恐怖を抱えている。",
-      "updated_at": "2026-08-27T00:02:12.451494+00:00"
-    },
-    {
-      "id": 43087,
-      "title": "【大雨】交通機関の影響",
-      "category": "news",
-      "importance": 70,
-      "summary": "大雨により各地の鉄道に影響が出ている。",
-      "updated_at": "2026-08-27T00:02:01.777042+00:00"
-    },
-    {
-      "id": 43095,
-      "title": "「ただのファイル属性」がroot権限に化ける　Linux ntfs3に潜んだ権限昇格のわな",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43096,
-      "title": "VPNをやめた製造業、NASへの「安全なリモートアクセス」をどう実現？",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43097,
-      "title": "JPGでもPNGでもない　2026年内に主要ブラウザが「JXL」を正式採用へ",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43098,
-      "title": "第52回東京都水道局資金運用管理委員会の開催について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43099,
-      "title": "観光資源の発掘や磨き上げの取組を支援します！地域資源発掘型プログラム事業（第2回募集）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43100,
-      "title": "テレワークを活用した柔軟な働き方により、女性の就業を支援します　令和8年度 レディGO！TOKYOテレワーク CHALLENGE PROJECT を開始",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43101,
-      "title": "第17回東京都人権施策に関する専門家会議の開催について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43103,
-      "title": "Beyond hardware: How IT partners can grow with value-added software-defined services",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43104,
-      "title": "Data center thermal management: A practical guide for AI workloads",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43105,
-      "title": "Sources, spares, and commissioning liquid cooling in India: The supply-side",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43106,
-      "title": "The foundation for energy and industrial intelligence",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43107,
-      "title": "How to Future-Proof Buildings in an Era of Constant Change",
-      "category": "smart_factory",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
-    },
-    {
-      "id": 43108,
-      "title": "Kyrgyzstan: Kyrgyzaltyn Earns More in H1 2026 than in All of 2025",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-27T00:00:50.569074+00:00"
     }
   ]
 }
