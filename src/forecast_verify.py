@@ -58,17 +58,56 @@ VERIFY_USER_TMPL = """\
 ]"""
 
 
+def _extract_json_array(text: str) -> str | None:
+    """テキストから最初の JSON 配列を、括弧の深さを追跡して抽出する。
+
+    `llm_insights_api._extract_json_object`（`{`/`}` 版）と同じ発想。
+    素朴な `find("[")`/`rfind("]")` だと、モデルが JSON の後に雑談文を続けて
+    その中に `]` を含めた場合（例:「上記の予測[的中]について」）や、
+    文字列値の中に無関係な `]` がある場合に、実際の配列とは違う位置を
+    終端とみなして `json.loads` が失敗する。深さ0に戻った時点の `]` を
+    確定の終端として使うことで、末尾の余計な文字列に引きずられなくする。
+    """
+    if not text:
+        return None
+    t = text.strip().replace("```json", "").replace("```", "").strip()
+    start = t.find("[")
+    if start == -1:
+        return None
+    depth = 0
+    in_string = False
+    escape_next = False
+    for i in range(start, len(t)):
+        c = t[i]
+        if escape_next:
+            escape_next = False
+            continue
+        if c == '\\' and in_string:
+            escape_next = True
+            continue
+        if c == '"':
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if c == '[':
+            depth += 1
+        elif c == ']':
+            depth -= 1
+            if depth == 0:
+                return t[start:i + 1]
+    return None
+
+
 def _try_parse_verdict_json(raw_text: str) -> list | None:
     """LLM 応答から JSON 配列を抽出。失敗時は None を返す（空配列との区別が必要なため）。"""
-    text = raw_text.strip().replace("```json", "").replace("```", "").strip()
-    s = text.find("[")
-    e = text.rfind("]")
-    if s != -1 and e > s:
-        try:
-            return json.loads(text[s:e + 1])
-        except json.JSONDecodeError:
-            return None
-    return None
+    candidate = _extract_json_array(raw_text)
+    if candidate is None:
+        return None
+    try:
+        return json.loads(candidate)
+    except json.JSONDecodeError:
+        return None
 
 
 def _call_verify_llm(system: str, user: str, max_retries: int = 2) -> list | None:

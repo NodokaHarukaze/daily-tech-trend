@@ -391,3 +391,53 @@ class TestCallVerifyLLMRetry:
         assert isinstance(result, list)
         assert len(result) == 1
         assert mock_post.call_count == 1
+
+
+class TestExtractJsonArray:
+    """_extract_json_array: 深さ追跡による JSON 配列抽出（2026-08-28 追加）。
+
+    本番ログ(2026-08-24〜08-27)で実際に観測された `verify JSON 解析失敗` の原因調査で、
+    旧実装(`text.find("[")`/`text.rfind("]")`)は配列の外側に別の `]` があると
+    誤った終端を掴んで json.loads が失敗することが分かった。
+    """
+
+    def test_plain_array(self):
+        from forecast_verify import _extract_json_array
+        text = '[{"title": "x", "verdict": "的中"}]'
+        assert _extract_json_array(text) == text
+
+    def test_trailing_prose_with_bracket_after_array(self):
+        """配列の後にモデルが雑談文を続け、その中に `]` を含めるケース。
+
+        旧実装は rfind("]") で末尾の雑談文中の `]` を終端と誤認し、
+        余計な文字列を含んだ壊れた候補文字列を json.loads に渡していた。
+        """
+        from forecast_verify import _extract_json_array
+        text = '[{"title": "x", "verdict": "的中"}]\n上記の予測[的中]について説明します。'
+        assert _extract_json_array(text) == '[{"title": "x", "verdict": "的中"}]'
+
+    def test_bracket_inside_string_value(self):
+        """文字列値の中に `[`/`]` が含まれていても、配列自体の終端は正しく検出する。"""
+        from forecast_verify import _extract_json_array
+        text = '[{"title": "決算[Q3]速報", "verdict": "外れ"}]'
+        assert _extract_json_array(text) == text
+
+    def test_code_fence_stripped(self):
+        from forecast_verify import _extract_json_array
+        text = '```json\n[{"title": "x", "verdict": "未確定"}]\n```'
+        assert _extract_json_array(text) == '[{"title": "x", "verdict": "未確定"}]'
+
+    def test_truncated_array_returns_none(self):
+        """max_tokens超過等で配列が閉じずに切れた場合は None のまま（既存挙動を維持）。"""
+        from forecast_verify import _extract_json_array
+        text = '[{"title": "x", "verdict": "的中", "reason": "本文が途中で切'
+        assert _extract_json_array(text) is None
+
+    def test_no_array_returns_none(self):
+        from forecast_verify import _extract_json_array
+        assert _extract_json_array('{"perspective_digest": {"engineer": "..."}}') is None
+
+    def test_empty_text_returns_none(self):
+        from forecast_verify import _extract_json_array
+        assert _extract_json_array("") is None
+        assert _extract_json_array(None) is None

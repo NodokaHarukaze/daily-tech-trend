@@ -1466,8 +1466,7 @@ LLM insight と同じ「予算を使い切る」構造だった。
 - [ ] **他の呼び出しへの適用検討**: `call_llm`（tech用, `max_tokens=700`）と `call_llm_esg_*`（`max_tokens=500`）も
       `reasoning_effort` 未指定。tech は現在 `LLM_SKIP_KINDS=tech` で生成停止中、かつ `_repair_json_with_llm` の
       救済があるため今回は未変更
-- [ ] `forecast_verify` の `verify JSON 解析失敗` 警告（本件とは別件。応答が JSON **配列** で返るのに
-      `_extract_json_object` が `{` を探している可能性。要調査）
+- [x] `forecast_verify` の `verify JSON 解析失敗` 警告（本件とは別件） → 2026-08-28 02:07セッションで調査・修正。詳細は本ファイル末尾「forecast_verify JSON配列抽出の括弧深さ追跡化」節参照
 
 ---
 
@@ -1488,3 +1487,18 @@ LLM insight と同じ「予算を使い切る」構造だった。
 - 適用条件（他プロジェクトでも再利用可能な教訓）: RDPホストを兼ねるGPU機（PC2）に大型モデルを投げる本番バッチは、
   ホストのVRAM上限を超えるモデルをPC3等の別ノードへ逃がす経路（環境変数での接続先切替）を用意しておくと、
   RDP破綻とモデルロード失敗ループを同時に回避できる。`ENVIRONMENT.md`のジョブ振り分け方針と対で運用する。
+
+---
+
+## forecast_verify JSON配列抽出の括弧深さ追跡化 — 2026-08-28 02:07（自律発案）
+
+- 発端: 候補プール・`research_backlog.md`とも無人着手可能な新規候補なし。日付が変わったため無条件でExploreエージェントに全14プロジェクト横断フルスキャンを委譲した結果、全プロジェクトgit statusクリーンの中で唯一、本ファイル1469-1470行目に約4日放置されていた未着手項目「`forecast_verify`の`verify JSON 解析失敗`警告（応答がJSON配列で返るのに`_extract_json_object`が`{`を探している可能性。要調査）」を発見した。GPU操作・ユーザー判断を要さない純粋なログ調査＋バグ修正で無人完結できると判断し着手した。既存プロジェクトを再利用するため新規Templateコピーは行っていない。
+- **旧仮説は誤りだった**: `forecast_verify.py`は`llm_insights_api._extract_json_object`を一切呼んでおらず、自前の`_try_parse_verdict_json`（`text.find("[")`/`text.rfind("]")`の素朴な実装）を使っていた。実際の原因は別にあった。
+- `logs\run_*.log`（08-24〜08-27、Shift-JIS）を実地調査し、`[WARN] verify JSON 解析失敗`が**2種類の異なる失敗パターン**で発生していることを確認した:
+  1. **括弧の誤検出**（今回修正対象）: 応答は`[{"title": ...`と正しくJSON配列で始まっているのに解析失敗。`rfind("]")`が配列の外側（末尾の雑談文中の`]`や文字列値内の`]`）を終端と誤認し、余計な文字列を含んだ壊れた候補文字列を`json.loads`に渡していたと推定される
+  2. **完全に無関係な内容が返る**（未解決・監視継続）: `run_20260827_150003.log`で、`forecast_verify`のはずのLLM応答が`{"perspective_digest": {"engineer": "..."}}`という**別のLLM呼び出し（`generate_perspective_digest.py`、直前に`run_daily.bat`内で実行される別スクリプト）向けのJSONオブジェクト**をそのまま返し、3回目の再試行では`{"error":"The requested output format does not match the specification provided earlier..."}`という、モデルが**前の会話の仕様を覚えている**かのような応答すら返していた。両スクリプトは`run_daily.bat`内で逐次実行（並列なし）だが、Ollama側の何らかのプロンプトキャッシュ/セッション再利用でコンテキストが混線している可能性がある。アプリ側コードに共有キャッシュ層は無いことは確認済み（`llm_insights_api.py`に`cache`関連の実装なし、`post_ollama`は毎回`payload`から独立した`body`を組み立てて送信）。この失敗モードは既存のフォールバック（解析失敗時は既存verdictを保持、パイプラインは継続）で実害は出ていないが、根本原因（Ollama側の挙動）はブラックボックスで、アプリ側だけでは断定できなかったため、無理に対処せず監視継続とする
+- **今回の修正（パターン1に対応）**: `forecast_verify.py`に`_extract_json_array(text)`を新設。`llm_insights_api._extract_json_object`（`{`/`}`版）と同じ、文字列・エスケープを考慮した括弧の深さ追跡アルゴリズムを`[`/`]`に適用したもの。深さが0に戻った時点の`]`を確定の終端として使うため、配列の後の雑談文や文字列値内の`]`に惑わされない。`_try_parse_verdict_json`はこの関数を使うよう書き換えた（`json.loads`を試みる制御フローは変更なし、None/例外時の扱いも既存と同一）
+- `tests/test_forecast_verify.py`に`TestExtractJsonArray`（7ケース）を新規追加: 通常の配列、配列後に`]`を含む雑談文が続くケース（旧実装なら誤検出する再現テスト）、文字列値内に`[`/`]`があるケース、コードフェンス除去、切り詰められた配列は従来通りNoneのまま、配列以外（`{...}`のみ）はNone、空文字列/Noneの安全な扱い
+- `python -m pytest tests/ -q`で**328件全pass**（既存321件+新規7件、回帰なし）
+- 本番反映: `run_daily.bat`（`C:\work\run_daily.bat`、git管理外）は本セッションでは変更していない。次回の定時実行（06/09/12/15/18/21時のいずれか）から新しい`forecast_verify.py`が使われる
+- 次回以降の運用: パターン2（無関係なJSONオブジェクトが返る/前回仕様を覚えているような応答）が再発した場合、既存の`raw先頭200字`のログだけでは診断材料が不足する可能性がある。再発時は該当ログの前後（直前に実行された`generate_perspective_digest`のログ含む）を突き合わせ、Ollama側のプロンプトキャッシュ設定（`num_ctx`/`keep_alive`等）や`OLLAMA_NUM_PARALLEL`の値を確認するとよい。頻発するようであればユーザー判断のもと`forecast_verify`呼び出し時に`"keep_alive": 0`を指定しモデルを都度リロードさせる対策も検討できる（今回はコード変更のリスクと発生頻度の低さを踏まえ見送った）
