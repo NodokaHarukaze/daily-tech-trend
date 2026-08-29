@@ -1,7 +1,327 @@
 {
-  "generated_at": "2026-08-29T06:14:33+00:00",
+  "generated_at": "2026-08-29T21:15:06+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 43145,
+      "title": "Amazonベーシックのニッケル水素充電池が安い！Amazonでタイムセール中【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 60,
+      "summary": "Amazonベーシックのニッケル水素充電池がタイムセールで安く販売されている。",
+      "updated_at": "2026-08-29T21:08:12.915220+00:00"
+    },
+    {
+      "id": 43175,
+      "title": "アプリウィンドウをはじめから最大化して開くアクセシビリティ設定がWindows 11に",
+      "category": "company",
+      "importance": 70,
+      "summary": "Windows 11 に、アプリウィンドウを起動時に最大化して開くアクセシビリティ設定が追加された。",
+      "updated_at": "2026-08-29T21:08:03.177608+00:00"
+    },
+    {
+      "id": 43176,
+      "title": "LLMのローカル実行ツール「Ollama」が「Claude Desktop」に対応 ～3カ月半ぶりの復活／現時点ではmacOSのみ、Windowsも間もなくサポート",
+      "category": "company",
+      "importance": 70,
+      "summary": "OllamaがClaude Desktopに対応し、macOSのみで利用可能、Windowsは近日サポート予定。",
+      "updated_at": "2026-08-29T21:07:50.653610+00:00"
+    },
+    {
+      "id": 43655,
+      "title": "「Google Workspace」の「Gemini」が操作可能なコンテンツを使った回答を生成可能に／チャット上から回転・ズーム可能なDNAの3D構造などのコンテンツを作成できる",
+      "category": "company",
+      "importance": 80,
+      "summary": "Google WorkspaceのGeminiが操作可能なコンテンツを使った回答を生成できるようになった。",
+      "updated_at": "2026-08-29T21:07:38.093100+00:00"
+    },
+    {
+      "id": 43435,
+      "title": "「Claude Cowork」に内蔵ブラウザー、「Claude in Chrome」も全プランで一般提供／エージェントのWeb操作に2つの選択肢",
+      "category": "company",
+      "importance": 70,
+      "summary": "Claude Coworkにブラウザーが内蔵され、Claude in Chromeが全プランで一般提供される。",
+      "updated_at": "2026-08-29T21:07:27.001544+00:00"
+    },
+    {
+      "id": 43366,
+      "title": "「楽天Koboデスクトップアプリ」のインストーラーに脆弱性、ファイル検索パスの制御不備／実行したユーザーの権限で任意のコードが実行される恐れ。CVSS 4.0の基本値は8.4",
+      "category": "company",
+      "importance": 80,
+      "summary": "楽天Koboデスクトップアプリのインストーラーにファイル検索パス制御不備があり、実行したユーザーの権限で任意のコードが実行される恐れがある。",
+      "updated_at": "2026-08-29T21:07:16.245105+00:00"
+    },
+    {
+      "id": 43367,
+      "title": "東京大学松尾・岩澤研究室、フィジカルAIの無料オンライン講座受講生を募集開始／「Physical AI 応用編1 2026 Summer」のID登録締め切りは9月1日",
+      "category": "company",
+      "importance": 70,
+      "summary": "東京大学松尾・岩澤研究室がフィジカルAIの無料オンライン講座「Physical AI 応用編1 2026 Summer」の受講生募集を開始し、ID登録締め切りは9月1日である。",
+      "updated_at": "2026-08-29T21:07:05.375296+00:00"
+    },
+    {
+      "id": 43235,
+      "title": "株価の一目均衡表に［日数］や［値幅］を書き込める「アナログチャート」v1.9.24　ほか【ダイジェストニュース】",
+      "category": "company",
+      "importance": 70,
+      "summary": "株価の一目均衡表に日数や値幅を書き込める「アナログチャート」v1.9.24がリリースされた。",
+      "updated_at": "2026-08-29T21:06:55.102727+00:00"
+    },
+    {
+      "id": 43236,
+      "title": "基本情報・応用情報技術者試験や高度試験・AWS認定などの資格の対策書が読み放題に！【読み放題！TechLib新着情報】",
+      "category": "company",
+      "importance": 70,
+      "summary": "TechLibで基本情報・応用情報技術者試験や高度試験・AWS認定などの資格対策書が読み放題になる。",
+      "updated_at": "2026-08-29T21:06:44.326634+00:00"
+    },
+    {
+      "id": 32990,
+      "title": "訃報",
+      "category": "policy",
+      "importance": 90,
+      "summary": "草間彌生様が令和8年8月14日に逝去されました。",
+      "updated_at": "2026-08-29T21:06:31.499118+00:00"
+    },
+    {
+      "id": 38215,
+      "title": "令和8年熊本地震への都の対応（熊本県への応援職員の派遣について）",
+      "category": "policy",
+      "importance": 70,
+      "summary": "東京都および特別区、市職員が令和8年8月28日から9月4日まで熊本県熊本市へ派遣され、住家被害認定調査と罹災証明書発行支援を行う。",
+      "updated_at": "2026-08-29T21:06:20.472021+00:00"
+    },
+    {
+      "id": 43587,
+      "title": "大島の岡田漁港において漁港施設等活用事業の実施計画を認定しました",
+      "category": "policy",
+      "importance": 70,
+      "summary": "東京都が管理する大島の岡田漁港で伊豆大島漁業協同組合が漁港施設等活用事業を実施し、2026年10月から2029年3月まで認定された。",
+      "updated_at": "2026-08-29T21:06:09.092927+00:00"
+    },
+    {
+      "id": 43588,
+      "title": "都内の保育サービスの状況について",
+      "category": "policy",
+      "importance": 70,
+      "summary": "令和8年4月1日時点で東京都の保育サービス利用児童数は325,918人で前年同日比2,498人増、保育所等利用待機児童数は1,113人で前年同日比774人増した。",
+      "updated_at": "2026-08-29T21:05:57.005278+00:00"
+    },
+    {
+      "id": 43589,
+      "title": "令和8年熊本地震への都の対応（第31報）（保健師等チームの派遣について）",
+      "category": "policy",
+      "importance": 50,
+      "summary": "東京都は令和8年熊本地震に伴い、熊本県氷川町へ保健師等チーム（第1～3班）を派遣する。",
+      "updated_at": "2026-08-29T21:05:45.619118+00:00"
+    },
+    {
+      "id": 43691,
+      "title": "How 'Book Queen' Dolly Parton inspired millions of children with gift of reading",
+      "category": "news",
+      "importance": 80,
+      "summary": "ドリー・パートンの父親は読み書きができず、彼女はそれをきっかけに子どもたちに無料の本を送るイマジネーション・ライブラリーを設立した。",
+      "updated_at": "2026-08-29T21:05:34.743876+00:00"
+    },
+    {
+      "id": 43716,
+      "title": "Ex-White House teleprompter operator ordered to pay $172,000 for Trump speech bets",
+      "category": "news",
+      "importance": 80,
+      "summary": "元ホワイトハウスのテレプロンプターオペレーターが、トランプ大統領のスピーチ内容を事前に知って賭けを行ったとして、17万2000ドルの支払い命令を受けた。",
+      "updated_at": "2026-08-29T21:05:22.123087+00:00"
+    },
+    {
+      "id": 43715,
+      "title": "Dutch health institute issues 'red alert' over Trump-shaped ecstasy pills",
+      "category": "news",
+      "importance": 80,
+      "summary": "オランダの保健機関が、トランプ大統領の形をしたエクスタシー錠に対して「レッドアラート」を発表し、遅延作用が過剰摂取のリスクを高めると警告した。",
+      "updated_at": "2026-08-29T21:05:11.186921+00:00"
+    },
+    {
+      "id": 43721,
+      "title": "土石流直撃、泥に埋まった町　「すべて消えた」住民憔悴―ネパール中部",
+      "category": "news",
+      "importance": 85,
+      "summary": "ネパール中部の町が土石流により泥に埋まり、住民は全て消えたと報告された。",
+      "updated_at": "2026-08-29T21:04:59.700008+00:00"
+    },
+    {
+      "id": 43722,
+      "title": "東京 中野 高級時計窃盗事件 わずか6秒間のうちに盗んだか",
+      "category": "news",
+      "importance": 70,
+      "summary": "チリ国籍の容疑者2人が東京中野区の時計店で海外製高級腕時計4本を約2億円相当で盗んだとして逮捕された。",
+      "updated_at": "2026-08-29T21:04:49.733112+00:00"
+    },
+    {
+      "id": 43713,
+      "title": "Deadly strike on Kyiv warehouse prompts evacuations",
+      "category": "news",
+      "importance": 80,
+      "summary": "ウクライナのキエフで倉庫への致命的な攻撃が行われ、30人以上が死亡した。",
+      "updated_at": "2026-08-29T21:04:37.730667+00:00"
+    },
+    {
+      "id": 43725,
+      "title": "レベル4氾濫危険警報 福井県 九頭竜川水系 竹田川",
+      "category": "news",
+      "importance": 80,
+      "summary": "気象庁と福井県が午前3時50分に九頭竜川水系竹田川でレベル4氾濫危険警報を発表した。",
+      "updated_at": "2026-08-29T21:04:28.358163+00:00"
+    },
+    {
+      "id": 43719,
+      "title": "Right-wing commentator Milo Yiannopoulos deported from US to UK",
+      "category": "news",
+      "importance": 60,
+      "summary": "右派論客ミロ・イアンノポウロスが米国から英国へ強制送還された。",
+      "updated_at": "2026-08-29T21:04:15.803168+00:00"
+    },
+    {
+      "id": 43727,
+      "title": "福井県大野市に緊急安全確保 命が助かる可能性の高い行動を",
+      "category": "news",
+      "importance": 80,
+      "summary": "福井県大野市は大雨の特別警報を受け、市内全域の1万1530世帯・2万8904人に対し「緊急安全確保」を発令した。",
+      "updated_at": "2026-08-29T21:04:05.077553+00:00"
+    },
+    {
+      "id": 43714,
+      "title": "Australia usually hosts the world's biggest cuttlefish mating event - not this year",
+      "category": "news",
+      "importance": 70,
+      "summary": "今年は1,811匹のタコが交配に参加し、昨年の97％減少した。",
+      "updated_at": "2026-08-29T21:03:54.445750+00:00"
+    },
+    {
+      "id": 43724,
+      "title": "福井県内の避難指示まとめ（午前5時現在）",
+      "category": "news",
+      "importance": 70,
+      "summary": "福井県内の福井市、坂井市、永平寺町、あわら市、勝山市、鯖江市の一部地域に避難指示が出されている。",
+      "updated_at": "2026-08-29T21:03:44.151702+00:00"
+    },
+    {
+      "id": 43718,
+      "title": "Norway's new king remembers 'my dear father' in first speech",
+      "category": "news",
+      "importance": 70,
+      "summary": "ノルウェーの新王ハカオン8世は、初の演説で父ハラルド5世に感情的な敬意を表し、今後の統治方針を述べた。",
+      "updated_at": "2026-08-29T21:03:34.881247+00:00"
+    },
+    {
+      "id": 43723,
+      "title": "【河川カメラの映像】福井県 各地の河川状況",
+      "category": "news",
+      "importance": 70,
+      "summary": "福井県では前線と湿った空気の影響で予想を上回る大雨が降っている。",
+      "updated_at": "2026-08-29T21:03:23.855060+00:00"
+    },
+    {
+      "id": 43717,
+      "title": "Former Ecuadorian president imprisoned for corruption",
+      "category": "news",
+      "importance": 60,
+      "summary": "レニン・モレノ氏は、中国企業からの賄賂を受けて水力発電所建設契約を確保したと主張するが、彼はそれを否認している。",
+      "updated_at": "2026-08-29T21:03:12.685441+00:00"
+    },
+    {
+      "id": 43726,
+      "title": "【ライブ配信中】福井県に大雨特別警報 気象庁と国交省が会見",
+      "category": "news",
+      "importance": 80,
+      "summary": "福井県にレベル5大雨特別警報が発表され、気象庁と国土交通省が30日午前5時半から合同で記者会見を開いた。",
+      "updated_at": "2026-08-29T21:02:59.511417+00:00"
+    },
+    {
+      "id": 43720,
+      "title": "At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot",
+      "category": "news",
+      "importance": 80,
+      "summary": "ウクライナ軍の武器保管場所が住宅街近くにあることについて調査が開始された。",
+      "updated_at": "2026-08-29T21:02:49.123837+00:00"
+    },
+    {
+      "id": 43728,
+      "title": "福井県に大雨特別警報 福井市 大野市 勝山市の3市が対象",
+      "category": "news",
+      "importance": 80,
+      "summary": "福井県では記録的な大雨により、福井市、大野市、勝山市にレベル5大雨特別警報が発表された。",
+      "updated_at": "2026-08-29T21:02:38.189138+00:00"
+    },
+    {
+      "id": 43729,
+      "title": "「トークン単価50％減でもAI請求額が跳ね上がる」なぜ？　Uberは4月で年間予算が枯渇",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T21:01:30.367353+00:00"
+    },
+    {
+      "id": 43730,
+      "title": "Ukraine: Russia Strikes Zaporizhstal Again with Ballistic Missiles",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T21:01:30.367353+00:00"
+    },
+    {
+      "id": 43731,
+      "title": "BMW-led Car2car Project Raises High-Quality Steel Recovery Rate to 81%",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T21:01:30.367353+00:00"
+    },
+    {
+      "id": 43732,
+      "title": "Tuflesa Awards SMS Group New ERW Pipe Line Modernization Contract",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T21:01:30.367353+00:00"
+    },
+    {
+      "id": 43733,
+      "title": "Oil-Rich Azerbaijan Bets Big on a Clean Energy Boom",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T21:01:30.367353+00:00"
+    },
+    {
+      "id": 43734,
+      "title": "U.S. Eyes 18th-Century Law to Seize and Sell Iranian Oil",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T21:01:30.367353+00:00"
+    },
+    {
+      "id": 43735,
+      "title": "America’s Electricity Boom Is Outrunning Its Power Grid",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T21:01:30.367353+00:00"
+    },
+    {
+      "id": 43736,
+      "title": "Mexico’s Green Energy Push Is Finally Gaining Momentum",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T21:01:30.367353+00:00"
+    },
+    {
+      "id": 43737,
+      "title": "Solar Has Crossed a Critical Economic Tipping Point",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T21:01:30.367353+00:00"
+    },
     {
       "id": 43590,
       "title": "若者向け動画「つらい気持ちをひとり抱えているあなたへ」及び特設ページを公開",
@@ -481,326 +801,6 @@
       "importance": 70,
       "summary": "厚生労働省は2026年9月1日から企業の残業を月45時間以内に抑える一律指導を取りやめる。",
       "updated_at": "2026-08-29T03:10:25.699574+00:00"
-    },
-    {
-      "id": 42211,
-      "title": "『ウィッカーマン』監督の息子たちが亡き父の映画三部作を完成させる",
-      "category": "news",
-      "importance": 70,
-      "summary": "『ウィッカーマン』監督の息子たちが、50年以上ぶりに父のファンホラー三部作の最終作を完成させ、物語と家族に閉幕をもたらした。",
-      "updated_at": "2026-08-29T03:10:10.647302+00:00"
-    },
-    {
-      "id": 43492,
-      "title": "アンテナ設置が困難な清水寺、ソフトバンクが挑んだ通信品質対策",
-      "category": "industry",
-      "importance": 70,
-      "summary": "ソフトバンクはアンテナ設置が困難な清水寺で通信品質対策を実施した。",
-      "updated_at": "2026-08-29T03:09:59.386924+00:00"
-    },
-    {
-      "id": 42158,
-      "title": "コンゴ民主共和国とM23反政府勢力、和平交渉のロードマップに合意",
-      "category": "news",
-      "importance": 70,
-      "summary": "コンゴ民主共和国とM23反政府勢力の代表がスイスで和平交渉のロードマップに合意した。",
-      "updated_at": "2026-08-29T03:09:44.880427+00:00"
-    },
-    {
-      "id": 43493,
-      "title": "ネパール・チベット洪水、死者165人 1000人以上不明 氷河崩落が原因か",
-      "category": "industry",
-      "importance": 80,
-      "summary": "ネパールと中国・チベット自治区の国境付近で26日に鉄砲水と土砂災害が発生し、165人が死亡し、1000人以上が行方不明となっている。",
-      "updated_at": "2026-08-29T03:09:34.224169+00:00"
-    },
-    {
-      "id": 42160,
-      "title": "ゼレンスキー氏は政府の汚職について何を知っていたのか尋ねられるべき、解任された大臣がBBCに語る",
-      "category": "news",
-      "importance": 50,
-      "summary": "解任された大臣がBBCに対し、ゼレンスキー氏に政府の汚職について何を知っていたのか尋ねられるべきだと語った。",
-      "updated_at": "2026-08-29T03:09:23.111299+00:00"
-    },
-    {
-      "id": 43506,
-      "title": "情報通信審議会　情報通信技術分科会　ITU部会 衛星・科学業務委員会（第49回）配布資料",
-      "category": "policy",
-      "importance": 50,
-      "summary": "情報通信審議会の情報通信技術分科会 ITU部会衛星・科学業務委員会第49回が開催され、配布資料が提供された。",
-      "updated_at": "2026-08-29T03:09:10.039163+00:00"
-    },
-    {
-      "id": 42153,
-      "title": "ケジェルチャ、男子ハーフマラソンの世界記録を29秒更新",
-      "category": "news",
-      "importance": 80,
-      "summary": "イエティオピアのヨミフ・ケジェルチャがブエノスアイレスで56分51秒で男子ハーフマラソン世界記録を更新した。",
-      "updated_at": "2026-08-29T03:09:00.271392+00:00"
-    },
-    {
-      "id": 43507,
-      "title": "第23回職業分類改定研究会",
-      "category": "policy",
-      "importance": 50,
-      "summary": "第23回職業分類改定研究会が開催された。",
-      "updated_at": "2026-08-29T03:08:49.320000+00:00"
-    },
-    {
-      "id": 42154,
-      "title": "12日間停電で苦しむインディアナ州の町で不満が高まる",
-      "category": "news",
-      "importance": 70,
-      "summary": "インディアナ州ガリ市では12日間にわたる停電が続き、住民の約3分の1が貧困状態にあり、生活は生存モードに追い込まれている。",
-      "updated_at": "2026-08-29T03:08:38.586198+00:00"
-    },
-    {
-      "id": 43508,
-      "title": "第24回職業分類改定研究会",
-      "category": "policy",
-      "importance": 50,
-      "summary": "第24回職業分類改定研究会が開催された。",
-      "updated_at": "2026-08-29T03:08:27.485441+00:00"
-    },
-    {
-      "id": 42157,
-      "title": "フランス、溺死急増と熱波の関係",
-      "category": "news",
-      "importance": 80,
-      "summary": "フランス政府の閣僚は、19 月日以降に水に入ることでリスクを取っていると述べ、301人が死亡したと報告した。",
-      "updated_at": "2026-08-29T03:08:16.442785+00:00"
-    },
-    {
-      "id": 43510,
-      "title": "令和6年全国家計構造調査　所得に関する結果、家計資産・負債に関する結果及び年間収入・資産分布等に関する結果",
-      "category": "policy",
-      "importance": 50,
-      "summary": "令和6年全国家計構造調査の所得・家計資産・負債・年間収入・資産分布等の結果が報告された。",
-      "updated_at": "2026-08-29T03:08:06.919248+00:00"
-    },
-    {
-      "id": 42107,
-      "title": "カーニー氏、通商協議決裂後、トランプ大統領の新たな関税は「誤算」と発言",
-      "category": "news",
-      "importance": 60,
-      "summary": "カナダ首相は、米国が通商戦争を開始したと非難し、報復関税を「不本意ながら」発表した。",
-      "updated_at": "2026-08-29T03:07:54.760446+00:00"
-    },
-    {
-      "id": 43511,
-      "title": "「令和6年度末ブロードバンド基盤整備率調査」の調査結果",
-      "category": "policy",
-      "importance": 70,
-      "summary": "令和6年度末におけるブロードバンド基盤整備率は全国で70.3％に達した。",
-      "updated_at": "2026-08-29T03:07:44.731534+00:00"
-    },
-    {
-      "id": 42155,
-      "title": "トランプ大統領が緑の旗を振ってワシントンの街中でインディカーレースを開始",
-      "category": "news",
-      "importance": 60,
-      "summary": "トランプ大統領がワシントンの街中でインディカーレースの前に儀式的な一周を行い、これは国の250周年を記念する夏のイベントの集大成である。",
-      "updated_at": "2026-08-29T03:07:33.786962+00:00"
-    },
-    {
-      "id": 43512,
-      "title": "令和7年度末における固定端末系伝送路設備の設置状況",
-      "category": "policy",
-      "importance": 50,
-      "summary": "令和7年度末における固定端末系伝送路設備の設置状況について報告されている。",
-      "updated_at": "2026-08-29T03:07:23.329072+00:00"
-    },
-    {
-      "id": 42359,
-      "title": "タタの新社長が直面する手ごわい課題",
-      "category": "news",
-      "importance": 70,
-      "summary": "タタ・ソンズの新社長を決定するための採用プロセスが進行中である。",
-      "updated_at": "2026-08-29T03:07:12.333566+00:00"
-    },
-    {
-      "id": 43513,
-      "title": "電気通信事業法施行規則等の一部を改正する省令案等（新たなユニバーサルサービス制度に係る規定の整備）に対する 意見募集",
-      "category": "policy",
-      "importance": 50,
-      "summary": "電気通信事業法施行規則等の一部を改正する省令案等（新たなユニバーサルサービス制度に係る規定の整備）に対する意見募集が行われている。",
-      "updated_at": "2026-08-29T03:07:02.491140+00:00"
-    },
-    {
-      "id": 42306,
-      "title": "元クリケットキャプテンらがイムラン・カーンに「適切な医療」を要請",
-      "category": "news",
-      "importance": 70,
-      "summary": "元クリケットキャプテンらがパキスタンに対し、裁判所命令の医療評価に従うことを「基本的な礼儀」と訴えている。",
-      "updated_at": "2026-08-29T03:06:49.702918+00:00"
-    },
-    {
-      "id": 43514,
-      "title": "宿泊税の新設",
-      "category": "policy",
-      "importance": 50,
-      "summary": "宿泊税が新設された。",
-      "updated_at": "2026-08-29T03:06:37.713532+00:00"
-    },
-    {
-      "id": 42480,
-      "title": "地元の人はワシントン DC のインディカーについてどう思いますか?",
-      "category": "news",
-      "importance": 50,
-      "summary": "US President Donald Trump was among hundreds of people who gathered to see the race through Washington DC streets on Sunday.",
-      "updated_at": "2026-08-29T03:06:26.815752+00:00"
-    },
-    {
-      "id": 43515,
-      "title": "電気通信事業法施行規則等の一部を改正する省令案等（モバイル網固定電話のユニバーサルサービス化に関する規定の整備）に対する情報通信行政・郵政行政審議会からの答申",
-      "category": "policy",
-      "importance": 50,
-      "summary": "情報通信行政・郵政行政審議会は、モバイル網固定電話のユニバーサルサービス化に関する規定の整備を目的とした電気通信事業法施行規則等の一部改正省令案に対して答申を行った。",
-      "updated_at": "2026-08-29T03:06:17.059963+00:00"
-    },
-    {
-      "id": 42308,
-      "title": "離婚、スマートフォン、支配 - タリバンがアフガニスタンをどのように運営しているかをBBCが見る",
-      "category": "news",
-      "importance": 70,
-      "summary": "BBCはタリバンが復帰してから5年後に、同組織が国を再編成している様子を高官を追跡して報じている。",
-      "updated_at": "2026-08-29T03:06:03.883230+00:00"
-    },
-    {
-      "id": 43516,
-      "title": "地方自治法施行令の一部を改正する政令（案）に対する意見募集の結果",
-      "category": "policy",
-      "importance": 50,
-      "summary": "地方自治法施行令の一部を改正する政令（案）に対する意見募集の結果が公表された。",
-      "updated_at": "2026-08-29T03:05:51.718006+00:00"
-    },
-    {
-      "id": 42307,
-      "title": "シェインは株式市場デビューで約270億ドルの評価額を目指す",
-      "category": "news",
-      "importance": 70,
-      "summary": "シェインの株式は9月1日に香港で取引を開始する。",
-      "updated_at": "2026-08-29T03:05:39.585129+00:00"
-    },
-    {
-      "id": 43599,
-      "title": "令和8年度一般会計予備費の使用に伴う地方負担への対応等",
-      "category": "policy",
-      "importance": 60,
-      "summary": "令和8年度一般会計予備費の使用に伴い、地方自治体への負担調整策が検討されている。",
-      "updated_at": "2026-08-29T03:05:30.352979+00:00"
-    },
-    {
-      "id": 42265,
-      "title": "オーストラリアのサメ襲撃被害者、「人生二度目のチャンス」に感謝",
-      "category": "news",
-      "importance": 60,
-      "summary": "Leah Stewart は 6 月にサメに襲われ、腕と脚に複数の噛み傷を負った。",
-      "updated_at": "2026-08-29T03:05:20.945828+00:00"
-    },
-    {
-      "id": 42363,
-      "title": "中国、キャベツの鮮度を保つためのホルムアルデヒド使用を調査",
-      "category": "news",
-      "importance": 70,
-      "summary": "中国では、がん性物質を食品保存に使用することが禁止されている。",
-      "updated_at": "2026-08-29T03:05:09.635034+00:00"
-    },
-    {
-      "id": 42360,
-      "title": "マラドーナの「神の手」ボールが250万ポンドで落札",
-      "category": "news",
-      "importance": 70,
-      "summary": "マラドーナが1986年ワールドカップでイングランドに対して得点した「神の手」のボールが落札された。",
-      "updated_at": "2026-08-29T03:04:59.734154+00:00"
-    },
-    {
-      "id": 43237,
-      "title": "次期大型更新「Windows 11 バージョン 26H2」がRelease Previewチャネルに／24H2/25H2からは「eKB」で移行できる仕組み。ISOイメージの提供も間もなく開始",
-      "category": "company",
-      "importance": 75,
-      "summary": "Windows 11 バージョン 26H2 が Release Preview チャネルに追加され、24H2/25H2 のユーザーは eKB を使って移行でき、ISO イメージの提供も間もなく開始される。",
-      "updated_at": "2026-08-29T03:04:49.437064+00:00"
-    },
-    {
-      "id": 42368,
-      "title": "ノルウェー国王の健康状態が悪化し宮殿が発表",
-      "category": "news",
-      "importance": 70,
-      "summary": "ノルウェー国王ハラルドは血流感染症の治療のため抗生物質を投与されて病院に入院している。",
-      "updated_at": "2026-08-29T03:04:38.930611+00:00"
-    },
-    {
-      "id": 43371,
-      "title": "ニフティが「@nifty WiMAX +5G」10月下旬に提供開始。8月26日より先行申込を受付　端末代金が実質0円になる「スタートキャンペーン」も実施",
-      "category": "industry",
-      "importance": 60,
-      "summary": "ニフティが10月下旬に提供開始予定の@nifty WiMAX +5Gサービスの先行申込を8月26日から受付開始し、同日からスタートキャンペーンも実施する。",
-      "updated_at": "2026-08-29T03:04:29.281406+00:00"
-    },
-    {
-      "id": 43701,
-      "title": "消せるボールペン 特許侵害で韓国メーカーの販売差し止め",
-      "category": "news",
-      "importance": 70,
-      "summary": "東京地方裁判所はパイロットコーポレーションの訴えを認め、韓国メーカーの消せるボールペンの輸入・販売を差し止める判決を下した。",
-      "updated_at": "2026-08-29T03:04:17.016796+00:00"
-    },
-    {
-      "id": 43697,
-      "title": "米、エジプト大手銀対象に　対イラン制裁強化の一環",
-      "category": "news",
-      "importance": 70,
-      "summary": "米国がエジプトの大手銀行を対イラン制裁強化の一環として制裁対象にした。",
-      "updated_at": "2026-08-29T03:04:06.294527+00:00"
-    },
-    {
-      "id": 43693,
-      "title": "Canada poaches dozens of top US researchers for its universities",
-      "category": "news",
-      "importance": 80,
-      "summary": "カナダの大学が新しい研究資金を提供し、気候や医学などの分野で米国のトップ研究者数十名を誘致している。",
-      "updated_at": "2026-08-29T03:03:53.465252+00:00"
-    },
-    {
-      "id": 43690,
-      "title": "What tariffs will really cost Canadians and Americans",
-      "category": "news",
-      "importance": 60,
-      "summary": "カナダとアメリカの家庭や企業は、1年以上にわたり関税が生活費に影響していることに慣れている。",
-      "updated_at": "2026-08-29T03:03:41.397249+00:00"
-    },
-    {
-      "id": 43702,
-      "title": "大人向け「スーパーカー自転車」は和テイストだった　リトラクタブルライトにRFID認証など装備満載",
-      "category": "news",
-      "importance": 70,
-      "summary": "昭和のスーパーカー自転車を再現した大人向けモデルが、和テイストでリトラクタブルライトとRFID認証を装備して発売された。",
-      "updated_at": "2026-08-29T03:03:30.587446+00:00"
-    },
-    {
-      "id": 43695,
-      "title": "Landlady to 9/11 hijackers reveals their links to alleged Saudi spy",
-      "category": "news",
-      "importance": 60,
-      "summary": "女性が二人のアルカイダメンバーに住宅を貸し出し、BBCに対して初めて公に語った。",
-      "updated_at": "2026-08-29T03:03:19.445353+00:00"
-    },
-    {
-      "id": 43703,
-      "title": "動画カメラは混沌の時代へ？　ミラーレス一眼へ乗り出すアクションカムメーカーも現れた2026年前半の業界動向",
-      "category": "news",
-      "importance": 60,
-      "summary": "カメラ各社が本格的な動画カメラへの注力を進め、アクション／ウェアラブルカメラメーカーも動きを見せている。",
-      "updated_at": "2026-08-29T03:03:09.868712+00:00"
-    },
-    {
-      "id": 43691,
-      "title": "How 'Book Queen' Dolly Parton inspired millions of children with gift of reading",
-      "category": "news",
-      "importance": 70,
-      "summary": "ドリー・パートンのイマジネーション・ライブラリーは、世界中の子どもたちに無料の本を配布しています。",
-      "updated_at": "2026-08-29T03:02:58.586205+00:00"
     }
   ]
 }
