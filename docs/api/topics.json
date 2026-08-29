@@ -1,7 +1,671 @@
 {
-  "generated_at": "2026-08-28T21:20:45+00:00",
+  "generated_at": "2026-08-29T00:14:59+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 42361,
+      "title": "南アフリカ、ボクシングチャンピオン殺害で4人逮捕",
+      "category": "news",
+      "importance": 70,
+      "summary": "南アフリカでボクシングチャンピオンの殺害事件に関し、4人が逮捕され、1人の容疑者が月曜日に裁判に出廷予定で殺人及び殺人未遂の容疑で起訴される予定である。",
+      "updated_at": "2026-08-29T00:11:50.569121+00:00"
+    },
+    {
+      "id": 43372,
+      "title": "スペースを広く使える。机にクランプで固定するモニター台、サンワサプライが発売",
+      "category": "industry",
+      "importance": 60,
+      "summary": "サンワサプライ株式会社は8月26日に机にクランプで固定するモニター台を発売し、幅600mmのMR-LC310BK（標準価格9900円）と幅1000mmのMR-LC311BK（同1万2100円）の2種類をラインアップに含めた。",
+      "updated_at": "2026-08-29T00:11:36.765478+00:00"
+    },
+    {
+      "id": 42483,
+      "title": "「ビジネスの半分がなくなる」－カナダと米国の企業が貿易戦争を懸念",
+      "category": "news",
+      "importance": 70,
+      "summary": "カナダと米国の企業が、相互に課される輸入税の上昇により不確実性と懸念を抱えている。",
+      "updated_at": "2026-08-29T00:11:24.547457+00:00"
+    },
+    {
+      "id": 43390,
+      "title": "東京 中野 高級時計窃盗事件 容疑者“お金にして母国に”供述",
+      "category": "news",
+      "importance": 80,
+      "summary": "東京中野区の時計店で海外製高級腕時計4本、約2億円相当が盗まれ、警視庁はチリ国籍の20代と30代の男性2名を窃盗容疑で逮捕した。",
+      "updated_at": "2026-08-29T00:11:12.841039+00:00"
+    },
+    {
+      "id": 42482,
+      "title": "「死ぬほど怖い」：山火事拡大でネバダ州で数千人が避難",
+      "category": "news",
+      "importance": 80,
+      "summary": "ネバダ州レノ郊外で山火事が拡大し、数万人に避難を警告した。",
+      "updated_at": "2026-08-29T00:11:02.412208+00:00"
+    },
+    {
+      "id": 43368,
+      "title": "11型で実売およそ4万円でもまったく違う！ Amazon「Fire Max 11」対Blackview「Link 5」【山口真弘のおすすめ読書タブレット比較】",
+      "category": "company",
+      "importance": 75,
+      "summary": "AmazonのFire Max 11とBlackviewのLink 5は、同じ11型で実売価格が約4万円であるが、仕様や機能に大きな違いがある。",
+      "updated_at": "2026-08-29T00:10:53.134111+00:00"
+    },
+    {
+      "id": 42370,
+      "title": "ロシア第2位のオンライン小売業者がウクライナ攻撃の標的に",
+      "category": "news",
+      "importance": 80,
+      "summary": "Ozonの南部ロシアにある倉庫（ダゲスタンとクラスノダールを含む）が夜間の攻撃で被害を受けた。",
+      "updated_at": "2026-08-29T00:10:39.213813+00:00"
+    },
+    {
+      "id": 42364,
+      "title": "ケニアでゾウ毒殺容疑で4人逮捕",
+      "category": "news",
+      "importance": 70,
+      "summary": "ケニアでゾウ毒殺容疑で4人が逮捕された。",
+      "updated_at": "2026-08-29T00:10:29.496497+00:00"
+    },
+    {
+      "id": 42159,
+      "title": "ギニアのゴミ埋め立て地崩壊で30人死亡",
+      "category": "news",
+      "importance": 80,
+      "summary": "ギニアの首都にある主要なゴミ埋め立て地で、ゴミの山が崩壊し、数軒の住宅を埋没させ、31人が死亡した。",
+      "updated_at": "2026-08-29T00:10:14.929052+00:00"
+    },
+    {
+      "id": 42362,
+      "title": "ニュージーランド、16歳未満のソーシャルメディア禁止法案を提出へ",
+      "category": "news",
+      "importance": 70,
+      "summary": "ニュージーランド政府は16歳未満のソーシャルメディア使用を禁止する法案を提出したが、議員から反対意見が出ている。",
+      "updated_at": "2026-08-29T00:10:05.571283+00:00"
+    },
+    {
+      "id": 42369,
+      "title": "イスラエル、ガザから揚げられた凧への「強硬な」対応を警告",
+      "category": "news",
+      "importance": 60,
+      "summary": "ハマスは最近イスラエル国境のコミュニティで発見された凧をガザの子どもたちが発射したと主張した。",
+      "updated_at": "2026-08-29T00:09:55.300214+00:00"
+    },
+    {
+      "id": 42365,
+      "title": "選挙請願期限が迫る中、ザンビア裁判所への立ち入りが禁止",
+      "category": "news",
+      "importance": 70,
+      "summary": "ザンビアの裁判所は選挙請願期限が迫る中、立ち入りを禁止した。",
+      "updated_at": "2026-08-29T00:09:43.972728+00:00"
+    },
+    {
+      "id": 42481,
+      "title": "英国のストームシャドウ・ミサイルはウクライナにとってゲームチェンジャーとなるのか?",
+      "category": "news",
+      "importance": 70,
+      "summary": "英国のストームシャドウ・ミサイルは、ロシア・ウクライナ戦争においてゲームチェンジャーとなり得ると報じられた。",
+      "updated_at": "2026-08-29T00:09:33.938693+00:00"
+    },
+    {
+      "id": 42367,
+      "title": "ネパールで3歳女児強姦殺人事件に大怒り",
+      "category": "news",
+      "importance": 80,
+      "summary": "ネパールで3歳女児が死亡し、死亡後3日で行方不明だったことに対し、抗議活動が始まった。",
+      "updated_at": "2026-08-29T00:09:22.629516+00:00"
+    },
+    {
+      "id": 42535,
+      "title": "中国の人型ロボットを超えて、より静かな機械革命が展開中",
+      "category": "news",
+      "importance": 70,
+      "summary": "中国の工場で200万台以上のロボットが稼働しており、急速に増加している。",
+      "updated_at": "2026-08-29T00:09:12.492849+00:00"
+    },
+    {
+      "id": 43369,
+      "title": "【アップデート情報】窓の杜収録ソフト　8月28日　～「FastCopy」「GeekUninstaller」「Brynhildr 3」など",
+      "category": "company",
+      "importance": 50,
+      "summary": "窓の杜が8月28日にFastCopy、GeekUninstaller、Brynhildr 3などのソフトを収録した更新情報を公開した。",
+      "updated_at": "2026-08-29T00:09:00.650715+00:00"
+    },
+    {
+      "id": 42536,
+      "title": "インドの乾燥した片隅でカースト格差が灼熱の夏を困難に",
+      "category": "news",
+      "importance": 70,
+      "summary": "インド・ブンデルカンド地域で、熱波と水不足がカースト間の格差を深めている。",
+      "updated_at": "2026-08-29T00:08:50.575989+00:00"
+    },
+    {
+      "id": 42305,
+      "title": "隠しドアハンドル問題で中国で300万台近くのテスラがリコール",
+      "category": "news",
+      "importance": 80,
+      "summary": "テスラは中国で約300万台の車両を、隠しドアハンドルの欠陥によりリコールした。",
+      "updated_at": "2026-08-29T00:08:39.240767+00:00"
+    },
+    {
+      "id": 42537,
+      "title": "竜巻が南フランスを引き裂く瞬間",
+      "category": "news",
+      "importance": 70,
+      "summary": "南フランスの村で竜巻が発生し、40人以上が負傷し、住宅が破壊された。",
+      "updated_at": "2026-08-29T00:08:28.785425+00:00"
+    },
+    {
+      "id": 43370,
+      "title": "Google、動画生成・編集AI「Gemini Omni 1.1 Flash」を発表 ～動画制作ツール「Flow」でも提供／既存動画の続きを生成する「シーンの延長」、360pのドラフト生成でコストは1/3に",
+      "category": "company",
+      "importance": 80,
+      "summary": "Googleが動画生成・編集AI「Gemini Omni 1.1 Flash」を発表し、動画制作ツール「Flow」でも提供することを明言した。",
+      "updated_at": "2026-08-29T00:08:19.447648+00:00"
+    },
+    {
+      "id": 42539,
+      "title": "米国、シリアをテロ支援国家リストから除外",
+      "category": "news",
+      "importance": 70,
+      "summary": "米国トランプ政権は、アルカイダ関連の過激派であったアフメド・アル・シャラを新シリア大統領として受け入れた。",
+      "updated_at": "2026-08-29T00:08:10.064501+00:00"
+    },
+    {
+      "id": 42309,
+      "title": "バーナム氏、キエフ訪問中のゼレンスキー氏に長距離ミサイルの設計図を手渡す",
+      "category": "news",
+      "importance": 70,
+      "summary": "ロシアはウクライナが英国製ドローンを使用したと報じられたことに対し、結果を警告した。",
+      "updated_at": "2026-08-29T00:07:59.070151+00:00"
+    },
+    {
+      "id": 42538,
+      "title": "デスバレーで車が泥にはまりフランス人観光客死亡",
+      "category": "news",
+      "importance": 70,
+      "summary": "68歳のフランス人観光客がカリフォルニア州のデスバレーの塩平原で死亡しました。",
+      "updated_at": "2026-08-29T00:07:47.640811+00:00"
+    },
+    {
+      "id": 42534,
+      "title": "カナダは米国経済に打撃を与えるためにどのように反撃できるのか - そしてトランプ",
+      "category": "news",
+      "importance": 50,
+      "summary": "カナダは輸出の約70％を米国に売っている。",
+      "updated_at": "2026-08-29T00:07:36.592438+00:00"
+    },
+    {
+      "id": 42573,
+      "title": "トランプ大統領が自動車関税引き上げを脅し、米国とカナダの貿易戦争が激化",
+      "category": "news",
+      "importance": 70,
+      "summary": "マーク・カーニー氏は、トランプ大統領がカナダの自動車産業を「破壊」したいと主張し、米国が「正しい姿勢」で来る場合にのみ貿易交渉を再開すると述べた。",
+      "updated_at": "2026-08-29T00:07:24.875255+00:00"
+    },
+    {
+      "id": 42572,
+      "title": "ニュージーランドの宗教教団指導者、中国人信者死亡で投獄",
+      "category": "news",
+      "importance": 50,
+      "summary": "70歳の王秀来氏の遺体がオークランドのマリーナ付近で発見された。",
+      "updated_at": "2026-08-29T00:07:12.191685+00:00"
+    },
+    {
+      "id": 42371,
+      "title": "イランは「史上最大の金融攻勢」に直面していると米財務長官が発言",
+      "category": "news",
+      "importance": 70,
+      "summary": "イランは米国の史上最大の金融攻撃に対抗する準備ができていると表明した。",
+      "updated_at": "2026-08-29T00:07:01.437239+00:00"
+    },
+    {
+      "id": 43436,
+      "title": "ASUS、LenovoのChromebookが最安39,980円！【AmazonスマイルSale】【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 60,
+      "summary": "ASUSとLenovoのChromebookがAmazonスマイルセールで最安39,980円で販売されている。",
+      "updated_at": "2026-08-29T00:06:50.342984+00:00"
+    },
+    {
+      "id": 42575,
+      "title": "英国のドローン工場が「未知の発信源」からの攻撃に直面する可能性があるとクレムリン顧問が語る",
+      "category": "news",
+      "importance": 60,
+      "summary": "英国は英国製ミサイル部品の設計図をウクライナに渡すことに合意した。",
+      "updated_at": "2026-08-29T00:06:39.108306+00:00"
+    },
+    {
+      "id": 43437,
+      "title": "『「ガンダム」を創った男たち。』『バクマン。』など50％還元！Amazonマンガ週末セール／『彼方のアストラ』『超巡！超条先輩』『ファイアパンチ』など、今週は「イチオシ少年マンガ」！【Book Watch/セール情報】",
+      "category": "company",
+      "importance": 70,
+      "summary": "Amazonが週末マンガセールを実施し、タイトル『ガンダムを創った男たち。』『バクマン。』などを50％還元で販売しています。",
+      "updated_at": "2026-08-29T00:06:26.460874+00:00"
+    },
+    {
+      "id": 43439,
+      "title": "Windows 11の2026年8月プレビューパッチが公開 ～タスクバー、［スタート］画面、「Windows Search」が刷新／日本語環境向けの改善も多数、「Microsoft IME」入力時のハングアップ軽減など",
+      "category": "company",
+      "importance": 70,
+      "summary": "Windows 11 2026年8月プレビューパッチが公開され、タスクバー・スタート画面・Windows Searchが刷新され、日本語環境向けの改善が多数追加され、Microsoft IME入力時のハングアップが軽減された。",
+      "updated_at": "2026-08-29T00:06:16.980270+00:00"
+    },
+    {
+      "id": 43656,
+      "title": "【30周年特別企画】窓の杜、30周年記念にステッカーを作ったのでリアルイベントで配布します！",
+      "category": "company",
+      "importance": 80,
+      "summary": "窓の杜は30周年記念としてステッカーを制作し、リアルイベントで配布する予定です。",
+      "updated_at": "2026-08-29T00:06:06.110998+00:00"
+    },
+    {
+      "id": 43657,
+      "title": "Ryzen 5 5500GT、メモリ16GB搭載ミニタワーが首位に ～3位には10万円切りの2in1 PCも【マウスコンピューター売れ筋PCランキング［デスクトップ/ノート総合編 2026/8/28版］】",
+      "category": "company",
+      "importance": 70,
+      "summary": "Ryzen 5 5500GT搭載16GBメモリのミニタワーが売れ筋PCランキングで1位に、3位は10万円未満の2in1 PCである。",
+      "updated_at": "2026-08-29T00:05:56.832035+00:00"
+    },
+    {
+      "id": 43475,
+      "title": "世界中のライブカメラを覗けるサービス「とまり木」が話題、1,200カ所以上が配信中／カテゴリで絞ったり、人気のカメラを覗いたり……ザッピングっぽいことも【やじうまの杜】",
+      "category": "company",
+      "importance": 70,
+      "summary": "サービス「とまり木」は世界中の4,600カ所以上のライブカメラを閲覧できる。",
+      "updated_at": "2026-08-29T00:05:45.598518+00:00"
+    },
+    {
+      "id": 43550,
+      "title": "「秀丸」の使い方をAIチャットで解決 ～「Gemini Notebook」ベースのヘルプサイトが公開／「エディタ」「メール」「ファイラーClassic」のほか、関連ツールやマクロにも対応",
+      "category": "company",
+      "importance": 70,
+      "summary": "「秀丸」の使い方をAIチャットで解決するヘルプサイトが「Gemini Notebook」ベースで公開された。",
+      "updated_at": "2026-08-29T00:05:34.886973+00:00"
+    },
+    {
+      "id": 43551,
+      "title": "マイクロソフトのOfficeソフト「Microsoft 365」が安い【AmazonスマイルSale】【本日みつけたお買い得情報】",
+      "category": "company",
+      "importance": 70,
+      "summary": "マイクロソフトのOfficeソフト「Microsoft 365 Personal」自動更新1年版が21％OFFの17,400円/年で販売されている。",
+      "updated_at": "2026-08-29T00:05:24.487967+00:00"
+    },
+    {
+      "id": 43552,
+      "title": "「Microsoft Edge 152」が公開 ～更新頻度は2倍に、詐欺サイトへ誘導する通知を自動停止／Apple アカウントでのサインインにも対応。脆弱性も大量に修正",
+      "category": "company",
+      "importance": 80,
+      "summary": "Microsoft Edge 152 が公開され、更新頻度が2倍に増加し、詐欺サイトへの誘導通知が自動停止され、Apple アカウントでのサインインが可能になり、多数の脆弱性が修正された。",
+      "updated_at": "2026-08-29T00:05:14.540481+00:00"
+    },
+    {
+      "id": 43649,
+      "title": "Norway's King Harald dies aged 89: A beloved monarch buffeted by family crises",
+      "category": "news",
+      "importance": 80,
+      "summary": "ノルウェーのハラルド国王が89歳で死亡し、35年間在位した。",
+      "updated_at": "2026-08-29T00:05:03.051568+00:00"
+    },
+    {
+      "id": 43553,
+      "title": "GeForce RTX 5060搭載マシンと周辺機器のセット「スターター5点セット」が1位をキープ【マウスコンピューター売れ筋PCランキング［独立型GPU搭載モデル編 2026/8/28版］】",
+      "category": "company",
+      "importance": 80,
+      "summary": "GeForce RTX 5060搭載マシンと周辺機器のセット「スターター5点セット」が売れ筋PCランキングで1位をキープした。",
+      "updated_at": "2026-08-29T00:04:52.597900+00:00"
+    },
+    {
+      "id": 43646,
+      "title": "This Indian pilgrim was about to enter Tibet for her dream tour - then her WhatsApp messages stopped",
+      "category": "news",
+      "importance": 70,
+      "summary": "インドの巡礼者がチベット入国を控えていたが、WhatsAppのメッセージが停止し、家族は大規模な洪水後にニュースを待っている。",
+      "updated_at": "2026-08-29T00:04:41.614522+00:00"
+    },
+    {
+      "id": 43647,
+      "title": "'Not far enough' - US parents and teens on Meta's new limits for young users",
+      "category": "news",
+      "importance": 70,
+      "summary": "Metaは子ども安全訴訟で180億ドルの和解に伴い、アプリに新たな制限を導入した。",
+      "updated_at": "2026-08-29T00:04:32.168078+00:00"
+    },
+    {
+      "id": 43643,
+      "title": "Watch: Why rescuers fear new barrier lake could cause another Nepal-Tibet flood",
+      "category": "news",
+      "importance": 70,
+      "summary": "近年のネパール・チベット国境付近の土砂崩れで形成された湖が、第二次洪水の恐れを高めている。",
+      "updated_at": "2026-08-29T00:04:20.928521+00:00"
+    },
+    {
+      "id": 43648,
+      "title": "King Haakon begins reign after turbulent year for Norwegian monarchy",
+      "category": "news",
+      "importance": 70,
+      "summary": "ハカオンがノルウェー王位に就き、王室は混乱した年を迎えている。",
+      "updated_at": "2026-08-29T00:04:11.667884+00:00"
+    },
+    {
+      "id": 43554,
+      "title": "「Stable Diffusion XL」がCopilot+ PCのNPUを使って約1秒で画像を生成",
+      "category": "company",
+      "importance": 80,
+      "summary": "Copilot+ PCのNPUを利用してStable Diffusion XLで約1秒で画像が生成された。",
+      "updated_at": "2026-08-29T00:04:02.608305+00:00"
+    },
+    {
+      "id": 43642,
+      "title": "Watch: Stargazers around the world glimpse 'Blood Moon' lunar eclipse",
+      "category": "news",
+      "importance": 70,
+      "summary": "太陽・地球・月が夜空で一直線に並ぶ稀な現象を、地球の一部の地域で見ることができた。",
+      "updated_at": "2026-08-29T00:03:53.413322+00:00"
+    },
+    {
+      "id": 43644,
+      "title": "BBC tracks one week of Israeli settler violence in occupied West Bank",
+      "category": "news",
+      "importance": 80,
+      "summary": "BBCのLucy Williamsonが、過去1週間にわたるイスラエル入植者によるパレスチナ人への攻撃を報告した。",
+      "updated_at": "2026-08-29T00:03:42.012084+00:00"
+    },
+    {
+      "id": 43650,
+      "title": "Satellite images reveal scale of flood devastation in Nepal villages",
+      "category": "news",
+      "importance": 80,
+      "summary": "衛星画像で、ネパールの村、橋、そして重要なネパール・チベット国境通過点が洪水で流失したことが確認された。",
+      "updated_at": "2026-08-29T00:03:31.216404+00:00"
+    },
+    {
+      "id": 43651,
+      "title": "US plans to cut off military aid to key Middle East ally, BBC told",
+      "category": "news",
+      "importance": 80,
+      "summary": "米国はトランプ政権下で主要中東同盟国への軍事援助を停止する計画を立て、イラク・クルド地方はこの決定がイランからの攻撃リスクを高めると懸念している。",
+      "updated_at": "2026-08-29T00:03:21.427718+00:00"
+    },
+    {
+      "id": 43659,
+      "title": "鹿児島 いちき串木野市の海岸で流された中高生3人の捜索続く",
+      "category": "news",
+      "importance": 70,
+      "summary": "鹿児島県いちき串木野市の海岸で、中学生と高校生の3人が遊んでいた際に沖に流され行方不明となり、海上保安部が捜索を続けている。",
+      "updated_at": "2026-08-29T00:03:07.259175+00:00"
+    },
+    {
+      "id": 43645,
+      "title": "97-year-old woman rescued after Nepali floods looked like 'a warrior'",
+      "category": "news",
+      "importance": 70,
+      "summary": "97歳の女性、グナ・マヤ・ボハラがフラッシュ洪水で救助され、掘削機で救出された。",
+      "updated_at": "2026-08-29T00:02:57.157244+00:00"
+    },
+    {
+      "id": 43660,
+      "title": "大気の状態非常に不安定 北陸で再び大雨のおそれ",
+      "category": "news",
+      "importance": 70,
+      "summary": "前線と湿った空気の影響で北陸の大気が非常に不安定になり、27日に記録的な大雨が降り、31日まで雨が再び強まっている。",
+      "updated_at": "2026-08-29T00:02:47.826374+00:00"
+    },
+    {
+      "id": 43652,
+      "title": "Berlin is being blackmailed by hackers, mayor says",
+      "category": "news",
+      "importance": 70,
+      "summary": "カイ・ヴェグナー市長は、サイバー攻撃で盗まれたデータに対する身代金要求に応じないと述べた。",
+      "updated_at": "2026-08-29T00:02:33.910335+00:00"
+    },
+    {
+      "id": 43654,
+      "title": "復興旗振り役、被災に負けず　仮住まいも、業務継続―県職員の奥村さん・熊本地震",
+      "category": "news",
+      "importance": 70,
+      "summary": "県職員の奥村さんは熊本地震後、仮住まいに移りながらも復興旗振り役として業務を継続している。",
+      "updated_at": "2026-08-29T00:02:23.772674+00:00"
+    },
+    {
+      "id": 43653,
+      "title": "Footage of Tibet floods isn't being shown in China - and we know little about victims there",
+      "category": "news",
+      "importance": 70,
+      "summary": "チベットで発生した致命的な豪雨の映像が中国国内では公に表示されていない。",
+      "updated_at": "2026-08-29T00:02:13.124167+00:00"
+    },
+    {
+      "id": 43658,
+      "title": "口をつけずに膨らませられるネックピロー　マーナ",
+      "category": "security",
+      "importance": 60,
+      "summary": "マーナは、空気口から少し離れた位置から息を吹き込むことで膨らむ「ONE-BREATH ネックピロー」を8月26日に発売し、価格は3,630円である。",
+      "updated_at": "2026-08-29T00:02:03.406965+00:00"
+    },
+    {
+      "id": 43655,
+      "title": "「Google Workspace」の「Gemini」が操作可能なコンテンツを使った回答を生成可能に／チャット上から回転・ズーム可能なDNAの3D構造などのコンテンツを作成できる",
+      "category": "company",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43661,
+      "title": "「メルカリのClaude Code全社展開」と「学んで損しない言語」から読み解く、生成AI時代のエンジニア生存戦略",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43662,
+      "title": "東京都消費者被害救済委員会付託「無料体験を契機としたパーソナルトレーニングの定期コース契約に係る紛争」の解決を付託しました",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43663,
+      "title": "東京都名誉都民候補者の選定について",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43664,
+      "title": "Swiss Steel is Selling Its Entire Subsidiary in Brazil",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43665,
+      "title": "German Distributors See Higher Sales in First Half",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43666,
+      "title": "Cogne Bremen Expands Truck Fleet Amid Customer Requirements",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43667,
+      "title": "European Coil Price Trends Unclear Before September",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43668,
+      "title": "European Long Steel Market Subdued as Seasonal Mill Stoppages Come to an End",
+      "category": "manufacturing",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43669,
+      "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+      "category": "ai",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43670,
+      "title": "Agora Shipbroking Corporation: Snapshot of Commercial Indicators Report – Week 34 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43671,
+      "title": "BW LPG: Record profits and cash flow in H1 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43672,
+      "title": "COSCO SHIPPING Ports Announces Positive 2026 Interim Results – Piraeus Port Container Throughput Slower",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43673,
+      "title": "Gibson tanker report – No Margin for Error",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43675,
+      "title": "Frontline Reports Record Quarterly Profits",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43676,
+      "title": "VHBS New ConTex Container Ship Time Charter Assessment Index Week 35",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43677,
+      "title": "Advanced Shipping & Trading – WEEKLY SHIPPING MARKET REPORT WEEK 35 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43678,
+      "title": "CMA CGM Group and China Communications Construction Company sign a Memorandum of Understanding to strengthen their global cooperation",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43679,
+      "title": "Affinity Tanker Weekly, 28 August 2026",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43680,
+      "title": "Briety Shipping Inc v Trafigura Maritime Logistics Pte Ltd",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43681,
+      "title": "GMS Week 35 – Sanctions Loom, Hulls",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43682,
+      "title": "The Week in Alt Fuels: Bankrolling the switch",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43683,
+      "title": "IMO: Six months of uncertainty for seafarers in Strait of Hormuz",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43684,
+      "title": "The environmental view of seller and buyer’s duties in a ship sale contract under English law",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43686,
+      "title": "Shipping’s new order is Eastern",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43687,
+      "title": "Dry Bulk Market: Australian Iron Ore Exports on the Rise",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43688,
+      "title": "Baltic Dry Index Extends Rally Into 7th Day",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
+    {
+      "id": 43689,
+      "title": "Four shipowners co-order vessels in record-breaking VINGA series: “The right time to invest”",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-29T00:00:52.814558+00:00"
+    },
     {
       "id": 42571,
       "title": "AIが作った曲がオーストラリアの音楽チャートから禁止される",
@@ -9,22 +673,6 @@
       "importance": 70,
       "summary": "AIで作られた曲がオーストラリアの音楽チャートから禁止された。",
       "updated_at": "2026-08-28T21:11:48.221095+00:00"
-    },
-    {
-      "id": 43439,
-      "title": "Windows 11の2026年8月プレビューパッチが公開 ～タスクバー、［スタート］画面、「Windows Search」が刷新／日本語環境向けの改善も多数、「Microsoft IME」入力時のハングアップ軽減など",
-      "category": "company",
-      "importance": 70,
-      "summary": "Windows 11 2026年8月プレビューパッチが公開され、タスクバー、スタート画面、Windows Search が刷新され、日本語環境向けの改善や Microsoft IME 入力時のハングアップ軽減が含まれる。",
-      "updated_at": "2026-08-28T21:11:37.198938+00:00"
-    },
-    {
-      "id": 43475,
-      "title": "世界中のライブカメラを覗けるサービス「とまり木」が話題、1,200カ所以上が配信中／カテゴリで絞ったり、人気のカメラを覗いたり……ザッピングっぽいことも【やじうまの杜】",
-      "category": "company",
-      "importance": 70,
-      "summary": "サービス「とまり木」は世界中のライブカメラを閲覧でき、現在1,200カ所以上が配信中である。",
-      "updated_at": "2026-08-28T21:11:27.323202+00:00"
     },
     {
       "id": 43562,
@@ -91,14 +739,6 @@
       "updated_at": "2026-08-28T21:10:06.017860+00:00"
     },
     {
-      "id": 43550,
-      "title": "「秀丸」の使い方をAIチャットで解決 ～「Gemini Notebook」ベースのヘルプサイトが公開／「エディタ」「メール」「ファイラーClassic」のほか、関連ツールやマクロにも対応",
-      "category": "company",
-      "importance": 80,
-      "summary": "「秀丸」の使い方をAIチャットで解決するヘルプサイトが「Gemini Notebook」ベースで公開された。",
-      "updated_at": "2026-08-28T21:09:53.531498+00:00"
-    },
-    {
       "id": 43555,
       "title": "ファミマ、限定デザインのカップヌードル　NIGOコラボ",
       "category": "security",
@@ -131,22 +771,6 @@
       "updated_at": "2026-08-28T21:09:10.302268+00:00"
     },
     {
-      "id": 43551,
-      "title": "マイクロソフトのOfficeソフト「Microsoft 365」が安い【AmazonスマイルSale】【本日みつけたお買い得情報】",
-      "category": "company",
-      "importance": 70,
-      "summary": "Microsoft 365 Personal の自動更新1年版が21％OFFで17,400円/年に販売されている。",
-      "updated_at": "2026-08-28T21:09:00.116364+00:00"
-    },
-    {
-      "id": 43552,
-      "title": "「Microsoft Edge 152」が公開 ～更新頻度は2倍に、詐欺サイトへ誘導する通知を自動停止／Apple アカウントでのサインインにも対応。脆弱性も大量に修正",
-      "category": "company",
-      "importance": 80,
-      "summary": "Microsoft Edge 152 が公開され、更新頻度が2倍に増加し、詐欺サイトへの誘導通知を自動停止し、Apple アカウントでのサインインに対応し、脆弱性が多数修正された。",
-      "updated_at": "2026-08-28T21:08:48.556116+00:00"
-    },
-    {
       "id": 43575,
       "title": "警察官にウェアラブルカメラ実装へ　「試行で有用性確認」",
       "category": "news",
@@ -163,14 +787,6 @@
       "updated_at": "2026-08-28T21:08:27.382354+00:00"
     },
     {
-      "id": 43553,
-      "title": "GeForce RTX 5060搭載マシンと周辺機器のセット「スターター5点セット」が1位をキープ【マウスコンピューター売れ筋PCランキング［独立型GPU搭載モデル編 2026/8/28版］】",
-      "category": "company",
-      "importance": 70,
-      "summary": "GeForce RTX 5060搭載マシンと周辺機器のセット「スターター5点セット」が売れ筋PCランキング独立型GPU搭載モデル編で1位をキープした。",
-      "updated_at": "2026-08-28T21:08:16.823456+00:00"
-    },
-    {
       "id": 43563,
       "title": "電通総研、伊藤忠のTOBに賛同　非公開化で親子上場を解消へ",
       "category": "industry",
@@ -185,622 +801,6 @@
       "importance": 70,
       "summary": "東京都と東京BRTは8月28日に、晴海フラッグと東京駅八重洲を結ぶ新ルート「東京駅・選手村ルート」を9月16日に開設することを発表した。",
       "updated_at": "2026-08-28T21:07:54.167971+00:00"
-    },
-    {
-      "id": 43576,
-      "title": "ダサいスライド資料を作る大会が開催中　応募フォームもダサい",
-      "category": "news",
-      "importance": 60,
-      "summary": "サポーターズが学生向け就職活動支援サービスの一環として、ダサいスライド資料を募集する大会を開催し、優勝者にはYouTuber「ラムダ技術部」と共にイベントに登壇できる権利と表彰状が授与される。",
-      "updated_at": "2026-08-28T21:07:44.928952+00:00"
-    },
-    {
-      "id": 43559,
-      "title": "DMM GAMES、iOSゲームアプリの独自ストア　R18も",
-      "category": "security",
-      "importance": 70,
-      "summary": "EXNOAが運営するDMM GAMESは、iOS版の独自ゲームアプリ配信プラットフォーム「GAMES STORE」を8月31日17時にオープンし、成人向けタイトルもラインナップする。",
-      "updated_at": "2026-08-28T21:07:31.869768+00:00"
-    },
-    {
-      "id": 43554,
-      "title": "「Stable Diffusion XL」がCopilot+ PCのNPUを使って約1秒で画像を生成",
-      "category": "company",
-      "importance": 80,
-      "summary": "『Stable Diffusion XL』がCopilot+ PCのNPUを使って約1秒で画像を生成した。",
-      "updated_at": "2026-08-28T21:07:22.265492+00:00"
-    },
-    {
-      "id": 43577,
-      "title": "イエローハット、最大180万人分の情報漏えいか　作業予約システムに不正アクセス",
-      "category": "news",
-      "importance": 80,
-      "summary": "イエローハットの店舗作業予約システムが不正アクセスを受け、最大180万1499人分の氏名・電話番号等の個人情報が漏えいした可能性がある。",
-      "updated_at": "2026-08-28T21:07:13.436661+00:00"
-    },
-    {
-      "id": 43224,
-      "title": "トランプ大統領、オンタリオ湖をアメリカ湖に改名する命令に署名",
-      "category": "news",
-      "importance": 60,
-      "summary": "カナダは、両国にまたがる湖の新しい名前を拒否した。",
-      "updated_at": "2026-08-28T21:07:02.827836+00:00"
-    },
-    {
-      "id": 43578,
-      "title": "電車にスマホ貼り付け、ホーム全力疾走の様子を撮影……TikTokerの動画が物議　衣服ブランドの宣伝目的か",
-      "category": "news",
-      "importance": 70,
-      "summary": "ストリート系衣服ブランドの公式アカウントが、電車にテープでスマートフォンを貼り付け、発車後にホームで電車と並走する様子を撮影した動画をInstagramやTikTokに投稿した。",
-      "updated_at": "2026-08-28T21:06:53.417666+00:00"
-    },
-    {
-      "id": 43560,
-      "title": "グーグル、購入した電子書籍を「Gemini Notebook」に追加可能に",
-      "category": "security",
-      "importance": 70,
-      "summary": "GoogleはGoogle Play Booksで購入した電子書籍をGemini Notebookに追加できる機能を開始し、初期対応は10万冊超の書籍に及ぶ。",
-      "updated_at": "2026-08-28T21:06:43.024641+00:00"
-    },
-    {
-      "id": 43541,
-      "title": "World's youngest reigning traditional monarch dies aged 34",
-      "category": "news",
-      "importance": 70,
-      "summary": "ウガンダのトゥオロ王国の王オヨは3歳で即位し、34歳で亡くなった。",
-      "updated_at": "2026-08-28T21:06:32.426584+00:00"
-    },
-    {
-      "id": 43538,
-      "title": "Dutch court sentences man to life over Rwanda genocide",
-      "category": "news",
-      "importance": 80,
-      "summary": "ハーグ裁判所が66歳の男性を戦争犯罪とジェノサイド罪で有罪判決し、終身刑を言い渡した。",
-      "updated_at": "2026-08-28T21:06:21.863756+00:00"
-    },
-    {
-      "id": 43579,
-      "title": "パナソニック、CO2削減目標を下方修正　3145万t→550万tに　エアコン販売拡大など影響",
-      "category": "news",
-      "importance": 70,
-      "summary": "パナソニックホールディングスは2030年度のCO2削減目標を従来の3145万tから550万tに引き下げた。",
-      "updated_at": "2026-08-28T21:06:11.142141+00:00"
-    },
-    {
-      "id": 43539,
-      "title": "Shootings surge as drug gangs torment Brussels",
-      "category": "news",
-      "importance": 70,
-      "summary": "今年だけでベルギー首都ブリュッセルで65件以上の銃撃事件が発生し、麻薬犯罪が急増している。",
-      "updated_at": "2026-08-28T21:06:00.576360+00:00"
-    },
-    {
-      "id": 43580,
-      "title": "「批判を真摯に受け止める」平口法相、ネトフリ「ラヴ上等」とのコラボ中止に",
-      "category": "news",
-      "importance": 70,
-      "summary": "平口洋法相は、ネットフリックスの恋愛リアリティ番組『ラヴ上等』シーズン2とのタイアップ中止について、批判や心配を真摯に受け止めると述べた。",
-      "updated_at": "2026-08-28T21:05:50.311337+00:00"
-    },
-    {
-      "id": 43547,
-      "title": "Oslo mayor calls off wedding ceremony after death of Norway's king",
-      "category": "news",
-      "importance": 80,
-      "summary": "オスロ市長のアン・リンドボーは、金曜日に婚約者と結婚式を行う予定だったが、ノルウェー国王の死去により結婚式を中止した。",
-      "updated_at": "2026-08-28T21:05:41.121181+00:00"
-    },
-    {
-      "id": 43564,
-      "title": "熊本地震1か月 住宅被害は5万棟超 災害関連死を防ぎ生活再建へ",
-      "category": "news",
-      "importance": 85,
-      "summary": "熊本県で最大震度7の地震から1か月が経過し、約2400人の被災者が避難所や車中泊で生活を続けている。",
-      "updated_at": "2026-08-28T21:05:29.538978+00:00"
-    },
-    {
-      "id": 43540,
-      "title": "Two-year curfew lifted in Sudan's capital",
-      "category": "news",
-      "importance": 70,
-      "summary": "スーダンの首都で2年間の宵禁が解除された。",
-      "updated_at": "2026-08-28T21:05:19.991474+00:00"
-    },
-    {
-      "id": 43561,
-      "title": "高市総理、AI家庭教師で「物価高対策シミュレーター」を作る 「こういうのが欲しかった」",
-      "category": "security",
-      "importance": 70,
-      "summary": "高市総理はチームみらいの安野党首らからAI家庭教師を受け、音声だけで物価高対策シミュレーターを作成し、政策効果検討に活用できると評価した。",
-      "updated_at": "2026-08-28T21:05:09.552315+00:00"
-    },
-    {
-      "id": 43537,
-      "title": "Fed has 'work to do' if price rises don't ease for Americans, Warsh says",
-      "category": "news",
-      "importance": 70,
-      "summary": "Kevin Warshは、インフレが高すぎると判断されれば金利を引き上げる可能性があると述べた。",
-      "updated_at": "2026-08-28T21:04:58.743929+00:00"
-    },
-    {
-      "id": 43549,
-      "title": "爆発７人死亡、刑事責任は　イオン事故、立件に高いハードル―熊本地震１カ月",
-      "category": "news",
-      "importance": 70,
-      "summary": "イオンの施設で起きた爆発により7人が死亡し、刑事責任の追及は高いハードルがあるとされる。",
-      "updated_at": "2026-08-28T21:04:48.325079+00:00"
-    },
-    {
-      "id": 43542,
-      "title": "Violence breaks out in Ceuta as migrant crisis continues",
-      "category": "news",
-      "importance": 60,
-      "summary": "移民グループが軍用車両に石を投げ、地元住民がビーチのキャンプを火で焼いたという事件が発生した。",
-      "updated_at": "2026-08-28T21:04:37.909477+00:00"
-    },
-    {
-      "id": 43566,
-      "title": "マレーシアの空港 東京発の航空機の車輪格納部から遺体",
-      "category": "news",
-      "importance": 70,
-      "summary": "マレーシアの空港で、東京発の航空機の車輪格納部から男性の遺体が発見され、地元警察が死因を調査している。",
-      "updated_at": "2026-08-28T21:04:27.759686+00:00"
-    },
-    {
-      "id": 43544,
-      "title": "Thieves steal 600-diamond necklace from Vienna museum in broad daylight",
-      "category": "news",
-      "importance": 70,
-      "summary": "ウィーンの博物館で昼間に600ダイヤモンドのネックレスが盗まれ、警察は展示会のチケットを購入したと考えられる2人の容疑者を捜索している。",
-      "updated_at": "2026-08-28T21:04:16.441691+00:00"
-    },
-    {
-      "id": 43565,
-      "title": "サンドウィッチマン 伊達みきおさん 脳梗塞で休養",
-      "category": "news",
-      "importance": 70,
-      "summary": "サンドウィッチマンの伊達みきおさんが脳梗塞と診断され、当面休養することが所属事務所から発表された。",
-      "updated_at": "2026-08-28T21:04:02.749009+00:00"
-    },
-    {
-      "id": 43546,
-      "title": "Russia ramps up rhetoric but wants to avoid war with Nato, Western officials say",
-      "category": "news",
-      "importance": 70,
-      "summary": "ロシアはレトリックを強めつつ、NATOとの戦争を避ける意向を示し、直接軍事行動を控えつつハイブリッド活動を継続する可能性が高い。",
-      "updated_at": "2026-08-28T21:03:51.884404+00:00"
-    },
-    {
-      "id": 43548,
-      "title": "Norway mourns King Harald as Haakon VIII ascends throne",
-      "category": "news",
-      "importance": 70,
-      "summary": "ノルウェーの人々が王室と政治家、国民が王ハラルドを追悼する集会を行った。",
-      "updated_at": "2026-08-28T21:03:39.325644+00:00"
-    },
-    {
-      "id": 43567,
-      "title": "FRBウォーシュ議長 “利上げの可能性を排除しない考え”示唆",
-      "category": "news",
-      "importance": 70,
-      "summary": "FRBウォーシュ議長は西部ジャクソンホールのシンポジウムで、FRBが最も注力すべきは物価の問題であり、インフレ率が高止まりすれば利上げの可能性を排除しないと示唆した。",
-      "updated_at": "2026-08-28T21:03:28.790991+00:00"
-    },
-    {
-      "id": 43545,
-      "title": "Right-wing commentator Milo Yiannopoulos detained by ICE",
-      "category": "news",
-      "importance": 60,
-      "summary": "英国市民で米国に居住・勤務する右派評論家ミロ・イアンノポウロスがICEに拘束された。",
-      "updated_at": "2026-08-28T21:03:16.326332+00:00"
-    },
-    {
-      "id": 43569,
-      "title": "横浜市の山中市長が辞職届 各党が選挙準備加速へ",
-      "category": "news",
-      "importance": 70,
-      "summary": "横浜市の山中竹春市長が職員に対する重大なパワハラ行為を認定され、辞職届を提出した。",
-      "updated_at": "2026-08-28T21:03:05.113913+00:00"
-    },
-    {
-      "id": 43568,
-      "title": "立民「合流せず」3党の関係行方は中道・公明の出方が焦点",
-      "category": "news",
-      "importance": 70,
-      "summary": "立憲民主党は中道改革連合と公明党との合流はしない方針を示し、週明けに党首会談で今後の対応を協議することを決定した。",
-      "updated_at": "2026-08-28T21:02:52.366278+00:00"
-    },
-    {
-      "id": 43543,
-      "title": "Greenland says findings on genocide allegation not final",
-      "category": "news",
-      "importance": 70,
-      "summary": "グリーンランドは1960年代から1970年代にイヌイットコミュニティに対する強制避妊の調査結果が最終的ではないと述べた。",
-      "updated_at": "2026-08-28T21:02:34.745913+00:00"
-    },
-    {
-      "id": 43570,
-      "title": "土石流５８６人死亡 ネパール側の行方不明者１９００人超に",
-      "category": "news",
-      "importance": 80,
-      "summary": "土石流により、ネパールと中国の国境地帯で586人が死亡し、ネパール側では1900人以上が行方不明、5人の日本人も連絡が取れなくなった。",
-      "updated_at": "2026-08-28T21:02:23.733331+00:00"
-    },
-    {
-      "id": 43232,
-      "title": "致命的なネパール・チベット洪水について私たちが知っていること",
-      "category": "news",
-      "importance": 80,
-      "summary": "数百人が死亡し、数千人が行方不明となったのは、ネパールとチベットの国境での水害と土砂崩れの後です。",
-      "updated_at": "2026-08-28T21:02:14.296768+00:00"
-    },
-    {
-      "id": 43581,
-      "title": "UK dairy sector raises sustainability ambition with new targets",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43582,
-      "title": "‘The biggest investment is time’: Navigating B Corp’s toughest-ever standards",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43583,
-      "title": "UK faces £190m in excess weekly energy bills due to Iran war",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43584,
-      "title": "COP17: What happened at this year’s desertification summit?",
-      "category": "decarbonization_ops",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43585,
-      "title": "AWSが「DuckDB」開発企業DuckLabsを買収　OSSは継続",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43586,
-      "title": "「Windows 11がセキュアブート証明書の期限切れで起動不能に？」　心配した現場の苦労はこんな感じ",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43587,
-      "title": "大島の岡田漁港において漁港施設等活用事業の実施計画を認定しました",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43588,
-      "title": "都内の保育サービスの状況について",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43589,
-      "title": "令和8年熊本地震への都の対応（第31報）（保健師等チームの派遣について）",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43590,
-      "title": "若者向け動画「つらい気持ちをひとり抱えているあなたへ」及び特設ページを公開",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43591,
-      "title": "「東京都駐車場条例の見直しの考え方（案）」に対する意見募集の結果と「東京都駐車場条例の見直しの考え方」の取りまとめについて",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43592,
-      "title": "令和8年度 駅前放置自転車対策功労者が決定",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43593,
-      "title": "令和8年度 第2回コロナ後遺症オンライン研修会を開催します！コロナ後遺症診療の実際とブレインフォグについて",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43594,
-      "title": "若洲ナイターゴルフで新しい出会いを",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43595,
-      "title": "東京BRT　東京駅方面への運行が始まります！",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43596,
-      "title": "東京都「救急の日」関連行事　「いのちをつなぐ AED・応急手当体験DAYあなたの1分が、誰かの未来になる。」を開催します",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43598,
-      "title": "学生・事業者等向け　MICEグローバル人材育成講座（基礎）受講者を募集",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43599,
-      "title": "令和8年度一般会計予備費の使用に伴う地方負担への対応等",
-      "category": "policy",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43601,
-      "title": "How UNS Prepares Manufacturing Data for AI",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43602,
-      "title": "Ukraine: Three Miners Perish in Kryvyi Rih Mine",
-      "category": "manufacturing",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43603,
-      "title": "Spreading the load: How Salesforce met Multi-AZ HA with SageMaker Inference Components",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43604,
-      "title": "How Decathlon runs demand forecasting at scale with Chronos-2",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43605,
-      "title": "Batch write and discover records in Amazon SageMaker Feature Store",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43606,
-      "title": "Supporting Thailand’s next generation of AI startups",
-      "category": "ai",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43607,
-      "title": "Ardmore Shipping Exercises Newbuilding Options",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43608,
-      "title": "LNGCON 2027 Puts the Industry’s Biggest Questions on the Table",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43609,
-      "title": "Kuwaiti tanker hit in latest Hormuz shipping attack – UK maritime monitor",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43610,
-      "title": "Maryam Shipmanagement rebrands to MSM and moves to new Dubai headquarters",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43611,
-      "title": "Safety Leaders Highlight Need for Industry Transition to Electronic Flares at SMM",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43612,
-      "title": "Steel sector outlook strengthens as demand holds firm, input costs ease",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43613,
-      "title": "Americas steelmakers credit tariffs, trade defenses for stronger markets",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43614,
-      "title": "Indonesia’s 2026 oil output target at risk as key fields struggle",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43615,
-      "title": "Fed’s Hammack says low rate era may have been “abnormal”",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43616,
-      "title": "US Nonfarm Payrolls Revised Down by 79K",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43617,
-      "title": "Fed’s Hammack calls for rate hikes, second Fed official today",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43618,
-      "title": "Eurozone Services Sentiment Improves to 7-Month High",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43619,
-      "title": "Greece Producer Inflation Picks Up in July",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43620,
-      "title": "India Industrial Production Eases from 2-Year High",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43621,
-      "title": "German Import Prices Rise at Faster Pace",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43622,
-      "title": "September ECB rate hike: Is the case getting stronger?",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43623,
-      "title": "French economy grinds to a halt",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43624,
-      "title": "France Q2 GDP Stalls, Misses Growth Estimate",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43625,
-      "title": "Euro Area Industrial Sentiment Highest since 2023",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43626,
-      "title": "More LNG is not the answer to Bangladesh’s energy crisis",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43627,
-      "title": "Oil Selloff Outruns Reality in Hormuz",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
-    },
-    {
-      "id": 43628,
-      "title": "The Iran War Has Handed Russia a Strategic Opening in Europe",
-      "category": "market",
-      "importance": 0,
-      "summary": "",
-      "updated_at": "2026-08-28T21:01:03.248978+00:00"
     }
   ]
 }
