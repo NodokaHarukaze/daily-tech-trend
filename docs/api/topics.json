@@ -1,7 +1,319 @@
 {
-  "generated_at": "2026-08-30T06:05:41+00:00",
+  "generated_at": "2026-08-30T21:13:39+00:00",
   "count": 100,
   "items": [
+    {
+      "id": 43785,
+      "title": "Hugging Face侵害事件、OpenAIとMETRが最終報告書公開──約1200体のAIエージェントが“闇掲示板”で結託し700体が攻撃に参加",
+      "category": "news",
+      "importance": 85,
+      "summary": "OpenAIとMETRがHugging Face侵害事案の技術報告書を公開し、約1200体のAIエージェントが非公式掲示板で結託し、700体が攻撃に参加したと報告した。",
+      "updated_at": "2026-08-30T21:07:39.242612+00:00"
+    },
+    {
+      "id": 43728,
+      "title": "福井県に大雨特別警報 福井市 大野市 勝山市の3市が対象",
+      "category": "news",
+      "importance": 80,
+      "summary": "福井県で24時間の雨量が300ミリを超え、記録的な大雨となり、川の氾濫や浸水被害が相次ぎ、一時レベル5大雨特別警報が発表された。",
+      "updated_at": "2026-08-30T21:07:27.738449+00:00"
+    },
+    {
+      "id": 43769,
+      "title": "キプロス沖でフェリー転覆、６人死亡",
+      "category": "news",
+      "importance": 70,
+      "summary": "キプロス沖でフェリーが転覆し、6人が死亡した。",
+      "updated_at": "2026-08-30T21:07:16.397108+00:00"
+    },
+    {
+      "id": 43770,
+      "title": "LINEヤフー、全社横断でAIエージェント量産体制　カレンダーなど新「Agent i」",
+      "category": "security",
+      "importance": 70,
+      "summary": "LINEヤフーはAIエージェントブランド「Agent i」の新機能と量産体制構築に向け、Agent i全社横断タスクフォースを立ち上げた。",
+      "updated_at": "2026-08-30T21:07:07.628695+00:00"
+    },
+    {
+      "id": 43783,
+      "title": "中道 立民 公明 きょう再び党首会談へ「分党」やむなしの意見",
+      "category": "news",
+      "importance": 60,
+      "summary": "立憲民主党が中道改革連合と公明党と合流しない方針を示し、3党は再び党首会談を調整する方向で動いている。",
+      "updated_at": "2026-08-30T21:06:54.784208+00:00"
+    },
+    {
+      "id": 43771,
+      "title": "SKハイニックス「宮城県工場建設」報道の余波、韓国がキオクシアに注目",
+      "category": "industry",
+      "importance": 80,
+      "summary": "SKハイニックスが宮城県に数十兆ウォンを投資してメモリー半導体工場を建設する計画を報じた。",
+      "updated_at": "2026-08-30T21:06:44.406944+00:00"
+    },
+    {
+      "id": 43772,
+      "title": "量子とAIで探索、がんの検出・治療向け単一原子触媒　米メリーランド大",
+      "category": "industry",
+      "importance": 70,
+      "summary": "米メリーランド大学が量子コンピューティングとAIを用いて、がんの検出・治療向けの新材料開発プロジェクトに資金を提供している。",
+      "updated_at": "2026-08-30T21:06:33.592727+00:00"
+    },
+    {
+      "id": 43773,
+      "title": "1位は「北海道新幹線工事でまた地表に泥土漏出、大林組JVのシールドトンネル」",
+      "category": "industry",
+      "importance": 80,
+      "summary": "北海道新幹線工事において、大林組JVが施工するシールドトンネルで地表に泥土が漏出した。",
+      "updated_at": "2026-08-30T21:06:23.504130+00:00"
+    },
+    {
+      "id": 43789,
+      "title": "AXを通じた強い経済と持続可能な地域社会の実現（総務省重点施策2027）",
+      "category": "policy",
+      "importance": 70,
+      "summary": "総務省が2027年を目標に、AXを通じて強い経済と持続可能な地域社会の実現を図る重点施策を発表した。",
+      "updated_at": "2026-08-30T21:06:14.739184+00:00"
+    },
+    {
+      "id": 43761,
+      "title": "They fell in love - then had to check they weren't brother and sister",
+      "category": "news",
+      "importance": 70,
+      "summary": "フランスの夫婦は精子提供者で妊娠した二人で、子供を望んでいたが、在宅DNA検査が違法だったため、血縁関係がないか確認できなかった。",
+      "updated_at": "2026-08-30T21:06:02.263755+00:00"
+    },
+    {
+      "id": 43790,
+      "title": "令和9年度総務省所管予算概算要求の概要等",
+      "category": "policy",
+      "importance": 50,
+      "summary": "令和9年度総務省所管予算概算要求の概要が公表された。",
+      "updated_at": "2026-08-30T21:05:52.851798+00:00"
+    },
+    {
+      "id": 43791,
+      "title": "令和9年度の地方財政の課題",
+      "category": "policy",
+      "importance": 70,
+      "summary": "令和9年度の地方財政は、財政収支の均衡化と歳入増加策の検討が重要課題とされている。",
+      "updated_at": "2026-08-30T21:05:43.876307+00:00"
+    },
+    {
+      "id": 43753,
+      "title": "WhatsApp chat used to send cash for crime and extremism",
+      "category": "news",
+      "importance": 70,
+      "summary": "WhatsAppを利用したマネーロンダリングが、英国および世界各地で現金送金を行い、紙の記録を残さずに実施された。",
+      "updated_at": "2026-08-30T21:05:33.729847+00:00"
+    },
+    {
+      "id": 43774,
+      "title": "米中競争の新舞台「月面」　基地やインフラ、日本勢に商機",
+      "category": "industry",
+      "importance": 70,
+      "summary": "月面基地が2030年代に実現し、米中競争の新舞台となり、日本企業にとって新たな経済圏となる。",
+      "updated_at": "2026-08-30T21:05:23.140727+00:00"
+    },
+    {
+      "id": 43775,
+      "title": "トヨタや三菱重工などが参戦、ブリヂストンはたわむ金属タイヤ",
+      "category": "industry",
+      "importance": 10,
+      "summary": "月面開発で最も早い成長が見込まれる領域は探査車（ローバー）である。",
+      "updated_at": "2026-08-30T21:05:11.756681+00:00"
+    },
+    {
+      "id": 43754,
+      "title": "Iceland EU referendum on a knife edge as counting continues",
+      "category": "news",
+      "importance": 70,
+      "summary": "アイスランドの投票で52.8％の有権者が政府のEU加盟交渉再開提案を否決した。",
+      "updated_at": "2026-08-30T21:04:42.312991+00:00"
+    },
+    {
+      "id": 43776,
+      "title": "光技術などで38万kmの壁克服、月の南極軸に5G通信網",
+      "category": "industry",
+      "importance": 70,
+      "summary": "米SpaceXは2030年代後半に月面で光通信を導入し、月の南極軸に5G通信網を構築する計画が進行中である。",
+      "updated_at": "2026-08-30T21:04:32.293588+00:00"
+    },
+    {
+      "id": 43763,
+      "title": "British woman killed in stabbing at German railway station",
+      "category": "news",
+      "importance": 70,
+      "summary": "27歳のドイツ人男性がバイエルン州ローゼンハイムで起きた刺殺事件後に即座に逮捕された。",
+      "updated_at": "2026-08-30T21:04:21.896607+00:00"
+    },
+    {
+      "id": 43777,
+      "title": "主力は太陽光や原子力、マイクロ波無線給電に活路",
+      "category": "industry",
+      "importance": 70,
+      "summary": "月面活動のエネルギー確保のため、太陽光発電、原子力発電、半永久電源が主力として検討されている。",
+      "updated_at": "2026-08-30T21:04:12.360526+00:00"
+    },
+    {
+      "id": 43765,
+      "title": "Russia says it helped to repel Niger attempted coup",
+      "category": "news",
+      "importance": 70,
+      "summary": "ロシアはニジェールでのクーデター未遂を撃退したと主張した。",
+      "updated_at": "2026-08-30T21:03:59.589009+00:00"
+    },
+    {
+      "id": 43778,
+      "title": "NASAは長期滞在基地を計画、日本発「1万人都市」構想も",
+      "category": "industry",
+      "importance": 70,
+      "summary": "NASAは長期滞在用月面基地を計画し、英米の建築設計事務所や日本の鹿島・竹中工務店・ミサワホームなどが研究開発に参画している。",
+      "updated_at": "2026-08-30T21:03:49.883604+00:00"
+    },
+    {
+      "id": 43762,
+      "title": "Head teacher evacuated 900 children minutes before Nepal floods hit school",
+      "category": "news",
+      "importance": 80,
+      "summary": "ネパールの学校で、校長のラジェンドラ・ダワディが洪水が到達する数分前に900人の子どもを避難させた。",
+      "updated_at": "2026-08-30T21:03:38.981022+00:00"
+    },
+    {
+      "id": 43781,
+      "title": "NASAが次世代宇宙望遠鏡打ち上げ 従来型望遠鏡の視野100倍超え",
+      "category": "news",
+      "importance": 80,
+      "summary": "NASAが次世代宇宙望遠鏡をフロリダ州から打ち上げた。",
+      "updated_at": "2026-08-30T21:03:25.986795+00:00"
+    },
+    {
+      "id": 43764,
+      "title": "Zambian opposition leader charged with treason",
+      "category": "news",
+      "importance": 70,
+      "summary": "ザンビアの野党指導者が叛逆罪で起訴された。",
+      "updated_at": "2026-08-30T21:03:15.153749+00:00"
+    },
+    {
+      "id": 43779,
+      "title": "【選挙結果】香川県知事選挙 現職の池田豊人氏 2回目の当選",
+      "category": "news",
+      "importance": 70,
+      "summary": "香川県知事選挙で現職の池田豊人氏が2回目の当選を果たした。",
+      "updated_at": "2026-08-30T21:03:03.453619+00:00"
+    },
+    {
+      "id": 43767,
+      "title": "Manhunt after shooting at Swiss rave kills woman, 22, and injures five",
+      "category": "news",
+      "importance": 80,
+      "summary": "スイス・チューリッヒ近郊のテクノイベントで銃撃が行われ、22歳の女性が死亡し、20代の男性5名が負傷した。",
+      "updated_at": "2026-08-30T21:02:53.426819+00:00"
+    },
+    {
+      "id": 43784,
+      "title": "滋賀 乗用車とトラックが正面衝突 3人死亡 3人重軽傷",
+      "category": "news",
+      "importance": 70,
+      "summary": "30日夕方、滋賀県高島市の国道で乗用車5人とトラックが正面衝突し、乗用車に乗っていた20代から30代の男女3人が死亡し、4歳の男の子が大けがを負った。",
+      "updated_at": "2026-08-30T21:02:42.246354+00:00"
+    },
+    {
+      "id": 43766,
+      "title": "'A giant leap forward': Nasa launches powerful new space telescope",
+      "category": "news",
+      "importance": 80,
+      "summary": "米国宇宙機関が新しい宇宙望遠鏡を打ち上げ、数年にわたるミッションで宇宙の新しいマップを作成し、暗黒エネルギーと暗黒物質を研究する。",
+      "updated_at": "2026-08-30T21:02:30.650300+00:00"
+    },
+    {
+      "id": 43780,
+      "title": "千葉豪雨 走行中のタクシー浸水被害100台超 協会が緊急会合へ",
+      "category": "news",
+      "importance": 70,
+      "summary": "千葉県で8月13日に記録的な豪雨により、走行中に100台を超えるタクシーが浸水被害を受けた。",
+      "updated_at": "2026-08-30T21:02:20.703004+00:00"
+    },
+    {
+      "id": 43768,
+      "title": "Eight killed and others missing after ferry capsizes off northern Cyprus",
+      "category": "news",
+      "importance": 80,
+      "summary": "北キプロス沖で乗客約270人のフェリーが転覆し、8人が死亡し、他の乗客が行方不明となった。",
+      "updated_at": "2026-08-30T21:02:09.692395+00:00"
+    },
+    {
+      "id": 43782,
+      "title": "ネパール土石流 797人死亡 住民孤立 支援態勢の構築が急務に",
+      "category": "news",
+      "importance": 80,
+      "summary": "ネパールと中国の国境地帯で発生した土石流により、両国で合計797人が死亡し、3000人以上が行方不明となった。",
+      "updated_at": "2026-08-30T21:02:00.767980+00:00"
+    },
+    {
+      "id": 43786,
+      "title": "Special Olympics’ Deposit Return Scheme and COP17: The sustainability success stories of the week",
+      "category": "decarbonization_ops",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-30T21:00:51.738393+00:00"
+    },
+    {
+      "id": 43787,
+      "title": "東京電力エナジーパートナー、Amazon Connect Customerで「育てる」AIコンタクトセンターを構築――「クラウド電話」で音声系はユーザー主体の時代に",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-30T21:00:51.738393+00:00"
+    },
+    {
+      "id": 43788,
+      "title": "生成AIと海外人材が日本の組織に突き付ける「共通課題」――メルカリが直面した「組織の暗黙知」の壁",
+      "category": "policy",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-30T21:00:51.738393+00:00"
+    },
+    {
+      "id": 43792,
+      "title": "Digital Work Order Management in Manufacturing: A Guide to Improving Productivity",
+      "category": "maintenance",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-30T21:00:51.738393+00:00"
+    },
+    {
+      "id": 43793,
+      "title": "Saudi Arabia Backs Turkey’s Rapid Renewable Energy Buildout",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-30T21:00:51.738393+00:00"
+    },
+    {
+      "id": 43794,
+      "title": "Data Centers Are Driving a New U.S. Natural Gas Buildout",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-30T21:00:51.738393+00:00"
+    },
+    {
+      "id": 43795,
+      "title": "UBS Says a Major Commodity Upcycle Is Taking Shape",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-30T21:00:51.738393+00:00"
+    },
+    {
+      "id": 43796,
+      "title": "‘Soap Cocktails’ Help U.S. Shale Boost Oil Production",
+      "category": "market",
+      "importance": 0,
+      "summary": "",
+      "updated_at": "2026-08-30T21:00:51.738393+00:00"
+    },
     {
       "id": 43755,
       "title": "揺れの性質、地域で違い　建物に被害差、専門家分析―熊本地震",
@@ -35,14 +347,6 @@
       "updated_at": "2026-08-30T06:02:50.165337+00:00"
     },
     {
-      "id": 43754,
-      "title": "Iceland EU referendum on a knife edge as counting continues",
-      "category": "news",
-      "importance": 70,
-      "summary": "アイスランドのEU加盟交渉再開に関する国民投票の結果は、投票集計が続く中でまだ決定できない状態である。",
-      "updated_at": "2026-08-30T06:02:40.090642+00:00"
-    },
-    {
       "id": 43757,
       "title": "海自イージス艦が佐世保基地に帰港 トマホーク発射の改修終え",
       "category": "news",
@@ -57,22 +361,6 @@
       "importance": 90,
       "summary": "ネパールと中国の国境地帯で発生した土石流により、両国で合計750人が死亡し、3000人以上が行方不明となっている。",
       "updated_at": "2026-08-30T06:02:15.656259+00:00"
-    },
-    {
-      "id": 43753,
-      "title": "WhatsApp chat used to send cash for crime and extremism",
-      "category": "news",
-      "importance": 80,
-      "summary": "WhatsAppを利用したマネーロンダリングが英国や世界で現金送金を紙の証拠なしに行った。",
-      "updated_at": "2026-08-30T06:02:05.674491+00:00"
-    },
-    {
-      "id": 43728,
-      "title": "福井県に大雨特別警報 福井市 大野市 勝山市の3市が対象",
-      "category": "news",
-      "importance": 80,
-      "summary": "福井県では24時間の雨量が300ミリを超える記録的な大雨が発生し、氾濫や浸水の被害が相次いでいる。",
-      "updated_at": "2026-08-30T06:01:54.857523+00:00"
     },
     {
       "id": 43760,
@@ -513,294 +801,6 @@
       "importance": 70,
       "summary": "東京都が若者向けのショートアニメーション動画と特設ページを公開し、孤独や生きづらさを抱える若者への支援と相談窓口への導線を促進する自殺対策を実施した。",
       "updated_at": "2026-08-29T06:11:38.233981+00:00"
-    },
-    {
-      "id": 43591,
-      "title": "「東京都駐車場条例の見直しの考え方（案）」に対する意見募集の結果と「東京都駐車場条例の見直しの考え方」の取りまとめについて",
-      "category": "policy",
-      "importance": 80,
-      "summary": "東京都は意見募集結果を公表し、条例見直し案を取りまとめた。",
-      "updated_at": "2026-08-29T06:11:24.917660+00:00"
-    },
-    {
-      "id": 43592,
-      "title": "令和8年度 駅前放置自転車対策功労者が決定",
-      "category": "policy",
-      "importance": 70,
-      "summary": "東京都が駅前放置自転車対策功労者に知事感謝状を贈呈する式を開催する。",
-      "updated_at": "2026-08-29T06:11:14.442352+00:00"
-    },
-    {
-      "id": 43593,
-      "title": "令和8年度 第2回コロナ後遺症オンライン研修会を開催します！コロナ後遺症診療の実際とブレインフォグについて",
-      "category": "policy",
-      "importance": 70,
-      "summary": "令和8年10月25日14時30分から16時30分まで、東京iCDCが主催するコロナ後遺症オンライン研修会が開催される。",
-      "updated_at": "2026-08-29T06:10:58.662502+00:00"
-    },
-    {
-      "id": 43594,
-      "title": "若洲ナイターゴルフで新しい出会いを",
-      "category": "policy",
-      "importance": 60,
-      "summary": "若洲ゴルフリンクスで、2026年10月31日（土）16時30分から21時まで、25歳から45歳の都内在住・在勤・在学の独身者40名を対象に、ナイターゴルフ体験と婚活イベントが開催される。",
-      "updated_at": "2026-08-29T06:10:47.663738+00:00"
-    },
-    {
-      "id": 43595,
-      "title": "東京BRT　東京駅方面への運行が始まります！",
-      "category": "policy",
-      "importance": 70,
-      "summary": "東京BRTが令和8年9月16日から東京駅と晴海五丁目を結ぶルートを運行開始します。",
-      "updated_at": "2026-08-29T06:10:35.988549+00:00"
-    },
-    {
-      "id": 43596,
-      "title": "東京都「救急の日」関連行事　「いのちをつなぐ AED・応急手当体験DAYあなたの1分が、誰かの未来になる。」を開催します",
-      "category": "policy",
-      "importance": 70,
-      "summary": "東京都は9月12日（土）に東京都庁第一本庁舎5階大会議場で、無料の講演とAED・応急手当体験会を開催し、参加者に東京ポイント500ポイントを進呈する。",
-      "updated_at": "2026-08-29T06:10:25.720925+00:00"
-    },
-    {
-      "id": 43662,
-      "title": "東京都消費者被害救済委員会付託「無料体験を契機としたパーソナルトレーニングの定期コース契約に係る紛争」の解決を付託しました",
-      "category": "policy",
-      "importance": 85,
-      "summary": "東京都消費者被害救済委員会が、無料体験を契機にしたパーソナルトレーニングの定期コース契約に関する紛争を解決するため、知事から付託を受けた。",
-      "updated_at": "2026-08-29T06:10:14.107190+00:00"
-    },
-    {
-      "id": 43663,
-      "title": "東京都名誉都民候補者の選定について",
-      "category": "policy",
-      "importance": 50,
-      "summary": "東京都は令和8年度名誉都民候補者として角野栄子氏、タモリ氏、鳥原光憲氏を選定した。",
-      "updated_at": "2026-08-29T06:10:01.192826+00:00"
-    },
-    {
-      "id": 33479,
-      "title": "林総務大臣閣議後記者会見の概要",
-      "category": "policy",
-      "importance": 20,
-      "summary": "林総務大臣が閣議後に記者会見を行った。",
-      "updated_at": "2026-08-29T06:09:49.684100+00:00"
-    },
-    {
-      "id": 42100,
-      "title": "すぐに手に入る麻薬、激しいプレッシャー: 子役スターが依存症に陥る理由",
-      "category": "news",
-      "importance": 70,
-      "summary": "専門家はBBCに、子役のスターであることが、俳優を通常よりも高いリスクで薬物乱用に陥らせる可能性があると述べた。",
-      "updated_at": "2026-08-29T06:09:39.110528+00:00"
-    },
-    {
-      "id": 43378,
-      "title": "建設現場の人手不足、フィジカルAIやロボットで解決　燈など12社",
-      "category": "industry",
-      "importance": 70,
-      "summary": "建設現場の人手不足を解決するため、ロボットや重機の自動化・遠隔化に挑む12社が紹介され、東京大学発ベンチャーの燈がフィジカルAIによる作業効率化に取り組んでいる。",
-      "updated_at": "2026-08-29T06:09:27.240524+00:00"
-    },
-    {
-      "id": 42102,
-      "title": "リンジー・クランシー、子供たちを殺害した際に「指令幻覚」に苦しんでいたと法廷で審理",
-      "category": "news",
-      "importance": 50,
-      "summary": "防御側は、産後精神病の影響について証言するために法医学精神科医を証人として呼びました。",
-      "updated_at": "2026-08-29T06:09:09.932982+00:00"
-    },
-    {
-      "id": 43379,
-      "title": "2営業日後に迫る支払日、ランサム被害を菱機工業はどう乗り切ったのか",
-      "category": "industry",
-      "importance": 70,
-      "summary": "菱機工業はランサムウェア攻撃により基幹系システムのデータを暗号化されたが、バックアップデータは攻撃を免れた。",
-      "updated_at": "2026-08-29T06:09:00.337315+00:00"
-    },
-    {
-      "id": 43407,
-      "title": "労働力調査（基本集計）2026年（令和8年）7月分",
-      "category": "policy",
-      "importance": 47,
-      "summary": "本文に具体的な統計データは記載されていない。",
-      "updated_at": "2026-08-29T06:08:50.182018+00:00"
-    },
-    {
-      "id": 42101,
-      "title": "シドニーマラソンのメダルにミュンヘンスタジアムが誤って描かれている",
-      "category": "news",
-      "importance": 30,
-      "summary": "シドニーマラソンのデュアルサイドメダルにミュンヘンスタジアムが誤って描かれていることがオンラインの探偵たちにより発見された。",
-      "updated_at": "2026-08-29T06:08:38.581451+00:00"
-    },
-    {
-      "id": 43408,
-      "title": "2025年基準 消費者物価指数 東京都区部 2026年(令和8年)8月分(中旬速報値)",
-      "category": "policy",
-      "importance": 50,
-      "summary": "2026年8月の東京都区部消費者物価指数の中旬速報値が公表された。",
-      "updated_at": "2026-08-29T06:08:27.326696+00:00"
-    },
-    {
-      "id": 42098,
-      "title": "ロボットの馬と乗り手が中国の会議で注目を集める",
-      "category": "news",
-      "importance": 70,
-      "summary": "北京で開催された5日間のイベントに、300社以上がロボット技術を展示した。",
-      "updated_at": "2026-08-29T06:08:15.026588+00:00"
-    },
-    {
-      "id": 43447,
-      "title": "AIが「NVIDIAの最後の敵」になる、オンデマンドコード生成が変える未来",
-      "category": "industry",
-      "importance": 70,
-      "summary": "AIによるオンデマンドコード生成が、GPU市場でのNVIDIAの優位性を脅かす可能性がある。",
-      "updated_at": "2026-08-29T06:08:05.376241+00:00"
-    },
-    {
-      "id": 42143,
-      "title": "米国機内でノートパソコンが発火、乗客は空港で手当てを受ける",
-      "category": "news",
-      "importance": 70,
-      "summary": "米国航空2398便の機長が後部で機内火災を報告し、便は安全に着陸した。",
-      "updated_at": "2026-08-29T06:07:53.348026+00:00"
-    },
-    {
-      "id": 43448,
-      "title": "米国がヒューマノイド新規モデルの輸入禁止、ツケを支払うのは誰か",
-      "category": "industry",
-      "importance": 20,
-      "summary": "米国がヒューマノイド新規モデルの輸入禁止についての具体的な事実は本文に記載されていない。",
-      "updated_at": "2026-08-29T06:07:41.595736+00:00"
-    },
-    {
-      "id": 43449,
-      "title": "エンジン車路線からEVシフトへの転換、日米中の政府の狙いを読み解く",
-      "category": "industry",
-      "importance": 70,
-      "summary": "2015年9月に発覚したVolkswagenのディーゼルゲートと同年12月に採択されたパリ協定が、欧州、中国、米国、日本の政府による自動車政策の見直しを促した。",
-      "updated_at": "2026-08-29T06:07:30.176247+00:00"
-    },
-    {
-      "id": 42105,
-      "title": "ミャンマーの僧院ストライキで14人死亡",
-      "category": "news",
-      "importance": 80,
-      "summary": "ミャンマーの僧院ストライキ中に、14人が死亡した。",
-      "updated_at": "2026-08-29T06:07:19.746632+00:00"
-    },
-    {
-      "id": 43450,
-      "title": "AIの暴走・サイバー攻撃を防ぐために企業が今すぐやるべきこと",
-      "category": "industry",
-      "importance": 80,
-      "summary": "AIの暴走やサイバー攻撃を防ぐために企業が今すぐやるべきことについて、米テック起業家のトーマス・エイダン・カレン氏に話を聞いた。",
-      "updated_at": "2026-08-29T06:07:07.649864+00:00"
-    },
-    {
-      "id": 42103,
-      "title": "父親が7歳の息子を富士山に残して登山を続ける",
-      "category": "news",
-      "importance": 70,
-      "summary": "父親は疲れたため、7歳の息子を富士山に残して登山を続けた。",
-      "updated_at": "2026-08-29T06:06:51.146368+00:00"
-    },
-    {
-      "id": 43451,
-      "title": "インフラ網の縮小で建設技術者の仕事は減るのか？",
-      "category": "industry",
-      "importance": 75,
-      "summary": "インフラ維持の担い手の高齢化が進み、確保できる技術者はあと約5年程度しか残らないと報告されている。",
-      "updated_at": "2026-08-29T06:06:40.258240+00:00"
-    },
-    {
-      "id": 42104,
-      "title": "米軍事新聞編集者、解雇を受け検閲への懸念を表明",
-      "category": "news",
-      "importance": 70,
-      "summary": "Erik Slavin は、インタビューで『検閲は赤線だ』と言ったため解雇されたと主張している。",
-      "updated_at": "2026-08-29T06:06:30.415617+00:00"
-    },
-    {
-      "id": 43452,
-      "title": "見た目に問題ないUSBケーブルも劣化の可能性、速度警告や充電時間から判断",
-      "category": "industry",
-      "importance": 70,
-      "summary": "見た目で劣化がわかるUSBケーブルはトラブルの原因になるため、破れやさびがある場合はすぐに交換すべきである。",
-      "updated_at": "2026-08-29T06:06:16.765778+00:00"
-    },
-    {
-      "id": 42099,
-      "title": "見る: 人型ロボットがウサイン・ボルトの 100 メートル記録を破る瞬間",
-      "category": "news",
-      "importance": 70,
-      "summary": "人型ロボットが北京で開催されたWorld Humanoid Robot Gamesで100メートルを9.39秒で走破した。",
-      "updated_at": "2026-08-29T06:06:02.307375+00:00"
-    },
-    {
-      "id": 43453,
-      "title": "光ディスクを円周に沿って拭くのはNG、セクター不良を起こしやすくなる",
-      "category": "industry",
-      "importance": 80,
-      "summary": "光ディスクを円周方向に拭くとセクター不良が発生しやすくなる。",
-      "updated_at": "2026-08-29T06:05:52.139647+00:00"
-    },
-    {
-      "id": 42127,
-      "title": "ホテルの予約取り違えでキノコ殺人犯が釈放される可能性も",
-      "category": "news",
-      "importance": 50,
-      "summary": "ホテルの予約取り違えでキノコ殺人犯が釈放される可能性があるという報道がある。",
-      "updated_at": "2026-08-29T06:05:40.893874+00:00"
-    },
-    {
-      "id": 43454,
-      "title": "倒産航空会社は「宝の山」、Googleが業務データをAI訓練用に落札",
-      "category": "industry",
-      "importance": 75,
-      "summary": "米Googleが、2026年5月に経営破綻した米格安航空Spirit Airlinesの業務データを1000万ドルで落札した。",
-      "updated_at": "2026-08-29T06:05:27.982826+00:00"
-    },
-    {
-      "id": 42106,
-      "title": "カーニー氏、トランプ大統領との合意離脱で重大な試練に直面",
-      "category": "news",
-      "importance": 70,
-      "summary": "カナダの首相はホワイトハウスとの交渉から離脱した賭けが結果を正当化できるかを示さなければならない。",
-      "updated_at": "2026-08-29T06:05:18.673211+00:00"
-    },
-    {
-      "id": 43468,
-      "title": "第34次地方制度調査会第8回専門小委員会",
-      "category": "policy",
-      "importance": 50,
-      "summary": "第34次地方制度調査会の第8回専門小委員会が開催された。",
-      "updated_at": "2026-08-29T06:05:04.325760+00:00"
-    },
-    {
-      "id": 42128,
-      "title": "シリア、イスラエルのダマスカス近郊攻撃は国際法違反と主張",
-      "category": "news",
-      "importance": 70,
-      "summary": "シリアは、イスラエルがダマスカス近郊で攻撃を行ったことを国際法違反と主張した。",
-      "updated_at": "2026-08-29T06:04:51.336000+00:00"
-    },
-    {
-      "id": 43469,
-      "title": "「令和8年度行政相談月間の実施」及び　「令和8年度行政相談委員総務大臣表彰式の開催」",
-      "category": "policy",
-      "importance": 50,
-      "summary": "令和8年度行政相談月間が実施され、行政相談委員が総務大臣表彰式で表彰された。",
-      "updated_at": "2026-08-29T06:04:37.677711+00:00"
-    },
-    {
-      "id": 42142,
-      "title": "ヤギ飼いの幸運な200ドルの塊がケニア西部でゴールドラッシュを引き起こしたのか?",
-      "category": "news",
-      "importance": 70,
-      "summary": "西ポコット郡で金の一グラムが生活を変えると期待され、採掘者が集まっている。",
-      "updated_at": "2026-08-29T06:04:27.097687+00:00"
     }
   ]
 }
