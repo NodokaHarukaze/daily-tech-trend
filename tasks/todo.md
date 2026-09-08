@@ -194,7 +194,7 @@ README の「立場別200文字サマリー仕様（提案）」を実装。既�
 - [ ] 本番パイプライン（`llm_insights_local.py` 等）への自動統合可否の判断（毎晩の所要時間・LLM呼び出し回数への影響を評価してから判断する）。品質は実機検証済みなので統合の障害は解消済み
 - [x] `generate_perspective_digest.py --limit 20` を本番DB（NULL件多数）に対して実行し、大量件数でも品質が安定するか確認 → Phase 2 で実施済み
 - [ ] 「gpt-oss:20b + 文字数指定 + reasoning肥大化」の知見を `C:\work\★Template\tasks\knowledge.md`（Template本体）に反映する（今回は夜間モードの書き込み禁止に阻まれたため未反映。`隙間時間有効活用\tasks\knowledge.md` には反映済み）
-- [ ] 上記12件の pre-existing テスト失敗（`test_opinion_page.py` 等）は本タスクのスコープ外だが、別途根本原因調査が望ましい
+- [x] 上記12件の pre-existing テスト失敗（`test_opinion_page.py` 等）は本タスクのスコープ外だが、別途根本原因調査が望ましい → 2026-07-13 Phase B「テスト整備（12件の失敗解消）」で解消済み（下記参照）。2026-09-09 02:07セッションが`pytest -q`で328件全pass・失敗0を確認、本セッション(04:07)で再確認済み
 
 ---
 
